@@ -8,9 +8,13 @@
 	font-family: 'Roboto', sans-serif;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 .header-section {
 	width: 100%;
-	height: 100vh;
+	min-height: 130vh;
 	background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(Images/459-background.png);
 	position: relative;
 	background-size: cover;
@@ -21,6 +25,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
+	position: relative;
 	justify-content: space-between;
 }
 
@@ -68,23 +73,13 @@
 	color: rgb(4, 4, 128);
 }
 
-i {
-	padding-right: 5px;
-}
-
 .top-navigation-links span {
+	top: 10px;
+	right: 15px;
 	color: #fff;
-	display: none;
+	position: absolute;
+	visibility: visible;
 }
-
-@media screen and (max-width: 600px) {
-	.header {
-		display: flex;
-		flex-direction: column;
-	}
-
-}
-
 
 .frontpage {
 	top: 50%;
@@ -99,6 +94,8 @@ i {
 }
 
 .frontpage-image img {
+	width: 150px;
+	height: 150px;
 	border-radius: 50%;
 	object-fit: cover;
 }
@@ -139,52 +136,154 @@ h1 {
 	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+@media screen and (max-width: 696px) {
+	.header {
+		z-index: 1;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		justify-content: flex-end;
+		background-color: rgba(0,0,0,0.3);
+		transition: all .5s;
+	}
+	.top-navigation-links ul{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		background-color: #000;	
+	}
+	.button {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.top-navigation-links span {
+			top: 10px;
+			right: 15px;
+			color: #fff;
+			position: absolute;
+		}
+	}
+
+
+
 .services {
-	background-color: rgb(244, 247, 241);
-	
+	padding: 20px;
+	background-color: #f2f2f2;
 }
 
-.header-services {
+.services-header, .header-services {
 	text-align: center;
 }
 
-.photo {
-	width: 80%;
-	margin: 10px auto;
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
+.services-header p, .header-services p {
+	color: #333;
+	margin: 10px;
+	font-style: oblique;
 }
 
-.about-info {
+.bookmark-links {
+	padding: 20px;
+}
+
+.services-products {
+	padding: 20px 25px 30px;
 	display: flex;
-	margin: 20px;
+	justify-content: center;
+	align-items: center;
+}
+
+.gallery {
+	float: left;
+	margin: 10px;
+	border-radius: 5px;
+	border: 1px solid grey;
+	box-shadow: 1px 2px 3px grey;
+}
+
+img {
+	object-fit: cover;
+	width: 100%;
+}
+
+.description {
+	margin: 12px;
+}
+
+.description h3, h4 {
+	line-height: 20px;
+}
+
+.description p {
+	margin-top: 5px;
+}
+
+@media screen and (max-width: 696px) {
+	.services-products {
+		display: flex;
+		flex-direction: column;
+	}
+	.img {
+		object-fit: cover;
+		object-position:bottom;
+	}
+}
+
+img:hover{
+	opacity: 0.7;
+}
+
+.gallery:hover {
+	transform: scale(1.1, 1.1);
+}
+
+.about {
+	padding: 20px;
 }
 
 .about-header {
-	margin-top: 10px;
 	text-align: center;
 }
 
 .about-header p {
+	color: #333;
 	font-style: italic;
-	margin-top: 10px;
 }
 
-.myabout-image img {
+.about-section {
+	display: flex;
+	margin: 20px;
+	align-items: flex-start;
+}
+
+.about-image img {
+	flex-basis: 60%;
+	padding-right: 16px;
 	object-fit: cover;
-	margin-right: 30px;
 }
 
-@media screen and (max-width:600px) {
-	.myabout-image, .myabout-info {
+.about-info {
+	flex-basis: 60%;
+	text-align: justify;
+}
+
+.about-info h3 {
+	text-align: center;
+}
+
+@media screen and (max-width: 696px) {
+	.about-section {
 		display: flex;
 		flex-direction: column;
 	}
 }
 
-.contact-section {
+/*.contact-section {
 	width: 100%;
-	/*background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(Images/);*/
+	background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(Images/);
 	background-color: #f1f1f1;
 	background-size: cover;
 	background-position: center;
@@ -246,20 +345,120 @@ h1 {
 	text-align: center;
 }
 
-@media screen and (max-widht: 600px) {
+@media screen and (max-widht: 696px) {
 	.contact-address, .contact-form {
 		widows: 100%;
+	}
+}*/
+
+.contact {
+	max-width: 100%;
+	color: #fff;
+	padding: 16px;
+	min-height: 100vh;
+	background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(Images/tommao-wang-hbkdjPI9594-unsplash.jpg);
+	background-position: center;
+	background-size: cover;
+	position: relative;
+}
+
+.contact-header, .follow-me {
+	position: relative;
+	text-align: center;
+}
+
+.contact-header h2::after {
+	content: '';
+	width: 10%;
+	height: 2px;
+	top: 40px;
+	left: 45%;
+	position: absolute;
+	background-color: #05ee52;
+}
+
+.contact-header p {
+	padding-bottom: 15px;
+}
+
+.contact-section {
+	display: flex;
+	width: 90%;
+	margin: 30px auto;
+	justify-content: space-between;
+}
+
+.contact-header h2, .follow-me h4 {
+	padding: 8px;
+}
+
+.contact-address  div {
+	margin: 0 15px 82px;
+}
+
+.contact-address span {
+	margin-left: 10px;
+}
+
+.contact-section input[type="text"], input[type="email"], input[type="number"], input[type="submit"], textarea {
+	border: none;
+	outline: none;
+	padding: 12px 14px;
+	border-radius: 5px;
+	margin: 8px;
+	width: 100%;
+	color: #fff;
+	border: 1px solid #fff;
+	background-color: transparent;
+}
+
+input[type="submit"] {
+	cursor: pointer;
+	transition: all .3s;
+	/*background-color: rgb(113, 75, 252);*/
+}
+
+input[type="submit"]:hover {
+	cursor: pointer;
+	background-color: #4CAF50;
+}
+
+.social-links .fa-brands {
+	color: #fff;
+	padding: 8px;
+	margin: 4px;
+	border-radius: 50%;
+	border: 1px solid #fff;
+	transition: all .4s;
+	background-color: transparent;
+}
+
+.social-links .fa-brands:hover {
+	color: #fff;
+	background-color: #000;
+}
+
+@media screen and (max-width: 696px){
+	.contact-section {
+		display: flex;
+		flex-direction: column;
+	}
+	.contact-address div {
+		margin-left: 2px;
+		text-align: center;
 	}
 }
 
 .footer-content {
-	height: 30vh;
-	color: #fff;
+	min-height: 20vh;
+	color: #000;
 	display: flex;
+	padding: 20px;
+	flex-wrap: wrap;
 	align-items: center;
 	flex-direction: column;
 	justify-content: center;
-	background-color: black;
+	background-color: #e1e1e1;
 }
 
 .footer-links ul {
@@ -270,7 +469,7 @@ h1 {
 }
 
 .footer-links a {
-	color: #fff;
+	color: inherit;
 	padding: 5px 8px;
 	text-decoration: none;
 }
@@ -281,4 +480,12 @@ h1 {
 
 .footer {
 	margin-top: 2.5em;
+}
+
+@media screen and (max-width: 696px) {
+	.footer-links ul {
+		display: flex;
+		padding-bottom: 24px;
+		flex-direction: column;
+	}
 }
