@@ -2,232 +2,215 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<title>Gerald Okoth</title>
+	<meta name="description" content="">
+	<meta http-equiv="refresh" content="5">
+	<link rel="stylesheet" href="home.css">
+	<meta name="Gerald Okoth" content="author">
+	<meta http-equiv="X-UA-Compatible" content="IE=7">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="home.css">
 	<script src="https://kit.fontawesome.com/23021fc8d3.js" crossorigin="anonymous"></script>
-	<title>Home | Gerald Okoth</title>
 </head>
 <body>
-		<div class="header-section">
 
-			<div class="header">
-
-				<div class="logo">
-					<span>Gero</span>
-				</div>
-		
-				<div class="top-navigation-links">
-					<ul>
-						<li><a href="index.html" class="active" target="_self" title="Home page"><i class="fa-solid fa-house" class="fontawesome-icons"></i></i>Home</a></li>
-						<li><a href="#services" class="active" target="_self" title="services page"><i class="fa-brands fa-shopify" class="fontawesome-icons"></i></i>Services</a></li>
-						<li><a href="#Portfolio" class="active" target="_self" title="my portfolio page"><i class="fa-solid fa-bookmark" class="fontawesome-icons"></i></i>Portfolio</a></li>
-						<li><a href="#about" target="_self" title="Find more about me"><i class="fa-solid fa-user" class="fontawesome-icons"></i></i>About</a></li>
-						<li><a href="#contact" target="_self" title="Contact me"><i class="fa-solid fa-phone" class="fontawesome-icons"></i>Contact</a></li>
-					</ul>
-					<span><a href=""><i class="fa-solid fa-bars" class="menu-bar"></i></a></span>
-				</div>
-
+	<section class="home-page">
+		<div class="homePageTopBar" id="homePageTopBar">
+			<div class="logo">
+				Ge<span>ro</span>
 			</div>
-
-			<div class="frontpage">
-				<div class="frontpage-image">
-					<img src="Images/1672053194398.jpg" alt="my profile" width="180px" height="180px">
-				</div>
-				<div class="frontpage-text">
-					<h1>The creative generation</h1>
-					<p>Hi there, i am Gerald Okoth, a tech enthusiast and a front-end web developer by profession.</p>
-					<div class="button">
-						<a href="#about" class="about-btn">See About</a>
-						<a href="#follow-me-links" class="about-btn">Follow me</a>
-					</div>
-						
-					<p class="p2"> I design and create responsive and elegant websites for personal and businesses.</p>
-				</div>
+			<div class="menu">
+				<ul>
+					<li><a href="index.html" class="active" target="_self" title="Home"><i class="fa-solid fa-house"></i></i>Home</a></li>
+					<li><a href="#services" class="active" target="_self" title="services"><i class="fa-brands fa-shopify"></i></i>Services</a></li>
+					<li><a href="#Testimonials" class="active" target="_self" title="Testimonials"><i class="fa-solid fa-bookmark"></i></i>Testimonials</a></li>
+					<li><a href="#about" target="_self" title="See about"><i class="fa-solid fa-user"></i></i>About</a></li>
+					<li><a href="#contact" target="_self" title="Contact me"><i class="fa-solid fa-phone"></i>Contact</a></li>
+				</ul>
 			</div>
-
 		</div>
+		<div class="hamburger" onclick="toggleMenu()">☰</div>
 
-		<section class="services" id="services">
-
-			<div class="header-services">
-				<h3>Services</h3>
-				<p>I offer the following services tomy clients!</p>
+		<!--<div class="menuBtn"><i class="fa-solid fa-bars"></i></div>
+		<div class="menuBtn"><i class="fa-solid fa-xmark"></i></div>-->
+		<div class="home-page-info">
+			<div class="home-page-photo">
+				<img src="Images/IMG_20220417_104146_015.jpg" alt="my profile" width="180em" height="180em">
 			</div>
-			<div class="bookmark-links">
-				<ol>
-					<li><a href="#webdesign">Web design</a></li>
-					<li><a href="#photography">Photography</a></li>
-					<li><a href="#videography">Videography</a></li>
-				</ol>
+			<div class="home-page-detail-info">
+				<div class="home-page-text">
+					<h2>The creative generation</h2>
+					<p>Hi there, i am Gerald Okoth, a tech enthusiast, graphics designer and a front-end web developer.</p>
+					<p>I design and build responsive and elegant animated websites for persons and businesses</p>
+				</div>
+				<div class="home-page-btn">
+					<a href="#about"><span></span>About Me</a>
+					<a href="#follow-me-links"><span></span>Follow Me</a>
+				</div>
 			</div>
+		</div>
+	</section>
 
-
-			<div class="services-header">
-				<h3 id="Photography">Photography</h3>
-				<p>A selection of the imagers taken by me!</p>
+	<section class="services" id="services">
+		<div class="About-header">
+			<h3>Services</h3>
+			<p>I offer better and quality services that suits my clients</p>
+		</div>
+		<div class="services-head">
+			<h3>Why choose me.</h3>
+		</div>
+		<div class="my-reput">
+			<div class="cheap">
+				<h4>Affodable cost</h4>
+				<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa itaque, saepe ut fuga explicabo eveniet veniam a. Quasi, tempore magni.</p>
 			</div>
-	
-			<div class="services-products">
-	
-				<div class="gallery">
-					<div class="image-gallery">
-						<img src="Images/1672053194398.jpg" alt="" width="200px" height="200px">
-					</div>
-					<div class="description">
-						<h3>Title heading</h3>
-						<h4>Title description</h4>
-						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, commodi.</p>
+			<div class="quality">
+				<h4>Quality Services</h4>
+				<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa itaque, saepe ut fuga explicabo eveniet veniam a. Quasi, tempore magni.</p>
+			</div>
+			<div class="online">
+				<h4>Online Booking</h4>
+				<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa itaque, saepe ut fuga explicabo eveniet veniam a. Quasi, tempore magni.</p>
+			</div>
+		</div>
+		<div class="photography-header">
+			<h4 id="photo">My Brand</h4>
+		</div>
+		<div class="photography">
+			<div class="image">
+				<img src="Images/tommao-wang-hbkdjPI9594-unsplash.jpg" alt="" width="260" height="260">
+				<div class="overlay"></div>
+				<div class="service-description">
+					<h3>Photography</h3>
+					<hr>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumqu saepe!</p>
+				</div>
+			</div>
+			<div class="image">
+				<img src="Images/pexels-philippe-donn-1169754.jpg" alt="" width="260" height="260">
+				<div class="overlay"></div>
+				<div class="service-description">
+					<h3>Graphic Design</h3>
+					<hr>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumqu saepe!</p>
+				</div>
+			</div>
+			<div class="image">
+				<img src="Images/459-background.png" alt="" width="260" height="260">
+				<div class="overlay"></div>
+				<div class="service-description">
+					<h3>Videography</h3>
+					<hr>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumqu saepe!</p>
+				</div>
+			</div>
+			<div class="image">
+				<img src="Images/altumcode-U0tBTn8UR8I-unsplash.jpg" alt="" width="260" height="260">
+				<div class="overlay"></div>
+				<div class="service-description">
+					<h3>Web design</h3>
+					<hr>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumqu saepe!</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="testimonials" id="testimonials">
+		<div class="testimonials-header">
+			<h3>Testimonials</h3>
+			<p>What my clients say</p>
+		</div>
+		<div class="testimonials-section">
+			<div class="test">
+				<div class="user">
+					<img src="Images/IMG_20220417_104146_015.jpg" alt="" width="100px">
+					<div class="user-info">
+						<h5>Tim Wanyonyi</h5><i class="fa-brands fa-twitter"></i>
+						<small>@Tim</small>
 					</div>
 				</div>
-		
-				<div class="gallery">
-					<div class="image-gallery">
-						<img src="Images/459-background.png" alt="" width="200px" height="200px">
-					</div>
-					<div class="description">
-						<h3>Title heading</h3>
-						<h4>Title description</h4>
-						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, commodi.</p>
-					</div>
-				</div>
-		
-				<div class="gallery">
-					<div class="image-gallery">
-						<img src="Images/pexels-fabian-reitmeier-707915.jpg" alt="" width="200px" height="200px">
-					</div>
-					<div class="description">
-						<h3>Title heading</h3>
-						<h4>Title description</h4>
-						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, commodi.</p>
-					</div>
-				</div>
-	
-				
-				<div class="gallery">
-					<div class="image-gallery">
-						<img src="Images/altumcode-U0tBTn8UR8I-unsplash.jpg" alt="" width="200px" height="200px">
-					</div>
-					<div class="description">
-						<h3>Title heading</h3>
-						<h4>Title description</h4>
-						<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, commodi.</p>
-					</div>
-				</div>
-		
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod sapiente aliquam voluptas accusamus. Aliquam nostrum consequatur rem, voluptatibus deleniti minima.</p>
 			</div>
-	
-		</section>
-
-		<section class="about" id="about">
-
-			<div class="about-header">
-				<h2>About Me</h2>
-				<p>Unearth the hidden story about me.</p>
-			</div>
-
-			<div class="about-section">
-
-				<div class="about-image">
-					<img src="Images/1672053194398.jpg" alt="my about pic" width="350px" height="350px">
+			<div class="test">
+				<div class="user">
+					<img src="Images/IMG_20230211_134435_930.jpg" alt="" width="100px">
+					<div class="user-info">
+						<h5>Brighton Cris</h5><i class="fa-brands fa-twitter"></i>
+						<small>@B_Cris</small>
+					</div>
 				</div>
-		
-				<div class="about-info">
-					<h3>Hi there</h3>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod sapiente aliquam voluptas accusamus. Aliquam nostrum consequatur rem, voluptatibus deleniti minima.</p>
+			</div>
+			<div class="test">
+				<div class="user">
+					<img src="Images/1672053154170.jpg" alt="" width="100px">
+					<div class="user-info">
+						<h5>Ken Andeson</h5><i class="fa-brands fa-twitter"></i>
+						<small>@Ken-A</small>
+					</div>
+				</div>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod sapiente aliquam voluptas accusamus. Aliquam nostrum consequatur rem, voluptatibus deleniti minima.</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="About" id="about">
+		<div class="About-header">
+			<h3>About</h3>
+			<p>My personality defines me</p>
+		</div>
+		<div class="about-info">
+			<div class="about-img">
+				<img src="Images/1672053194398.jpg" alt="my pic" width="200px" height="auto">
+			</div>
+			<div class="aboutme">
+				<div class="about-me">
 					<p>I am Gerald Okoth, a computer science student, software engineer enthusiast and a web developer. <br>I love programming and coding and i spend a big deal of my day writing codes.</p><br>
-					<p>With the evolution of technology in the current world, it is worth noting and it goes without saying that technology controls the world and in almost every aspect of our lives, technology plays a significant role, from processing to manufacturing to distribution and finally to consumption.</p><br>
-					<p>I therefore reckon with the solid truth and have decided to chat my path to web design and development and software develpment. I am currently working on front-end with a dream to pursue back-end engineering and ultimately to being a full-stack engineer.</p><br>
-					<p>I work with a team of other tech-enthusiasts and through this collaboration, we have made significant steps as far as software engineering is concerned</p><br>
-					<P>Through the invaluable skills that i acquire daily, have been able to design and build powerful front-end responsive websites, this has promoted trust and confidence by my clients.</P><br>
-					<p>I look forward to a greater future of coding.</p><br></br>
-					<p><b><i>Happy coding!</i></b></p>
+						<p>With the evolution of technology in the current world, it is worth noting and it goes without saying that technology controls the world and in almost every aspect of our lives, technology plays a significant role, from processing to manufacturing to distribution and finally to consumption.</p><br>
+						<p>I therefore reckon with the solid truth and have decided to chat my path to web design and development and software develpment. I am currently working on front-end with a dream to pursue back-end engineering and ultimately to being a full-stack engineer.</p><br>
+						<p>I work with a team of other tech-enthusiasts and through this collaboration, we have made significant steps as far as software engineering is concerned</p><br>
+						<P>Through the invaluable skills that i acquire daily, have been able to design and build powerful front-end responsive websites, this has promoted trust and confidence by my clients.</P><br>
+						<p>I look forward to a greater future of coding.</p><br></br>
+						<p><b><i>Happy coding!</i></b></p>
 				</div>
+				<hr>
+				<div class="follow-me-links" id="follow-me-links">
+					<h3>Follow me</h3>
+					<div class="social-links">
+						<a href=""><i class="fa-brands fa-linkedin">L</i></a>
+						<a href=""><i class="fa-brands fa-github">G</i></a>
+						<a href=""><i class="fa-brands fa-youtube">Y</i></a>
+						<a href=""><i class="fa-brands fa-instagram">I</i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
-			</div>
-	
-			<hr>
-	
-			<div class="follow-me">
-				<div class="follow-me-header">
-					<h4>Follow Me</h4>
-	
+	<section class="contact" id="contact">
+		<div class="contact-header">
+			<h3>Contact Me</h3>
+			<p>I would love to respond to your queries. Fill out the form and fill me in with the details. It is always my pleasure serving you. <span> :&#41</span>!</p>
+		</div>
+		<div class="contact-section">
+			<div class="contact-address">
+				<div class="location">
+					<i class="fa-solid fa-location-dot"></i>
+					<span>Nairobi, Kenya</span>
 				</div>
-				<div class="social-links">
-					<a href=""><i class="fa-brands fa-linkedin"></i></a>
-					<a href=""><i class="fa-brands fa-youtube"></i></a>
-					<a href=""><i class="fa-brands fa-twitter"></i></a>
-					<a href=""><i class="fa-brands fa-instagram"></i></a>
+				<div class="phone">
+					<i class="fa-solid fa-phone"></i>
+					<span>+254790598519</span>
+				</div>
+				<div class="email">
+					<i class="fa-solid fa-envelope"></i>
+					<span>okothgerald449@gmail.com</span>
 				</div>
 			</div>
-	
-		</section>
-
-		<!--<section class="contact-section" id="Contact">
-			<div class="contact-header">
-				<h3>Contact Me</h3>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias mollitia soluta consequatur unde odit ab explicabo nihil.</p>
-			</div>
-			
-			<div class="contact-details">
-
-				<div class="contact-address">
-					<div class="loction">
-						<i class="fa-solid fa-location-dot"></i>Nairobi, Kenya
-					</div>
-	
-					<div class="phone">
-						<i class="fa-solid fa-phone"></i>+254790598519
-					</div>
-	
-					<div class="email">
-						<i class="fa-solid fa-envelope"></i>@okothgerald449@gmail.com
-					</div>
-				</div>
-	
-				<div class="contact-form">
-					<p>Let's get in touch. Send me a message</p>
-					<form action="" method="post" id="contact-form">
-						<input type="text" placeholder="Your name" required>
-						<input type="email" placeholder="Your email" required>
-						<input type="text" placeholder="subject">
-						<textarea name="message" id="message"  rows="10" placeholder="message..."></textarea>
-						<input type="button" name="button" id="button" value="submit">
-					</form>
-					
-				</div>
-				
-			</div>
-			
-		</section>-->
-
-		<section class="contact" id="contact">
-
-			<div class="contact-header">
-				<h2>Contact Me</h2>
-				<p>Do you want me to offer you my services? Fill out the form and fill me in with the details. It is always my pleasure serving you. <span> :&#41</span>!</p>
-			</div>
-			<div class="map">
-				
-			</div>
-	
-			<div class="contact-section">
-	
-				<div class="contact-address">
-					<div class="location">
-						<i class="fa-solid fa-location-dot"></i>
-						<span>Nairobi, Kenya</span>
-					</div>
-					<div class="phone">
-						<i class="fa-solid fa-phone"></i>
-						<span>+254790598519</span>
-					</div>
-					<div class="email">
-						<i class="fa-solid fa-envelope"></i>
-						<span>okothgerald449@gmail.com</span>
-					</div>
-				</div>
-				<div class="contact-form">
-	
-					<form action="" method="post" name="form">
+			<div class="contact-form">
+				<p>Get in touch</p>
+				<form action="" name="form1">
+					<div class="form-row">
 						<div class="form-name">
 							<input type="text" name="firstname" id="firstname" placeholder="Firstname" required>
 							<input type="text" name="lastname" id="lastname" placeholder="Lastname" required>
@@ -236,47 +219,60 @@
 							<input type="email" name="email" id="email" placeholder="someone@gmail.com" required>
 							<input type="number" name="number" id="number" placeholder="+254-000-453" required>
 						</div>
-						<div class="form-message">
-							<div class="form-subject">
-								<input type="text" name="submit" id="submit" placeholder="subject">
-							</div>
-							<textarea name="message" id="message" rows="10" required></textarea>
+					</div>
+					<div class="form-message">
+						<div class="form-subject">
+							<input type="text" name="submit" id="submit" placeholder="subject">
 						</div>
-						<!---<i class="fa-solid fa-paper-plane"></i>--><input type="submit" value="submit">
-					</form>
-	
-				</div>
-	
+						<textarea name="message" id="message" rows="10" required></textarea>
+						<button type="submit">submit</button>
+					</div>
+				</form>
 			</div>
-			<hr>
-			<div class="follow-me">
-				<div class="follow-me-header">
-					<h4>Follow Me</h4>
-	
-				</div>
-				<div class="social-links">
-					<a href="https://www.linkedin.com/in/gerald-okoth/"><i class="fa-brands fa-linkedin"></i></a>
-					<a href="https://www.youtube.com/@geraldokoth254"><i class="fa-brands fa-youtube"></i></a>
-					<a href="https://twitter.com/gerorganist"><i class="fa-brands fa-twitter"></i></a>
-					<a href="https://www.instagram.com/okothgerald449"><i class="fa-brands fa-instagram"></i></a>
-				</div>
-			</div>
-		
-	</section>
-
-	<section class="footer-content">
-		<div class="footer-links" id="follow-me-links">
-			<ul>
-				<li><a href="https://www.linkedin.com/in/gerald-okoth/" target="_blank"><i class="fa-brands fa-linkedin"></i>linkedin</a></li>
-				<li><a href="https://github.com/GeraldOkoth" target="_blank"><i class="fa-brands fa-github"></i>github</a></li></li>
-				<li><a href="https://www.youtube.com/@geraldokoth254" target="_blank"><i class="fa-brands fa-youtube"></i>youtube</a></li>
-				<li><a href="https://twitter.com/gerorganist" target="_blank"><i class="fa-brands fa-twitter"></i>twitter</a></li>
-				<li><a href="https://www.instagram.com/okothgerald449" target="_blank"><i class="fa-brands fa-instagram"></i>instagram</a></li>            
-			</ul>
 		</div>
-		<div class="top"><a href="#top">to top</a></div>
-		<div class="footer">&copy;2023. All rights reserved. Powered by clean master.</div>
 	</section>
 
+	<section class="footer">
+		<div class="footer-links">
+			<div class="social-media-links">
+				<ul>
+					<li><a href="https://www.linkedin.com/in/gerald-okoth/" target="_blank"><i class="fa-brands fa-linkedin"></i>linkedin</a></li>
+					<li><a href="https://github.com/GeraldOkoth" target="_blank"><i class="fa-brands fa-github"></i>github</a></li></li>
+					<li><a href="https://www.youtube.com/@geraldokoth254" target="_blank"><i class="fa-brands fa-youtube"></i>youtube</a></li>
+					<li><a href="https://twitter.com/gerorganist" target="_blank"><i class="fa-brands fa-twitter"></i>twitter</a></li>
+					<li><a href="https://www.instagram.com/okothgerald449" target="_blank"><i class="fa-brands fa-instagram"></i>instagram</a></li>            
+				</ul>
+			</div>
+			<div class="useful-links">
+				<ul>
+					<li><a href="">Images</a></li>
+					<li><a href="">Videos</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="top"><a href="#top">^</a></div>
+
+		<hr class="horfooter">
+		<div class="footer-txt">
+			<p>&copy;2023. All rights reserved. Powered by clean master.</p>
+		</div>
+	</section>
+
+    <script>
+        // Function to toggle the menu open and close
+        function toggleMenu() {
+            var homePageTopBar = document.getElementById("homePageTopBar");
+            var hamburgerx = document.getElementById("hamburgerx");
+
+            if (homePageTopBar.style.display === "block") {
+                homePageTopBar.style.display = "none";
+				
+            } else {
+                homePageTopBar.style.display = "block";
+				hamburgerx.style.display = "block";
+            }
+        }
+    </script>
+	
 </body>
 </html>
