@@ -3,8 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Gerald Okoth</title>
-	<meta name="description" content="">
-	<meta http-equiv="refresh" content="5">
+	<meta name="description" content="Gerald Okoth is a mathematics and computer science student at Machakos University, in Kenya, passionate about software engineering. Currently working on front-end technologies, he is enthusiastic on pursuing back-end technologies and later to full-stackdeveloper.">
+	<!--<meta http-equiv="refresh" content="300">-->
 	<link rel="stylesheet" href="home.css">
 	<meta name="Gerald Okoth" content="author">
 	<meta http-equiv="X-UA-Compatible" content="IE=7">
@@ -12,110 +12,114 @@
 	<script src="https://kit.fontawesome.com/23021fc8d3.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
+<!--HOME SECTION-->
 	<section class="home-page">
-		<div class="homePageTopBar" id="homePageTopBar">
+		<div class="navbar">
 			<div class="logo">
 				Ge<span>ro</span>
 			</div>
-			<div class="menu">
+			<nav class="menu" id="menuLinks">
 				<ul>
 					<li><a href="index.html" class="active" target="_self" title="Home"><i class="fa-solid fa-house"></i></i>Home</a></li>
 					<li><a href="#services" class="active" target="_self" title="services"><i class="fa-brands fa-shopify"></i></i>Services</a></li>
-					<li><a href="#Testimonials" class="active" target="_self" title="Testimonials"><i class="fa-solid fa-bookmark"></i></i>Testimonials</a></li>
+					<li><a href="#testimonials" class="active" target="_self" title="Testimonials"><i class="fa-solid fa-bookmark"></i></i>Testimonials</a></li>
 					<li><a href="#about" target="_self" title="See about"><i class="fa-solid fa-user"></i></i>About</a></li>
 					<li><a href="#contact" target="_self" title="Contact me"><i class="fa-solid fa-phone"></i>Contact</a></li>
 				</ul>
-			</div>
+			</nav>
 		</div>
-		<div class="hamburger" onclick="toggleMenu()">☰</div>
+		<!--<div class="hamburger" id="hamburgerOpen" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></div>-->
+		<div class="hamburger" id="hamburgerOpen" onclick="toggleMenu()">☰</div>
+		<div class="hamburger" id="hamburgerClose" onclick="toggleMenu()"><i class="fa-solid fa-xmark"></i></div>
 
-		<!--<div class="menuBtn"><i class="fa-solid fa-bars"></i></div>
-		<div class="menuBtn"><i class="fa-solid fa-xmark"></i></div>-->
-		<div class="home-page-info">
-			<div class="home-page-photo">
-				<img src="Images/IMG_20220417_104146_015.jpg" alt="my profile" width="180em" height="180em">
+		<div class="hero">
+			<div class="hero-photo">
+				<img src="Images/IMG_20230917_113803_217.jpg" alt="my profile" width="180px" height="180px">
 			</div>
-			<div class="home-page-detail-info">
-				<div class="home-page-text">
-					<h2>The creative generation</h2>
+			<div class="hero-info">
+				<div class="hero-text">
+					<h1>The creative generation</h1>
 					<p>Hi there, i am Gerald Okoth, a tech enthusiast, graphics designer and a front-end web developer.</p>
-					<p>I design and build responsive and elegant animated websites for persons and businesses</p>
+					<p>I design and build responsive and elegant animated websites for persons and businesses.</p>
 				</div>
-				<div class="home-page-btn">
+				<div class="hero-btn">
 					<a href="#about"><span></span>About Me</a>
 					<a href="#follow-me-links"><span></span>Follow Me</a>
 				</div>
 			</div>
 		</div>
 	</section>
-
-	<section class="services" id="services">
-		<div class="About-header">
-			<h3>Services</h3>
-			<p>I offer better and quality services that suits my clients</p>
-		</div>
-		<div class="services-head">
-			<h3>Why choose me.</h3>
-		</div>
-		<div class="my-reput">
-			<div class="cheap">
-				<h4>Affodable cost</h4>
-				<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa itaque, saepe ut fuga explicabo eveniet veniam a. Quasi, tempore magni.</p>
+<!--SERVICES SECTION-->
+	<section class="Services" id="services">
+		<div class="sevices-body">
+			<div class="services-header">
+				<h1>Services</h1>
+				<p>I offer better and quality services that suits my clients</p>
 			</div>
-			<div class="quality">
-				<h4>Quality Services</h4>
-				<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa itaque, saepe ut fuga explicabo eveniet veniam a. Quasi, tempore magni.</p>
-			</div>
-			<div class="online">
-				<h4>Online Booking</h4>
-				<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa itaque, saepe ut fuga explicabo eveniet veniam a. Quasi, tempore magni.</p>
-			</div>
-		</div>
-		<div class="photography-header">
-			<h4 id="photo">My Brand</h4>
-		</div>
-		<div class="photography">
-			<div class="image">
-				<img src="Images/tommao-wang-hbkdjPI9594-unsplash.jpg" alt="" width="260" height="260">
-				<div class="overlay"></div>
-				<div class="service-description">
-					<h3>Photography</h3>
-					<hr>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumqu saepe!</p>
+			<div class="services-cta">
+				<div class="cheap">
+					<h3>Affodable cost</h3>
+					<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa itaque, saepe ut fuga explicabo eveniet.</p>
+				</div>
+				<div class="quality">
+					<h3>Quality Services</h3>
+					<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa itaque, saepe ut fuga explicabo eveniet veniam a. Quasi, tempore magni.</p>
+				</div>
+				<div class="online-booking">
+					<h3>Online Booking</h3>
+					<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa itaque, saepe.</p>
 				</div>
 			</div>
-			<div class="image">
-				<img src="Images/pexels-philippe-donn-1169754.jpg" alt="" width="260" height="260">
-				<div class="overlay"></div>
-				<div class="service-description">
-					<h3>Graphic Design</h3>
-					<hr>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumqu saepe!</p>
+			<div class="My-services">
+				<div class="image">
+					<div class="photography-img">
+						<img src="Images/tommao-wang-hbkdjPI9594-unsplash.jpg" alt="" width="200px" height="200px">
+					</div>
+					<div class="overlay"></div>
+					<div class="service-description">
+						<h3>Photography</h3>
+						<hr>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumqu saepe!</p>
+					</div>
 				</div>
-			</div>
-			<div class="image">
-				<img src="Images/459-background.png" alt="" width="260" height="260">
-				<div class="overlay"></div>
-				<div class="service-description">
-					<h3>Videography</h3>
-					<hr>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumqu saepe!</p>
+				<div class="image">
+					<div class="photography-img">
+						<img src="Images/pexels-philippe-donn-1169754.jpg" alt="" width="200px" height="200px">
+					</div>
+					<div class="overlay"></div>
+					<div class="service-description">
+						<h3>Graphic Design</h3>
+						<hr>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumqu saepe!</p>
+					</div>
 				</div>
-			</div>
-			<div class="image">
-				<img src="Images/altumcode-U0tBTn8UR8I-unsplash.jpg" alt="" width="260" height="260">
-				<div class="overlay"></div>
-				<div class="service-description">
-					<h3>Web design</h3>
-					<hr>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumqu saepe!</p>
+				<div class="image">
+					<div class="photography-img">
+						<img src="Images/459-background.png" alt="" width="200px" height="200px">
+						<div class="overlay"></div>
+					</div>
+					<div class="service-description">
+						<h3>Videography</h3>
+						<hr>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumqu saepe!</p>
+					</div>
+				</div>
+				<div class="image">
+					<div class="photography-img">
+						<img src="Images/altumcode-U0tBTn8UR8I-unsplash.jpg" alt="" width="200px" height="200px">
+					</div>
+					<div class="overlay"></div>
+					<div class="service-description">
+						<h3>Web design</h3>
+						<hr>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumqu saepe!</p>
+					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-
-	<section class="testimonials" id="testimonials">
+<!--TESTIMONIALS SECTION-->
+	<section class="Testimonials active" id="testimonials">
 		<div class="testimonials-header">
 			<h3>Testimonials</h3>
 			<p>What my clients say</p>
@@ -153,7 +157,7 @@
 			</div>
 		</div>
 	</section>
-
+<!--ABOUT SECTION-->
 	<section class="About" id="about">
 		<div class="About-header">
 			<h3>About</h3>
@@ -161,7 +165,7 @@
 		</div>
 		<div class="about-info">
 			<div class="about-img">
-				<img src="Images/1672053194398.jpg" alt="my pic" width="200px" height="auto">
+				<img src="Images/IMG_20230917_113805_729.jpg" alt="my pic" width="200px" height="auto">
 			</div>
 			<div class="aboutme">
 				<div class="about-me">
@@ -172,21 +176,22 @@
 						<P>Through the invaluable skills that i acquire daily, have been able to design and build powerful front-end responsive websites, this has promoted trust and confidence by my clients.</P><br>
 						<p>I look forward to a greater future of coding.</p><br></br>
 						<p><b><i>Happy coding!</i></b></p>
+						<a href="C:\Users\Machinery\Desktop\Onedrive\Pictures\Documents\My documents\CURRICULUM VITAE.pdf" download class="cvdownload">Download CV<i class="fa-solid fa-download"></i></a>
 				</div>
 				<hr>
-				<div class="follow-me-links" id="follow-me-links">
+				<div class="follow-me-links" id="follow-me-links"
 					<h3>Follow me</h3>
 					<div class="social-links">
-						<a href=""><i class="fa-brands fa-linkedin">L</i></a>
-						<a href=""><i class="fa-brands fa-github">G</i></a>
-						<a href=""><i class="fa-brands fa-youtube">Y</i></a>
-						<a href=""><i class="fa-brands fa-instagram">I</i></a>
+						<a href="https://www.linkedin.com/in/gerald-okoth/"><i class="fa-brands fa-linkedin"></i></a>
+						<a href="https://github.com/GeraldOkoth"><i class="fa-brands fa-github"></i></a>
+						<a href="https://www.youtube.com/@geraldokoth254"><i class="fa-brands fa-youtube"></i></a>
+						<a href="https://www.instagram.com/okothgerald449"><i class="fa-brands fa-instagram"></i></a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-
+<!--CONTACT SECTION-->
 	<section class="contact" id="contact">
 		<div class="contact-header">
 			<h3>Contact Me</h3>
@@ -209,7 +214,7 @@
 			</div>
 			<div class="contact-form">
 				<p>Get in touch</p>
-				<form action="" name="form1">
+				<form action="" name="submit-to-google-sheet">
 					<div class="form-row">
 						<div class="form-name">
 							<input type="text" name="firstname" id="firstname" placeholder="Firstname" required>
@@ -222,16 +227,19 @@
 					</div>
 					<div class="form-message">
 						<div class="form-subject">
-							<input type="text" name="submit" id="submit" placeholder="subject">
+							<input type="text" name="subject" id="subject" placeholder="subject">
 						</div>
 						<textarea name="message" id="message" rows="10" required></textarea>
 						<button type="submit">submit</button>
 					</div>
 				</form>
+				<div id="mesg">
+					
+				</div>
 			</div>
 		</div>
 	</section>
-
+<!---FOOTER SECTION-->
 	<section class="footer">
 		<div class="footer-links">
 			<div class="social-media-links">
@@ -250,29 +258,44 @@
 				</ul>
 			</div>
 		</div>
-		<div class="top"><a href="#top">^</a></div>
-
-		<hr class="horfooter">
-		<div class="footer-txt">
-			<p>&copy;2023. All rights reserved. Powered by clean master.</p>
-		</div>
+		<div class="top"><a href="#top"><i class="fa-solid fa-arrow-up"></i></a></div>
 	</section>
+	<div class="footer-txt">
+		<p>&copy;2023. All rights reserved. Powered by clean master.</p>
+	</div>
 
     <script>
         // Function to toggle the menu open and close
         function toggleMenu() {
-            var homePageTopBar = document.getElementById("homePageTopBar");
-            var hamburgerx = document.getElementById("hamburgerx");
+            var menu = document.getElementById("menuLinks");
 
-            if (homePageTopBar.style.display === "block") {
-                homePageTopBar.style.display = "none";
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
 				
             } else {
-                homePageTopBar.style.display = "block";
-				hamburgerx.style.display = "block";
+                menu.style.display = "block";
             }
         }
     </script>
+  
+	<script>
+		const scriptURL = 'https://script.google.com/macros/s/AKfycbw7mGRMOeIqxtCdYK4RQJ6dJjPfi1N9JCpjuZA5StjLA5aJSMeIOgHPNkeV7jUQYT7p/exec'
+		const form = document.forms['submit-to-google-sheet']
+		const mesg = document.getElementById("mesg")
+	
+		form.addEventListener('submit', e => {
+		e.preventDefault()
+		fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+			.then(response => {
+				mesg.innerHTML = "Message has been successfully sent!"
+				setTimeout(function(){
+					mesg.innerHTML = ""
+				}, 5000)
+				form.reset()
+			})
+			.catch(error => console.error('Error!', error.message))
+		})
+	</script>
 	
 </body>
 </html>
