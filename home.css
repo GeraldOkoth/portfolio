@@ -19,7 +19,7 @@ html {
 /*Style the home page backgroud*/
 .home-page {
 	height: 100vh;
-	background: linear-gradient(rgba(0,0,0,0.2), #009688 ), url(Images/459-background.png );
+	background: linear-gradient(rgba(0,0,0,0.2), #0a0a0a ), url(Images/istockphoto-1465597988-1024x1024.jpg);
 	position: relative;
 	background-size: cover;
 	background-position: center;
@@ -38,16 +38,31 @@ html {
 
 /*style the logo*/
 .logo {
-	padding: 0 2em;
-	cursor: pointer;
-	font: 2rem bold;
+	text-decoration: none;
+	padding: .5em 2em;
+	font: 1.3rem bold;
 	letter-spacing: .17em;
 	text-transform: uppercase;
+	-webkit-background-clip: text;
+	-webkit-text-stroke: 1px #fff;
 	font-family: 'Times New Roman', Times, serif;
+	background: url(Images/bubble.png);
+	background-position: 0 0;
+	animation: back 20s linear infinite;
+}
+
+.logo a {
+	text-decoration: none;
+}
+
+@keyframes back {
+	100% {
+		background-position: 2000px 0;
+	}
 }
 
 .logo span {
-	color: #f0f3f1;
+	color: blue;
 	font-family: cursive;
 }
 
@@ -114,7 +129,7 @@ html {
 	/*style the logo*/
 	.logo {
 		padding: .5em 1em;
-		font: 1.3rem bold;
+		font: 1.5rem bold;
 	}
 	/*Style the menu links on small screens*/
 	.menu ul {
@@ -168,9 +183,25 @@ html {
 }
 
 .hero-text h1 {
-	font: 2em bolder;
+	font: 4em bolder;
 	letter-spacing: .1em;
 }
+
+/*.hero-text h1 {
+	z-index: 10;
+	color: #0127ff;
+	text-decoration: none;
+	padding: .5em 2em;
+	font: 1.3rem bold;
+	letter-spacing: .17em;
+	text-transform: uppercase;
+	-webkit-background-clip: content-box;
+	-webkit-text-stroke: 6px #fff;
+	font-family: 'Times New Roman', Times, serif;
+	background: url(Images/back.png);
+	background-position: 0 0;
+	animation: back 20s linear infinite;
+}*/
 
 /*style hero buttons*/
 .hero-btn {
@@ -333,6 +364,11 @@ html {
 	justify-content: space-between;
 }
 
+.services-cta img {
+	display: block;
+	margin: 0 auto 10px auto;
+}
+
 /*Style the services call to action on small screens*/
 @media screen and (max-width: 660px) {
 	.services-cta {
@@ -367,7 +403,7 @@ html {
 .My-services .image {
 	width: 100%;
 	color: #fff;
-	flex-basis: 23%;
+	flex-basis: 18%;
 	position: relative;
 }
 
@@ -826,5 +862,9 @@ button[type="submit"]:hover {
 	margin-top: 2px;
 	font-size: .9em;
 	text-align: center;
-	background-color: #ebdcdc;
+	background-color: #111111;
+}
+
+.footer-txt p {
+	color: #777;
 }
