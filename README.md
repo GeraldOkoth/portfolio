@@ -1,12 +1,11 @@
-## Gerald Okoth web development project repository.
- This is my personal website currently under development according to my own preferrence.
 <<<<<<< HEAD
- Languages in use include: Html, Css and Javascript.
- I welcome any collaboration on this project.
-
-
+## Gerald Okoth web development project repository.
+This repo contains files for my website currently under development according to my own preferrence.
+I highly welcome any contribution to this development.
+Languages include Html, Css and Javascript.
 =======
- Languageds in use include: Html, Css and Javascript.
- I welcome any collaboration on this project.
 
->>>>>>> f246b9bf29af5e26103637403a583a3489cb59f6
+## **Introduction to C programming language.**
+
+This is a complete introduction to C programming language. Implementing basic programs.
+>>>>>>> 806c66c84c6374ed2382eec86277d6ebfee81166
