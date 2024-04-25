@@ -11,6 +11,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=7">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="https://kit.fontawesome.com/23021fc8d3.js" crossorigin="anonymous"></script>
+	<script src="https://smtpjs.com/v3/smtp.js"></script>
 </head>
 <body>
 <!--HOME SECTION-->
@@ -243,7 +244,7 @@
 			</div>
 			<div class="contact-form">
 				<p>Get in touch</p>
-				<form action="contact.php" name="submit-to-google-sheet" method="post">
+				<form action="contact.php" onsubmit="sendEmail();" method="post">
 					<div class="form-row">
 						<div class="form-name">
 							<input type="text" name="firstname" id="firstname" placeholder="Firstname" required>
@@ -330,6 +331,28 @@
 			})
 			.catch(error => console.error('Error!', error.message))
 		})
+	</script>
+
+	<!--Script to send email-->
+	<script>
+		function sendEmail(){
+			Email.send({
+				Host : "smtp.gmail.com",
+				Username : "okothgerald449@gmail.com",
+				Password : "495CD74D300A45B68401BE2163282E36FE70",
+				To : 'okothgerald449@gmail.com',
+				From : document.getElementById("email").value,
+				Subject : document.getElementById("subject").value,
+				Body : "First Name: " + document.getElementById("firstname").value +
+				       " <br> Last Name: " + document.getElementById("lastname").value +
+					   " <br> Email: " + document.getElementById("email").value +
+				       " <br> Number: " + document.getElementById("number").value +
+					   " <br> Subject: " + document.getElementById("subject").value +
+				       " <br> Message: " + document.getElementById("message").value
+			}).then(
+			message => alert("message sent successfully!")
+			);
+		}
 	</script>
 	
 </body>
