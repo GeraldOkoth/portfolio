@@ -244,7 +244,7 @@
 			</div>
 			<div class="contact-form">
 				<p>Get in touch</p>
-				<form action="contact.php" onsubmit="sendEmail();" method="post">
+				<form action="" onsubmit="sendEmail();" method="post" reset(); return false;>
 					<div class="form-row">
 						<div class="form-name">
 							<input type="text" name="firstname" id="firstname" placeholder="Firstname" required>
@@ -337,7 +337,7 @@
 	<script>
 		function sendEmail(){
 			Email.send({
-				Host : "smtp.gmail.com",
+				Host : "smtp.elasticemail.com",
 				Username : "okothgerald449@gmail.com",
 				Password : "495CD74D300A45B68401BE2163282E36FE70",
 				To : 'okothgerald449@gmail.com',
