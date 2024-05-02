@@ -11,8 +11,18 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=7">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="https://kit.fontawesome.com/23021fc8d3.js" crossorigin="anonymous"></script>
-	<script src="https://smtpjs.com/v3/smtp.js"></script>
-</head>
+	<script type="text/javascript" src="sendEmail.js"></script>
+	<script type="text/javascript" src="elasticEmail.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+	<script type="text/javascript">
+		(function(){
+			emailjs.init({
+				publicKey: "U6FuyV7yh6s35Ewii",
+			});
+		})();
+		</script>
+	<script src="https://smtpjs.com/v3/smtp.js"></Script> <!--Script to send email-->
+	</head>
 <body>
 <!--HOME SECTION-->
 	<section class="home-page">
@@ -244,7 +254,7 @@
 			</div>
 			<div class="contact-form">
 				<p>Get in touch</p>
-				<form onsubmit="sendEmail();" method="post">
+				<form onsubmit="sendEmail()" method="post" action="" reset() return false>
 					<div class="form-row">
 						<div class="form-name">
 							<input type="text" name="firstname" id="firstname" placeholder="Firstname" required>
@@ -260,7 +270,7 @@
 							<input type="text" name="subject" id="subject" placeholder="subject">
 						</div>
 						<textarea name="message" id="message" rows="10" required></textarea>
-						<button type="submit">submit<i class="fa-solid fa-paper-plane"></i></button>
+						<button type="submit" onsubmit="sendMail()">submit<i class="fa-solid fa-paper-plane"></i></button>
 					</div>
 				</form>
 				<span id="mesg"></span>
@@ -299,61 +309,6 @@
 			<p>&copy;2023. All rights reserved. Powered by clean master.</p>
 		</div>
 	</section>
-
-    <script>
-        // Function to toggle the menu open and close
-        function toggleMenu() {
-            var menu = document.getElementById("menuLinks");
-
-            if (menu.style.display === "block") {
-                menu.style.display = "none";
-				
-            } else {
-                menu.style.display = "block";
-            }
-        }
-    </script>
-  
-	<script>
-		const scriptURL = 'https://script.google.com/macros/s/AKfycbw7mGRMOeIqxtCdYK4RQJ6dJjPfi1N9JCpjuZA5StjLA5aJSMeIOgHPNkeV7jUQYT7p/exec'
-		const form = document.forms['submit-to-google-sheet']
-		const mesg = document.getElementById("mesg")
-	
-		form.addEventListener('submit', e => {
-		e.preventDefault()
-		fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-			.then(response => {
-				mesg.innerHTML = "Message has been successfully sent!"
-				setTimeout(function(){
-					mesg.innerHTML = ""
-				}, 5000)
-				form.reset()
-			})
-			.catch(error => console.error('Error!', error.message))
-		})
-	</script>
-
-	<!--Script to send email-->
-	<script>
-		function sendEmail(){
-			Email.send({
-				Host : "smtp.elasticemail.com",
-				Username : "okothgerald449@gmail.com",
-				Password : "495CD74D300A45B68401BE2163282E36FE70",
-				To : 'okothgerald449@gmail.com',
-				From : document.getElementById("email").value,
-				Subject : document.getElementById("subject").value,
-				Body : "First Name: " + document.getElementById("firstname").value +
-				       " <br> Last Name: " + document.getElementById("lastname").value +
-					   " <br> Email: " + document.getElementById("email").value +
-				       " <br> Number: " + document.getElementById("number").value +
-					   " <br> Subject: " + document.getElementById("subject").value +
-				       " <br> Message: " + document.getElementById("message").value
-			}).then(
-			message => alert("message sent successfully!")
-			);
-		}
-	</script>
 	
 </body>
 </html>
