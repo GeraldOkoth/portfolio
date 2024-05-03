@@ -1,3 +1,4 @@
+//Function to send email.
 function sendMail(){
     let params = {
         firstname : document.getElementById("firstname").value,
