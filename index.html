@@ -10,10 +10,6 @@
 	<meta name="Gerald Okoth" content="author">
 	<meta http-equiv="X-UA-Compatible" content="IE=7">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src="https://kit.fontawesome.com/23021fc8d3.js" crossorigin="anonymous"></script>
-	<script type="text/javascript" src="sendEmail.js"></script>
-	<script type="text/javascript" src="elasticEmail.js"></script>
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 	<script type="text/javascript">
 		(function(){
 			emailjs.init({
@@ -21,8 +17,7 @@
 			});
 		})();
 		</script>
-	<script src="https://smtpjs.com/v3/smtp.js"></Script> <!--Script to send email-->
-	</head>
+</head>
 <body>
 <!--HOME SECTION-->
 	<section class="home-page">
@@ -73,7 +68,7 @@
 	<section class="Services" id="services">
 		<div class="sevices-body">
 			<div class="services-header">
-				<h1>Services</h1>
+				<h1>Explore my Services</h1>
 				<p>My pleasure is to offer better and quality services that focus on what's best for you!</p>
 			</div>
 			<div class="services-cta">
@@ -234,6 +229,12 @@
 			<h3>Contact Me</h3>
 			<p>I would love to respond to your queries. It is always my pleasure serving you. Let's get in touch. <span> :&#41</span>!</p>
 		</div>
+		<script src="https://kit.fontawesome.com/23021fc8d3.js" crossorigin="anonymous"></script>
+		<!--<script type="text/javascript" src="google-sheet_contact.js"></script>-->
+		<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+		<!--<script src="sendEmail.js"></script>-->
+		<script src="https://smtpjs.com/v3/smtp.js"></Script> <!--Script to send email-->
+		<script src="elasticEmail.js"></script>
 		<div class="contact-section">
 			<div class="contact-address">
 				<div class="location">
@@ -257,23 +258,23 @@
 				<form onsubmit="sendEmail()" method="post" action="" reset() return false>
 					<div class="form-row">
 						<div class="form-name">
-							<input type="text" name="firstname" id="firstname" placeholder="Firstname" required>
-							<input type="text" name="lastname" id="lastname" placeholder="Lastname" required>
+							<input type="text" name="firstname" id="firstname" placeholder="Firstname">
+							<input type="text" name="lastname" id="lastname" placeholder="Lastname">
 						</div>
 						<div class="form-contact">
-							<input type="email" name="email" id="email" placeholder="someone@gmail.com" required>
-							<input type="number" name="number" id="number" placeholder="+254-000-453" required>
+							<input type="email" name="email" id="email" placeholder="someone@gmail.com">
+							<input type="number" name="number" id="number" placeholder="+254-000-453">
 						</div>
 					</div>
 					<div class="form-message">
 						<div class="form-subject">
 							<input type="text" name="subject" id="subject" placeholder="subject">
 						</div>
-						<textarea name="message" id="message" rows="10" required></textarea>
+						<textarea name="message" id="message" rows="10"></textarea>
 						<button type="submit" onsubmit="sendMail()">submit<i class="fa-solid fa-paper-plane"></i></button>
 					</div>
 				</form>
-				<span id="mesg"></span>
+				<span id="mesg" style="display: none;">message has been sent. We will respond to you shortly.</span>
 			</div>
 		</div>
 	</section>
@@ -305,6 +306,7 @@
 			</div>
 		<div class="top"><a href="#top"><i class="fa-solid fa-arrow-up"></i></a></div>
 		</div>
+		<hr style="width: 90%; margin: auto;">
 		<div class="footer-txt">
 			<p>&copy;2023. All rights reserved. Powered by clean master.</p>
 		</div>

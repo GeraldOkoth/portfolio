@@ -17,4 +17,6 @@ function sendMail(){
     }).then(
     message => alert("message sent successfully!")
     );
+    document.getElementById("mesg").innerHTML="message has been sent. We will respond to you shortly.codeblock";
+    document.getElementById("mesg").style.display="block";
 }

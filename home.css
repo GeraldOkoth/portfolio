@@ -6,10 +6,16 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: 'Cinzel', serif;
+	/*font-family: 'Cinzel', serif;
 	font-family: 'Merriweather', serif;
 	font-family: 'Roboto', sans-serif;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Poppins', sans-serif;*/
+}
+
+body {
+	color: #000;
+	background-color: #fff;
+	font-family: "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 html {
@@ -32,26 +38,25 @@ html {
 	display: flex;
 	position: fixed;
 	align-items: center;
-	background-color: #009688;
+	background-color: azure;
 	justify-content: space-between;
+	box-shadow: 0 0 12px;
 }
 
 /*style the logo*/
 .logo {
-	text-decoration: none;
-	padding: .5em 2em;
-	font: 1.3rem bold;
+	padding: .8em 4em;
 	letter-spacing: .17em;
 	text-transform: uppercase;
-	-webkit-background-clip: text;
-	-webkit-text-stroke: 1px #fff;
-	font-family: 'Times New Roman', Times, serif;
+	text-decoration: none;
+	font-family: "Brush Script MT", cursive;
 	background: url(Images/bubble.png);
 	background-position: 0 0;
 	animation: back 20s linear infinite;
 }
 
 .logo a {
+	font: 5rem 400;
 	text-decoration: none;
 }
 
@@ -62,8 +67,7 @@ html {
 }
 
 .logo span {
-	color: blue;
-	font-family: cursive;
+	color: #FE9900;
 }
 
 /*Style the menu links*/
@@ -75,7 +79,7 @@ html {
 }
 
 .menu a {
-	color: #fff;
+	color: #000;
 	padding: .6em;
 	margin-right: .2em;
 	position: relative;
@@ -86,7 +90,7 @@ html {
 }
 
 .menu .fa-solid, .fa-shopify {
-	color: #fff;
+	color: #151414;
 	margin-right: 5px;
 }
 
@@ -99,7 +103,7 @@ html {
 	height: .12em;
 	position: absolute;
 	transition: width .3s;
-	background-color: #fff;
+	background-color: #000;
 	border-radius: 2em 2em 0 0;
 }
 
@@ -558,7 +562,7 @@ html {
 .About {
 	width: 100%;
 	padding: 40px 0;
-	background-color: azure;
+	background-color: #f1f1f1;
 }
 
 /*Style the about header*/
@@ -681,7 +685,6 @@ html {
 .contact {
 	width: 100%;
 	padding: 20px 0;
-	background-color: #f1f1f1;
 }
 
 /*Style the contact header*/
@@ -727,7 +730,6 @@ input {
 	outline: none;
 	transition: .5s;
 	padding: 12px 14px;
-	background-color: #f1f1f1;
 	border-bottom: 1px solid rgb(14, 13, 13);
 }
 
@@ -735,12 +737,11 @@ input {
 textarea {
 	width: 100%;
 	margin: 8px;
-	border: none;
+	border: 1px solid black;
 	resize: none;
 	outline: none;
 	padding: 12px 14px;
 	border-radius: 5px;
-	background-color: #fff;
 }
 
 input:focus {
@@ -793,11 +794,14 @@ button[type="submit"]:hover {
 }
 
 /*Style the footer section*/
+.my-footer {
+	background-color: #f1f1f1;
+}
+
 .footer {
 	width: 100%;
 	padding: 10px 0;
 	position: relative;
-	background-color: #8780e7;
 }
 
 /*Style the footer links*/
@@ -830,13 +834,12 @@ button[type="submit"]:hover {
 }
 
 .footer-links a {
-	color: #fff;
 	transition: .4s;
+	color: #616161;
 	text-decoration: none;
 }
 
 .footer-links i {
-	color: #fff;
 	padding-right: 1.2em;
 }
 
@@ -862,9 +865,8 @@ button[type="submit"]:hover {
 	margin-top: 2px;
 	font-size: .9em;
 	text-align: center;
-	background-color: #111111;
 }
 
 .footer-txt p {
-	color: #777;
+	color: #616161;
 }
