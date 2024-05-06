@@ -306,7 +306,10 @@
 		</div>
 		<hr style="width: 90%; margin: auto;">
 		<div class="footer-txt">
-			<p>&copy;2023. All rights reserved. Powered by clean master.</p>
+			<p><script>
+				const date = new Date();
+				document.getElementById('footerYear').innerHTML = "&copy;" + date.getFullYear() + " All rights reserved. Powered by clean master.";
+			</script></p>
 		</div>
 	</section>
 	
