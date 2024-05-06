@@ -4,13 +4,20 @@
 	<meta charset="UTF-8">
 	<title>My Hobbies</title>
 	<meta name="description" content="Gerald Okoth is a mathematics and computer science student at Machakos University, in Kenya, passionate about software engineering. Currently working on front-end technologies, he is enthusiastic on pursuing back-end technologies and later to full-stackdeveloper.">
-	<meta http-equiv="refresh" content="300">
 	<link rel="shortcut icon" href="Images/IMG_20220417_104146_015.jpg" type="image/x-icon">
 	<link rel="stylesheet" type="text/css" href="hobby.css">
+	<link rel="stylesheet" type="text/css" href="home.css">
 	<meta name="Gerald Okoth" content="author">
 	<meta http-equiv="X-UA-Compatible" content="IE=7">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src="https://kit.fontawesome.com/23021fc8d3.js" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		(function(){
+			emailjs.init({
+				publicKey: "U6FuyV7yh6s35Ewii",
+			});
+		})();
+		</script>
+</head>
 </head>
 <body>
 <!--HOME SECTION-->
@@ -129,7 +136,7 @@
 			<div class="image-gallery">
 				<div class="responsive">
 					<div class="resp-image">
-						<a href="Images/IMG-20221101-WA0005.jpg" target="_self"><img src="Images//IMG-20221101-WA0005.jpg" alt="" width="200" height="200"></a>
+						<a href="Images/.trashed-1717502115-Screenshot_20240430-061524" target="_self"><img src="Images/.trashed-1717502115-Screenshot_20240430-061524" alt="" width="200" height="200"></a>
 						<div class="desc">
 							<p>Image description</p>
 						</div>
@@ -145,7 +152,7 @@
 				</div>
 				<div class="responsive">
 					<div class="resp-image">
-						<a href="Images/IMG_20220127_103106_041.jpg" target="_self"><img src="Images/IMG_20220127_103106_041.jpg" alt="" width="200" height="200"></a>
+						<a href="Images/istockphoto-1465597988-1024x1024" target="_self"><img src="Images/istockphoto-1465597988-1024x1024" alt="" width="200" height="200"></a>
 						<div class="desc">
 							<p>Image description</p>
 						</div>
@@ -217,104 +224,97 @@
 	</section>
 
 <!--CONTACT SECTION-->
-	<section class="contact" id="contact">
-		<div class="contact-header">
-			<h3>Contact Me</h3>
-			<p>Let's get in touch. Send me a message. <span> :&#41</span>!</p>
-		</div>
-		<div class="contact-section">
-			<div class="contact-form">
-				<form action="" name="submit-to-google-sheet" method="post">
-					<div class="form-row">
-						<div class="form-name">
-							<input type="text" name="firstname" id="firstname" placeholder="Firstname and last name" required>
-
-						</div>
-						<div class="form-contact">
-							<input type="email" name="email" id="email" placeholder="someone@gmail.com" required>
-
-						</div>
-					</div>
-					<div class="form-message">
-						<div class="form-subject">
-							<input type="text" name="subject" id="subject" placeholder="subject">
-						</div>
-						<textarea name="message" id="message" required></textarea>
-						<button type="submit">Send<i class="fa-solid fa-paper-plane"></i></button>
-					</div>
-				</form>
-				<span id="mesg"></span>
+<section class="contact" id="contact">
+	<div class="contact-header">
+		<h3>Contact Me</h3>
+		<p>I would love to respond to your queries. It is always my pleasure serving you. Let's get in touch. <span> :&#41</span>!</p>
+	</div>
+	<script src="https://kit.fontawesome.com/23021fc8d3.js" crossorigin="anonymous"></script>
+	<!--<script type="text/javascript" src="google-sheet_contact.js"></script>-->
+	<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+	<!--<script src="sendEmail.js"></script>-->
+	<script src="https://smtpjs.com/v3/smtp.js"></Script> <!--Script to send email-->
+	<script src="elasticEmail.js"></script>
+	<div class="contact-section">
+		<div class="contact-address">
+			<div class="location">
+				<i class="fa-solid fa-location-dot"></i>
+				<span>Nairobi, Kenya</span>
+			</div>
+			<div class="phone">
+				<i class="fa-solid fa-phone"></i>
+				<span>+254790598519</span>
+			</div>
+			<div class="email">
+				<i class="fa-solid fa-envelope"></i>
+				<span>okothgerald449@gmail.com</span>
+			</div>
+			<div class="map">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7976.785593850559!2d37.262054699999986!3d-1.531655799999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2ske!4v1694436889790!5m2!1sen!2ske" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 			</div>
 		</div>
-	</section>
+		<div class="contact-form">
+			<p>Get in touch</p>
+			<form onsubmit="sendEmail()" method="post" action="" reset() return false>
+				<div class="form-row">
+					<div class="form-name">
+						<input type="text" name="firstname" id="firstname" placeholder="Firstname">
+						<input type="text" name="lastname" id="lastname" placeholder="Lastname">
+					</div>
+					<div class="form-contact">
+						<input type="email" name="email" id="email" placeholder="someone@gmail.com">
+						<input type="number" name="number" id="number" placeholder="+254-000-453">
+					</div>
+				</div>
+				<div class="form-message">
+					<div class="form-subject">
+						<input type="text" name="subject" id="subject" placeholder="subject">
+					</div>
+					<textarea name="message" id="message" rows="10"></textarea>
+					<button type="submit" onsubmit="sendMail()">submit<i class="fa-solid fa-paper-plane"></i></button>
+				</div>
+			</form>
+			<span id="mesg" style="display: none;">message has been sent. We will respond to you shortly.</span>
+		</div>
+	</div>
+</section>
 
 <!---FOOTER SECTION-->
-	<section class="my-footer">
-		<div class="footer">
-			<div class="footer-links">
-				<div class="social-media-links">
-					<h3>Social media links</h3>
-					<ul>
-						<li><a href="https://www.linkedin.com/in/gerald-okoth/" target="_blank"><i class="fa-brands fa-linkedin"></i>linkedin</a></li>
-						<li><a href="https://github.com/GeraldOkoth" target="_blank"><i class="fa-brands fa-github"></i>github</a></li></li>
-						<li><a href="https://www.youtube.com/@geraldokoth254" target="_blank"><i class="fa-brands fa-youtube"></i>youtube</a></li>
-						<li><a href="https://twitter.com/gerorganist" target="_blank"><i class="fa-brands fa-twitter"></i>twitter</a></li>
-						<li><a href="https://www.instagram.com/okothgerald449" target="_blank"><i class="fa-brands fa-instagram"></i>instagram</a></li>
-						<li><a href="https://www.facebook.com/gerald.okoth.14/"><i class="fa-brands fa-facebook"></i>facebook</a></li>            
-					</ul>
-				</div>
-				<div class="useful-links">
-					<h3>Useful links</h3>
-					<ul>
-						<li><a href="images.html"><i class="fa-solid fa-images"></i>Images</a></li>
-						<li><a href="videos.html"><i class="fa-solid fa-clapperboard"></i>Videos</a></li>
-						<li><a href="blog.html"><i class="fa-solid fa-blog"></i>Blogs</a></li>
-					</ul>
-				</div>
+<section class="my-footer">
+	<div class="footer">
+		<div class="footer-links">
+			<div class="social-media-links">
+				<h3>Social media links</h3>
+				<ul>
+					<li><a href="https://www.linkedin.com/in/gerald-okoth/" target="_blank"><i class="fa-brands fa-linkedin"></i>linkedin</a></li>
+					<li><a href="https://github.com/GeraldOkoth" target="_blank"><i class="fa-brands fa-github"></i>github</a></li></li>
+					<li><a href="https://www.youtube.com/@geraldokoth254" target="_blank"><i class="fa-brands fa-youtube"></i>youtube</a></li>
+					<li><a href="https://twitter.com/gerorganist" target="_blank"><i class="fa-brands fa-twitter"></i>twitter</a></li>
+					<li><a href="https://www.instagram.com/okothgerald449" target="_blank"><i class="fa-brands fa-instagram"></i>instagram</a></li>
+					<li><a href="https://www.facebook.com/gerald.okoth.14/"><i class="fa-brands fa-facebook"></i>facebook</a></li>            
+				</ul>
 			</div>
-		<div class="top"><a href="#top"><i class="fa-solid fa-arrow-up"></i></a></div>
-		</div>
-		<div class="footer-txt">
-			<p id="footerYear"><script>
-				const date = new Date();
-				document.getElementById('footerYear').innerHTML = "&copy;" + date.getFullYear() + " All rights reserved. Powered by clean master.";
-			</script></p>
-		</div>
-	</section>
+			<div class="useful-links">
+				<h3>useful links</h3>
+				<ul>
+					<li><a href="images.html"><i class="fa-solid fa-images"></i>Images</a></li>
+					<li><a href="videos.html"><i class="fa-solid fa-clapperboard"></i>Videos</a></li>
+					<li><a href="hobby.html"><i class="fa-solid fa-clapperboard"></i>Hobbies</a></li>
+					<li><a href="blog.html"><i class="fa-solid fa-blog"></i>Blogs</a></li>
 
-    <script>
-        // Function to toggle the menu open and close
-        function toggleMenu() {
-            var menu = document.getElementById("menuLinks");
-
-            if (menu.style.display === "block") {
-                menu.style.display = "none";
-				
-            } else {
-                menu.style.display = "block";
-            }
-        }
-    </script>
-  
-	<script>
-		//Script to accept user input from the contact form
-		const scriptURL = 'https://script.google.com/macros/s/AKfycbw7mGRMOeIqxtCdYK4RQJ6dJjPfi1N9JCpjuZA5StjLA5aJSMeIOgHPNkeV7jUQYT7p/exec'
-		const form = document.forms['submit-to-google-sheet']
-		const mesg = document.getElementById("mesg")
-	
-		form.addEventListener('submit', e => {
-		e.preventDefault()
-		fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-			.then(response => {
-				mesg.innerHTML = "Message has been successfully sent!"
-				setTimeout(function(){
-					mesg.innerHTML = ""
-				}, 5000)
-				form.reset()
-			})
-			.catch(error => console.error('Error!', error.message))
-		})
-	</script>
+				</ul>
+			</div>
+		</div>
+	<div class="top"><a href="#top"><i class="fa-solid fa-arrow-up"></i></a></div>
+	</div>
+	<hr style="width: 90%; margin: auto;">
+	<div class="footer-txt">
+		<p id="footerYear"><script>
+			const date = new Date();
+			document.getElementById('footerYear').innerHTML = "&copy;" + date.getFullYear() + " All rights reserved. Powered by clean master.";
+		</script></p>
+	</div>
+</section>
 	
 </body>
 </html>
