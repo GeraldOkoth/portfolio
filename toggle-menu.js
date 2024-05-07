@@ -9,3 +9,7 @@
 			menu.style.display = "block";
 		}
 	}
+
+	function changeTheme(){
+		javascript: void(document.body.style.backgroundColor = 'red')
+	}

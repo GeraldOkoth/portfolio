@@ -817,16 +817,19 @@ button[type="submit"]:hover {
 /*Style the 'go back' to top arrow*/
 .top a{
 	right: 10%;
-	width: 30px;
 	bottom: 76px;
-	height: 30px;
+	padding: 12px 14px;
 	color: #fff;
 	font-size: 15px;
 	text-align: center;
 	position: absolute;
-	border-radius: 50%;
+	border-radius: 5px;
 	text-decoration: none;
-	background-color: #000;
+	background-color: #193fea;
+}
+
+.top i {
+	padding-right: 4px;
 }
 
 .footer-links li {
