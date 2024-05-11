@@ -33,11 +33,13 @@
 					<li><a href="#about" target="_self" title="See about"><i class="fa-solid fa-user"></i></i>About</a></li>
 					<li><a href="#contact" target="_self" title="Contact me"><i class="fa-solid fa-phone"></i>Contact</a></li>
 				</ul>
+				<div class="hambuger-menu">
+					<span class="hamburger" id="hamburgerOpen" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></span>
+					<span class="hamburger" id="hamburgerClose" onclick="toggleMenu()"><i class="fa-solid fa-xmark"></i></span>
+					<!-- <span class="hamburger" id="hamburgerOpen" onclick="toggleMenu()">☰</span> -->
+				</div>
 			</nav>
 		</div>
-		<!--<div class="hamburger" id="hamburgerOpen" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></div>-->
-		<div class="hamburger" id="hamburgerOpen" onclick="toggleMenu()">☰</div>
-		<div class="hamburger" id="hamburgerClose" onclick="toggleMenu()"><i class="fa-solid fa-xmark"></i></div>
 
 		<div class="hero">
 			<div class="hero-photo">
@@ -311,7 +313,6 @@
 				document.getElementById('footerYear').innerHTML = "&copy;" + date.getFullYear() + " All rights reserved. Powered by clean master.";
 			</script></p>
 		</div>
-		<div onclick="changeTheme()">changeTheme</div>
 	</section>
 	
 </body>
