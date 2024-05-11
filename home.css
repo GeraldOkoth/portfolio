@@ -121,39 +121,51 @@ html {
 	color: rgb(8, 8, 8);
 }
 
+.active {
+	color: #1637f0;
+}
+
 /*Style the hamburger button*/
-.hambuger-menu .hamburger {
-	top: 2.6%;
-	right: 4%;
+.hambuger-btn .hamburger {
+	color: #a0a0a0;
+	top: 2.4%;
+	right: 3%;
 	z-index: 20;
+	font: 28px;
+	display: none;
 	cursor: pointer;
 	position: fixed;
 }
 
+.hambuger-btn .hamburger i {
+	color: #8b8b8b;
+}
+
 /*Style the navbar on small screens*/
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 400px) {
 	/*style the logo*/
 	.logo {
-		padding: .5em 1em;
-		font: 1.5rem bold;
+		padding: .6em 1em;
 	}
+
+	.hambuger-btn .hamburger {
+		display: block;
+	}
+
 	/*Style the menu links on small screens*/
 	.menu ul {
-		top: 9%;
+		top: 4%;
 		left: 50%;
 		width: 80%;
 		z-index: 15;
-		display: flex;
+		display: none;
 		position: fixed;
 		padding: 1.5em 2em;
 		border-radius: .4em;
 		flex-direction: column;
 		align-items: flex-start;
-		background-color: #009688;
+		background-color: #efefef;
 		transform: translate(-50%, 10%);
-	}
-	.hamburger {
-		display: block;
 	}
 }
 
@@ -167,12 +179,14 @@ html {
 	position: absolute;
 	text-align: center;
 	align-items: center;
+	/* justify-content: space-around; */
 	flex-direction: column;
 	transform: translate(-50%, -50%);
 }
 
 /*style hero image*/
 .hero-photo img {
+	/* flex-basis: 40%; */
 	transition: .5s;
 	object-fit: cover;
 	margin-bottom: 4%;
@@ -184,12 +198,16 @@ html {
 }
 
 /*style the hero info*/
+/* .hero-info {
+	flex-basis: 56%;
+} */
+
 .hero-text h1, p {
 	padding-bottom: .8em;
 }
 
 .hero-text h1 {
-	font: 4em bolder;
+	font: 3em bold;
 	letter-spacing: .1em;
 }
 
@@ -304,7 +322,7 @@ html {
 }
 
 /*Style the hero on small screens*/
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 400px) {
 	.hero-photo img {
 		width: 140px;
 		height: 140px;
@@ -348,6 +366,10 @@ html {
 	text-align: center;
 	position: relative;
 	padding-bottom: .5em;
+}
+
+.services-header h1 {
+	font: 4rem;
 }
 
 .services-header h1::after {
