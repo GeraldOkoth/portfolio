@@ -533,6 +533,7 @@ html {
 .testimonials-section {
 	width: 86%;
 	margin: auto;
+	padding-bottom: 5rem;
 	display: flex;
 	position: relative;
 	justify-content: space-between;
@@ -573,6 +574,14 @@ html {
 
 .testimonials-section .test:hover {
 	transform: translateY(6px);
+}
+
+#more-testimonals a {
+	color: #fff;
+	padding: 12px;
+	background-color: rgb(37, 37, 238);
+	text-decoration: none;
+	border-radius: 5px;
 }
 
 @media screen and (max-width: 660px) {
