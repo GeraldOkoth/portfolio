@@ -25,24 +25,14 @@ html {
 	background-position: center;
 }
 
-/*style the hero*/
-.hero {
-	top: 55%;
-	left: 50%;
-	width: 80%;
-	color: #fff;
-	display: flex;
-	position: absolute;
-	text-align: center;
-	align-items: center;
-	flex-direction: column;
-	transform: translate(-50%, -50%);
+.hero-text p {
+	margin-bottom: 5rem;
 }
 
 .hero-btn-h a {
 	z-index: 1;
 	color: #fff;
-	margin: 0 1em;
+	margin: 1em;
 	overflow: hidden;
 	padding: .7em 3em;
 	position: relative;
@@ -72,17 +62,15 @@ html {
 }
 
 /*Style the hero on small screens*/
-@media screen and (max-width: 660px) {
-	.hero-text h1 {
-		font-size: 1.6em;
-		line-height: 20px;
-		padding-bottom: .2em;
-		letter-spacing: unset;
+@media screen and (max-width: 400px) {
+	.hero-info .hero-text h1 {
+		font-size: 2rem;
+		line-height: 2rem;
+		margin-bottom: 5rem;
 	}
 	.hero-text p {
-		font: .9em;
-		padding: .2em 0;
-		line-height: 1.7em;
+		font-size: 1rem;
+		margin-bottom: 3rem;
 	}
 	.hero-btn-h {
 		padding: .6em 2em;
@@ -112,7 +100,7 @@ html {
 }
 
 /*Style the hero on small screens*/
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 400px) {
 	.abt {
 		width: 100%;
 		padding: 1em 2rem;
@@ -242,64 +230,10 @@ html {
 	text-align: center;
 }
 
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 400px) {
 	.image-gallery {
 		display: grid;
 		gap: .9rem;
 		grid-template-columns:  auto;
 	}
-}
-
-/*Style the testimonials section*/
-.Testimonials {
-	width: 100%;
-	padding: 40px 0;
-	background-color: #f1f1f1;
-}
-
-/*Style the testimonials header*/
-.testimonials-header {
-	text-align: center;
-}
-
-/*Style the testimonials section*/
-.testimonials-section {
-	width: 86%;
-	margin: auto;
-	display: flex;
-	position: relative;
-	justify-content: space-between;
-}
-
-.testimonials-section .test {
-	padding: 15px;
-	transition: .5s;
-	cursor: pointer;
-	flex-basis: 30%;
-	margin: 10px auto;
-	border-radius: 5px;
-	box-shadow: 0 5px 10px 3px #ddd;
-}
-
-.testimonials-section .test p {
-	text-align: left;
-}
-
-.user {
-	display: flex;
-	margin: 12px auto;
-	align-items: center;
-}
-
-/*Style clients' profile pic*/
-.user img {
-	width: 40px;
-	height: 40px;
-	object-fit: cover;
-	border-radius: 50%;
-	margin-right: 10px;
-}
-
-.user small, .fa-brands {
-	color: #27c0ff;
 }
