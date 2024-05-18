@@ -166,6 +166,7 @@ html {
 		align-items: flex-start;
 		background-color: #efefef;
 		transform: translate(-50%, 10%);
+		box-shadow: 0 1px 5px;
 	}
 }
 
