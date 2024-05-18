@@ -161,6 +161,7 @@ html {
 		display: none;
 		position: fixed;
 		padding: 1.5em 2em;
+		transition: .5s;
 		border-radius: .4em;
 		flex-direction: column;
 		align-items: flex-start;
