@@ -203,7 +203,7 @@ html {
 .hero-text h1 {
 	color: #0127ff;
 	padding: .5em 2em;
-	font: 3rem bold;
+	font-family: 'Cinzel', serif;
 	letter-spacing: .1em;
 	text-transform: uppercase;
 	text-shadow: .6px 1.5px 3px rgb(255, 255, 255);
@@ -332,15 +332,16 @@ html {
 		padding-bottom: .2em;
 	}
 	.hero-text p {
-		line-height: 1.7em;
+		line-height: 1.1em;
+		font-family: 'Roboto', sans-serif;
 	}
 	.hero-btn {
-		padding: .6em 0;
+		padding: .1em 0;
 	}
 	.hero-btn a {
-		padding: 5px;
+		padding: 2px;
 		display: flex;
-		margin-top: .9em;
+		margin-top: .6em;
 		flex-direction: column;
 	}
 }
@@ -562,6 +563,10 @@ html {
 
 .testimonials-section .test:hover {
 	transform: translateY(6px);
+}
+
+#more-testimonals {
+	text-align: center;
 }
 
 #more-testimonals a {
@@ -837,8 +842,8 @@ button[type="submit"]:hover {
 
 /*Style the 'go back' to top arrow*/
 .top a{
-	right: 10%;
-	bottom: 76px;
+	right: 6%;
+	bottom: 56px;
 	padding: 12px 14px;
 	color: #fff;
 	font-size: 15px;
