@@ -29,7 +29,7 @@ html {
 	position: relative;
 	/* background-size: cover; */
 	/* background-position: center; */
-	background: linear-gradient(rgba(0,0,0,0.2), #0a0a0a ), url(Images/istockphoto-1465597988-1024x1024.jpg);
+	background: linear-gradient(rgba(0,0,0,0.6), #0a0a0a ), url(Images/istockphoto-1465597988-1024x1024.jpg);
 }
 
 /*style the navbar*/
@@ -207,7 +207,6 @@ html {
 	letter-spacing: .1em;
 	text-transform: uppercase;
 	text-shadow: .6px 1.5px 3px rgb(255, 255, 255);
-	font-family: 'Times New Roman', Times, serif;
 }
 
 /*style hero buttons*/
@@ -353,55 +352,47 @@ html {
 	background-color: #efefef;
 }
 
-.sevices-body {
+.sevices-container {
 	width: 86%;
 	margin: 0 auto;
+	text-align: center;
 }
 
 /*Style the services header*/
-.services-header h1, p, h2, h3 {
-	text-align: center;
-	position: relative;
-	padding-bottom: .5em;
+.services-header p, h2, h3 {
+	margin-bottom: .7em;
 }
 
-.services-header h1 {
-	font: 4rem;
-}
-
-.services-header h1::after {
-	top: 70%;
-	left: 50%;
-	content: "";
-	width: 100px;
-	height: .12em;
-	position: absolute;
-	border-radius: 2em 2em 0 0;
-	background-color: #0bdd39;
-	transform: translate(-50%, -50%);
+/* Stle the heading */
+.services-header h3 {
+	padding: 6px 18px;
+	display: inline-block;
+	background-color: rgba(0,0,0,0.1);
 }
 
 /*Style the services call to action*/
 .services-cta {
 	display: flex;
-	padding: 3em 0;
-	flex-basis: 33%;
-	justify-content: space-between;
+	padding-bottom: 2rem;
+	justify-content: space-around;
+}
+
+.cheap, .quality, .online-booking {
+	flex-basis: 30%;
 }
 
 .services-cta img {
-	display: block;
-	margin: 0 auto 10px auto;
+	border-radius: 50%;
 }
 
 /*Style the services call to action on small screens*/
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 400px) {
 	.services-cta {
 		display: flex;
 		flex-basis: 100%;
 		flex-direction: column;
 	}
-	.services-header h1, p, h2, h3 {
+	.services-header p, h2, h3 {
 		font-size: .8em;
 		line-height: 1.5em;
 		padding-bottom: 1em;
@@ -449,7 +440,7 @@ html {
 	position: absolute;
 	border-radius: 7px;
 	transition: height .6s;
-	background: linear-gradient(rgba(0,0,0,0.5), #009688);
+	background: linear-gradient(rgba(0,0,0,0.5), #0a0dc8);
 }
 
 /*Style the service-description for hover effect*/
