@@ -88,6 +88,7 @@ html {
 	text-decoration: none;
 }
 
+/* Style the menu icons */
 .menu .fa-solid, .fa-brands {
 	margin-right: 5px;
 }
@@ -172,70 +173,53 @@ html {
 .hero {
 	top: 55%;
 	left: 50%;
-	width: 80%;
+	width: 70%;
 	color: #fff;
 	display: flex;
 	position: absolute;
 	text-align: center;
-	align-items: center;
-	/* justify-content: space-around; */
-	flex-direction: column;
+	justify-content: space-around;
 	transform: translate(-50%, -50%);
 }
 
 /*style hero image*/
 .hero-photo img {
-	/* flex-basis: 40%; */
 	transition: .5s;
 	object-fit: cover;
-	margin-bottom: 4%;
 	border-radius: 50%;
+	border: 1px solid rgb(15, 3, 3);
+	box-shadow: 0 12px 12px 10px;
 }
 
 .hero-photo img:hover {
-	transform: scale(1.1);
+	transform: scale(-1.1, 1.1);
+	/* transform: translateY(10vh); */
 }
 
-/*style the hero info*/
-/* .hero-info {
-	flex-basis: 56%;
-} */
-
 .hero-text h1, p {
-	padding-bottom: .8em;
+	padding-bottom: 1em;
 }
 
 .hero-text h1 {
-	font: 3em bold;
-	letter-spacing: .1em;
-}
-
-/*.hero-text h1 {
-	z-index: 10;
 	color: #0127ff;
-	text-decoration: none;
 	padding: .5em 2em;
-	font: 1.3rem bold;
-	letter-spacing: .17em;
+	font: 3rem bold;
+	letter-spacing: .1em;
 	text-transform: uppercase;
-	-webkit-background-clip: content-box;
-	-webkit-text-stroke: 6px #fff;
+	text-shadow: .6px 1.5px 3px rgb(255, 255, 255);
 	font-family: 'Times New Roman', Times, serif;
-	background: url(Images/back.png);
-	background-position: 0 0;
-	animation: back 20s linear infinite;
-}*/
+}
 
 /*style hero buttons*/
 .hero-btn {
-	padding: 2em 0;
+	padding: 5em 0;
 }
 
+/* Style the buttons */
 .hero-btn a {
 	z-index: 1;
 	color: #fff;
 	margin: 0 1em;
-	overflow: hidden;
 	padding: .7em 3em;
 	position: relative;
 	border-radius: 1.5em;
@@ -252,12 +236,17 @@ html {
 	height: 100%;
 	transition: .4s;
 	position: absolute;
-	border-radius: 1.5em;
-	background-color: #042ff0;
+	border-radius: 	7em;
+	background-color: dodgerblue;
 }
 
 .hero-btn a:hover span {
 	width: 100%;
+}
+
+.hero-btn a:hover {
+	color: #000;
+	box-shadow: 0 3px 9px rgb(255, 255, 255);
 }
 
 /*Add a bubble animation effect*/
@@ -319,22 +308,31 @@ html {
 	width: 35px;
 	animation-delay: 7s;
 }
+.bubble img:nth-child(8) {
+	width: 10px;
+	animation-delay: 6s;
+}
+.bubble img:nth-child(9) {
+	width: 35px;
+	animation-delay: 7s;
+}
 
 /*Style the hero on small screens*/
 @media screen and (max-width: 400px) {
+	.hero {
+		flex-direction: column;
+	}
 	.hero-photo img {
 		width: 140px;
 		height: 140px;
+		margin-bottom: 1.2rem;
 	}	
 	.hero-text h1 {
 		font-size: 1.6em;
-		line-height: 20px;
+		line-height: 2rem;
 		padding-bottom: .2em;
-		letter-spacing: unset;
 	}
 	.hero-text p {
-		font: .9em;
-		padding: .2em 0;
 		line-height: 1.7em;
 	}
 	.hero-btn {
