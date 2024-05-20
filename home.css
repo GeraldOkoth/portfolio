@@ -749,9 +749,9 @@ html {
 }
 
 /*Style the contact header*/
-.contact-header {
+.contact-header { 
 	width: 90%;
-	margin: 20px auto;
+	margin: 0 auto;
 	text-align: center;
 }
 
@@ -759,13 +759,13 @@ html {
 .contact-section {
 	width: 90%;
 	display: flex;
-	margin: 20px auto;
-	justify-content: space-between;
+	margin: 0 auto;
+	justify-content: space-around;
 }
 
 .contact-address {
-	flex-basis: 40%;
-	line-height: 70px;
+	flex-basis: 42%;
+	line-height: 60px;
 }
 
 /*Style the contact map*/
@@ -776,7 +776,7 @@ iframe {
 
 /*Style the contact form*/
 .contact-form {
-	flex-basis: 55%;
+	flex-basis: 50%;
 }
 
 .contact-form p {
@@ -785,21 +785,21 @@ iframe {
 
 /*Style the contact form inputs*/
 input {
-	margin: 8px;
+	margin-bottom: 1rem;
 	width: 100%;
 	border: none;
 	outline: none;
 	transition: .5s;
-	padding: 12px 14px;
+	padding: 8px 14px;
 	border-bottom: 1px solid rgb(14, 13, 13);
 }
 
 /*Style the contact form message box*/
 textarea {
 	width: 100%;
-	margin: 8px;
 	border: 1px solid black;
 	resize: none;
+	margin-top: 2rem;
 	outline: none;
 	padding: 12px 14px;
 	border-radius: 5px;
@@ -808,12 +808,11 @@ textarea {
 input:focus {
 	border-radius: 5px;
 	background-color: #fff;
-	border: 1px solid rgb(87, 126, 240);
+	border: 2px solid rgb(0, 0, 0);
 }
 
 /*Style the contact form submit button*/
 button[type="submit"] {
-	margin: 8px;
 	border: none;
 	color: #fff;
 	cursor: pointer;
@@ -822,11 +821,12 @@ button[type="submit"] {
 	border-radius: 7px;
 	background-color: #042ff0;
 	box-shadow: 2px 3px 4px rgba(0,0,0,0.5);
-	/*background-color: rgb(12, 206, 131);*/
+	background-color: rgb(12, 206, 131);
 }
 
 button[type="submit"]:hover {
 	opacity: 0.7;
+	background-color: #042ff0;
 }
 
 /*Style the send icon*/
