@@ -1,85 +1,33 @@
-/*Import font family link*/
-@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Merriweather&family=Poppins:wght@100;200;300;400&family=Roboto:wght@300&display=swap');
-
-/*Select all elements*/
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: 'Cinzel', serif;
-	font-family: 'Merriweather', serif;
-	font-family: 'Roboto', sans-serif;
-	font-family: 'Poppins', sans-serif;
+/*Style the hero*/
+.hero-btn a {
+	border-radius: unset;
 }
 
-html {
-	scroll-behavior: smooth;
-}
-
-/*Style the home page backgroud*/
-.home-page {
-	height: 100vh;
-	background: linear-gradient(rgba(0,0,0,0.2), #0a0a0a ), url(Images/IMG-20221101-WA0005.jpg);
-	position: relative;
-	background-size: cover;
-	background-position: center;
-}
-
-.hero-text p {
-	margin-bottom: 5rem;
-}
-
-.hero-btn-h a {
-	z-index: 1;
-	color: #fff;
-	margin: 1em;
-	overflow: hidden;
-	padding: .7em 3em;
-	position: relative;
-	text-decoration: none;
-	transition: color .5s;
-	border: 1px solid #fff;
-}
-
-.hero-btn-h a span {
+.hero-btn a span {
 	left: 0%;
 	bottom: 0%;
 	width: 0%;
 	z-index: -1;
 	height: 100%;
 	transition: .4s;
+	border-radius: unset;
 	position: absolute;
-	background-color: #f8f9fc;
+	background: linear-gradient(rgb(106, 87, 229), rgba(25, 0, 255, 0.5));
+
 }
 
-.hero-btn-h a:hover span {
+.hero-btn a:hover span {
 	width: 100%;
 }
 
-.hero-btn-h a:hover {
+.hero-btn a:hover {
 	color: #000;
-
 }
 
 /*Style the hero on small screens*/
 @media screen and (max-width: 400px) {
-	.hero-info .hero-text h1 {
-		font-size: 2rem;
-		line-height: 2rem;
-		margin-bottom: 5rem;
-	}
-	.hero-text p {
-		font-size: 1rem;
-		margin-bottom: 3rem;
-	}
-	.hero-btn-h {
-		padding: .6em 2em;
-	}
-	.hero-btn-h a {
-		padding: 6px 0;
-		display: flex;
-		margin-top: .7em;
-		flex-direction: column;
+	.hero-text h1 {
+		padding: 2rem;
 	}
 }
 
@@ -88,15 +36,13 @@ html {
 	padding: 2em 5rem;
 	background-color: #f1f1f1;
 }
+.abt h1, p {
+	text-align: center;
+	padding-bottom: 2rem;
+}
 .abt h1 {
 	color: orange;
-	text-align: center;
-	padding-bottom: 2rem;
 	font-family: "Trirong", serif;
-}
-.abt p {
-	text-align: center;
-	padding-bottom: 2rem;
 }
 
 /*Style the hero on small screens*/
@@ -112,7 +58,6 @@ html {
 	}
 	.abt p {
 		font-size: .8rem;
-		text-align: center;
 		padding-bottom: 1rem;
 	}
 }
