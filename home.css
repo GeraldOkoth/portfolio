@@ -193,6 +193,7 @@ html {
 
 .hero-photo img:hover {
 	transform: scale(-1.1, 1.1);
+	box-shadow: 0 -8px 8px 6px white;
 	/* transform: translateY(10vh); */
 }
 
@@ -201,12 +202,15 @@ html {
 }
 
 .hero-text h1 {
-	color: #0127ff;
 	padding: .5em 2em;
-	font-family: 'Cinzel', serif;
+	font: 3rem 'Cinzel', serif;
 	letter-spacing: .1em;
 	text-transform: uppercase;
 	text-shadow: .6px 1.5px 3px rgb(255, 255, 255);
+}
+
+.hero-text p {
+	font-family: 'Roboto', sans-serif;
 }
 
 /*style hero buttons*/
@@ -325,6 +329,8 @@ html {
 		width: 140px;
 		height: 140px;
 		margin-bottom: 1.2rem;
+		box-shadow: 0 8px 8px 6px;
+
 	}	
 	.hero-text h1 {
 		font-size: 1.6em;
@@ -333,13 +339,13 @@ html {
 	}
 	.hero-text p {
 		line-height: 1.1em;
-		font-family: 'Roboto', sans-serif;
+		font-family: "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
+
 	}
 	.hero-btn {
 		padding: .1em 0;
 	}
 	.hero-btn a {
-		padding: 2px;
 		display: flex;
 		margin-top: .6em;
 		flex-direction: column;
@@ -401,10 +407,10 @@ html {
 }
 
 /*Style the services call to action on small tablets*/
-@media screen and (min-width: 660px) and (max-width: 996px) {
+@media screen and (min-width: 400px) and (max-width: 996px) {
 	.services-cta {
 		display: flex;
-		flex-basis: 100%;
+		flex-basis: 50%;
 		flex-direction: column;
 	}
 }
@@ -449,7 +455,7 @@ html {
 	left: 50%;
 	opacity: 0;
 	width: 90%;
-	bottom: -20vh;
+	bottom: -10vh;
 	transition: 1s;
 	position: absolute;
 	text-align: center;
@@ -468,12 +474,11 @@ html {
 	margin: 5px auto;
 	background-color: #fff;
 }
-
-/*Display service description on hover*/
+/*Display overlay on hover*/
 .image:hover .overlay {
 	opacity: 1;
 }
-
+/*Display service description on hover*/
 .image:hover .service-description {
 	opacity: 1;
 	bottom: 10%;
@@ -519,7 +524,7 @@ html {
 }
 
 /*Style the testimonials section*/
-.testimonials-section {
+.testimonies {
 	width: 86%;
 	margin: auto;
 	padding-bottom: 5rem;
@@ -528,7 +533,8 @@ html {
 	justify-content: space-between;
 }
 
-.testimonials-section .test {
+/*Style the testimonials cards*/
+.testimonies .test {
 	padding: 15px;
 	transition: .5s;
 	cursor: pointer;
@@ -537,8 +543,8 @@ html {
 	border-radius: 5px;
 	box-shadow: 0 5px 10px 3px #ddd;
 }
-
-.testimonials-section .test p {
+/*Style the testimonials paragraph*/
+.testimonies .test p {
 	text-align: left;
 }
 
@@ -557,11 +563,12 @@ html {
 	margin-right: 10px;
 }
 
+/* Style the twitter icon */
 .user small, .fa-brands {
 	color: #27c0ff;
 }
 
-.testimonials-section .test:hover {
+.testimonies .test:hover {
 	transform: translateY(6px);
 }
 
@@ -572,13 +579,19 @@ html {
 #more-testimonals a {
 	color: #fff;
 	padding: 12px;
-	background-color: rgb(37, 37, 238);
+	transition: all 2s; /*Not working */
+	background: linear-gradient( rgb(37, 37, 238), rgba(0,0,0));
 	text-decoration: none;
 	border-radius: 5px;
 }
 
+#more-testimonals a:hover {
+	transform: scaleX(1.1);
+	background: linear-gradient( rgb(14, 14, 14), rgb(39, 225, 101));
+}
+
 @media screen and (max-width: 660px) {
-	.testimonials-section {
+	.testimonies {
 		display: flex;
 		flex-direction: column;
 	}
