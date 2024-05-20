@@ -240,7 +240,7 @@ html {
 	transition: .4s;
 	position: absolute;
 	border-radius: 	7em;
-	background-color: dodgerblue;
+	background: linear-gradient(rgb(38, 0, 255), rgba(0,0,0,0.2));
 }
 
 .hero-btn a:hover span {
@@ -323,17 +323,18 @@ html {
 /*Style the hero on small screens*/
 @media screen and (max-width: 400px) {
 	.hero {
+		/* min-height: 100vh; */
 		flex-direction: column;
 	}
 	.hero-photo img {
 		width: 140px;
 		height: 140px;
-		margin-bottom: 1.2rem;
+		margin-bottom: 1rem;
 		box-shadow: 0 8px 8px 6px;
 
 	}	
 	.hero-text h1 {
-		font-size: 1.6em;
+		font-size: 1.2em;
 		line-height: 2rem;
 		padding-bottom: .2em;
 	}
@@ -348,6 +349,7 @@ html {
 	.hero-btn a {
 		display: flex;
 		margin-top: .6em;
+		padding: 8px 0;
 		flex-direction: column;
 	}
 }
@@ -586,8 +588,17 @@ html {
 }
 
 #more-testimonals a:hover {
-	transform: scaleX(1.1);
+	transform: scaleX(1.1); /*Not working */
 	background: linear-gradient( rgb(14, 14, 14), rgb(39, 225, 101));
+}
+/* Come back here */
+.Testimonials #demo {
+	padding: 10px;
+	display: inline-block;
+	background-color: #f2f2f2;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
 }
 
 @media screen and (max-width: 660px) {
@@ -599,7 +610,6 @@ html {
 
 /*Style the about section*/
 .About {
-	position: relative;
 	width: 100%;
 	padding: 30px 0;
 	background-color: #f1f1f1;
@@ -607,53 +617,66 @@ html {
 
 /*Style the about header*/
 .About-header {
+	width: 80%;
+	margin: 0 auto;
 	text-align: center;
-	padding-bottom: 2rem;
+	padding-bottom: 1rem;
 }
 
-.About-header h3 {
-	color: #0749f1;
+.About-header h2 {
+	color: #ffffff;
+	padding: 8px 2rem;
+	display: inline-block;
+	background-color: rgba(0,0,0,0.5);
 }
-
+.About-header p {
+	font-family: Cinzel, serif;
+}
 /*Style the about header*/
 .about-info {
 	width: 90%;
 	display: flex;
 	margin: 5px auto;
-	align-items: flex-start;
 	justify-content: space-between;
 }
 
 /*Style the about image*/
-.about-img {
-	flex-basis: 48%;
+.about-img {	
+	flex-basis: 42%;
 }
 
 .about-img img {
 	width: 100%;
-	object-fit: fill;
+	object-fit: cover;
+	object-position: 0 3%;
 	border-radius: 5px;
 }
-
+/* Style about me */
 .aboutme {
+	text-align: center;
 	display: flex;
-	flex-basis: 48%;
+	flex-basis: 54%;
 	position: relative;
 	flex-direction: column;
 }
 
-.aboutme p {
-	text-align: justify;
+/* .aboutme p {
+	font-family: "Fauna One";
+} */
+
+.aboutme span {
+	color: #062af8;
+	font-family: Rubik;
 }
 
 /*Style the Cv download link*/
-.cvdownload {
+/* .cvdownload {
 	right: 10px;
 	bottom: 25%;
 	position: absolute;
-}
+} */
 
-.cvdownload a {
+/* .cvdownload a {
 	color: #fff;
 	transition: .3s;
 	border-radius: 5px;
@@ -661,15 +684,30 @@ html {
 	text-align: center;
 	text-decoration: none;
 	background-color: #009688;
-}
+} */
 
-.cvdownload a:hover {
+/* .cvdownload a:hover {
 	background-color: #062af8;
-}
+} */
 
 /*Style the download icon*/
-.fa-download {
+/* .fa-download {
 	margin-left: 5px;
+} */
+
+/*Style the social media links*/
+.social-links {
+	padding-top: 2rem;
+	text-align: center;
+}
+
+.social-links i {
+	transition: .3s;
+}
+
+.social-links i:hover {
+	color: rgb(20, 20, 20);
+	transform: translateY(-5px);
 }
 
 /*Style my about setion on small screens*/
@@ -684,12 +722,12 @@ html {
 		flex-basis: 100%;
 		padding-bottom: 20px;
 	}	
-	.cvdownload  {
+	/* .cvdownload  {
 		right: 3%;
 		top: 85%;
 		font-size: 10px;
 		padding: 8px 10px;
-	}
+	} */
 }
 
 /*Style my about setion on tablets*/
@@ -698,26 +736,9 @@ html {
 		display: flex;
 		flex-direction: column;
 	}
-	.cvdownload {
+	/* .cvdownload {
 		top: 85%;
-	}
-}
-
-/*Style the social media links*/
-.social-links {
-	transition: .5s;
-	font-size: 1.5rem;
-	text-align: center;
-}
-
-.social-links i {
-	padding: 2%;
-	transition: .3s;
-}
-
-.social-links i:hover {
-	color: rgb(20, 20, 20);
-	transform: translateY(-5px);
+	} */
 }
 
 
