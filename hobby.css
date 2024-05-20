@@ -63,21 +63,18 @@
 }
 
 /*Style the image gallery*/
-.image-gallery-1 {
+.image-gallery-1, .image-gallery-2 {
 	width: 100%;
 	padding: 2em 5rem;
 }
 
 .image-gallery-2 {
-	width: 100%;
-	padding: 2em 5rem;
 	background-color: #f1f1f1;
 }
 
 /*Style img container*/
 .img-container {
 	display: flex;
-	align-items: flex-start;
 	justify-content: space-around;
 }
 
@@ -85,26 +82,23 @@
 .img-container .image-elements {
 	width: 100%;
 	color: #fff;
-	flex-basis: 38%;
+	flex-basis: 40%;
 	position: relative;
 }
 
 .img-container .description {
-	flex-basis: 56%;
+	flex-basis: 54%;
 }
 
 .img-container .image-elements img {
 	width: 100%;
 	object-fit: cover;
-	border-radius: 7px;
+	border-radius: 5px;
 }
 
 /*Style the image gallery on small screens*/
 @media screen and (max-width: 660px) {
-	.image-gallery-1 {
-		padding: 2em;
-	}
-	.image-gallery-2 {
+	.image-gallery-1, .image-gallery-2 {
 		padding: 2em;
 	}
 	.image-gallery-1 .description {
@@ -135,7 +129,7 @@
 }
 
 /*Style the image gallery section*/
-.responsive-gall {
+.image-gallery-section {
 	width: 100%;
 	padding: 2em;
 	background-color: #fbfbfb;
@@ -181,4 +175,8 @@
 		gap: .9rem;
 		grid-template-columns:  auto;
 	}
+}
+
+.Testimonials {
+	background-color: #f3f3f3;
 }
