@@ -1,15 +1,16 @@
-// let x = document.getElementById("more-testimonals");
+let x = document.getElementById("more-testimonals");
+let y = document.getElementById('demo');
 
-//     x.addEventListener("mouseover", displayText);
-//     x.addEventListener("mouseout", hideText);
+    x.addEventListener("mouseover", displayText);
+    x.addEventListener("mouseout", hideText);
 
-// function displayText(){
-//     document.getElementById('demo').innerHTML = "Click the this button to view more testimonial in the testimonial tab in hobby page.";
-// }
+function displayText(){
+    document.getElementById('demo').innerHTML = "Click this button to view more testimonial in the testimonial tab in hobby page.";
+}
 
-// function hideText(){
-//     document.getElementById('demo').style.visibility = "hidden";
-// }
+function hideText(){
+  document.getElementById('demo').style.visibility = "hidden";
+}
 document.addEventListener('DOMContentLoaded', function() {
     const nav = document.getElementById('menuLinks');
     const links = nav.getElementsByTagName('a');
