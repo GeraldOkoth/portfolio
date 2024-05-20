@@ -130,6 +130,27 @@ html {
 	position: fixed;
 }
 
+/* CSS for smooth transition */
+#menuLinks {
+    display: none;
+    overflow: hidden;
+    transition: height 0.3s ease;
+}
+
+#menuLinks.show {
+    display: block;
+    height: 270px; 
+}
+
+#menuLinks.hide {
+    height: 0;
+}
+
+#hamburgerOpen, #hamburgerClose {
+    transition: visibility 0.3s ease;
+}
+
+
 /*Style the navbar on small screens*/
 @media screen and (max-width: 400px) {
 	/*style the logo*/
@@ -146,7 +167,6 @@ html {
 		top: 7%;
 		left: 0%;
 		width: 100%;
-		height: 37vh;
 		display: none;
 		position: fixed;
 		border-radius: .4em;

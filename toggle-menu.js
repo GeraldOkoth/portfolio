@@ -1,25 +1,4 @@
-	// // Function to toggle the menu open and close
-	// function toggleMenu() {
-	// 	var menu = document.getElementById("menuLinks");
-	// 	var hamburgerOpen = document.getElementById("hamburgerOpen");
-	// 	var hamburgerClose = document.getElementById("hamburgerClose");
-	
-	// 	// Ensure the display property is initialized
-	// 	if (menu.style.display === "") {
-	// 		menu.style.display = "none";
-	// 	}
-	
-	// 	if (menu.style.display === "block") {
-	// 		menu.style.display = "none";
-	// 		hamburgerOpen.style.visibility = "visible";
-	// 		hamburgerClose.style.visibility = "hidden";
-	// 	} else {
-	// 		menu.style.display = "block";
-	// 		hamburgerOpen.style.visibility = "hidden";
-	// 		hamburgerClose.style.visibility = "visible";
-	// 	}
-	// }
-	// JavaScript
+// Function to toggle the menu open and close
 function toggleMenu() {
     var menu = document.getElementById("menuLinks");
     var hamburgerOpen = document.getElementById("hamburgerOpen");
@@ -38,9 +17,7 @@ function toggleMenu() {
         hamburgerOpen.style.visibility = "hidden";
         hamburgerClose.style.visibility = "visible";
     }
-}
-
-	
+}	
 // function changeTheme(){
 // 	javascript: void(document.body.style.backgroundColor = 'red')
 // }
