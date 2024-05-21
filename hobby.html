@@ -1,134 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>My Hobbies</title>
-	<meta name="description" content="Gerald Okoth is a mathematics and computer science student at Machakos University, in Kenya, passionate about software engineering. Currently working on front-end technologies, he is enthusiastic on pursuing back-end technologies and later to full-stackdeveloper.">
-	<!--<meta http-equiv="refresh" content="300">-->
-	<meta name="keywords" content="Gerald, Okoth, gerorganist, piano, music, notation">
-	<link rel="shortcut icon" href="Images/IMG_20220417_104146_015.jpg" type="image/x-icon">
-	<link rel="stylesheet" type="text/css" href="home.css">
-	<link rel="stylesheet" type="text/css" href="hobby.css">
-	<meta name="author" content="Gerald Okoth">
-	<meta http-equiv="X-UA-Compatible" content="IE=7">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src="script.js"></script>
-	<script type="text/javascript">
-		(function(){
-			emailjs.init({
-				publicKey: "U6FuyV7yh6s35Ewii",
-			});
-		})();
-		</script>
-</head>
+    <meta charset="UTF-8">
+    <title>Gerald Okoth | Hobbies</title>
+    <meta name="description" content="Gerald Okoth is a mathematics and computer science student at Machakos University, in Kenya, passionate about software engineering. Currently working on front-end technologies, he is enthusiastic on pursuing back-end technologies and later to full-stackdeveloper.">
+    <!--<meta http-equiv="refresh" content="300">-->
+    <meta name="keywords" content="Gerald, Okoth, gerorganist, piano, music, notation">
+    <link rel="shortcut icon" href="Images/IMG_20220417_104146_015.jpg" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="home.css">
+    <link rel="stylesheet" type="text/css" href="hobby.css">
+    <meta name="author" content="Gerald Okoth">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("U6FuyV7yh6s35Ewii");
+        })();
+    </script>
 </head>
 <body>
 <!--HOME SECTION-->
-	<section class="home-page">
-		<div class="navbar">
-			<div class="logo">
-				<a href="hobby.html">GERORGANIST</a>
-			</div>
-			<nav class="menu">
-				<ul id="menuLinks">
-					<li><a href="index.html" class="active" target="_self" title="Home"><i class="fa-solid fa-house"></i></i>Home</a></li>
-					<li><a href="#images" target="_self" title="Contact me"><i class="fa-solid fa-images"></i>Images</a></li>
-					<li><a href="#lrn-music-notation" target="_self" title="Contact me"><i class="fa-solid fa-clapperboard"></i>Videos</a></li>
-					<li><a href="#testimonials" class="active" target="_self" title="Testimonials"><i class="fa-solid fa-bookmark"></i></i>Testimonials</a></li>
-					<li><a href="#contact" target="_self" title="Contact me"><i class="fa-solid fa-phone"></i>Contact</a></li>
-				</ul>
-				<script src="toggle-menu.js"></script>
-				<div class="hambuger-btn">
-					<span class="hamburger" id="hamburgerOpen" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></span>
-					<span class="hamburger" id="hamburgerClose" onclick="toggleMenu()"><i class="fa-solid fa-xmark"></i></span>
-					<!-- <span class="hamburger" id="hamburgerOpen" onclick="toggleMenu()">☰</span> -->
-				</div>
-			</nav>
-		</div>
-		<div class="hero">
-			<div class="hero-info">
-				<div class="hero-text">
-					<h1>Music is nourishment, and a comforting elixir.</h1>
-					<p>Next to the Word of God, the noble art of music is the greatest treasure in the world. - Martin Luther.</p>
-				</div>
-				<div class="hero-btn">
-					<a href="#lrn-piano"><span></span>Learn Piano With Me</a>
-					<a href="#lrn-music-notation"><span></span>Learn Music Notation</a>
-				</div>
-			</div>
-		</div>
-	</section>
+    <section class="home-page">
+        <div class="navbar">
+            <div class="logo">
+                <a href="hobby.html">GERORGANIST</a>
+            </div>
+            <nav class="menu">
+                <ul id="menuLinks">
+                    <li><a href="index.html" class="active" target="_self" title="Home"><i class="fa-solid fa-house"></i>Home</a></li>
+                    <li><a href="#images" target="_self" title="Contact me"><i class="fa-solid fa-images"></i>Images</a></li>
+                    <li><a href="#lrn-music-notation" target="_self" title="Contact me"><i class="fa-solid fa-clapperboard"></i>Videos</a></li>
+                    <li><a href="#testimonials" class="active" target="_self" title="Testimonials"><i class="fa-solid fa-bookmark"></i>Testimonials</a></li>
+                    <li><a href="#contact" target="_self" title="Contact me"><i class="fa-solid fa-phone"></i>Contact</a></li>
+                </ul>
+                <script src="toggle-menu.js"></script>
+                <div class="hambuger-btn">
+                    <span class="hamburger" id="hamburgerOpen" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></span>
+                    <span class="hamburger" id="hamburgerClose" onclick="toggleMenu()"><i class="fa-solid fa-xmark"></i></span>
+                </div>
+            </nav>
+        </div>
+        <div class="hero">
+            <div class="hero-info">
+                <div class="hero-text">
+                    <h1>Music is nourishment, and a comforting elixir.</h1>
+                    <p>Next to the Word of God, the noble art of music is the greatest treasure in the world. - Martin Luther.</p>
+                </div>
+                <div class="hero-btn">
+                    <a href="#lrn-piano"><span></span>Learn Piano With Me</a>
+                    <a href="#lrn-music-notation"><span></span>Learn Music Notation</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
 <!--ABOUT SECTION-->
-	<section class="hobby-about">
-		<div class="abt">
-			<h1>Why I love playing the piano</h1>
-			<p>The piano is the only instrument you look directly at the notes your playing. Even the guitar is not as cut and dry. There is one and only one key for each pitch. And they are laid out in a very visible black and white color scheme, making it much easier to see what you're doing.</p>
-			<h1>Why I love reading music notation</h1>
-			<P>Studying musical notation opens up a whole new world of music to me. When a musician can learn music by reading it rather than just listening to it, they can learn music from all over the world quickly and easily. They can also learn how to write their own music and share it with others.</P>
-		</div>
-	</section>
+    <section class="hobby-about">
+        <div class="abt">
+            <h1>Why I love playing the piano</h1>
+            <p>The piano is the only instrument you look directly at the notes your playing. Even the guitar is not as cut and dry. There is one and only one key for each pitch. And they are laid out in a very visible black and white color scheme, making it much easier to see what you're doing.</p>
+            <h1>Why I love reading music notation</h1>
+            <p>Studying musical notation opens up a whole new world of music to me. When a musician can learn music by reading it rather than just listening to it, they can learn music from all over the world quickly and easily. They can also learn how to write their own music and share it with others.</p>
+        </div>
+    </section>
 
 <!--IMAGES & VIDEOS SECTION-->
-	<section class="image-section">
-		<div class="image-gallery-1">
-			<div class="img-container">
-				<div class="image-elements">
-					<div class="Learn-piano" id="lrn-piano">
-						<a href="https://youtu.be/ax1LLuug41o?si=_6AmCVF66pGesf1l" target="_parent"><img src="Images/istockphoto-1371028068-1024x1024.jpg" alt="" width="300px" height="auto"></a>
-					</div>
-					<div class="overlay"></div>
-					<div class="service-description">
-						<a href="https://www.youtube.com/@geraldokothKE/videos"><h3>Learn piano</h3></a>
-						<hr>
-						<p>Playing piano should be an opportunity for personal growth. Fortunately for you, there's no shortage of difficult things you can learn on piano. Whether it be playing a classical etude, or learning how to improvise in jazz, it will be very rewarding to achieve your goals.</p>
-					</div>
-				</div>
-				<div class="description">
-					<h4>The benefits i experience in leaning piano</h4>
-					<ul>
-						<li>Improves my memory.</li>
-						<li>Improves my brain speed.</li>
-						<li>Expand my aural skills.</li>
-						<li>Sharpen my concentration and focus.</li>
-						<li>Decrease my stress and anxiety.</li>
-						<li>Increase my happiness.</li>
-						<li>Boost my confidence and self-esteem.</li>
-						<li>Increase my hand strength and dexterity.</li>
-					</ul>
-				</div>
-			</div>
-		</div>
+    <section class="image-section">
+        <div class="image-gallery-1">
+            <div class="img-container">
+                <div class="image-elements">
+                    <div class="Learn-piano" id="lrn-piano">
+						<iframe src="https://www.youtube.com/embed/4FiuQ8fmnwg?controls=1&autoplay=1&mute=1&loop=1" frameborder="0"></iframe>
+                        <!-- <a href="https://youtu.be/ax1LLuug41o?si=_6AmCVF66pGesf1l" target="_parent"><img src="Images/istockphoto-1371028068-1024x1024.jpg" alt="" width="300px" height="auto"></a> -->
+                    </div>
+                    <div class="overlay"></div>
+                    <div class="service-description">
+                        <a href="https://www.youtube.com/@geraldokothKE/videos"><h3>Learn piano</h3></a>
+                        <hr>
+                        <p>Playing piano should be an opportunity for personal growth. Fortunately for you, there's no shortage of difficult things you can learn on piano. Whether it be playing a classical etude, or learning how to improvise in jazz, it will be very rewarding to achieve your goals.</p>
+                    </div>
+                </div>
+                <div class="description">
+                    <h4>The benefits I experience in learning piano</h4>
+                    <ul>
+                        <li>Improves my memory.</li>
+                        <li>Improves my brain speed.</li>
+                        <li>Expand my aural skills.</li>
+                        <li>Sharpen my concentration and focus.</li>
+                        <li>Decrease my stress and anxiety.</li>
+                        <li>Increase my happiness.</li>
+                        <li>Boost my confidence and self-esteem.</li>
+                        <li>Increase my hand strength and dexterity.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
-		<div class="image-gallery-2">
-			<div class="img-container">
-				<div class="description">
-					<h4>The benefits i experience in leaning music notation</h4>
-					<ul>
-						<li>Being proficient in reading and interpreting notation opens up opportunities for me in professional settings such as studio recording and live performance.</li>
-						<li>Enables me to collaborate with other musicians easily.</li>
-						<li>Provides me with more musical precision & accuracy.</li>
-						<li>Enablle me to easily write down my compositions.</li>
-						<li>Enablle me to easily recollect my music anytime.</li>
-						<li>Enablle me to easily understand music theory knowledge.</li>
-					</ul>
-				</div>
-				<div class="image-elements">
-					<div class="Learn-piano" id="lrn-music-notation">
-						<a href="https://youtu.be/ax1LLuug41o?si=_6AmCVF66pGesf1l" target="_parent"><img src="Images/istockphoto-182428014-1024x1024.jpg" alt="" width="300px" height="auto"></a>
-					</div>
-					<div class="overlay"></div>
-					<div class="service-description">
-						<a href="https://youtu.be/KuBbHeFPqas?si=tR_U_GWKJa6bMgtm"><h3>Learn music notation</h3></a>
-						<hr>
-						<p>Learning how to read music is like learning another language, it can look very complex, with all the letters, symbols, and other musical theory pieces that you might not understand. But just like a language, if you start with the basics and build your way up to the more complicated techniques, you can learn over time.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+        <div class="image-gallery-2">
+            <div class="img-container">
+                <div class="description">
+                    <h4>The benefits I experience in learning music notation</h4>
+                    <ul>
+                        <li>Being proficient in reading and interpreting notation opens up opportunities for me in professional settings such as studio recording and live performance.</li>
+                        <li>Enables me to collaborate with other musicians easily.</li>
+                        <li>Provides me with more musical precision & accuracy.</li>
+                        <li>Enables me to easily write down my compositions.</li>
+                        <li>Enables me to easily recollect my music anytime.</li>
+                        <li>Enables me to easily understand music theory knowledge.</li>
+                    </ul>
+                </div>
+                <div class="image-elements">
+                    <div class="Learn-piano" id="lrn-music-notation">
+						<iframe src="https://www.youtube.com/embed/sIPfdxFff3Y?si=aCXAv9aOcxiEqRlp?controls=1&autoplay=1&mute=1&loop=1" frameborder="0"></iframe>
+                        <!-- <a href="https://youtu.be/ax1LLuug41o?si=_6AmCVF66pGesf1l" target="_parent"><img src="Images/istockphoto-182428014-1024x1024.jpg" alt="" width="300px" height="auto"></a> -->
+                    </div>
+                    <div class="overlay"></div>
+                    <div class="service-description">
+                        <a href="https://youtu.be/KuBbHeFPqas?si=tR_U_GWKJa6bMgtm"><h3>Learn music notation</h3></a>
+                        <hr>
+                        <p>Learning how to read music is like learning another language, it can look very complex, with all the letters, symbols, and other musical theory pieces that you might not understand. But just like a language, if you start with the basics and build your way up to the more complicated techniques, you can learn over time.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-	<section class="image-gallery-section" id="images">
+    <section class="image-gallery-section" id="images">
 		<div class="responsive-gall">
 			<h2>Image Gallery</h2>
 			<div class="image-gallery">
@@ -170,56 +168,55 @@
 	</section>
 
 <!--TESTIMONIALS SECTION-->
-	<div class="Testimonials active" id="testimonials">
-		<div class="testimonials-header">
-			<h3>Testimonials</h3>
-			<p>What my Students say</p>
+<div class="Testimonials active" id="testimonials">
+	<div class="testimonials-header">
+		<h3>What they say about me</h3>
+		<p>These testimonials show how other people view my services and skills.</p>
+	</div>
+	<div class="testimonies">
+		<div class="test">
+			<div class="user">
+				<img src="Images/Screenshot 2024-05-13 171748.png" alt="" width="100px">
+				<div class="user-info">
+					<h5>Finita George</h5><i class="fa-brands fa-twitter"></i>
+					<small>@Finita_George</small>
+				</div>
+			</div>
+			<p>Piano was not very easy for me to learn and I took a very long time to learn my pieces, but with Mr. Gerald aka Gerorganist's, guidance I was able to learn them in the end.</p>
 		</div>
-		<div class="testimonies">
-			<div class="test">
-				<div class="user">
-					<img src="Images/Screenshot 2024-05-13 171748.png" alt="" width="100px">
-					<div class="user-info">
-						<h5>Finita George</h5><i class="fa-brands fa-twitter"></i>
-						<small>@Finita_George</small>
-					</div>
+		<div class="test">
+			<div class="user">
+				<img src="Images/Screenshot 2024-05-13 172033.png" alt="" width="100px">
+				<div class="user-info">
+					<h5>P. Arati</h5><i class="fa-brands fa-twitter"></i>
+					<small>@Arati_P</small>
 				</div>
-				<p>Piano was not very easy for me to learn and I took a very long time to learn my pieces, but with Mr. Gerald aka Gerorganist's, guidance I was able to learn them in the end.</p>
 			</div>
-			<div class="test">
-				<div class="user">
-					<img src="Images/Screenshot 2024-05-13 172033.png" alt="" width="100px">
-					<div class="user-info">
-						<h5>P. Arati</h5><i class="fa-brands fa-twitter"></i>
-						<small>@Arati_P</small>
-					</div>
+			<p>Gerald is a knowledgeable, energetic and fun teacher who imparts good techniques and at the same time instills a lifelong appreciation of music.</p>
+		</div>
+		<div class="test">
+			<div class="user">
+				<img src="Images/Screenshot 2024-05-13 172048.png" alt="" width="100px">
+				<div class="user-info">
+					<h5>Fredrick Wesonga</h5><i class="fa-brands fa-twitter"></i>
+					<small>@Freddie_Wes</small>
 				</div>
-				<p>Gerald is a knowledgeable, energetic and fun teacher who imparts good techniques and at the same time instills a lifelong appreciation of music.</p>
 			</div>
-			<div class="test">
-				<div class="user">
-					<img src="Images/Screenshot 2024-05-13 172048.png" alt="" width="100px">
-					<div class="user-info">
-						<h5>Fredrick Wesonga</h5><i class="fa-brands fa-twitter"></i>
-						<small>@Freddie_Wes</small>
-					</div>
-				</div>
-				<p>I just wanted to let you know that I am really enjoying my piano lessons with you. I really like your style of teaching. You are always so encouraging, as well as giving great ideas and techniques of ways to improve. I also really like doing the lessons via FaceTime, it really suits me being able to do it from home.</p>
+			<p>I just wanted to let you know that I am really enjoying my piano lessons with you. I really like your style of teaching. You are always so encouraging, as well as giving great ideas and techniques of ways to improve. I also really like doing the lessons via FaceTime, it really suits me being able to do it from home.</p>
+		</div>
+	</div>
+	<div class="aboutme">
+		<div class="follow-me-links" id="follow-me-links"></div>
+			<div class="social-links">
+				<a href="https://www.linkedin.com/in/gerald-okoth/"><i class="fa-brands fa-linkedin"></i></a>
+				<a href="https://github.com/GeraldOkoth"><i class="fa-brands fa-github"></i></a>
+				<a href="https://www.youtube.com/@geraldokoth254"><i class="fa-brands fa-youtube"></i></a>
+				<a href="https://www.instagram.com/okothgerald449"><i class="fa-brands fa-instagram"></i></a>
+				<a href="https://www.facebook.com/gerald.okoth.14/"><i class="fa-brands fa-facebook"></i></a>
 			</div>
 		</div>
-		<div class="aboutme">
-			<div class="follow-me-links" id="follow-me-links"></div>
-				<div class="social-links">
-					<a href="https://www.linkedin.com/in/gerald-okoth/"><i class="fa-brands fa-linkedin"></i></a>
-					<a href="https://github.com/GeraldOkoth"><i class="fa-brands fa-github"></i></a>
-					<a href="https://www.youtube.com/@geraldokoth254"><i class="fa-brands fa-youtube"></i></a>
-					<a href="https://www.instagram.com/okothgerald449"><i class="fa-brands fa-instagram"></i></a>
-					<a href="https://www.facebook.com/gerald.okoth.14/"><i class="fa-brands fa-facebook"></i></a>
-				</div>
-			</div>
-		</div>
-	</section>
-
+	</div>
+</section>
 <!--CONTACT SECTION-->
 	<section class="contact" id="contact">
 		<div class="contact-header">
@@ -252,7 +249,7 @@
 			</div>
 			<div class="contact-form">
 				<p>Get in touch</p>
-				<form onsubmit="sendEmail()" method="post" action="" reset() return false>
+				<form id="contact" onsubmit="sendEmail(); return false;" method="post" action="">
 					<div class="form-row">
 						<div class="form-name">
 							<input type="text" name="firstname" id="firstname" placeholder="Firstname">
@@ -308,6 +305,8 @@
 			</script></p>
 		</div>
 	</section>
-	
+	<iframe src="https://www.youtube.com/embed/4FiuQ8fmnwg" frameborder="0"></iframe>
+
 </body>
 </html>
+
