@@ -894,13 +894,14 @@ to {
 	} */
 }
 
-.fqa {
+.faq {
 	padding: 3rem 6rem;
-	background-color: rgb(186, 186, 186);
+	margin-bottom: 5rem;
+	background-color: rgb(185, 185, 185);
 }
 
-.fqa .head {
-	margin-bottom: 2rem;
+.faq .head {
+	margin-bottom: 1.5rem;
 	font: 2rem bold;
 	text-align: center;
 }
@@ -942,10 +943,10 @@ to {
 }
 
 @media screen and (max-width: 606px) {
-	.fqa {
+	.faq {
 		padding: 1.5rem 2rem;
 	}
-	.fqa .head {
+	.faq .head {
 		font-size: 1.3rem;
 	}
 }
