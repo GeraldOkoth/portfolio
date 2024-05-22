@@ -25,6 +25,26 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
+// // let slideIndex = 0;
+// showSlides();
+
+// function showSlides() {
+//   let i;
+//   let slidesTest = document.getElementsByClassName("test");
+//   let dots = document.getElementsByClassName("dot");
+//   for (i = 0; i < slides.length; i++) {
+//     slidesTest[i].style.display = "none";  
+//   }
+//   slideIndex++;
+//   if (slideIndex > slidesTest.length) {slideIndex = 1}    
+//   for (i = 0; i < dots.length; i++) {
+//     slidesTest[i].className = slidesTest[i].className.replace(" active", "");
+//   }
+//   slidesTest[slideIndex-1].style.display = "block";  
+//   dots[slideIndex-1].className += " active";
+//   setTimeout(showSlides, 2000); // Change image every 2 seconds
+// }
+
 
 // let x = document.getElementById("more-testimonals");
 // let y = document.getElementById('demo');
