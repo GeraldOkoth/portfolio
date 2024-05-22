@@ -381,9 +381,22 @@ html {
 	background-color: #fff;
 }
 
+.gal {
+	width: 80%;
+	margin: 0 auto;
+	color: #fff;
+	text-align: center;
+	padding-bottom: 1rem 2rem;
+	background-color: rgba(10, 7, 10, 0.9);
+}
+
 .slide {
 	display: none;
 	text-align: center;
+}
+
+.slideshow-container .first-child {
+	display: block;
 }
 
 .slide img {
