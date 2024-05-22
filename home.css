@@ -154,21 +154,23 @@ html {
 @media screen and (max-width: 400px) {
 	/*style the logo*/
 	.logo {
-		padding: .6em 1em;
+		padding: 0 1em;
 	}
 
 	.hambuger-btn .hamburger {
 		display: block;
+		top: 25%;
+		position: absolute;
 	}
 
 	/*Style the menu links on small screens*/
 	#menuLinks  {
-		top: 7%;
+		top: 5.4%;
 		left: 0%;
 		width: 100%;
 		display: none;
 		position: fixed;
-		border-radius: .4em;
+		border-radius: 0 0 .4em .4em;
 		padding: .8em .2em;
 		flex-direction: column;
 		background-color: #efefef;
@@ -374,6 +376,7 @@ html {
 }
 
 .slideShow {
+	/* min-height: 50vh; */
 	padding: 5rem 20rem;
 	background-color: #fff;
 }
@@ -467,6 +470,10 @@ html {
 	}
 	.slide img {
 		height: 200px;
+	}
+	.dot {
+		width: 10px;
+		height: 10px;
 	}
 }
 
@@ -674,6 +681,7 @@ to {
 	cursor: pointer;
 	flex-basis: 30%;
 	margin: 10px auto;
+	/* display: none; */
 	border-radius: 5px;
 	box-shadow: 0 5px 10px 3px #ddd;
 }
