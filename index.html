@@ -31,7 +31,7 @@
 			<script src="script.js"></script>
 			<nav class="menu">
 				<ul id="menuLinks">
-					<li><a href="index.html" class="active" target="_self" title="Home"><i class="fa-solid fa-house"></i></i>Home</a></li>
+					<li><a href="index.html" target="_self" title="Home"><i class="fa-solid fa-house"></i></i>Home</a></li>
 					<li><a href="#services" target="_self" title="services"><i class="fa-brands fa-shopify"></i></i>Services</a></li>
 					<li><a href="#testimonials" target="_self" title="Testimonials"><i class="fa-solid fa-bookmark"></i></i>Testimonials</a></li>
 					<li><a href="#about" target="_self" title="See about"><i class="fa-solid fa-user"></i></i>About</a></li>
@@ -77,6 +77,51 @@
 			<img src="Images/bubble.png" alt="bubble">
 		</div>
 	</section>
+
+<!-- Slide show -->
+<script src="script.js"></script>
+	<section class="slideShow">
+		<div class="slideshow-container">
+			<div class="slide fade">
+				<div class="number">1 / 5</div>
+				<img src="Images/1672053154170.jpg" alt="" width="100%" height="400px">
+				<div class="caption">caption</div>
+			</div>
+			<div class="slide fade">
+				<div class="number">2 / 5</div>
+				<img src="Images/459-background.png" alt="" width="100%" height="400px">
+				<div class="caption">caption</div>
+			</div>
+			<div class="slide fade">
+				<div class="number">3 / 5</div>
+				<img src="Images/IMG_1481_transcpr.jpg" alt="" width="100%" height="400px">
+				<div class="caption">caption</div>
+			</div>
+			<div class="slide fade">
+				<div class="number">4 / 5</div>
+				<img src="Images/IMG_20230917_113805_729.jpg" alt="" width="100%" height="400px">
+				<div class="caption">caption</div>
+			</div>
+			<div class="slide fade">
+				<div class="number">5 / 5</div>
+				<img src="Images/IMG_20230101_131734_835.jpg" alt="" width="100%" height="400px">
+				<div class="caption">caption</div>
+			</div>
+<!-- Previous and next button -->
+			<span class="prev" onclick="plusSlides(-1)">&#10094;</span>
+			<span class="next" onclick="plusSlides(1)">&#10095;</span>
+<!-- dots -->
+			<div class="dots">
+				<span class="dot" onclick="currentSlide(1)"></span>
+				<span class="dot" onclick="currentSlide(2)"></span>
+				<span class="dot" onclick="currentSlide(3)"></span>
+				<span class="dot" onclick="currentSlide(4)"></span>
+				<span class="dot" onclick="currentSlide(5)"></span>
+			</div>
+
+		</div>
+	</section>
+
 <!--SERVICES SECTION-->
 	<section class="Services" id="services">
 		<div class="sevices-container">
@@ -161,7 +206,7 @@
 		</div>
 	</section>
 <!--TESTIMONIALS SECTION-->
-	<section class="Testimonials active" id="testimonials">
+	<section class="Testimonials" id="testimonials">
 		<div class="testimonials-header">
 			<h3>What they say about me</h3>
 			<p>These testimonials show how other people view my services and skills.</p>
