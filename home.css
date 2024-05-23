@@ -28,6 +28,7 @@ html {
 	min-height: 100vh;
 	position: relative;
 	background-size: cover;
+	background-repeat: no-repeat;
 	/* background-position: center; */
 	background: linear-gradient(rgba(0,0,0,0.6), #0a0a0a ), url(Images/istockphoto-1465597988-1024x1024.jpg);
 }
