@@ -71,7 +71,7 @@
             <div class="img-container">
                 <div class="image-elements">
                     <div class="Learn-piano" id="lrn-piano">
-						<iframe width="100%" height="100%" src="https://www.youtube.com/embed/4FiuQ8fmnwg?controls=1&autoplay=1&mute=1&loop=1" frameborder="0"></iframe>
+						<iframe name="iframe" src="https://www.youtube.com/embed/4FiuQ8fmnwg?controls=1&autoplay=1&mute=1&loop=1" frameborder="0"></iframe>
                         <!-- <a href="https://youtu.be/ax1LLuug41o?si=_6AmCVF66pGesf1l" target="_parent"><img src="Images/istockphoto-1371028068-1024x1024.jpg" alt="" width="300px" height="auto"></a> -->
                     </div>
                     <div class="overlay"></div>
@@ -112,7 +112,7 @@
                 </div>
                 <div class="image-elements">
                     <div class="Learn-piano" id="lrn-music-notation">
-						<iframe width="100%" height="100%" src="https://www.youtube.com/embed/sIPfdxFff3Y?si=aCXAv9aOcxiEqRlp?controls=1&autoplay=1&mute=1&loop=1" frameborder="0"></iframe>
+						<iframe name="video" id="video" src="https://www.youtube.com/embed/sIPfdxFff3Y?si=aCXAv9aOcxiEqRlp?controls=1&autoplay=1&mute=1&loop=1" frameborder="0"></iframe>
                         <!-- <a href="https://youtu.be/ax1LLuug41o?si=_6AmCVF66pGesf1l" target="_parent"><img src="Images/istockphoto-182428014-1024x1024.jpg" alt="" width="300px" height="auto"></a> -->
                     </div>
                     <div class="overlay"></div>
@@ -244,7 +244,7 @@
 					<span>okothgerald449@gmail.com</span>
 				</div>
 				<div class="map">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7976.785593850559!2d37.262054699999986!3d-1.531655799999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2ske!4v1694436889790!5m2!1sen!2ske" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+					<iframe id="map" name="map" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7976.785593850559!2d37.262054699999986!3d-1.531655799999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2ske!4v1694436889790!5m2!1sen!2ske"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 				</div>
 			</div>
 			<div class="contact-form">
@@ -268,7 +268,7 @@
 						<button type="submit" onsubmit="sendMail()">submit<i class="fa-solid fa-paper-plane"></i></button>
 					</div>
 				</form>
-				<span id="mesg" style="display: none;">message has been sent. We will respond to you shortly.</span>
+				<span id="mesg">message has been sent. We will respond to you shortly.</span>
 			</div>
 		</div>
 	</section>
@@ -279,12 +279,12 @@
 			<div class="social-media-links">
 				<h3>Social media links</h3>
 				<ul>
-					<li><a href="https://www.linkedin.com/in/geraldokoth/" target="_blank"><i class="fa-brands fa-linkedin"></i>linkedin</a></li>
-					<li><a href="https://github.com/GeraldOkoth" target="_blank"><i class="fa-brands fa-github"></i>github</a></li></li>
-					<li><a href="https://www.youtube.com/@geraldokothKE" target="_blank"><i class="fa-brands fa-youtube"></i>youtube</a></li>
-					<li><a href="https://x.com/gerald_okothKE" target="_blank"><i class="fa-brands fa-twitter"></i>twitter</a></li>
-					<li><a href="https://www.instagram.com/okothgerald449" target="_blank"><i class="fa-brands fa-instagram"></i>instagram</a></li>
-					<li><a href="https://www.facebook.com/gerald.okoth.14"><i class="fa-brands fa-facebook"></i>facebook</a></li>            
+					<li><a href="https://www.linkedin.com/in/geraldokoth/"><i class="fa-brands fa-linkedin"></i>linkedin</a></li>
+					<li><a href="https://github.com/GeraldOkoth"><i class="fa-brands fa-github"></i>github</a></li>
+					<li><a href="https://www.youtube.com/@geraldokothKE"><i class="fa-brands fa-youtube"></i>youtube</a></li>
+					<li><a href="https://x.com/gerald_okothKE"><i class="fa-brands fa-twitter"></i>twitter</a></li>
+					<li><a href="https://www.instagram.com/okothgerald449"><i class="fa-brands fa-instagram"></i>instagram</a></li>
+					<li><a href="https://www.facebook.com/gerald.okoth.14"><i class="fa-brands fa-facebook"></i>facebook</a></li>        
 				</ul>
 			</div>
 			<div class="useful-links">
@@ -297,7 +297,7 @@
 			</div>
 		<div class="top"><a href="#top"><i class="fa-solid fa-arrow-up"></i>Back to top</a></div>
 		</div>
-		<hr style="width: 90%; margin: auto;">
+		<hr id="hr">
 		<div class="footer-txt">
 			<p id="footerYear"><script>
 				const date = new Date();

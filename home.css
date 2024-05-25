@@ -164,6 +164,10 @@ html {
 		position: absolute;
 	}
 
+	#hamburgerClose {
+		visibility: hidden;
+	}
+
 	/*Style the menu links on small screens*/
 	#menuLinks  {
 		top: 5.4%;
