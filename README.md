@@ -1,10 +1,6 @@
-## Portfolio Website.
-Website currently under development according to my own preferrence.
+
+# Portfolio Website
+
+This website is currently under development according to personal preferrences.
 I highly welcome any contribution to this development.
-Languages include Html, Css, Javascript and PHP.
-
-
-
-
-
-
+Technologies include Html, Css, Scss, Javascript, Typescript and PHP.
