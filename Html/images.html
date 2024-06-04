@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Images</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="This is my personal website"> <!--description of the document-->
+	<link rel="stylesheet" type="text/css" href="./style.css"> <!--link to external css-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--for responsive layout-->
+	<meta name="author" content="Gerald Okoth"> <!--author of the html doc.-->
+	<link rel="icon" type="image/x-icon" href="./Images/IMG_20220417_104146_015.jpg">
+	<script src="https://kit.fontawesome.com/23021fc8d3.js" crossorigin="anonymous"></script> <!--for embedding font aawesome icons--> 
+	<style>
+		.image-container-grid {
+			display: grid;
+			row-gap: 15px;
+			column-gap: 7px;
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+		}
+
+		.left-20 {
+			width: 20%;
+			float: left;
+			text-align: justify;
+		}
+
+		.right-80 {
+			width: 80%;
+			float: left;
+		}
+
+		@media only screen and (max-width: 696px) {
+			.image-container-grid {
+				grid-template-columns: 1fr;
+			}
+
+		}
+
+		@media only screen and (max-width: 950px) {
+			.image-container-grid {
+				grid-template-columns: 1fr 1fr;
+			}
+
+		}
+
+		/*.image-container {
+			//width: 250px; //set the width of the div element
+			//margin-right: 10px; //set a margin on the right of each div element
+			//vertical-align: top; //align items together on the top
+			//display: inline-block; //display the items side by side
+		} */
+
+		/*display inline-block may not give the best results in some cases such as horizontal layouts. Use grid instead
+		e.g 
+		.image-info {
+			display: grid; //to display grid
+		    grid-template-columns: 100px 1fr; //to set the number of columns. 100px sets the column width to 100px while 1fr sets the width of the second column to take the remaining available space. Grid will also vertically align the items.
+			*/
+
+		img {
+			height: 150px;
+			object-fit: cover;
+			border-radius: 10px;
+		}
+		
+
+		.image-info-place {
+			font-weight: 500; /*works with google fonts. Link to google font to see effect*/
+		}
+
+		.image-info-rating {
+			font-size: 0.9em;
+			color: rgb(95, 95, 95);
+		}
+	</style>
+</head>
+<body>
+
+	<!--header content goes in here-->
+	<div class="header-content">
+		<div class="left">
+			<span>Gero</span> <!--header-->
+		</div>
+
+		<div class="middle">
+			<input type="search" id="search" name="search" placeholder="search..."> <!--search tab-->
+		</div>
+
+		<div class="right">
+			<ul>
+				<li><a href="login.html" target="_parent" title="log in here">Login</a></li>
+				<li><a href="new.html" target="_parent" title="sign up here">Sign up</a></li>
+			</ul>
+		</div>
+
+	</div>
+
+	<!--set of navigation links-->
+	<nav>
+		<ul class="top-nav-links">
+			<li><a href="home.html" class="active" target="_self" title="Home page"><i class="fa-solid fa-house"></i>Home</a></li>
+			<li class="drop"><a href="#" class="drop-down" target="_self" title="images and videos"><i class="fa-light fa-camera"></i>Media</a>
+			<ul class="drop-down-menu">
+				<li><a href="images.html" target="_self" title="Images">Images</a></li>
+				<li><a href="videos.html" target="_self" title="Videos">Videos</a></li>					
+			</ul></li>
+			<li class="drop"><a href="#" class="drop-down" target="_self" title="Services i offer"><i class="fa-thin fa-laptop-binary"></i>Services</a>
+				<!--<ul class="drop-down-menu">
+					<li><a href="#" target="_self" title="Images">Web Design</a></li>
+					<li><a href="#" target="_self" title="Videos">Logo Design</a></li>
+					<li><a href="#" target="_self" title="Videos">Keyboard Tutorials</a></li>
+				</ul></li>-->
+			<li><a href="portfolio.html" target="_self" title="Go to latest news"><i class="fa-regular fa-newspaper"></i>Portfolio</a></li>
+			<li><a href="about.html" target="_self" title="Find more about me"><i class="fa-solid fa-address-card"></i>About</a></li>
+			<li><a href="contactme.html" target="_self" title="Contact me"><i class="fa-solid fa-phone"></i>Contact</a></li>
+		</ul>
+	</nav>
+
+
+	<!--main content goes in here-->
+	<div class="main-content clearfix">
+		<div class="left-20">
+			<div class="side">
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, 
+					nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. 
+					Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, 
+					lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac...
+				</p>
+			</div>
+
+			<div class="side">
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, 
+					nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. 
+					Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, 
+					lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac...
+				</p>
+			</div>
+		</div>
+
+		<div class="right-80">
+
+			<div class="image-container-grid">
+
+				<div class=image-container>
+					<div class="image">
+						<a href="./Images/1000066288.jpg" target="_blank"><img src="C:\Users\Machinery\Desktop\Onedrive\Pictures\My pics\1672053153019.jpg" alt="my favourite image" width="100%"></a>
+					</div>
+					<div class="image-info">
+						<p class="image-info-place">Kenyatta International Conferrence Center (KICC) &#183; Nairobi</p>
+						<P class="image-info-rating">Clickthrough 3.4M &#183; 3 months ago</P>
+					</div>
+				</div>
+	
+				<div class=image-container>
+					<div class="image">
+						<a href="./Images/1672053151790.jpg" target="_blank"><img src="C:\Users\Machinery\Desktop\Onedrive\Pictures\My pics\1672053188201.jpg" alt="my favourite image" width="100%"></a>
+					</div>
+					<div class="image-info">
+						<p class="image-info-place">Parliament road &#183; Nairobi</p>
+						<P class="image-info-rating">Clickthrough 1.4M &#183; 7 months ago</P>
+					</div>
+				</div>
+	
+				<div class=image-container>
+					<div class="image">
+						<a href="./Images/1672053152198.jpg" target="_blank"><img src="C:\Users\Machinery\Desktop\Onedrive\Pictures\My pics\1672053151790.jpg" alt="my favourite image" width="100%"></a>
+					</div>
+					<div class="image-info">
+						<p class="image-info-place">Milimani law courts &#183; Nairobi</p>
+						<P class="image-info-rating">Clickthrough 1.4k &#183; 7 months ago</P>
+					</div>
+				</div>
+	
+				<div class=image-container>
+					<div class="image">
+						<a href="./Images/1672053153416.jpg" target="_blank"><img src="C:\Users\Machinery\Desktop\Onedrive\Pictures\My pics\1672053152683.jpg" alt="my favourite image" width="100%"></a>
+					</div>
+					<div class="image-info">
+						<p class="image-info-place">Upper Hill &#183; Nairobi</p>
+						<P class="image-info-rating">Clickthrough 1M &#183; 7 months ago</P>
+					</div>
+				</div>
+	
+				<div class=image-container>
+					<div class="image">
+						<a href="./Images/1672053171035.jpg" target="_blank"><img src="C:\Users\Machinery\Desktop\Onedrive\Pictures\My pics\1672053187657.jpg" alt="my favourite image" width="100%"></a>
+					</div>
+					<div class="image-info">
+						<p class="image-info-place">Upper Hill &#183; Nairobi</p>
+						<P class="image-info-rating">Clickthrough 1M &#183; 7 months ago</P>
+					</div>
+				</div>
+	
+				<div class=image-container>
+					<div class="image">
+						<a href="./Images/1672053188697.jpg" target="_blank"><img src="C:\Users\Machinery\Desktop\Onedrive\Pictures\My pics\IMG_20220417_104146_015.jpg" alt="my favourite image" width="100%"></a>
+					</div>
+					<div class="image-info">
+						<p class="image-info-place">Upper Hill &#183; Nairobi</p>
+						<P class="image-info-rating">Clickthrough 1M &#183; 7 months ago</P>
+					</div>
+				</div>
+	
+				<div class=image-container>
+					<div class="image">
+						<a href="./Images/1672053189148.jpg" target="_blank"><img src="C:\Users\Machinery\Desktop\Onedrive\Pictures\My pics\IMG_20230211_134515_385.jpg" alt="my favourite image" width="100%"></a>
+					</div>
+					<div class="image-info">
+						<p class="image-info-place">Upper Hill &#183; Nairobi</p>
+						<P class="image-info-rating">Clickthrough 1M &#183; 7 months ago</P>
+					</div>
+				</div>
+	
+				<div class=image-container>
+					<div class="image">
+						<a href="./Images/1672053193464.jpg" target="_blank"><img src="C:\Users\Machinery\Desktop\Onedrive\Pictures\My pics\DSCN4434-02.jpeg" alt="my favourite image" width="100%"></a>
+					</div>
+					<div class="image-info">
+						<p class="image-info-place">Upper Hill &#183; Nairobi</p>
+						<P class="image-info-rating">Clickthrough 1M &#183; 7 months ago</P>
+					</div>
+				</div>
+
+				<div class=image-container>
+					<div class="image">
+						<a href="./Images/@Jack_Arts films-18.jpg" target="_blank"><img src="C:\Users\Machinery\Desktop\Onedrive\Pictures\My pics\1672053171490.jpg" alt="my favourite image" width="100%"></a>
+					</div>
+					<div class="image-info">
+						<p class="image-info-place">Upper Hill &#183; Nairobi</p>
+						<P class="image-info-rating">Clickthrough 1M &#183; 7 months ago</P>
+					</div>
+				</div>
+
+				<div class=image-container>
+					<div class="image">
+						<a href="./Images/DSCN4434-01.jpeg" target="_blank"><img src="C:\Users\Machinery\Desktop\Onedrive\Pictures\My pics\1672053174729.jpg" alt="my favourite image" width="100%"></a>
+					</div>
+					<div class="image-info">
+						<p class="image-info-place">Upper Hill &#183; Nairobi</p>
+						<P class="image-info-rating">Clickthrough 1M &#183; 7 months ago</P>
+					</div>
+				</div>
+
+				<div class=image-container>
+					<div class="image">
+						<a href="./Images/IMG_20220127_103106_041.jpg" target="_blank"><img src="C:\Users\Machinery\Desktop\Onedrive\Pictures\My pics\1672053159005.jpg" alt="my favourite image" width="100%"></a>
+					</div>
+					<div class="image-info">
+						<p class="image-info-place">Upper Hill &#183; Nairobi</p>
+						<P class="image-info-rating">Clickthrough 1M &#183; 7 months ago</P>
+					</div>
+				</div>
+
+				<div class=image-container>
+					<div class="image">
+						<a href="./Images/IMG_20220417_104146_015.jpg" target="_blank"><img src="C:\Users\Machinery\Desktop\Onedrive\Pictures\My pics\1672053154952.jpg" alt="my favourite image" width="100%"></a>
+					</div>
+					<div class="image-info">
+						<p class="image-info-place">Upper Hill &#183; Nairobi</p>
+						<P class="image-info-rating">Clickthrough 1M &#183; 7 months ago</P>
+					</div>
+				</div>
+
+			</div>
+			
+		</div>
+	</div>
+
+	<!--footer content goes in here-->
+	<div class="footer-content">
+
+		<nav class="bottom-navigation">
+			<ul>
+				<li><a href="https://www.instagram.com/okothgerald449" target="_blank"><i class="fa-brands fa-instagram"></i>instagram</a></li>
+                <li><a href="#" target="_blank"><i class="fa-brands fa-facebook"></i>facebook</a></li>
+                <li><a href="https://twitter.com/gerorganist" target="_blank"><i class="fa-brands fa-twitter"></i>twitter</a></li>
+                <li><a href="https://www.youtube.com/@geraldokoth254" target="_blank"><i class="fa-brands fa-youtube"></i>youtube</a></li>
+                <li><a href="https://www.linkedin.com/in/gerald-okoth/" target="_blank"><i class="fa-brands fa-linkedin"></i>linkedin</a></li>
+                <li><a href="https://github.com/GeraldOkoth" target="_blank"><i class="fa-brands fa-github"></i>github</a></li></li>
+			</ul>
+		</nav>
+
+		<footer id="myfooter">
+			<p><small>&copy;2022. All rights reserved. Powered by cleanmaster.</small></p>
+		</footer>
+		
+		<a href="#" class="back-to-top">top</a>
+
+	</div>
+	
+</body>
+</html>
