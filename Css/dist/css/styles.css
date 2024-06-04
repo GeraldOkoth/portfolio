@@ -1,6 +1,4 @@
-/*Import font family link*/
 @import url("https://fonts.googleapis.com/css2?family=Cinzel&family=Merriweather&family=Poppins:wght@100;200;300;400&family=Roboto:wght@300&display=swap");
-/*Select all elements using global selector "*"*/
 * {
   padding: 0;
   margin: 0;
@@ -16,6 +14,8 @@ html {
 }
 
 body {
-  color: black;
+  color: #000;
   background-color: #fff;
+  font-size: 1rem;
+  font-family: "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }

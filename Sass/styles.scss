@@ -1,26 +1,21 @@
-// variable declaration
-$primary-color: #0000ff;
-$secondary-color: #00ff00;
+// Import/use partials
+// @use - alternative to @import and must be written before any other rules
+@use "sass:math"; //for "math" operations e.g "math.div(300px, 960px) * 100%;" converts 300px into percentage based on a total width of 960px.
+@use "./mixins"; //for reusable snippets
+@use "./functions";
+@import "./variables";
+@import "./resets";
 
-/*Import font family link*/
+// Import font family google link
 @import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Merriweather&family=Poppins:wght@100;200;300;400&family=Roboto:wght@300&display=swap');
-
-/*Select all elements using global selector "*"*/
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Cinzel', serif;
-	font-family: 'Merriweather', serif;
-	font-family: 'Roboto', sans-serif;
-	font-family: 'Poppins', sans-serif;
-}
 
 html {
 	scroll-behavior: smooth;
 }
 
 body {
-    color: black;
-    background-color: #fff;
+    color: $bodyTxtColor;
+    background-color: $bodyBgColor;
+    font-size: $fontSize;
+    font-family: $bodyFontFamily;
 }
