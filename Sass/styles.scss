@@ -5,9 +5,19 @@
 @use "./functions";
 @import "./variables";
 @import "./resets";
+@import "./icons";
 
 // Import font family google link
 @import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Merriweather&family=Poppins:wght@100;200;300;400&family=Roboto:wght@300&display=swap');
+
+%transparentBgImages {
+	position: relative;
+    background: no-repeat center  $linearGradient, url(../Images/istockphoto-1465597988-1024x1024.jpg);
+}
+
+%icons {
+    color: blue;
+}
 
 html {
 	scroll-behavior: smooth;
@@ -18,4 +28,65 @@ body {
     background-color: $bodyBgColor;
     font-size: $fontSize;
     font-family: $bodyFontFamily;
+}
+
+.home-page {
+	@extend %transparentBgImages;
+    min-height: 100vh;
+}
+
+.navbar {
+    z-index: 18;
+	width: 100%;
+	display: flex;
+	position: fixed;
+	align-items: center;
+	background-color: azure;
+	justify-content: space-between;
+	box-shadow: 0 0 12px;
+
+      .logo{
+        padding: .8em 4em;
+        letter-spacing: .17em;
+        text-transform: uppercase;
+        background: url(Images/bubble.png);
+        /* background-position: 0 0; */
+        font-family: "Brush Script MT", cursive;
+        /*font-family: Georgia, 'Times New Roman', Times, serif;*/
+        animation: back 20s linear infinite;
+
+        a {
+            font: 1.5em bold;
+            text-decoration: none;
+        }
+
+        span {
+	        color: #FE9900;
+        }
+
+        /*Logo animation */
+        @keyframes back {
+            100% {
+                background-position: 2000px 1000px;
+            }
+        }
+    }
+    .menu {
+        ul {
+            display: flex;
+            padding-right: 4em;
+            align-items: center;
+            vertical-align: middle;
+            list-style-type: none;
+        }
+        a {
+            padding: .8em;
+            position: relative;
+            display: inline-block;
+            text-decoration: none;
+        }
+        .fa-solid, .fa-brands {
+            @extend %icons;
+        }
+    }
 }

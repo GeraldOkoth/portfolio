@@ -9,6 +9,15 @@
   font-family: "Poppins", sans-serif;
 }
 
+.home-page {
+  position: relative;
+  background: no-repeat center linear-gradient(rgba(0, 0, 0, 0.6), #0a0a0a), url(../Images/istockphoto-1465597988-1024x1024.jpg);
+}
+
+.navbar .menu .fa-solid, .navbar .menu .fa-brands {
+  color: blue;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -18,4 +27,55 @@ body {
   background-color: #fff;
   font-size: 1rem;
   font-family: "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.home-page {
+  min-height: 100vh;
+}
+
+.navbar {
+  z-index: 18;
+  width: 100%;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  background-color: azure;
+  justify-content: space-between;
+  box-shadow: 0 0 12px;
+}
+.navbar .logo {
+  padding: 0.8em 4em;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+  background: url(Images/bubble.png);
+  /* background-position: 0 0; */
+  font-family: "Brush Script MT", cursive;
+  /*font-family: Georgia, 'Times New Roman', Times, serif;*/
+  animation: back 20s linear infinite;
+  /*Logo animation */
+}
+.navbar .logo a {
+  font: 1.5em bold;
+  text-decoration: none;
+}
+.navbar .logo span {
+  color: #FE9900;
+}
+@keyframes back {
+  100% {
+    background-position: 2000px 1000px;
+  }
+}
+.navbar .menu ul {
+  display: flex;
+  padding-right: 4em;
+  align-items: center;
+  vertical-align: middle;
+  list-style-type: none;
+}
+.navbar .menu a {
+  padding: 0.8em;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
 }
