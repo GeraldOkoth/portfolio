@@ -1,14 +1,20 @@
-// Import/use partials
-// @use - alternative to @import and must be written before any other rules
-@use "sass:math"; //for "math" operations e.g "math.div(300px, 960px) * 100%;" converts 300px into percentage based on a total width of 960px.
-@use "./mixins"; //for reusable snippets
+/* Import/use partials*/
+/* @use - alternative to @import and must be written before any other rules*/
+@use "sass:math"; /*for "math" operations e.g "math.div(300px, 960px) * 100%;" converts 300px into percentage based on a total width of 960px.*/
+@use "./buttons"; /*for reusable snippets*/
 @use "./functions";
 @import "./variables";
 @import "./resets";
 @import "./icons";
+@import "./responsive";
 
-// Import font family google link
+
+/* Import font family google link*/
 @import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Merriweather&family=Poppins:wght@100;200;300;400&family=Roboto:wght@300&display=swap');
+
+@function weight($weightName) {
+    @return map-get($fontWeights, $weightName);
+}
 
 %transparentBgImages {
 	position: relative;
@@ -56,7 +62,7 @@ body {
         animation: back 20s linear infinite;
 
         a {
-            font: 1.5em bold;
+            font: 1.5em weight(bold);
             text-decoration: none;
         }
 
@@ -84,9 +90,58 @@ body {
             position: relative;
             display: inline-block;
             text-decoration: none;
+
+
+            &::after {
+                top: 75;
+                left: 0%;
+                width: 0%;
+                content: '';
+                height: .16;
+                position: absolute;
+                transition: width  .3s;
+                background-color: orange;
+                border-radius: 2em 2em 0 0 ;
+            }
+
+            &:hover::after {
+                width: $widthHoverEffect;
+            }
+            &:hover {
+                font-weight: weight(bold);
+                color: rgb(8, 8, 8);
+            }
         }
         .fa-solid, .fa-brands {
             @extend %icons;
         }
     }
+    .hambuger-btn .hamburger {
+        color: #a0a0a0;
+        top: 2.4%;
+        right: 3%;
+        z-index: 20;
+        display: none;
+        cursor: pointer;
+        position: fixed;
+    }
+    #menuLinks {
+        overflow: hidden;
+        transition: height 0.3s ease;
+    }
+    
+    #menuLinks.show {
+        display: block;
+        height: 270px; 
+    }
+    
+    #menuLinks.hide {
+        height: 0;
+    }
+    
+    #hamburgerOpen, #hamburgerClose {
+        transition: visibility 0.3s ease;
+    }
 }
+
+@include mobile;
