@@ -1,0 +1,44 @@
+/* mobile devices*/
+@mixin mobile {
+    .logo {
+		padding: 0 1em;
+	}
+
+    .menuLinks {
+        top: 5.4%;
+		left: 0%;
+		width: 100%;
+		display: none;
+		position: fixed;
+		border-radius: 0 0 .4em .4em;
+		padding: .8em .2em;
+		flex-direction: column;
+		background-color: #efefef;
+		box-shadow: 0 1px 5px;
+
+        li {
+            border-bottom: 1px solid $bodyTxtColor;
+
+        &:last-child {
+            border-bottom: none;
+        }
+        }
+        a {
+            display: block;
+
+        &:hover {
+            background-color: #b5b5b5;
+        }
+        }
+    }
+
+	.hamburger {
+		display: block;
+		top: 25%;
+		position: absolute;
+	}
+
+	#hamburgerClose {
+		visibility: hidden;
+	}
+}
