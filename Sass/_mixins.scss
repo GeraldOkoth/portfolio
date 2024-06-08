@@ -1,8 +1,0 @@
-// Reusable snippet for buttons
-@mixin button($boxShadowColor: gray) {
-    color: #fff;
-    cursor: pointer;
-    background-color: #0067B8;
-    box-shadow: 0 0 1px rgba($boxShadowColor, .2);
-}
-
