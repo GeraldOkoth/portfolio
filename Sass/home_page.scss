@@ -7,14 +7,13 @@
 @import "./resets";
 @import "./icons";
 @import "./responsive";
+@import "./functions";
 
 
 /* Import font family google link*/
 @import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Merriweather&family=Poppins:wght@100;200;300;400&family=Roboto:wght@300&display=swap');
 
-@function weight($weightName) {
-    @return map-get($fontWeights, $weightName);
-}
+
 
 %transparentBgImages {
 	position: relative;
@@ -32,8 +31,10 @@ html {
 body {
     color: $bodyTxtColor;
     background-color: $bodyBgColor;
-    font-size: $fontSize;
-    font-family: $bodyFontFamily;
+    font: {
+        size: $fontSize;
+        family: $bodyFontFamily;
+    }
 }
 
 .home-page {
