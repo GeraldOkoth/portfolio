@@ -42,3 +42,36 @@
 		visibility: hidden;
 	}
 }
+
+@mixin heroSmallScreen() {
+	.hero {
+		flex-direction: column;
+
+		.hero-image img {
+			width: 140px;
+			height: 140px;
+			margin-bottom: 1rem;
+			box-shadow: 0 8px 8px 6px;
+		}
+		& h1 {
+			font-size: 1.2rem;
+			line-height: 2rem;
+			padding-bottom: .2rem;
+		}
+		& p {
+			line-height: 1.1rem;
+			font-family: "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
+		}
+		&-btn {
+			padding: .1em 0;
+
+			a {
+				display: flex;
+				margin-top: .6em;
+				padding: 8px 0;
+				flex-direction: column;
+			}
+		}
+	}
+
+}

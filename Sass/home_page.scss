@@ -2,12 +2,13 @@
 /* @use - alternative to @import and must be written before any other rules*/
 @use "sass:math"; /*for "math" operations e.g "math.div(300px, 960px) * 100%;" converts 300px into percentage based on a total width of 960px.*/
 @use "./buttons"; /*for reusable snippets*/
-@use "./functions";
 @import "./variables";
 @import "./resets";
 @import "./icons";
 @import "./responsive";
 @import "./functions";
+@import "./display";
+@import "./keyframesAnime";
 
 
 /* Import font family google link*/
@@ -146,3 +147,104 @@ body {
 }
 
 @include mobile;
+
+.hero {
+    top: 55%;
+    left: 50%;
+    width: 70%;
+    color: $bodyBgColor;
+    text-align: center;
+    @include display();
+    transform: translate(-50% -50%);
+
+    & .hero-image img {
+        transition: .5s;
+        object: {
+            fit: cover;
+            position: top; 
+        }
+        border: 1px solid rgb(15, 3, 3);
+        border-radius: 50%;
+
+        &:hover {
+            transform: translateY(8vh);
+            border: 3px solid orange;
+            border: 1.5px solid $primaryColor;
+            box-shadow: 0 -8px 8px 6px $bodyBgColor;
+        }
+    }
+    .hero-text {
+        h1 {
+        padding-bottom: 1em;
+        }
+
+        p {
+            font-family: 'Roboto', sans-serif;
+        }
+    }
+    .hero-btn {
+        padding: 5em 0;
+
+        a {
+            z-index: 1;
+            color: $bodyBgColor;
+            margin: 0 1em;
+            padding: .7em 3em;
+            position: relative;
+            border-radius: 1.5em;
+            text-decoration: none;
+            transition: color .5s;
+            border: 1px solid $bodyBgColor;
+
+            span {
+                left: 0%;
+                bottom: 0%;
+                width: 0;
+                z-index: -1;
+                height: 0%;
+                transition: .4s;
+                position: absolute;
+                border-radius: 7em;
+                background: linear-gradient(rgb(38, 0, 255), rgba(89, 90, 102, 0.2));
+            }
+            &:hover {
+                color: $bodyTxtColor;
+	            box-shadow: 0 3px 9px $bodyBgColor;
+
+                span {
+                    width: $widthHoverEffect;
+                    height: $widthHoverEffect;
+                }
+            }
+        }
+    }
+}
+.bubble {
+    width: $widthHoverEffect;
+    bottom: 0px;
+    @include display();
+
+    img {
+        width: 25px;
+        animation: bubble 7s linear infinite;
+    }
+}
+
+@keyframes bubble {
+    0% {
+        @include animation(0, translateY(0));
+    }
+    30% {
+        @include animation(1, none);
+    }
+    70% {
+        @include animation(1, none);
+    }
+    100% {
+        @include animation(0, translateY(-80vh));
+    }
+}
+
+
+@include heroSmallScreen;
+
