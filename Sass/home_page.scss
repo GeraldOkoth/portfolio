@@ -1,7 +1,7 @@
-/* Import/use partials*/
-/* @use - alternative to @import and must be written before any other rules*/
-@use "sass:math"; /*for "math" operations e.g "math.div(300px, 960px) * 100%;" converts 300px into percentage based on a total width of 960px.*/
-@use "./buttons"; /*for reusable snippets*/
+//Import/use partials
+//@use - alternative to @import and must be written before any other rules
+@use "sass:math"; //for "math" operations e.g "math.div(300px, 960px) * 100%;" converts 300px into percentage based on a total width of 960px.
+@use "./buttons"; //for reusable snippets
 @import "./variables";
 @import "./resets";
 @import "./icons";
@@ -10,20 +10,7 @@
 @import "./display";
 @import "./keyframesAnime";
 
-
-/* Import font family google link*/
 @import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Merriweather&family=Poppins:wght@100;200;300;400&family=Roboto:wght@300&display=swap');
-
-
-
-%transparentBgImages {
-	position: relative;
-    background: no-repeat center  $linearGradient, url(../Images/istockphoto-1465597988-1024x1024.jpg);
-}
-
-%icons {
-    color: blue;
-}
 
 html {
 	scroll-behavior: smooth;
@@ -32,6 +19,7 @@ html {
 body {
     color: $bodyTxtColor;
     background-color: $bodyBgColor;
+    position: relative;
     font: {
         size: $fontSize;
         family: $bodyFontFamily;
@@ -39,8 +27,9 @@ body {
 }
 
 .home-page {
-	@extend %transparentBgImages;
-    min-height: 100vh;
+	min-height: 100vh;
+	position: relative;
+	background: no-repeat center  linear-gradient(rgba(0,0,0,0), #000 ), url(../Images/istockphoto-1465597988-1024x1024.jpg);
 }
 
 .navbar {
@@ -95,11 +84,11 @@ body {
 
 
             &::after {
-                top: 75;
+                bottom: 0%;
                 left: 0%;
                 width: 0%;
                 content: '';
-                height: .16;
+                height: .16em;
                 position: absolute;
                 transition: width  .3s;
                 background-color: orange;
@@ -115,8 +104,9 @@ body {
             }
         }
         .fa-solid, .fa-brands {
-            @extend %icons;
+            @include icons;
         }
+        
     }
     .hambuger-btn .hamburger {
         color: #a0a0a0;
@@ -146,16 +136,19 @@ body {
     }
 }
 
-@include mobile;
+/*navbar on small screen*/ 
+@media screen and (max-width: $mobile) {
+    @include navbarSmallScreen;
+}
 
 .hero {
-    top: 55%;
-    left: 50%;
+    top: 25%;
+    left: 15%;
     width: 70%;
     color: $bodyBgColor;
     text-align: center;
     @include display();
-    transform: translate(-50% -50%);
+    transform: translate(50% 50%);
 
     & .hero-image img {
         transition: .5s;
@@ -165,17 +158,23 @@ body {
         }
         border: 1px solid rgb(15, 3, 3);
         border-radius: 50%;
+        box-shadow:  12px 12px 10px;
 
         &:hover {
-            transform: translateY(8vh);
-            border: 3px solid orange;
-            border: 1.5px solid $primaryColor;
-            box-shadow: 0 -8px 8px 6px $bodyBgColor;
+            transform: translateY(8vh) scale(1.3, 1.3);
+            border: 1.5px solid orange;
+            box-shadow: 0 -6px 6px 6px $bodyBgColor;
         }
     }
     .hero-text {
         h1 {
-        padding-bottom: 1em;
+        padding: .5em 2em;
+        font: 3rem 'Cinzel', serif;
+        letter-spacing: .1em;
+        text: {
+            transform: uppercase;
+            shadow: .6px 1.5px 3px $bodyBgColor;
+        }
         }
 
         p {
@@ -223,10 +222,47 @@ body {
     width: $widthHoverEffect;
     bottom: 0px;
     @include display();
+    align-items: center;
 
     img {
         width: 25px;
         animation: bubble 7s linear infinite;
+
+        &:nth-child(1) {
+            width: 20px;
+            animation-delay: 2s;
+        }
+        &:nth-child(2) {
+            animation-delay: 1s;
+        }
+        &:nth-child(3) {
+            width: 20px;
+            animation-delay: 3s;
+        }
+        &:nth-child(4) {
+            width: 35px;
+            animation-delay: 4.5s;
+        }
+        &:nth-child(5) {
+            width: 25px;
+            animation-delay: 3s;
+        }
+        &:nth-child(6) {
+            width: 20px;
+            animation-delay: 6s;
+        }
+        &:nth-child(7) {
+            width: 35px;
+            animation-delay: 7s;
+        }
+        &:nth-child(8) {
+            width: 10px;
+            animation-delay: 6s;
+        }
+        &:nth-child(9) {
+            width: 35px;
+            animation-delay: 7s;
+        }
     }
 }
 
@@ -245,6 +281,8 @@ body {
     }
 }
 
-
-@include heroSmallScreen;
+/*hero on small screen*/ 
+@media screen and (max-width: $mobile) {
+    @include heroSmallScreen;
+}
 
