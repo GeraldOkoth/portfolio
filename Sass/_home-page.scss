@@ -1,35 +1,8 @@
-//Import/use partials
-//@use - alternative to @import and must be written before any other rules
-@use "sass:math"; //for "math" operations e.g "math.div(300px, 960px) * 100%;" converts 300px into percentage based on a total width of 960px.
-@use "./buttons"; //for reusable snippets
-@import "./variables";
-@import "./resets";
-@import "./icons";
-@import "./responsive";
-@import "./functions";
-@import "./display";
-@import "./keyframesAnime";
-
-@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Merriweather&family=Poppins:wght@100;200;300;400&family=Roboto:wght@300&display=swap');
-
-html {
-	scroll-behavior: smooth;
-}
-
-body {
-    color: $bodyTxtColor;
-    background-color: $bodyBgColor;
-    position: relative;
-    font: {
-        size: $fontSize;
-        family: $bodyFontFamily;
-    }
-}
-
+/*home-page scss*/
 .home-page {
-	min-height: 100vh;
-	position: relative;
-	background: no-repeat center  linear-gradient(rgba(0,0,0,0), #000 ), url(../Images/istockphoto-1465597988-1024x1024.jpg);
+    min-height: 100vh;
+    position: relative;
+    background: no-repeat center $linearGradient, url(../Images/1672053154170.jpg);
 }
 
 .navbar {
@@ -42,7 +15,8 @@ body {
 	justify-content: space-between;
 	box-shadow: 0 0 12px;
 
-      .logo{
+    
+    .logo{
         padding: .8em 4em;
         letter-spacing: .17em;
         text-transform: uppercase;
@@ -285,4 +259,3 @@ body {
 @media screen and (max-width: $mobile) {
     @include heroSmallScreen;
 }
-

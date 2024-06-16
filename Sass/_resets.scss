@@ -8,3 +8,17 @@
 	font-family: 'Roboto', sans-serif;
 	font-family: $fontStack;
 }
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+    color: $bodyTxtColor;
+    background-color: $bodyBgColor;
+    position: relative;
+    font: {
+        size: $fontSize;
+        family: $bodyFontFamily;
+    }
+}
