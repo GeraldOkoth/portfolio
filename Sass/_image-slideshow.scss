@@ -1,0 +1,104 @@
+.slideShow {
+    background-color: $bodyBgColor;
+}
+
+.gallery {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 20%;
+    position: relative;
+
+    .gallery-header h2{
+        text-align: center;
+        padding: 2rem 0;
+    }
+
+    .slideshow-container {
+        .slide {
+            display: none;
+            position: relative;
+            text-align: center;
+
+            img {
+                object: {
+                    fit: cover;
+                    position: top;
+                }
+            }
+
+            .number {
+                top: 0;
+                font-size: 15px;
+                color: #f4f4f4;
+                position: absolute;
+                padding: 8px 12px;
+                background-color: rgba(0,0,0,0.5);
+            }
+        }
+
+        .first-child {
+            display: block;
+        }
+        .prev, .next {
+            color: $bodyTxtColor;
+            top: 50%;
+            position: absolute;
+            cursor: pointer;
+            // width: auto;
+            padding: 16px;
+            font: 18px weight(bold);
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            background-color: rgba(255, 255, 255, 0.9);
+
+            &:hover {
+                color: $bodyBgColor;
+                background-color: rgba(0,0,0,0.6);
+            }
+        }
+        .next {
+            right: 0;
+        }
+        
+        .caption {
+            color: #f2f2f2;
+            bottom: 2rem;
+            position: absolute;
+            width: 100%;
+        }
+        .dots {
+            display: inline-block;
+            position: absolute;
+
+            .dot {
+                cursor: pointer;
+                width: 15px;
+                height: 15px;
+                margin: 5px 2px;
+                display: inline-block;
+                position: absolute;
+                border-radius: 50%;
+                background-color: #bbb;
+            }
+        }
+        .active, .dot:hover {
+            background-color: #717171;
+        }
+
+        .fade {
+            animation: {
+                name: fade;
+                duration: 1.5s;
+            };
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .5;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    }
+}
