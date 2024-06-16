@@ -9,7 +9,6 @@
   font-family: "Poppins", sans-serif;
 }
 
-/* mobile devices*/
 html {
   scroll-behavior: smooth;
 }
@@ -22,10 +21,12 @@ body {
   font-family: "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+/* mobile devices*/
+/*home-page scss*/
 .home-page {
   min-height: 100vh;
   position: relative;
-  background: no-repeat center linear-gradient(rgba(0, 0, 0, 0), #000), url(../Images/istockphoto-1465597988-1024x1024.jpg);
+  background: no-repeat center linear-gradient(rgba(0, 0, 0, 0.6), #000000), url(../Images/1672053154170.jpg);
 }
 
 .navbar {
@@ -322,5 +323,94 @@ body {
     margin-top: 0.6em;
     padding: 8px 0;
     flex-direction: column;
+  }
+}
+.slideShow {
+  background-color: #fff;
+}
+
+.gallery {
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 20%;
+  position: relative;
+}
+.gallery .gallery-header h2 {
+  text-align: center;
+  padding: 2rem 0;
+}
+.gallery .slideshow-container .slide {
+  display: none;
+  position: relative;
+  text-align: center;
+}
+.gallery .slideshow-container .slide img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}
+.gallery .slideshow-container .slide .number {
+  top: 0;
+  font-size: 15px;
+  color: #f4f4f4;
+  position: absolute;
+  padding: 8px 12px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.gallery .slideshow-container .first-child {
+  display: block;
+}
+.gallery .slideshow-container .prev, .gallery .slideshow-container .next {
+  color: #000;
+  top: 50%;
+  position: absolute;
+  cursor: pointer;
+  padding: 16px;
+  font: 18px 700;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.gallery .slideshow-container .prev:hover, .gallery .slideshow-container .next:hover {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.gallery .slideshow-container .next {
+  right: 0;
+}
+.gallery .slideshow-container .caption {
+  color: #f2f2f2;
+  bottom: 2rem;
+  position: absolute;
+  width: 100%;
+}
+.gallery .slideshow-container .dots {
+  display: inline-block;
+  position: absolute;
+}
+.gallery .slideshow-container .dots .dot {
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  margin: 5px 2px;
+  display: inline-block;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #bbb;
+}
+.gallery .slideshow-container .active, .gallery .slideshow-container .dot:hover {
+  background-color: #717171;
+}
+.gallery .slideshow-container .fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@keyframes fade {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
   }
 }
