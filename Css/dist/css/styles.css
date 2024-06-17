@@ -339,9 +339,11 @@ body {
   text-align: center;
   padding: 2rem 0;
 }
+.gallery .slideshow-container {
+  position: relative;
+}
 .gallery .slideshow-container .slide {
   display: none;
-  position: relative;
   text-align: center;
 }
 .gallery .slideshow-container .slide img {
@@ -363,7 +365,7 @@ body {
 }
 .gallery .slideshow-container .prev, .gallery .slideshow-container .next {
   color: #000;
-  top: 50%;
+  top: 45%;
   position: absolute;
   cursor: pointer;
   padding: 16px;
