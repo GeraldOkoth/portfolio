@@ -14,9 +14,9 @@
     }
 
     .slideshow-container {
+        position: relative;
         .slide {
             display: none;
-            position: relative;
             text-align: center;
 
             img {
@@ -39,9 +39,9 @@
         .first-child {
             display: block;
         }
-        .prev, .next {
+        .prev {
             color: $bodyTxtColor;
-            top: 50%;
+            top: 45%;
             position: absolute;
             cursor: pointer;
             // width: auto;
@@ -58,6 +58,7 @@
         }
         .next {
             right: 0;
+            @extend .prev
         }
         
         .caption {
