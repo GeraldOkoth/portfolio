@@ -416,3 +416,9 @@ body {
     opacity: 1;
   }
 }
+
+.Services {
+  width: 100%;
+  padding: 2em 0;
+  background-color: #efefef;
+}
