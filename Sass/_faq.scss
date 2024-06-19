@@ -1,0 +1,49 @@
+.faq {
+    padding: 3rem 6rem;
+    background-color: rgb(220, 220, 220);
+
+    .head {
+        margin-bottom: 1.5rem;
+        text-align: center;
+        font-size: 2rem;
+    }
+    
+    .accordion {
+        background-color: #eee;
+        cursor: pointer;
+        padding: 18px;
+        text-align: left;
+        border: none;
+        width: 100%;
+        font-size: 15px;
+    	transition: 0.4s;
+        border-bottom: 1px solid #dadada;
+
+        &:after {
+            content: '\002B';
+            color: #777;
+            font-weight: weight(bold);
+            float: right;   
+        }
+        
+        &.active:after {
+            content: "\2212";   
+        }
+
+        .active, .accordion:hover {
+            background-color: #ccc;
+        }
+    }   
+    
+    .panel {
+        max-height: 0;
+        padding: 0 2.5rem;
+        overflow: hidden;
+	    background-color: $bodyBgColor;
+    	transition: max-height 0.2s ease-out;
+    }               
+}
+
+@media screen and (max-width: 660px) {
+    @include faqTablet; 
+}
