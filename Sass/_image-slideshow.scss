@@ -5,7 +5,7 @@
 .gallery {
     width: 90%;
     margin: 0 auto;
-    padding: 0 20%;
+    padding: 0 20% 5rem;
     position: relative;
 
     .gallery-header h2{
@@ -14,7 +14,7 @@
     }
 
     .slideshow-container {
-        position: relative;
+        position: inherit;
         .slide {
             display: none;
             text-align: center;
@@ -63,21 +63,19 @@
         
         .caption {
             color: #f2f2f2;
-            bottom: 2rem;
+            bottom: 3rem;
             position: absolute;
             width: 100%;
         }
         .dots {
-            display: inline-block;
-            position: absolute;
+                text-align: center;
 
             .dot {
                 cursor: pointer;
                 width: 15px;
                 height: 15px;
-                margin: 5px 2px;
                 display: inline-block;
-                position: absolute;
+                margin: 5px 2px;
                 border-radius: 50%;
                 background-color: #bbb;
             }
@@ -104,8 +102,6 @@
     }
 }
 
-.Services {
-	width: 100%;
-	padding: 2em 0;
-	background-color: #efefef;
+@media screen and (max-width: $mobile) {
+    @include slideShowSmallScreen;
 }
