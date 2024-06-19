@@ -1,0 +1,85 @@
+.contact {
+    padding: 2rem 0;
+}
+
+.contact-header {
+    text-align: center;
+
+    p {
+        padding: 1rem 0;
+    }
+}
+
+.contact-section {
+    display: flex;
+    width: 90%;
+    padding: 3rem 2rem;
+	margin: 0 auto;
+    justify-content: space-between;
+
+    .contact-address {
+        flex-basis: 44%;
+        line-height: 40px;
+
+        iframe {
+            width: 100%;
+            margin-top: 3rem;
+            box-shadow: 0 5px 10px 3px #ddd;
+        }
+    }
+
+    .contact-form {
+        flex-basis: 50%;
+
+        input {
+            margin-bottom: 1rem;
+            width: 100%;
+            border: none;
+            outline: none;
+            transition: .5s;
+            padding: 8px 14px;
+            border-bottom: 1px solid rgb(14, 13, 13);
+
+            &:focus {
+                border-radius: 5px;
+                background-color: #fff;
+                border: 2px solid rgb(0, 0, 0);
+            }
+        }
+
+        textarea {
+            width: 100%;
+            border: 1px solid black;
+            resize: none;
+            margin-top: 2rem;
+            outline: none;
+            padding: 12px 14px;
+            border-radius: 5px;
+        }
+
+        button[type="button"] {
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            padding: 8px 20px;
+            transition: all .3s;
+            border-radius: 7px;
+            background-color: #042ff0;
+            box-shadow: 2px 3px 4px rgba(0,0,0,0.5);
+            background-color: rgb(12, 206, 131);    
+
+            .fa-paper-plane {
+                margin: 10px;
+            }
+
+            &:hover {
+                opacity: .7;
+                background-color: #042ff0   ;
+            }
+        }
+    }   
+}
+
+@media screen and (max-width: 660px) {
+    @include contactTablet;
+}

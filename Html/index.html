@@ -357,6 +357,7 @@
 	<section class="contact" id="contact">
 		<header class="contact-header">
 			<h3>Contact Me</h3>
+			<p>Get in touch</p>
 			<p>I would love to respond to your queries. It is always my pleasure serving you. Let's get in touch. <span> :&#41</span>!</p>
 		</header>
 		<script src="https://kit.fontawesome.com/23021fc8d3.js" crossorigin="anonymous"></script>
@@ -384,7 +385,6 @@
 				</div>
 			</div>
 			<div class="contact-form">
-				<p>Get in touch</p>
 				<form onsubmit="sendEmail()" method="post" action="" reset() return false>
 					<div class="form-row">
 						<div class="form-name">
@@ -401,15 +401,14 @@
 							<input type="text" name="subject" id="subject" placeholder="subject">
 						</div>
 						<textarea name="message" id="message" rows="10"></textarea>
-						<button type="submit" onsubmit="sendMail()">submit<i class="fa-solid fa-paper-plane"></i></button>
+						<button type="button" onsubmit="sendMail()">submit<i class="fa-solid fa-paper-plane"></i></button>
 					</div>
 				</form>
-				<span id="mesg">message has been sent. We will respond to you shortly.</span>
 			</div>
 		</div>
 	</section>
-<!---FOOTER SECTION-->
-	<!-- <section class="my-footer">
+
+	<section class="my-footer">
 		<div class="footer-links">
 			<div class="social-media-links">
 				<h3>Social media links</h3>
@@ -440,7 +439,7 @@
 				document.getElementById('footerYear').innerHTML = "&copy;" + date.getFullYear() + " All rights reserved. Powered by clean master.";
 			</script></p>
 		</div>
-	</section> -->
+	</section>
 	
 </body>
 </html>
