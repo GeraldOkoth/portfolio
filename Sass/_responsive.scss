@@ -158,3 +158,13 @@
 		flex-direction: column;
 	}
 }
+
+@mixin faqTablet() {
+	.faq {
+		padding: 1.5rem 2rem;
+		
+		.head {
+			font-size: 1.3rem;
+		}
+	}
+}

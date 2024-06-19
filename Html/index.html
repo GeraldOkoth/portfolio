@@ -289,86 +289,83 @@
 		</div>
 	</section>
 
-<!-- FAQ -->
-<!-- <section class="faq">
-	<div class="head">
-		More
-	</div>
-	<div class="panels">
-		<button class="accordion">What are my core values</button>
-		<div class="panel">
-			<p>
-				<ol>
-					<li>Integrity: Being honest and having strong moral principles.</li>
-					<li>Respect: Valuing others, showing consideration and appreciation</li>
-					<li>Compassion: Showing empathy, kindness, and concern for others.</li>
-					<li>Fairness: Striving for justice and equality, ensuring impartiality.</li>
-					<li>Loyalty: Being faithful and committed to others, whether in personal relationships or organizational contexts.</li>
-					<li>Humility: Maintaining a modest view of one's own importance, being open to learning and growth.</li>
-					<li>Gratitude: Recognizing and appreciating the good in one's life and the contributions of others.</li>
-					<li>Authenticity: Being true to oneself, expressing one's genuine thoughts and feelings.
-					</li>
-					<li>Trustworthiness: Being reliable and deserving of others' trust.
-					</li>
-					<li>Adventure: Valuing experiences, exploration, and trying new things.
-					</li>
-					<li>Spirituality: Emphasizing the importance of spiritual beliefs and practices.
-					</li>
-				</ol>
-			</p>
+	<section class="faq">
+		<header class="head">FAQ</header>
+		<div class="panels">
+			<button class="accordion">What are my core values</button>
+			<div class="panel">
+				<p>
+					<ol>
+						<li>Integrity: Being honest and having strong moral principles.</li>
+						<li>Respect: Valuing others, showing consideration and appreciation</li>
+						<li>Compassion: Showing empathy, kindness, and concern for others.</li>
+						<li>Fairness: Striving for justice and equality, ensuring impartiality.</li>
+						<li>Loyalty: Being faithful and committed to others, whether in personal relationships or organizational contexts.</li>
+						<li>Humility: Maintaining a modest view of one's own importance, being open to learning and growth.</li>
+						<li>Gratitude: Recognizing and appreciating the good in one's life and the contributions of others.</li>
+						<li>Authenticity: Being true to oneself, expressing one's genuine thoughts and feelings.
+						</li>
+						<li>Trustworthiness: Being reliable and deserving of others' trust.
+						</li>
+						<li>Adventure: Valuing experiences, exploration, and trying new things.
+						</li>
+						<li>Spirituality: Emphasizing the importance of spiritual beliefs and practices.
+						</li>
+					</ol>
+				</p>
+			</div>
+			<button class="accordion">What are my passion and interest</button>
+			<div class="panel">
+				<p>I love music and develops strong passion for it each day, it heals me.</p>
+			</div>
+			<button class="accordion">What is my career</button>
+			<div class="panel">
+				<p>software developer</p>
+			</div>
+			<button class="accordion">What qualities do i value in a friend or a patner</button>
+			<div class="panel">
+				<p>
+					<ol>
+						<li>Trustworthiness</li>
+						<li>Integrity</li>
+						<li>Discipline</li>
+						<li>Loyalty</li>
+						<li>Humility</li>
+					</ol>
+				</p>
+			</div>		
 		</div>
-		<button class="accordion">What are my passion and interest</button>
-		<div class="panel">
-			<p>I love music and develops strong passion for it each day, it heals me.</p>
-		</div>
-		<button class="accordion">What is my career</button>
-		<div class="panel">
-			<p>software developer</p>
-		</div>
-		<button class="accordion">What qualities do i value in a friend or a patner</button>
-		<div class="panel">
-			<p>
-				<ol>
-					<li>Trustworthiness</li>
-					<li>Integrity</li>
-					<li>Discipline</li>
-					<li>Loyalty</li>
-					<li>Humility</li>
-				</ol>
-			</p>
-		</div>		
-	</div>
-	<script>
-		var acc = document.getElementsByClassName("accordion");
-		var i;
+		<script>
+			var acc = document.getElementsByClassName("accordion");
+			var i;
 
-		for (i = 0; i < acc.length; i++) {
-		acc[i].addEventListener("click", function() {
-			this.classList.toggle("active");
-			var panel = this.nextElementSibling;
-			if (panel.style.maxHeight) {
-			panel.style.maxHeight = null;
-			} else {
-			panel.style.maxHeight = panel.scrollHeight + "px";
+			for (i = 0; i < acc.length; i++) {
+			acc[i].addEventListener("click", function() {
+				this.classList.toggle("active");
+				var panel = this.nextElementSibling;
+				if (panel.style.maxHeight) {
+				panel.style.maxHeight = null;
+				} else {
+				panel.style.maxHeight = panel.scrollHeight + "px";
+				}
+			});
 			}
-		});
-		}
-	</script> -->
+		</script>
 
-</section>
-<!--CONTACT SECTION-->
-	<!-- <section class="contact" id="contact">
-		<div class="contact-header">
+	</section>	
+
+	<section class="contact" id="contact">
+		<header class="contact-header">
 			<h3>Contact Me</h3>
 			<p>I would love to respond to your queries. It is always my pleasure serving you. Let's get in touch. <span> :&#41</span>!</p>
-		</div> -->
+		</header>
 		<script src="https://kit.fontawesome.com/23021fc8d3.js" crossorigin="anonymous"></script>
 		<!--<script type="text/javascript" src="google-sheet_contact.js"></script>-->
 		<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 		<!--<script src="sendEmail.js"></script>-->
 		<script src="https://smtpjs.com/v3/smtp.js"></Script> <!--Script to send email-->
 		<script src="../Js/elasticEmail.js"></script>
-		<!-- <div class="contact-section">
+		<div class="contact-section">
 			<div class="contact-address">
 				<div class="location">
 					<i class="fa-solid fa-location-dot"></i>
@@ -410,7 +407,7 @@
 				<span id="mesg">message has been sent. We will respond to you shortly.</span>
 			</div>
 		</div>
-	</section> -->
+	</section>
 <!---FOOTER SECTION-->
 	<!-- <section class="my-footer">
 		<div class="footer-links">
