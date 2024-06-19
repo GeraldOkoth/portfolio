@@ -168,3 +168,13 @@
 		}
 	}
 }
+
+@mixin contactTablet() {
+	.contact-section {
+        display: flex;
+        flex-direction: column;
+    }
+    button[type="submit"] {
+        width: 100%;
+    }	
+}
