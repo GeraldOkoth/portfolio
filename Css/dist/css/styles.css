@@ -332,7 +332,7 @@ body {
 .gallery {
   width: 90%;
   margin: 0 auto;
-  padding: 0 20%;
+  padding: 0 20% 5rem;
   position: relative;
 }
 .gallery .gallery-header h2 {
@@ -340,7 +340,7 @@ body {
   padding: 2rem 0;
 }
 .gallery .slideshow-container {
-  position: relative;
+  position: inherit;
 }
 .gallery .slideshow-container .slide {
   display: none;
@@ -383,21 +383,19 @@ body {
 }
 .gallery .slideshow-container .caption {
   color: #f2f2f2;
-  bottom: 2rem;
+  bottom: 3rem;
   position: absolute;
   width: 100%;
 }
 .gallery .slideshow-container .dots {
-  display: inline-block;
-  position: absolute;
+  text-align: center;
 }
 .gallery .slideshow-container .dots .dot {
   cursor: pointer;
   width: 15px;
   height: 15px;
-  margin: 5px 2px;
   display: inline-block;
-  position: absolute;
+  margin: 5px 2px;
   border-radius: 50%;
   background-color: #bbb;
 }
@@ -417,8 +415,294 @@ body {
   }
 }
 
-.Services {
-  width: 100%;
+@media screen and (max-width: 400px) {
+  .slideShow {
+    padding: 1rem 0 1rem;
+  }
+  .slideShow .prev, .slideShow .gallery .slideshow-container .next, .gallery .slideshow-container .slideShow .next, .slideShow .next, .slideShow .caption, .slideShow .number {
+    font-size: 10px;
+  }
+  .slideShow .slide img {
+    height: 200px;
+  }
+  .slideShow .dot {
+    width: 10px;
+    height: 10px;
+  }
+}
+.services {
   padding: 2em 0;
   background-color: #efefef;
+}
+
+.services-container {
+  width: 86%;
+  margin: 0 auto;
+  text-align: center;
+}
+.services-container .services-header, .services-container .services-header p, .services-container .services-header h3 {
+  margin-bottom: 0.7em;
+}
+.services-container .services-header h3 {
+  padding: 6px 18px;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.services-cta {
+  display: flex;
+  padding-bottom: 2rem;
+  justify-content: space-around;
+}
+.services-cta .cheap, .services-cta .quality, .services-cta .online-booking {
+  flex-basis: 30%;
+}
+.services-cta img {
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 400px) {
+  .services-cta {
+    display: flex;
+    flex-basis: 100%;
+    flex-direction: column;
+  }
+  .services-header p, .services-container .services-header h3 p, .services-container .services-header p p, h2, h3 {
+    font-size: 0.8em;
+    line-height: 1.5em;
+    padding-bottom: 1em;
+  }
+}
+@media screen and (min-width: 400px) and (max-width: 996px) {
+  .services-cta {
+    display: flex;
+    flex-basis: 50%;
+    flex-direction: column;
+  }
+}
+.My-services {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.My-services .image {
+  width: 100%;
+  color: #fff;
+  flex-basis: 18%;
+  position: relative;
+}
+.My-services .image img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 7px;
+}
+.My-services .image .overlay {
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  position: absolute;
+  border-radius: 7px;
+  transition: height 0.9s;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), #0a0dc8);
+}
+.My-services .image .service-description {
+  opacity: 0;
+  transition: 1s;
+  position: absolute;
+  bottom: -10vh;
+  left: 50%;
+  width: 90%;
+  text-align: center;
+  transform: translate(-50%);
+}
+.My-services .image .service-description p {
+  font-size: 0.9rem;
+}
+.My-services .image .service-description hr {
+  width: 90%;
+  height: 2px;
+  border: none;
+  margin: 5px auto;
+  background-color: #fff;
+}
+.My-services .image:hover .overlay {
+  opacity: 1;
+}
+.My-services .image:hover .service-description {
+  opacity: 1;
+  bottom: 15%;
+}
+
+@media screen and (max-width: 660px) {
+  .My-services {
+    display: flex;
+    flex-basis: 100%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .My-services .image {
+    margin: 1.4em;
+  }
+  .services-cta {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 400px) and (max-width: 996px) {
+  .My-services {
+    gap: 2%;
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+}
+.Testimonials {
+  padding: 2rem;
+}
+
+.testimonials-header {
+  text-align: center;
+  padding: 2rem;
+}
+
+.testimonies {
+  width: 86%;
+  margin: 0 auto;
+  padding-bottom: 5rem;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+}
+.testimonies .test {
+  padding: 15px;
+  transition: 0.5s;
+  flex-basis: 32%;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px 3px #ddd;
+}
+.testimonies .test .user {
+  display: flex;
+  margin: 12px auto;
+}
+.testimonies .test .user img {
+  width: 40px;
+  height: 40px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.testimonies .test .user.fa-brands, .testimonies .test .user small {
+  color: #27c0ff;
+}
+.testimonies .test:hover {
+  transform: translateY(6px);
+}
+
+#more-testimonals {
+  text-align: center;
+  transition: all 2s; /*Not working */
+}
+#more-testimonals a {
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 12px;
+  background: linear-gradient(rgb(37, 37, 238), rgb(0, 0, 0));
+}
+#more-testimonals a:hover {
+  background: linear-gradient(rgb(14, 14, 14), rgb(39, 225, 101));
+  transform: scaleX(1.1); /*Not working */
+}
+#more-testimonals #demo {
+  visibility: hidden;
+  margin-top: 2rem;
+  padding: 10px;
+  display: inline-block;
+  background-color: #f2f2f2;
+}
+
+.About {
+  padding: 2rem;
+  background-color: #f1f1f1;
+}
+
+.About-header {
+  text-align: center;
+}
+.About-header h2 {
+  color: #fff;
+  padding: 0.3rem 1rem;
+  display: inline-block;
+  margin: 1rem 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.About-header p {
+  font-family: Cinzel, serif;
+}
+
+.about-info {
+  width: 90%;
+  display: flex;
+  margin: 2rem auto;
+  justify-content: space-between;
+}
+.about-info .about-img {
+  flex-basis: 46%;
+}
+.about-info .about-img img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 0 3%;
+     object-position: 0 3%;
+  border-radius: 5px;
+}
+.about-info .aboutme {
+  flex-basis: 48%;
+  text-align: center;
+}
+.about-info .aboutme hr {
+  margin: 2rem 0;
+}
+.about-info .aboutme span {
+  color: #062af8;
+  font-family: Rubik;
+}
+.about-info .aboutme .social-links i {
+  padding: 0.2rem;
+  transition: 0.3s;
+}
+.about-info .aboutme .social-links i:hover {
+  color: rgb(20, 20, 20);
+  transform: translateY(-5px);
+}
+
+@media screen and (max-width: 400px) {
+  .about-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .about-info .about-img {
+    flex-basis: 100%;
+    padding-bottom: 20px;
+  }
+}
+@media screen and (min-width: 400px) and (max-width: 996px) {
+  .about-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .about-info .about-img {
+    flex-basis: 100%;
+    padding-bottom: 20px;
+  }
 }
