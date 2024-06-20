@@ -23,6 +23,7 @@
 
         iframe {
             width: 100%;
+            border: none;
             margin-top: 3rem;
             box-shadow: 0 5px 10px 3px #ddd;
         }
@@ -61,7 +62,7 @@
             border: none;
             color: #fff;
             cursor: pointer;
-            padding: 8px 20px;
+            padding: 12px 20px;
             transition: all .3s;
             border-radius: 7px;
             background-color: #042ff0;

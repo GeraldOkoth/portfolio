@@ -8,63 +8,99 @@
 	<meta name="keywords" content="Gerald, Okoth, gerorganist">
 	<meta name="description" content="My personal webpage">
 	<link rel="shortcut icon" href="../Images/IMG_20220417_104146_015.jpg" type="image/x-icon">
-	<!-- <link rel="stylesheet" type="text/css" href="../Css/home.css"> -->
 	<link rel="stylesheet" type="text/css" href="../Css/dist/css/styles.css">
 	<meta name="author" content="Gerald Okoth">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="../Js/script.js"></script>
-	<!-- <script type="text/javascript">
+	<script type="text/javascript">
 		(function(){
 			emailjs.init({
 				publicKey: "U6FuyV7yh6s35Ewii",
 			});
 		})();
-	</script> -->
+	</script>
 </head>
 <body>
 	<section class="home-page">
 		<div class="navbar">
 			<div class="logo">
-				<a href="index.html">Ge<span>ro</span></a>
+				<a href="index.html"><span id="G">G</span><span id="e">e</span><span id="r">r</span><span id="o">o</span></a>
 			</div>
 			<nav class="menu">
-				<ul id="menuLinks">
-					<li><a href="index.html" target="_self" title="Home"><i class="fa-solid fa-house"></i></i>Home</a></li>
-					<li><a href="#services" target="_self" title="services"><i class="fa-brands fa-shopify"></i></i>Services</a></li>
-					<li><a href="#testimonials" target="_self" title="Testimonials"><i class="fa-solid fa-bookmark"></i></i>Testimonials</a></li>
-					<li><a href="#about" target="_self" title="See about"><i class="fa-solid fa-user"></i></i>About</a></li>
+				<ul>
+					<li><a href="index.html" target="_self" title="Home"><i class="fa-solid fa-house"></i>Home</a></li>
+					<li><a href="#services" target="_self" title="services"><i class="fa-brands fa-shopify"></i>Services</a></li>
+					<li><a href="#testimonials" target="_self" title="Testimonials"><i class="fa-solid fa-bookmark"></i>Testimonials</a></li>
+					<li><a href="#about" target="_self" title="About me"><i class="fa-solid fa-user"></i>About</a></li>
 					<li><a href="#contact" target="_self" title="Contact me"><i class="fa-solid fa-phone"></i>Contact</a></li>
 				</ul>
 				<div class="hambuger-btn">
-					<span class="hamburger" id="hamburgerOpen" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></span>
-					<span class="hamburger" id="hamburgerClose" onclick="toggleMenu()"><i class="fa-solid fa-xmark"></i></span>
-					<!-- <div id="hamburgerOpen" onclick="toggleMenu()">☰</div> -->
-    				<!-- <div id="hamburgerClose" onclick="toggleMenu()" style="visibility: hidden;">✖</div> -->
-					<!-- <span class="hamburger" id="hamburgerOpen" onclick="toggleMenu()">☰</span> -->
-				<script src="../Js/toggle-menu.js"></script>
+					<!-- <span class="hamburger" id="hamburgerOpen" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></span>
+					<span class="hamburger" id="hamburgerClose" onclick="toggleMenu()"><i class="fa-solid fa-xmark"></i></span> -->
+					<span id="hamburgerOpen" onclick="toggleMenu()">☰</span>
+    				<span id="hamburgerClose" onclick="toggleMenu()">✖</span>
+					<script src="../Js/toggle-menu.js"></script>
 				</div>
 			</nav>
 		</div>
 
 		<div class="hero">
 			<div class="hero-image">
-				<img src="../Images/IMG_7962 (1).JPG" alt="my profile pic" width="220px" height="220px">
+				<img src="../Images/IMG_7962 (1).JPG" alt="my profile pic" width="300px" height="300px">
 			</div>
 			<div class="hero-info">
 				<div class="hero-text">
 					<h1>Start something that matters</h1>
-					<p>Hi there, i am Gerald Okoth, a tech enthusiast, a front-end web developer with passion for creating intuitive and visually appealing user interfaces.</p>
-					<p>I am looking forward to collaboration with other tech-enthusiasts on GitHub code spaces.</p>
-					<span>cheers&#129346</span>
+					<p><span id="orange"> Hi there</span>,<br>i am <span id="blue">Gerald Okoth</span>,<br> a <span id="pink">tech enthusiast, a front-end web developer</span> with passion for creating <span class="orange-1">intuitive</span> and <span class="orange-1">visually</span> appealing user interfaces.
+					I am looking forward to collaboration with other tech-enthusiasts on <span class="orange-1">GitHub</span> code spaces.</p>
+					<span id="cheers">cheers&#129346</span>
 				</div>
-				<div class="hero-btn">
+				<div class="hero-btns">
 					<a href="#about"><span></span>About Me</a>
-					<a href="#follow-me-links"><span></span>Follow Me</a>
+					<a href="/Assets/gerald_okoth_myjobmag_curriculum_vitae.pdf" download="false" disabled="true"><span></span>Download CV</a>
 				</div>
+				<div class="wrapper">
+					<div class="button">
+						<div class="icon">
+						   <a href="https://www.linkedin.com/in/geraldokoth/"><i class="fab fa-linkedin"></i></a>
+						</div>
+						<span>Linkedin</span>
+					 </div>
+					<div class="button">
+					   <div class="icon">
+							<a href="https://www.facebook.com/gerald.okoth.14"><i class="fab fa-facebook-f"></i></a>
+					   </div>
+					   <span>Facebook</span>
+					</div>
+					<div class="button">
+					   <div class="icon">
+						  <a href="https://x.com/gerald_okothKE"><i class="fab fa-twitter"></i></a>
+					   </div>
+					   <span>Twitter</span>
+					</div>
+					<div class="button">
+					   <div class="icon">
+						  <a href="https://www.instagram.com/okothgerald449"><i class="fab fa-instagram"></i></a>
+					   </div>
+					   <span>Instagram</span>
+					</div>
+					<div class="button">
+					   <div class="icon">
+						  <a href="https://github.com/GeraldOkoth"><i class="fab fa-github"></i></a>
+					   </div>
+					   <span>Github</span>
+					</div>
+					<div class="button">
+					   <div class="icon">
+						  <a href="https://www.youtube.com/@geraldokothKE"><i class="fab fa-youtube"></i></a>
+					   </div>
+					   <span>YouTube</span>
+					</div>
+				 </div>
 			</div>
 		</div>
-		<div class="bubble">
+		<!-- <div class="bubble">
 			<img src="../Images/bubble.png" alt="bubble">
 			<img src="../Images/bubble.png" alt="bubble">
 			<img src="../Images/bubble.png" alt="bubble">
@@ -74,7 +110,7 @@
 			<img src="../Images/bubble.png" alt="bubble">
 			<img src="../Images/bubble.png" alt="bubble">
 			<img src="../Images/bubble.png" alt="bubble">
-		</div>
+		</div> -->
 	</section>
 
 	<section class="slideShow">
@@ -370,7 +406,7 @@
 			<div class="contact-address">
 				<div class="location">
 					<i class="fa-solid fa-location-dot"></i>
-					<span>Nairobi, Kenya</span>
+					<span>Machakos, Kenya</span>
 				</div>
 				<div class="phone">
 					<i class="fa-solid fa-phone"></i>
