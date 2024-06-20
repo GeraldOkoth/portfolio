@@ -1,6 +1,7 @@
 // variable declaration
 $primaryColor: #0000ff;
 $secondaryColor: #00ff00;
+$orange: orange;
 $bodyTxtColor: #000;
 $bodyBgColor: #fff;
 $fontStack: 'Poppins', sans-serif;
@@ -11,6 +12,6 @@ $fontWeights: (
     "medium": 500,
     "bold": 700
 );
-$linearGradient: linear-gradient(rgba(0,0,0,0.6), #000000 );
-$widthHoverEffect: 100%;
+$linearGradient: linear-gradient(rgba(0,0,0,0.8), #000000);
 $mobile: 400px;
+$tablet: 660px;

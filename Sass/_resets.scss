@@ -2,6 +2,7 @@
 * {
     padding: 0;
     margin: 0;
+    list-style-type: none;
     box-sizing: border-box;
     font-family: 'Cinzel', serif;
 	font-family: 'Merriweather', serif;
@@ -16,7 +17,6 @@ html {
 body {
     color: $bodyTxtColor;
     background-color: $bodyBgColor;
-    position: relative;
     font: {
         size: $fontSize;
         family: $bodyFontFamily;

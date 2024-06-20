@@ -178,3 +178,10 @@
         width: 100%;
     }	
 }
+
+@mixin footerTablet() {
+	.footer-links {
+		display: flex;
+		flex-direction: column;
+	}
+}

@@ -1,5 +1,15 @@
-@mixin display($justifyContent: space-around) {
+@mixin flexbox($position, $alignItems, $justifyContent) {
     display: flex;
-    position: absolute;
+    position: $position;
+    align-items: $alignItems;
     justify-content: $justifyContent;
+}
+
+@mixin positioning($top, $bottom, $left, $right, $position) {
+    width: 0%;
+    top: $top;
+    bottom: $bottom;
+    left: 0%;
+    right: $right;
+    position: absolute;
 }
