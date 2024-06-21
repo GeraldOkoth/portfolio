@@ -12,14 +12,6 @@
 	<meta name="author" content="Gerald Okoth">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src="../Js/script.js"></script>
-	<script type="text/javascript">
-		(function(){
-			emailjs.init({
-				publicKey: "U6FuyV7yh6s35Ewii",
-			});
-		})();
-	</script>
 </head>
 <body>
 	<section class="home-page">
@@ -30,9 +22,9 @@
 			<nav class="menu">
 				<ul>
 					<li><a href="index.html" target="_self" title="Home"><i class="fa-solid fa-house"></i>Home</a></li>
+					<li><a href="#about" target="_self" title="About me"><i class="fa-solid fa-user"></i>About</a></li>
 					<li><a href="#services" target="_self" title="services"><i class="fa-brands fa-shopify"></i>Services</a></li>
 					<li><a href="#testimonials" target="_self" title="Testimonials"><i class="fa-solid fa-bookmark"></i>Testimonials</a></li>
-					<li><a href="#about" target="_self" title="About me"><i class="fa-solid fa-user"></i>About</a></li>
 					<li><a href="#contact" target="_self" title="Contact me"><i class="fa-solid fa-phone"></i>Contact</a></li>
 				</ul>
 				<div class="hambuger-btn">
@@ -40,7 +32,6 @@
 					<span class="hamburger" id="hamburgerClose" onclick="toggleMenu()"><i class="fa-solid fa-xmark"></i></span> -->
 					<span id="hamburgerOpen" onclick="toggleMenu()">☰</span>
     				<span id="hamburgerClose" onclick="toggleMenu()">✖</span>
-					<script src="../Js/toggle-menu.js"></script>
 				</div>
 			</nav>
 		</div>
@@ -58,7 +49,7 @@
 				</div>
 				<div class="hero-btns">
 					<a href="#about"><span></span>About Me</a>
-					<a href="/Assets/gerald_okoth_myjobmag_curriculum_vitae.pdf" download="false" disabled="true"><span></span>Download CV</a>
+					<a href="/Assets/gerald_okoth_myjobmag_curriculum_vitae.pdf" onclick="disableDownload()"><span></span>Download CV</a>
 				</div>
 				<div class="wrapper">
 					<div class="button">
@@ -113,11 +104,44 @@
 		</div> -->
 	</section>
 
+	<section class="About" id="about">
+		<header class="About-header">
+			<h2>About</h2>
+			<p>Ask me my friends and you will know who i am</p>
+		</header>
+		<div class="about-info">
+			<div class="about-img">
+				<img src="../Images/IMG_1481_transcprr.jpg" alt="my pic" width="200px" height="350px">
+			</div>
+			<div class="aboutme">
+				<div class="about-me">
+					<p>I am Gerald Okoth, <br>a computer science student, software engineer enthusiast and a web developer. I love programming and coding and i spend a big deal of my day writing codes.
+					I am currently working on front-end with a dream to pursue back-end engineering and ultimately to being a full-stack engineer.<br>
+					Through the invaluable skills <br>that i acquire daily, i have been able to design and builda front-end responsive website for myself this has promoted my confidence.<br>
+					I look forward to a greater future of coding. <span><b>Aluta continua!</b></span>
+				</div>
+				<hr>
+				<div class="social-links" id="follow-me-links">
+					<a href="https://www.linkedin.com/in/geraldokoth/"><i class="fa-brands fa-linkedin"></i></a>
+					<a href="https://github.com/GeraldOkoth"><i class="fa-brands fa-github"></i></a>
+					<a href="https://www.youtube.com/@geraldokothKE"><i class="fa-brands fa-youtube"></i></a>
+					<a href="https://x.com/gerald_okothKE"><i class="fa-brands fa-twitter"></i></a>
+					<a href="https://www.instagram.com/okothgerald449"><i class="fa-brands fa-instagram"></i></a>
+					<a href="https://www.facebook.com/gerald.okoth.14/"><i class="fa-brands fa-facebook"></i></a>
+				</div>
+			</div>
+		</div>
+	</section>
+
 	<section class="slideShow">
 		<div class="gallery">
 			<header class="gallery-header">
-				<h2 class="gal">Gallery</h2>
+				<h3 class="pictorials">Pictorials</h3>
+				<span>
+					<hr><hr><hr>
+				</span>
 			</header>
+			<hr id="image-gal-hr">
 			<div class="slideshow-container">
 				<div class="slide fade first-child">
 					<div class="number">1 / 6</div>
@@ -251,8 +275,11 @@
 
 	<section class="Testimonials" id="testimonials">
 		<header class="testimonials-header">
-			<h3>What they say about me</h3>
-			<p>These testimonials show how other people view my services and skills.</p>
+			<h2>What they say about me</h2>
+			<!-- <p>These testimonials show how other people view my services and skills.</p> -->
+			<span>
+				<hr><hr><hr>
+			</span>
 		</header>
 		<div class="testimonies">
 		<script src="script.js"></script>
@@ -287,46 +314,20 @@
 				<p>I'm glad I decided to work with you. It's really great how easy your websites are to update and manage. I never have any problem at all. My new site is so much faster and easier to work with than my old site.</p>
 			</div>
 		</div>
-		<div id="more-testimonals">
+		<!-- <div id="more-testimonals">
 			<p onmouseout="hideText()" onmouseover="displayText()"><a href="hobby.html">More testimonials</a></p>
 			<p id="demo"></p>
-		</div>
-	</section>
-
-	<section class="About" id="about">
-		<header class="About-header">
-			<h2>About</h2>
-			<p>Ask me my friends and you will know who i am</p>
-		</header>
-		<div class="about-info">
-			<div class="about-img">
-				<img src="../Images/IMG_1481_transcprr.jpg" alt="my pic" width="200px" height="350px">
-			</div>
-			<div class="aboutme">
-				<div class="about-me">
-					<p>I am Gerald Okoth, <br>a computer science student, software engineer enthusiast and a web developer. <br>I love programming and coding and i spend a big deal of my day writing codes.<br>
-					I am currently working on <br>front-end with a dream to pursue back-end engineering and ultimately to being a full-stack engineer.<br>
-					Through the invaluable skills <br>that i acquire daily, i have been able to design and builda front-end responsive website for myself this has promoted my confidence.<br>
-					I look forward to a greater future of coding. <span><b>Aluta continua!</b></span>
-				</div>
-				<hr>
-				<div class="social-links" id="follow-me-links">
-					<a href="https://www.linkedin.com/in/geraldokoth/"><i class="fa-brands fa-linkedin"></i></a>
-					<a href="https://github.com/GeraldOkoth"><i class="fa-brands fa-github"></i></a>
-					<a href="https://www.youtube.com/@geraldokothKE"><i class="fa-brands fa-youtube"></i></a>
-					<a href="https://x.com/gerald_okothKE"><i class="fa-brands fa-twitter"></i></a>
-					<a href="https://www.instagram.com/okothgerald449"><i class="fa-brands fa-instagram"></i></a>
-					<a href="https://www.facebook.com/gerald.okoth.14/"><i class="fa-brands fa-facebook"></i></a>
-				</div>
-			</div>
-			<!-- <div class="cvdownload">
-				<a href="gerald_okoth_myjobmag_curriculum_vitae.pdf" download>Download CV<i class="fa-solid fa-download"></i></a>
-			</div> -->
-		</div>
+		</div> -->
 	</section>
 
 	<section class="faq">
-		<header class="head">FAQ</header>
+		<header class="head">
+			<h2>FAQ</h2>
+			<span>
+				<hr><hr><hr>
+			</span>	
+		</header>
+		<hr id="faq-hr">
 		<div class="panels">
 			<button class="accordion">What are my core values</button>
 			<div class="panel">
@@ -371,29 +372,15 @@
 				</p>
 			</div>		
 		</div>
-		<script>
-			var acc = document.getElementsByClassName("accordion");
-			var i;
-
-			for (i = 0; i < acc.length; i++) {
-			acc[i].addEventListener("click", function() {
-				this.classList.toggle("active");
-				var panel = this.nextElementSibling;
-				if (panel.style.maxHeight) {
-				panel.style.maxHeight = null;
-				} else {
-				panel.style.maxHeight = panel.scrollHeight + "px";
-				}
-			});
-			}
-		</script>
 
 	</section>	
 
 	<section class="contact" id="contact">
 		<header class="contact-header">
-			<h3>Contact Me</h3>
-			<p>Get in touch</p>
+			<h2>Get in touch</h2>
+			<span>
+				<hr><hr><hr>
+			</span>
 			<p>I would love to respond to your queries. It is always my pleasure serving you. Let's get in touch. <span> :&#41</span>!</p>
 		</header>
 		<script src="https://kit.fontawesome.com/23021fc8d3.js" crossorigin="anonymous"></script>
@@ -422,7 +409,7 @@
 			</div>
 			<div class="contact-form">
 				<form onsubmit="sendEmail()" method="post" action="" reset() return false>
-					<div class="form-row">
+					<div class="form-row">	
 						<div class="form-name">
 							<input type="text" name="firstname" id="firstname" placeholder="Firstname">
 							<input type="text" name="lastname" id="lastname" placeholder="Lastname">
@@ -476,6 +463,32 @@
 			</script></p>
 		</div>
 	</section>
-	
+
+	<script type="text/javascript">
+		(function(){
+			emailjs.init({
+				publicKey: "U6FuyV7yh6s35Ewii",
+			});
+		})();
+	</script>
+	<script src="../Js/script.js"></script>
+	<script src="../Js/toggle-menu.js"></script>
+	<script>
+		var acc = document.getElementsByClassName("accordion");
+		var i;
+
+		for (i = 0; i < acc.length; i++) {
+		acc[i].addEventListener("click", function() {
+			this.classList.toggle("active");
+			var panel = this.nextElementSibling;
+			if (panel.style.maxHeight) {
+			panel.style.maxHeight = null;
+			} else {
+			panel.style.maxHeight = panel.scrollHeight + "px";
+			}
+		});
+		}
+	</script>
+
 </body>
 </html>

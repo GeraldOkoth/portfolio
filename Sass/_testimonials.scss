@@ -1,15 +1,18 @@
 .Testimonials {
-    padding: 2rem;
+    padding: 1rem 2rem;
 }
 .testimonials-header {
     text-align: center;
-	padding: 2rem;
+	padding: 1rem;
+    color: $primaryColor;
+
+    @include Hr(3rem);
 }
 
 .testimonies {
 	width: 86%;
 	margin: 0 auto;
-	padding-bottom: 5rem;
+	padding-bottom: 2rem;
 	display: flex;
 	position: relative;
 	justify-content: space-between;

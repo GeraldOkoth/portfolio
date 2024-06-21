@@ -29,6 +29,11 @@
 	padding-bottom: 2rem;
 	justify-content: space-around;
 
+    h3 {
+        padding-bottom: .7rem;
+        color: $orange;
+    }
+
     .cheap, .quality, .online-booking {
         flex-basis: 30%;
     }
@@ -80,7 +85,7 @@
             opacity: 0;
             transition: 1s;
             position: absolute;
-            bottom: -10vh;
+            bottom: -15vh;
             left: 50%;
             width: 90%;
             text-align: center;     
@@ -95,7 +100,7 @@
                 height: 2px;
                 border: none;
                 margin: 5px auto;
-                background-color: #fff;
+                background-color: $orange;
             }
         }
         &:hover {
@@ -104,7 +109,7 @@
             }
             .service-description {
                 opacity: 1;
-                bottom: 15%;
+                bottom: 25%;
             }
         }
     }

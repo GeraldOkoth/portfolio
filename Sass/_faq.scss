@@ -3,9 +3,17 @@
     background-color: rgb(220, 220, 220);
 
     .head {
-        margin-bottom: 1.5rem;
+        margin-bottom: 1rem;
         text-align: center;
-        font-size: 2rem;
+
+        @include Hr(2rem);
+    }
+
+    & #faq-hr {
+        border: none;
+        height: 0.35rem;
+        border-radius: 4px 4px 0 0;
+        background-color: $primaryColor;
     }
     
     .accordion {
