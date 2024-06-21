@@ -5,12 +5,22 @@
 .gallery {
     width: 90%;
     margin: 0 auto;
-    padding: 0 20% 5rem;
+    padding: 4rem 20% 5rem;
     position: relative;
 
-    .gallery-header h2{
+    & .gallery-header {
         text-align: center;
-        padding: 2rem 0;
+        margin-bottom: 2rem;
+
+        @include Hr(2rem);
+
+    }
+
+    #image-gal-hr {
+        border: none;
+        background-color: $orange;
+        height: .35rem;
+        border-radius: 4px 4px 0 0;
     }
 
     .slideshow-container {
@@ -41,7 +51,7 @@
         }
         .prev {
             color: $bodyTxtColor;
-            top: 45%;
+            top: 40%;
             position: absolute;
             cursor: pointer;
             // width: auto;
@@ -57,8 +67,9 @@
             }
         }
         .next {
+            @extend .prev;
             right: 0;
-            @extend .prev
+            border-radius: 3px 0 0 3px;
         }
         
         .caption {

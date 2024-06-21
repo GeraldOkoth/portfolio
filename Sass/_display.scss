@@ -13,3 +13,17 @@
     right: $right;
     position: absolute;
 }
+
+@mixin Hr($width) {
+    & hr {
+        display: inline-block;
+        width: $width;
+        height: .2rem;
+        border: none;
+        background-color: $primaryColor;
+
+        &:nth-child(2) {
+            background-color: #aeaeae;
+        }
+    }
+}

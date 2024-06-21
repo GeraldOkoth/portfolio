@@ -8,8 +8,12 @@
         display: flex;
         justify-content: space-around;
 
+        h3 {
+            padding-bottom: 1rem;
+        }
+
         li {
-            margin-bottom: 15px;
+            margin-bottom: .5rem;
             list-style-type: none;
         }
 
@@ -20,8 +24,7 @@
             text-decoration: none;
 
             &:hover {
-                color: $bodyBgColor;
-            	background-color: deepskyblue;
+                color: $bodyTxtColor;
             }
         }
 
@@ -31,14 +34,11 @@
     }
     
     .top a {
-        bottom: 25%;
+        @include button();
+        bottom: 35%;
         right: 6%;
         padding: 10px 14px;
-        font-size: .8rem;
-        position: absolute;
-        border-radius: 5px;
-        text-decoration: none;
-        background-color: #ffffff;
+            position: absolute;
     
         i {
             padding-right: 4px;
