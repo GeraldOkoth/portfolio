@@ -1,10 +1,10 @@
 .services {
-    padding: 2em 0;
+    padding: 2em;
 	background-color: #efefef;
 }
 
 .services-container {
-    width: 86%;
+    width: 90%;
 	margin: 0 auto;
 	text-align: center;
 
@@ -41,14 +41,6 @@
     & img {
         border-radius: 50%;
     }
-}
-
-@media screen and (max-width: $mobile) {
-    @include  servicesSmallScreen;
-}
-
-@media screen and (min-width: $mobile) and (max-width: 996px) {
-    @include  servicesTablet;
 }
 
 .My-services {
@@ -115,10 +107,10 @@
     }
 }
 
-@media screen and (max-width: 660px) {
-    @include myServicesSmallScreen;
+@media screen and (max-width: $mobile) {
+    @include servicesPhone();
 }
 
-@media screen and (min-width: $mobile)  and (max-width: 996px) {
-    @include myServicesTablet;
+@media screen and (min-width: $mobile) and (max-width: $tablet) {
+    @include servicesTablet();
 }
