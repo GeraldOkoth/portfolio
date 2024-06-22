@@ -1,4 +1,4 @@
-.faq {
+  .faq {
     padding: 3rem 6rem;
     background-color: rgb(220, 220, 220);
 
@@ -15,33 +15,35 @@
         border-radius: 4px 4px 0 0;
         background-color: $primaryColor;
     }
+    } 
     
-    .accordion {
-        background-color: #eee;
-        cursor: pointer;
-        padding: 18px;
-        text-align: left;
-        border: none;
-        width: 100%;
-        font-size: 15px;
-    	transition: 0.4s;
-        border-bottom: 1px solid #dadada;
-
-        &:after {
-            content: '\002B';
-            color: #777;
-            font-weight: weight(bold);
-            float: right;   
+    .panels {
+        .accordion {
+            background-color: #eee;
+            cursor: pointer;
+            padding: 18px;
+            text-align: left;
+            border: none;
+            width: 100%;
+            font-size: 15px;
+            transition: 1s;
+            border-bottom: 1px solid #dadada;
+    
+            &:after {
+                content: '\002B';
+                color: #777;
+                font-weight: weight(bold);
+                float: right;   
+            }
+            
+            &.active:after {
+                content: "\2212";   
+            }
+    
+            .active, .accordion:hover {
+                background-color: #9f9f9f;
+            }
         }
-        
-        &.active:after {
-            content: "\2212";   
-        }
-
-        .active, .accordion:hover {
-            background-color: #ccc;
-        }
-    }   
     
     .panel {
         max-height: 0;
@@ -52,6 +54,10 @@
     }               
 }
 
-@media screen and (max-width: 660px) {
-    @include faqTablet; 
+@media screen and (max-width: $mobile) {
+    @include faqPhone();
+}
+
+@media screen and (min-width: $mobile) and (max-width: $tablet) {
+    @include faqTablet(); 
 }

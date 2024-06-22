@@ -29,7 +29,8 @@
         }
 
         i {
-        	padding-right: 3px;
+            color: $primaryColor;
+        	margin-right: .8rem
         }
     }
     
@@ -38,7 +39,7 @@
         bottom: 35%;
         right: 6%;
         padding: 10px 14px;
-            position: absolute;
+        position: absolute;
     
         i {
             padding-right: 4px;
@@ -57,6 +58,10 @@
     }
 }
 
-@media screen and (max-width: 660px) {
+@media screen and (max-width: $mobile) {
+    @include footerPhone;
+}
+
+@media screen and (min-width: $mobile) and (max-width: $tablet) {
     @include footerTablet;
 }

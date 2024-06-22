@@ -51,10 +51,9 @@
         }
         .prev {
             color: $bodyTxtColor;
-            top: 40%;
+            top: 35%;
             position: absolute;
             cursor: pointer;
-            // width: auto;
             padding: 16px;
             font: 18px weight(bold);
             transition: 0.6s ease;
@@ -114,5 +113,9 @@
 }
 
 @media screen and (max-width: $mobile) {
-    @include slideShowSmallScreen;
+    @include slideShowPhone();
+}
+
+@media screen and (min-width: $mobile) and (max-width: $tablet) {
+    @include slideShowTablet();
 }

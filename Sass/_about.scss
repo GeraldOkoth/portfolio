@@ -65,9 +65,9 @@
 }
 
 @media screen and (max-width: $mobile) {
-    @include aboutSmallScreen;
+    @include aboutPhone;
 }
 
-@media screen and (min-width: $mobile) and (max-width: 996px) {
-    @include aboutSmallScreen;
+@media screen and (min-width: $mobile) and (max-width: $tablet) {
+    @include aboutTablet;
 }
