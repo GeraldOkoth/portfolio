@@ -6,7 +6,7 @@ function sendMail(){
         email : document.getElementById("email").value,
         phoneNumber : document.getElementById("phoneNumber").value,
         mesgSubject : document.getElementById("mesgSubject").value,
-        msg : document.getElementById("msg").value
+        msg : document.getElementById("mesg").value
     }
     emailjs.send("service_lxmqzq5", "template_6zufajn", params).then(alert("Email has been sent successfully! We will respond to you shortly."))
 }
