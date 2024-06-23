@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $lastname = sanitizeInput($_POST["lastname"]);
     $email = sanitizeInput($_POST["email"]);
     $number = sanitizeInput($_POST["number"]);
-    $subject = sanitizeInput($_POST["subject"]);
+    $subject = sanitizeInput($_POST["mesgSubject"]);
     $message = sanitizeInput($_POST["message"]);
 
     function sanitizeInput($input)

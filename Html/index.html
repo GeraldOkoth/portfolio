@@ -407,24 +407,25 @@
 				</div>
 			</div>
 			<div class="contact-form">
-				<form onsubmit="sendEmail()" method="post" action="" reset() return false>
+				<form onsubmit="sendEmail()" method="post" action="../Php/contact.php" reset() return false>
 					<div class="form-row">	
 						<div class="form-name">
-							<input type="text" name="firstname" id="firstname" placeholder="Firstname">
-							<input type="text" name="lastname" id="lastname" placeholder="Lastname">
+							<input type="text" name="firstname" id="firstname" placeholder="Firstname" required>
+							<input type="text" name="lastname" id="lastname" placeholder="Lastname" required>
 						</div>
 						<div class="form-contact">
-							<input type="email" name="email" id="email" placeholder="someone@gmail.com">
-							<input type="tel" name="number" id="number" placeholder="+254-000-453">
+							<input type="email" name="email" id="email" placeholder="someone@gmail.com" required>
+							<input type="tel" name="number" id="number" placeholder="+254-000-453" required>
 						</div>
 					</div>
 					<div class="form-message">
 						<div class="form-subject">
-							<input type="text" name="subject" id="subject" placeholder="subject">
+							<input type="text" name="mesgSubject" id="mesgSubject" placeholder="subject">
 						</div>
-						<textarea name="message" id="message" rows="10"></textarea>
+						<textarea name="message" id="message" rows="10" required></textarea>
 						<button type="button" onsubmit="sendMail()">submit<i class="fa-solid fa-paper-plane"></i></button>
 					</div>
+					<span id="msg"></span>
 				</form>
 			</div>
 		</div>
@@ -471,8 +472,9 @@
 		})();
 	</script>
 	<script src="../Js/script.js"></script>
-	<script src="script.js"></script>
 	<script src="../Js/toggle-menu.js"></script>
+	<script src="../Js/google-sheet_contact.js"></script>
+	<script src="../Js/send-email.js"></script>
 	<script>
 		var acc = document.getElementsByClassName("accordion");
 		var i;

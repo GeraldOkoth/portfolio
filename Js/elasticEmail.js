@@ -13,10 +13,10 @@ function sendMail(){
                 " <br> Email: " + document.getElementById("email").value +
                 " <br> Number: " + document.getElementById("phoneNumber").value +
                 " <br> Subject: " + document.getElementById("mesgSubject").value +
-                " <br> Message: " + document.getElementById("msg").value
+                " <br> Message: " + document.getElementById("message").value
     }).then(
     message => alert("message sent successfully!")
     );
-    document.getElementById("mesg").innerHTML="message has been sent. We will respond to you shortly.codeblock";
+    document.getElementById("mesg").innerHTML="message has been sent. We will respond to you shortly.";
     document.getElementById("mesg").style.display="block";
 }
