@@ -27,7 +27,7 @@
 					transition: 0.3s;
 
 					&:hover {
-						color: $bodyTxtColor;
+						color: $bodyBgColor;
 					} 
 					&:hover::after {
 						width: 0%;
