@@ -2,7 +2,7 @@
 @mixin navbarPhone() {
 	.navbar {	
 		position: relative;
-		// padding: .3em 1em;
+		padding: 0 7em;
 		
 		.menu {
 			ul {
@@ -59,7 +59,7 @@
 		.hero-image img {
 			width: 130px;
 			height: 130px;
-			margin: 1rem 0;
+			margin: .2rem 0;
 		}
 
 		.hero-info {
