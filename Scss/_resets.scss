@@ -1,0 +1,24 @@
+// Select all elements using global selector "*"
+* {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    box-sizing: border-box;
+    font-family: 'Cinzel', serif;
+	font-family: 'Merriweather', serif;
+	font-family: 'Roboto', sans-serif;
+	font-family: $fontStack;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+    color: $bodyTxtColor;
+    background-color: $bodyBgColor;
+    font: {
+        size: $fontSize;
+        family: $bodyFontFamily;
+    }
+}
