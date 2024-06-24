@@ -1,0 +1,67 @@
+.my-footer {
+    padding: 2rem 3rem;
+	position: relative;
+	background-color: #f1f1f1;
+
+    .footer-links {
+        width: 80%;
+        display: flex;
+        justify-content: space-around;
+
+        h3 {
+            padding-bottom: 1rem;
+        }
+
+        li {
+            margin-bottom: .5rem;
+            list-style-type: none;
+        }
+
+        a {
+            transition: .4s;
+            color: #616161;
+            font-size: .8rem;
+            text-decoration: none;
+
+            &:hover {
+                color: $bodyTxtColor;
+            }
+        }
+
+        i {
+            color: $primaryColor;
+        	margin-right: .8rem
+        }
+    }
+    
+    .top a {
+        @include button();
+        bottom: 35%;
+        right: 6%;
+        padding: 10px 14px;
+        position: absolute;
+    
+        i {
+            padding-right: 4px;
+        }
+    }
+    
+    .footer-txt {
+        padding: 16px;
+        margin-top: 2px;
+        font-size: .8em;
+        text-align: center;
+    
+        p {
+            color: #616161;
+        }
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    @include footerPhone;
+}
+
+@media screen and (min-width: $mobile) and (max-width: $tablet) {
+    @include footerTablet;
+}
