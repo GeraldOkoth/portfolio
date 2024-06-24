@@ -13,7 +13,7 @@
 				top: 0;
 				right: 0;
 				position: absolute;
-				background-color: azure;
+				background-color: rgb(67, 67, 67);
 				overflow-x: hidden;
 				transition: 0.5s;
 				padding-top: 60px;
@@ -36,12 +36,11 @@
 			}
 	
 			.hambuger-btn  {
-				background-color: $bodyTxtColor;
 				display: block;
 				top: 15%;
 				right: 25px;
 				padding: 3px;
-				z-index: 999;
+				z-index: 1999;
 				color: $bodyBgColor;
 				position: absolute;
 				cursor: pointer;
