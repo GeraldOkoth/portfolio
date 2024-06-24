@@ -110,7 +110,7 @@ body {
   margin: 0 5px;
 }
 .navbar .menu .hambuger-btn {
-  display: block;
+  display: none;
 }
 
 .hero {
@@ -269,44 +269,43 @@ body {
 /*navbar on small screen*/
 @media screen and (max-width: 400px) {
   .navbar {
+    position: relative;
     padding: 0.3em 2em;
   }
-  .navbar .logo #e, .navbar .logo #r, .navbar .logo #o {
-    display: none;
-  }
-  .navbar .logo a {
-    padding: 4px 6px;
-    border-radius: 7px;
-    font-size: 1.2rem;
-    border-radius: 50px;
-    background-color: #fff;
-  }
-  .navbar .menuul {
+  .navbar .menu ul {
+    display: unset;
     height: 100vh;
     width: 100%;
     z-index: 99;
     top: 0;
     right: 0;
-    background-color: #dddddd;
+    position: absolute;
+    background-color: azure;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
   }
-  .navbar .menuul a {
-    padding: 8px 8px 8px 32px;
+  .navbar .menu ul a {
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: #818181;
     display: block;
     transition: 0.3s;
   }
-  .navbar .menu .hambuger-btn span {
+  .navbar .menu ul a:hover {
+    color: #000;
+  }
+  .navbar .menu ul a:hover::after {
+    width: 0%;
+  }
+  .navbar .menu .hambuger-btn {
     display: block;
-    top: 30%;
+    top: 50%;
     right: 25px;
     z-index: 999;
-    color: #fff;
+    color: #000;
     position: absolute;
+    cursor: pointer;
   }
 }
 @media screen and (max-width: 400px) {
@@ -316,8 +315,8 @@ body {
     transform: translate(10%, 20%);
   }
   .hero .hero-image img {
-    width: 180px;
-    height: 180px;
+    width: 130px;
+    height: 130px;
     margin: 1rem 0;
   }
   .hero .hero-info .hero-text h1 {
@@ -599,6 +598,10 @@ body {
   .services .services-container .services-cta .cheap, .services .services-container .services-cta .quality, .services .services-container .services-cta .online-booking {
     padding: 1rem 0;
   }
+  .services .services-container .services-cta .cheap img, .services .services-container .services-cta .quality img, .services .services-container .services-cta .online-booking img {
+    width: 85px;
+    height: 85px;
+  }
   .services .services-container .My-services {
     flex-direction: column;
   }
@@ -708,6 +711,10 @@ body {
   }
   .testimonies .test p {
     font-size: 0.8em;
+  }
+  .testimonies .test .user img {
+    width: 35px;
+    height: 35px;
   }
 }
 .About {
