@@ -291,7 +291,7 @@ body {
     transition: 0.3s;
   }
   .navbar .menu ul a:hover {
-    color: #000;
+    color: #fff;
   }
   .navbar .menu ul a:hover::after {
     width: 0%;
