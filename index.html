@@ -31,7 +31,7 @@
 					<!--<span class="hamburger" id="hamburgerOpen" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></span>
 					<span class="hamburger" id="hamburgerClose" onclick="toggleMenu()"><i class="fa-solid fa-xmark"></i></span> -->
 					<span id="hamburgerOpen" onclick="toggleMenu()">☰</span>
-    				<span id="hamburgerClose" onclick="toggleMenu()">✖</span>
+    				<!-- <span id="hamburgerClose" onclick="toggleMenu()">✖</span> -->
 				</div>
 			</nav>
 		</div>
@@ -49,7 +49,7 @@
 				</div>
 				<div class="hero-btns">
 					<a href="#about"><span></span>About Me</a>
-					<a href="/Assets/gerald_okoth_myjobmag_curriculum_vitae.pdf" onclick="disableDownload()"><span></span>Download CV</a>
+					<a href="/Assets/gerald_okoth_myjobmag_curriculum_vitae" onclick="disableDownload()"><span></span>Download CV</a>
 				</div>
 				<div class="wrapper">
 					<div class="button">
@@ -489,6 +489,11 @@
 			panel.style.maxHeight = panel.scrollHeight + "px";
 			}
 		});
+		}
+	</script>
+	<script>
+		function disableDownload() {
+			alert("CV has not yet been uploaded!")
 		}
 	</script>
 
