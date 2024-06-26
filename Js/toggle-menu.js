@@ -1,9 +1,9 @@
 // Function to toggle the menu open and close
 let menu = document.getElementById("menuLinks");
-let hamburgerOpen = document.getElementById("hamburgerOpen");
-let hamburgerClose = document.getElementById("hamburgerClose");
+let hamburgerOpenClose = document.getElementByClassName("humburger-btn");
 
-function toggleMenu() {
+function myFunction(x) {
+    x.classList.toggle("change");
     if (menu.classList.contains("show")) {
         menu.classList.remove("show");
         menu.classList.add("hide");
