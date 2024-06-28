@@ -406,23 +406,23 @@
 				</div>
 			</div>
 			<div class="contact-form">
-				<form onsubmit="sendEmail()" method="post" action="../Php/contact.php" reset() return false>
+				<form method="post" action="./Php/contact.php">
 					<div class="form-row">	
 						<div class="form-name">
-							<input type="text" name="firstname" id="firstname" placeholder="Firstname" required>
-							<input type="text" name="lastname" id="lastname" placeholder="Lastname" required>
+							<input type="text" name="firstname" id="firstname" placeholder="Firstname" >
+							<input type="text" name="lastname" id="lastname" placeholder="Lastname" >
 						</div>
 						<div class="form-contact">
-							<input type="email" name="email" id="email" placeholder="someone@gmail.com" required>
-							<input type="tel" name="number" id="number" placeholder="+254-000-453" required>
+							<input type="email" name="email" id="email" placeholder="someone@gmail.com" >
+							<input type="tel" name="number" id="number" placeholder="+254712345678" >
 						</div>
 					</div>
 					<div class="form-message">
 						<div class="form-subject">
 							<input type="text" name="mesgSubject" id="mesgSubject" placeholder="subject">
 						</div>
-						<textarea name="message" id="message" rows="10" required></textarea>
-						<button type="button" onsubmit="sendMail()">submit<i class="fa-solid fa-paper-plane"></i></button>
+						<textarea name="message" id="message" rows="10" ></textarea>
+						<button type="submit" class="submit-button">submit<i class="fa-solid fa-paper-plane"></i></button>
 					</div>
 					<span id="msg"></span>
 				</form>
@@ -495,19 +495,42 @@
 			alert("CV has not yet been uploaded!")
 		}
 	</script>
+
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 	<script>
-		let custom_button =
-			document.querySelector(".custom-button");
-		custom_button.addEventListener
-			('click', function () {
-				Swal.fire({
-					title: 'Custom Alert',
-					text: 'You clicked the button',
-					icon: 'info',
-					confirmButtonText: 'OK'
+		document.addEventListener('DOMContentLoaded', function() {
+			let custom_button = document.querySelector(".custom-button");
+
+			if (custom_button) {
+				custom_button.addEventListener('click', function () {
+					let inputs = document.querySelectorAll('input');
+					let inputNotEmpty = false;
+
+					inputs.forEach(function(input) {
+						if (input.value.trim() !== '') {
+							inputNotEmpty = true;
+						}
+					});
+
+					if (inputNotEmpty) {
+						Swal.fire({
+							title: 'Success',
+							text: 'Your message has been successfully recieved, we will get to you shortly.',
+							icon: 'info',
+							confirmButtonText: 'OK'
+						});
+					} else {
+						Swal.fire({
+							title: 'Error',
+							text: 'Please fill in the input field',
+							icon: 'error',
+							confirmButtonText: 'OK'
+						});
+					}
 				});
-			});
-	</script>
+			}
+		});
+	</script> 
 
 </body>
 </html>

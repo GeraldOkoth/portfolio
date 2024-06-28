@@ -964,7 +964,7 @@ body {
   padding: 12px 14px;
   border-radius: 5px;
 }
-.contact-section .contact-form form button[type=button] {
+.contact-section .contact-form form button[type=submit] {
   color: #fff;
   cursor: pointer;
   border: none;
@@ -975,11 +975,11 @@ body {
   background-color: #4366ff;
   box-shadow: 0 0 1px rgba(128, 128, 128, 0.2);
 }
-.contact-section .contact-form form button[type=button] .fa-paper-plane {
+.contact-section .contact-form form button[type=submit] .fa-paper-plane {
   color: #fff;
   margin: 0 5px;
 }
-.contact-section .contact-form form button[type=button]:hover {
+.contact-section .contact-form form button[type=submit]:hover {
   opacity: 0.7;
   background-color: #042ff0;
 }
