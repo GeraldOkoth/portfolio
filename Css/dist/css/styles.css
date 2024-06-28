@@ -106,7 +106,7 @@ body {
   color: #999;
 }
 .navbar .menu .fa-solid, .navbar .menu .fa-brands {
-  color: blue;
+  color: rgb(98, 98, 255);
   margin: 0 5px;
 }
 .navbar .menu .hambuger-btn {
@@ -137,8 +137,8 @@ body {
   color: #fff;
 }
 .hero .hero-info .hero-text h1 {
+  color: linear-gradient(rgba(24, 100, 239, 0.8), #122dfc);
   text-transform: uppercase;
-  text-shadow: 0.6px 1.5px 3px #fff;
   font: 2.5rem "Cinzel", serif;
   letter-spacing: 0.3rem;
 }
@@ -152,7 +152,7 @@ body {
   color: orange;
 }
 .hero .hero-info .hero-text p #blue {
-  color: #0000ff;
+  color: #5555ff;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .hero .hero-info .hero-text p #pink {
@@ -176,7 +176,7 @@ body {
   transition: all 0.3s;
   border-radius: 7px;
   padding: 0.7em 3em;
-  background-color: #042ff0;
+  background-color: #4366ff;
   box-shadow: 0 0 1px rgba(128, 128, 128, 0.2);
   z-index: 1;
   margin: 0 1em;
@@ -264,7 +264,7 @@ body {
 
 /*hero on small screen*/
 /*navbar on small screen*/
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
   .navbar {
     position: relative;
     padding: 0 7em;
@@ -311,16 +311,16 @@ body {
     transition: 0.4s;
   }
   .navbar .menu .change .bar1 {
-    transform: translate(0, 11px) rotate(-45deg);
+    transform: translateY(1px) rotate(-45deg);
   }
   .navbar .menu .change .bar2 {
     opacity: 0;
   }
   .navbar .menu .change .bar3 {
-    transform: translate(0, -11px) rotate(45deg);
+    transform: translateY(-9px) rotate(45deg);
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
   .hero {
     flex-direction: column;
     align-items: center;
@@ -378,7 +378,7 @@ body {
   width: 2rem;
   height: 0.2rem;
   border: none;
-  background-color: #0000ff;
+  background-color: #5555ff;
 }
 .gallery .gallery-header hr:nth-child(2) {
   background-color: #aeaeae;
@@ -466,7 +466,7 @@ body {
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
   .gallery {
     padding: 1.3rem;
   }
@@ -586,7 +586,7 @@ body {
   bottom: 25%;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
   .services {
     padding: 1.5rem 1rem;
   }
@@ -634,14 +634,14 @@ body {
 .testimonials-header {
   text-align: center;
   padding: 1rem 0;
-  color: #0000ff;
+  color: #5555ff;
 }
 .testimonials-header hr {
   display: inline-block;
   width: 3rem;
   height: 0.2rem;
   border: none;
-  background-color: #0000ff;
+  background-color: #5555ff;
 }
 .testimonials-header hr:nth-child(2) {
   background-color: #aeaeae;
@@ -705,7 +705,7 @@ body {
   background-color: #f2f2f2;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
   .Testimonials {
     padding: 1.5rem 1rem;
   }
@@ -786,7 +786,7 @@ body {
   transform: translateY(-5px);
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
   .About {
     padding: 1.5rem 1rem;
   }
@@ -815,7 +815,7 @@ body {
     margin: 1rem 0;
   }
 }
-@media screen and (min-width: 400px) and (max-width: 900px) {
+@media screen and (min-width: 600px) and (max-width: 900px) {
   .about-info {
     display: flex;
     flex-direction: column;
@@ -834,7 +834,7 @@ body {
   width: 2rem;
   height: 0.2rem;
   border: none;
-  background-color: #0000ff;
+  background-color: #5555ff;
 }
 .faq .head hr:nth-child(2) {
   background-color: #aeaeae;
@@ -843,7 +843,7 @@ body {
   border: none;
   height: 0.35rem;
   border-radius: 4px 4px 0 0;
-  background-color: #0000ff;
+  background-color: #5555ff;
 }
 
 .panels .accordion {
@@ -877,7 +877,7 @@ body {
   transition: max-height 0.2s ease-out;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
   .faq {
     padding: 1rem 1rem;
   }
@@ -896,7 +896,7 @@ body {
     padding: 0 1.2rem;
   }
 }
-@media screen and (min-width: 400px) and (max-width: 900px) {
+@media screen and (min-width: 600px) and (max-width: 900px) {
   .faq {
     padding: 1.5rem 2rem;
   }
@@ -912,7 +912,7 @@ body {
   width: 2rem;
   height: 0.2rem;
   border: none;
-  background-color: #0000ff;
+  background-color: #5555ff;
 }
 .contact-header hr:nth-child(2) {
   background-color: #aeaeae;
@@ -972,7 +972,7 @@ body {
   transition: all 0.3s;
   border-radius: 7px;
   padding: 0.7em 3em;
-  background-color: #042ff0;
+  background-color: #4366ff;
   box-shadow: 0 0 1px rgba(128, 128, 128, 0.2);
 }
 .contact-section .contact-form form button[type=button] .fa-paper-plane {
@@ -984,7 +984,7 @@ body {
   background-color: #042ff0;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
   .contact {
     padding: 0.5rem 1rem;
   }
@@ -1005,7 +1005,7 @@ body {
     line-height: 30px;
   }
   .contact-section .contact-address i {
-    color: blue;
+    color: rgb(98, 98, 255);
     margin: 0 5px;
     margin: unset;
   }
@@ -1019,7 +1019,7 @@ body {
     width: 100%;
   }
 }
-@media screen and (min-width: 400px) and (max-width: 900px) {
+@media screen and (min-width: 600px) and (max-width: 900px) {
   .contact-section {
     display: flex;
     flex-direction: column;
@@ -1055,7 +1055,7 @@ body {
   color: #000;
 }
 .my-footer .footer-links i {
-  color: #0000ff;
+  color: #5555ff;
   margin-right: 0.8rem;
 }
 .my-footer .top a {
@@ -1066,7 +1066,7 @@ body {
   transition: all 0.3s;
   border-radius: 7px;
   padding: 0.7em 3em;
-  background-color: #042ff0;
+  background-color: #4366ff;
   box-shadow: 0 0 1px rgba(128, 128, 128, 0.2);
   bottom: 35%;
   right: 6%;
@@ -1086,7 +1086,7 @@ body {
   color: #616161;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
   .my-footer {
     padding: 0.5rem 1rem;
   }
@@ -1116,7 +1116,7 @@ body {
     margin: unset;
   }
 }
-@media screen and (min-width: 400px) and (max-width: 900px) {
+@media screen and (min-width: 600px) and (max-width: 900px) {
   .footer-links {
     display: flex;
     flex-direction: column;

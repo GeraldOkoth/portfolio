@@ -123,9 +123,10 @@
             color: $bodyBgColor;
     
             h1 {
+                color: linear-gradient(rgba(24, 100, 239, 0.8), #122dfc);
                 text: {
                     transform: uppercase;
-                    shadow: .6px 1.5px 3px $bodyBgColor;
+                    // shadow: .6px 1.5px 3px $bodyBgColor;
                 }
                 font: 2.5rem 'Cinzel', serif;
                 letter-spacing: .3rem;
