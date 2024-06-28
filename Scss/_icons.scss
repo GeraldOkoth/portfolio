@@ -1,5 +1,5 @@
 // Reusable snippet for icons
-@mixin icons($color: blue) {
+@mixin icons($color: rgb(98, 98, 255)) {
     color: $color;
     margin: 0 5px;
 }
