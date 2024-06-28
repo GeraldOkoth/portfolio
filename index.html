@@ -452,7 +452,7 @@
 					<li><a href="#"><i class="fa-solid fa-blog"></i>Blogs</a></li>
 				</ul>
 			</div>
-		<div class="top"><a href="index.html"><i class="fa-solid fa-arrow-up"></i>Back to top</a></div>
+		<div class="top"><a href="#"><i class="fa-solid fa-arrow-up"></i>Back to top</a></div>
 		</div>
 		<hr>
 		<div class="footer-txt">
@@ -494,6 +494,19 @@
 		function disableDownload() {
 			alert("CV has not yet been uploaded!")
 		}
+	</script>
+	<script>
+		let custom_button =
+			document.querySelector(".custom-button");
+		custom_button.addEventListener
+			('click', function () {
+				Swal.fire({
+					title: 'Custom Alert',
+					text: 'You clicked the button',
+					icon: 'info',
+					confirmButtonText: 'OK'
+				});
+			});
 	</script>
 
 </body>
