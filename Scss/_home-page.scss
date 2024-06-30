@@ -90,6 +90,26 @@
         .hambuger-btn {
             display: none;
         }
+
+        .onhover:hover .drop-down-content{
+            display: block;
+        }
+
+        .drop-down-content {
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            display: absolutely;
+            background-color: #d2d2d2;
+            width: 100%;
+            display: none;
+            margin-top: 5%;
+            z-index: inherit;
+            border-radius: 5px;
+
+            a {
+                padding: 8px 10px;
+                display: block;
+            }
+        }
     }
 }
 
@@ -123,10 +143,9 @@
             color: $bodyBgColor;
     
             h1 {
-                color: linear-gradient(rgba(24, 100, 239, 0.8), #122dfc);
                 text: {
                     transform: uppercase;
-                    // shadow: .6px 1.5px 3px $bodyBgColor;
+                    shadow: .6px 1.5px 3px $bodyBgColor;
                 }
                 font: 2.5rem 'Cinzel', serif;
                 letter-spacing: .3rem;
@@ -174,7 +193,8 @@
                 }
                 &:hover {
                     color: $bodyTxtColor;
-                    box-shadow: 0 5px 5px $orange; 
+                    background-color: #6879fb;
+                    box-shadow: 0 3px 3px $orange; 
                 }
             }
         }
