@@ -43,8 +43,11 @@
 				position: absolute;
 				top: 9px;
 				right: 15px;
-				background-color: #606060;
 				border-radius: 2px;
+
+				&:hover {	
+					background-color: #252525;
+				}
 
 			}
 			.bar1, .bar2, .bar3 {
