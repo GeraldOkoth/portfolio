@@ -118,7 +118,6 @@
     transform: translate(10%, 40%);
     @include flexbox(absolute, flex-start, space-around);
 
-
     .hero-image img {
         transition: .5s;
         border-radius: 50%;
@@ -199,146 +198,147 @@
             }
         }
         .wrapper {
-            & .button {
-                display: inline-block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            & .icon {
+                // display: inline-block;
                 height: 35px;
                 width: 35px;
-                border-radius: 50px;
+                border-radius: 35px;
                 margin: 1em 5px;
+                text-align: center;
                 overflow: hidden;
+                line-height: 35px;
                 background: $bodyBgColor;
                 cursor: pointer;
-                box-shadow: 0px 10px 10px rgba(161, 161, 161, 0.1);
+                box-shadow: 0px 10px 10px rgba(234, 234, 234, 0.1);
                 transition: all 0.3s ease-out;
     
                 &:hover {
-                    width: 150px;
-                }
-    
-                &:nth-child(1):hover .icon {
-                    background: #0055ff;
-                }
-                &:nth-child(2):hover .icon {
-                    background: #1DA1F2;
-                }
-                &:nth-child(3):hover .icon {
-                    background: #252525;
-                }
-                &:nth-child(4):hover .icon {
-                    background: #dc1789;
-                }
-                &:nth-child(5):hover .icon {
-                    background: #333;
-                }
-                &:nth-child(6):hover .icon {
-                    background: #ff0000;                
-                }
-                & .icon{
-                    float: left;
-                    line-height: 35px;
-                    display: inherit;
-                    height: 35px;
-                    width: 35px;
-                    border-radius: 50px;
-        
+                    color: $bodyBgColor;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    width: 150px;  
+
                     i {
-                        // color: $bodyBgColor;
+                        color: $bodyBgColor;
                     }
                 }
-                & span {
-                    font: {
-                        size: .9em;
-                        weight: weight(bold);
-                    }
-                    line-height: 35px;
-                    margin-left: 10px;
-                }
-        
-                .wrapper .button:nth-child(1) span{
-                color: #0055ff;
-                }
-                .wrapper .button:nth-child(2) span{
-                color: #1DA1F2;
-                }
-                .wrapper .button:nth-child(3) span{
-                color: #252525;
-                }
-                .wrapper .button:nth-child(4) span{
+                // &:hover i {
+                //     float: left;
+                //     line-height: 35px;
+                //     display: inherit;
+                //     height: 35px;
+                //     width: 35px;
+                //     border-radius: 35px;
+                // }
+            }
+            .fa-linkedin {
+                color: #0077b5;
+            }
+            .ln:hover {
+                background: #0077b5;
+            }
+            .fa-facebook-f {
+                color: #1a6ed8;
+            }
+            .fb:hover {
+                background: #1a6ed8;
+            }
+            .fa-twitter {
+                color: #1da1f2;
+            }
+            .tw:hover {
+                background: #1da1f2;
+            }
+            .fa-fa-instagram {
                 color: #ff0084;
-                }
-                .wrapper .button:nth-child(5) span{
+                ;
+            }
+            .in:hover {
+                background: #fc45a4;
+            }
+            .fa-github {
                 color: #333;
-                }
-                .wrapper .button:nth-child(6) span{
-                color: #ff0000;
-                }
+            }
+            .git:hover {
+                background: #111;
+            }
+            .fa-youtube {
+                color: #f00;
+            }
+            .yt:hover {
+                background: #f00;
             }
         }
     }
 }
 
-.bubble {
-    width: 100%;
-    bottom: 0px;
-    // @include display();
-    align-items: center;
+// .bubble {
+//     width: 100%;
+//     bottom: 0px;
+//     // @include display();
+//     align-items: center;
 
-    img {
-        width: 25px;
-        animation: bubble 7s linear infinite;
+//     img {
+    //         width: 25px;
+//         animation: bubble 7s linear infinite;
 
-        &:nth-child(1) {
-            width: 20px;
-            animation-delay: 2s;
-        }
-        &:nth-child(2) {
-            animation-delay: 1s;
-        }
-        &:nth-child(3) {
-            width: 20px;
-            animation-delay: 3s;
-        }
-        &:nth-child(4) {
-            width: 35px;
-            animation-delay: 4.5s;
-        }
-        &:nth-child(5) {
-            width: 25px;
-            animation-delay: 3s;
-        }
-        &:nth-child(6) {
-            width: 20px;
-            animation-delay: 6s;
-        }
-        &:nth-child(7) {
-            width: 35px;
-            animation-delay: 7s;
-        }
-        &:nth-child(8) {
-            width: 10px;
-            animation-delay: 6s;
-        }
-        &:nth-child(9) {
-            width: 35px;
-            animation-delay: 7s;
-        }
-    }
-}
+//         &:nth-child(1) {
+//             width: 20px;
+//             animation-delay: 2s;
+//         }
+//         &:nth-child(2) {
+//             animation-delay: 1s;
+//         }
+//         &:nth-child(3) {
+//             width: 20px;
+//             animation-delay: 3s;
+//         }
+//         &:nth-child(4) {
+//             width: 35px;
+//             animation-delay: 4.5s;
+//         }
+//         &:nth-child(5) {
+//             width: 25px;
+//             animation-delay: 3s;
+//         }
+//         &:nth-child(6) {
+//             width: 20px;
+//             animation-delay: 6s;
+//         }
+//         &:nth-child(7) {
+//             width: 35px;
+//             animation-delay: 7s;
+//         }
+//         &:nth-child(8) {
+//             width: 10px;
+//             animation-delay: 6s;
+//         }
+//         &:nth-child(9) {
+//             width: 35px;
+//             animation-delay: 7s;
+//         }
+//     }
+// }
 
-@keyframes bubble {
-    0% {
-        @include animation(0, translateY(0));
-    }
-    30% {
-        @include animation(1, none);
-    }
-    70% {
-        @include animation(1, none);
-    }
-    100% {
-        @include animation(0, translateY(-80vh));
-    }
-}
+// @keyframes bubble {
+//     0% {
+//         @include animation(0, translateY(0));
+//     }
+//     30% {
+//         @include animation(1, none);
+//     }
+//     70% {
+//         @include animation(1, none);
+//     }
+//     100% {
+//         @include animation(0, translateY(-80vh));
+//     }
+// }
 
 /*hero on small screen*/ 
 /*navbar on small screen*/ 
