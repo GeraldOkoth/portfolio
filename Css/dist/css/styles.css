@@ -132,10 +132,7 @@ body {
 
 .hero {
   width: 80%;
-  top: 50%;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(10%, 40%);
   display: flex;
   position: absolute;
   align-items: flex-start;
@@ -349,6 +346,7 @@ body {
   .hero {
     flex-direction: column;
     align-items: center;
+    transform: translate(10%, 10%);
   }
   .hero .hero-image img {
     width: 160px;

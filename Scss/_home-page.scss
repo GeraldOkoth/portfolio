@@ -115,10 +115,7 @@
 
 .hero {
     width: 80%;
-    top: 50%;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(10%, 40%);
     @include flexbox(absolute, flex-start, space-around);
 
     .hero-image img {
