@@ -4,6 +4,9 @@
   padding: 0;
   margin: 0;
   list-style-type: none;
+  border: none;
+  outline: none;
+  text-decoration: none;
   box-sizing: border-box;
   font-family: "Cinzel", serif;
   font-family: "Merriweather", serif;
@@ -78,6 +81,11 @@ body {
 .navbar .menu ul {
   display: flex;
 }
+.navbar .menu .active {
+  color: #00ffe4;
+  width: 50%;
+  border-bottom: 0.16em solid orange;
+}
 .navbar .menu a {
   color: #fff;
   padding: 0.8em;
@@ -145,6 +153,7 @@ body {
      object-fit: cover;
   -o-object-position: top;
      object-position: top;
+  box-shadow: 0 0 25px orange;
 }
 .hero .hero-info {
   margin-left: 5%;
@@ -158,6 +167,28 @@ body {
   text-shadow: 0.6px 1.5px 3px #fff;
   font: 2.5rem "Cinzel", serif;
   letter-spacing: 0.3rem;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+.hero .hero-info .hero-text .typing-text {
+  font-family: monospace;
+  display: inline-block;
+  animation: typing 4s steps(30, end) 1s, blink 0.75s step-end infinite;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  width: 0;
 }
 .hero .hero-info .hero-text p {
   font-size: 1.2rem;
