@@ -81,11 +81,6 @@ body {
 .navbar .menu ul {
   display: flex;
 }
-.navbar .menu .active {
-  color: #00ffe4;
-  width: 50%;
-  border-bottom: 0.16em solid orange;
-}
 .navbar .menu a {
   color: #fff;
   padding: 0.8em;
@@ -169,11 +164,14 @@ body {
   letter-spacing: 0.3rem;
 }
 @keyframes typing {
-  from {
+  0% {
     width: 0;
   }
-  to {
+  50% {
     width: 100%;
+  }
+  100% {
+    width: 0;
   }
 }
 @keyframes blink {
@@ -182,9 +180,8 @@ body {
   }
 }
 .hero .hero-info .hero-text .typing-text {
-  font-family: monospace;
   display: inline-block;
-  animation: typing 4s steps(30, end) 1s, blink 0.75s step-end infinite;
+  animation: typing 8s steps(30, end) 0s infinite, blink 0.75s step-end infinite;
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid;
