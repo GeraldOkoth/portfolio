@@ -79,10 +79,16 @@
 		align-items: center;
 		transform: translate(10%, 10%);
 
-		.hero-image img {
-			width: 160px;
-			height: 160px;
-			margin: .2rem 0 2rem;
+		.hero-image {
+			img {
+				width: 160px;
+				height: 160px;
+				margin: .2rem 0 2rem;
+			}
+			.loader {
+				width: 165px;
+				height: 165px;
+			}
 		}
 
 		.hero-info {
