@@ -5,15 +5,15 @@ const myHref = downloadCvBtn.getAttribute("href");
 function displayAlert() {
     const visitorName = prompt("Please enter your name on this prompt:");
     localStorage.setItem("name", visitorName);
-    displayVisitorName = localStorage.getItem("name")
+    const displayVisitorName = localStorage.getItem("name")
     if (!displayVisitorName)
         displayAlert();
     else {
-        if (myHref === "../Assets/gerald_okoth_myjobmag_curriculum_vitae.pdf") {
-            alert("Thank you " +visitorName + " for your download, Resume will be ready in ashort while.");
+        if (myHref === `../Assets/gerald_okoth_myjobmag_curriculum_vitae.pdf`) {
+            alert(`Thank you ${visitorName} for your download, Resume will be ready in ashort while.`);
         }
         else {
-            alert("Sorry, " +visitorName + " Resume has not yet been uploaded, Please check again later.");
+            alert(`Sorry, ${visitorName} Resume has not yet been uploaded, Please check again later.`);
         }
 
     }

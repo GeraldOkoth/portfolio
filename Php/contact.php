@@ -1,5 +1,4 @@
 <?php
-
 $firstname = $lastname = $email = $number = $subject = $message = "";
 $errors = [];
 
@@ -68,3 +67,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 }
+
+?>

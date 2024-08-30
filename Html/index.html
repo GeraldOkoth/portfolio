@@ -12,6 +12,16 @@
 	<meta name="author" content="Gerald Okoth">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="module" src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+	<script type="module" src="https://smtpjs.com/v3/smtp.js"></Script> <!--Script to send email-->
+	<script type="module" src="../Js/elasticEmail.js"></script>
+	<script type="module" src="../Js/script.js"></script>
+	<script type="module" src="../Js/toggle-menu.js"></script>
+	<script type="module" src="../Js/google-sheet_contact.js"></script>
+	<script type="module" src="../Js/send-email.js"></script>
+	<script type="module" src="../Js/hero-image.js"></script>
+	<script type="module" src="../Js/customized-btn.js"></script>
+	<script type="module" src="../Js/contact-submit.js"></script>
 </head>
 <body>
 	<section class="home-page">
@@ -375,12 +385,6 @@
 			</span>
 			<p>I would love to respond to your queries. It is always my pleasure serving you. Let's get in touch. <span> :&#41</span>!</p>
 		</header>
-		<script src="https://kit.fontawesome.com/23021fc8d3.js" crossorigin="anonymous"></script>
-		<!--<script type="text/javascript" src="google-sheet_contact.js"></script>-->
-		<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-		<!--<script src="sendEmail.js"></script>-->
-		<script src="https://smtpjs.com/v3/smtp.js"></Script> <!--Script to send email-->
-		<script src="../Js/elasticEmail.js"></script>
 		<div class="contact-section">
 			<div class="contact-address">
 				<div class="location">
@@ -400,7 +404,7 @@
 				</div>
 			</div>
 			<div class="contact-form">
-				<form method="post" action="./Php/contact.php">
+				<form method="post" action="../Php/contact.php">
 					<div class="form-row">	
 						<div class="form-name">
 							<input type="text" name="firstname" id="firstname" placeholder="Firstname" >
@@ -457,6 +461,10 @@
 		</div>
 	</section>
 
+	<script src="https://kit.fontawesome.com/23021fc8d3.js" crossorigin="anonymous"></script>
+	<!--<script type="text/javascript" src="google-sheet_contact.js"></script>-->
+	<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+	<!--<script src="sendEmail.js"></script>-->
 	<script type="text/javascript">
 		(function(){
 			emailjs.init({
@@ -464,10 +472,6 @@
 			});
 		})();
 	</script>
-	<script src="../Js/script.js"></script>
-	<script src="../Js/toggle-menu.js"></script>
-	<script src="../Js/google-sheet_contact.js"></script>
-	<script src="../Js/send-email.js"></script>
 	<script>
 		var acc = document.getElementsByClassName("accordion");
 		var i;
@@ -489,43 +493,6 @@
 			alert("CV has not yet been uploaded!")
 		}
 	</script>
-	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-	<script>
-		document.addEventListener('DOMContentLoaded', function() {
-			let custom_button = document.querySelector(".custom-button");
-
-			if (custom_button) {
-				custom_button.addEventListener('click', function () {
-					let inputs = document.querySelectorAll('input');
-					let inputNotEmpty = false;
-
-					inputs.forEach(function(input) {
-						if (input.value.trim() !== '') {
-							inputNotEmpty = true;
-						}
-					});
-
-					if (inputNotEmpty) {
-						Swal.fire({
-							title: 'Success',
-							text: 'Your message has been successfully recieved, we will get to you shortly.',
-							icon: 'info',
-							confirmButtonText: 'OK'
-						});
-					} else {
-						Swal.fire({
-							title: 'Error',
-							text: 'Please fill in the input field',
-							icon: 'error',
-							confirmButtonText: 'OK'
-						});
-					}
-				});
-			}
-		});
-	</script> 
-	<script src="../Js/hero-image.js"></script>
-	<script src="../Js/customized-btn.js"></script>
 
 </body>
 </html>
