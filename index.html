@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Animated Text</title>
+  <title>Number guessing game</title>
   <style>
     * {
       padding: 0;
@@ -11,75 +11,93 @@
       box-sizing: border-box;
     }
 
-    html {
-        font-family: sans-serif;
-      }
+    body {
+      width: 80%;
+      margin: 0 auto;
+    }
 
-      body {
-        width: 80%;
-        margin: 0 auto;
-      }
+    body p {
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      padding: .5rem 0;
+    }
 
-      body p {
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        padding: .5rem 0;
-      }
+    span {
+      font-family: verdana;
+    }
 
-      #para {
-        font-weight: 600;
-        color: rgb(34, 255, 0);
-      }
+    #para {
+      font-weight: 600;
+      /* color: rgb(34, 255, 0); */
+    }
+    
+    ol {
+      padding: 3%;
+      font-family: 'Courier New', Courier, monospace;
+    }
 
-      #h3, h1 {
-        text-align: center;
-        margin-top: 5%;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-      }
+    .form input[type="submit"], [type="button"] {
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: blue;
+      border-radius: 5px;
+      padding: 8px 12px;
+      outline: auto;
+      cursor: pointer;
+    }
 
-      span {
-        font-family: verdana;
-      }
+    form input[type="submit"], [type="button"]:hover {
+      background-color: rgb(86, 86, 255);
+    }
+
+    h3, h1 {
+      text-align: center;
+      margin-top: 5%;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    .form input[type="number"] {
+      width: 44%;
+      padding: 8px 20px;
+    }
+
+    .lastResult {
+      color: white;
+      padding: 6px 8p;
+    }
       
-      .form input[type="number"] {
-        width: 44%;
-        padding: 10px 20px;
+    @media only screen and (max-width: 600px) {
+      .form input[type="submit"] {
+        margin-top: 2rem;
       }
+      p {
+        font-size: 14px;
+      }
+    }
 
-      .form input[type="submit"], [type="button"] {
-        color: white;
-        font-family: Arial, Helvetica, sans-serif;
-        background-color: blue;
-        border-radius: 5px;
-        padding: 8px 12px;
-        outline: auto;
-        cursor: pointer;
-      }
-
-      .lastResult {
-        color: white;
-        padding: 3px;
-      }
-
-      @media only screen and (max-width: 600px) {
-        .form input[type="submit"] {
-          margin-top: 2rem;
-        }
-      }
   </style>
 </head>
 <body>
   <h1>Oops!</h1>
 
   <p>This website is currently under development and maintenance according to personal preferrences, laveraging frontend skills acquired.</p>
-  <p>Technologies used include: <span>Html</span>, <span>Css</span>, <span>Scss</span>, <span>Javascript</span>, <span>Typescript</span>, <span>React</span> and <span>PHP</span>.<br>We will be right back.</p>
-  <p id="para">Oh! No, wait... do you mind if we play a game? Oh yeah, can't wait, let's go.</p>
+  <p>Technologies used include: <span>Html</span>, <span>Css</span>, <span>Scss</span>, <span>Javascript</span>, <span>Typescript</span>, <span>React</span> and <span>PHP</span>.<br><br>We will be right back.</p>
+  
+  <p id="para">Oh! No, wait... do you mind if we play a game? If You win you get a reward as follows: </p>
+  <ol class="myList">
+    <li>1st attempt - $5</li>
+    <li>2nd attempt - $3</li>
+    <li>3rd attempt - $2.5</li>
+    <li>4th attempt - $1</li>
+    <li>5th attempt - $0.5</li>
+    <li>6th - 10th attempt - No reward</li>
+  </ol>
 
   
   <button type="button" id="btn">Let's Go</button>
   
   <div id="game">
 
-    <h3 id="h3">Number guessing game</h3>
+    <h3>Number guessing game</h3>
 
     <p>We have selected a random number between 1 and 100. See if you can guess it in 10 turns or fewer. We'll tell you if your guess was too high or too low.</p>
     <div class="form">
@@ -95,16 +113,18 @@
     </div>
   </div>
   
-<script>
+  <script>
     const letsGoBtn = document.getElementById('btn');
     const myGame = document.getElementById('game');
     
-    letsGoBtn.addEventListener('click', letSGo);
     myGame.style.display = "none";
   
     function letSGo() {
-      myGame.style.display = "block"
+      myGame.style.display = "block";
+      letsGoBtn.style.backgroundColor = 'green';
     }
+
+    letsGoBtn.addEventListener('click', letSGo);
   
     let randomNumber = Math.floor(Math.random() * 100) + 1;
 
@@ -123,14 +143,54 @@
     function checkGuess() {
       const userGuess = Number(guessField.value);
       if (guessCount === 1) {
-        guesses.textContent = "Previous guesses:";
+        guesses.textContent = "Previous guesses: ";
       }
       guesses.textContent = `${guesses.textContent} ${userGuess}`;
 
       if (userGuess === randomNumber) {
-        lastResult.textContent = "Congratulations! You got it right!";
-        lastResult.style.backgroundColor = "green";
-        lowOrHi.textContent = "";
+        ifCorrectGuess();
+
+        switch (guessCount) {
+          case 1:
+            correctAttempts();     
+          break;
+          case 2: 
+            correctAttempts();     
+            
+          break;
+          case 3: 
+            correctAttempts();     
+            
+          break;
+          case 4: 
+            correctAttempts();     
+            
+          break;
+          case 5: 
+            correctAttempts();     
+            
+          break;
+          default: 
+            lowOrHi.textContent = "No reward!";
+        }
+
+        function ifCorrectGuess() {
+          lastResult.textContent = "Congratulations! You got it right!";
+          lastResult.style.backgroundColor = "green";
+          lowOrHi.textContent = "";
+        }
+        
+        function correctAttempts() {
+          let paymentList = document.querySelector("li")
+          for (const paymentItems of paymentList) {
+            localStorage.setItem('name', paymentItems);
+          }
+          const myPrompt = `You got it right on your ${paymentItems}. Enter your Mpesa number: `
+
+          prompt(myPrompt);
+          alert("Processing payment... Please ensure you've subscribed to the YouTube channel for your payment to be complete.");
+        }
+
         setGameOver();
       }
       else if (guessCount === 10) {
@@ -138,6 +198,11 @@
         lowOrHi.textContent = "";
         setGameOver();
       }
+
+      else if (guessCount === 7) {
+        alert('You have 3 remaining attempt, try your best!');
+      }
+
       else {
         lastResult.textContent = "Wrong!";
         lastResult.style.backgroundColor = "red";
@@ -162,6 +227,8 @@
       resetButton.textContent = "Start new game";
       document.body.append(resetButton);
       resetButton.addEventListener("click", resetGame);
+      resetButton.style.display.backgroundColor = 'blue'
+      resetButton.style.padding = '8px 12px'
     }
 
     function resetGame() {
