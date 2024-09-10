@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Number guessing game</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <style>
     * {
       padding: 0;
@@ -79,7 +80,7 @@
 <body>
   <h1>Oops!</h1>
 
-  <p>This website is currently under development and maintenance according to personal preferrences, laveraging frontend skills acquired.</p>
+  <p>This website is currently under development and maingit add tenance according to personal preferrences, laveraging frontend skills acquired.</p>
   <p>Technologies used include: <span>Html</span>, <span>Css</span>, <span>Scss</span>, <span>Javascript</span>, <span>Typescript</span>, <span>React</span> and <span>PHP</span>.<br><br>We will be right back.</p>
   
   <p id="para">Oh! No, wait... do you mind if we play a game? If You win you get a reward as follows: </p>
@@ -105,6 +106,11 @@
       <input type="number" min="1" max="100" required id="guessField" class="guessField">
       <input type="submit" value="Submit guess" class="guessSubmit">
     </div>
+
+    <div class="alert alert-success alert-dismissible fade in">
+      <button class="close" data-dismiss="alert" aria-label="close">&times;</button>
+      <strong>Success!</strong> Congratulations, You won.
+    </div>
     
     <div class="resultParas">
       <p class="guesses"></p>
@@ -114,24 +120,22 @@
   </div>
   
   <script>
-    const letsGoBtn = document.getElementById('btn');
-    const myGame = document.getElementById('game');
+    const letsGoBtn = document.querySelector('#btn');
+    const game = document.getElementById('game');
     
-    myGame.style.display = "none";
+    game.style.display = "none";
   
     function letSGo() {
-      myGame.style.display = "block";
+      game.style.display = "block";
       letsGoBtn.style.backgroundColor = 'green';
     }
 
     letsGoBtn.addEventListener('click', letSGo);
   
     let randomNumber = Math.floor(Math.random() * 100) + 1;
-
     const guesses = document.querySelector(".guesses");
     const lastResult = document.querySelector(".lastResult");
     const lowOrHi = document.querySelector(".lowOrHi");
-
     const guessSubmit = document.querySelector(".guessSubmit");
     const guessField = document.querySelector(".guessField");
 
@@ -147,6 +151,17 @@
       }
       guesses.textContent = `${guesses.textContent} ${userGuess}`;
 
+      function correctAttempts() {
+          let paymentList = document.querySelector("li")
+          for (let paymentItems of paymentList) {
+            localStorage.setItem('name', paymentItems);
+          }
+          const myPrompt = `You got it right on your ${paymentItems}. Enter your Mpesa number: `
+
+          prompt(myPrompt);
+          alert("Processing payment... Please ensure you've subscribed to the YouTube channel for your payment to be complete.");
+        }
+        
       if (userGuess === randomNumber) {
         ifCorrectGuess();
 
@@ -156,19 +171,15 @@
           break;
           case 2: 
             correctAttempts();     
-            
           break;
           case 3: 
             correctAttempts();     
-            
           break;
           case 4: 
             correctAttempts();     
-            
           break;
           case 5: 
             correctAttempts();     
-            
           break;
           default: 
             lowOrHi.textContent = "No reward!";
@@ -179,18 +190,7 @@
           lastResult.style.backgroundColor = "green";
           lowOrHi.textContent = "";
         }
-        
-        function correctAttempts() {
-          let paymentList = document.querySelector("li")
-          for (const paymentItems of paymentList) {
-            localStorage.setItem('name', paymentItems);
-          }
-          const myPrompt = `You got it right on your ${paymentItems}. Enter your Mpesa number: `
-
-          prompt(myPrompt);
-          alert("Processing payment... Please ensure you've subscribed to the YouTube channel for your payment to be complete.");
-        }
-
+      
         setGameOver();
       }
       else if (guessCount === 10) {
@@ -200,7 +200,7 @@
       }
 
       else if (guessCount === 7) {
-        alert('You have 3 remaining attempt, try your best!');
+        alert('You have 3 remaining attempts, try your best!');
       }
 
       else {
@@ -252,6 +252,9 @@
     }
 
   </script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 </body>
 </html>
