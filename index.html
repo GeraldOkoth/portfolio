@@ -78,6 +78,12 @@
   </style>
 </head>
 <body>
+
+  <label for="theme">Choose theme:</label>
+  <select name="theme" id="theme">
+    <option value="white">White</option>
+    <option value="white">Black</option>
+  </select>
   <h1>Oops!</h1>
 
   <p>This website is currently under development and maingit add tenance according to personal preferrences, laveraging frontend skills acquired.</p>
@@ -119,9 +125,27 @@
     </div>
   </div>
   
-  <script>
-    const letsGoBtn = document.querySelector('#btn');
-    const game = document.getElementById('game');
+<script>
+    const select = document.querySelector("select"); 
+    const html = document.querySelector("html"); 
+    const letsGoBtn = document.getElementById('btn');
+    const myGame = document.getElementById('game');
+
+    function changeTheme(bgColor, txtColor) {
+      html.style.backgroundColor = "rgb(24, 24, 24)";
+      html.style.color = "white";
+    }
+
+    select.addEventListener("change", () => {
+      if (select.value === "black") {
+        changeTheme("black", "white");
+      }
+      else {
+        changeTheme("white", "black");
+      }
+      // select.value === "black" ? changeTheme("black", "white") 
+      //                          : changeTheme("white", "black")
+    });
     
     game.style.display = "none";
   
