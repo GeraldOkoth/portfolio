@@ -5,3 +5,4 @@ styles.css.map
 package-lock.json
 package.json
 node_modules/
+typescript/hero-image.ts
