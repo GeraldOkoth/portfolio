@@ -1,52 +1,52 @@
-const letsGoBtn = document.getElementById('btn');
-const myGame = document.getElementById('game');
-
 const select = document.querySelector("select"); 
 const html = document.querySelector("html");
 const body = document.querySelector("body");
 
-  function changeTheme(bgColor, txtColor) {
-    body.style.backgroundColor = bgColor;
-    body.style.color = txtColor;
+function changeTheme(bgColor, txtColor) {
+  body.style.backgroundColor = bgColor;
+  body.style.color = txtColor;
+}
+
+// Changes from light to dark theme
+select.addEventListener("change", () => {
+  select.value === "black" ? changeTheme("rgb(40, 40, 40)", "white") : changeTheme("white", "black");
+  select.style.outline = "none";
+  changeSelectTheme();
+});
+
+function changeSelectTheme(bgColor, txtColor) {
+  if (select.value === "black") {
+    select.style.color = "black";
+    guessField.style.color = "black";
   }
-
-  function changeSelectTheme(bgColor, txtColor) {
-    if (select.value === "black") {
-      select.style.color = "black";
-      guessField.style.color = "black";
-    }
-    else {
-      select.style.color = txtColor;        
-    }
+  else {
+    select.style.color = txtColor;        
   }
+}
 
-  select.addEventListener("change", () => {
-    select.value === "black" ? changeTheme("rgb(40, 40, 40)", "white") : changeTheme("white", "black");
-    select.style.outline = "none";
-    changeSelectTheme();
-  });
+const letsGoBtn = document.getElementById('btn');
+const myGame = document.getElementById('game');
 
-  
-  game.style.display = "none";
+myGame.style.display = "none";
 
-  function letSGo() {
-    game.style.display = "block";
-    letsGoBtn.style.backgroundColor = 'green';
-  }
+// Displays the hidden game
+function letSGo() {
+  myGame.style.display = "block";
+  letsGoBtn.style.backgroundColor = 'green';
+}
 
-  letsGoBtn.addEventListener('click', letSGo);
+letsGoBtn.addEventListener('click', letSGo);
 
-  let randomNumber = Math.floor(Math.random() * 100) + 1;
-  const guesses = document.querySelector(".guesses");
-  const lastResult = document.querySelector(".lastResult");
-  const lowOrHi = document.querySelector(".lowOrHi");
-  const guessSubmit = document.querySelector(".guessSubmit");
-  const guessField = document.querySelector(".guessField");
+let randomNumber = Math.floor(Math.random() * 100) + 1;
+const guesses = document.querySelector(".guesses");
+const lastResult = document.querySelector(".lastResult");
+const lowOrHi = document.querySelector(".lowOrHi");
+const guessSubmit = document.querySelector("#guessSubmit");
+const guessField = document.querySelector(".guessField");
 
-  let guessCount = 1;
-  let resetButton;
-  guessField.focus();
-
+let guessCount = 1;
+let resetButton;
+guessField.focus();
 
   function checkGuess() {
     const userGuess = Number(guessField.value);
@@ -55,16 +55,16 @@ const body = document.querySelector("body");
     }
     guesses.textContent = `${guesses.textContent} ${userGuess}`;
 
-    function correctAttempts() {
-        let paymentList = document.querySelector("li")
-        for (let paymentItems of paymentList) {
-          localStorage.setItem('name', paymentItems);
-        }
-        const myPrompt = `You got it right on your ${paymentItems}. Enter your Mpesa number: `
+    // function correctAttempts() {
+    //     let paymentList = document.querySelector("li")
+    //     for (let paymentItems of paymentList) {
+    //       localStorage.setItem('name', paymentItems);
+    //     }
+    //     const myPrompt = `You got it right on your ${paymentItems}. Enter your Mpesa number: `
 
-        prompt(myPrompt);
-        alert("Processing payment... Please ensure you've subscribed to the YouTube channel for your payment to be complete.");
-      }
+    //     prompt(myPrompt);
+    //     alert("Processing payment... Please ensure you've subscribed to the YouTube channel for your payment to be complete.");
+    // }
       
     if (userGuess === randomNumber) {
       ifCorrectGuess();
