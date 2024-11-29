@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import './styles.css';
 import HomePage from './HomePage';
 import Slideshow from './Slideshow';
 import AboutPage from './AboutPage';
