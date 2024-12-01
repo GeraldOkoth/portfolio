@@ -14,8 +14,8 @@ function App() {
   return (
     <div className="App">
       <HomePage />
-      <Slideshow />
       <AboutPage />
+      <Slideshow />
       <Services />
       <Testimonials />
       <Faq />
