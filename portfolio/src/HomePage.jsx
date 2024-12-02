@@ -34,7 +34,7 @@ function HomePage() {
 
 		  <div className="hero">
         <div className="hero-image">
-          <img src={"/assets/images/profile.jpg"} id="hero-image" alt="my profile pic" width="300px" height="300px" />
+          <img src={"/images/profile.jpg"} id="hero-image" alt="my profile pic" width="300px" height="300px" />
         <div className="loader"></div>
         </div>
         <div className="hero-info">
@@ -77,15 +77,15 @@ function HomePage() {
 			  </div>
 		  </div>
       {/* <div className="bubble">
-        <img src={"/assets/images/bubble.png"} alt="bubble" />
-        <img src={"/assets/images/bubble.png"} alt="bubble" />
-        <img src={"/assets/images/bubble.png"} alt="bubble" />
-        <img src={"/assets/images/bubble.png"} alt="bubble" />
-        <img src={"/assets/images/bubble.png"} alt="bubble" />
-        <img src={"/assets/images/bubble.png"} alt="bubble" />
-        <img src={"/assets/images/bubble.png"} alt="bubble" />
-        <img src={"/assets/images/bubble.png"} alt="bubble" />
-        <img src={"/assets/images/bubble.png"} alt="bubble" />
+        <img src={"/images/bubble.png"} alt="bubble" />
+        <img src={"/images/bubble.png"} alt="bubble" />
+        <img src={"/images/bubble.png"} alt="bubble" />
+        <img src={"/images/bubble.png"} alt="bubble" />
+        <img src={"/images/bubble.png"} alt="bubble" />
+        <img src={"/images/bubble.png"} alt="bubble" />
+        <img src={"/images/bubble.png"} alt="bubble" />
+        <img src={"/images/bubble.png"} alt="bubble" />
+        <img src={"/images/bubble.png"} alt="bubble" />
       </div>  */}
 	    </section>
     </>

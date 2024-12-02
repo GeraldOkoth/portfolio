@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import './styles.css';
 import HomePage from './HomePage';
-import Slideshow from './Slideshow';
+// import Slideshow from './Slideshow';
 import AboutPage from './AboutPage';
 import Services from './Services';
 import Testimonials from './Testimonials';
@@ -15,7 +15,7 @@ function App() {
     <div className="App">
       <HomePage />
       <AboutPage />
-      <Slideshow />
+      {/* <Slideshow /> */}
       <Services />
       <Testimonials />
       <Faq />

@@ -75,3 +75,6 @@ function showSlides(n) {
 //     }
 //   });
 
+// Inside script.js
+export function plusSlides(n) { /* Logic */ }
+export function currentSlide(n) { /* Logic */ }
