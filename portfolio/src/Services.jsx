@@ -11,17 +11,17 @@ function Services() {
           </header>
           <div className="services-cta">
             <div className="cheap">
-              <img src={"images/Screenshot 2023-11-22 141107.png"} alt="Affodable cost" width="150px" height="150px" />
+              <img src={"/images/Screenshot 2023-11-22 141107.png"} alt="Affodable cost" width="150px" height="150px" />
               <h3>Affodable cost</h3>
               <p>I offer the best services to clients in need at the most affordable cost.</p>
             </div>
             <div className="quality">
-                <img src={"images/Screenshot 2023-11-22 141831.png"} alt="Quality services" width="150px" height="150px" />
+                <img src={"/images/Screenshot 2023-11-22 141831.png"} alt="Quality services" width="150px" height="150px" />
                 <h3>Quality Services</h3>
                 <p>Customer satisfaction is key to sustaining any bussiness. With me quality services are guaranteed.</p>
             </div>
             <div className="online-booking">
-                <img src={"images/Screenshot 2023-11-22 143059.png"} alt="Online booking" width="150px" height="150px" />
+                <img src={"/images/Screenshot 2023-11-22 143059.png"} alt="Online booking" width="150px" height="150px" />
                 <h3>Online Booking</h3>
                 <p>My services are accessible to you at the palm of your hands, book with me today.</p>
             </div>

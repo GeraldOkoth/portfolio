@@ -30,7 +30,10 @@ body {
 .home-page {
   min-height: 100vh;
   position: relative;
-  background: linear-gradient(rgba(0, 0, 0, 0.8), #000000), url(./images/istockphoto-1465597988-1024x1024.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.8), #000000);
+  /* url(/images/istockphoto-1465597988-1024x1024.jpg) */
+  background-size: cover; 
+  background-position: center center;
 }
 
 .navbar {
