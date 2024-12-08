@@ -1,14 +1,13 @@
 import React from 'react';
-import './App.css';
 import './styles.css';
-import HomePage from './HomePage';
+import HomePage from './pages/home/HomePage';
 // import Slideshow from './Slideshow';
-import AboutPage from './AboutPage';
-import Services from './Services';
-import Testimonials from './Testimonials';
-import Faq from './Faq';
-import Contact from './Contact';
-import Footer from './Footer';
+import AboutPage from './pages/about/AboutPage';
+import Services from './pages/services/Services';
+import Testimonials from './pages/testimonials/Testimonials';
+import Faq from './pages/faq/Faq';
+import Contact from './pages/contact/Contact';
+import Footer from './pages/footer/Footer';
 
 function App() {
   return (
