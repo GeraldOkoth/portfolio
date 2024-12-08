@@ -129,3 +129,60 @@
 // }
 
 // export default Slideshow;
+
+<section className="slideShow">
+    <div className="gallery">
+        <header className="gallery-header">
+            <h3 className="pictorials">Pictorials</h3>
+            <span>
+                <hr /><hr /><hr />
+            </span>
+        </header>
+        <hr id="image-gal-hr" />
+        <div className="slideshow-container">
+            <div className="slide fade first-child">
+                <div className="number">1 / 6</div>
+                <img src="../Images/1672053154170.jpg" alt="my pic" width="100%" height="400px" />
+                 <div className="caption">caption</div>
+            </div>
+            <div className="slide fade">
+                <div className="number">2 / 6</div>
+                <img src="../Images/IMG_7958 (1).JPG" alt="my pic" width="100%" height="400px" />
+                 <div className="caption">caption</div> 
+            </div>
+            <div className="slide fade">
+                <div className="number">3 / 6</div>
+                <img src="../Images/IMG_20230211_134435_930.jpg" alt="my pic" width="100%" height="400px" />
+                 <div className="caption">caption</div>
+            </div>
+            <div className="slide fade">
+                <div className="number">4 / 6</div>
+                <img src="../Images/IMG_20220417_104146_015.jpg" alt="my pic" width="100%" height="400px" />
+                 <div className="caption">caption</div>
+            </div>
+            <div className="slide fade">
+                <div className="number">5 / 6</div>
+                <img src="../Images/IMG_20231210_144325.jpg" alt="my pic" width="100%" height="400px" />
+                 <div className="caption">caption</div>
+            </div>
+            <div className="slide fade">
+                <div className="number">6 / 6</div>
+                <img src="../Images/1672053194398.jpg" alt="my pic" width="100%" height="400px" />
+                 <div className="caption">caption</div>
+            </div>
+
+            <span className="prev" onclick="plusSlides(-1)">&#10094;</span>
+            <span className="next" onclick="plusSlides(1)">&#10095;</span>
+
+            <div className="dots">
+                <span className="dot" onclick="currentSlide(1)"></span>
+                <span className="dot" onclick="currentSlide(2)"></span>
+                <span className="dot" onclick="currentSlide(3)"></span>
+                <span className="dot" onclick="currentSlide(4)"></span>
+                <span classNameName="dot" onclick="currentSlide(5)"></span>
+                <span className="dot" onclick="currentSlide(6)"></span>
+            </div>
+
+        </div>
+    </div>
+</section>

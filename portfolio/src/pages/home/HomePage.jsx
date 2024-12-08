@@ -6,7 +6,7 @@ function HomePage() {
   };
   return (
     <>
-      <section className="home-page">
+      <section className="home-page" id="top">
       <div className="navbar">
         <div className="logo">
           <a href="index.html"><span id="G">G</span><span id="e">e</span><span id="r">r</span><span id="o">o</span></a>
