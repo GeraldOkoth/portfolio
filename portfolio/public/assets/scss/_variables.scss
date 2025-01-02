@@ -10,8 +10,8 @@ $fontSize: 1rem;
 $fontWeights: (
     "regular": 400,
     "medium": 500,
-    "bold": 700
+    "bold": 800
 );
-$linearGradient: linear-gradient(rgba(0,0,0,0.8), #000000);
+$linearGradient: linear-gradient(#000000, rgba(0,0,0,0.5));
 $mobile: 600px;
 $tablet: 900px;

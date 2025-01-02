@@ -16,12 +16,13 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   color: #000;
   background-color: #fff;
-  font-size: 1rem;
+  font-size: 1rem !important;
   font-family: "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -30,85 +31,66 @@ body {
 .home-page {
   min-height: 100vh;
   position: relative;
-  background: linear-gradient(rgba(0, 0, 0, 0.8), #000000);
+  background: linear-gradient(#000000, rgba(0, 0, 0, 0.5));
 }
 
 .navbar {
   z-index: 1000;
-  padding: 0.1em 4em;
   width: 100%;
   display: flex;
   position: fixed;
   align-items: center;
   justify-content: space-between;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.7);
   box-shadow: 0 0 12px;
+  padding: 0.5em 3rem;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 .navbar .logo {
-  letter-spacing: 0.17em;
-  text-transform: uppercase;
+  transition: all 0.3s ease;
+  padding-left: 3.6rem;
+  font-weight: bold;
 }
 .navbar .logo a {
+  font-family: "Cinzel", serif;
   text-decoration: none;
-  transition: all 2s ease;
+  color: #fff;
   font-size: 1.5rem;
-  font-weight: 700;
-}
-.navbar .logo a #G {
-  color: red;
-}
-.navbar .logo a #e {
-  color: green;
-}
-.navbar .logo a #r {
-  color: blue;
+  font-font-weight: 800;
 }
 .navbar .logo a #o {
-  color: orange;
+  text-shadow: 0 10px 75px orange;
 }
-.navbar .logo:hover #G {
-  color: orange;
-}
-.navbar .logo:hover #e {
-  color: blue;
-}
-.navbar .logo:hover #r {
-  color: green;
+.navbar .logo:hover {
+  transform: scale(1.1);
 }
 .navbar .logo:hover #o {
-  color: red;
+  color: orange;
 }
 .navbar .menu ul {
+  margin-right: 4rem;
   display: flex;
+}
+.navbar .menu .active {
+  color: orange;
+  border-bottom: 0.16em solid orange;
 }
 .navbar .menu a {
   color: #fff;
-  padding: 0.8em;
   position: relative;
   display: inline-block;
   text-decoration: none;
+  margin-left: 2rem;
 }
-.navbar .menu a::after {
-  width: 0%;
-  top: unset;
-  bottom: 0;
-  left: 0%;
-  right: unset;
-  position: absolute;
-  content: "";
-  height: 0.16em;
-  transition: width 0.3s;
-  background-color: orange;
-  border-radius: 2em 2em 0 0;
-}
-.navbar .menu a:hover::after {
-  width: 100%;
-}
-.navbar .menu a:hover {
-  font-weight: 700;
+.navbar .menu a:hover,
+.navbar .menu a .active {
+  font-weight: 800;
   color: #999;
+  border-bottom: 0.16em solid orange;
 }
-.navbar .menu .fa-solid, .navbar .menu .fa-brands {
+.navbar .menu .fa-solid,
+.navbar .menu .fa-brands {
   color: #4366ff;
   margin: 0 5px;
 }
@@ -118,137 +100,70 @@ body {
 .navbar .menu .onhover:hover .drop-down-content {
   display: block;
 }
-.navbar .menu .drop-down-content {
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  display: absolutely;
-  background-color: #d2d2d2;
-  width: 100%;
-  display: none;
-  margin-top: 5%;
-  z-index: inherit;
-  border-radius: 5px;
-}
-.navbar .menu .drop-down-content a {
-  padding: 8px 10px;
-  display: block;
-}
 
 .hero {
   width: 80%;
-  transform: translate(10%, 40%);
+  min-height: 100vh;
   display: flex;
   position: absolute;
-  align-items: flex-start;
-  justify-content: space-around;
-}
-.hero .hero-image {
-  position: relative;
-}
-.hero .hero-image img {
-  transition: 0.5s;
-  border-radius: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: top;
-     object-position: top;
-  box-shadow: 0 0 25px orange;
-}
-.hero .hero-image .loader {
-  height: 300px;
-  width: 300px;
-  position: absolute;
-  top: 0%;
-  border: 2px solid rgb(233, 233, 233);
-  border-radius: 50%;
-  border-top: 2px solid red;
-  border-bottom: 2px solid green;
-  border-right: 2px solid blue;
-  border-left: 2px solid orange;
-  animation: spin 2s linear infinite;
-}
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  0% {
-    transform: rotate(360deg);
-  }
+  align-items: center;
+  justify-content: start;
+  gap: 15rem;
+  padding-left: 6.3rem;
 }
 .hero .hero-info {
-  margin-left: 5%;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 .hero .hero-info .hero-text {
   color: #fff;
 }
-.hero .hero-info .hero-text h1 {
-  text-transform: uppercase;
-  text-shadow: 0.6px 1.5px 3px #fff;
-  font: 2.5rem "Cinzel", serif;
-  letter-spacing: 0.3rem;
+.hero .hero-info .hero-text h1 font {
+  font-family: "Cinzel", serif;
+  font-size: 3rem;
+  font-weight: 800;
 }
-@keyframes typing {
-  0% {
-    width: 0;
-  }
-  50% {
-    width: 100%;
-  }
-  100% {
-    width: 0;
-  }
-}
-@keyframes blink {
-  50% {
-    border-color: transparent;
-  }
-}
-.hero .hero-info .hero-text .typing-text {
-  display: inline-block;
-  animation: typing 8s steps(30, end) 0s infinite, blink 0.75s step-end infinite;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid;
-  width: 0;
+.hero .hero-info .hero-text h1 #orange {
+  color: orange;
 }
 .hero .hero-info .hero-text p {
   font-size: 1.2rem;
-  padding: 1.2rem 0;
+  padding: 1rem 0;
 }
-.hero .hero-info .hero-text p #orange {
-  padding-bottom: 10px;
-  font-size: 1.6rem;
+.hero .hero-info .hero-text .text-animation span::before {
+  content: "UI/UX Designer";
   color: orange;
+  animation: animate 20s infinite;
 }
-.hero .hero-info .hero-text p #blue {
-  color: #5555ff;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+.hero .hero-info #dynamic-text::after {
+  content: "|";
+  display: inline-block;
+  margin-left: 2px;
+  animation: blink 0.5s step-end infinite;
 }
-.hero .hero-info .hero-text p #pink {
-  color: pink;
-}
-.hero .hero-info .hero-text p .orange-1 {
-  color: orange;
-}
-.hero .hero-info .hero-text #cheers {
-  font-size: 28px;
-  color: #00ff00;
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
 }
 .hero .hero-info .hero-btns {
-  padding: 2.5em 0;
+  padding: 2rem 0;
+  align-items: flex-start;
 }
 .hero .hero-info .hero-btns a {
   color: #fff;
   cursor: pointer;
+  margin-right: 15px;
   border: none;
   text-decoration: none;
   transition: all 0.3s;
   border-radius: 7px;
-  padding: 0.7em 3em;
+  padding: 0.7em 1em;
   background-color: #4366ff;
   box-shadow: 0 0 1px rgba(128, 128, 128, 0.2);
+  justify-content: space-between;
   z-index: 1;
-  margin: 0 1em;
   border-radius: 1.5em;
 }
 .hero .hero-info .hero-btns a span {
@@ -262,8 +177,10 @@ body {
   position: absolute;
 }
 .hero .hero-info .hero-btns a:hover {
+  scale: 1.05;
+  border: 1px solid orange;
   color: #000;
-  background-color: #6879fb;
+  background-color: transparent;
   box-shadow: 0 3px 3px orange;
 }
 .hero .hero-info .wrapper {
@@ -272,10 +189,11 @@ body {
   align-items: center;
 }
 .hero .hero-info .wrapper .icon {
+  display: inline-block;
   height: 35px;
   width: 35px;
   border-radius: 35px;
-  margin: 1em 5px;
+  margin: 0 5px;
   text-align: center;
   overflow: hidden;
   line-height: 35px;
@@ -290,6 +208,7 @@ body {
   align-items: center;
   justify-content: space-evenly;
   width: 150px;
+  box-shadow: 0 0 25px #fff;
 }
 .hero .hero-info .wrapper .icon:hover i {
   color: #fff;
@@ -329,6 +248,24 @@ body {
 }
 .hero .hero-info .wrapper .yt:hover {
   background: #f00;
+}
+.hero .hero-image {
+  position: relative;
+}
+.hero .hero-image img {
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  box-shadow: 0 0 25px rgb(224, 224, 224);
+}
+.hero .hero-image img:hover {
+  transform: translateY(4vh) scale(1.2, 1.2);
+  border: 1.5px solid orange;
+  box-shadow: 0 0 25px #fff, 0 0 50px #fff, 0 0 100px #fff;
 }
 
 /*hero on small screen*/
@@ -497,7 +434,7 @@ body {
   position: absolute;
   cursor: pointer;
   padding: 16px;
-  font: 18px 700;
+  font: 18px 800;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   background-color: rgba(255, 255, 255, 0.9);
@@ -938,7 +875,7 @@ body {
 .panels .accordion:after {
   content: "+";
   color: #777;
-  font-weight: 700;
+  font-weight: 800;
   float: right;
 }
 .panels .accordion.active:after {
@@ -1045,11 +982,12 @@ body {
 .contact-section .contact-form form button[type=submit] {
   color: #fff;
   cursor: pointer;
+  margin-right: 15px;
   border: none;
   text-decoration: none;
   transition: all 0.3s;
   border-radius: 7px;
-  padding: 0.7em 3em;
+  padding: 0.7em 1em;
   background-color: #4366ff;
   box-shadow: 0 0 1px rgba(128, 128, 128, 0.2);
 }
@@ -1139,11 +1077,12 @@ body {
 .my-footer .top a {
   color: #fff;
   cursor: pointer;
+  margin-right: 15px;
   border: none;
   text-decoration: none;
   transition: all 0.3s;
   border-radius: 7px;
-  padding: 0.7em 3em;
+  padding: 0.7em 1em;
   background-color: #4366ff;
   box-shadow: 0 0 1px rgba(128, 128, 128, 0.2);
   bottom: 35%;
