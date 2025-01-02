@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+export default function textAnimate() {
   const textArray = [
     "Frontend Developer",
     "Web Designer",
@@ -40,4 +40,4 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   loop(); // Start the animation
-});
+}
