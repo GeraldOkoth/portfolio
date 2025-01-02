@@ -131,10 +131,19 @@ body {
   font-size: 1.2rem;
   padding: 1rem 0;
 }
-.hero .hero-info .hero-text .text-animation span::before {
-  content: "UI/UX Designer";
+.hero .hero-info .hero-text .text-animation {
+  font-size: 1.5rem;
+  font-weight: 800;
+  min-width: 280px;
+}
+.hero .hero-info .hero-text .text-animation span {
+  position: relative;
+}
+.hero .hero-info #dynamic-text {
+  font-size: 1.5rem;
+  font-weight: 800;
   color: orange;
-  animation: animate 20s infinite;
+  margin-top: 1rem;
 }
 .hero .hero-info #dynamic-text::after {
   content: "|";
@@ -180,7 +189,6 @@ body {
   scale: 1.05;
   border: 1px solid orange;
   color: #000;
-  background-color: transparent;
   box-shadow: 0 3px 3px orange;
 }
 .hero .hero-info .wrapper {

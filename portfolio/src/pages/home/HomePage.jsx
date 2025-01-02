@@ -1,10 +1,15 @@
-import React from "react";
-import { Helmet } from "react-helmet";
+import React, { useEffect } from "react";
+import textAnimate from "./text-animation";
+// import { Helmet } from "react-helmet";
 
 function HomePage() {
   const myFunction = () => {
     // Define toggle logic here
   };
+
+  useEffect(() => {
+    textAnimate();
+  }, []);
 
   return (
     <>
@@ -24,12 +29,12 @@ function HomePage() {
                   className="active"
                   title="Home"
                 >
-                  <i classNam="fa-solid fa-house"></i>Home
+                  Home
                 </a>
               </li>
               <li>
                 <a href="#about" target="_self" title="About me">
-                  <i classNam="fa-solid fa-user"></i>About
+                  About
                 </a>
               </li>
               <li>
@@ -39,17 +44,17 @@ function HomePage() {
                   target="_self"
                   title="services"
                 >
-                  <i classNam="fa-brands fa-shopify"></i>Services
+                  Services
                 </a>
               </li>
               <li>
                 <a href="#testimonials" target="_self" title="Testimonials">
-                  <i classNam="fa-solid fa-bookmark"></i>Testimonials
+                  Testimonials
                 </a>
               </li>
               <li>
                 <a href="#contact" target="_self" title="Contact me">
-                  <i classNam="fa-solid fa-phone"></i>Contact
+                  Contact
                 </a>
               </li>
             </ul>
@@ -76,12 +81,12 @@ function HomePage() {
                 interfaces. I am looking forward to collaboration with other
                 tech-enthusiasts on GitHub code spaces.
               </p>
-              <Helmet>
+              {/* <Helmet>
                 <script
                   src="./text-animation.js"
                   type="text/javascript"
                 ></script>
-              </Helmet>
+              </Helmet> */}
             </div>
             <div className="hero-btns">
               <a href="#about" className="btn btn-primary" role="button">

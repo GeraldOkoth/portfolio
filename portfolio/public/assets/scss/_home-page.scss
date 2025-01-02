@@ -143,81 +143,21 @@
         font-size: 1.2rem;
         padding: 1rem 0;
       }
-      // .text-animation {
-      //   font-size: 1.5rem;
-      //   font-weight: weight(bold);
-      //   min-width: 280px;
-      // }
-      // .text-animation span {
-      //   position: relative;
-      // }
-      .text-animation span::before {
-        content: "UI/UX Designer";
-        color: $orange;
-        animation: animate 20s infinite;
+      .text-animation {
+        font-size: 1.5rem;
+        font-weight: weight(bold);
+        min-width: 280px;
       }
-      .text-animation span::after {
-        // content: "";
-        // position: absolute;
-        // height: 100%;
-        // width: calc(100% + 8px);
-        // border-left: 3px solid $orange;
-        // right: -8px;
-        // animation: cursor 0.6 infinite, typing 20s steps(14) infinite;
+      .text-animation span {
+        position: relative;
       }
     }
-    // @keyframes cursor {
-    //   to {
-    //     border-left: 3px solid $orange;
-    //   }
-    // }
-    // @keyframes animate {
-    //   0%,
-    //   20% {
-    //     content: "Frontend developer";
-    //   }
-    //   21%,
-    //   40% {
-    //     content: "Web designer";
-    //   }
-    //   41%,
-    //   60% {
-    //     content: "UI/UX Designer";
-    //   }
-    //   61%,
-    //   80% {
-    //     content: "Musician";
-    //   }
-    //   81%,
-    //   100% {
-    //     content: "Video editor";
-    //   }
-    // }
-    // @keyframes typing {
-    //   10%,
-    //   15%,
-    //   30%,
-    //   35%,
-    //   50%,
-    //   55%,
-    //   70%,
-    //   75%,
-    //   90%,
-    //   95% {
-    //     width: 0;
-    //   }
-    //   5%,
-    //   20%,
-    //   25%,
-    //   40%,
-    //   45%,
-    //   60%,
-    //   65%,
-    //   80%,
-    //   85% {
-    //     width: calc(100% + 8px);
-    //   }
-    // }
+    #dynamic-text {
+      font-size: 1.5rem;
+      font-weight: weight(bold);
+      color: $orange;
+      margin-top: 1rem;
+    }
     #dynamic-text::after {
       content: "|";
       display: inline-block;
@@ -250,7 +190,7 @@
           scale: 1.05;
           border: 1px solid $orange;
           color: $bodyTxtColor;
-          background-color: transparent;
+          // background-color: transparent;
           box-shadow: 0 3px 3px $orange;
         }
       }
@@ -348,69 +288,6 @@
     }
   }
 }
-
-// .bubble {
-//     width: 100%;
-//     bottom: 0px;
-//     // @include display();
-//     align-items: center;
-
-//     img {
-//         width: 25px;
-//         animation: bubble 7s linear infinite;
-
-//         &:nth-child(1) {
-//             width: 20px;
-//             animation-delay: 2s;
-//         }
-//         &:nth-child(2) {
-//             animation-delay: 1s;
-//         }
-//         &:nth-child(3) {
-//             width: 20px;
-//             animation-delay: 3s;
-//         }
-//         &:nth-child(4) {
-//             width: 35px;
-//             animation-delay: 4.5s;
-//         }
-//         &:nth-child(5) {
-//             width: 25px;
-//             animation-delay: 3s;
-//         }
-//         &:nth-child(6) {
-//             width: 20px;
-//             animation-delay: 6s;
-//         }
-//         &:nth-child(7) {
-//             width: 35px;
-//             animation-delay: 7s;
-//         }
-//         &:nth-child(8) {
-//             width: 10px;
-//             animation-delay: 6s;
-//         }
-//         &:nth-child(9) {
-//             width: 35px;
-//             animation-delay: 7s;
-//         }
-//     }
-// }
-
-// @keyframes bubble {
-//     0% {
-//         @include animation(0, translateY(0));
-//     }
-//     30% {
-//         @include animation(1, none);
-//     }
-//     70% {
-//         @include animation(1, none);
-//     }
-//     100% {
-//         @include animation(0, translateY(-80vh));
-//     }
-// }
 
 /*hero on small screen*/
 /*navbar on small screen*/
