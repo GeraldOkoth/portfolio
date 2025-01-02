@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles.css';
+import './css/dist/styles.css';
 import HomePage from './pages/home/HomePage';
 // import Slideshow from './Slideshow';
 import AboutPage from './pages/about/AboutPage';

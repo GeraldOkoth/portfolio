@@ -2,11 +2,12 @@
 @mixin button($boxShadowColor: gray) {
     color: $bodyBgColor;
     cursor: pointer;
+    margin-right: 15px;
     border: none;
     text-decoration: none;
     transition: all .3s;
     border-radius: 7px;
-    padding: .7em 3em;
+    padding: .7em 1em;
     background-color: #4366ff;
     box-shadow: 0 0 1px rgba($boxShadowColor, .2);
 }
