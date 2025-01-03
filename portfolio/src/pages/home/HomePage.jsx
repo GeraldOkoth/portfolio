@@ -145,8 +145,8 @@ function HomePage() {
               src={"/images/profile.jpg"}
               id="hero-image"
               alt="my profile pic"
-              width="300px"
-              height="300px"
+              width="400px"
+              height="400px"
             />
             {/* <div className="loader"></div> */}
           </div>
