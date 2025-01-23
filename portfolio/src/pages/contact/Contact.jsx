@@ -16,7 +16,7 @@ function Contact() {
         <header className="contact-header">
           <h2>Get in touch</h2>
           <span><hr /><hr /><hr /></span>
-          <p>I would love to respond to your queries. It is always my pleasure serving you. Let's get in touch. <span> :&#41</span>!</p>
+          <p>I would love to respond to your queries. It is always my pleasure serving you. Let's get in touch. <span> :&#41;</span>!</p>
 		    </header>
         <div className="contact-section">
           <div className="contact-address">
@@ -41,7 +41,6 @@ function Contact() {
             <div className="form-row">
               <div className="form-name">
                 <input type="text" name="firstname" id="firstname" placeholder="First Name" />
-                <input type="text" name="lastname" id="lastname" placeholder="Last Name" />
               </div>
               <div className="form-contact">
                 <input type="email" name="email" id="email" placeholder="someone@gmail.com" />
