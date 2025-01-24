@@ -1,25 +1,29 @@
 import React from 'react';
 import './css/dist/styles.css';
 import HomePage from './pages/home/HomePage';
-// import Slideshow from './Slideshow';
 import AboutPage from './pages/about/AboutPage';
 import Services from './pages/services/Services';
-import Testimonials from './pages/testimonials/Testimonials';
-import Faq from './pages/faq/Faq';
+import Education from './pages/education/Education';
+import Skills from './pages/skills/Skills';
 import Contact from './pages/contact/Contact';
-import Footer from './pages/footer/Footer';
+import Footer from './components/footer/Footer';
+// import Slideshow from './Slideshow';
+// import Testimonials from './pages/testimonials/Testimonials';
+// import Faq from './pages/faq/Faq';
 
 function App() {
   return (
     <div className="App">
       <HomePage />
       <AboutPage />
-      {/* <Slideshow /> */}
+      <Education /> 
+      <Skills />
       <Services />
-      <Testimonials />
-      <Faq />
       <Contact />
       <Footer />
+      {/* <Slideshow /> */}
+      {/* <Testimonials /> */}
+      {/* <Faq /> */}
     </div>
   );
 }
