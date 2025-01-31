@@ -2,11 +2,12 @@ import React, { useEffect } from "react";
 import textAnimate from "./text-animation";
 import TopNavigationBar from "../../components/header/TopNavigationBar";
 // import { Helmet } from "react-helmet";
-import profile from "/images/profile.jpg";
 
 function HomePage() {
   useEffect(() => {
-    textAnimate();
+    if (typeof textAnimate === "function") {
+      textAnimate();
+    }
   }, []);
 
   return (
@@ -89,7 +90,7 @@ function HomePage() {
           </div>
           <div className="hero-image">
             <img
-              src={profile}
+              src={"profile.jpg"}
               id="hero-image"
               alt="my profile pic"
               width="400px"
