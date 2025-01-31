@@ -1,71 +1,18 @@
 import React, { useEffect } from "react";
 import textAnimate from "./text-animation";
+import TopNavigationBar from "../../components/header/TopNavigationBar";
 // import { Helmet } from "react-helmet";
+import profile from "/images/profile.jpg";
 
 function HomePage() {
-  const myFunction = () => {
-    // Define toggle logic here
-  };
-
   useEffect(() => {
     textAnimate();
   }, []);
 
   return (
     <>
+      <TopNavigationBar />
       <section className="home-page" id="top">
-        <div className="navbar">
-          <div className="logo">
-            <a href="index.html">
-              Gerald <span id="o">Okoth</span>
-            </a>
-          </div>
-          <nav className="menu">
-            <ul id="menuLinks">
-              <li>
-                <a
-                  href="index.html"
-                  target="_self"
-                  className="active"
-                  title="Home"
-                >
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="#about" target="_self" title="About me">
-                  About
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#services"
-                  className="onhover"
-                  target="_self"
-                  title="services"
-                >
-                  Services
-                </a>
-              </li>
-              <li>
-                <a href="#testimonials" target="_self" title="Testimonials">
-                  Testimonials
-                </a>
-              </li>
-              <li>
-                <a href="#contact" target="_self" title="Contact me">
-                  Contact
-                </a>
-              </li>
-            </ul>
-            <div className="humburger-btn" onClick={() => myFunction()}>
-              <div className="bar1"></div>
-              <div className="bar2"></div>
-              <div className="bar3"></div>
-            </div>
-          </nav>
-        </div>
-
         <div className="hero">
           <div className="hero-info">
             <div className="hero-text">
@@ -96,7 +43,7 @@ function HomePage() {
                 href="/assets/gerald_okoth_myjobmag_curriculum_vitae.pdf"
                 className="btn btn-primary disabled"
                 role="button"
-                id="DownloadBtn"
+                id="downloadBtn"
               >
                 <span></span>Hire Me
               </a>
@@ -142,7 +89,7 @@ function HomePage() {
           </div>
           <div className="hero-image">
             <img
-              src={"/images/profile.jpg"}
+              src={profile}
               id="hero-image"
               alt="my profile pic"
               width="400px"
