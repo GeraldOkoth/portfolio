@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Number guessing game</title>
+  <link rel="shortcut icon" href="../../public/images/IMG_20220417_104146_015.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./src/css/dist/game.css">
+</head>
+<body>
+
+  <div class="ch-theme">
+    <!-- <label for="theme">Choose theme:</label> -->
+    <select title="choose theme" name="theme" id="theme">
+      <option value="Choose theme" selected disabled>Theme</option>
+      <option value="white">Light</option>
+      <option value="black">Dark</option>
+    </select>
+  </div>
+
+  <h1>Oops!!</h1>
+
+  <p>This website is currently under development and maintenance according to personal preferrences, laveraging front-end skills acquired.</p>
+  <p>Technologies used employed: <span>HTML</span>, <span>CSS</span>, <span>SCSS</span>, <span>Bootstrap</span>, <span>Javascript</span>, <span>Typescript</span>, and <span>React</span>.<br><br>We will be right back.</p>
+  
+  <p id="para">Oh! No, wait... do you mind if we play a game? If You win you get a reward as follows: </p>
+  <ol class="myList">
+    <li>1st attempt - $5</li>
+    <li>2nd attempt - $3</li>
+    <li>3rd attempt - $2</li>
+    <li>4th attempt - $1</li>
+    <li>5th attempt - $0.5</li>
+    <li>6th - 10th attempt - No reward</li>
+  </ol>
+
+  
+  <button type="button" class="btn btn-sm btn-success" data-toggle="collapse" data-target="#game" id="btn">LET'S GET STARTED</button>
+  
+  <div id="game" class="collapse">
+
+    <h3>Number guessing game</h3>
+
+    <p>We have selected a random number between 1 and 100. See if you can guess it in 10 turns or fewer. We'll tell you if your guess was too high or too low.</p>
+    <div class="form">
+      <label for="guessField">Enter a guess: </label>
+      <input type="number" min="1" max="100" required id="guessField" class="guessField">
+      <input type="submit" class="btn btn-md btn-info" value="Submit guess" id="guessSubmit">
+    </div>
+
+    <!-- <div class="alert alert-success alert-dismissible fade in">
+      <button class="close" data-dismiss="alert" aria-label="close">&times;</button>
+      <strong>Success!</strong> Congratulations, You won.
+    </div> -->
+    
+    <div class="resultParas">
+      <p class="guesses"></p>
+      <p class="lastResult"></p>
+      <p class="lowOrHi"></p>
+    </div>
+  </div>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="game.js"></script>
+
+</body>
+</html>
