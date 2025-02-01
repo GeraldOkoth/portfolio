@@ -1,83 +1,89 @@
 .Testimonials {
-    padding: 1.5rem 2rem;
-}
-.testimonials-header {
+  padding: 2rem;
+
+  .testimonials-header {
     text-align: center;
-	padding: 1rem 0;
+    padding: 1rem 0;
     color: $primaryColor;
 
     @include Hr(3rem);
+  }
+
+  .testimonies {
+    width: 90%;
+    margin: 2rem auto;
+    padding-bottom: 2rem;
+
+
+    .carousel-item {
+      padding: 15px;
+      transition: 0.5s;
+      width: 40%;
+      cursor: pointer;
+      border-radius: 5px;
+      border: 1px solid orange;
+      box-shadow: 0 5px 10px 3px #ddd;
+      background-color: #1f1e1f;
+
+      .user {
+        display: flex;
+        margin: 12px auto;
+
+        img {
+          width: 50px;
+          height: 50px;
+          object-fit: cover;
+          border-radius: 50%;
+          margin-right: 10px;
+        }
+
+        h5 {
+          margin: 0;
+        }
+
+        i.fa-brands,
+        small {
+          color: #27c0ff;
+        }
+      }
+
+      &:hover {
+        transform: translateY(6px);
+      }
+    }
+  }
 }
 
-.testimonies {
-	width: 90%;
-	margin: 0 auto;
-	padding-bottom: 2rem;
-	display: flex;
-	position: relative;
-	justify-content: space-between;
+#more-testimonials {
+  text-align: center;
+  transition: all 2s;
 
-    .test {
-        padding: 15px;
-        transition: .5s;
-        flex-basis: 32%;
-        cursor: pointer;
-        border-radius: 5px;
-        box-shadow: 0 5px 10px 3px #ddd;
+  a {
+    color: $bodyBgColor;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 12px;
+    background: linear-gradient(rgb(37, 37, 238), rgba(0, 0, 0));
 
-        .user {
-            display: flex;
-            margin: 12px auto;
-
-            img {
-                width: 50px;
-                height: 50px;
-                object-fit: cover;
-                border-radius: 50%;
-                margin-right: 10px;
-            }
-
-            &.fa-brands, small {
-	            color: #27c0ff;
-            }
-        }
-
-        &:hover {
-        	transform: translateY(6px);
-        }
+    &:hover {
+      background: linear-gradient(rgb(14, 14, 14), rgb(39, 225, 101));
+      transform: scaleX(1.1);
     }
-}
+  }
 
-#more-testimonals {
-    text-align: center; 
-	transition: all 2s; /*Not working */
-
-    a {
-        color: $bodyBgColor;
-        text-decoration: none;
-        border-radius: 5px;
-    	padding: 12px;
-    	background: linear-gradient( rgb(37, 37, 238), rgba(0,0,0));
-
-        &:hover {
-            background: linear-gradient( rgb(14, 14, 14), rgb(39, 225, 101));
-            transform: scaleX(1.1); /*Not working */
-        }
-    }
-
-    #demo {
-        visibility: hidden;
-        margin-top: 2rem;
-        padding: 10px;
-        display: inline-block;
-    	background-color: #f2f2f2;
-    }
+  #demo {
+    visibility: hidden;
+    margin-top: 2rem;
+    padding: 10px;
+    display: inline-block;
+    background-color: #f2f2f2;
+  }
 }
 
 @media screen and (max-width: $mobile) {
-    @include testimonialPhone();
+  @include testimonialPhone();
 }
 
 @media screen and (min-width: $mobile) and (max-width: $tablet) {
-    @include testimonialTablet();
+  @include testimonialTablet();
 }
