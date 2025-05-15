@@ -90,7 +90,7 @@ function HomePage() {
           </div>
           <div className="hero-image">
             <img
-              src="./profile.JPG"
+              src="/images/profile.JPG"
               id="hero-image"
               alt="my profile pic"
               width="400px"
