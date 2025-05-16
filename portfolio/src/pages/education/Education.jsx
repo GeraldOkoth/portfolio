@@ -2,7 +2,7 @@ import React from "react";
 import "./Education.css"; // Import the CSS for styling
 
 // EducationCard Component
-const EducationCard = ({ level, school, degree, years }) => {
+const EducationCard = ({ institution, level, school, degree, years }) => {
   return (
     <div className="education-card">
       <h4>{level}</h4>
@@ -24,14 +24,9 @@ const EducationCard = ({ level, school, degree, years }) => {
 const Education = () => {
   const educationLevels = [
     {
-      level: "Primary School",
-      school: "St. Paul's Primary School",
-      years: "2005 - 2015",
-    },
-    {
-      level: "Secondary School",
-      school: "St. Anthony Dago Kokore Sec. School",
-      years: "2016 - 2019",
+      institution: "ALX Africa",
+      degree: "Front-End Web Development",
+      years: "2025 Jan - present",
     },
     {
       level: "University",
@@ -39,6 +34,16 @@ const Education = () => {
       degree: "Bachelor of Science in Computer Science",
       years: "2020 - present",
     },
+    {
+      level: "Secondary School",
+      school: "St. Anthony Dago Kokore Sec. School",
+      years: "2016 - 2019",
+    },
+    {
+      level: "Primary School",
+      school: "St. Paul's Primary School",
+      years: "2005 - 2015",
+    }
   ];
 
   return (

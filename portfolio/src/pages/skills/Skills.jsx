@@ -22,11 +22,13 @@ const SkillBar = ({ skill, percentage }) => {
 // Skills Component
 const Skills = () => {
   const skills = [
-    { skill: "HTML", percentage: 90 },
-    { skill: "CSS", percentage: 70 },
-    { skill: "JavaScript", percentage: 50 },
-    { skill: "React", percentage: 30 },
-    { skill: "TypeScript", percentage: 30 },
+    { skill: "HTML", percentage: 100 },
+    { skill: "CSS", percentage: 100 },
+    { skill: "SASS", percentage: 95 },
+    { skill: "Bootstrap", percentage: 70 },
+    { skill: "JavaScript", percentage: 70 },
+    { skill: "React", percentage: 50 },
+    { skill: "TypeScript", percentage: 40 },
   ];
 
   return (
