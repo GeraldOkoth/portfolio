@@ -26,7 +26,7 @@ function TopNavigationBar() {
       <nav className="top-nav">
         <div className="top-navigation-links">
           <div className="logo">
-            <a href="index.html">Gerald Okoth</a>
+            <a href="index.html" className="navbar-brand">Gerald Okoth</a>
           </div>
           <div
             className={`menu-links ${isMenuOpen ? "show" : ""}`}
@@ -58,11 +58,39 @@ function TopNavigationBar() {
                   Skills
                 </a>
               </li>
-              <li>
-                <a href="#projects" target="_self" title="My projects">
+              {/* <li className="dropdown nav-item">
+                <a
+                  href="#projects"
+                  target="_self"
+                  className="dropdown-toggle nav-link"
+                  data-toggle="dropdown"
+                  title="My projects"
+                >
                   Projects
                 </a>
-              </li>
+                <ul className="dropdown">
+                  <li className="dropdown-menu">
+                    <a
+                      href="#mini-projects"
+                      className="dropdown-item disabled"
+                      target="_self"
+                      title="My projects"
+                    >
+                      Mini Projects
+                    </a>
+                  </li>
+                  <li className="dropdown-menu">
+                    <a
+                      href="#major-services"
+                      className="dropdown-item disabled"
+                      target="_self"
+                      title="Services"
+                    >
+                      Major Projects
+                    </a>
+                  </li>
+                </ul>
+              </li> */}
               <li>
                 <a href="#services" target="_self" title="Services">
                   Services
@@ -75,14 +103,14 @@ function TopNavigationBar() {
               </li>
             </ul>
           </div>
-        <div
-          className={`hamburger-btn ${isMenuOpen ? "change" : ""}`}
-          onClick={toggleMenu}
-        >
-          <div className="bar bar1"></div>
-          <div className="bar bar2"></div>
-          <div className="bar bar3"></div>
-        </div>
+          <div
+            className={`hamburger-btn ${isMenuOpen ? "change" : ""}`}
+            onClick={toggleMenu}
+          >
+            <div className="bar bar1"></div>
+            <div className="bar bar2"></div>
+            <div className="bar bar3"></div>
+          </div>
         </div>
       </nav>
     </>
