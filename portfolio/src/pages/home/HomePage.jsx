@@ -46,7 +46,8 @@ function HomePage() {
                 role="button"
                 id="downloadBtn"
               >
-                <span></span>Hire Me
+                <span></span>
+                <div className="spinner-grow spinner-grow-sm"></div>Hire Me...
               </a>
             </div>
             <div className="wrapper">
