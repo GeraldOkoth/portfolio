@@ -2,16 +2,16 @@ import React from "react";
 import "./Education.css"; // Import the CSS for styling
 
 // EducationCard Component
-const EducationCard = ({ institution, level, school, degree, years }) => {
+const EducationCard = ({level, institution, certificate, years }) => {
   return (
     <div className="education-card">
       <h4>{level}</h4>
       <p>
-        <strong>School:</strong> {school}
+        <strong>Institution:</strong> {institution}
       </p>
-      {degree && (
+      {certificate && (
         <p>
-          <strong>Degree:</strong> {degree}
+          <strong>Certificate:</strong> {certificate}
         </p>
       )}
       <p>
@@ -25,25 +25,27 @@ const Education = () => {
   const educationLevels = [
     {
       institution: "ALX Africa",
-      degree: "Front-End Web Development",
+      certificate: "Front-End Web Development",
       years: "2025 Jan - present",
     },
     {
       level: "University",
-      school: "Machakos University",
-      degree: "Bachelor of Science in Computer Science",
+      institution: "Machakos University",
+      certificate: "Bachelor of Science in Mathematics and Computer Science",
       years: "2020 - present",
     },
     {
       level: "Secondary School",
-      school: "St. Anthony Dago Kokore Sec. School",
+      institution: "St. Anthony Dago Kokore Sec. School",
+      certificate: "Kenya Certificate of Secondary Education (KCSE)",
       years: "2016 - 2019",
     },
     {
       level: "Primary School",
-      school: "St. Paul's Primary School",
+      institution: "St. Paul's Primary School",
+      certificate: "Kenya Certificate of Primary Education (KCPE)",
       years: "2005 - 2015",
-    }
+    },
   ];
 
   return (
