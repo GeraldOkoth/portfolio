@@ -19,15 +19,23 @@ function HomePage() {
             <div className="hero-text">
               <h1>
                 Hi there, It's
-                <span id="orange"> Gerald</span>
+                <span className="orange"> Gerald</span>
               </h1>
               <h3 className="text-animation">
                 I am a <span id="dynamic-text"></span>
               </h3>
               <p>
-                with passion for creating intuitive and visually appealing user
+                {/* with passion for creating intuitive and visually appealing user
                 interfaces. I am looking forward to collaboration with other
-                tech-enthusiasts on GitHub code spaces.
+                tech-enthusiasts on GitHub code spaces. */}
+                a purpose-driven software engineer in training with a strong
+                foundation in leadership, empathy, communication, and
+                collaboration. I specialize in building real-world,
+                <span className="orange">user-centered</span> web applications that
+                blend clean, maintainable code with <span className="orange">intuitive and visually engaging UI designs</span>
+                . I am committed to
+                continuous learning, technical excellence, and uplifting those
+                around me through collaboration and mentorship.
               </p>
               {/* <Helmet>
                 <script

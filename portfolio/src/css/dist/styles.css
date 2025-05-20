@@ -112,7 +112,7 @@ body {
   font-size: 3rem;
   font-weight: 800;
 }
-.hero .hero-info .hero-text h1 #orange {
+.hero .hero-info .hero-text h1 .orange {
   color: orange;
 }
 .hero .hero-info .hero-text p {

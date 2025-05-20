@@ -26,7 +26,9 @@ function TopNavigationBar() {
       <nav className="top-nav">
         <div className="top-navigation-links">
           <div className="logo">
-            <a href="index.html" className="navbar-brand">Gerald Okoth</a>
+            <a href="index.html" className="navbar-brand">
+              Gerald Okoth
+            </a>
           </div>
           <div
             className={`menu-links ${isMenuOpen ? "show" : ""}`}
@@ -102,6 +104,10 @@ function TopNavigationBar() {
                 </a>
               </li>
             </ul>
+          </div>
+          <div>
+            <i class="bi bi-brightness-high"></i>
+            <i class="bi bi-moon-fill"></i>
           </div>
           <div
             className={`hamburger-btn ${isMenuOpen ? "change" : ""}`}
