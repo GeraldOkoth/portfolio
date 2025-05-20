@@ -49,8 +49,8 @@ function HomePage() {
                 <span></span>About Me
               </a>
               <a
-                href="/assets/gerald_okoth_myjobmag_curriculum_vitae.pdf"
-                className="btn btn-primary disabled"
+                href="/assets/gerald_okoth_resume.pdf"
+                className="btn btn-primary"
                 role="button"
                 id="downloadBtn"
               >
