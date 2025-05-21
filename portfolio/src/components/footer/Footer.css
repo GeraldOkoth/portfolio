@@ -1,0 +1,41 @@
+.my-footer {
+  padding: 20px;
+  background-color: #fff;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-media-links {
+  flex: 1;
+}
+
+.social-media-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.social-media-links li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.footer-txt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.social-icons a {
+  margin-left: 10px;
+  color: #333;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #0077b5; /* LinkedIn blue for example */
+}

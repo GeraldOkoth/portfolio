@@ -1,0 +1,34 @@
+// Define keyframes for the typing animation
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+// Define keyframes for the cursor blink animation
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+// Mixin for the typing animation
+@mixin typing($duration: 8s, $timing: steps(30, end), $delay: 0s) {
+  animation: typing $duration $timing $delay infinite, blink 0.75s step-end infinite;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  width: 0;
+}
+
+// Apply the animation to the text
+.typing-text {
+  display: inline-block;
+  @include typing(8s, steps(30, end), 0s); // Customize duration, timing, and delay as needed
+}

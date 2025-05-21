@@ -1,0 +1,121 @@
+.slideShow {
+    background-color: $bodyBgColor;
+}
+
+.gallery {
+    width: 90%;
+    margin: 0 auto;
+    padding: 4rem 20% 5rem;
+    position: relative;
+
+    & .gallery-header {
+        text-align: center;
+        margin-bottom: 2rem;
+
+        @include Hr(2rem);
+
+    }
+
+    #image-gal-hr {
+        border: none;
+        background-color: $orange;
+        height: .35rem;
+        border-radius: 4px 4px 0 0;
+    }
+
+    .slideshow-container {
+        position: inherit;
+        .slide {
+            display: none;
+            text-align: center;
+
+            img {
+                object: {
+                    fit: cover;
+                    position: top;
+                }
+            }
+
+            .number {
+                top: 0;
+                font-size: 15px;
+                color: #f4f4f4;
+                position: absolute;
+                padding: 8px 12px;
+                background-color: rgba(0,0,0,0.5);
+            }
+        }
+
+        .first-child {
+            display: block;
+        }
+        .prev {
+            color: $bodyTxtColor;
+            top: 35%;
+            position: absolute;
+            cursor: pointer;
+            padding: 16px;
+            font: 18px weight(bold);
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            background-color: rgba(255, 255, 255, 0.9);
+
+            &:hover {
+                color: $bodyBgColor;
+                background-color: rgba(0,0,0,0.6);
+            }
+        }
+        .next {
+            @extend .prev;
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        
+        .caption {
+            color: #f2f2f2;
+            bottom: 3rem;
+            position: absolute;
+            width: 100%;
+        }
+        .dots {
+                text-align: center;
+
+            .dot {
+                cursor: pointer;
+                width: 15px;
+                height: 15px;
+                display: inline-block;
+                margin: 5px 2px;
+                border-radius: 50%;
+                background-color: #bbb;
+            }
+        }
+        .active, .dot:hover {
+            background-color: #717171;
+        }
+
+        .fade {
+            animation: {
+                name: fade;
+                duration: 1.5s;
+            };
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .5;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    @include slideShowPhone();
+}
+
+@media screen and (min-width: $mobile) and (max-width: $tablet) {
+    @include slideShowTablet();
+}
