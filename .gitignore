@@ -24,8 +24,6 @@ yarn-error.log*
 
 styles.css.map
 .vscode/
-package-lock.json
-package.json
 node_modules/
 
 test.html
