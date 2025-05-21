@@ -1,0 +1,29 @@
+.skills-container {
+  width: 80%;
+  margin: 1rem auto 2rem;
+  text-align: left;
+}
+
+.skill-bar {
+  margin-bottom: 15px;
+  
+}
+
+.skill-name {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.progress {
+  background-color: #f1f1f1;
+  border-radius: 25px;
+  overflow: hidden;
+  height: 20px;
+}
+
+.progress-fill {
+  background-color: #007bff;
+  height: 100%;
+  border-radius: 25px;
+}

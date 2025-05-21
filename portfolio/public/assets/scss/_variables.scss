@@ -1,0 +1,17 @@
+// variable declaration
+$primaryColor: #5555ff;
+$orange: orange;
+$bodyTxtColor: #fff;
+$bodyBgColor: #000;
+$fontStack: 'Poppins', sans-serif;
+$primaryBodyFontFamily: "Comfortaa", serif;
+$secondaryBodyFontFamily: "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$bodyFontFamily:  SeekSans, "SeekSans Fallback", Arial, Tahoma, sans-serif;
+$fontWeights: (
+    "regular": 400,
+    "medium": 500,
+    "bold": 800
+);
+$linearGradient: linear-gradient(#000000, rgba(0,0,0,.5));
+$mobile: 600px;
+$tablet: 900px;

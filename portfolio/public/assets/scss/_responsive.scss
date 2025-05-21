@@ -1,0 +1,462 @@
+/* mobile devices*/
+@mixin navbarPhone() {
+  .top-navigation-links {
+    .logo {
+      z-index: -1;
+      a {
+        font-size: 1rem;
+      }
+    }
+    .menu-links {
+      display: none;
+
+      &.show {
+        display: block;
+      }
+
+      ul {
+        width: 65%;
+        background-color: #040233;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        padding-top: 3.5rem;
+        overflow-x: hidden;
+        transition: all 1.5s ease;
+
+        a {
+          font-size: 1rem;
+          color: $bodyTxtColor;
+          display: block;
+          padding-bottom: 1rem;
+          transition: color 0.3s;
+
+          &:hover {
+            color: #818181;
+          }
+        }
+      }
+    }
+
+    .hamburger-btn {
+      cursor: pointer;
+      padding: 0.5rem;
+      border-radius: 5px;
+      background-color: $orange;
+      @include flexbox(absolute, center, space-around);
+      right: 1rem;
+      display: flex;
+      flex-direction: column;
+      width: 30px;
+      height: 25px;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: transparent;
+        border: 1px solid $orange;
+      }
+
+      .bar {
+        width: 100%;
+        height: 2px;
+        background-color: #e5e5e5;
+        transition: transform 0.4s, opacity 0.4s;
+      }
+
+      &.change .bar1 {
+        transform: translate(-3px, -1px) rotate(-45deg);
+      }
+
+      &.change .bar2 {
+        opacity: 1;
+        width: 15px;
+        transform: translateX(2px);
+      }
+
+      &.change .bar3 {
+        transform: translate(-3px, 1px) rotate(45deg);
+      }
+    }
+  }
+}
+
+@mixin homePagePhone() {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    justify-content: unset;
+    margin: 0 1rem;
+    padding: unset;
+    transform: translate(10%, 10%);
+
+    .hero-image {
+      display: none;
+      img {
+        width: 250px;
+        height: 250px;
+        // margin: .2rem 0 0rem;
+      }
+      .loader {
+        width: 165px;
+        height: 165px;
+      }
+    }
+
+    .hero-info {
+      .hero-text {
+        h1 {
+          font-size: 2rem;
+          letter-spacing: normal;
+        }
+        p {
+          font-size: 0.8em;
+          padding: 0.9rem 0;
+
+          #orange {
+            font-size: 0.9rem;
+          }
+        }
+      }
+
+      .hero-btns {
+        display: flex;
+        // padding: unset;
+        flex-direction: column;
+
+        a {
+          font-size: 0.9em;
+          margin: 0.8em;
+          padding: 10px 1rem;
+        }
+      }
+
+      .wrapper {
+        & .icon {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@mixin homePageTablet() {
+}
+
+@mixin aboutPhone() {
+  .About {
+    padding: 1.5rem 1rem;
+  }
+
+  .About-header {
+    h2 {
+      padding: 0.1rem 0.6rem;
+      font-size: 1rem;
+      margin: 0.5rem 0;
+    }
+    p {
+      font-size: 0.9em;
+    }
+  }
+  .about-info {
+    flex-direction: column;
+
+    .about-img img {
+      padding-bottom: 0.9rem;
+      height: 280px;
+    }
+
+    .aboutme {
+      line-height: unset;
+
+      .about-me p {
+        font-size: 0.8em;
+      }
+      hr {
+        margin: 1rem 0;
+      }
+    }
+  }
+}
+
+@mixin aboutTablet() {
+  .about-info {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@mixin slideShowPhone() {
+  .gallery {
+    padding: 1.3rem;
+
+    .gallery-header {
+      h3 {
+        font-size: 1rem;
+      }
+    }
+    #image-gal-hr {
+      height: 0.3em;
+    }
+    .slideshow-container {
+      .slide {
+        img {
+          height: 200px;
+        }
+        .number {
+          padding: 4px 8px;
+          font-size: 0.7rem;
+        }
+      }
+      .prev,
+      .next {
+        // font-size: 2px;
+        padding: 8px;
+      }
+
+      .caption {
+        font-size: 0.8em;
+      }
+      .dots {
+        .dot {
+          width: 10px;
+          height: 10px;
+          margin: 4px 1px;
+        }
+      }
+    }
+  }
+}
+
+@mixin slideShowTablet() {
+}
+
+@mixin servicesPhone() {
+  .services {
+    padding: 1.5rem 1rem;
+
+    .services-container {
+      .services-header {
+        h3 {
+          font-size: 1rem;
+          padding-bottom: 0.1rem;
+        }
+        p {
+          font-size: 0.9em;
+        }
+      }
+      .services-cta {
+        padding: 1rem 0;
+        flex-direction: column;
+
+        h3 {
+          font-size: 1.1rem;
+        }
+        p {
+          font-size: 0.8em;
+        }
+        .cheap,
+        .quality,
+        .online-booking {
+          padding: 1rem 0;
+
+          img {
+            width: 85px;
+            height: 85px;
+          }
+        }
+      }
+      .My-services {
+        flex-direction: column;
+
+        .image {
+          .service-description {
+            h3 {
+              font-size: 1rem;
+            }
+            p {
+              font-size: 0.8em;
+            }
+          }
+          margin-bottom: 2rem;
+        }
+      }
+    }
+  }
+}
+
+@mixin servicesTablet() {
+}
+
+@mixin testimonialPhone() {
+  .Testimonials {
+    padding: 1.5rem 1rem;
+  }
+
+  .testimonials-header {
+    h2 {
+      font-size: 1rem;
+      padding: unset;
+    }
+  }
+
+  .testimonies {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: unset;
+
+    .test {
+      p {
+        font-size: 0.8em;
+      }
+      margin-bottom: 1rem;
+
+      .user {
+        img {
+          width: 35px;
+          height: 35px;
+        }
+      }
+    }
+  }
+}
+
+@mixin testimonialTablet() {
+}
+
+@mixin faqPhone() {
+  .faq {
+    padding: 1rem 1rem;
+
+    .head {
+      h2 {
+        font-size: 1rem;
+      }
+    }
+    & #faq-hr {
+      height: 5px;
+    }
+
+    .panels {
+      .accordion {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      .panel {
+        font-size: 0.8em;
+        padding: 0 1.2rem;
+      }
+    }
+  }
+}
+
+@mixin faqTablet() {
+  .faq {
+    padding: 1.5rem 2rem;
+
+    .head {
+      font-size: 1.3rem;
+    }
+  }
+}
+
+@mixin contactPhone() {
+  .contact {
+    padding: 0.5rem 1rem;
+  }
+
+  .contact-header {
+    h2 {
+      font-size: 1rem;
+      padding: unset;
+    }
+    p {
+      padding: unset;
+      font-size: 0.9em;
+    }
+  }
+  .contact-section {
+    width: 90%;
+    padding: 2rem 0;
+    flex-direction: column;
+
+    .contact-address {
+      line-height: 30px;
+
+      i {
+        @include icons;
+        margin: unset;
+      }
+
+      iframe {
+        margin-top: 2rem;
+        size: 200px;
+      }
+    }
+
+    .contact-form {
+      input {
+        margin-bottom: unset;
+      }
+      button[type="button"] {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@mixin contactTablet() {
+  .contact-section {
+    display: flex;
+    flex-direction: column;
+  }
+  button[type="submit"] {
+    width: 100%;
+  }
+}
+
+@mixin footerPhone() {
+  .my-footer {
+    padding: 0.5rem 1rem;
+
+    .footer-links {
+      width: 90%;
+      flex-direction: column;
+      margin-bottom: 1rem;
+
+      h3 {
+        padding: 0.5rem 0;
+      }
+
+      li {
+        margin-bottom: 3px;
+
+        a {
+          font-size: 0.7em;
+        }
+      }
+    }
+
+    .top a {
+      padding: 8px 10px;
+      bottom: 30%;
+
+      i {
+        color: $bodyBgColor;
+      }
+    }
+
+    .footer-txt {
+      font-size: 0.65em;
+      margin: unset;
+    }
+  }
+}
+
+@mixin footerTablet() {
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+  }
+}
