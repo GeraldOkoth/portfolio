@@ -1,0 +1,10 @@
+// Reusable snippet for buttons
+@mixin button() {
+    font-size: 1.1rem;
+    color: $bodyBgColor;
+    cursor: pointer;
+    transition: all .3s ease;
+    border-radius: 7px;
+    padding: .45em .5em;
+    background-color: $primaryColor;
+}
