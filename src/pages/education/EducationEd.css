@@ -1,0 +1,135 @@
+.education {
+  padding: 5rem 15px;
+  color: #fff;
+  background-color: #010012;
+}
+
+.heading {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.timeline-items {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.timeline-items::before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  background-color: orange;
+  left: calc(50% - 1px);
+}
+
+.timeline-item {
+  margin-bottom: 40px;
+  width: 100%;
+  position: relative;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-item:nth-child(odd) {
+  padding-right: calc(50% + 30px);
+  text-align: left;
+}
+
+.timeline-item:nth-child(even) {
+  padding-left: calc(50% + 30px);
+}
+
+.timeline-dot {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: orange;
+  border-radius: 50%;
+  left: calc(50% - 10px);
+  box-shadow: 0 0 10px orange;
+  top: 10px;
+}
+
+.timeline-date {
+  font-size: 20px;
+  font-weight: 800;
+  margin: 6px 0 15px;
+}
+
+.timeline-content {
+  background-color: rgb(21, 22, 56);
+  border: 1px solid orange;
+  padding: 20px 30px;
+  border-radius: 1rem;
+  cursor: pointer;
+  /* box-shadow: 0 0 6px orange; */
+  transition: 0.3s ease-in-out;
+}
+
+.timeline-content:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px orange;
+}
+
+.timeline-content h3 {
+  font-size: 20px;
+  margin: 0 0 10px;
+  font-weight: 500;
+}
+
+.timeline-content p {
+  line-height: 22px;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: orange;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(53, 53, 53);
+  width: 50px;
+}
+
+@media (max-width: 600px) {
+  .education {
+    padding: 1.5rem 1rem;
+  }
+
+  .heading {
+    font-size: 1rem;
+  }
+
+  .timeline-content p {
+    font-size: 0.8rem;
+  }
+
+  .timeline-items::before {
+    left: 10px;
+  }
+
+  .timeline-item:nth-child(odd) {
+    padding-right: 0;
+    text-align: left;
+  }
+
+  .timeline-item:nth-child(even),
+  .timeline-item:nth-child(odd) {
+    padding-left: 37px;
+  }
+
+  .timeline-dot {
+    left: 0;
+  }
+}

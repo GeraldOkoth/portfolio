@@ -3,11 +3,11 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 
 function Contact() {
 
-  const [message, setMessage] = useState('');
+  // const [message, setMessage] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setMessage('Thank you for your message!');
+    // setMessage('Thank you for your message!');
   }; 
   
   return (
@@ -54,7 +54,7 @@ function Contact() {
               <textarea name="message" id="message" rows="10" ></textarea>
               <button type="submit" className="submit-button">submit<i className="fa-solid fa-paper-plane"></i></button>
             </div>
-            <span id="msg">{message}</span>
+            {/* <span id="msg">{message}</span> */}
             </form>
           </div>
 		    </div>

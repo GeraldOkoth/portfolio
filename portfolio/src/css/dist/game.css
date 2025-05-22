@@ -1,0 +1,62 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 80%;
+  margin: 0 auto;
+}
+
+p {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  padding: 0.5rem 0;
+}
+
+span {
+  font-family: verdana;
+}
+
+#para {
+  font-weight: 600;
+  /* color: rgb(34, 255, 0); */
+}
+
+ol {
+  padding: 3%;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.form input[type=submit], [type=button] {
+  background-color: blue;
+}
+
+h3, h1 {
+  text-align: center;
+  margin-top: 5%;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.form input[type=number] {
+  width: 44%;
+  padding: 8px 20px;
+}
+
+.lastResult {
+  color: white;
+  padding: 6px 8p;
+}
+
+@media only screen and (max-width: 600px) {
+  .form input[type=submit] {
+    margin-top: 2rem;
+  }
+  p {
+    font-size: 14px;
+  }
+}
+.ch-theme {
+  padding: 12px;
+  text-align: right;
+}
