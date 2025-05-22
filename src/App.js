@@ -4,8 +4,10 @@ import './css/dist/styles.css';
 import HomePage from './pages/home/HomePage';
 import AboutPage from './pages/about/AboutPage';
 import Services from './pages/services/Services';
-import Education from './pages/education/Education';
-import Skills from './pages/skills/Skills';
+import EducationEd from './pages/education/EducationEd';
+// import Education from './pages/education/Education';
+// import Skills from './pages/skills/Skills';
+import SkillsEd from './pages/skills/SkillsEd';
 // import Projects from './pages/project/Projects';
 import Contact from './pages/contact/Contact';
 import Footer from './components/footer/Footer';
@@ -18,8 +20,10 @@ function App() {
     <div className="App">
       <HomePage />
       <AboutPage />
-      <Education /> 
-      <Skills />
+      <EducationEd/>
+      {/* <Education />  */}
+      <SkillsEd />
+      {/* <Skills /> */}
       {/* <Projects /> */}
       <Services />
       <Contact />
