@@ -29,6 +29,8 @@ Using npm:
 Or using yarn:
 `yarn`
 
+___
+
 ### ▶️ Start the development server
 
 Using npm:
@@ -39,6 +41,10 @@ Or using yarn:
 
 The app will open automatically at http://localhost:3000 in your default browser.
 
+### Project Structure
+
+![Project Structure Image](public/images/Screenshot%202025-05-24%20205251.png)
+
 #### 🔧 Available Scripts
 
 In the project directory, you can run:
@@ -48,6 +54,8 @@ In the project directory, you can run:
 `npm run build` - To create an optimized build for deployment:
 
 `npm test` - To launch the test runner.
+
+___
 
 ### 🛠️ Troubleshooting
 
@@ -60,6 +68,7 @@ Delete node_modules and reinstall:
 
 Clear the cache:
 `npm cache clean --force`
+___
 
 ### 📬 Contact
 
