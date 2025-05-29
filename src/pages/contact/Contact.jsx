@@ -55,6 +55,7 @@ function Contact() {
               <button type="submit" className="submit-button">submit<i className="fa-solid fa-paper-plane"></i></button>
             </div>
             <span id="msg">{message}</span>
+            
             </form>
           </div>
 		    </div>

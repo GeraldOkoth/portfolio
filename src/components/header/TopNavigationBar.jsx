@@ -26,9 +26,9 @@ function TopNavigationBar() {
       <nav className="top-nav">
         <div className="top-navigation-links">
           <div className="logo">
-            <a href="index.html" className="navbar-brand">
-              Gerald Okoth
-            </a>
+            {/* <a href="index.html" className="navbar-brand"> */}
+              <img src="/images/logo.png" alt="logo" width={20} height={20}/>
+            {/* </a> */}
           </div>
           <div
             className={`menu-links ${isMenuOpen ? "show" : ""}`}
