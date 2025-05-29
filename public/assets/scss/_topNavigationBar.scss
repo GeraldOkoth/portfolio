@@ -14,18 +14,14 @@
 
     .logo {
       transition: all 0.3s ease;
-
-      a {
-        text-decoration: none;
-        font-family: Cinzel;
-        color: $orange;
-        font: {
-          size: 1.5rem;
-          weight: weight(bold);
-        }
+      width: 15px;
+      height: 5px;
+      img {
+        border-radius: 50%;
       }
+
       &:hover {
-        transform: scale(1.03);
+        // transform: scale(1.03);
         box-shadow: 10px 5px 25px $orange;
       }
     }
