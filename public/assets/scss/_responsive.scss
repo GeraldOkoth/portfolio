@@ -92,7 +92,7 @@
     transform: translate(10%, 10%);
 
     .hero-image {
-      display: none;
+      // display: none;
       img {
         width: 250px;
         height: 250px;
@@ -123,20 +123,20 @@
       .hero-btns {
         display: flex;
         // padding: unset;
-        flex-direction: column;
+        flex-direction: row;
 
         a {
           font-size: 0.9em;
-          margin: 0.8em;
+          margin: 0.4em;
           padding: 10px 1rem;
         }
       }
 
-      .wrapper {
-        & .icon {
-          display: none;
-        }
-      }
+      // .wrapper {
+      //   & .icon {
+      //     display: none;
+      //   }
+      // }
     }
   }
 }

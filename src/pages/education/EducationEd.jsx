@@ -3,7 +3,7 @@ import "./EducationEd.css";
 
 const educationData = [
   {
-    date: "2025",
+    date: "2025 Jan - Present",
     title: "Africa Leadership Experience",
     description:
       "Currently enrolled in the Africa Leadership Experience program, a transformative initiative designed to cultivate professional and technical skills and foster a deep understanding of Africa's socio-economic and digital landscape. This program emphasizes experiential learning, equipping participants with the skills to drive positive change in their communities and beyond.",
