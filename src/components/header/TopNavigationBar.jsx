@@ -99,6 +99,11 @@ function TopNavigationBar() {
                 </a>
               </li>
               <li>
+                <a href="#tweets" target="_self" title="Tweets">
+                  Tweets
+                </a>
+              </li>
+              <li>
                 <a href="#contact" target="_self" title="Contact me">
                   Contact
                 </a>

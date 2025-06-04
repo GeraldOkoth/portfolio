@@ -11,6 +11,7 @@ import SkillsEd from './pages/skills/SkillsEd';
 // import Projects from './pages/project/Projects';
 import Contact from './pages/contact/Contact';
 import Footer from './components/footer/Footer';
+import Tweets from './pages/tweets/Tweets';
 // import Slideshow from './Slideshow';
 // import Testimonials from './pages/testimonials/Testimonials';
 // import Faq from './pages/faq/Faq';
@@ -27,6 +28,7 @@ function App() {
       {/* <Projects /> */}
       <Services />
       <Contact />
+      <Tweets />
       <Footer />
       <Analytics />
       {/* <Slideshow /> */}
