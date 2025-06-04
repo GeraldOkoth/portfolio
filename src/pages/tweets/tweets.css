@@ -24,7 +24,7 @@
   }
   
   .tweet-box {
-    flex: 1 1 300px;
+    flex: 1 1 50px;
     max-width: 400px;
     background-color: #121212;
     border-radius: 10px;

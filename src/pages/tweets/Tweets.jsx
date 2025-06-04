@@ -12,17 +12,17 @@ function Tweets() {
   const tweetData = [
     {
       key: "latest",
-      title: "🔥 Latest Tweet",
+      title: "Latest Tweet",
       url: "https://twitter.com/gerald_okothKE/status/1929829663439728804",
     },
     {
       key: "popular",
-      title: "💭 Popular Tweet",
+      title: "Popular Tweet",
       url: "https://twitter.com/gerald_okothKE/status/1633713542363840514",
     },
     {
       key: "insightful",
-      title: "💡 Insightful Tweet",
+      title: "Insightful Tweet",
       url: "https://twitter.com/GDGoC_MksU/status/1800534406882603054",
     },
   ];
@@ -53,9 +53,9 @@ function Tweets() {
 
   return (
     <section className="tweets" id="tweets">
-      <h2 className="tweets-heading">Tweet Highlights</h2>
+      <h2 className="tweets-heading">My Tweet Highlights</h2>
       <p className="tweets-subtext">
-        Follow me on Twitter for insights, updates, and community moments.
+        Follow me on Twitter for insights, updates, and engaging discussions!
       </p>
       <button className="toggle-all-btn" onClick={handleToggleAll}>
         {areAllExpanded ? "Collapse All" : "Show All"}
