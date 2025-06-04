@@ -959,7 +959,7 @@ body {
   width: 100%;
   border: none;
   margin-top: 5rem;
-  box-shadow: 0 5px 10px 3px #ddd;
+  box-shadow: 0 3px 7px 2px #ddd;
 }
 .contact-section .contact-form {
   flex-basis: 50%;
@@ -978,7 +978,7 @@ body {
 .contact-section .contact-form form input:focus {
   border-radius: 5px;
   border: 2px solid rgb(2, 10, 255);
-  box-shadow: 0 0 5px 2px rgb(2, 10, 255);
+  box-shadow: 0 0 0.5px 0.5px rgb(2, 10, 255);
 }
 .contact-section .contact-form form textarea {
   color: #fff;
@@ -1075,7 +1075,7 @@ body {
 }
 .my-footer .footer-links a {
   transition: 0.4s;
-  color: #616161;
+  color: #bfbfbf;
   font-size: 0.8rem;
   text-decoration: none;
 }
@@ -1111,7 +1111,7 @@ body {
   text-align: center;
 }
 .my-footer .footer-txt p {
-  color: #616161;
+  color: #bfbfbf;
 }
 .my-footer .footer-txt .social-icons a {
   margin-left: 10px;
@@ -1149,16 +1149,6 @@ body {
     color: #000;
   }
   .my-footer .footer-txt {
-    font-size: 0.65em;
-    margin: unset;
-  }
-}
-@media screen and (min-width: 600px) and (max-width: 900px) {
-  .footer-links {
-    display: flex;
-    flex-direction: column;
-  }
-}txt {
     font-size: 0.65em;
     margin: unset;
   }
