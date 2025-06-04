@@ -42,16 +42,13 @@ body {
 }
 .top-nav .top-navigation-links .logo {
   transition: all 0.3s ease;
+  width: 15px;
+  height: 5px;
 }
-.top-nav .top-navigation-links .logo a {
-  text-decoration: none;
-  font-family: Cinzel;
-  color: orange;
-  font-size: 1.5rem;
-  font-weight: 800;
+.top-nav .top-navigation-links .logo img {
+  border-radius: 50%;
 }
 .top-nav .top-navigation-links .logo:hover {
-  transform: scale(1.03);
   box-shadow: 10px 5px 25px orange;
 }
 .top-nav .menu-links ul {
@@ -253,12 +250,12 @@ body {
      object-fit: cover;
   -o-object-position: top;
      object-position: top;
-  box-shadow: 0 0 25px rgb(224, 224, 224);
+  box-shadow: 0 0 15px rgb(224, 224, 224);
 }
 .hero .hero-image img:hover {
   transform: translateY(4vh) scale(1.2, 1.2);
   border: 1.5px solid orange;
-  box-shadow: 0 0 25px #fff, 0 0 50px #fff, 0 0 100px #fff;
+  box-shadow: 0 0 15px #fff, 0 0 30px #fff, 0 0 50px #fff;
 }
 
 /*hero on small screen*/
@@ -345,9 +342,6 @@ body {
     padding: unset;
     transform: translate(10%, 10%);
   }
-  .hero .hero-image {
-    display: none;
-  }
   .hero .hero-image img {
     width: 250px;
     height: 250px;
@@ -369,15 +363,12 @@ body {
   }
   .hero .hero-info .hero-btns {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
   }
   .hero .hero-info .hero-btns a {
     font-size: 0.9em;
-    margin: 0.8em;
+    margin: 0.4em;
     padding: 10px 1rem;
-  }
-  .hero .hero-info .wrapper .icon {
-    display: none;
   }
 }
 .slideShow {
@@ -1158,6 +1149,16 @@ body {
     color: #000;
   }
   .my-footer .footer-txt {
+    font-size: 0.65em;
+    margin: unset;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+  }
+}txt {
     font-size: 0.65em;
     margin: unset;
   }

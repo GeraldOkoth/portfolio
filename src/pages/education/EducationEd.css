@@ -1,5 +1,5 @@
 .education {
-  padding: 5rem 15px;
+  padding: 2em;
   color: #fff;
   background-color: #010012;
 }
@@ -10,7 +10,7 @@
 }
 
 .timeline-items {
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: auto;
   display: flex;
   flex-wrap: wrap;
@@ -27,7 +27,7 @@
 }
 
 .timeline-item {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   width: 100%;
   position: relative;
 }
@@ -58,7 +58,7 @@
 
 .timeline-date {
   font-size: 20px;
-  font-weight: 800;
+  font-weight: 600;
   margin: 6px 0 15px;
 }
 
@@ -104,7 +104,7 @@
 
 @media (max-width: 600px) {
   .education {
-    padding: 1.5rem 1rem;
+    padding: 1.1rem .9rem;
   }
 
   .heading {
@@ -116,7 +116,7 @@
   }
 
   .timeline-items::before {
-    left: 10px;
+    left: 8px;
   }
 
   .timeline-item:nth-child(odd) {

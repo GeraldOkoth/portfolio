@@ -105,10 +105,10 @@ function TopNavigationBar() {
               </li>
             </ul>
           </div>
-          <div>
+          {/* <div>
             <i class="bi bi-brightness-high"></i>
             <i class="bi bi-moon-fill"></i>
-          </div>
+          </div> */}
           <div
             className={`hamburger-btn ${isMenuOpen ? "change" : ""}`}
             onClick={toggleMenu}

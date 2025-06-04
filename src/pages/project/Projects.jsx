@@ -3,7 +3,7 @@ import React from 'react'
 function Projects() {
   return (
       <div className="container" id="projects">
-        <h2>My Projects</h2>
+        <h1>Explore Projects</h1>
         <div className="project-list card-deck">
           <div className="card" style={{ width: 400 }}>
             <img

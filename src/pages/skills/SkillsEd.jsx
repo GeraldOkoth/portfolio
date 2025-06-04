@@ -4,11 +4,15 @@ import "./skillsEd.css";
 const skillsData = [
   {
     category: "Front-End Technologies",
-    skills: ["HTML", "CSS", "JavaScript", "React.js"]
+    skills: ["HTML", "CSS", "SASS", "Bootstrap", "JavaScript", "React.js"]
   },
   {
     category: "Design Tools",
     skills: ["Figma", "Miro", "Canva"]
+  },
+  {
+    category: "Low-code no-code Tools",
+    skills: ["Wordpress", "Webflow",]
   },
   {
     category: "Other Technologies",
@@ -27,7 +31,7 @@ const skillsData = [
 function SkillsEd() {
   return (
     <section className="skills" id="skills">
-      <h2 className="heading">Skills</h2>
+      <h1 className="heading">Skills</h1>
       <div className="skills-container">
         {skillsData.map((skillCategory, index) => (
           <div className="skills-box" key={index}>
