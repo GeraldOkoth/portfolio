@@ -18,7 +18,7 @@ A code editor like [Visual Studio Code](https://code.visualstudio.com)
 
 Clone the repository
 
-**git clone https://github.com/GeraldOkoth/portfolio.git**
+**git clone [https://github.com/GeraldOkoth/portfolio.git](https://github.com/GeraldOkoth/portfolio.git)**
 
 `cd portfolio`
 
