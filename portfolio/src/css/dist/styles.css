@@ -1,6 +1,8 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Cinzel&family=Merriweather&family=Poppins:wght@100;200;300;400&family=Roboto:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap");
+@import url(https://fonts.googleapis.com/css?family=Yeseva+One);
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:400,700,700italic,400italic);
 * {
   padding: 0;
   margin: 0;
@@ -1149,16 +1151,6 @@ body {
     color: #000;
   }
   .my-footer .footer-txt {
-    font-size: 0.65em;
-    margin: unset;
-  }
-}
-@media screen and (min-width: 600px) and (max-width: 900px) {
-  .footer-links {
-    display: flex;
-    flex-direction: column;
-  }
-} {
     font-size: 0.65em;
     margin: unset;
   }
