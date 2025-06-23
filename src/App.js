@@ -4,7 +4,7 @@ import './css/dist/styles.css';
 import HomePage from './pages/home/HomePage';
 import AboutPage from './pages/about/AboutPage';
 import Services from './pages/services/Services';
-import EducationEd from './pages/education/EducationEd';
+// import EducationEd from './pages/education/EducationEd';
 // import Education from './pages/education/Education';
 // import Skills from './pages/skills/Skills';
 import SkillsEd from './pages/skills/SkillsEd';
@@ -21,7 +21,7 @@ function App() {
     <div className="App">
       <HomePage />
       <AboutPage />
-      <EducationEd/>
+      {/* <EducationEd/> */}
       {/* <Education />  */}
       <SkillsEd />
       {/* <Skills /> */}
