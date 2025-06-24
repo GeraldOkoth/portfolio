@@ -361,58 +361,41 @@
   }
 }
 
+// contact section on mobile phone
 @mixin contactPhone() {
   .contact {
-    padding: 0.5rem 1rem;
-  }
+    padding: $sectionPaddingPhone;
 
-  .contact-header {
-    h2 {
-      font-size: 1rem;
-      padding: unset;
-    }
-    p {
-      padding: unset;
-      font-size: 0.9em;
-    }
-  }
-  .contact-section {
-    width: 90%;
-    padding: 2rem 0;
-    flex-direction: column;
+    .contact-header {
+      margin-bottom: 1rem;
+      
+      p {
+        line-height: 1.4rem;
 
-    .contact-address {
-      line-height: 30px;
-
-      i {
-        @include icons;
-        margin: unset;
-      }
-
-      iframe {
-        margin-top: 2rem;
-        size: 200px;
       }
     }
+    .contact-section {
+      flex-direction: column;
 
-    .contact-form {
-      input {
-        margin-bottom: unset;
+      .contact-address {
+        line-height: 2rem;
+
+        iframe {
+          margin: 1rem 0;
+          height: 200px;
+        }
       }
-      button[type="button"] {
-        width: 100%;
+
+      .contact-form {
+        button[type="submit"] {
+          width: 100%;
+        }
+        textarea {
+          margin-top: 1rem;
+          height: 150px;
+        }
       }
     }
-  }
-}
-
-@mixin contactTablet() {
-  .contact-section {
-    display: flex;
-    flex-direction: column;
-  }
-  button[type="submit"] {
-    width: 100%;
   }
 }
 

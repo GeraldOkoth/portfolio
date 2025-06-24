@@ -13,7 +13,7 @@ function Tweets() {
     {
       key: "latest",
       title: "Latest Tweet",
-      url: "https://twitter.com/gerald_okothKE/status/1929829663439728804",
+      url: "https://twitter.com/gerald_okothKE/status/1936721786852245972",
     },
     {
       key: "popular",

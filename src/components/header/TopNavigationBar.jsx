@@ -50,11 +50,11 @@ function TopNavigationBar() {
                   About
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a href="#education" target="_self" title="Education">
                   Education
                 </a>
-              </li>
+              </li> */}
               <li>
                 <a href="#skills" target="_self" title="My skills">
                   Skills
