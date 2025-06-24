@@ -1,73 +1,28 @@
-.my-footer {
-  padding: 0 3rem;
-  background-color: #000000;
+// Footer section
+footer {
+  padding: $sectionPaddingDesktop;
+  background-color: $bodyBgColor;
 
-  .footer-links {
-    width: 80%;
-    .footer-links {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    h3 {
-      padding-bottom: 1rem;
-    }
-
-    li {
-      margin-bottom: 0.5rem;
-      list-style-type: none;
-    }
-
-    a {
-      transition: 0.4s;
-      color: #bfbfbf;
-      font-size: 0.8rem;
-      text-decoration: none;
-
-      &:hover {
-        color: $orange;
-      }
-    }
-
-    i {
-      color: $primaryColor;
-      margin-right: 0.8rem;
-    }
-  }
-
-  .top a {
-    @include button();
-    bottom: 35%;
-    right: 6%;
-    padding: 10px 14px;
-    position: absolute;
-
-    i {
-      padding-right: 4px;
-    }
-  }
-
-  .footer-txt {
+  .footer-content {
+    // @include flexbox();
     display: flex;
     justify-content: space-between;
-    //   align-items: center;
-    //   padding-top: 10px;
-    padding: 16px;
-    margin-top: 2px;
     font-size: 0.8em;
-    text-align: center;
 
     p {
       color: #bfbfbf;
     }
-    .social-icons a {
+    .social-media-icons a {
+      // @include icons($primaryColor);
       margin-left: 10px;
       color: #0077b5;
       font-size: 1.5em;
       text-decoration: none;
+      transition: all 0.3s ease;
 
       &:hover {
         color: $orange;
+        transform: translateY(-3px);
       }
     }
   }
@@ -77,6 +32,3 @@
   @include footerPhone;
 }
 
-@media screen and (min-width: $mobile) and (max-width: $tablet) {
-  @include footerTablet;
-}
