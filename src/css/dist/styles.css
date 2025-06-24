@@ -1,6 +1,8 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Cinzel&family=Merriweather&family=Poppins:wght@100;200;300;400&family=Roboto:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap");
+@import url(https://fonts.googleapis.com/css?family=Yeseva+One);
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:400,700,700italic,400italic);
 * {
   padding: 0;
   margin: 0;
@@ -12,20 +14,20 @@
 }
 
 html {
-  /* scroll-behavior: smooth; Removed for iOS Safari compatibility */
+  scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
 body {
   color: #fff;
-  background-color: #000;
+  background-color: #071629;
+  width: 100%;
 }
 
 /* mobile devices*/
 /*home-page scss*/
 .top-nav {
   z-index: 1000;
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   background-color: rgba(0, 0, 0, 0.1);
@@ -43,16 +45,13 @@ body {
 }
 .top-nav .top-navigation-links .logo {
   transition: all 0.3s ease;
+  width: 15px;
+  height: 5px;
 }
-.top-nav .top-navigation-links .logo a {
-  text-decoration: none;
-  font-family: Cinzel;
-  color: orange;
-  font-size: 1.5rem;
-  font-weight: 800;
+.top-nav .top-navigation-links .logo img {
+  border-radius: 50%;
 }
 .top-nav .top-navigation-links .logo:hover {
-  transform: scale(1.03);
   box-shadow: 10px 5px 25px orange;
 }
 .top-nav .menu-links ul {
@@ -152,7 +151,7 @@ body {
 }
 .hero .hero-info .hero-btns a {
   font-size: 1.1rem;
-  color: #000;
+  color: #071629;
   cursor: pointer;
   transition: all 0.3s ease;
   border-radius: 7px;
@@ -250,21 +249,19 @@ body {
   cursor: pointer;
   transition: 0.5s ease-in-out;
   border-radius: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: top;
-     object-position: top;
-  box-shadow: 0 0 25px rgb(224, 224, 224);
+  object-fit: cover;
+  object-position: top;
+  box-shadow: 0 0 15px rgb(224, 224, 224);
 }
 .hero .hero-image img:hover {
   transform: translateY(4vh) scale(1.2, 1.2);
   border: 1.5px solid orange;
-  box-shadow: 0 0 25px #fff, 0 0 50px #fff, 0 0 100px #fff;
+  box-shadow: 0 0 15px #fff, 0 0 30px #fff, 0 0 50px #fff;
 }
 
 /*hero on small screen*/
 /*navbar on small screen*/
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 380px) {
   .top-navigation-links .logo {
     z-index: -1;
   }
@@ -337,7 +334,7 @@ body {
     transform: translate(-3px, 1px) rotate(45deg);
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 380px) {
   .hero {
     flex-direction: column;
     align-items: center;
@@ -345,9 +342,6 @@ body {
     margin: 0 1rem;
     padding: unset;
     transform: translate(10%, 10%);
-  }
-  .hero .hero-image {
-    display: none;
   }
   .hero .hero-image img {
     width: 250px;
@@ -370,19 +364,16 @@ body {
   }
   .hero .hero-info .hero-btns {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
   }
   .hero .hero-info .hero-btns a {
     font-size: 0.9em;
-    margin: 0.8em;
+    margin: 0.4em;
     padding: 10px 1rem;
-  }
-  .hero .hero-info .wrapper .icon {
-    display: none;
   }
 }
 .slideShow {
-  background-color: #000;
+  background-color: #071629;
 }
 
 .gallery {
@@ -419,10 +410,8 @@ body {
   text-align: center;
 }
 .gallery .slideshow-container .slide img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: top;
-     object-position: top;
+  object-fit: cover;
+  object-position: top;
 }
 .gallery .slideshow-container .slide .number {
   top: 0;
@@ -447,7 +436,7 @@ body {
   background-color: rgba(255, 255, 255, 0.9);
 }
 .gallery .slideshow-container .prev:hover, .gallery .slideshow-container .next:hover {
-  color: #000;
+  color: #071629;
   background-color: rgba(0, 0, 0, 0.6);
 }
 .gallery .slideshow-container .next {
@@ -488,7 +477,7 @@ body {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 380px) {
   .gallery {
     padding: 1.3rem;
   }
@@ -577,8 +566,7 @@ body {
 }
 .my-services .image img {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 7px;
 }
 .my-services .image .overlay {
@@ -621,7 +609,7 @@ body {
   bottom: 5%;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 380px) {
   .services-cta,
   .my-services {
     flex-direction: column;
@@ -635,7 +623,7 @@ body {
     margin-bottom: 1rem;
   }
 }
-@media screen and (min-width: 600px) and (max-width: 900px) {
+@media screen and (min-width: 380px) and (max-width: 900px) {
   .services-cta,
   .my-services {
     flex-direction: column;
@@ -689,8 +677,7 @@ body {
 .Testimonials .testimonies .carousel-item .user img {
   width: 50px;
   height: 50px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 50%;
   margin-right: 10px;
 }
@@ -710,7 +697,7 @@ body {
   transition: all 2s;
 }
 #more-testimonials a {
-  color: #000;
+  color: #071629;
   text-decoration: none;
   border-radius: 5px;
   padding: 12px;
@@ -728,7 +715,7 @@ body {
   background-color: #f2f2f2;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 380px) {
   .Testimonials {
     padding: 1.5rem 1rem;
   }
@@ -784,10 +771,8 @@ body {
 }
 .about-info .about-img img {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: 0 3%;
-     object-position: 0 3%;
+  object-fit: cover;
+  object-position: 0 3%;
   border-radius: 5px;
 }
 .about-info .aboutme {
@@ -813,7 +798,7 @@ body {
   transform: translateY(-5px);
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 380px) {
   .About {
     padding: 1.5rem 1rem;
   }
@@ -842,7 +827,7 @@ body {
     margin: 1rem 0;
   }
 }
-@media screen and (min-width: 600px) and (max-width: 900px) {
+@media screen and (min-width: 380px) and (max-width: 900px) {
   .about-info {
     display: flex;
     flex-direction: column;
@@ -900,11 +885,11 @@ body {
   max-height: 0;
   padding: 0 2.5rem;
   overflow: hidden;
-  background-color: #000;
+  background-color: #071629;
   transition: max-height 0.2s ease-out;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 380px) {
   .faq {
     padding: 1rem 1rem;
   }
@@ -923,7 +908,7 @@ body {
     padding: 0 1.2rem;
   }
 }
-@media screen and (min-width: 600px) and (max-width: 900px) {
+@media screen and (min-width: 380px) and (max-width: 900px) {
   .faq {
     padding: 1.5rem 2rem;
   }
@@ -969,7 +954,7 @@ body {
   width: 100%;
   border: none;
   margin-top: 5rem;
-  box-shadow: 0 5px 10px 3px #ddd;
+  box-shadow: 0 3px 7px 2px #ddd;
 }
 .contact-section .contact-form {
   flex-basis: 50%;
@@ -988,7 +973,7 @@ body {
 .contact-section .contact-form form input:focus {
   border-radius: 5px;
   border: 2px solid rgb(2, 10, 255);
-  box-shadow: 0 0 5px 2px rgb(2, 10, 255);
+  box-shadow: 0 0 0.5px 0.5px rgb(2, 10, 255);
 }
 .contact-section .contact-form form textarea {
   color: #fff;
@@ -1004,7 +989,7 @@ body {
 }
 .contact-section .contact-form form button[type=submit] {
   font-size: 1.1rem;
-  color: #000;
+  color: #071629;
   cursor: pointer;
   transition: all 0.3s ease;
   border-radius: 7px;
@@ -1012,7 +997,7 @@ body {
   background-color: #5555ff;
 }
 .contact-section .contact-form form button[type=submit] .fa-paper-plane {
-  color: #000;
+  color: #071629;
   margin: 0 5px;
 }
 .contact-section .contact-form form button[type=submit]:hover {
@@ -1020,7 +1005,7 @@ body {
   background-color: #042ff0;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 380px) {
   .contact {
     padding: 0.5rem 1rem;
   }
@@ -1056,7 +1041,7 @@ body {
     width: 100%;
   }
 }
-@media screen and (min-width: 600px) and (max-width: 900px) {
+@media screen and (min-width: 380px) and (max-width: 900px) {
   .contact-section {
     display: flex;
     flex-direction: column;
@@ -1065,107 +1050,37 @@ body {
     width: 100%;
   }
 }
-.my-footer {
-  padding: 0 3rem;
-  background-color: #000000;
+footer {
+  padding: 2rem 5rem;
+  background-color: #071629;
 }
-.my-footer .footer-links {
-  width: 80%;
-}
-.my-footer .footer-links .footer-links {
+footer .footer-content {
   display: flex;
   justify-content: space-between;
-}
-.my-footer .footer-links h3 {
-  padding-bottom: 1rem;
-}
-.my-footer .footer-links li {
-  margin-bottom: 0.5rem;
-  list-style-type: none;
-}
-.my-footer .footer-links a {
-  transition: 0.4s;
-  color: #616161;
-  font-size: 0.8rem;
-  text-decoration: none;
-}
-.my-footer .footer-links a:hover {
-  color: orange;
-}
-.my-footer .footer-links i {
-  color: #5555ff;
-  margin-right: 0.8rem;
-}
-.my-footer .top a {
-  font-size: 1.1rem;
-  color: #000;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  border-radius: 7px;
-  padding: 0.45em 0.5em;
-  background-color: #5555ff;
-  bottom: 35%;
-  right: 6%;
-  padding: 10px 14px;
-  position: absolute;
-}
-.my-footer .top a i {
-  padding-right: 4px;
-}
-.my-footer .footer-txt {
-  display: flex;
-  justify-content: space-between;
-  padding: 16px;
-  margin-top: 2px;
   font-size: 0.8em;
-  text-align: center;
 }
-.my-footer .footer-txt p {
-  color: #616161;
+footer .footer-content p {
+  color: #bfbfbf;
 }
-.my-footer .footer-txt .social-icons a {
+footer .footer-content .social-media-icons a {
   margin-left: 10px;
   color: #0077b5;
   font-size: 1.5em;
   text-decoration: none;
+  transition: all 0.3s ease;
 }
-.my-footer .footer-txt .social-icons a:hover {
+footer .footer-content .social-media-icons a:hover {
   color: orange;
+  transform: translateY(-3px);
 }
 
-@media screen and (max-width: 600px) {
-  .my-footer {
-    padding: 0.5rem 1rem;
+@media screen and (max-width: 380px) {
+  footer {
+    padding: 1rem 1.25rem;
   }
-  .my-footer .footer-links {
-    width: 90%;
+  footer .footer-content {
+    text-align: center;
     flex-direction: column;
-    margin-bottom: 1rem;
-  }
-  .my-footer .footer-links h3 {
-    padding: 0.5rem 0;
-  }
-  .my-footer .footer-links li {
-    margin-bottom: 3px;
-  }
-  .my-footer .footer-links li a {
-    font-size: 0.7em;
-  }
-  .my-footer .top a {
-    padding: 8px 10px;
-    bottom: 30%;
-  }
-  .my-footer .top a i {
-    color: #000;
-  }
-  .my-footer .footer-txt {
-    font-size: 0.65em;
-    margin: unset;
-  }
-}
-@media screen and (min-width: 600px) and (max-width: 900px) {
-  .footer-links {
-    display: flex;
-    flex-direction: column;
+    margin: 1rem auto;
   }
 }

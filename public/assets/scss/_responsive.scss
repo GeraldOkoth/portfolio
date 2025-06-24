@@ -416,47 +416,15 @@
   }
 }
 
+// Footer section on phone
 @mixin footerPhone() {
-  .my-footer {
-    padding: 0.5rem 1rem;
+  footer {
+    padding: $sectionPaddingPhone;
 
-    .footer-links {
-      width: 90%;
+    .footer-content {
+      text-align: center;
       flex-direction: column;
-      margin-bottom: 1rem;
-
-      h3 {
-        padding: 0.5rem 0;
-      }
-
-      li {
-        margin-bottom: 3px;
-
-        a {
-          font-size: 0.7em;
-        }
-      }
+      margin: 1rem auto;
     }
-
-    .top a {
-      padding: 8px 10px;
-      bottom: 30%;
-
-      i {
-        color: $bodyBgColor;
-      }
-    }
-
-    .footer-txt {
-      font-size: 0.65em;
-      margin: unset;
-    }
-  }
-}
-
-@mixin footerTablet() {
-  .footer-links {
-    display: flex;
-    flex-direction: column;
   }
 }

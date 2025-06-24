@@ -2,16 +2,19 @@
 $primaryColor: #5555ff;
 $orange: orange;
 $bodyTxtColor: #fff;
-$bodyBgColor: #000;
+$bodyBgColor: #071629;
 $fontStack: 'Poppins', sans-serif;
+$sectionPaddingDesktop: 2rem 5rem;
+$sectionPaddingTablet: 1rem 2.5rem;
+$sectionPaddingPhone: 1rem 1.25rem;
 $primaryBodyFontFamily: "Comfortaa", serif;
 $secondaryBodyFontFamily: "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
-$bodyFontFamily:  SeekSans, "SeekSans Fallback", Arial, Tahoma, sans-serif;
+$bodyFontFamily: 'Yeseva One', 'Josefin Sans';
 $fontWeights: (
     "regular": 400,
     "medium": 500,
     "bold": 800
 );
 $linearGradient: linear-gradient(#000000, rgba(0,0,0,.5));
-$mobile: 600px;
+$mobile: 380px;
 $tablet: 900px;
