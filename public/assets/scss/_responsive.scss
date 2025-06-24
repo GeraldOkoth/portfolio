@@ -92,7 +92,7 @@
     transform: translate(10%, 10%);
 
     .hero-image {
-      // display: none;
+      display: none;
       img {
         width: 250px;
         height: 250px;
@@ -286,80 +286,42 @@
   }
 }
 
+// services section on Tablet
 @mixin servicesTablet() {
 }
 
-@mixin testimonialPhone() {
-  .Testimonials {
-    padding: 1.5rem 1rem;
-  }
+// @mixin testimonialPhone() {
+//   .Testimonials {
+//     padding: 1.5rem 1rem;
+//   }
 
-  .testimonials-header {
-    h2 {
-      font-size: 1rem;
-      padding: unset;
-    }
-  }
+//   .testimonials-header {
+//     h2 {
+//       font-size: 1rem;
+//       padding: unset;
+//     }
+//   }
 
-  .testimonies {
-    display: flex;
-    flex-direction: column;
-    padding-bottom: unset;
+//   .testimonies {
+//     display: flex;
+//     flex-direction: column;
+//     padding-bottom: unset;
 
-    .test {
-      p {
-        font-size: 0.8em;
-      }
-      margin-bottom: 1rem;
+//     .test {
+//       p {
+//         font-size: 0.8em;
+//       }
+//       margin-bottom: 1rem;
 
-      .user {
-        img {
-          width: 35px;
-          height: 35px;
-        }
-      }
-    }
-  }
-}
-
-@mixin testimonialTablet() {
-}
-
-@mixin faqPhone() {
-  .faq {
-    padding: 1rem 1rem;
-
-    .head {
-      h2 {
-        font-size: 1rem;
-      }
-    }
-    & #faq-hr {
-      height: 5px;
-    }
-
-    .panels {
-      .accordion {
-        font-size: 0.9em;
-        padding: 12px;
-      }
-      .panel {
-        font-size: 0.8em;
-        padding: 0 1.2rem;
-      }
-    }
-  }
-}
-
-@mixin faqTablet() {
-  .faq {
-    padding: 1.5rem 2rem;
-
-    .head {
-      font-size: 1.3rem;
-    }
-  }
-}
+//       .user {
+//         img {
+//           width: 35px;
+//           height: 35px;
+//         }
+//       }
+//     }
+//   }
+// }
 
 // contact section on mobile phone
 @mixin contactPhone() {
