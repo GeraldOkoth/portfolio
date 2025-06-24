@@ -1,94 +1,102 @@
+// Contact section
+.contact {
+  background-color: #161748;
+  padding: $sectionPaddingDesktop;
+}
 .contact-header {
-    text-align: center;
-        margin-top: 2rem;
-
-    @include Hr(2rem);
-
-    p{
-        padding-top: 1rem;
-        color: #777;
-    }
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .contact-section {
-    display: flex;
-    width: 90%;
-    padding: 3rem 2rem;
-	margin: 0 auto;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 
-    .contact-address {
-        flex-basis: 44%;
-        line-height: 60px;
+  .contact-address {
+    flex-basis: 44%;
+    line-height: 4rem;
 
-        span {
-            font-size: 1.2rem;
-            padding-left: 1rem;
+    span {
+      margin-left: 1rem;
+
+      & a {
+        color: $bodyTxtColor;
+        text-decoration: none;
+        transition: 0.5s;
+
+        &:hover {
+          color: rgb(2, 10, 255);
         }
-
-        iframe {
-            width: 100%;
-            border: none;
-            margin-top: 5rem;
-            box-shadow: 0 3px 7px 2px #ddd;
-        }
+      }
     }
 
-    .contact-form {
-        flex-basis: 50%;
-        color: $bodyTxtColor;
+    iframe {
+      width: 100%;
+      margin-top: 2rem;
+      border-radius: 5px;
 
-        form {
-            input {
-                color: $bodyTxtColor;
-                margin-bottom: 1rem;
-                width: 100%;
-                border: 1px solid $bodyTxtColor;
-                outline: none;
-                transition: .5s;
-                padding: 8px 14px;
-                background-color:rgba($color: #000000, $alpha: 0.5);
-    
-                &:focus {
-                    border-radius: 5px;
-                    border: 2px solid rgb(2, 10, 255);
-                    box-shadow: 0 0 .5px .5px rgb(2, 10, 255);
-                }
-            }
-    
-            textarea {
-                color: $bodyTxtColor;
-                width: 100%;
-                border: 1px solid $bodyTxtColor;
-                resize: none;
-                margin-top: 2rem;
-                outline: none;
-                padding: 12px 14px;
-                border-radius: 5px;
-                    border: 2px solid rgb(2, 10, 255);
-                background-color:rgba($color: #000000, $alpha: 0.5);
-            }
-    
-            button[type="submit"] {
-                @include button();  
-    
-                .fa-paper-plane {
-                    @include icons($bodyBgColor);
-                }
-    
-                &:hover {
-                    opacity: .7;
-                    background-color: #042ff0   ;
-                }
-            }
+      &:hover {
+        box-shadow: 0 0 10px rgba(185, 186, 226, 0.5);
+      }
+    }
+  }
+
+  .contact-form {
+    flex-basis: 48%;
+
+    form {
+      input,
+      textarea {
+        color: $bodyTxtColor;
+        margin-bottom: 1rem;
+        width: 100%;
+        border: 1px solid #ddd;
+        outline: none;
+        transition: all 0.5s;
+        padding: 8px 14px;
+        border-radius: 5px;
+        background-color: transparent;
+
+        &:focus {
+          border: 1.5px solid rgb(2, 10, 255);
+          box-shadow: 0 0 5px rgba(2, 10, 255, 0.5);
         }
-    }   
+      }
+
+      textarea {
+        resize: none;
+        margin-top: 2rem;
+        outline: none;
+      }
+
+      button[type="submit"] {
+        @include button();
+
+        .fa-paper-plane {
+          @include icons($bodyBgColor);
+          transition: all 0.5s;
+        }
+
+        &:hover {
+          opacity: 0.7;
+          color: $bodyTxtColor;
+          background-color: linear-gradient(
+            45deg,
+            rgba(2, 10, 255, 0.8),
+            rgba(2, 10, 255, 0.5)
+          );
+          box-shadow: 0 0 10px rgba(2, 10, 255, 0.5);
+          .fa-paper-plane {
+            color: $bodyTxtColor;
+            transform: translateX(5px);
+          }
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: $mobile) {
-    @include contactPhone();
+  @include contactPhone();
 }
 
-@media screen and (min-width: $mobile) and (max-width: $tablet) {
-    @include contactTablet();
-}
