@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import "@fortawesome/fontawesome-free/css/all.min.css";
 
 function Contact() {
   const [message, setMessage] = useState("");
