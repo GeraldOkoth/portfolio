@@ -43,7 +43,7 @@ function Contact() {
               <i className="fa-solid fa-envelope"></i>
               <span>
                 <a href="mailto: okothgerald449@gmail.com">
-                  okothgerald449@gmail.com
+                  Send Me a direct Email
                 </a>
               </span>
             </div>
