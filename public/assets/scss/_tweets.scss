@@ -1,14 +1,13 @@
 .tweets {
-    padding: 2rem 1rem;
-    background-color: #1a1a1a;
-    color: #fff;
+    padding: $sectionPaddingDesktop;
+    background-color: #010A20;
     text-align: center;
+
+    .tweets-heading {
+      margin-bottom: 0.5rem;
+    }
   }
   
-  .tweets-heading {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-  }
   
   .tweets-subtext {
     font-size: 1rem;

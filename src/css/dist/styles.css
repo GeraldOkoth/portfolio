@@ -599,14 +599,11 @@ body {
   }
 }
 .tweets {
-  padding: 2rem 1rem;
-  background-color: #1a1a1a;
-  color: #fff;
+  padding: 2rem 5rem;
+  background-color: #010A20;
   text-align: center;
 }
-
-.tweets-heading {
-  font-size: 2rem;
+.tweets .tweets-heading {
   margin-bottom: 0.5rem;
 }
 

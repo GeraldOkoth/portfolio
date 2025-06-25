@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import "./tweets.css";
 import { ChevronDown } from "lucide-react";
 
 function Tweets() {
@@ -53,9 +52,9 @@ function Tweets() {
 
   return (
     <section className="tweets" id="tweets">
-      <h2 className="tweets-heading">My Tweet Highlights</h2>
+      <h2 className="tweets-heading">Tweet Highlights</h2>
       <p className="tweets-subtext">
-        Follow me on Twitter for insights, updates, and engaging discussions!
+        Connect with me on Twitter for more inspiration, insights, updates, and engaging discussions!
       </p>
       <button className="toggle-all-btn" onClick={handleToggleAll}>
         {areAllExpanded ? "Collapse All" : "Show All"}
