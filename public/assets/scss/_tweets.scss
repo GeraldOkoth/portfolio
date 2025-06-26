@@ -12,6 +12,7 @@
   .twitter-tweet a {
     @include button;
     margin: 1rem 0 2rem;
+    color: $bodyTxtColor;
   }
 
   .toggle-all-btn:hover {
@@ -57,7 +58,7 @@
       .chevron {
         transition: transform 0.3s ease;
       }
-      
+
       &.rotate {
         transform: rotate(180deg);
       }
@@ -89,5 +90,3 @@
 @media screen and (max-width: $mobile) {
   @include tweetPhone();
 }
-
-

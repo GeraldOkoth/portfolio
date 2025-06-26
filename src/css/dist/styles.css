@@ -376,30 +376,21 @@ body {
   }
 }
 .services {
-  padding: 2em;
+  padding: 2rem 5rem;
   background-color: #040031;
 }
 .services .services-container {
-  width: 90%;
-  margin: 0 auto;
   text-align: center;
 }
 .services .services-container .services-header {
-  margin-bottom: 0.7em;
-}
-.services .services-container .services-header h3 {
-  padding: 6px 18px;
-  display: inline-block;
-  background-color: rgba(0, 0, 0, 0.1);
-}
-.services .services-container .services-header p {
-  margin: 0;
+  margin-bottom: 2rem;
 }
 
 .services-cta {
   display: flex;
-  padding-bottom: 2rem;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 .services-cta h3 {
   padding-bottom: 0.7rem;
@@ -619,6 +610,7 @@ body {
   font-weight: 600;
   background-color: #5555ff;
   margin: 1rem 0 2rem;
+  color: #fff;
 }
 .tweets .toggle-all-btn:hover {
   background-color: #ffa500;
