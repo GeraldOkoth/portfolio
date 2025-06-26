@@ -1,101 +1,93 @@
+// Tweets section
 .tweets {
-    padding: $sectionPaddingDesktop;
-    background-color: #010A20;
-    text-align: center;
+  padding: $sectionPaddingDesktop;
+  background-color: #001e89a8;
+  text-align: center;
 
-    .tweets-heading {
-      margin-bottom: 0.5rem;
-    }
-  }
-  
-  
-  .tweets-subtext {
-    font-size: 1rem;
-    color: #ccc;
+  .tweets_header {
+    text-align: center;
     margin-bottom: 2rem;
   }
-  
-  .tweets-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.5rem;
+  .toggle-all-btn,
+  .twitter-tweet a {
+    @include button;
+    margin: 1rem 0 2rem;
   }
-  
+
+  .toggle-all-btn:hover {
+    background-color: #ffa500;
+  }
+}
+
+.tweets-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1.5rem;
+
   .tweet-box {
     flex: 1 1 50px;
     max-width: 400px;
-    background-color: #121212;
+    background-color: #02024f;
     border-radius: 10px;
     padding: 1rem;
-    box-shadow: 0 0 10px rgba(255, 165, 0, 0.2);
+    border: 1px solid $orange;
     transition: all 0.3s ease;
-  }
-  
-  .tweet-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    color: orange;
-    transition: color 0.3s ease;
-  }
-  
-  .tweet-header:hover {
-    color: #ffd580;
-  }
-  
-  .tweet-title {
-    font-size: 1.1rem;
-    font-weight: 600;
-  }
-  
-  /* Chevron icon animation */
-  .chevron {
-    transition: transform 0.3s ease;
-  }
-  
-  .chevron.rotate {
-    transform: rotate(180deg);
-  }
-  
-  /* Collapssible animation */
-  .collapsible {
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    transition: max-height 0.6s ease, opacity 0.4s ease;
-  }
-  
-  .collapsible.open {
-    max-height: 600px;
-    opacity: 1;
-  }
 
+    &:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 15px $orange;
+    }
+    .tweet-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      color: $orange;
+      transition: color 0.3s ease;
 
-  .toggle-all-btn, .twitter-tweet a {
-    margin: 1rem auto;
-    padding: 0.5rem 1rem;
-    background-color: #ffa500;
-    border: none;
-    text-decoration: none;
-    border-radius: 6px;
-    color: #000;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .toggle-all-btn:hover {
-    background-color: #ffbb33;
-  }
-  
-  
-  /* Responsive */
-  @media (max-width: 768px) {
-    .tweets-container {
-      flex-direction: column;
-      /* align-items: center; */
+      &:hover {
+        color: $primaryColor;
+      }
+      .tweet-title {
+        font-size: 1rem;
+        font-weight: 600;
+      }
+      /* Chevron icon animation */
+      .chevron {
+        transition: transform 0.3s ease;
+      }
+      
+      &.rotate {
+        transform: rotate(180deg);
+      }
+    }
+    /* Collapssible animation */
+    .collapsible {
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: max-height 0.6s ease, opacity 0.4s ease;
+
+      & .twitter-tweet a {
+        text-decoration: none;
+        color: #fff;
+
+        &:hover {
+          background-color: $orange;
+        }
+      }
+    }
+    .collapsible.open {
+      max-height: 600px;
+      opacity: 1;
     }
   }
-  
+}
+
+// tweets section on mobile
+@media screen and (max-width: $mobile) {
+  @include tweetPhone();
+}
+
+

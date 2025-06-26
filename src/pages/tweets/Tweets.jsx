@@ -52,10 +52,13 @@ function Tweets() {
 
   return (
     <section className="tweets" id="tweets">
-      <h2 className="tweets-heading">Tweet Highlights</h2>
-      <p className="tweets-subtext">
-        Connect with me on Twitter for more inspiration, insights, updates, and engaging discussions!
-      </p>
+      <div className="tweets_header">
+        <h2 className="tweets-heading">Tweet Highlights</h2>
+        <p className="tweets-subtext">
+          Connect with me on Twitter for more inspiration, insights, updates,
+          and engaging discussions!
+        </p>
+      </div>
       <button className="toggle-all-btn" onClick={handleToggleAll}>
         {areAllExpanded ? "Collapse All" : "Show All"}
       </button>

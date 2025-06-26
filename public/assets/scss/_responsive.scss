@@ -323,6 +323,17 @@
 //   }
 // }
 
+// tweet section on phone
+@mixin tweetPhone() {
+  .tweets {
+    padding: $sectionPaddingPhone;
+  }
+  .tweets-container {
+    flex-direction: column;
+    /* align-items: center; */
+  }
+}
+
 // contact section on mobile phone
 @mixin contactPhone() {
   .contact {
