@@ -529,8 +529,9 @@ body {
   object-position: center;
   border-radius: 5px;
 }
-.about-section .container .about-img p {
+.about-section .container .about-img .mission-statement {
   padding: 1rem 0;
+  font-size: 0.8rem;
 }
 .about-section .container .about-info {
   flex-basis: 60%;
