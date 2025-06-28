@@ -1,26 +1,15 @@
+// services section
 .services {
-  padding: 2em;
+  padding: $sectionPaddingDesktop;
   background-color: #040031;
 
   // Container for Services
   .services-container {
-    width: 90%;
-    margin: 0 auto;
     text-align: center;
 
     // Header section
     .services-header {
-      margin-bottom: 0.7em;
-
-      h3 {
-        padding: 6px 18px;
-        display: inline-block;
-        background-color: rgba(0, 0, 0, 0.1);
-      }
-
-      p {
-        margin: 0;
-      }
+      margin-bottom: 2rem;
     }
   }
 }
@@ -28,8 +17,10 @@
 // Call-to-action section for services
 .services-cta {
   display: flex;
-  padding-bottom: 2rem;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
 
   h3 {
     padding-bottom: 0.7rem;
