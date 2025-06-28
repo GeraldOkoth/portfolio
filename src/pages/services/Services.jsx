@@ -1,5 +1,4 @@
 import React from "react";
-import "./services.css"; // Include your CSS for styling
 
 // ServiceItem Component for each individual service
 const ServiceItem = ({ image, alt, title, description }) => {

@@ -26,9 +26,19 @@ const About = () => {
             width="200px"
             height="350px"
           />
-          <p>
-            <em>Mission Statement:</em>
-          </p>
+          <motion.p
+            className="mission-statement"
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ transitionTimingFunction: easeIn, delay: 3 }}
+          >
+            <em>
+              <strong>Mission Statement:</strong> to be a person of integrity,
+              championing a just society that recognizes, upholds, and protects
+              human rights and freedoms, while inspiring others through my
+              strengths and talent, to achieve a better quality of life.
+            </em>
+          </motion.p>
         </motion.div>
         <motion.div className="about-info">
           <motion.p
