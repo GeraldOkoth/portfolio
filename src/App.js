@@ -2,7 +2,7 @@ import React from 'react';
 import { Analytics } from "@vercel/analytics/react";
 import './css/dist/styles.css';
 import HomePage from './pages/home/HomePage';
-import AboutPage from './pages/about/AboutPage';
+import About from './pages/about/About';
 import Services from './pages/services/Services';
 // import EducationEd from './pages/education/EducationEd';
 // import Education from './pages/education/Education';
@@ -20,7 +20,7 @@ function App() {
   return (
     <div className="App">
       <HomePage />
-      <AboutPage />
+      <About />
       {/* <EducationEd/> */}
       {/* <Education />  */}
       <SkillsEd />
