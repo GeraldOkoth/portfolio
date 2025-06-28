@@ -24,16 +24,14 @@
     .hero-text {
       color: $bodyTxtColor;
 
-      h1 {
+      h2 {
         font {
-          font-family: "Cinzel", serif;
+          font-family: 'Segoe UI', sans-serif;
           font-size: 3rem;
           font-weight: weight(bold);
         }
 
         .orange {
-          //   padding-bottom: 10px;
-          //   font-size: 1.6rem;
           color: $orange;
         }
       }

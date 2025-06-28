@@ -1,6 +1,9 @@
 import React, { useEffect } from "react";
 import textAnimate from "./text-animation";
 import TopNavigationBar from "../../components/header/TopNavigationBar";
+import { easeInOut, generateLinearEasing, motion } from "framer-motion";
+import { linearGradient } from "framer-motion/client";
+
 // import { Helmet } from "react-helmet";
 
 function HomePage() {
@@ -17,26 +20,40 @@ function HomePage() {
         <div className="hero">
           <div className="hero-info">
             <div className="hero-text">
-              <h1>
-                Hi there, It's
+              <h2>
+                Hi there, I am
                 <span className="orange"> Gerald</span>
-              </h1>
+              </h2>
               <h3 className="text-animation">
-                I am a <span id="dynamic-text"></span>
+                A <span id="dynamic-text"></span>
               </h3>
-              <p>
-                {/* with passion for creating intuitive and visually appealing user
-                interfaces. I am looking forward to collaboration with other
-                tech-enthusiasts on GitHub code spaces. */}
+              {/* <p>
                 a purpose-driven software engineer in training with a strong
                 foundation in leadership, empathy, communication, and
                 collaboration. I specialize in building real-world,
-                <span className="orange">user-centered</span> web applications that
-                blend clean, maintainable code with <span className="orange">intuitive and visually engaging UI designs</span>
-                . I am committed to
-                continuous learning, technical excellence, and uplifting those
-                around me through collaboration and mentorship.
-              </p>
+                <span className="orange">user-centered</span> web applications
+                that blend clean, maintainable code with{" "}
+                <span className="orange">
+                  intuitive and visually engaging UI designs
+                </span>
+                . I am committed to continuous learning, technical excellence,
+                and uplifting those around me through collaboration and
+                mentorship.
+              </p> */}
+              <motion.p
+                className="contact-links"
+                initial={{ opacity: 0, x: -90 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ transitionTimingFunction: generateLinearEasing, delay: 1 }}
+              >
+                <h5>Actively open to:</h5>
+                <ul>
+                  <li>Remote or in-person internships in web development</li>
+                  <li>Collaborative side projects</li>
+                  <li>Freelance opportunities</li>
+                  <li>Mentorship and community-driven tech initiatives</li>
+                </ul>
+              </motion.p>
               {/* <Helmet>
                 <script
                   src="./text-animation.js"
@@ -44,7 +61,12 @@ function HomePage() {
                 ></script>
               </Helmet> */}
             </div>
-            <div className="hero-btns">
+            <motion.div
+              className="hero-btns"
+              initial={{ opacity: 0, x: -90 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ transitionTimingFunction: easeInOut, delay: 2 }}
+            >
               <a href="#about" className="btn btn-primary" role="button">
                 <span></span>About Me
               </a>
@@ -57,8 +79,13 @@ function HomePage() {
                 <span></span>
                 <div className="spinner-grow spinner-grow-sm"></div>Hire Me...
               </a>
-            </div>
-            <div className="wrapper">
+            </motion.div>
+            <motion.div
+              className="wrapper"
+              initial={{ opacity: 0, x: -60 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ transitionTimingFunction: linearGradient, delay: 2.5 }}
+            >
               <div className="icon ln">
                 <a href="https://www.linkedin.com/in/geraldokoth/">
                   <i className="fab fa-linkedin"></i>
@@ -95,9 +122,14 @@ function HomePage() {
                 </a>
                 <span>YouTube</span>
               </div>
-            </div>
+            </motion.div>
           </div>
-          <div className="hero-image">
+          <motion.div
+            className="hero-image"
+            initial={{ opacity: 0, x: 120 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ transitionTimingFunction: easeInOut, delay: 2.5 }}
+          >
             <img
               src="/images/profile.JPG"
               id="hero-image"
@@ -106,7 +138,7 @@ function HomePage() {
               height="400px"
             />
             {/* <div className="loader"></div> */}
-          </div>
+          </motion.div>
         </div>
       </section>
     </>
