@@ -12,6 +12,11 @@
   box-sizing: border-box;
 }
 
+:root {
+  --fav-color-text: hsl(215 20.2% 65.1%);
+  --fav-color-body: hsl(222.2 84% 4.9%);
+}
+
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -106,12 +111,12 @@ body {
 .hero .hero-info .hero-text {
   color: #fff;
 }
-.hero .hero-info .hero-text h1 font {
-  font-family: "Cinzel", serif;
+.hero .hero-info .hero-text h2 font {
+  font-family: "Segoe UI", sans-serif;
   font-size: 3rem;
   font-weight: 800;
 }
-.hero .hero-info .hero-text h1 .orange {
+.hero .hero-info .hero-text h2 .orange {
   color: orange;
 }
 .hero .hero-info .hero-text p {
@@ -376,7 +381,7 @@ body {
   }
 }
 .services {
-  padding: 2rem 5rem;
+  padding: 3rem;
   background-color: #040031;
 }
 .services .services-container {
@@ -496,92 +501,59 @@ body {
     margin-bottom: 1rem;
   }
 }
-.About {
-  padding: 2rem;
-  background-color: #040031;
+.about-section {
+  padding: 3rem;
+  background-color: hsl(245, 100%, 10%);
+  color: var(--fav-color-text);
 }
-
-.About-header {
+.about-section .about-title {
+  font-size: 2.2rem;
+  font-weight: bold;
   text-align: center;
+  margin-bottom: 1rem;
 }
-.About-header h2 {
-  color: #fff;
-  padding: 0.3rem 1rem;
-  display: inline-block;
-  margin: 1rem 0;
-  background-color: rgb(0, 0, 0);
-}
-.About-header p {
-  color: orange;
-  font-size: 1.2rem;
-  margin: 1rem 0;
-}
-
-.about-info {
-  width: 90%;
+.about-section .container {
+  padding: 0;
+  margin: 0;
   display: flex;
-  margin: 2rem auto;
-  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 2rem;
+  margin: 3rem auto;
 }
-.about-info .about-img {
-  flex-basis: 46%;
+.about-section .container .about-img {
+  flex-basis: 35%;
 }
-.about-info .about-img img {
+.about-section .container .about-img img {
   width: 100%;
   object-fit: cover;
-  object-position: 0 3%;
+  object-position: center;
   border-radius: 5px;
 }
-.about-info .aboutme {
-  flex-basis: 48%;
-  line-height: 1.5;
+.about-section .container .about-img p {
+  padding: 1rem 0;
 }
-.about-info .aboutme .about-me p {
-  text-align: left;
+.about-section .container .about-info {
+  flex-basis: 60%;
 }
-.about-info .aboutme hr {
-  margin: 2rem 0;
-}
-.about-info .aboutme span {
-  color: orange;
-  font-family: Rubik;
-}
-.about-info .aboutme .social-links i {
-  padding: 0.2rem;
-  transition: 0.3s;
-}
-.about-info .aboutme .social-links i:hover {
-  color: orange;
-  transform: translateY(-5px);
+.about-section .container .about-info p {
+  text-align: justify;
 }
 
 @media screen and (max-width: 480px) {
-  .About {
-    padding: 1.5rem 1rem;
+  .about-section {
+    padding: 1rem 1.25rem;
   }
-  .About-header h2 {
-    padding: 0.1rem 0.6rem;
-    font-size: 1rem;
-    margin: 0.5rem 0;
+  .about-section .about-title {
+    font-size: unset;
+    font-weight: 600;
   }
-  .About-header p {
-    font-size: 0.9em;
-  }
-  .about-info {
+  .about-section .container {
     flex-direction: column;
   }
-  .about-info .about-img img {
-    padding-bottom: 0.9rem;
-    height: 280px;
-  }
-  .about-info .aboutme {
-    line-height: unset;
-  }
-  .about-info .aboutme .about-me p {
-    font-size: 0.8em;
-  }
-  .about-info .aboutme hr {
-    margin: 1rem 0;
+  .about-section .container .about-img img {
+    height: 200px;
+    object-fit: cover;
+    object-position: top;
   }
 }
 @media screen and (min-width: 480px) and (max-width: 900px) {
@@ -591,7 +563,7 @@ body {
   }
 }
 .tweets {
-  padding: 2rem 5rem;
+  padding: 3rem;
   background-color: rgba(0, 30, 137, 0.6588235294);
   text-align: center;
 }
@@ -687,7 +659,7 @@ body {
 }
 .contact {
   background-color: #161748;
-  padding: 2rem 5rem;
+  padding: 3rem;
 }
 
 .contact-header {
@@ -802,7 +774,7 @@ body {
   }
 }
 footer {
-  padding: 2rem 5rem;
+  padding: 3rem;
   background-color: #071629;
 }
 footer .footer-content {

@@ -144,37 +144,25 @@
 @mixin homePageTablet() {
 }
 
+// about section on phone
 @mixin aboutPhone() {
-  .About {
-    padding: 1.5rem 1rem;
-  }
+  .about-section {
+    padding: $sectionPaddingPhone;
 
-  .About-header {
-    h2 {
-      padding: 0.1rem 0.6rem;
-      font-size: 1rem;
-      margin: 0.5rem 0;
-    }
-    p {
-      font-size: 0.9em;
-    }
-  }
-  .about-info {
-    flex-direction: column;
-
-    .about-img img {
-      padding-bottom: 0.9rem;
-      height: 280px;
+    .about-title {
+      font-size: unset;
+      font-weight: 600;
     }
 
-    .aboutme {
-      line-height: unset;
+    .container {
+      flex-direction: column;
 
-      .about-me p {
-        font-size: 0.8em;
-      }
-      hr {
-        margin: 1rem 0;
+      .about-img img {
+        height: 200px;
+        object: {
+          fit: cover;
+          position: top;
+        }
       }
     }
   }
