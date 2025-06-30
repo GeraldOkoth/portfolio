@@ -1,188 +1,160 @@
 /*home-page scss*/
+// import navigation bar styling
 @import "_topNavigationBar.scss";
 
 .home-page {
-  min-height: 100vh;
+  padding: $sectionPaddingDesktop;
+  display: flex;
+  justify-content: center;
   position: relative;
-  // background: $linearGradient;
-  // background: no-repeat center $linearGradient, url(../Images/IMG_20231210_144325.jpg);
-}
+  align-items: center;
 
-.hero {
-  width: 80%;
-  min-height: 100vh;
-  //   transform: translate(10%, 40%);
-  @include flexbox(absolute, center, center);
-  gap: 15rem;
-  padding-left: 6.3rem;
+  .hero {
+    display: inherit;
+    align-items: center;
+    gap: 12rem;
 
-  .hero-info {
-    display: flex;
-    flex-direction: column;
-    align-items: baseline;
-
-    .hero-text {
-      color: $bodyTxtColor;
-
-      h2 {
-        font {
-          font-family: 'Segoe UI', sans-serif;
-          font-size: 3rem;
-          font-weight: weight(bold);
-        }
-
-        .orange {
-          color: $orange;
-        }
-      }
-
-      //   @import "./typing-txt.scss";
-
-      p {
-        padding: 1rem 0;
-        // line-height: 1.3;
-        font-family: $fontStack;
-      }
-      .text-animation {
-        font-size: 1.5rem;
-        font-weight: weight(bold);
-        min-width: 280px;
-      }
-      .text-animation span {
-        position: relative;
-      }
-    }
-    #dynamic-text {
-      font-size: 1.5rem;
-      font-weight: weight(bold);
-      color: $orange;
-      margin-top: 1rem;
-    }
-    #dynamic-text::after {
-      content: "|";
-      display: inline-block;
-      margin-left: 2px;
-      animation: blink 0.5s step-end infinite;
-    }
-
-    @keyframes blink {
-      50% {
-        opacity: 0;
-      }
-    }
-
-    .hero-btns {
+    .hero-info {
       display: flex;
-      padding: 0 0 2rem;
-      gap: 1.6rem;
+      flex-direction: column;
+      align-items: flex-start;
 
-      a {
-        @include button();
-        z-index: 1;
-        background-color: linear-gradient(#1b0280, #3200e6);
+      .hero-text-intro {
+        h2 {
+          font: {
+            size: 3.4rem;
+            weight: weight(bold);
+          }
 
-        span {
-          z-index: -1;
-          height: 100%;
-          @include positioning(unset, 0, 0, unset, absolute);
+          .orange {
+            color: $orange;
+          }
         }
-        &:hover {
-          scale: 1.03;
+
+        // @import "./typing-txt.scss";
+
+        .text-animation {
+          #dynamic-text {
+            font: {
+              size: 1.5rem;
+              weight: weight(bold);
+            }
+            color: $orange;
+            margin: 1rem 0;
+          }
+          #dynamic-text::after {
+            content: "|";
+            display: inline-block;
+            margin-left: 2px;
+            animation: blink 0.5s step-end infinite;
+          }
+          @keyframes blink {
+            0% {
+              opacity: 1;
+            }
+            50% {
+              opacity: 0;
+            }
+            100% {
+              opacity: 1;
+            }
+          }
+        }
+      }
+
+      .hero-btns {
+        display: inline-flex;
+        padding: 0 0 2rem;
+        gap: 1.6rem;
+
+        a:hover {
+          transform: scale(1.03);
           color: $bodyTxtColor;
           background-color: rgba($color: #000000, $alpha: 0.7);
           border: 1px solid $orange;
         }
       }
-    }
-    .wrapper {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      .wrapper {
+        display: flex;
 
-      & .icon {
-        display: inline-block;
-        height: 35px;
-        width: 35px;
-        border-radius: 35px;
-        margin: 0 5px;
-        text-align: center;
-        overflow: hidden;
-        line-height: 35px;
-        background: $bodyTxtColor;
-        cursor: pointer;
-        box-shadow: 0px 10px 10px rgba(234, 234, 234, 0.1);
-        transition: all 0.3s ease-out;
+        & .icon {
+          display: block;
+          height: 35px;
+          width: 35px;
+          border-radius: 35px;
+          margin: 0 5px;
+          text-align: center;
+          overflow: hidden;
+          line-height: 35px;
+          background: $bodyTxtColor;
+          cursor: pointer;
+          transition: all 0.3s ease-out;
 
-        &:hover {
-          color: $bodyTxtColor;
-          display: flex;
-          align-items: center;
-          justify-content: space-evenly;
-          width: 150px;
-          box-shadow: 0 0 25px $bodyTxtColor;
-
-          i {
+          &:hover {
             color: $bodyTxtColor;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 150px;
+            box-shadow: 0 0 10px $bodyTxtColor;
+
+            i {
+              color: $bodyTxtColor;
+            }
           }
         }
-      }
-      .fa-linkedin {
-        color: #0077b5;
-      }
-      .ln:hover {
-        background: #0077b5;
-      }
-      .fa-facebook-f {
-        color: #1a6ed8;
-      }
-      .fb:hover {
-        background: #1a6ed8;
-      }
-      .fa-twitter {
-        color: #1da1f2;
-      }
-      .tw:hover {
-        background: #1da1f2;
-      }
-      .fa-fa-instagram {
-        color: #ff0084;
-      }
-      .in:hover {
-        background: #fc45a4;
-      }
-      .fa-github {
-        color: #333;
-      }
-      .git:hover {
-        background: #111;
-      }
-      .fa-youtube {
-        color: #f00;
-      }
-      .yt:hover {
-        background: #f00;
+        .fa-linkedin {
+          color: #0077b5;
+        }
+        .ln:hover {
+          background: #0077b5;
+        }
+        .fa-facebook-f {
+          color: #1a6ed8;
+        }
+        .fb:hover {
+          background: #1a6ed8;
+        }
+        .fa-twitter {
+          color: #1da1f2;
+        }
+        .tw:hover {
+          background: #1da1f2;
+        }
+        .fa-fa-instagram {
+          color: #ff0084;
+        }
+        .in:hover {
+          background: #fc45a4;
+        }
+        .fa-github {
+          color: #333;
+        }
+        .git:hover {
+          background: #111;
+        }
+        .fa-youtube {
+          color: #f00;
+        }
+        .yt:hover {
+          background: #f00;
+        }
       }
     }
-  }
-  .hero-image {
-    position: relative;
-    img {
-      cursor: pointer;
-      transition: 0.5s ease-in-out;
-      border-radius: 50%;
-      object: {
-        fit: cover;
-        position: top;
-      }
-      box-shadow: 0 0 15px rgb(224, 224, 224);
-      // border: 1px solid rgb(15, 3, 3);
-      // box-shadow:  12px 12px 10px;
+    .hero-image {
+      img {
+        transition: all 0.5s ease-in-out;
+        border-radius: 50%;
+        object: {
+          fit: cover;
+          position: center;
+        }
 
-      &:hover {
-        transform: translateY(4vh) scale(1.2, 1.2);
-        border: 1.5px solid orange;
-        box-shadow: 0 0 15px $bodyTxtColor, 0 0 30px $bodyTxtColor,
-          0 0 50px $bodyTxtColor;
+        &:hover {
+          transform: scale(1.05);
+          border: 1.5px solid orange;
+          cursor: pointer;
+        }
       }
     }
   }

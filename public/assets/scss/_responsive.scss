@@ -85,58 +85,40 @@
 @mixin homePagePhone() {
   .hero {
     flex-direction: column;
-    align-items: center;
-    justify-content: unset;
-    margin: 0 1rem;
-    padding: unset;
-    transform: translate(10%, 10%);
-
-    .hero-image {
-      display: none;
-      img {
-        width: 250px;
-        height: 250px;
-        // margin: .2rem 0 0rem;
-      }
-      .loader {
-        width: 165px;
-        height: 165px;
-      }
-    }
+    gap: 1rem;
 
     .hero-info {
-      .hero-text {
-        h1 {
-          font-size: 2rem;
-          letter-spacing: normal;
-        }
-        p {
-          font-size: 0.8em;
-          padding: 0.9rem 0;
-
-          #orange {
-            font-size: 0.9rem;
+      .hero-text-intro {
+        h2 {
+          font: {
+            size: 1.2rem;
+            weight: weight(medium);
           }
         }
       }
-
       .hero-btns {
-        display: flex;
-        // padding: unset;
-        flex-direction: row;
-
-        a {
-          font-size: 0.9em;
-          margin: 0.4em;
-          padding: 10px 1rem;
-        }
+        flex-direction: column;
+        width: 100%;
       }
+      .wrapper {
+        & .icon {
+          height: 25px;
+          width: 25px;
+          margin: 0 2.5px;
+          line-height: 25px;
 
-      // .wrapper {
-      //   & .icon {
-      //     display: none;
-      //   }
-      // }
+          &:hover {
+            width: 75px;
+          }
+        }
+
+      }
+    }
+    .hero-image {
+      img {
+        width: 250px;
+        height: 250px;
+      }
     }
   }
 }

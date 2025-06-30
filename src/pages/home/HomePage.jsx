@@ -19,7 +19,7 @@ function HomePage() {
       <section className="home-page" id="top">
         <div className="hero">
           <div className="hero-info">
-            <div className="hero-text">
+            <div className="hero-text-intro">
               <h2>
                 Hi there, I am
                 <span className="orange"> Gerald</span>
@@ -40,11 +40,14 @@ function HomePage() {
                 and uplifting those around me through collaboration and
                 mentorship.
               </p> */}
-              <motion.p
+              <motion.div
                 className="contact-links"
-                initial={{ opacity: 0, x: -90 }}
+                initial={{ opacity: 0, x: -120 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ transitionTimingFunction: generateLinearEasing, delay: 1 }}
+                transition={{
+                  transitionTimingFunction: generateLinearEasing,
+                  delay: 1,
+                }}
               >
                 <h5>Actively open to:</h5>
                 <ul>
@@ -53,7 +56,7 @@ function HomePage() {
                   <li>Freelance opportunities</li>
                   <li>Mentorship and community-driven tech initiatives</li>
                 </ul>
-              </motion.p>
+              </motion.div>
               {/* <Helmet>
                 <script
                   src="./text-animation.js"
@@ -63,7 +66,7 @@ function HomePage() {
             </div>
             <motion.div
               className="hero-btns"
-              initial={{ opacity: 0, x: -90 }}
+              initial={{ opacity: 0, x: -120 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ transitionTimingFunction: easeInOut, delay: 2 }}
             >
@@ -82,9 +85,12 @@ function HomePage() {
             </motion.div>
             <motion.div
               className="wrapper"
-              initial={{ opacity: 0, x: -60 }}
+              initial={{ opacity: 0, x: -120 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ transitionTimingFunction: linearGradient, delay: 2.5 }}
+              transition={{
+                transitionTimingFunction: linearGradient,
+                delay: 2.5,
+              }}
             >
               <div className="icon ln">
                 <a href="https://www.linkedin.com/in/geraldokoth/">
@@ -93,7 +99,7 @@ function HomePage() {
                 <span>Linkedin</span>
               </div>
               <div className="icon fb">
-                <a href="https://www.facebook.com/gerald.okoth.14">
+                <a href="https://web.facebook.com/gerald.okoth.944/">
                   <i className="fab fa-facebook-f"></i>
                 </a>
                 <span>Facebook</span>
