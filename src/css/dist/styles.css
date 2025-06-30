@@ -93,7 +93,9 @@ body {
   display: flex;
   justify-content: center;
   position: relative;
+  height: 100vh;
   align-items: center;
+  background-color: hsl(246, 81%, 15%);
 }
 .home-page .hero {
   display: inherit;
@@ -139,6 +141,9 @@ body {
   display: inline-flex;
   padding: 0 0 2rem;
   gap: 1.6rem;
+}
+.home-page .hero .hero-info .hero-btns a {
+  font-weight: 500;
 }
 .home-page .hero .hero-info .hero-btns a:hover {
   transform: scale(1.03);
@@ -297,28 +302,42 @@ body {
   }
 }
 @media screen and (max-width: 480px) {
-  .hero {
-    flex-direction: column;
-    gap: 1rem;
+  .home-page {
+    height: unset;
   }
-  .hero .hero-info .hero-text-intro h2 {
+  .home-page .hero {
+    flex-direction: column;
+    gap: 4rem;
+  }
+  .home-page .hero .hero-info {
+    align-items: center;
+  }
+  .home-page .hero .hero-info .hero-text-intro h2 {
+    font-size: 1.6rem;
+    font-weight: 800;
+  }
+  .home-page .hero .hero-info .hero-text-intro h2 h3 {
     font-size: 1.2rem;
     font-weight: 500;
   }
-  .hero .hero-info .hero-btns {
+  .home-page .hero .hero-info .hero-btns {
     flex-direction: column;
     width: 100%;
   }
-  .hero .hero-info .wrapper .icon {
-    height: 25px;
-    width: 25px;
-    margin: 0 2.5px;
-    line-height: 25px;
+  .home-page .hero .hero-info .wrapper .icon {
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    margin: 0 3px;
   }
-  .hero .hero-info .wrapper .icon:hover {
-    width: 75px;
+  .home-page .hero .hero-info .wrapper .icon:hover {
+    width: 0;
+    transform: scale(1.05);
   }
-  .hero .hero-image img {
+  .home-page .hero .hero-info .wrapper .icon i {
+    font-size: 1rem;
+  }
+  .home-page .hero .hero-image img {
     width: 250px;
     height: 250px;
   }

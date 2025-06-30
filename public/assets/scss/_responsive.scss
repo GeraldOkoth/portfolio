@@ -83,41 +83,54 @@
 }
 
 @mixin homePagePhone() {
-  .hero {
-    flex-direction: column;
-    gap: 1rem;
+  .home-page {
+    height: unset;
+    .hero {
+      flex-direction: column;
+      gap: 4rem;
 
-    .hero-info {
-      .hero-text-intro {
-        h2 {
-          font: {
-            size: 1.2rem;
-            weight: weight(medium);
+      .hero-info {
+        align-items: center;
+        .hero-text-intro {
+          h2 {
+            font: {
+              size: 1.6rem;
+              weight: weight(bold);
+            }
+            h3 {
+              font: {
+                size: 1.2rem;
+                weight: weight(medium);
+              }
+            }
+          }
+        }
+        .hero-btns {
+          flex-direction: column;
+          width: 100%;
+        }
+        .wrapper {
+          & .icon {
+            height: 30px;
+            width: 30px;
+            line-height: 30px;
+            margin: 0 3px;
+
+            &:hover {
+              width: 0;
+              transform: scale(1.05);
+            }
+            i {
+              font-size: 1rem;
+            }
           }
         }
       }
-      .hero-btns {
-        flex-direction: column;
-        width: 100%;
-      }
-      .wrapper {
-        & .icon {
-          height: 25px;
-          width: 25px;
-          margin: 0 2.5px;
-          line-height: 25px;
-
-          &:hover {
-            width: 75px;
-          }
+      .hero-image {
+        img {
+          width: 250px;
+          height: 250px;
         }
-
-      }
-    }
-    .hero-image {
-      img {
-        width: 250px;
-        height: 250px;
       }
     }
   }
@@ -311,10 +324,9 @@
 
     .contact-header {
       margin-bottom: 1rem;
-      
+
       p {
         line-height: 1.4rem;
-
       }
     }
     .contact-section {

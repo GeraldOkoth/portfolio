@@ -21,8 +21,8 @@ function HomePage() {
           <div className="hero-info">
             <div className="hero-text-intro">
               <h2>
-                Hi there, I am
-                <span className="orange"> Gerald</span>
+                Hello, I am
+                <span className="orange"> Gerald Okoth</span>
               </h2>
               <h3 className="text-animation">
                 A <span id="dynamic-text"></span>
@@ -41,7 +41,7 @@ function HomePage() {
                 mentorship.
               </p> */}
               <motion.div
-                className="contact-links"
+                className="hero-text-ul"
                 initial={{ opacity: 0, x: -120 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{
@@ -51,7 +51,7 @@ function HomePage() {
               >
                 <h5>Actively open to:</h5>
                 <ul>
-                  <li>Remote or in-person internships in web development</li>
+                  <li>Remote or in-person internships in UI/UX and web development</li>
                   <li>Collaborative side projects</li>
                   <li>Freelance opportunities</li>
                   <li>Mentorship and community-driven tech initiatives</li>
