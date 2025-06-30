@@ -84,7 +84,6 @@
 
 @mixin homePagePhone() {
   .home-page {
-    height: unset;
     .hero {
       flex-direction: column;
       gap: 4rem;

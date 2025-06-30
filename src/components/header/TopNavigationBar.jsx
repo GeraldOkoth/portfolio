@@ -1,5 +1,4 @@
 import React, { useState, useRef, useEffect } from "react";
-import "./TopNavigationBar.css";
 function TopNavigationBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef(null);
