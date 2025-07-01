@@ -95,6 +95,7 @@ body {
   justify-content: center;
   position: relative;
   align-items: center;
+  height: 100vh;
   background-color: hsl(246, 81%, 15%);
 }
 .home-page .hero {
@@ -302,6 +303,9 @@ body {
   }
 }
 @media screen and (max-width: 480px) {
+  .home-page {
+    height: unset;
+  }
   .home-page .hero {
     flex-direction: column;
     gap: 4rem;

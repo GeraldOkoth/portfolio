@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+
 function TopNavigationBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef(null);
@@ -22,44 +23,45 @@ function TopNavigationBar() {
 
   return (
     <>
-      <nav className="top-nav">
-        <div className="top-navigation-links">
-          <div className="logo">
-            {/* <a href="index.html" className="navbar-brand"> */}
-              <img src="/images/logo.png" alt="logo" width={20} height={20}/>
-            {/* </a> */}
-          </div>
-          <div
-            className={`menu-links ${isMenuOpen ? "show" : ""}`}
-            ref={menuRef}
-          >
-            <ul id="menu-list">
-              <li>
-                <a
-                  href="index.html"
-                  target="_self"
-                  className="active"
-                  title="Home"
-                >
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="#about" target="_self" title="About me">
-                  About
-                </a>
-              </li>
-              {/* <li>
+      <header>
+        <nav className="top-nav">
+          <div className="top-navigation-links">
+            <div className="logo">
+              {/* <a href="index.html" className="navbar-brand"> */}
+              <img src="/images/logo.png" alt="logo" width={20} height={20} />
+              {/* </a> */}
+            </div>
+            <div
+              className={`menu-links ${isMenuOpen ? "show" : ""}`}
+              ref={menuRef}
+            >
+              <ul id="menu-list">
+                <li>
+                  <a
+                    href="index.html"
+                    target="_self"
+                    className="active"
+                    title="Home"
+                  >
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a href="#about" target="_self" title="About me">
+                    About
+                  </a>
+                </li>
+                {/* <li>
                 <a href="#education" target="_self" title="Education">
                   Education
                 </a>
               </li> */}
-              <li>
-                <a href="#skills" target="_self" title="My skills">
-                  Skills
-                </a>
-              </li>
-              {/* <li className="dropdown nav-item">
+                <li>
+                  <a href="#skills" target="_self" title="My skills">
+                    Skills
+                  </a>
+                </li>
+                {/* <li className="dropdown nav-item">
                 <a
                   href="#projects"
                   target="_self"
@@ -92,37 +94,38 @@ function TopNavigationBar() {
                   </li>
                 </ul>
               </li> */}
-              <li>
-                <a href="#services" target="_self" title="Services">
-                  Services
-                </a>
-              </li>
-              <li>
-                <a href="#tweets" target="_self" title="Tweets">
-                  Tweets
-                </a>
-              </li>
-              <li>
-                <a href="#contact" target="_self" title="Contact me">
-                  Contact
-                </a>
-              </li>
-            </ul>
-          </div>
-          {/* <div>
+                <li>
+                  <a href="#services" target="_self" title="Services">
+                    Services
+                  </a>
+                </li>
+                <li>
+                  <a href="#tweets" target="_self" title="Tweets">
+                    Tweets
+                  </a>
+                </li>
+                <li>
+                  <a href="#contact" target="_self" title="Contact me">
+                    Contact
+                  </a>
+                </li>
+              </ul>
+            </div>
+            {/* <div>
             <i class="bi bi-brightness-high"></i>
             <i class="bi bi-moon-fill"></i>
           </div> */}
-          <div
-            className={`hamburger-btn ${isMenuOpen ? "change" : ""}`}
-            onClick={toggleMenu}
-          >
-            <div className="bar bar1"></div>
-            <div className="bar bar2"></div>
-            <div className="bar bar3"></div>
+            <div
+              className={`hamburger-btn ${isMenuOpen ? "change" : ""}`}
+              onClick={toggleMenu}
+            >
+              <div className="bar bar1"></div>
+              <div className="bar bar2"></div>
+              <div className="bar bar3"></div>
+            </div>
           </div>
-        </div>
-      </nav>
+        </nav>
+      </header>
     </>
   );
 }
