@@ -16,6 +16,7 @@
     "emailjs-com": "^3.2.0",
     "express": "^5.1.0",
     "framer-motion": "^12.19.2",
+    "git-filter-repo": "^0.0.30",
     "jquery": "^3.7.1",
     "lucide-react": "^0.513.0",
     "nodemailer": "^7.0.3",
