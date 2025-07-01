@@ -1,133 +1,55 @@
-import React, { useState, useRef, useEffect } from "react";
+import { Link } from "react-scroll";
+import { useState } from "react";
 
-function TopNavigationBar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const menuRef = useRef(null);
+export default function Navbar() {
+  const [active, setActive] = useState("home");
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleSetActive = (section) => {
+    setActive(section);
+  };
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    setIsOpen(!isOpen);
   };
 
-  const handleClickOutside = (event) => {
-    if (menuRef.current && !menuRef.current.contains(event.target)) {
-      setIsMenuOpen(false);
-    }
+  const closeMenu = () => {
+    setIsOpen(false);
   };
-
-  useEffect(() => {
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
 
   return (
-    <>
-      <header>
-        <nav className="top-nav">
-          <div className="top-navigation-links">
-            <div className="logo">
-              {/* <a href="index.html" className="navbar-brand"> */}
-              <img src="/images/logo.png" alt="logo" width={20} height={20} />
-              {/* </a> */}
-            </div>
-            <div
-              className={`menu-links ${isMenuOpen ? "show" : ""}`}
-              ref={menuRef}
+    <nav className="navbar">
+      <div className="nav-logo">
+        <img src="/images/logo.png" alt="logo" width={40} height={40} />
+      </div>
+
+      <div
+        className={`nav-toggle ${isOpen ? "open" : ""}`}
+        onClick={toggleMenu}
+      >
+        <div className="bar"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
+      </div>
+
+      <ul className={`nav-links ${isOpen ? "show" : ""}`}>
+        {["home", "about", "skills", "services", "tweets", "contact"].map((section) => (
+          <li key={section}>
+            <Link
+              to={section}
+              spy={true}
+              smooth={true}
+              duration={500}
+              offset={-70}
+              onSetActive={handleSetActive}
+              onClick={closeMenu}
+              className={active === section ? "active" : ""}
             >
-              <ul id="menu-list">
-                <li>
-                  <a
-                    href="index.html"
-                    target="_self"
-                    className="active"
-                    title="Home"
-                  >
-                    Home
-                  </a>
-                </li>
-                <li>
-                  <a href="#about" target="_self" title="About me">
-                    About
-                  </a>
-                </li>
-                {/* <li>
-                <a href="#education" target="_self" title="Education">
-                  Education
-                </a>
-              </li> */}
-                <li>
-                  <a href="#skills" target="_self" title="My skills">
-                    Skills
-                  </a>
-                </li>
-                {/* <li className="dropdown nav-item">
-                <a
-                  href="#projects"
-                  target="_self"
-                  className="dropdown-toggle nav-link"
-                  data-toggle="dropdown"
-                  title="My projects"
-                >
-                  Projects
-                </a>
-                <ul className="dropdown">
-                  <li className="dropdown-menu">
-                    <a
-                      href="#mini-projects"
-                      className="dropdown-item disabled"
-                      target="_self"
-                      title="My projects"
-                    >
-                      Mini Projects
-                    </a>
-                  </li>
-                  <li className="dropdown-menu">
-                    <a
-                      href="#major-services"
-                      className="dropdown-item disabled"
-                      target="_self"
-                      title="Services"
-                    >
-                      Major Projects
-                    </a>
-                  </li>
-                </ul>
-              </li> */}
-                <li>
-                  <a href="#services" target="_self" title="Services">
-                    Services
-                  </a>
-                </li>
-                <li>
-                  <a href="#tweets" target="_self" title="Tweets">
-                    Tweets
-                  </a>
-                </li>
-                <li>
-                  <a href="#contact" target="_self" title="Contact me">
-                    Contact
-                  </a>
-                </li>
-              </ul>
-            </div>
-            {/* <div>
-            <i class="bi bi-brightness-high"></i>
-            <i class="bi bi-moon-fill"></i>
-          </div> */}
-            <div
-              className={`hamburger-btn ${isMenuOpen ? "change" : ""}`}
-              onClick={toggleMenu}
-            >
-              <div className="bar bar1"></div>
-              <div className="bar bar2"></div>
-              <div className="bar bar3"></div>
-            </div>
-          </div>
-        </nav>
-      </header>
-    </>
+              {section.charAt(0).toUpperCase() + section.slice(1)}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </nav>
   );
 }
-
-export default TopNavigationBar;
