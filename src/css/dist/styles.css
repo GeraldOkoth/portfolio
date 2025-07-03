@@ -2,7 +2,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap");
 @import url(https://fonts.googleapis.com/css?family=Yeseva+One);
 @import url(https://fonts.googleapis.com/css?family=Josefin+Sans:400,700,700italic,400italic);
-* {
+*,
+*::before,
+*::after {
   padding: 0;
   margin: 0;
   list-style-type: none;
@@ -15,6 +17,7 @@
 :root {
   --fav-color-text: hsl(215 20.2% 65.1%);
   --fav-color-body: hsl(222.2 84% 4.9%);
+  font-size: 16px;
 }
 
 html {
@@ -23,7 +26,7 @@ html {
 }
 
 body {
-  color: #fff;
+  color: var(--fav-color-text);
   background-color: #071629;
   width: 100%;
 }
@@ -39,10 +42,10 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 0.5rem 2rem;
   -webkit-backdrop-filter: blur(50px);
   backdrop-filter: blur(50px);
-  box-shadow: 0 2px 8px rgba(197, 38, 38, 0.05);
+  border-bottom: 3px solid rgba(255, 255, 255, 0.2);
 }
 .navbar .nav-logo {
   transition: all 0.3s ease;
@@ -51,8 +54,9 @@ body {
   border-radius: 50%;
 }
 .navbar .nav-logo:hover {
-  transform: scale(1.03);
-  box-shadow: 10px 5px 25px orange;
+  transform: scale(1.13);
+  cursor: pointer;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 .navbar .nav-toggle {
   display: none;
@@ -63,7 +67,7 @@ body {
 .navbar .nav-toggle .bar {
   width: 20px;
   height: 2.5px;
-  background-color: #fff;
+  background-color: var(--fav-color-text);
   transition: all 0.3s ease;
 }
 .navbar .nav-toggle.open .bar:nth-child(1) {
@@ -82,10 +86,10 @@ body {
 }
 .navbar .nav-links li a {
   text-decoration: none;
-  color: #fff;
+  color: var(--fav-color-text);
   font-weight: 500;
   position: relative;
-  transition: color 0.3s ease, transform 0.3s ease;
+  transition: all 0.3s ease, transform 0.3s ease;
 }
 .navbar .nav-links li a::after {
   width: 0%;
@@ -105,12 +109,13 @@ body {
 }
 .navbar .nav-links li a:hover {
   color: orange;
+  cursor: pointer;
   transform: scale(1.05);
 }
-.navbar .nav-links li a.active {
+.navbar .nav-links li a.active, .navbar .nav-links li a::after {
   color: orange;
   font-weight: 700;
-  border-bottom: 0.16em solid orange;
+  border-bottom: 0.2em solid orange;
 }
 @media screen and (max-width: 480px) {
   .navbar .nav-toggle {
@@ -120,7 +125,8 @@ body {
     display: none;
     flex-direction: column;
     width: 100%;
-    padding: 1rem 0;
+    padding: 0.8rem 0;
+    margin-top: 1rem;
   }
   .navbar .nav-links li {
     padding: 0.2rem 2rem;
@@ -141,7 +147,6 @@ body {
 }
 .home-page .hero {
   display: inherit;
-  align-items: center;
   gap: 12rem;
 }
 .home-page .hero .hero-info {
@@ -150,7 +155,7 @@ body {
   align-items: flex-start;
 }
 .home-page .hero .hero-info .hero-text-intro h2 {
-  font-size: 3.4rem;
+  font-size: 3.2rem;
   font-weight: 800;
 }
 .home-page .hero .hero-info .hero-text-intro h2 .orange {
@@ -189,7 +194,7 @@ body {
 }
 .home-page .hero .hero-info .hero-btns a:hover {
   transform: scale(1.03);
-  color: #fff;
+  color: var(--fav-color-text);
   background-color: rgba(0, 0, 0, 0.7);
   border: 1px solid orange;
 }
@@ -215,7 +220,7 @@ body {
   align-items: center;
   justify-content: space-evenly;
   width: 150px;
-  box-shadow: 0 0 10px #fff;
+  box-shadow: 0 0 10px var(--fav-color-text);
 }
 .home-page .hero .hero-info .wrapper .icon:hover i {
   color: #fff;
@@ -278,7 +283,8 @@ body {
     display: none;
     flex-direction: column;
     width: 100%;
-    padding: 1rem 0;
+    padding: 0.8rem 0;
+    margin-top: 1rem;
   }
   .nav-links li {
     padding: 0.2rem 2rem;
@@ -303,7 +309,7 @@ body {
     font-weight: 800;
   }
   .home-page .hero .hero-info .hero-text-intro h2 h3 {
-    font-size: 1.2rem;
+    font-size: 1.02rem;
     font-weight: 500;
   }
   .home-page .hero .hero-info .hero-btns {
@@ -335,8 +341,11 @@ body {
 .services .services-container {
   text-align: center;
 }
-.services .services-container .services-header {
-  margin-bottom: 2rem;
+.services .services-container .services-header h2 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
 .services-cta {
@@ -461,10 +470,7 @@ body {
   margin-bottom: 1rem;
 }
 .about-section .container {
-  padding: 0;
-  margin: 0;
   display: flex;
-  flex-wrap: nowrap;
   gap: 2rem;
   margin: 3rem auto;
 }
@@ -493,16 +499,20 @@ body {
     padding: 1rem 1.25rem;
   }
   .about-section .about-title {
-    font-size: unset;
+    font-size: 1.2rem;
     font-weight: 600;
   }
   .about-section .container {
     flex-direction: column;
+    gap: 0;
   }
   .about-section .container .about-img img {
     height: 200px;
     object-fit: cover;
     object-position: top;
+  }
+  .about-section .container .about-info p {
+    line-height: 1.3rem;
   }
 }
 @media screen and (min-width: 480px) and (max-width: 900px) {
@@ -511,14 +521,79 @@ body {
     flex-direction: column;
   }
 }
-.tweets {
+.skills {
+  background-color: rgb(7, 2, 35);
   padding: 3rem;
-  background-color: rgba(0, 30, 137, 0.6588235294);
+}
+.skills h2 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.skills-container {
+  display: grid;
+  align-items: center;
+  gap: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.skills-box {
+  background-color: rgba(7, 2, 35, 0.5);
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
   text-align: center;
 }
-.tweets .tweets_header {
+
+.skills-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  background-color: rgb(0, 0, 56);
+}
+
+.skills-box .skill-info {
+  display: flex;
+  flex-direction: column;
+  /* align-items: baseline; */
+  justify-content: left;
+  text-align: left;
+  /* padding: 0.5rem 0; */
+}
+
+.skills-box .skill-info h4 {
+  /* margin: 0; */
+  font: 1em sans-serif;
+  font-weight: 600;
+  line-height: 2;
+}
+
+@media screen and (max-width: 480px) {
+  .skills {
+    padding: 1rem 1.25rem;
+  }
+  .skills h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+}
+.tweets {
+  padding: 3rem;
+  background-color: rgb(9, 1, 39);
+  text-align: center;
+}
+.tweets .tweets-header {
   text-align: center;
   margin-bottom: 2rem;
+}
+.tweets .tweets-header h2 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
 }
 .tweets .toggle-all-btn,
 .tweets .twitter-tweet a {
@@ -601,6 +676,13 @@ body {
   .tweets {
     padding: 1rem 1.25rem;
   }
+  .tweets .tweets-header h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  .tweets .tweets-header p {
+    line-height: 1.3rem;
+  }
   .tweets-container {
     flex-direction: column;
     /* align-items: center; */
@@ -615,6 +697,12 @@ body {
   text-align: center;
   margin-bottom: 2rem;
 }
+.contact-header h2 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+}
 
 .contact-section {
   display: flex;
@@ -628,7 +716,7 @@ body {
   margin-left: 1rem;
 }
 .contact-section .contact-address span a {
-  color: #fff;
+  color: var(--fav-color-text);
   text-decoration: none;
   transition: 0.5s;
 }
@@ -648,7 +736,7 @@ body {
 }
 .contact-section .contact-form form input,
 .contact-section .contact-form form textarea {
-  color: #fff;
+  color: var(--fav-color-text);
   margin-bottom: 1rem;
   width: 100%;
   border: 1px solid #ddd;
@@ -685,12 +773,12 @@ body {
 }
 .contact-section .contact-form form button[type=submit]:hover {
   opacity: 0.7;
-  color: #fff;
+  color: #fff !important;
   background-color: linear-gradient(45deg, rgba(2, 10, 255, 0.8), rgba(2, 10, 255, 0.5));
   box-shadow: 0 0 10px rgba(2, 10, 255, 0.5);
 }
 .contact-section .contact-form form button[type=submit]:hover .fa-paper-plane {
-  color: #fff;
+  color: #fff !important;
   transform: translateX(5px);
 }
 
@@ -701,8 +789,12 @@ body {
   .contact .contact-header {
     margin-bottom: 1rem;
   }
+  .contact .contact-header h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
   .contact .contact-header p {
-    line-height: 1.4rem;
+    line-height: 1.3rem;
   }
   .contact .contact-section {
     flex-direction: column;
@@ -731,12 +823,9 @@ footer .footer-content {
   justify-content: space-between;
   font-size: 0.8em;
 }
-footer .footer-content p {
-  color: #bfbfbf;
-}
 footer .footer-content .social-media-icons a {
   margin-left: 10px;
-  color: #0077b5;
+  color: #5555ff;
   font-size: 1.5em;
   text-decoration: none;
   transition: all 0.3s ease;

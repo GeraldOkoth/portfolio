@@ -97,11 +97,7 @@ const Services = () => {
     <section className="services" id="services">
       <div className="services-container">
         <header className="services-header">
-          <h3>Explore my Services</h3>
-          <p>
-            My pleasure is to offer better and quality services that are
-            tailored to your expectations!
-          </p>
+          <h2>Explore Services</h2>
         </header>
         <div className="services-cta">
           {serviceDescriptions.map((service, index) => (

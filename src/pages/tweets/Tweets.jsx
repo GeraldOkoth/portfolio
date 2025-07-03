@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { ChevronDown } from "lucide-react";
+import { easeInOut, motion } from "framer-motion";
 
 function Tweets() {
   const [expanded, setExpanded] = useState({
@@ -52,18 +53,34 @@ function Tweets() {
 
   return (
     <section className="tweets" id="tweets">
-      <div className="tweets_header">
+      <motion.div
+        className="tweets-header"
+        initial={{ opacity: 0, y: -30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
         <h2 className="tweets-heading">Tweet Highlights</h2>
         <p className="tweets-subtext">
           Connect with me on Twitter for more inspiration, insights, updates,
           and engaging discussions!
         </p>
-      </div>
-      <button className="toggle-all-btn" onClick={handleToggleAll}>
+      </motion.div>
+      <motion.button
+        className="toggle-all-btn"
+        initial={{ opacity: 0, y: -30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ transitionTimingFunction: easeInOut, delay: 0.8 }}
+        onClick={handleToggleAll}
+      >
         {areAllExpanded ? "Collapse All" : "Show All"}
-      </button>
+      </motion.button>
 
-      <div className="tweets-container">
+      <motion.div
+        className="tweets-container"
+        initial={{ opacity: 0, y: -30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ transitionTimingFunction: easeInOut, delay: 1 }}
+      >
         {tweetData.map(({ key, title, url }) => (
           <div className="tweet-box" key={key}>
             <div className="tweet-header" onClick={() => toggleTweet(key)}>
@@ -84,7 +101,7 @@ function Tweets() {
             </div>
           </div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 }

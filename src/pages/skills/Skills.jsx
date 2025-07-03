@@ -1,44 +1,64 @@
 import React from "react";
-import "./Skills.css"; // Import the CSS for styling
+import { easeInOut, motion } from "framer-motion";
 
-// SkillBar Component
-const SkillBar = ({ skill, percentage }) => {
+const skillsData = [
+  {
+    category: "Front-End Technologies",
+    skills: ["HTML", "CSS", "SASS", "Bootstrap", "JavaScript", "React.js"]
+  },
+  {
+    category: "Design Tools",
+    skills: ["Figma", "inVision", "Canva"]
+  },
+  {
+    category: "Low code no code Tools",
+    skills: ["Wordpress", "Google sites",]
+  },
+  {
+    category: "Other Technologies",
+    skills: ["C", "C++", "Java", "PHP"]
+  },
+  {
+    category: "Database Technologies",
+    skills: ["MS Access", "SQL"]
+  },
+  {
+    category: "Version Control System",
+    skills: ["Git", "GitHub"]
+  },
+  {
+    category: "Video Editing",
+    skills: ["Adobe Premiere Pro", "Davinci Resolve"]
+  }
+];
+
+function Skills() {
   return (
-    <div className="skill-bar">
-      <div className="skill-name">
-        <span>{skill}</span>
-        <span>{percentage}%</span>
+    <section className="skills" id="skills">
+      <motion.h2
+        initial={{ opacity: 0, y: -30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ transitionTimingFunction: easeInOut, delay: .6 }}
+        className="heading"
+      >
+        Skills
+      </motion.h2>
+      <div className="skills-container">
+        {skillsData.map((skillCategory, index) => (
+          <div className="skills-box" key={index}>
+            <div className="skill-info">
+              <h4 className="heading">{skillCategory.category}</h4>
+              <ul>
+                {skillCategory.skills.map((skill, idx) => (
+                  <li key={idx}>{skill}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        ))}
       </div>
-      <div className="progress">
-        <div
-          className="progress-fill"
-          style={{ width: `${percentage}%` }}
-        ></div>
-      </div>
-    </div>
+    </section>
   );
-};
-
-// Skills Component
-const Skills = () => {
-  const skills = [
-    { skill: "HTML", percentage: 100 },
-    { skill: "CSS", percentage: 100 },
-    { skill: "SASS", percentage: 95 },
-    { skill: "Bootstrap", percentage: 70 },
-    { skill: "JavaScript", percentage: 70 },
-    { skill: "React", percentage: 50 },
-    { skill: "TypeScript", percentage: 40 },
-  ];
-
-  return (
-    <div className="skills-container" id="skills">
-      <h3>Technical Skills</h3>
-      {skills.map((skill, index) => (
-        <SkillBar key={index} {...skill} />
-      ))}
-    </div>
-  );
-};
+}
 
 export default Skills;

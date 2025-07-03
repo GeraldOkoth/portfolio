@@ -8,12 +8,11 @@
   justify-content: center;
   position: relative;
   align-items: center;
-  height : 100vh;
+  height: 100vh;
   background-color: hsl(246, 81%, 15%);
 
   .hero {
     display: inherit;
-    align-items: center;
     gap: 12rem;
 
     .hero-info {
@@ -24,7 +23,7 @@
       .hero-text-intro {
         h2 {
           font: {
-            size: 3.4rem;
+            size: 3.2rem;
             weight: weight(bold);
           }
 
@@ -92,12 +91,12 @@
           text-align: center;
           overflow: hidden;
           line-height: 35px;
-          background: $bodyTxtColor;
+          background: $white;
           cursor: pointer;
           transition: all 0.3s ease-out;
 
           &:hover {
-            color: $bodyTxtColor;
+            color: $white;
             display: flex;
             align-items: center;
             justify-content: space-evenly;
@@ -105,7 +104,7 @@
             box-shadow: 0 0 10px $bodyTxtColor;
 
             i {
-              color: $bodyTxtColor;
+              color: $white;
             }
           }
         }

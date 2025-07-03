@@ -81,8 +81,9 @@
 //     }
 //   }
 // }
-@mixin navbarPhone() {
 
+// nabar on phone
+@mixin navbarPhone() {
   .nav-toggle {
     display: flex;
   }
@@ -91,11 +92,10 @@
     display: none;
     flex-direction: column;
     width: 100%;
-    padding: 1rem 0;
-    // margin-top: 1rem;
+    padding: 0.8rem 0;
+    margin-top: 1rem;
 
-    li  // flex-wrap: wrap;
- {
+    li {
       padding: 0.2rem 2rem;
     }
 
@@ -105,6 +105,7 @@
   }
 }
 
+// homepage on phone
 @mixin homePagePhone() {
   .home-page {
     height: unset;
@@ -122,7 +123,7 @@
             }
             h3 {
               font: {
-                size: 1.2rem;
+                size: 1.02rem;
                 weight: weight(medium);
               }
             }
@@ -159,6 +160,7 @@
   }
 }
 
+// homepage on tablet
 @mixin homePageTablet() {
 }
 
@@ -168,12 +170,13 @@
     padding: $sectionPaddingPhone;
 
     .about-title {
-      font-size: unset;
+      font-size: 1.2rem;
       font-weight: 600;
     }
 
     .container {
       flex-direction: column;
+      gap: 0;
 
       .about-img img {
         height: 200px;
@@ -181,6 +184,9 @@
           fit: cover;
           position: top;
         }
+      }
+      .about-info p {
+        line-height: 1.3rem;
       }
     }
   }
@@ -193,63 +199,70 @@
   }
 }
 
-@mixin slideShowPhone() {
-  .gallery {
-    padding: 1.3rem;
+@mixin skillsPhone() {
+  .skills {
+    padding: $sectionPaddingPhone;
 
-    .gallery-header {
-      h3 {
-        font-size: 1rem;
-      }
-    }
-    #image-gal-hr {
-      height: 0.3em;
-    }
-    .slideshow-container {
-      .slide {
-        img {
-          height: 200px;
-        }
-        .number {
-          padding: 4px 8px;
-          font-size: 0.7rem;
-        }
-      }
-      .prev,
-      .next {
-        // font-size: 2px;
-        padding: 8px;
-      }
-
-      .caption {
-        font-size: 0.8em;
-      }
-      .dots {
-        .dot {
-          width: 10px;
-          height: 10px;
-          margin: 4px 1px;
-        }
-      }
+    h2 {
+      font-size: 1.2rem;
+      font-weight: 600;
     }
   }
 }
 
-@mixin slideShowTablet() {
-}
+// @mixin slideShowPhone() {
+//   .gallery {
+//     padding: 1.3rem;
+
+//     .gallery-header {
+//       h3 {
+//         font-size: 1rem;
+//       }
+//     }
+//     #image-gal-hr {
+//       height: 0.3em;
+//     }
+//     .slideshow-container {
+//       .slide {
+//         img {
+//           height: 200px;
+//         }
+//         .number {
+//           padding: 4px 8px;
+//           font-size: 0.7rem;
+//         }
+//       }
+//       .prev,
+//       .next {
+//         // font-size: 2px;
+//         padding: 8px;
+//       }
+
+//       .caption {
+//         font-size: 0.8em;
+//       }
+//       .dots {
+//         .dot {
+//           width: 10px;
+//           height: 10px;
+//           margin: 4px 1px;
+//         }
+//       }
+//     }
+//   }
+// }
+
+// @mixin slideShowTablet() {
+// }
 
 @mixin servicesPhone() {
   .services {
-    padding: 1.5rem 1rem;
+    padding: $sectionPaddingPhone;
 
     .services-container {
-      .services-header {
-        h3 {
-          font-size: 1rem;
-          padding-bottom: 0.1rem;
-        }
-        p {
-          font-size: 0.9em;
+      .services-header h2 {
+          font-size: 1.2rem;
+          font-weight: 600;
         }
       }
       .services-cta {
@@ -293,8 +306,8 @@
 }
 
 // services section on Tablet
-// @mixin servicesTablet() {
-// }
+@mixin servicesTablet() {
+}
 
 // @mixin testimonialPhone() {
 //   .Testimonials {
@@ -333,6 +346,14 @@
 @mixin tweetPhone() {
   .tweets {
     padding: $sectionPaddingPhone;
+
+    .tweets-header h2 {
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+    .tweets-header p {
+      line-height: 1.3rem;
+    }
   }
   .tweets-container {
     flex-direction: column;
@@ -348,8 +369,13 @@
     .contact-header {
       margin-bottom: 1rem;
 
+      h2 {
+        font-size: 1.2rem;
+        font-weight: 600;
+      }
+
       p {
-        line-height: 1.4rem;
+        line-height: 1.3rem;
       }
     }
     .contact-section {

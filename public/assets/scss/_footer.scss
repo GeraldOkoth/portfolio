@@ -9,13 +9,10 @@ footer {
     justify-content: space-between;
     font-size: 0.8em;
 
-    p {
-      color: #bfbfbf;
-    }
     .social-media-icons a {
       // @include icons($primaryColor);
       margin-left: 10px;
-      color: #0077b5;
+      color: $primaryColor;
       font-size: 1.5em;
       text-decoration: none;
       transition: all 0.3s ease;

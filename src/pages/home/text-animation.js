@@ -1,10 +1,10 @@
 export default function textAnimate() {
   const textArray = [
-    "Frontend Developer",
-    "Web Designer",
+    "Frontend Web Developer",
     "UI/UX Designer",
-    "Musician",
+    "Graphics Designer",
     "Video Editor",
+    "Musician",
   ];
   const dynamicText = document.getElementById("dynamic-text");
   let textIndex = 0;
@@ -15,7 +15,7 @@ export default function textAnimate() {
       dynamicText.textContent = text.slice(0, ++i);
       if (i === text.length) {
         clearInterval(typingInterval);
-        setTimeout(callback, 1000); // Pause before deleting
+        setTimeout(callback, 1500); // Pause before deleting
       }
     }, 100);
   }

@@ -18,7 +18,7 @@ const About = () => {
           className="about-img"
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ transitionTimingFunction: easeIn, delay: 2 }}
+          transition={{ transitionTimingFunction: easeIn, delay: 1 }}
         >
           <img
             src="/images/IMG_1481_transcprr.jpg"
@@ -30,7 +30,7 @@ const About = () => {
             className="mission-statement"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ transitionTimingFunction: easeIn, delay: 3 }}
+            transition={{ transitionTimingFunction: easeIn, delay: 1.5 }}
           >
             <em>
               <strong>Mission Statement:</strong> to be a person of integrity,
@@ -56,7 +56,7 @@ const About = () => {
           </motion.p>
 
           <motion.p
-            className="tech-stack"
+            className="para-1"
             initial={{ opacity: 0, y: -30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ transitionTimingFunction: easeInOut, delay: 2.2 }}
@@ -67,7 +67,7 @@ const About = () => {
           </motion.p>
 
           <motion.p
-            className="availability"
+            className="para-2"
             initial={{ opacity: 0, y: -30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ transitionTimingFunction: easeInOut, delay: 2.4 }}
@@ -80,7 +80,7 @@ const About = () => {
           </motion.p>
 
           <motion.p
-            className="contact-links"
+            className="para-3"
             initial={{ opacity: 0, y: -30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ transitionTimingFunction: easeInOut, delay: 2.6 }}
@@ -90,7 +90,7 @@ const About = () => {
             diverse teams, and remaining grounded in purpose.
           </motion.p>
           <motion.p
-            className="contact-links"
+            className="para-4"
             initial={{ opacity: 0, y: -30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ transitionTimingFunction: easeInOut, delay: 2.8 }}
@@ -99,7 +99,7 @@ const About = () => {
             community impact. My mission is to use technology not just to build
             apps, but to uplift communities and inspire change. I’m working
             toward becoming a well-rounded developer who creates impactful
-            solutions with purpose.{" "}
+            solutions with purpose.
           </motion.p>
         </motion.div>
       </div>

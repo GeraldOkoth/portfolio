@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import textAnimate from "./text-animation";
 import TopNavigationBar from "../../components/header/TopNavigationBar";
 import { easeInOut, generateLinearEasing, motion } from "framer-motion";
@@ -13,10 +13,16 @@ function HomePage() {
     }
   }, []);
 
+  // resolve status after download is ready
+  function downloadCv () {
+    const btn = document.getElementById('downloadBtn');
+    btn.innerText = "Downloading...";
+  }
+
   return (
     <>
       <TopNavigationBar />
-      <section className="home-page" id="top">
+      <section className="home-page" id="home">
         <div className="hero">
           <div className="hero-info">
             <div className="hero-text-intro">
@@ -27,19 +33,6 @@ function HomePage() {
               <h3 className="text-animation">
                 A <span id="dynamic-text"></span>
               </h3>
-              {/* <p>
-                a purpose-driven software engineer in training with a strong
-                foundation in leadership, empathy, communication, and
-                collaboration. I specialize in building real-world,
-                <span className="orange">user-centered</span> web applications
-                that blend clean, maintainable code with{" "}
-                <span className="orange">
-                  intuitive and visually engaging UI designs
-                </span>
-                . I am committed to continuous learning, technical excellence,
-                and uplifting those around me through collaboration and
-                mentorship.
-              </p> */}
               <motion.div
                 className="hero-text-ul"
                 initial={{ opacity: 0, x: -120 }}
@@ -51,7 +44,9 @@ function HomePage() {
               >
                 <h5>Actively open to:</h5>
                 <ul>
-                  <li>Remote or in-person internships in UI/UX and web development</li>
+                  <li>
+                    Remote or in-person internships in UI/UX and web development
+                  </li>
                   <li>Collaborative side projects</li>
                   <li>Freelance opportunities</li>
                   <li>Mentorship and community-driven tech initiatives</li>
@@ -71,16 +66,16 @@ function HomePage() {
               transition={{ transitionTimingFunction: easeInOut, delay: 2 }}
             >
               <a href="#about" className="btn btn-primary" role="button">
-                <span></span>About Me
+                About Me
               </a>
               <a
                 href="/assets/gerald_okoth_resume.pdf"
                 className="btn btn-primary"
                 role="button"
                 id="downloadBtn"
+                onClick={downloadCv}
               >
-                <span></span>
-                <div className="spinner-grow spinner-grow-sm"></div>Hire Me...
+                <span className="spinner-grow spinner-grow-sm"></span>Hire Me...
               </a>
             </motion.div>
             <motion.div

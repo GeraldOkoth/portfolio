@@ -8,8 +8,8 @@
     text-align: center;
 
     // Header section
-    .services-header {
-      margin-bottom: 2rem;
+    .services-header h2 {
+      @include sectionHeading;
     }
   }
 }
