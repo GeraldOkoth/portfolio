@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import textAnimate from "./text-animation";
 import TopNavigationBar from "../../components/header/TopNavigationBar";
 import { easeInOut, generateLinearEasing, motion } from "framer-motion";
