@@ -6,6 +6,10 @@
 .contact-header {
   text-align: center;
   margin-bottom: 2rem;
+
+  h2 {
+    @include sectionHeading;
+  }
 }
 
 .contact-section {
@@ -79,7 +83,7 @@
 
         &:hover {
           opacity: 0.7;
-          color: $bodyTxtColor;
+          color: $white !important;
           background-color: linear-gradient(
             45deg,
             rgba(2, 10, 255, 0.8),
@@ -87,7 +91,7 @@
           );
           box-shadow: 0 0 10px rgba(2, 10, 255, 0.5);
           .fa-paper-plane {
-            color: $bodyTxtColor;
+            color: $white !important;
             transform: translateX(5px);
           }
         }

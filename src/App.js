@@ -6,8 +6,8 @@ import About from './pages/about/About';
 import Services from './pages/services/Services';
 // import EducationEd from './pages/education/EducationEd';
 // import Education from './pages/education/Education';
-// import Skills from './pages/skills/Skills';
-import SkillsEd from './pages/skills/SkillsEd';
+import Skills from './pages/skills/Skills';
+// import SkillsEd from './pages/skills/SkillsEd';
 // import Projects from './pages/project/Projects';
 import Tweets from './pages/tweets/Tweets';
 import Contact from './pages/contact/Contact';
@@ -23,8 +23,8 @@ function App() {
       <About />
       {/* <EducationEd/> */}
       {/* <Education />  */}
-      <SkillsEd />
-      {/* <Skills /> */}
+      {/* <SkillsEd /> */}
+      <Skills />
       {/* <Projects /> */}
       <Services />
       <Tweets />

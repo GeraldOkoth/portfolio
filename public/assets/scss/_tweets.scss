@@ -1,18 +1,22 @@
 // Tweets section
 .tweets {
   padding: $sectionPaddingDesktop;
-  background-color: #001e89a8;
+  background-color: rgb(9, 1, 39);
   text-align: center;
 
-  .tweets_header {
+  .tweets-header {
     text-align: center;
     margin-bottom: 2rem;
+
+    h2 {
+      @include sectionHeading;
+    }
   }
   .toggle-all-btn,
   .twitter-tweet a {
     @include button;
     margin: 1rem 0 2rem;
-    color: $bodyTxtColor;
+    color: $white;
   }
 
   .toggle-all-btn:hover {
@@ -72,7 +76,7 @@
 
       & .twitter-tweet a {
         text-decoration: none;
-        color: #fff;
+        color: $white;
 
         &:hover {
           background-color: $orange;

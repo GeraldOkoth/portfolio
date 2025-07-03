@@ -1,4 +1,6 @@
 import React from "react";
+import { easeInOut, motion } from "framer-motion";
+
 
 function Footer() {
   return (
@@ -6,7 +8,12 @@ function Footer() {
       <footer>
         <section className="footer">
           <hr />
-          <div className="footer-content">
+          <motion.div
+            initial={{ opacity: 0, y: -30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ transitionTimingFunction: easeInOut, delay: .4 }}
+            className="footer-content"
+          >
             <p>
               &copy; {new Date().getFullYear()}, All rights reserved. Powered by
               TechiesKE.
@@ -55,7 +62,7 @@ function Footer() {
                 <i className="fa-brands fa-facebook"></i>
               </a>
             </div>
-          </div>
+          </motion.div>
         </section>
       </footer>
     </>

@@ -20,7 +20,7 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <div className="nav-logo">
-        <img src="/images/logo.png" alt="logo" width={40} height={40} />
+        <a href="../../pages/home/HomePage.jsx"><img src="/images/logo.png" alt="logo" width={40} height={40} /></a>
       </div>
 
       <div
@@ -33,24 +33,22 @@ export default function Navbar() {
       </div>
 
       <ul className={`nav-links ${isOpen ? "show" : ""}`}>
-        {["home", "about", "skills", "services", "tweets", "contact"].map(
-          (section) => (
-            <li key={section}>
-              <Link
-                to={section}
-                spy={true}
-                smooth={true}
-                duration={500}
-                offset={-70}
-                onSetActive={handleSetActive}
-                onClick={closeMenu}
-                className={active === section ? "active" : ""}
-              >
-                {section.charAt(0).toUpperCase() + section.slice(1)}
-              </Link>
-            </li>
-          )
-        )}
+        {["home", "about", "skills", "projects", "services", "tweets", "contact"].map((section) => (
+          <li key={section}>
+            <Link
+              to={section}
+              spy={true}
+              smooth={true}
+              duration={500}
+              offset={-70}
+              onSetActive={handleSetActive}
+              onClick={closeMenu}
+              className={active === section ? "active" : ""}
+            >
+              {section.charAt(0).toUpperCase() + section.slice(1)}
+            </Link>
+          </li>
+        ))}
       </ul>
     </nav>
   );

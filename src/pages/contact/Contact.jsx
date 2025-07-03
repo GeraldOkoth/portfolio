@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { easeInOut, motion } from "framer-motion";
+
 
 function Contact() {
   const [message, setMessage] = useState("");
@@ -11,15 +13,25 @@ function Contact() {
   return (
     <>
       <section className="contact" id="contact">
-        <div className="contact-header">
+        <motion.div
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ transitionTimingFunction: easeInOut, delay: 0.6 }}
+          className="contact-header"
+        >
           <h2>Let's Talk</h2>
           <p>
             I would love to respond to your queries/concerns. It is always a
             pleasure chatting with you. Let's get in touch.
           </p>
-        </div>
+        </motion.div>
         <div className="contact-section">
-          <div className="contact-address">
+          <motion.div
+            initial={{ opacity: 0, x: -120 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ transitionTimingFunction: easeInOut, delay: 1 }}
+            className="contact-address"
+          >
             <div className="location">
               <i className="fa-solid fa-location-dot"></i>
               <span>Machakos, Kenya</span>
@@ -58,8 +70,13 @@ function Contact() {
                 referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
             </div>
-          </div>
-          <div className="contact-form">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ transitionTimingFunction: easeInOut, delay: 1 }}
+            className="contact-form"
+          >
             <form method="post" action="" onSubmit={handleSubmit}>
               <div className="form-row">
                 <div className="form-name">
@@ -103,7 +120,7 @@ function Contact() {
               </div>
               <span id="feedback">{message}</span>
             </form>
-          </div>
+          </motion.div>
         </div>
       </section>
     </>

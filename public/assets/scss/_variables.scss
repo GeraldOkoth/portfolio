@@ -1,7 +1,8 @@
 // variable declaration
 $primaryColor: #5555ff;
 $orange: orange;
-$bodyTxtColor: #fff;
+$white: #fff;
+$bodyTxtColor: var(--fav-color-text);
 $bodyBgColor: #071629;
 $fontStack: 'Poppins', sans-serif;
 $sectionPaddingDesktop: 3rem;
