@@ -2,9 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap");
 @import url(https://fonts.googleapis.com/css?family=Yeseva+One);
 @import url(https://fonts.googleapis.com/css?family=Josefin+Sans:400,700,700italic,400italic);
-*,
-*::before,
-*::after {
+* {
   padding: 0;
   margin: 0;
   list-style-type: none;
@@ -334,6 +332,332 @@ body {
     height: 250px;
   }
 }
+.about-section {
+  padding: 3rem;
+  background-color: hsl(245, 100%, 10%);
+  color: var(--fav-color-text);
+}
+.about-section .about-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.about-section .container {
+  display: flex;
+  gap: 2rem;
+  margin: 3rem auto;
+}
+.about-section .container .about-img {
+  flex-basis: 35%;
+}
+.about-section .container .about-img img {
+  width: 100%;
+  object-fit: cover;
+  object-position: 100% 30%;
+  border-radius: 5px;
+}
+.about-section .container .about-img .mission-statement {
+  padding: 1rem 0;
+  font-size: 0.8rem;
+}
+.about-section .container .about-info {
+  flex-basis: 60%;
+}
+.about-section .container .about-info p {
+  text-align: justify;
+}
+
+@media screen and (max-width: 480px) {
+  .about-section {
+    padding: 1rem 1.25rem;
+  }
+  .about-section .about-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  .about-section .container {
+    flex-direction: column;
+    gap: 0;
+  }
+  .about-section .container .about-img img {
+    height: 200px;
+    object-fit: cover;
+    object-position: 100% 25%;
+  }
+  .about-section .container .about-info p {
+    line-height: 1.3rem;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 900px) {
+  .about-info {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.skills {
+  background-color: rgb(7, 2, 35);
+  padding: 3rem;
+}
+.skills h2 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.skills-container {
+  display: grid;
+  align-items: center;
+  gap: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.skills-box {
+  background-color: rgba(7, 2, 35, 0.5);
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.skills-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  background-color: rgb(0, 0, 56);
+}
+
+.skills-box .skill-info {
+  display: flex;
+  flex-direction: column;
+  /* align-items: baseline; */
+  justify-content: left;
+  text-align: left;
+  /* padding: 0.5rem 0; */
+}
+
+.skills-box .skill-info h4 {
+  /* margin: 0; */
+  font: 1em sans-serif;
+  font-weight: 600;
+  line-height: 2;
+}
+
+@media screen and (max-width: 480px) {
+  .skills {
+    padding: 1rem 1.25rem;
+  }
+  .skills h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+}
+.project-section {
+  padding: 3rem;
+}
+.project-section .projects-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+.project-section .tabs {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+.project-section .tabs button {
+  color: #071629;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 7px;
+  padding: 0.5rem 1rem;
+  border: none;
+  font-weight: 600;
+  background-color: #5555ff;
+  border-radius: 20px;
+  margin: 0.5rem;
+}
+.project-section .tabs button.active {
+  background: orange;
+  color: white;
+}
+.project-section .tabs button:hover {
+  background: orange;
+  color: black;
+}
+.project-section .carousel-wrapper .slick-slide {
+  padding: 0 1rem;
+}
+.project-section .carousel-wrapper .slick-arrow {
+  margin: 0 1rem;
+}
+.project-section .no-project-message {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+  color: gray;
+}
+.project-section .project-card {
+  border-radius: 1rem;
+  background: #09022a;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border: 1px solid #ccc;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.project-section .project-card:hover {
+  transform: translateY(-5px) scale(1.01);
+  box-shadow: 6px 6px 12px rgba(171, 171, 171, 0.2);
+}
+.project-section .project-card h3 {
+  margin-bottom: 0.5rem;
+}
+.project-section .project-card .meta {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem;
+}
+.project-section .project-card .meta span {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  cursor: pointer;
+}
+.project-section .project-card a {
+  display: block;
+  margin-top: 0.5rem;
+  color: var(--fav-color-text);
+  text-decoration: none;
+  border-radius: 0.5rem;
+}
+.project-section .project-card a:hover {
+  color: orange;
+}
+.project-section .project-card .project-dates {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #777;
+}
+.project-section .project-card .project-dates p {
+  margin: 0.3rem 0;
+}
+.project-section .project-card .project-dates .toggle-date {
+  margin-top: 0.3rem;
+  padding: 0.3rem 0.5rem;
+  background: transparent;
+  color: orange;
+  border: 1px solid orange;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.project-section .project-card .project-dates .toggle-date:hover {
+  background: orange;
+  color: #fff;
+}
+.project-section .project-card .project-dates .project-links {
+  margin-top: 1rem;
+  display: flex;
+  gap: 10px;
+}
+.project-section .project-card .project-dates .project-links .btn-link {
+  background: orange;
+  color: white;
+  padding: 0.5em 1em;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.project-section .project-card .project-dates .project-links .btn-link:hover {
+  background: darkorange;
+}
+.project-section .project-card .project-dates .project-links .project-btn {
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  border-radius: 6px;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+.project-section .project-card .project-dates .project-links .project-btn.github {
+  background: #24292e;
+  color: white;
+}
+.project-section .project-card .project-dates .project-links .project-btn.github:hover {
+  background: #000;
+}
+.project-section .project-card .project-dates .project-links .project-btn.demo {
+  background: orange;
+  color: white;
+}
+.project-section .project-card .project-dates .project-links .project-btn.demo:hover {
+  background: orange;
+}
+.project-section .project-card .view-more {
+  background: none;
+  border: none;
+  margin-left: 0.5rem;
+  color: blue;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+.project-section .project-card .view-more-btn {
+  align-self: flex-start;
+  background-color: #f0f0f0;
+  color: #222;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.project-section .project-card .view-more-btn:hover {
+  background-color: #ddd;
+}
+.project-section .project-card .toggle-more {
+  color: orange;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 480px) {
+  .project-section {
+    padding: 1rem 1.25rem;
+  }
+  .project-section .projects-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  .project-section .tabs button {
+    margin: 0.3rem;
+    font-size: 0.9rem;
+  }
+  .project-section .project-card {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .project-section .meta span {
+    font-size: 0.8rem;
+  }
+  .project-section .meta span .project-card {
+    width: 100%;
+    padding: 1rem;
+    margin: 0 auto;
+    border-radius: 0.5rem;
+  }
+  .project-section .meta span .project-card p {
+    font-size: 0.8em;
+  }
+}
 .services {
   padding: 3rem;
   background-color: #040031;
@@ -456,128 +780,6 @@ body {
   .my-services .image {
     flex-basis: 100%;
     margin-bottom: 1rem;
-  }
-}
-.about-section {
-  padding: 3rem;
-  background-color: hsl(245, 100%, 10%);
-  color: var(--fav-color-text);
-}
-.about-section .about-title {
-  font-size: 2.2rem;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 1rem;
-}
-.about-section .container {
-  display: flex;
-  gap: 2rem;
-  margin: 3rem auto;
-}
-.about-section .container .about-img {
-  flex-basis: 35%;
-}
-.about-section .container .about-img img {
-  width: 100%;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 5px;
-}
-.about-section .container .about-img .mission-statement {
-  padding: 1rem 0;
-  font-size: 0.8rem;
-}
-.about-section .container .about-info {
-  flex-basis: 60%;
-}
-.about-section .container .about-info p {
-  text-align: justify;
-}
-
-@media screen and (max-width: 480px) {
-  .about-section {
-    padding: 1rem 1.25rem;
-  }
-  .about-section .about-title {
-    font-size: 1.2rem;
-    font-weight: 600;
-  }
-  .about-section .container {
-    flex-direction: column;
-    gap: 0;
-  }
-  .about-section .container .about-img img {
-    height: 200px;
-    object-fit: cover;
-    object-position: top;
-  }
-  .about-section .container .about-info p {
-    line-height: 1.3rem;
-  }
-}
-@media screen and (min-width: 480px) and (max-width: 900px) {
-  .about-info {
-    display: flex;
-    flex-direction: column;
-  }
-}
-.skills {
-  background-color: rgb(7, 2, 35);
-  padding: 3rem;
-}
-.skills h2 {
-  font-size: 2.2rem;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-.skills-container {
-  display: grid;
-  align-items: center;
-  gap: 3rem;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-}
-
-.skills-box {
-  background-color: rgba(7, 2, 35, 0.5);
-  border: 1px solid white;
-  border-radius: 10px;
-  padding: 1rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-align: center;
-}
-
-.skills-box:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-  background-color: rgb(0, 0, 56);
-}
-
-.skills-box .skill-info {
-  display: flex;
-  flex-direction: column;
-  /* align-items: baseline; */
-  justify-content: left;
-  text-align: left;
-  /* padding: 0.5rem 0; */
-}
-
-.skills-box .skill-info h4 {
-  /* margin: 0; */
-  font: 1em sans-serif;
-  font-weight: 600;
-  line-height: 2;
-}
-
-@media screen and (max-width: 480px) {
-  .skills {
-    padding: 1rem 1.25rem;
-  }
-  .skills h2 {
-    font-size: 1.2rem;
-    font-weight: 600;
   }
 }
 .tweets {
