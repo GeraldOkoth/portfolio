@@ -1,0 +1,172 @@
+.project-section {
+  padding: $sectionPaddingDesktop;
+
+  .projects-title {
+    @include sectionHeading;
+    margin-bottom: 2rem;
+  }
+
+  .tabs {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+
+    button {
+      @include button;
+      border-radius: 20px;
+      margin: 0.5rem;
+
+      &.active {
+        background: orange;
+        color: white;
+      }
+
+      &:hover {
+        background: orange;
+        color: black;
+      }
+    }
+  }
+
+  .carousel-wrapper {
+    .slick-slide {
+      padding: 0 1rem;
+    }
+
+    .slick-arrow {
+      margin: 0 1rem;
+    }
+  }
+
+  .no-project-message {
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.2rem;
+    color: gray;
+  }
+
+  .project-card {
+    background: #09022a;
+    border: 1px solid #ccc;
+    border-radius: 1rem;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 1rem 0;
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px) scale(1.01);
+      box-shadow: 6px 6px 12px rgba(171, 171, 171, 0.2);
+    }
+
+    h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    .project-description {
+      font-size: 1rem;
+      color: $bodyTxtColor;
+      margin-bottom: 0.8rem;
+    }
+
+    .view-more-btn {
+      margin-top: 0.5rem;
+      background-color: #f0f0f0;
+      color: #222;
+      border: none;
+      padding: 0.3rem .7rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+
+      &:hover {
+        background-color: #ddd;
+      }
+    }
+
+    .project-meta {
+      display: flex;
+      justify-content: space-around;
+      gap: 1rem;
+      margin: 1rem 0;
+      font-size: 0.95rem;
+
+      span {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        cursor: pointer;
+        color: $bodyTxtColor;
+
+        &:hover {
+          color: orange;
+        }
+      }
+    }
+
+    .project-dates {
+      font-size: 0.85rem;
+      color: #aaa;
+
+      p {
+        margin: 0.2rem 0;
+      }
+
+      .toggle-date-btn {
+        margin-top: 0.5rem;
+        background: transparent;
+        color: $orange;
+        border: 1px solid $orange;
+        border-radius: 4px;
+        font-size: 0.8rem;
+        padding: 0.3rem 0.6rem;
+        cursor: pointer;
+        transition: background 0.2s;
+
+        &:hover {
+          background: $orange;
+          color: #fff;
+        }
+      }
+    }
+
+    .project-links {
+      margin-top: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+
+      .project-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+        border-radius: 6px;
+        text-decoration: none;
+        text-align: center;
+        font-weight: bold;
+        transition: background 0.3s ease;
+        color: white;
+
+        &.github {
+          background: #24292e;
+
+          &:hover {
+            background: #000;
+          }
+        }
+
+        &.demo {
+          background: $orange;
+
+          &:hover {
+            background: darkorange;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  @include projectPhone;
+}
