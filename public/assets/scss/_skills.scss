@@ -1,52 +1,89 @@
-.skills {
-  background-color: rgb(7, 2, 35);
+.skills-section {
   padding: $sectionPaddingDesktop;
+  text-align: center;
+  background: hsl(240, 98%, 17%);
+  
+  .skills-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: nowrap;
+  }
+  .tab-btn {
+    background: transparent;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #7d7d7d;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: all 0.3s ease;
 
-  h2 {
-    @include sectionHeading;
+    &:hover {
+      color: $orange;
+    }
+
+    &.active {
+      background: $orange;
+      color: white;
+
+      &:hover {
+        background: rgb(217, 142, 3);
+      }
+    }
+  }
+  .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+
+    .skill-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(97, 97, 97, 0.1);
+      padding: 1.5rem;
+      width: 180px;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+
+      .skill-icon {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: #3b82f6;
+      }
+
+       h4 {
+        margin: 0.5rem 0;
+        font-size: 1.1rem;
+      }
+
+      .progress-bar {
+        background: #e0e0e0;
+        border-radius: 10px;
+        height: 8px;
+        margin: 1rem 0;
+        overflow: hidden;
+
+        .progress-fill {
+          background: #3b82f6;
+          border-radius: 10px;
+          height: 100%;
+        }
+      }
+      .skill-level {
+        font-weight: bold;
+        color: #555;
+      }
+    }
   }
 }
 
-.skills-container {
-  display: grid;
-  align-items: center;
-  gap: 3rem;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-}
-
-.skills-box {
-  background-color: rgba(7, 2, 35, 0.5);
-  border: 1px solid white;
-  border-radius: 10px;
-  padding: 1rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-align: center;
-}
-
-.skills-box:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-  background-color: rgb(0, 0, 56);
-}
-
-.skills-box .skill-info {
-  display: flex;
-  flex-direction: column;
-  /* align-items: baseline; */
-  justify-content: left;
-  text-align: left;
-  /* padding: 0.5rem 0; */
-}
-
-.skills-box .skill-info h4 {
-  /* margin: 0; */
-  font: 1em sans-serif;
-  font-weight: 600;
-  line-height: 2;
-}
-
-// skills on phone
 @media screen and (max-width: $mobile) {
-    @include skillsPhone;
+ @include skillsPhone;
 }

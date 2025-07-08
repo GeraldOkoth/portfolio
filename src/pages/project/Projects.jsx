@@ -15,19 +15,18 @@ const allProjects = [
     createdAt: "2024-10-22T10:00:00Z",
     updatedAt: "2025-07-06T15:30:00Z",
     demo: "https://geraldokoth.vercel.app",
-    github: "https://github.com/GeraldOkoth/portfolio",
+    github: "https://github.com/GeraldOkoth/portfolio"
   },
-  // {
-  //   id: "p2",
-  //   type: "uiux",
-  //   title: "Figma Webpage Design",
-  //   description: "UI/UX design to simulate a Figma Webpage Design.",
-  //   likes: 0,
-  //   views: 0,
-  //   date: "2025-06-15",
-  //   github:
-  //     "https://github.com/GeraldOkoth/alx_html_css/tree/main/css_advanced",
-  // },
+  {
+    id: "p2",
+    type: "uiux",
+    title: "ALX ehub login page clone",
+    description: "UI/UX design to replicate ALX ehub login page.",
+    likes: 0,
+    views: 0,
+    date: "2025-06-15",
+    demo: "https://geraldokoth.vercel.app"
+  },
   {
     id: "p3",
     type: "frontend",
@@ -38,8 +37,8 @@ const allProjects = [
     views: 0,
     createdAt: "2025-06-22T10:00:00Z",
     updatedAt: "2025-06-26T15:30:00Z",
-    github: "https://github.com/GeraldOkoth/dynamic-to-do-list-js",
-  },
+    github: "https://github.com/GeraldOkoth/dynamic-to-do-list-js"
+  }
 ];
 
 const categoryTabs = ["frontend", "uiux", "graphic"];
