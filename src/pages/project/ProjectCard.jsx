@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import { FaEye, FaThumbsUp, FaGithub, FaRegBookmark } from "react-icons/fa";
+// import { FaEye, FaThumbsUp, FaGithub, FaRegBookmark } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 import { timeAgo } from "./timeAgo";
 
 const ProjectCard = ({ project }) => {
-  const [likes, setLikes] = useState(project.likes || 0);
-  const [views, setViews] = useState(project.views || 0);
-  const [bookmarks, setBookmarks] = useState(project.bookmarks || 0);
+  // const [likes, setLikes] = useState(project.likes || 0);
+  // const [views, setViews] = useState(project.views || 0);
+  // const [bookmarks, setBookmarks] = useState(project.bookmarks || 0);
   const [showFull, setShowFull] = useState(false);
   const [showFullDate, setShowFullDate] = useState(false);
 
@@ -21,9 +22,9 @@ const ProjectCard = ({ project }) => {
         })
       : timeAgo(date);
 
-  const handleView = () => setViews((prev) => prev + 1);
-  const handleLike = () => setLikes((prev) => prev + 1);
-  const handleBookmark = () => setBookmarks((prev) => prev + 1);
+  // const handleView = () => setViews((prev) => prev + 1);
+  // const handleLike = () => setLikes((prev) => prev + 1);
+  // const handleBookmark = () => setBookmarks((prev) => prev + 1);
 
   return (
     <div className="project-card">
@@ -43,7 +44,7 @@ const ProjectCard = ({ project }) => {
         )}
       </p>
 
-      <div className="project-meta">
+      {/* <div className="project-meta">
         <span onClick={handleView} title="Views">
           <FaEye /> {views}
         </span>
@@ -53,7 +54,7 @@ const ProjectCard = ({ project }) => {
         <span onClick={handleBookmark} title="Bookmarks">
           <FaRegBookmark /> {bookmarks}
         </span>
-      </div>
+      </div> */}
 
       <div className="project-dates">
         <p>
@@ -77,7 +78,7 @@ const ProjectCard = ({ project }) => {
             target="_blank"
             rel="noopener noreferrer"
             className="project-btn github"
-            onClick={handleView}
+            // onClick={handleView}
           >
             <FaGithub /> GitHub
           </a>
@@ -88,7 +89,7 @@ const ProjectCard = ({ project }) => {
             target="_blank"
             rel="noopener noreferrer"
             className="project-btn demo"
-            onClick={handleView}
+            // onClick={handleView}
           >
             Live Demo
           </a>

@@ -14,10 +14,10 @@ function HomePage() {
   }, []);
 
   // resolve status after download is ready
-  function downloadCv () {
-    const btn = document.getElementById('downloadBtn');
-    btn.innerText = "Downloading...";
-  }
+  // function downloadCv () {
+  //   const btn = document.getElementById('downloadBtn');
+  //   btn.innerText = "Downloading...";
+  // }
 
   return (
     <>
@@ -73,7 +73,7 @@ function HomePage() {
                 className="btn btn-primary"
                 role="button"
                 id="downloadBtn"
-                onClick={downloadCv}
+                // onClick={downloadCv}
               >
                 <span className="spinner-grow spinner-grow-sm"></span>Hire Me...
               </a>

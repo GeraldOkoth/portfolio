@@ -15,30 +15,43 @@ const allProjects = [
     createdAt: "2024-10-22T10:00:00Z",
     updatedAt: "2025-07-06T15:30:00Z",
     demo: "https://geraldokoth.vercel.app",
-    github: "https://github.com/GeraldOkoth/portfolio"
+    github: "https://github.com/GeraldOkoth/portfolio",
   },
   {
     id: "p2",
-    type: "uiux",
-    title: "ALX ehub login page clone",
-    description: "UI/UX design to replicate ALX ehub login page.",
-    likes: 0,
-    views: 0,
-    date: "2025-06-15",
-    demo: "https://geraldokoth.vercel.app"
-  },
-  {
-    id: "p3",
     type: "frontend",
-    title: "To Do List App",
+    title: "Simple To Do List App",
     description:
-      "A simple to-do list application to implement local storage functionality - persists tasks even after page reload.",
+      "A simple to-do list application that allows users to add, display, and remove tasks. This project focuses on utilizing advanced DOM manipulation techniques to interact dynamically with the webpage, persist data using localStorage, ensuring that tasks are saved even after the browser is closed. The aim of building this project is to enhance my understanding of JavaScript, DOM manipulation, and localStorage.",
     likes: 0,
     views: 0,
     createdAt: "2025-06-22T10:00:00Z",
     updatedAt: "2025-06-26T15:30:00Z",
-    github: "https://github.com/GeraldOkoth/dynamic-to-do-list-js"
-  }
+    github: "https://github.com/GeraldOkoth/dynamic-to-do-list-js",
+    demo: "https://dynamic-to-do-list-js-peach.vercel.app/",
+  },
+  {
+    id: "p3",
+    type: "uiux",
+    title: "Portfolio Website UI Design",
+    description:
+      "This is a UI design for an interactive portfolio website created using Figma. The design showcases a modern and responsive layout, focusing on user experience and visual appeal. The aim of building this project is to enhance my UI/UX design skills and to create a visually appealing and user-friendly portfolio interface.",
+    likes: 0,
+    views: 0,
+    date: "2025-06-15",
+    demo: "https://www.figma.com/design/pwN8fphIevGOHwwL2QdXPD/High-FI-portfolio-website?node-id=0-1&t=5qKjgAuy7BVHE950-1",
+  },
+  {
+    id: "p4",
+    type: "uiux",
+    title: "ALX ehub login page clone",
+    description:
+      "This is a UI figma file designed to replicate ALX ehub login page. The aim of building this project is to enhance my UI/UX design skills and to create a visually appealing and user-friendly login interface. See the original login page at https://ehub.alxafrica.com/login",
+    likes: 0,
+    views: 0,
+    date: "2025-06-15",
+    demo: "https://www.figma.com/proto/42jg1O8qpxNUVZ5DqrCJfo/alx_ehub_login_prototype?node-id=2-2&p=f&t=CVYcshduHnTXPh24-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1",
+  },
 ];
 
 const categoryTabs = ["frontend", "uiux", "graphic"];

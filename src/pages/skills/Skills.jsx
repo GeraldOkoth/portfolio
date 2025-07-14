@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import {
   FaReact,
   FaJs,
@@ -16,7 +16,9 @@ import {
   SiWordpress,
   SiAdobepremierepro,
   SiInvision,
+  SiCanva,
 } from "react-icons/si";
+import { motion } from "framer-motion";
 
 const Skills = () => {
   const [activeTab, setActiveTab] = useState("Frontend");
@@ -37,13 +39,14 @@ const Skills = () => {
       { name: "Figma", icon: <FaFigma />, level: 85 },
       { name: "InVision", icon: <SiInvision />, level: 70 },
       { name: "WordPress", icon: <SiWordpress />, level: 75 },
+      { name: "Canva", icon: <SiCanva />, level: 95 },
     ],
     Tools: [
       { name: "Git", icon: <FaGitAlt />, level: 80 },
       { name: "GitHub", icon: <FaGithub />, level: 85 },
       { name: "DaVinci Resolve", icon: <FaVideo />, level: 65 },
       { name: "Adobe Premiere", icon: <SiAdobepremierepro />, level: 70 },
-    ]
+    ],
   };
 
   // Intersection Observer for scroll animation
@@ -66,9 +69,20 @@ const Skills = () => {
 
   return (
     <section id="skills" className="skills-section" ref={skillsRef}>
-      <h2>My Skills</h2>
+      <motion.h2
+        initial={{ opacity: 0, y: -30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
+        My Skills
+      </motion.h2>
 
-      <div className="skills-tabs">
+      <motion.div
+        className="skills-tabs"
+        initial={{ opacity: 0, y: -30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
         {Object.keys(skillCategories).map((category) => (
           <button
             key={category}
@@ -78,9 +92,14 @@ const Skills = () => {
             {category}
           </button>
         ))}
-      </div>
+      </motion.div>
 
-      <div className="skills-container">
+      <motion.div
+        className="skills-container"
+        initial={{ opacity: 0, y: -30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
         {skillCategories[activeTab].map((skill, index) => (
           <div key={index} className="skill-card">
             <div className="skill-icon">{skill.icon}</div>
@@ -99,7 +118,7 @@ const Skills = () => {
             </span>
           </div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 };

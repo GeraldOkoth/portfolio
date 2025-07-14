@@ -1,5 +1,3 @@
-import React from "react";
-
 // ServiceItem Component for each individual service
 const ServiceItem = ({ image, alt, title, description }) => {
   return (

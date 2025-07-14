@@ -2,6 +2,10 @@
   padding: $sectionPaddingDesktop;
   text-align: center;
   background: hsl(240, 98%, 17%);
+
+  h2 {
+    @include sectionHeading;
+  }
   
   .skills-tabs {
     display: flex;
