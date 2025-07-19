@@ -8,11 +8,23 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+
+const router = createBrowserRouter([
+  {path: '/', element: <App />},
+  {path: '/about', element: <App />},
+  // {path: '/project/:id', element: <App />},
+  {path: '/projects', element: <App />},
+  {path: '/contact', element: <App />},
+  {path: '/login', element: <App />},
+  // {path: '*', element: <NotFoundPage />}
+]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
+    {/* <App /> */}
   </React.StrictMode>
 );
 

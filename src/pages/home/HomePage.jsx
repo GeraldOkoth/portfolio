@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import textAnimate from "./text-animation";
 import TopNavigationBar from "../../components/header/TopNavigationBar";
 import { easeInOut, generateLinearEasing, motion } from "framer-motion";
@@ -13,11 +13,22 @@ function HomePage() {
     }
   }, []);
 
-  // resolve status after download is ready
-  // function downloadCv () {
-  //   const btn = document.getElementById('downloadBtn');
-  //   btn.innerText = "Downloading...";
-  // }
+  const [isDownloading, setIsDownloading] = useState(false);
+  const onClickDownload = () => {
+    setIsDownloading(true);
+    const downloadLink = document.getElementById("downloadBtn");
+    downloadLink.classList.add("disabled");
+    // downloadLink.removeChild(downloadLink.querySelector(".spinner-grow"));
+    downloadLink.disabled = true;
+
+    
+    setTimeout(() => {
+      setIsDownloading(false);
+      downloadLink.classList.remove("disabled");
+      downloadLink.disabled = false;
+      alert("Download completed!");
+    }, 125); 
+  };
 
   return (
     <>
@@ -73,9 +84,10 @@ function HomePage() {
                 className="btn btn-primary"
                 role="button"
                 id="downloadBtn"
-                // onClick={downloadCv}
+                onClick={onClickDownload}
+                disabled={false}
               >
-                <span className="spinner-grow spinner-grow-sm"></span>Hire Me...
+                <span className="spinner-grow spinner-grow-sm"></span>{isDownloading? "Downloading..." : "Hire Me..."}
               </a>
             </motion.div>
             <motion.div

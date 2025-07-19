@@ -190,6 +190,13 @@ body {
 .home-page .hero .hero-info .hero-btns a {
   font-weight: 500;
 }
+.home-page .hero .hero-info .hero-btns .disabled {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: var(--fav-color-text);
+  border: 1px solid orange;
+  cursor: not-allowed;
+  pointer-events: none;
+}
 .home-page .hero .hero-info .hero-btns a:hover {
   transform: scale(1.03);
   color: var(--fav-color-text);
