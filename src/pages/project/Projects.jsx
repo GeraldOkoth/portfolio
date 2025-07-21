@@ -69,7 +69,7 @@ const allProjects = [
 ];
 
 const categoryTabs = ["frontend", "uiux", "graphic"];
-const sortTabs = ["latest", "oldest", "popular"];
+const sortTabs = ["latest", "oldest"];
 
 function Projects() {
   const [activeCategory, setActiveCategory] = useState("frontend");
@@ -80,7 +80,7 @@ function Projects() {
     .sort((a, b) => {
       if (sortType === "latest") return new Date(b.date) - new Date(a.date);
       if (sortType === "oldest") return new Date(a.date) - new Date(b.date);
-      if (sortType === "popular") return b.likes - a.likes;
+      // if (sortType === "popular") return b.likes - a.likes;
       return 0;
     });
 

@@ -39,6 +39,26 @@
     }
   }
 
+.slick-dots {
+  li {
+      bottom: .5rem;
+      button {
+        &::before {
+          color: #fff;
+          font-size: .5rem;
+        }
+      }
+      &.slick-active {
+        button {
+          &::before {
+            color: orange;
+            opacity: 85%;
+          }
+        }
+      }
+    }
+  }
+
   .no-project-message {
     text-align: center;
     padding: 2rem;

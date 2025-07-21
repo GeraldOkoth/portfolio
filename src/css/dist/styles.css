@@ -548,6 +548,17 @@ body {
 .project-section .carousel-wrapper .slick-arrow {
   margin: 0 1rem;
 }
+.project-section .slick-dots li {
+  bottom: 0.5rem;
+}
+.project-section .slick-dots li button::before {
+  color: #fff;
+  font-size: 0.5rem;
+}
+.project-section .slick-dots li.slick-active button::before {
+  color: orange;
+  opacity: 85%;
+}
 .project-section .no-project-message {
   text-align: center;
   padding: 2rem;
