@@ -32,6 +32,20 @@ const allProjects = [
   },
   {
     id: "p3",
+    type: "frontend",
+    title: "Dynamic Web Application with DOM Manipulation & JSON Data",
+    description:
+      "Developed an interactive web application focused on dynamic content generation, data persistence, and JSON handling. The project highlights advanced DOM manipulation, browser storage (localStorage & sessionStorage), and efficient JSON data management.",
+    likes: 0,
+    views: 0,
+    createdAt: "2025-07-21T11:20:00Z",
+    updatedAt: "2025-07-21T11:20:00Z",
+    github:
+      "https://github.com/GeraldOkoth/alx_fe_javascript/tree/main/dom-manipulation",
+    demo: "https://advanced-to-do-list-nu.vercel.app/",
+  },
+  {
+    id: "p4",
     type: "uiux",
     title: "Portfolio Website UI Design",
     description:
@@ -42,7 +56,7 @@ const allProjects = [
     demo: "https://www.figma.com/design/pwN8fphIevGOHwwL2QdXPD/High-FI-portfolio-website?node-id=0-1&t=5qKjgAuy7BVHE950-1",
   },
   {
-    id: "p4",
+    id: "p5",
     type: "uiux",
     title: "ALX ehub login page clone",
     description:

@@ -20,7 +20,7 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <div className="nav-logo">
-        <a href="../../pages/home/HomePage.jsx"><img src="/images/logo.png" alt="logo" width={40} height={40} /></a>
+        <a href="#home"><img src="/images/logo.png" alt="logo" width={40} height={40} /></a>
       </div>
 
       <div
