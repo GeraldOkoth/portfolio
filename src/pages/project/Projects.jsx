@@ -66,6 +66,20 @@ const allProjects = [
     date: "2025-06-15",
     demo: "https://www.figma.com/proto/42jg1O8qpxNUVZ5DqrCJfo/alx_ehub_login_prototype?node-id=2-2&p=f&t=CVYcshduHnTXPh24-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1",
   },
+  {
+    id: "p6",
+    type: "frontend",
+    title: "GitHub User Profile Search",
+    description:
+      "A GitHub User Profile Search Application developed using React and Tailwindcss. I developed this application solely to enhance my understanding of GitHub API Intergration and handling user authentication.. It further enabled me gain hands-on experience in API interactions, advanced HTTP networking, and deploying web applications.",
+    likes: 0,
+    views: 0,
+    createdAt: "2025-08-20T10:08:21Z",
+    updatedAt: "2025-08-22T15:02:37Z",
+    demo: "https://github-userprofile-search.vercel.app/",
+    github:
+      "https://github.com/GeraldOkoth/alx-fe-reactjs/tree/main/github-user-search",
+  },
 ];
 
 const categoryTabs = ["frontend", "uiux", "graphic"];
