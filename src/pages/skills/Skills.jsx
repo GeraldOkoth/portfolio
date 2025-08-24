@@ -8,7 +8,7 @@ import {
   FaBootstrap,
   FaGitAlt,
   FaGithub,
-  FaFigma,
+  FaFigma,  
   FaVideo,
 } from "react-icons/fa";
 import {
@@ -16,6 +16,7 @@ import {
   SiWordpress,
   SiAdobepremierepro,
   SiInvision,
+  SiTailwindcss,
   SiCanva,
 } from "react-icons/si";
 import { motion } from "framer-motion";
@@ -34,6 +35,7 @@ const Skills = () => {
       { name: "JavaScript", icon: <FaJs />, level: 88 },
       { name: "TypeScript", icon: <SiTypescript />, level: 75 },
       { name: "React", icon: <FaReact />, level: 70 },
+      { name: "Tailwindcss", icon: <SiTailwindcss />, level: 70 },
     ],
     Design: [
       { name: "Figma", icon: <FaFigma />, level: 85 },
