@@ -1,3 +1,5 @@
+import { FaDollarSign, FaStar, FaCalendarCheck } from "react-icons/fa";
+
 // ServiceItem Component for each individual service
 const ServiceItem = ({ image, alt, title, description }) => {
   return (
@@ -16,14 +18,14 @@ const ServiceItem = ({ image, alt, title, description }) => {
 };
 
 // ServiceDescription Component for service descriptions like Affordable Cost, Quality Services, etc.
-const ServiceDescription = ({ image, alt, title, description }) => {
+const ServiceDescription = ({ icon, title, description }) => {
   return (
     <div
-      className={`service-description-item ${alt
+      className={`service-description-item ${title
         .toLowerCase()
         .replace(" ", "-")}`}
     >
-      <img src={image} alt={alt} width="150px" height="150px" />
+      <div className="service-icon">{icon}</div>
       <h3>{title}</h3>
       <p>{description}</p>
     </div>
@@ -34,22 +36,19 @@ const ServiceDescription = ({ image, alt, title, description }) => {
 const Services = () => {
   const serviceDescriptions = [
     {
-      image: "/images/Screenshot 2023-11-22 141107.png",
-      alt: "Affordable cost",
+      icon: <FaDollarSign className="icon" />,
       title: "Affordable Cost",
       description:
         "I offer the best services to clients in need at the most affordable cost.",
     },
     {
-      image: "/images/Screenshot 2023-11-22 141831.png",
-      alt: "Quality services",
+      icon: <FaStar className="icon" />,
       title: "Quality Services",
       description:
         "Customer satisfaction is key to sustaining any business. With me quality services are guaranteed.",
     },
     {
-      image: "/images/Screenshot 2023-11-22 143059.png",
-      alt: "Online booking",
+      icon: <FaCalendarCheck className="icon" />,
       title: "Online Booking",
       description:
         "My services are accessible to you at the palm of your hands, book with me today.",

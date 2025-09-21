@@ -720,6 +720,9 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+.services-cta .icon {
+  font-size: 3rem;
+}
 .services-cta h3 {
   padding-bottom: 0.7rem;
   color: orange;
