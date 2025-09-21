@@ -139,8 +139,8 @@ function HomePage() {
           </div>
           <motion.div
             className="hero-image"
-            initial={{ opacity: 0, x: 120 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 120 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ transitionTimingFunction: easeInOut, delay: 2.5 }}
           >
             <img
