@@ -401,9 +401,16 @@
     }
   }
   .tweets-container {
-    flex-direction: column;
+    // flex-direction: column;
     /* align-items: center; */
+
+    .tweet-box .tweet-header .tweet-title {
+      font-size: 0.9rem;
+    }
   }
+   .twitter-tweet a {
+    font-size: 0.8rem;
+   }
 }
 
 // contact section on mobile phone
