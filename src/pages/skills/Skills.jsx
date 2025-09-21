@@ -35,7 +35,7 @@ const Skills = () => {
       { name: "JavaScript", icon: <FaJs />, level: 88 },
       { name: "TypeScript", icon: <SiTypescript />, level: 75 },
       { name: "React", icon: <FaReact />, level: 70 },
-      { name: "Tailwindcss", icon: <SiTailwindcss />, level: 70 },
+      { name: "Tailwindcss", icon: <SiTailwindcss />, level: 90 },
     ],
     Design: [
       { name: "Figma", icon: <FaFigma />, level: 85 },
@@ -44,8 +44,8 @@ const Skills = () => {
       { name: "Canva", icon: <SiCanva />, level: 95 },
     ],
     Tools: [
-      { name: "Git", icon: <FaGitAlt />, level: 80 },
-      { name: "GitHub", icon: <FaGithub />, level: 85 },
+      { name: "Git", icon: <FaGitAlt />, level: 90 },
+      { name: "GitHub", icon: <FaGithub />, level: 90 },
       { name: "DaVinci Resolve", icon: <FaVideo />, level: 65 },
       { name: "Adobe Premiere", icon: <SiAdobepremierepro />, level: 70 },
     ],

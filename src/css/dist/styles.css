@@ -503,7 +503,7 @@ body {
     gap: 0.5rem;
   }
   .skills-section .skill-card {
-    flex-basis: 48%;
+    flex-basis: 46%;
   }
 }
 .project-section {
