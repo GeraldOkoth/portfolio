@@ -9,7 +9,9 @@
 
     // Header section
     .services-header h2 {
-      @include sectionHeading;
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 2rem;
     }
   }
 }
@@ -41,7 +43,7 @@
 
     h3 {
       margin-top: 1rem;
-      font-size: 1.5rem;
+      font-size: 1rem;
     }
 
     p {
@@ -113,35 +115,6 @@
         opacity: 1;
         bottom: 5%;
       }
-    }
-  }
-}
-
-// Responsive Design
-@media screen and (max-width: $mobile) {
-  .services-cta,
-  .my-services {
-    flex-direction: column;
-    align-items: center;
-
-    .service-description-item,
-    .image {
-      flex-basis: 100%;
-      margin-bottom: 1rem;
-    }
-  }
-}
-
-@media screen and (min-width: $mobile) and (max-width: $tablet) {
-  .services-cta,
-  .my-services {
-    flex-direction: column;
-    align-items: center;
-
-    .service-description-item,
-    .image {
-      flex-basis: 100%;
-      margin-bottom: 1rem;
     }
   }
 }

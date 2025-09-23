@@ -58,28 +58,15 @@ const Services = () => {
   const services = [
     {
       image: "/images/Screenshot 2024-05-03 121917.png",
-      alt: "Web design",
-      title: "Web Design",
+      alt: "Web Development",
+      title: "Web Development",
       description: "Connect up with me for amazing website designs.",
     },
     {
-      image: "/images/459-background.png",
-      alt: "Videography",
-      title: "Videography",
-      description:
-        "Editing feels almost like sculpting or a form of continuing with the writing process.",
-    },
-    {
-      image: "/images/istockphoto-182428014-1024x1024.jpg",
-      alt: "Music lessons",
-      title: "Music Lessons",
-      description: "Music is nourishment, and a comforting elixir.",
-    },
-    {
       image: "/images/tommao-wang-hbkdjPI9594-unsplash.jpg",
-      alt: "Photography",
-      title: "Photography",
-      description: "I don't just capture the moment, I capture the feeling.",
+      alt: "UI/UX",
+      title: "UI/UX",
+      description: "Translate your abstract design into visual aesthetic designs.",
     },
     {
       image: "/images/Screenshot 2023-11-23 222732.png",
@@ -87,6 +74,20 @@ const Services = () => {
       title: "Graphic Design",
       description:
         "There are three responses to a piece of design - yes, no, and WOW! Wow is the one I aim for.",
+    },
+    {
+      image: "/images/459-background.png",
+      alt: "Video Editting",
+      title: "Video Editting",
+      description:
+        "Editing feels almost like sculpting or a form of continuing with the writing process.",
+    },
+    {
+      image: "/images/istockphoto-182428014-1024x1024.jpg",
+      alt: "Music lessons",
+      title: "Music Lessons",
+      description:
+        "Learn Music from basics to advanced concept, write and compose your own music.",
     },
   ];
 
