@@ -21,7 +21,7 @@ const About = () => {
           transition={{ transitionTimingFunction: easeIn, delay: 1 }}
         >
           <img
-            src="/images/IMG_7963_transcpr.jpg"
+            src="/images/about.jpg"
             alt="my pic"
             width="200px"
             height="350px"

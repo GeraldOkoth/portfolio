@@ -11,7 +11,7 @@ import Services from './pages/services/Services';
 // import SkillsEd from './pages/skills/SkillsEd';
 import Skills from './pages/skills/Skills';
 import Projects from './pages/project/Projects';
-import Tweets from './pages/tweets/Tweets';
+// import Tweets from './pages/tweets/Tweets';
 import Contact from './pages/contact/Contact';
 import Footer from './components/footer/Footer';
 // import Slideshow from './Slideshow';
@@ -29,7 +29,7 @@ function App() {
       <Skills />
       <Projects />
       <Services />
-      <Tweets />
+      {/* <Tweets /> */}
       <Contact />
       <Footer />
       <Analytics />

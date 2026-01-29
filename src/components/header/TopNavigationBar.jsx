@@ -33,7 +33,7 @@ export default function Navbar() {
       </div>
 
       <ul className={`nav-links ${isOpen ? "show" : ""}`}>
-        {["home", "about", "skills", "projects", "services", "tweets", "contact"].map((section) => (
+        {["home", "about", "skills", "projects", "services", "contact"].map((section) => (
           <li key={section}>
             <Link
               to={section}

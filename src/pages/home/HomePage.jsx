@@ -53,7 +53,8 @@ function HomePage() {
                   delay: 1,
                 }}
               >
-                <h5>Actively open to:</h5>
+                <p>I build user-focused web applications, with intuitive and compelling user interfaces.</p>
+                <h5>I am actively open to:</h5>
                 <ul>
                   <li>
                     Remote or in-person internships in UI/UX and web development
@@ -87,7 +88,7 @@ function HomePage() {
                 onClick={onClickDownload}
                 disabled={false}
               >
-                <span className="spinner-grow spinner-grow-sm"></span>{isDownloading? "Downloading..." : "Hire Me..."}
+                <span className="spinner-grow spinner-grow-sm"></span>{isDownloading? "Downloading..." : "Resume..."}
               </a>
             </motion.div>
             <motion.div
