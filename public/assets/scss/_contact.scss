@@ -75,6 +75,11 @@
 
       button[type="submit"] {
         @include button();
+        background-color: gradient(
+          45deg,
+          rgba(196, 241, 186, 0.8),
+          rgba(24, 230, 178, 0.5)
+        );
 
         .fa-paper-plane {
           @include icons($bodyBgColor);
