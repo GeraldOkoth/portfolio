@@ -83,6 +83,8 @@
 // }
 
 // nabar on phone
+@use "./variables" as v;
+@use "./sectionHeading" as s;
 @mixin navbarPhone() {
   .nav-toggle {
     display: flex;
@@ -167,7 +169,7 @@
 // about section on phone
 @mixin aboutPhone() {
   .about-section {
-    padding: $sectionPaddingPhone;
+    padding: v.$sectionPaddingPhone;
 
     .about-title {
       font-size: 1.2rem;
@@ -201,10 +203,10 @@
 
 @mixin skillsPhone() {
   .skills-section {
-    padding: $sectionPaddingPhone;
+    padding: v.$sectionPaddingPhone;
   
     h2 {
-      @include sectionHeadingMobile;  
+      @include s.sectionHeadingMobile;  
     }
     .skills-tabs {
       align-items: center;
@@ -268,10 +270,10 @@
 // }
 @mixin projectPhone() {
   .project-section {
-    padding: $sectionPaddingPhone;
+    padding: v.$sectionPaddingPhone;
 
     .projects-title {
-      @include sectionHeadingMobile;
+      @include s.sectionHeadingMobile;
     }
     .tabs {
       align-items: center;
@@ -302,7 +304,7 @@
 }
 
 // Responsive Design
-@media screen and (max-width: $mobile) {
+@media screen and (max-width: v.$mobile) {
   .services .services-container .services-header h2 {
     font-size: 1.2rem;
   }
@@ -322,7 +324,7 @@
   }
 }
 
-@media screen and (min-width: $mobile) and (max-width: $tablet) {
+@media screen and (min-width: v.$mobile) and (max-width: v.$tablet) {
   .services-cta,
   .my-services {
     flex-direction: column;
@@ -402,7 +404,7 @@
 // contact section on mobile phone
 @mixin contactPhone() {
   .contact {
-    padding: $sectionPaddingPhone;
+    padding: v.$sectionPaddingPhone;
 
     .contact-header {
       margin-bottom: 1rem;
@@ -444,7 +446,7 @@
 // Footer section on phone
 @mixin footerPhone() {
   footer {
-    padding: $sectionPaddingPhone;
+    padding: v.$sectionPaddingPhone;
 
     .footer-content {
       text-align: center;

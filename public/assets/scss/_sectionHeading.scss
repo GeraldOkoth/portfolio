@@ -1,12 +1,14 @@
 @mixin sectionHeading() {
     font-size: 2.2rem;
-    font-weight: bold;
+    font-weight:bolder;
     text-align: center;
     margin-bottom: 1rem;
     // color: #0f172a;
+    font-family: 'Roboto', sans-serif;
+
 }
 
 @mixin sectionHeadingMobile() {
-    font-size: 1.2rem;
-    font-weight: 600;
+    font-size: 1.4rem;
+    font-weight: bolder;
 }

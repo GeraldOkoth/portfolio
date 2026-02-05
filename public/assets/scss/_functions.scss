@@ -1,3 +1,4 @@
+@use "sass:map";
 @function weight($weightName) {
-    @return map-get($fontWeights, $weightName);
+    @return map.get($fontWeights, $weightName);
 }

@@ -1,28 +1,30 @@
 //Import/use partials
 //@use - alternative to @import and must be written before any other rules
 @use "sass:math"; //for "math" operations e.g "math.div(300px, 960px) * 100%;" converts 300px into percentage based on a total width of 960px.
-@import "./variables";
-@import "./resets";
-@import "./buttons"; //for reusable snippets
-@import "./icons";
-@import "./sectionHeading";
-@import "./responsive";
-@import "./functions";
-@import "./display";
-@import "./keyframesAnime";
+@use "./variables" as v; //to use variables from variables.scss, we need to add "as v" to create an alias for the file. Then we can access the variables using "v.variableName"
+@use "./variables";
+@use "./resets";
+@use "./buttons"; //for reusable snippets
+@use "./icons";
+@use "./sectionHeading";
+@use "./responsive";
+@use "./functions";
+@use "./display";
+@use "./keyframesAnime";
+@use "./home-page";
+// @use "./image-slideshow";
+// @use "./testimonials";
+@use "./about";
+@use "./skills";
+@use "./projects";
+@use "./services";
+// @use "./faq";
+// @use "./tweets";
+@use "./contact";
+@use "./footer";
 
 @import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Merriweather&family=Poppins:wght@100;200;300;400&family=Roboto:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
 @import url(https://fonts.googleapis.com/css?family=Yeseva+One);
 @import url(https://fonts.googleapis.com/css?family=Josefin+Sans:400,700,700italic,400italic);
-@import "./home-page";
-// @import "./image-slideshow";
-// @import "./testimonials";
-@import "./about";
-@import "./skills";
-@import "./projects";
-@import "./services";
-// @import "./faq";
-@import "./tweets";
-@import "./contact";
-@import "./footer"
+

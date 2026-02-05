@@ -1,7 +1,9 @@
 // Footer section
+@use "./variables" as v;
+@use "./responsive" as r;
 footer {
-  padding: $sectionPaddingDesktop;
-  background-color: $bodyBgColor;
+  padding: v.$sectionPaddingDesktop;
+  background-color: v.$bodyBgColor;
 
   .footer-content {
     // @include flexbox();
@@ -12,20 +14,20 @@ footer {
     .social-media-icons a {
       // @include icons($primaryColor);
       margin-left: 10px;
-      color: $primaryColor;
+      color: v.$primaryColor;
       font-size: 1.5em;
       text-decoration: none;
       transition: all 0.3s ease;
 
       &:hover {
-        color: $orange;
+        color: v.$orange;
         transform: translateY(-3px);
       }
     }
   }
 }
 
-@media screen and (max-width: $mobile) {
-  @include footerPhone;
+@media screen and (max-width: v.$mobile) {
+  @include r.footerPhone;
 }
 

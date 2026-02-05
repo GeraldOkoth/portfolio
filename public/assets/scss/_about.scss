@@ -1,10 +1,13 @@
+@use "./variables" as v;
+@use "./responsive" as r;
+@use "./sectionHeading" as s;
 .about-section {
-  padding: $sectionPaddingDesktop;
+  padding: v.$sectionPaddingDesktop;
   background-color: hsl(245, 100%, 10%);
   color: var(--fav-color-text);
 
   .about-title {
-    @include sectionHeading;
+    @include s.sectionHeading;
   }
   .container {
     display: flex;
@@ -37,10 +40,10 @@
   }
 }
 
-@media screen and (max-width: $mobile) {
-  @include aboutPhone;
+@media screen and (max-width: v.$mobile) {
+  @include r.aboutPhone;
 }
 
-@media screen and (min-width: $mobile) and (max-width: $tablet) {
-  @include aboutTablet;
+@media screen and (min-width: v.$mobile) and (max-width: v.$tablet) {
+  @include r.aboutTablet;
 }

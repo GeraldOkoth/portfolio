@@ -1,6 +1,7 @@
 // services section
+@use "./variables" as v;
 .services {
-  padding: $sectionPaddingDesktop;
+  padding: v.$sectionPaddingDesktop;
   background-color: #040031;
 
   // Container for Services
@@ -25,20 +26,32 @@
 
   .icon {
     border-radius: .9rem;
-    background-color: #bfdef7;
+    background-color: rgba(51, 65, 85, 3);
+
+    // background-color: #b4b4b4;
     font-size: 3rem;
     padding: .5rem;
   }
 
   h3 {
     padding-bottom: 0.7rem;
-    color: $orange;
+    color: v.$orange;
   }
 
   // Individual service description item
   .service-description-item {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.05);
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: 10px;
     flex-basis: 30%;
-    text-align: center;
+    text-align: left;
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+      transform: translateY(-5px) scale(1.05);
+    }
 
     img {
       border-radius: 50%;
@@ -47,6 +60,10 @@
     h3 {
       margin-top: 1rem;
       font-size: 1rem;
+      font: {
+      weight: bolder;
+      size: 1rem;
+    }
     }
 
     p {
@@ -60,6 +77,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-top: 2rem;
 
   .image {
     width: 100%;
@@ -106,7 +124,7 @@
         height: 3px;
         border: none;
         margin: 5px auto;
-        background-color: $orange;
+        background-color: v.$orange;
       }
     }
 

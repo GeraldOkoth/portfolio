@@ -69,7 +69,6 @@ body {
   top: 0;
   background-color: rgba(0, 0, 0, 0.1);
   z-index: 1000;
-  position: -webkit-sticky;
   position: sticky;
   display: flex;
   justify-content: space-between;
@@ -188,14 +187,14 @@ body {
 }
 .home-page .hero .hero-info .hero-text-intro h2 {
   font-size: 3.2rem;
-  font-weight: 800;
+  font-weight: weight(bold);
 }
 .home-page .hero .hero-info .hero-text-intro h2 .orange {
   color: orange;
 }
 .home-page .hero .hero-info .hero-text-intro .text-animation #dynamic-text {
   font-size: 1.5rem;
-  font-weight: 800;
+  font-weight: weight(bold);
   color: orange;
   margin: 1rem 0;
 }
@@ -222,7 +221,7 @@ body {
   gap: 1.6rem;
 }
 .home-page .hero .hero-info .hero-btns a {
-  font-weight: 500;
+  font-weight: weight(medium);
 }
 .home-page .hero .hero-info .hero-btns .disabled {
   background-color: rgba(0, 0, 0, 0.7);
@@ -303,8 +302,10 @@ body {
 .home-page .hero .hero-image img {
   transition: all 0.5s ease-in-out;
   border-radius: 50%;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 .home-page .hero .hero-image img:hover {
   transform: scale(1.05);
@@ -345,11 +346,11 @@ body {
   }
   .home-page .hero .hero-info .hero-text-intro h2 {
     font-size: 1.6rem;
-    font-weight: 800;
+    font-weight: weight(bold);
   }
   .home-page .hero .hero-info .hero-text-intro h2 h3 {
     font-size: 1.02rem;
-    font-weight: 500;
+    font-weight: weight(medium);
   }
   .home-page .hero .hero-info .hero-btns {
     flex-direction: column;
@@ -380,9 +381,10 @@ body {
 }
 .about-section .about-title {
   font-size: 2.2rem;
-  font-weight: bold;
+  font-weight: bolder;
   text-align: center;
   margin-bottom: 1rem;
+  font-family: "Roboto", sans-serif;
 }
 .about-section .container {
   display: flex;
@@ -394,8 +396,10 @@ body {
 }
 .about-section .container .about-img img {
   width: 100%;
-  object-fit: cover;
-  object-position: 100% 30%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 100% 30%;
+     object-position: 100% 30%;
   border-radius: 5px;
 }
 .about-section .container .about-img .mission-statement {
@@ -423,8 +427,10 @@ body {
   }
   .about-section .container .about-img img {
     height: 200px;
-    object-fit: cover;
-    object-position: 100% 25%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 100% 25%;
+       object-position: 100% 25%;
   }
   .about-section .container .about-info p {
     line-height: 1.3rem;
@@ -443,9 +449,10 @@ body {
 }
 .skills-section h2 {
   font-size: 2.2rem;
-  font-weight: bold;
+  font-weight: bolder;
   text-align: center;
   margin-bottom: 1rem;
+  font-family: "Roboto", sans-serif;
 }
 .skills-section .skills-tabs {
   display: flex;
@@ -459,8 +466,8 @@ body {
   border: none;
   padding: 0.5rem 1.5rem;
   font-size: 1rem;
-  font-weight: 600;
-  color: #7d7d7d;
+  font-weight: bolder;
+  color: var(--fav-color-text);
   cursor: pointer;
   border-radius: 30px;
   transition: all 0.3s ease;
@@ -482,24 +489,29 @@ body {
   gap: 1.5rem;
 }
 .skills-section .skills-container .skill-card {
-  background: #fff;
+  background-image: linear-gradient(to top, orange 0%, rgba(7, 7, 8, 0.6117647059) 70%);
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(97, 97, 97, 0.1);
   padding: 1.5rem;
   width: 180px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease-in-out;
 }
 .skills-section .skills-container .skill-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-5px) scale(1.05);
 }
 .skills-section .skills-container .skill-card .skill-icon {
   font-size: 2.5rem;
   margin-bottom: 1rem;
   color: #3b82f6;
+  cursor: pointer;
+  font-size: 3rem;
+  font-weight: 900;
 }
 .skills-section .skills-container .skill-card h4 {
   margin: 0.5rem 0;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
+  color: var(--fav-color-text);
+  font-weight: bolder;
 }
 .skills-section .skills-container .skill-card .progress-bar {
   background: #e0e0e0;
@@ -509,13 +521,14 @@ body {
   overflow: hidden;
 }
 .skills-section .skills-container .skill-card .progress-bar .progress-fill {
-  background: #3b82f6;
+  background: #40f74f;
   border-radius: 10px;
   height: 100%;
 }
 .skills-section .skills-container .skill-card .skill-level {
   font-weight: bold;
-  color: #555;
+  color: #000000;
+  font-weight: bolder;
 }
 
 @media screen and (max-width: 480px) {
@@ -523,8 +536,8 @@ body {
     padding: 1rem 1.25rem;
   }
   .skills-section h2 {
-    font-size: 1.2rem;
-    font-weight: 600;
+    font-size: 1.4rem;
+    font-weight: bolder;
   }
   .skills-section .skills-tabs {
     align-items: center;
@@ -545,9 +558,10 @@ body {
 }
 .project-section .projects-title {
   font-size: 2.2rem;
-  font-weight: bold;
+  font-weight: bolder;
   text-align: center;
   margin-bottom: 1rem;
+  font-family: "Roboto", sans-serif;
   margin-bottom: 2rem;
 }
 .project-section .tabs {
@@ -706,8 +720,8 @@ body {
     padding: 1rem 1.25rem;
   }
   .project-section .projects-title {
-    font-size: 1.2rem;
-    font-weight: 600;
+    font-size: 1.4rem;
+    font-weight: bolder;
   }
   .project-section .tabs {
     align-items: center;
@@ -754,21 +768,35 @@ body {
   align-items: center;
 }
 .services-cta .icon {
+  border-radius: 0.9rem;
+  background-color: rgb(51, 65, 85);
   font-size: 3rem;
+  padding: 0.5rem;
 }
 .services-cta h3 {
   padding-bottom: 0.7rem;
   color: orange;
 }
 .services-cta .service-description-item {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.05);
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 10px;
   flex-basis: 30%;
-  text-align: center;
+  text-align: left;
+  transition: transform 0.3s ease-in-out;
+}
+.services-cta .service-description-item:hover {
+  transform: translateY(-5px) scale(1.05);
 }
 .services-cta .service-description-item img {
   border-radius: 50%;
 }
 .services-cta .service-description-item h3 {
   margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: bolder;
   font-size: 1rem;
 }
 .services-cta .service-description-item p {
@@ -779,6 +807,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-top: 2rem;
 }
 .my-services .image {
   width: 100%;
@@ -789,7 +818,8 @@ body {
 }
 .my-services .image img {
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 7px;
 }
 .my-services .image .overlay {
@@ -832,119 +862,6 @@ body {
   bottom: 5%;
 }
 
-.tweets {
-  padding: 3rem;
-  background-color: rgb(9, 1, 39);
-  text-align: center;
-}
-.tweets .tweets-header {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-.tweets .tweets-header h2 {
-  font-size: 2.2rem;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 1rem;
-}
-.tweets .toggle-all-btn,
-.tweets .twitter-tweet a {
-  color: #071629;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  border-radius: 7px;
-  padding: 0.5rem 1rem;
-  border: none;
-  font-weight: 600;
-  background-color: #5555ff;
-  margin: 1rem 0 2rem;
-  color: #fff;
-}
-.tweets .toggle-all-btn:hover {
-  background-color: #ffa500;
-}
-
-.tweets-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 1.5rem;
-}
-.tweets-container .tweet-box {
-  flex: 1 1 50px;
-  max-width: 400px;
-  background-color: #02024f;
-  border-radius: 10px;
-  padding: 1rem;
-  border: 1px solid orange;
-  transition: all 0.3s ease;
-  /* Collapssible animation */
-}
-.tweets-container .tweet-box:hover {
-  transform: scale(1.02);
-  box-shadow: 0 0 15px orange;
-}
-.tweets-container .tweet-box .tweet-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-  color: orange;
-  transition: color 0.3s ease;
-  /* Chevron icon animation */
-}
-.tweets-container .tweet-box .tweet-header:hover {
-  color: #5555ff;
-}
-.tweets-container .tweet-box .tweet-header .tweet-title {
-  font-size: 1rem;
-  font-weight: 600;
-}
-.tweets-container .tweet-box .tweet-header .chevron {
-  transition: transform 0.3s ease;
-}
-.tweets-container .tweet-box .tweet-header.rotate {
-  transform: rotate(180deg);
-}
-.tweets-container .tweet-box .collapsible {
-  max-height: 0;
-  opacity: 0;
-  overflow: hidden;
-  transition: max-height 0.6s ease, opacity 0.4s ease;
-}
-.tweets-container .tweet-box .collapsible .twitter-tweet a {
-  text-decoration: none;
-  color: #fff;
-}
-.tweets-container .tweet-box .collapsible .twitter-tweet a:hover {
-  background-color: orange;
-}
-.tweets-container .tweet-box .collapsible.open {
-  max-height: 600px;
-  opacity: 1;
-}
-
-@media screen and (max-width: 480px) {
-  .tweets {
-    padding: 1rem 1.25rem;
-  }
-  .tweets .tweets-header h2 {
-    font-size: 1.2rem;
-    font-weight: 600;
-  }
-  .tweets .tweets-header p {
-    line-height: 1.3rem;
-  }
-  .tweets-container {
-    /* align-items: center; */
-  }
-  .tweets-container .tweet-box .tweet-header .tweet-title {
-    font-size: 0.9rem;
-  }
-  .twitter-tweet a {
-    font-size: 0.8rem;
-  }
-}
 .contact {
   background-color: #161748;
   padding: 3rem;
@@ -956,9 +873,10 @@ body {
 }
 .contact-header h2 {
   font-size: 2.2rem;
-  font-weight: bold;
+  font-weight: bolder;
   text-align: center;
   margin-bottom: 1rem;
+  font-family: "Roboto", sans-serif;
 }
 
 .contact-section {
@@ -1022,6 +940,7 @@ body {
   border: none;
   font-weight: 600;
   background-color: #5555ff;
+  background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
 }
 .contact-section .contact-form form button[type=submit] .fa-paper-plane {
   color: #071629;

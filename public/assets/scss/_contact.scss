@@ -1,14 +1,19 @@
 // Contact section
+@use "./variables" as v;
+@use "./buttons" as b;
+@use "./responsive" as r;
+@use "./sectionHeading" as s;
+@use "./icons" as i;
 .contact {
   background-color: #161748;
-  padding: $sectionPaddingDesktop;
+  padding: v.$sectionPaddingDesktop;
 }
 .contact-header {
   text-align: center;
   margin-bottom: 2rem;
 
   h2 {
-    @include sectionHeading;
+    @include s.sectionHeading;
   }
 }
 
@@ -24,7 +29,7 @@
       margin-left: 1rem;
 
       & a {
-        color: $bodyTxtColor;
+        color: v.$bodyTxtColor;
         text-decoration: none;
         transition: 0.5s;
 
@@ -51,7 +56,7 @@
     form {
       input,
       textarea {
-        color: $bodyTxtColor;
+        color: v.$bodyTxtColor;
         margin-bottom: 1rem;
         width: 100%;
         border: 1px solid #ddd;
@@ -74,21 +79,17 @@
       }
 
       button[type="submit"] {
-        @include button();
-        background-color: gradient(
-          45deg,
-          rgba(196, 241, 186, 0.8),
-          rgba(24, 230, 178, 0.5)
-        );
+        @include b.button();
+        background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
 
         .fa-paper-plane {
-          @include icons($bodyBgColor);
+          @include i.icons(v.$bodyBgColor);
           transition: all 0.5s;
         }
 
         &:hover {
           opacity: 0.7;
-          color: $white !important;
+          color: v.$white !important;
           background-color: linear-gradient(
             45deg,
             rgba(2, 10, 255, 0.8),
@@ -96,7 +97,7 @@
           );
           box-shadow: 0 0 10px rgba(2, 10, 255, 0.5);
           .fa-paper-plane {
-            color: $white !important;
+            color: v.$white !important;
             transform: translateX(5px);
           }
         }
@@ -105,7 +106,7 @@
   }
 }
 
-@media screen and (max-width: $mobile) {
-  @include contactPhone();
+@media screen and (max-width: v.$mobile) {
+  @include r.contactPhone();
 }
 

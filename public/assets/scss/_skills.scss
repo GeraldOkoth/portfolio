@@ -1,12 +1,15 @@
+@use "./variables" as v;
+@use "./sectionHeading" as s;
+@use "./responsive" as r;
 .skills-section {
-  padding: $sectionPaddingDesktop;
+  padding: v.$sectionPaddingDesktop;
   text-align: center;
   background: hsl(240, 98%, 17%);
 
   h2 {
-    @include sectionHeading;
+    @include s.sectionHeading;
   }
-  
+
   .skills-tabs {
     display: flex;
     justify-content: center;
@@ -19,18 +22,18 @@
     border: none;
     padding: 0.5rem 1.5rem;
     font-size: 1rem;
-    font-weight: 600;
-    color: #7d7d7d;
+    font-weight: bolder;
+    color: v.$bodyTxtColor;
     cursor: pointer;
     border-radius: 30px;
     transition: all 0.3s ease;
 
     &:hover {
-      color: $orange;
+      color: v.$orange;
     }
 
     &.active {
-      background: $orange;
+      background: v.$orange;
       color: white;
 
       &:hover {
@@ -45,26 +48,31 @@
     gap: 1.5rem;
 
     .skill-card {
-      background: #fff;
+      background-image: linear-gradient(to top, v.$orange 0%, #0707089c 70%);
       border-radius: 10px;
       box-shadow: 0 4px 15px rgba(97, 97, 97, 0.1);
       padding: 1.5rem;
       width: 180px;
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease-in-out;
 
       &:hover {
-        transform: translateY(-5px);
+        transform: translateY(-5px) scale(1.05);
       }
 
       .skill-icon {
         font-size: 2.5rem;
         margin-bottom: 1rem;
         color: #3b82f6;
+        cursor: pointer;
+        font-size: 3rem; 
+        font-weight: 900;
       }
 
-       h4 {
+      h4 {
         margin: 0.5rem 0;
-        font-size: 1.1rem;
+        font-size: 1.3rem;
+        color: v.$bodyTxtColor;
+        font-weight: bolder;
       }
 
       .progress-bar {
@@ -75,19 +83,20 @@
         overflow: hidden;
 
         .progress-fill {
-          background: #3b82f6;
+          background: #40f74f;
           border-radius: 10px;
           height: 100%;
         }
       }
       .skill-level {
         font-weight: bold;
-        color: #555;
+        color: #000000;
+        font-weight: bolder;
       }
     }
   }
 }
 
-@media screen and (max-width: $mobile) {
- @include skillsPhone;
+@media screen and (max-width: v.$mobile) {
+  @include r.skillsPhone;
 }
