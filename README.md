@@ -4,7 +4,7 @@ Welcome to my personal developer portfolio! This React-based web application sho
 
 ## Getting Started
 
-### ✅ Prerequisites
+###  Prerequisites
 
 Before you begin, make sure you have the following installed:
 
@@ -14,7 +14,7 @@ npm (comes with Node.js) or yarn
 
 A code editor like [Visual Studio Code](https://code.visualstudio.com)
 
-### 📦 Installation Steps
+###  Installation Steps
 
 Clone the repository
 
@@ -31,7 +31,7 @@ Or using yarn:
 
 ___
 
-### ▶️ Start the development server
+###  Start the development server
 
 Using npm:
 `npm start`
@@ -45,7 +45,7 @@ The app will open automatically at http://localhost:3000 in your default browser
 
 ![Project Structure Image](public/images/Screenshot%202025-05-24%20205251.png)
 
-#### 🔧 Available Scripts
+####  Available Scripts
 
 In the project directory, you can run:
 
@@ -57,7 +57,7 @@ In the project directory, you can run:
 
 ___
 
-### 🛠️ Troubleshooting
+### Troubleshooting
 
 If you encounter issues:
 
@@ -70,12 +70,12 @@ Clear the cache:
 `npm cache clean --force`
 ___
 
-### 📬 Contact
+###  Contact
 
 If you’d like to connect or collaborate:
 
-📧 [Email](okothgerald449@gmail.com)
+ [Email](okothgerald449@gmail.com)
 
-🐦 [Twitter](https://x.com/gerald_okothKE)
+ [Twitter](https://x.com/gerald_okothKE)
 
-💼 [LinkedIn](https://linkedin.com/in/geraldokoth)
+ [LinkedIn](https://linkedin.com/in/geraldokoth)
