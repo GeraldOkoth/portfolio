@@ -63,7 +63,7 @@ const Services = () => {
       description: "Connect up with me for amazing website designs.",
     },
     {
-      image: "/images/tommao-wang-hbkdjPI9594-unsplash.jpg",
+      image: "/images/ui-ux-design.png",
       alt: "UI/UX",
       title: "UI/UX",
       description: "Translate your abstract design into visual aesthetic designs.",
@@ -76,7 +76,7 @@ const Services = () => {
         "There are three responses to a piece of design - yes, no, and WOW! Wow is the one I aim for.",
     },
     {
-      image: "/images/459-background.png",
+      image: "/images/video_editting.png",
       alt: "Video Editting",
       title: "Video Editting",
       description:

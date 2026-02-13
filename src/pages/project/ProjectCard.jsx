@@ -1,14 +1,11 @@
 import React, { useState } from "react";
-// import { FaEye, FaThumbsUp, FaGithub, FaRegBookmark } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaArrowRight } from "react-icons/fa";
 import { timeAgo } from "./timeAgo";
+import ProjectModal from "./ProjectModal";
 
 const ProjectCard = ({ project }) => {
-  // const [likes, setLikes] = useState(project.likes || 0);
-  // const [views, setViews] = useState(project.views || 0);
-  // const [bookmarks, setBookmarks] = useState(project.bookmarks || 0);
-  const [showFull, setShowFull] = useState(false);
   const [showFullDate, setShowFullDate] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const createdAt = new Date(project.createdAt || new Date());
   const updatedAt = new Date(project.updatedAt || new Date());
@@ -22,80 +19,91 @@ const ProjectCard = ({ project }) => {
         })
       : timeAgo(date);
 
-  // const handleView = () => setViews((prev) => prev + 1);
-  // const handleLike = () => setLikes((prev) => prev + 1);
-  // const handleBookmark = () => setBookmarks((prev) => prev + 1);
-
   return (
-    <div className="project-card">
-      <h3>{project.title}</h3>
+    <>
+      <div className="project-card">
+        <div className="project-thumbnail">
+          <img 
+            src={project.image || "https://via.placeholder.com/400x250"} 
+            alt={project.title}
+          />
+          <div className="thumbnail-overlay"></div>
+        </div>
 
-      <p className="project-description">
-        {showFull || project.description.length <= 80
-          ? project.description
-          : `${project.description.slice(0, 80)}...`}
-        {project.description.length > 80 && (
-          <button
-            className="view-more-btn"
-            onClick={() => setShowFull(!showFull)}
-          >
-            {showFull ? "View Less" : "View More"}
-          </button>
-        )}
-      </p>
+        <div className="project-content">
+          <h3 className="project-title">{project.title}</h3>
 
-      {/* <div className="project-meta">
-        <span onClick={handleView} title="Views">
-          <FaEye /> {views}
-        </span>
-        <span onClick={handleLike} title="Likes">
-          <FaThumbsUp /> {likes}
-        </span>
-        <span onClick={handleBookmark} title="Bookmarks">
-          <FaRegBookmark /> {bookmarks}
-        </span>
-      </div> */}
+          <p className="project-description">
+            {project.description.length > 100
+              ? `${project.description.slice(0, 100)}...`
+              : project.description}
+            <button
+              className="view-more-arrow"
+              onClick={() => setIsModalOpen(true)}
+              aria-label="View more details"
+            >
+              <FaArrowRight />
+            </button>
+          </p>
 
-      <div className="project-dates">
-        <p>
-          <strong>Created:</strong> {formatDate(createdAt)}
-        </p>
-        <p>
-          <strong>Last Modified:</strong> {formatDate(updatedAt)}
-        </p>
-        <button
-          className="toggle-date-btn"
-          onClick={() => setShowFullDate((prev) => !prev)}
-        >
-          {showFullDate ? "Show Relative" : "Show Full Date"}
-        </button>
+          <div className="project-tech">
+            {project.technologies && project.technologies.map((tech, index) => (
+              <span key={index} className="tech-badge">
+                {tech}
+              </span>
+            ))}
+          </div>
+
+          <div className="project-dates">
+            <div className="dates-info">
+              <p>
+                <strong>Created:</strong> {formatDate(createdAt)}
+              </p>
+              <p>
+                <strong>Updated:</strong> {formatDate(updatedAt)}
+              </p>
+            </div>
+            <button
+              className="toggle-date-btn"
+              onClick={() => setShowFullDate((prev) => !prev)}
+            >
+              {showFullDate ? "Relative" : "Full Date"}
+            </button>
+          </div>
+
+          <div className="project-links">
+            {project.demo && (
+              <a
+                href={project.demo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-btn demo"
+              >
+                Live Demo
+              </a>
+            )}
+            {project.github && (
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-btn github"
+              >
+                <FaGithub /> GitHub
+              </a>
+            )}
+          </div>
+        </div>
       </div>
 
-      <div className="project-links">
-        {project.github && (
-          <a
-            href={project.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="project-btn github"
-            // onClick={handleView}
-          >
-            <FaGithub /> GitHub
-          </a>
-        )}
-        {project.demo && (
-          <a
-            href={project.demo}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="project-btn demo"
-            // onClick={handleView}
-          >
-            Live Demo
-          </a>
-        )}
-      </div>
-    </div>
+      {isModalOpen && (
+        <ProjectModal 
+          project={project} 
+          onClose={() => setIsModalOpen(false)}
+          formatDate={formatDate}
+        />
+      )}
+    </>
   );
 };
 

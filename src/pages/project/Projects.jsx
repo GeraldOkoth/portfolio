@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Slider from "react-slick";
 import { motion } from "framer-motion";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import ProjectCard from "./ProjectCard";
 
 const allProjects = [
@@ -10,6 +11,14 @@ const allProjects = [
     title: "Portfolio Website",
     description:
       "A modern personal portfolio built with React and Sass. This portfolio showcases my frontend and ui/ux skills, projects and services.",
+    technologies: ["React", "Sass", "Framer Motion", "JavaScript"],
+    image: "/images/portfolio.png", 
+    features: [
+      "Responsive design for all devices",
+      "Smooth animations and transitions",
+      "Project showcase with filtering",
+      "Contact form integration"
+    ],
     likes: 0,
     views: 0,
     createdAt: "2024-10-22T10:00:00Z",
@@ -22,7 +31,15 @@ const allProjects = [
     type: "frontend",
     title: "Simple To Do List App",
     description:
-      "A simple to-do list application that allows users to add, display, and remove tasks. This project focuses on utilizing advanced DOM manipulation techniques to interact dynamically with the webpage, persist data using localStorage, ensuring that tasks are saved even after the browser is closed. The aim of building this project is to enhance my understanding of JavaScript, DOM manipulation, and localStorage.",
+      "A simple to-do list application that allows users to add, display, and remove tasks. This project focuses on utilizing advanced DOM manipulation techniques to interact dynamically with the webpage, persist data using localStorage, ensuring that tasks are saved even after the browser is closed.",
+    technologies: ["JavaScript", "HTML", "CSS", "LocalStorage"],
+    image: "/images/simple-to-do.png", 
+    features: [
+      "Add, edit, and delete tasks",
+      "Persistent storage using localStorage",
+      "Filter tasks by status",
+      "Responsive design"
+    ],
     likes: 0,
     views: 0,
     createdAt: "2025-06-22T10:00:00Z",
@@ -36,6 +53,14 @@ const allProjects = [
     title: "Dynamic Web Application with DOM Manipulation & JSON Data",
     description:
       "Developed an interactive web application focused on dynamic content generation, data persistence, and JSON handling. The project highlights advanced DOM manipulation, browser storage (localStorage & sessionStorage), and efficient JSON data management.",
+    technologies: ["JavaScript", "JSON", "SessionStorage", "DOM API"],
+    image: "/images/advanced-to-do.png",
+    features: [
+      "Dynamic content generation",
+      "JSON data handling",
+      "Browser storage implementation",
+      "Advanced DOM manipulation"
+    ],
     likes: 0,
     views: 0,
     createdAt: "2025-07-21T11:20:00Z",
@@ -49,21 +74,39 @@ const allProjects = [
     type: "uiux",
     title: "Portfolio Website UI Design",
     description:
-      "This is a UI design for an interactive portfolio website created using Figma. The design showcases a modern and responsive layout, focusing on user experience and visual appeal. The aim of building this project is to enhance my UI/UX design skills and to create a visually appealing and user-friendly portfolio interface.",
+      "This is a UI design for an interactive portfolio website created using Figma. The design showcases a modern and responsive layout, focusing on user experience and visual appeal.",
+    technologies: ["Figma", "UI Design", "UX Design", "Prototyping"],
+    image: "/images/portfolio-ui-design.png",
+    features: [
+      "Modern and clean interface",
+      "Responsive layout design",
+      "Interactive prototypes",
+      "User-centered design approach"
+    ],
     likes: 0,
     views: 0,
-    date: "2025-06-15",
+    createdAt: "2025-06-15T10:00:00Z",
+    updatedAt: "2025-06-15T10:00:00Z",
     demo: "https://www.figma.com/design/pwN8fphIevGOHwwL2QdXPD/High-FI-portfolio-website?node-id=0-1&t=5qKjgAuy7BVHE950-1",
   },
   {
     id: "p5",
     type: "uiux",
-    title: "ALX ehub login page clone",
+    title: "ALX ehub Login Page Clone",
     description:
-      "This is a UI figma file designed to replicate ALX ehub login page. The aim of building this project is to enhance my UI/UX design skills and to create a visually appealing and user-friendly login interface. See the original login page at https://ehub.alxafrica.com/login",
+      "This is a UI figma file designed to replicate ALX ehub login page. The aim of building this project is to enhance my UI/UX design skills and to create a visually appealing and user-friendly login interface.",
+    technologies: ["Figma", "UI Design", "Prototyping"],
+    image: "/images/alx-ehub-login.png",
+    features: [
+      "Pixel-perfect design replication",
+      "Interactive login flow",
+      "Responsive design",
+      "Modern UI elements"
+    ],
     likes: 0,
     views: 0,
-    date: "2025-06-15",
+    createdAt: "2025-06-15T10:00:00Z",
+    updatedAt: "2025-06-15T10:00:00Z",
     demo: "https://www.figma.com/proto/42jg1O8qpxNUVZ5DqrCJfo/alx_ehub_login_prototype?node-id=2-2&p=f&t=CVYcshduHnTXPh24-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1",
   },
   {
@@ -71,7 +114,15 @@ const allProjects = [
     type: "frontend",
     title: "GitHub User Profile Search",
     description:
-      "A GitHub User Profile Search Application developed using React and Tailwindcss. I developed this application solely to enhance my understanding of GitHub API Intergration and handling user authentication.. It further enabled me gain hands-on experience in API interactions, advanced HTTP networking, and deploying web applications.",
+      "A GitHub User Profile Search Application developed using React and Tailwindcss. This application enables users to search for GitHub profiles and view detailed information including repositories, followers, and activity.",
+    technologies: ["React", "Tailwind CSS", "GitHub API", "REST API"],
+    image: "/images/github-user-search.png", 
+    features: [
+      "Real-time GitHub profile search",
+      "Repository listing and filtering",
+      "User statistics display",
+      "Responsive design with Tailwind"
+    ],
     likes: 0,
     views: 0,
     createdAt: "2025-08-20T10:08:21Z",
@@ -85,6 +136,19 @@ const allProjects = [
 const categoryTabs = ["frontend", "uiux", "graphic"];
 const sortTabs = ["latest", "oldest"];
 
+// Custom Arrow Components
+const NextArrow = ({ onClick }) => (
+  <button className="slick-arrow slick-next" onClick={onClick} aria-label="Next project">
+    <FaChevronRight />
+  </button>
+);
+
+const PrevArrow = ({ onClick }) => (
+  <button className="slick-arrow slick-prev" onClick={onClick} aria-label="Previous project">
+    <FaChevronLeft />
+  </button>
+);
+
 function Projects() {
   const [activeCategory, setActiveCategory] = useState("frontend");
   const [sortType, setSortType] = useState("latest");
@@ -92,19 +156,35 @@ function Projects() {
   const filtered = allProjects
     .filter((p) => p.type === activeCategory)
     .sort((a, b) => {
-      if (sortType === "latest") return new Date(b.date) - new Date(a.date);
-      if (sortType === "oldest") return new Date(a.date) - new Date(b.date);
-      // if (sortType === "popular") return b.likes - a.likes;
+      if (sortType === "latest") return new Date(b.createdAt) - new Date(a.createdAt);
+      if (sortType === "oldest") return new Date(a.createdAt) - new Date(b.createdAt);
       return 0;
     });
 
   const sliderSettings = {
     dots: true,
-    infinite: true,
+    infinite: filtered.length > 2,
     speed: 500,
-    slidesToShow: 2,
+    slidesToShow: Math.min(2, filtered.length),
     slidesToScroll: 1,
-    responsive: [{ breakpoint: 768, settings: { slidesToShow: 1 } }],
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
+    responsive: [
+      { 
+        breakpoint: 1024, 
+        settings: { 
+          slidesToShow: Math.min(2, filtered.length),
+          slidesToScroll: 1,
+        } 
+      },
+      { 
+        breakpoint: 768, 
+        settings: { 
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        } 
+      }
+    ],
   };
 
   return (
@@ -117,6 +197,7 @@ function Projects() {
       >
         Projects
       </motion.h2>
+
       <motion.div
         className="tabs"
         initial={{ opacity: 0, y: -30 }}
