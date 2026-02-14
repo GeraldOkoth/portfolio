@@ -22,12 +22,54 @@ const allProjects = [
     likes: 0,
     views: 0,
     createdAt: "2024-10-22T10:00:00Z",
-    updatedAt: "2025-07-06T15:30:00Z",
+    updatedAt: "2026-02-13T15:30:00Z",
     demo: "https://geraldokoth.vercel.app",
     github: "https://github.com/GeraldOkoth/portfolio",
   },
   {
     id: "p2",
+    type: "frontend",
+    title: "Weather Dashboard",
+    description:
+      "A weather dashboard application that displays current weather information and forecasts for various locations. Built with React, Tailwind CSS and integrated with a weather API.",
+    technologies: ["React", "JavaScript", "REST API", "Tailwind CSS"],
+    image: "/images/weather-dashboard.png", 
+    features: [
+      "Real-time weather data fetching",
+      "Search functionality for different locations",
+      "5-day weather forecast display",
+      "Responsive design with Tailwind CSS"
+    ],
+    likes: 0,
+    views: 0,
+    createdAt: "2025-06-22T10:00:00Z",
+    updatedAt: "2026-02-13T15:30:00Z",
+    github: "https://github.com/GeraldOkoth/weather-dashboard",
+    demo: "https://weather-dashboard-ke.vercel.app/dashboard",
+  },
+  {
+    id: "p3",
+    type: "frontend",
+  title: "HTML & CSS Landing Page",
+    description:
+      "A responsive landing page built with HTML and CSS. This project demonstrates modern web design principles, including semantic HTML, CSS Grid and Flexbox layouts, and responsive design techniques.",
+    technologies: ["HTML", "CSS", "Responsive Design"],
+    image: "/images/html-css-landing-page.png", 
+    features: [
+      "Semantic HTML structure",
+      "Modern CSS techniques (Grid, Flexbox)",
+      "Responsive design for mobile and desktop",
+      "Clean and minimalist design"
+    ],
+    likes: 0,
+    views: 0,
+    createdAt: "2025-06-22T10:00:00Z",
+    updatedAt: "2026-02-13T15:30:00Z",
+    github: "https://github.com/GeraldOkoth/alx_html_css",
+    demo: "https://alx-html-css-psi.vercel.app/",
+  },
+  {
+    id: "p4",
     type: "frontend",
     title: "Simple To Do List App",
     description:
@@ -48,9 +90,9 @@ const allProjects = [
     demo: "https://dynamic-to-do-list-js-peach.vercel.app/",
   },
   {
-    id: "p3",
+    id: "p5",
     type: "frontend",
-    title: "Dynamic Web Application with DOM Manipulation & JSON Data",
+    title: "Advanced To do List App",
     description:
       "Developed an interactive web application focused on dynamic content generation, data persistence, and JSON handling. The project highlights advanced DOM manipulation, browser storage (localStorage & sessionStorage), and efficient JSON data management.",
     technologies: ["JavaScript", "JSON", "SessionStorage", "DOM API"],
@@ -68,46 +110,6 @@ const allProjects = [
     github:
       "https://github.com/GeraldOkoth/alx_fe_javascript/tree/main/dom-manipulation",
     demo: "https://advanced-to-do-list-nu.vercel.app/",
-  },
-  {
-    id: "p4",
-    type: "uiux",
-    title: "Portfolio Website UI Design",
-    description:
-      "This is a UI design for an interactive portfolio website created using Figma. The design showcases a modern and responsive layout, focusing on user experience and visual appeal.",
-    technologies: ["Figma", "UI Design", "UX Design", "Prototyping"],
-    image: "/images/portfolio-ui-design.png",
-    features: [
-      "Modern and clean interface",
-      "Responsive layout design",
-      "Interactive prototypes",
-      "User-centered design approach"
-    ],
-    likes: 0,
-    views: 0,
-    createdAt: "2025-06-15T10:00:00Z",
-    updatedAt: "2025-06-15T10:00:00Z",
-    demo: "https://www.figma.com/design/pwN8fphIevGOHwwL2QdXPD/High-FI-portfolio-website?node-id=0-1&t=5qKjgAuy7BVHE950-1",
-  },
-  {
-    id: "p5",
-    type: "uiux",
-    title: "ALX ehub Login Page Clone",
-    description:
-      "This is a UI figma file designed to replicate ALX ehub login page. The aim of building this project is to enhance my UI/UX design skills and to create a visually appealing and user-friendly login interface.",
-    technologies: ["Figma", "UI Design", "Prototyping"],
-    image: "/images/alx-ehub-login.png",
-    features: [
-      "Pixel-perfect design replication",
-      "Interactive login flow",
-      "Responsive design",
-      "Modern UI elements"
-    ],
-    likes: 0,
-    views: 0,
-    createdAt: "2025-06-15T10:00:00Z",
-    updatedAt: "2025-06-15T10:00:00Z",
-    demo: "https://www.figma.com/proto/42jg1O8qpxNUVZ5DqrCJfo/alx_ehub_login_prototype?node-id=2-2&p=f&t=CVYcshduHnTXPh24-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1",
   },
   {
     id: "p6",
@@ -130,6 +132,126 @@ const allProjects = [
     demo: "https://github-userprofile-search.vercel.app/",
     github:
       "https://github.com/GeraldOkoth/alx-fe-reactjs/tree/main/github-user-search",
+  },
+  {
+    id: "p7",
+    type: "uiux",
+    title: "Portfolio Website Replica UI Design",
+    description:
+      "This is a UI design for a portfolio website replica created using Figma to replicate a pixel perfect design. The design showcases a modern web layout user experience and visual appeal.",
+    technologies: ["Figma", "UI Design", "UX Design", "Prototyping"],
+    image: "/images/popular-tutorials.png",
+    features: [
+      "Modern and clean interface",
+      "Responsive layout design",
+      "Interactive prototypes",
+      "User-centered design approach"
+    ],
+    likes: 0,
+    views: 0,
+    createdAt: "2025-06-15T10:00:00Z",
+    updatedAt: "2025-06-15T10:00:00Z",
+    demo: "https://www.figma.com/proto/yfdgqxEwlKfLn0VniPR1Bw/Homepage--Copy-?node-id=3558-0&p=f&t=qxPSwRJODEMjHunt-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1",
+  },
+  {
+    id: "p8",
+    type: "uiux",
+    title: "ALX ehub Login Page Clone",
+    description:
+      "This is a UI figma file designed to replicate ALX ehub login page. The aim of building this project is to enhance my UI/UX design skills and to create a visually appealing and user-friendly login interface.",
+    technologies: ["Figma", "UI Design", "Prototyping"],
+    image: "/images/alx-ehub-login.png",
+    features: [
+      "Pixel-perfect design replication",
+      "Interactive login flow",
+      "Responsive design",
+      "Modern UI elements"
+    ],
+    likes: 0,
+    views: 0,
+    createdAt: "2025-06-15T10:00:00Z",
+    updatedAt: "2025-06-15T10:00:00Z",
+    demo: "https://www.figma.com/proto/42jg1O8qpxNUVZ5DqrCJfo/alx_ehub_login_prototype?node-id=2-2&p=f&t=CVYcshduHnTXPh24-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1",
+  },
+  {
+    id: "p9",
+    type: "uiux",
+    title: "Portfolio Website replica UI Design",
+    description:
+      "This is a UI design for a portfolio website replica created using Figma. The design showcases a modern and responsive layout, focusing on user experience and visual appeal.",
+    technologies: ["Figma", "UI Design", "UX Design", "Prototyping"],
+    image: "/images/alx-ui-ux-design.png",
+    features: [
+      "Modern and clean interface",
+      "Responsive layout design",
+      "Interactive prototypes",
+      "User-centered design approach"
+    ],
+    likes: 0,
+    views: 0,
+    createdAt: "2025-06-15T10:00:00Z",
+    updatedAt: "2026-02-13T10:00:00Z",
+    demo: "https://www.figma.com/proto/9XnDkxThivZIAQu7ODeNLu/headphones--Copy-?node-id=0-2&p=f&t=joEfmfZWZj1SVAYl-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1",
+  },
+  {
+    id: "p10",
+    type: "uiux",
+    title: "Weather Dashboard UI Design",
+    description:
+      "This is a UI design for a weather dashboard created using Figma. The design showcases a modern and responsive layout, focusing on user experience and visual appeal.",
+    technologies: ["Figma", "UI Design", "UX Design", "Prototyping"],
+    image: "/images/weather-dashboard.png",
+    features: [
+      "Modern and clean interface",
+      "Responsive layout design",
+      "Interactive prototypes",
+      "User-centered design approach"
+    ],
+    likes: 0,
+    views: 0,
+    createdAt: "2025-06-15T10:00:00Z",
+    updatedAt: "2025-09-15T10:00:00Z",
+    demo: "https://www.figma.com/design/9oydJHmDDljDJ6yKl7MxnZ/Untitled?node-id=0-1&t=VeOt0lvOxIxB5FZk-1",
+  },
+  {
+    id: "p11",
+    type: "graphic",
+    title: "Recollection Poster",
+    description:
+      "A visually striking poster design created using Canva. This project demonstrates effective use of typography, composition, and color harmony to create an engaging and memorable visual experience.",
+    technologies: ["canva", "Graphic Design", "Poster Design"],
+    image: "/images/recollection.png",
+    features: [
+      "Visually striking design",
+      "Effective use of typography",
+      "Balanced composition",
+      "Color harmony"
+    ],
+    likes: 0,
+    views: 0,
+    createdAt: "2025-06-15T10:00:00Z",
+    updatedAt: "2025-11-15T10:00:00Z",
+    demo: "https://www.canva.com/design/DAG6eMuCDEI/-5_Vd8ehf61k12ITgU1cBg/view?utm_content=DAG6eMuCDEI&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h981fd4f8fa",
+  },
+  {
+    id: "p12",
+    type: "graphic",
+    title: "Choir recruitment Poster",
+    description:
+      "A visually striking poster design created using Canva. This project demonstrates effective use of typography, composition, and color harmony to create an engaging and memorable visual experience.",
+    technologies: ["canva", "Graphic Design", "Poster Design"],
+    image: "/images/choir-recruitment.png",
+    features: [
+      "Visually striking design",
+      "Effective use of typography",
+      "Balanced composition",
+      "Color harmony"
+    ],
+    likes: 0,
+    views: 0,
+    createdAt: "2025-06-15T10:00:00Z",
+    updatedAt: "2025-09-15T10:00:00Z",
+    demo: "https://www.canva.com/design/DAGwZr5TnIg/F0UI1vZPUXykGkVczuyzeQ/view?utm_content=DAGwZr5TnIg&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h68ea20605a",
   },
 ];
 
@@ -165,13 +287,13 @@ function Projects() {
     dots: true,
     infinite: filtered.length > 2,
     speed: 500,
-    slidesToShow: Math.min(2, filtered.length),
+    slidesToShow: Math.min(4, filtered.length),
     slidesToScroll: 1,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
     responsive: [
       { 
-        breakpoint: 1024, 
+        breakpoint: 1120, 
         settings: { 
           slidesToShow: Math.min(2, filtered.length),
           slidesToScroll: 1,
@@ -196,6 +318,14 @@ function Projects() {
         transition={{ duration: 0.6 }}
       >
         Projects
+      </motion.h2>
+      <motion.h2
+        className="projects-sub-title"
+        initial={{ opacity: 0, y: -30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
+        Mini Projects
       </motion.h2>
 
       <motion.div
