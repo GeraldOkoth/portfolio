@@ -139,14 +139,14 @@ body {
   width: 100%;
 }
 .navbar .nav-links li a:hover {
-  color: orange;
+  color: #ff6b00;
   cursor: pointer;
   transform: scale(1.05);
 }
 .navbar .nav-links li a.active, .navbar .nav-links li a::after {
-  color: orange;
+  color: #ff6b00;
   font-weight: 700;
-  border-bottom: 0.2em solid orange;
+  border-bottom: 0.2em solid #ff6b00;
 }
 @media screen and (max-width: 480px) {
   .navbar .nav-toggle {
@@ -190,12 +190,12 @@ body {
   font-weight: weight(bold);
 }
 .home-page .hero .hero-info .hero-text-intro h2 .orange {
-  color: orange;
+  color: #ff6b00;
 }
 .home-page .hero .hero-info .hero-text-intro .text-animation #dynamic-text {
   font-size: 1.5rem;
   font-weight: weight(bold);
-  color: orange;
+  color: #ff6b00;
   margin: 1rem 0;
 }
 .home-page .hero .hero-info .hero-text-intro .text-animation #dynamic-text::after {
@@ -226,7 +226,7 @@ body {
 .home-page .hero .hero-info .hero-btns .disabled {
   background-color: rgba(0, 0, 0, 0.7);
   color: var(--fav-color-text);
-  border: 1px solid orange;
+  border: 1px solid #ff6b00;
   cursor: not-allowed;
   pointer-events: none;
 }
@@ -234,7 +234,7 @@ body {
   transform: scale(1.03);
   color: var(--fav-color-text);
   background-color: rgba(0, 0, 0, 0.7);
-  border: 1px solid orange;
+  border: 1px solid #ff6b00;
 }
 .home-page .hero .hero-info .wrapper {
   display: flex;
@@ -476,14 +476,14 @@ body {
   transition: all 0.3s ease;
 }
 .skills-section .tab-btn:hover {
-  color: orange;
+  color: #ff6b00;
 }
 .skills-section .tab-btn.active {
-  background: orange;
+  background: #ff6b00;
   color: white;
 }
 .skills-section .tab-btn.active:hover {
-  background: rgb(217, 142, 3);
+  background: #ff6b00;
 }
 .skills-section .skills-container {
   display: flex;
@@ -492,7 +492,7 @@ body {
   gap: 1.5rem;
 }
 .skills-section .skills-container .skill-card {
-  background-image: linear-gradient(to top, orange 0%, rgba(7, 7, 8, 0.6117647059) 70%);
+  background-image: linear-gradient(to top, #ff6b00 0%, rgba(7, 7, 8, 0.6117647059) 70%);
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(97, 97, 97, 0.1);
   padding: 1.5rem;
@@ -598,14 +598,8 @@ body {
   flex-wrap: wrap;
 }
 .project-section .tabs button {
-  color: #071629;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  border-radius: 7px;
-  padding: 0.5rem 1rem;
-  border: none;
-  font-weight: 600;
-  background-color: #5555ff;
+  display: block;
+  background-size: 200% auto;
   border-radius: 20px;
   padding: 0.6rem 1.5rem;
   font-size: 0.95rem;
@@ -613,15 +607,17 @@ body {
   transition: all 0.3s ease;
 }
 .project-section .tabs button.active {
-  background: orange;
+  background: #ff6b00;
   color: white;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(255, 123, 0, 0.3);
 }
 .project-section .tabs button:hover {
-  background: orange;
+  background: #ff6b00;
   color: white;
+  background-position: right center;
   transform: translateY(-2px);
+  background-image: linear-gradient(to right, #fe8c00 0%, #ff6b00 31%, #fe8c00 100%);
 }
 .project-section .carousel-wrapper {
   position: relative;
@@ -657,8 +653,8 @@ body {
   color: #fff;
 }
 .project-section .carousel-wrapper .slick-arrow:hover {
-  background: orange;
-  border-color: orange;
+  background: #ff6b00;
+  border-color: #ff6b00;
   transform: scale(1.1);
   box-shadow: 0 4px 15px rgba(255, 123, 0, 0.4);
 }
@@ -690,12 +686,12 @@ body {
   transition: all 0.3s ease;
 }
 .project-section .carousel-wrapper .slick-dots li.slick-active button::before {
-  color: orange;
+  color: #ff6b00;
   font-size: 12px;
   opacity: 1;
 }
 .project-section .carousel-wrapper .slick-dots li:hover button::before {
-  color: orange;
+  color: #ff6b00;
   opacity: 0.7;
 }
 .project-section .no-project-message {
@@ -718,8 +714,8 @@ body {
 .project-section .project-card:hover {
   transform: translateY(-8px);
   border-radius: 1.5rem;
-  -o-border-image: linear-gradient(135deg, #9333ea, orange) 0;
-     border-image: linear-gradient(135deg, #9333ea, orange) 0;
+  -o-border-image: linear-gradient(135deg, #9333ea, #ff6b00) 0;
+     border-image: linear-gradient(135deg, #9333ea, #ff6b00) 0;
   box-shadow: 0 20px 40px rgba(147, 51, 234, 0.2), 0 0 60px rgba(255, 123, 0, 0.1);
 }
 .project-section .project-card .project-thumbnail {
@@ -777,7 +773,7 @@ body {
 .project-section .project-card .project-description .view-more-arrow {
   background: none;
   border: none;
-  color: orange;
+  color: #ff6b00;
   cursor: pointer;
   padding: 0.4rem;
   border-radius: 50%;
@@ -860,7 +856,7 @@ body {
 }
 .project-section .project-card .project-dates .toggle-date-btn {
   background: transparent;
-  color: orange;
+  color: #ff6b00;
   border: 1px solid rgba(255, 123, 0, 0.3);
   border-radius: 6px;
   font-size: 0.8rem;
@@ -871,7 +867,7 @@ body {
 }
 .project-section .project-card .project-dates .toggle-date-btn:hover {
   background: rgba(255, 123, 0, 0.1);
-  border-color: orange;
+  border-color: #ff6b00;
   transform: translateY(-1px);
 }
 .project-section .project-card .project-links {
@@ -895,7 +891,7 @@ body {
   gap: 0.5rem;
 }
 .project-section .project-card .project-links .project-btn.demo {
-  background: linear-gradient(135deg, orange 0%, #ff6b00 100%);
+  background: linear-gradient(135deg, #ff6b00 0%, #ff6b00 100%);
   box-shadow: 0 4px 15px rgba(255, 123, 0, 0.3);
 }
 .project-section .project-card .project-links .project-btn.demo:hover {
@@ -1060,7 +1056,7 @@ body {
   content: "→";
   position: absolute;
   left: 0;
-  color: orange;
+  color: #ff6b00;
   font-weight: bold;
 }
 .modal-body .modal-dates {
@@ -1105,7 +1101,7 @@ body {
   gap: 0.6rem;
 }
 .modal-body .modal-actions .modal-btn.demo {
-  background: linear-gradient(135deg, orange 0%, #ff6b00 100%);
+  background: linear-gradient(135deg, #ff6b00 0%, #ff6b00 100%);
   box-shadow: 0 4px 15px rgba(255, 123, 0, 0.3);
 }
 .modal-body .modal-actions .modal-btn.demo:hover {
@@ -1296,7 +1292,7 @@ body {
 }
 .services-cta h3 {
   padding-bottom: 0.7rem;
-  color: orange;
+  color: #ff6b00;
 }
 .services-cta .service-description-item {
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -1310,6 +1306,7 @@ body {
 }
 .services-cta .service-description-item:hover {
   transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 0 20px #eee;
 }
 .services-cta .service-description-item img {
   border-radius: 50%;
@@ -1373,7 +1370,7 @@ body {
   height: 3px;
   border: none;
   margin: 5px auto;
-  background-color: orange;
+  background-color: #ff6b00;
 }
 .my-services .image:hover .overlay {
   opacity: 1;
@@ -1528,7 +1525,7 @@ footer .footer-content .social-media-icons a {
   transition: all 0.3s ease;
 }
 footer .footer-content .social-media-icons a:hover {
-  color: orange;
+  color: #ff6b00;
   transform: translateY(-3px);
 }
 
