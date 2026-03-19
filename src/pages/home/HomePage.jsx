@@ -1,159 +1,318 @@
 import React, { useEffect, useState } from "react";
-import textAnimate from "./text-animation";
+import { motion } from "framer-motion";
+import { 
+  FaLinkedinIn, 
+  FaGithub, 
+  FaTwitter, 
+  FaInstagram,
+  FaYoutube,
+  FaFacebookF,
+  FaDownload,
+  FaEye,
+  FaArrowRight
+} from "react-icons/fa";
 import TopNavigationBar from "../../components/header/TopNavigationBar";
-import { easeInOut, generateLinearEasing, motion } from "framer-motion";
-import { linearGradient } from "framer-motion/client";
-
-// import { Helmet } from "react-helmet";
+import ScrollProgress from "./ScrollProgress";
 
 function HomePage() {
+  const [isDownloading, setIsDownloading] = useState(false);
+  const [currentRole, setCurrentRole] = useState(0);
+
+  const roles = [
+    "Frontend Developer",
+    "UI/UX Designer",
+    "Video Editor",
+    "Graphics Designer",
+  ];
+
+  // Typing animation effect
   useEffect(() => {
-    if (typeof textAnimate === "function") {
-      textAnimate();
-    }
+    const interval = setInterval(() => {
+      setCurrentRole((prev) => (prev + 1) % roles.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
   }, []);
 
-  const [isDownloading, setIsDownloading] = useState(false);
-  const onClickDownload = () => {
+  const handleDownload = async () => {
     setIsDownloading(true);
-    const downloadLink = document.getElementById("downloadBtn");
-    downloadLink.classList.add("disabled");
-    // downloadLink.removeChild(downloadLink.querySelector(".spinner-grow"));
-    downloadLink.disabled = true;
-
     
+    // Simulate download
     setTimeout(() => {
+      const link = document.createElement('a');
+      link.href = '/assets/gerald_okoth_resume.pdf';
+      link.download = 'Gerald_Okoth_Resume.pdf';
+      link.click();
+      
       setIsDownloading(false);
-      downloadLink.classList.remove("disabled");
-      downloadLink.disabled = false;
-      alert("Download completed!");
-    }, 125); 
+    }, 1000);
+  };
+
+  const handleViewResume = () => {
+    window.open('/assets/gerald_okoth_resume.pdf', '_blank');
+  };
+
+  const socialLinks = [
+    { 
+      icon: <FaLinkedinIn />, 
+      name: "LinkedIn", 
+      url: "https://www.linkedin.com/in/geraldokoth/",
+      color: "#0077b5"
+    },
+    { 
+      icon: <FaGithub />, 
+      name: "GitHub", 
+      url: "https://github.com/GeraldOkoth",
+      color: "#333"
+    },
+    { 
+      icon: <FaTwitter />, 
+      name: "Twitter", 
+      url: "https://x.com/gerald_okothKE",
+      color: "#1da1f2"
+    },
+    { 
+      icon: <FaInstagram />, 
+      name: "Instagram", 
+      url: "https://www.instagram.com/okothgerald449",
+      color: "#E4405F"
+    },
+    { 
+      icon: <FaYoutube />, 
+      name: "YouTube", 
+      url: "https://www.youtube.com/@geraldokothKE",
+      color: "#ff0000"
+    },
+    { 
+      icon: <FaFacebookF />, 
+      name: "Facebook", 
+      url: "https://web.facebook.com/gerald.okoth.944/",
+      color: "#1877f2"
+    }
+  ];
+
+  const fadeInUp = {
+    initial: { opacity: 0, y: 30 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.6 }
+  };
+
+  const fadeInLeft = {
+    initial: { opacity: 0, x: -50 },
+    animate: { opacity: 1, x: 0 },
+    transition: { duration: 0.7 }
+  };
+
+  const fadeInRight = {
+    initial: { opacity: 0, x: 50 },
+    animate: { opacity: 1, x: 0 },
+    transition: { duration: 0.7 }
   };
 
   return (
     <>
       <TopNavigationBar />
+      <ScrollProgress />
+      
       <section className="home-page" id="home">
-        <div className="hero">
-          <div className="hero-info">
-            <div className="hero-text-intro">
-              <h2>
-                Hello, I am
-                <span className="orange"> Gerald Okoth</span>
-              </h2>
-              <h3 className="text-animation">
-                A <span id="dynamic-text"></span>
-              </h3>
+        <div className="hero-container">
+          <div className="hero-grid">
+            {/* Left Content */}
+            <div className="hero-content">
               <motion.div
-                className="hero-text-ul"
-                initial={{ opacity: 0, x: -120 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{
-                  transitionTimingFunction: generateLinearEasing,
-                  delay: 1,
-                }}
+                className="hero-badge"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5 }}
               >
-                <p>I build user-focused web applications, with intuitive and compelling user interfaces.</p>
-                <h5>I am actively open to:</h5>
-                <ul>
+                <span className="badge-dot"></span>
+                Available for opportunities
+              </motion.div>
+
+              <motion.h1
+                className="hero-title"
+                {...fadeInUp}
+                transition={{ delay: 0.2 }}
+              >
+                Hi, I'm <span className="highlight">Gerald Okoth</span>
+              </motion.h1>
+
+              <motion.div
+                className="hero-subtitle"
+                {...fadeInUp}
+                transition={{ delay: 0.4 }}
+              >
+                <span className="subtitle-text">I'm a </span>
+                <span className="animated-role" key={currentRole}>
+                  {roles[currentRole]}
+                </span>
+              </motion.div>
+
+              <motion.p
+                className="hero-description"
+                {...fadeInUp}
+                transition={{ delay: 0.6 }}
+              >
+                Crafting beautiful, user-centered web applications with modern 
+                technologies. Currently advancing my skills at{" "}
+                <strong>ALX Software Engineering Program</strong>, transitioning 
+                from frontend development and UI/UX design to full-stack engineering.
+              </motion.p>
+
+              <motion.div
+                className="value-proposition"
+                {...fadeInUp}
+                transition={{ delay: 0.8 }}
+              >
+                <h3>What I Bring</h3>
+                <ul className="value-list">
                   <li>
-                    Remote or in-person internships in UI/UX and web development
+                    <FaArrowRight className="list-icon" />
+                    <span>Pixel-perfect UI implementations from Figma to code</span>
                   </li>
-                  <li>Collaborative side projects</li>
-                  <li>Freelance opportunities</li>
-                  <li>Mentorship and community-driven tech initiatives</li>
+                  <li>
+                    <FaArrowRight className="list-icon" />
+                    <span>Responsive, accessible web applications (React, TypeScript)</span>
+                  </li>
+                  <li>
+                    <FaArrowRight className="list-icon" />
+                    <span>User-focused design thinking and problem-solving</span>
+                  </li>
+                  <li>
+                    <FaArrowRight className="list-icon" />
+                    <span>Collaborative teamwork and clean, maintainable code</span>
+                  </li>
                 </ul>
               </motion.div>
-              {/* <Helmet>
-                <script
-                  src="./text-animation.js"
-                  type="text/javascript"
-                ></script>
-              </Helmet> */}
-            </div>
-            <motion.div
-              className="hero-btns"
-              initial={{ opacity: 0, x: -120 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ transitionTimingFunction: easeInOut, delay: 2 }}
-            >
-              <a href="#about" className="btn btn-primary" role="button">
-                About Me
-              </a>
-              <a
-                href="/assets/gerald_okoth_resume.pdf"
-                className="btn btn-primary"
-                role="button"
-                id="downloadBtn"
-                onClick={onClickDownload}
-                disabled={false}
+
+              <motion.div
+                className="opportunities-section"
+                {...fadeInUp}
+                transition={{ delay: 1 }}
               >
-                <span className="spinner-grow spinner-grow-sm"></span>{isDownloading? "Downloading..." : "Resume..."}
-              </a>
-            </motion.div>
+                <h4>Open to</h4>
+                <div className="opportunities-tags">
+                  <span className="opp-tag">Internships</span>
+                  <span className="opp-tag">Freelance</span>
+                  <span className="opp-tag">Collaborations</span>
+                  <span className="opp-tag">Mentorship</span>
+                </div>
+              </motion.div>
+
+              <motion.div
+                className="hero-actions"
+                {...fadeInUp}
+                transition={{ delay: 1.2 }}
+              >
+                <a href="#projects" className="btn btn-primary">
+                  View Projects
+                  <FaArrowRight className="btn-icon" />
+                </a>
+                
+                <div className="resume-buttons">
+                  <button 
+                    className="btn btn-secondary"
+                    onClick={handleViewResume}
+                  >
+                    <FaEye className="btn-icon" />
+                    View Resume
+                  </button>
+                  
+                  <button 
+                    className="btn btn-download"
+                    onClick={handleDownload}
+                    disabled={isDownloading}
+                  >
+                    {isDownloading ? (
+                      <>
+                        <span className="spinner"></span>
+                        Downloading...
+                      </>
+                    ) : (
+                      <>
+                        <FaDownload className="btn-icon" />
+                        Download
+                      </>
+                    )}
+                  </button>
+                </div>
+              </motion.div>
+
+              <motion.div
+                className="social-links"
+                {...fadeInUp}
+                transition={{ delay: 1.4 }}
+              >
+                <p className="social-label">Connect with me</p>
+                <div className="social-icons">
+                  {socialLinks.map((social, index) => (
+                    <motion.a
+                      key={social.name}
+                      href={social.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="social-icon"
+                      style={{ '--social-color': social.color }}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 1.4 + index * 0.1 }}
+                      whileHover={{ y: -5 }}
+                      aria-label={social.name}
+                    >
+                      {social.icon}
+                      <span className="social-tooltip">{social.name}</span>
+                    </motion.a>
+                  ))}
+                </div>
+              </motion.div>
+            </div>
+
+            {/* Right Image */}
             <motion.div
-              className="wrapper"
-              initial={{ opacity: 0, x: -120 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{
-                transitionTimingFunction: linearGradient,
-                delay: 2.5,
-              }}
+              className="hero-image-wrapper"
+              {...fadeInRight}
+              transition={{ delay: 0.5 }}
             >
-              <div className="icon ln">
-                <a href="https://www.linkedin.com/in/geraldokoth/">
-                  <i className="fab fa-linkedin"></i>
-                </a>
-                <span>Linkedin</span>
+              <div className="image-container">
+                <div className="image-backdrop"></div>
+                <div className="image-border"></div>
+                <img
+                  src="/images/profile.JPG"
+                  alt="Gerald Okoth - Frontend Developer & UI/UX Designer"
+                  className="hero-image"
+                />
+                <div className="image-glow"></div>
               </div>
-              <div className="icon fb">
-                <a href="https://web.facebook.com/gerald.okoth.944/">
-                  <i className="fab fa-facebook-f"></i>
-                </a>
-                <span>Facebook</span>
+
+              {/* Floating Elements */}
+              <div className="floating-element element-1">
+                <span className="element-icon">💻</span>
+                <span className="element-text">Frontend Dev</span>
               </div>
-              <div className="icon tw">
-                <a href="https://x.com/gerald_okothKE">
-                  <i className="fab fa-twitter"></i>
-                </a>
-                <span>Twitter</span>
+              <div className="floating-element element-2">
+                <span className="element-icon">🎨</span>
+                <span className="element-text">UI/UX Design</span>
               </div>
-              <div className="icon in">
-                <a href="https://www.instagram.com/okothgerald449">
-                  <i className="fab fa-instagram"></i>
-                </a>
-                <span>Instagram</span>
-              </div>
-              <div className="icon git">
-                <a href="https://github.com/GeraldOkoth">
-                  <i className="fab fa-github"></i>
-                </a>
-                <span>Github</span>
-              </div>
-              <div className="icon yt">
-                <a href="https://www.youtube.com/@geraldokothKE">
-                  <i className="fab fa-youtube"></i>
-                </a>
-                <span>YouTube</span>
+              <div className="floating-element element-3">
+                <span className="element-icon">⚛️</span>
+                <span className="element-text">React</span>
               </div>
             </motion.div>
           </div>
-          <motion.div
-            className="hero-image"
-            initial={{ opacity: 0, y: 120 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ transitionTimingFunction: easeInOut, delay: 2.5 }}
-          >
-            <img
-              src="/images/profile.JPG"
-              id="hero-image"
-              alt="my profile pic"
-              width="400px"
-              height="400px"
-            />
-            {/* <div className="loader"></div> */}
-          </motion.div>
         </div>
+
+        {/* Scroll Indicator */}
+        <motion.div
+          className="scroll-indicator"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 2 }}
+        >
+          <div className="scroll-mouse">
+            <div className="scroll-wheel"></div>
+          </div>
+          <p>Scroll to explore</p>
+        </motion.div>
       </section>
     </>
   );
