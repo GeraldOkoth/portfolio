@@ -14,7 +14,7 @@ import {
 import {
   SiTypescript,
   SiWordpress,
-  SiAdobepremierepro,
+  
   SiInvision,
   SiTailwindcss,
   SiCanva,
@@ -47,7 +47,7 @@ const Skills = () => {
       { name: "Git", icon: <FaGitAlt />, level: 90 },
       { name: "GitHub", icon: <FaGithub />, level: 90 },
       { name: "DaVinci Resolve", icon: <FaVideo />, level: 65 },
-      { name: "Adobe Premiere", icon: <SiAdobepremierepro />, level: 70 },
+      //{ name: "Adobe Premiere", icon: <SiAdobepremierepro />, level: 70 },
     ],
   };
 

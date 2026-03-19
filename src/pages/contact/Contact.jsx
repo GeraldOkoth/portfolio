@@ -61,7 +61,7 @@ function Contact() {
             </div>
             <div className="map">
               <iframe
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d934.1450044461311!2d36.90277473537391!3d-1.3081756361423016!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1386ceb2c1ff%3A0x36a2dbb6d06e7232!2sNyayo%20Estate%20Embakasi!5e1!3m2!1sen!2ske!4v1769698341643!5m2!1sen!2ske"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d149911.88527910504!2d36.764995573196195!3d-1.3032076027232717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1172d84d49a7%3A0xf7cf0254b297924c!2sNairobi!5e1!3m2!1sen!2ske!4v1773081654078!5m2!1sen!2ske"
                 title="Location Map"
                 width="100%"
                 height="300"
