@@ -1,107 +1,174 @@
-import React from "react";
-import { easeIn, easeInOut, motion } from "framer-motion";
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 
 const About = () => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const toggleExpand = () => {
+    setIsExpanded(!isExpanded);
+  };
+
+  const fadeInUp = {
+    initial: { opacity: 0, y: 30 },
+    whileInView: { opacity: 1, y: 0 },
+    viewport: { once: true },
+    transition: { duration: 0.6 }
+  };
+
+  const fadeInLeft = {
+    initial: { opacity: 0, x: -50 },
+    whileInView: { opacity: 1, x: 0 },
+    viewport: { once: true },
+    transition: { duration: 0.7 }
+  };
+
+  const fadeInRight = {
+    initial: { opacity: 0, x: 50 },
+    whileInView: { opacity: 1, x: 0 },
+    viewport: { once: true },
+    transition: { duration: 0.7 }
+  };
+
   return (
     <section className="about-section" id="about">
-      <motion.h2
-        className="about-title"
-        initial={{ opacity: 0, y: -30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-      >
-        About Me
-      </motion.h2>
-
-      <div className="container">
-        <motion.div
-          className="about-img"
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ transitionTimingFunction: easeIn, delay: 1 }}
+      <div className="about-container">
+        <motion.h2
+          className="about-title"
+          {...fadeInUp}
         >
-          <img
-            src="/images/about.jpg"
-            alt="my pic"
-            width="200px"
-            height="350px"
-          />
-          <motion.p
-            className="mission-statement"
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ transitionTimingFunction: easeIn, delay: 1.5 }}
-          >
-            <em>
-              <strong>Mission Statement:</strong> to be a person of integrity,
-              championing a just society that recognizes, upholds, and protects
-              human rights and freedoms, while inspiring others through my
-              strengths and talent, to achieve a better quality of life.
-            </em>
-          </motion.p>
-        </motion.div>
-        <motion.div className="about-info">
-          <motion.p
-            className="intro"
-            initial={{ opacity: 0, y: -30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ transitionTimingFunction: easeInOut, delay: 2 }}
-          >
-            I’m a front-end developer in training with a strong foundation in
-            leadership, empathy, and communication. Currently enrolled in the{" "}
-            <strong>ALX Software Engineering Program</strong>, where I’m
-            sharpening my technical and creative skills by building responsive,
-            user-focused web applications using frontend technologies and UI/UX
-            design tools.
-          </motion.p>
+          About <span className="highlight">Me</span>
+        </motion.h2>
 
-          <motion.p
-            className="para-1"
-            initial={{ opacity: 0, y: -30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ transitionTimingFunction: easeInOut, delay: 2.2 }}
+        <div className="about-content">
+          {/* Image Section with Mission Overlay */}
+          <motion.div
+            className="about-image-wrapper"
+            {...fadeInLeft}
           >
-            I’m especially drawn to UI/UX design, with a passion for creating
-            intuitive digital experiences and clean UI designs that are not only
-            functional but also visually compelling and accessible.
-          </motion.p>
+            <div className="image-container">
+              <img
+                src="/images/about.jpg"
+                alt="Gerald Okoth - Frontend Developer"
+                className="about-image"
+              />
+              <div className="mission-overlay">
+                <div className="mission-content">
+                  <h3>Mission Statement</h3>
+                  <p>
+                    To be a person of integrity, championing a just society that 
+                    recognizes, upholds, and protects human rights and freedoms, 
+                    while inspiring others through my strengths and talent to 
+                    achieve a better quality of life.
+                  </p>
+                </div>
+              </div>
+            </div>
 
-          <motion.p
-            className="para-2"
-            initial={{ opacity: 0, y: -30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ transitionTimingFunction: easeInOut, delay: 2.4 }}
-          >
-            My journey into software engineering was inspired by a deep
-            curiosity of technology and a desire to solve real-world problems
-            through it. I enjoy taking ideas from concept to interactive
-            prototypes and finally turning them into full-fledged applications
-            that add value to users’ lives.
-          </motion.p>
+            {/* Quick Stats */}
+            <div className="quick-stats">
+              <div className="stat-item">
+                <span className="stat-number">2+</span>
+                <span className="stat-label">Years Learning</span>
+              </div>
+              <div className="stat-item">
+                <span className="stat-number">5+</span>
+                <span className="stat-label">Projects Built</span>
+              </div>
+              <div className="stat-item">
+                <span className="stat-number">100%</span>
+                <span className="stat-label">Dedication</span>
+              </div>
+            </div>
+          </motion.div>
 
-          <motion.p
-            className="para-3"
-            initial={{ opacity: 0, y: -30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ transitionTimingFunction: easeInOut, delay: 2.6 }}
+          {/* Info Section */}
+          <motion.div
+            className="about-info"
+            {...fadeInRight}
           >
-            Beyond code, my background in leadership and collaboration — from my
-            time at campus has taught me communication skills, working with
-            diverse teams, and remaining grounded in purpose.
-          </motion.p>
-          <motion.p
-            className="para-4"
-            initial={{ opacity: 0, y: -30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ transitionTimingFunction: easeInOut, delay: 2.8 }}
-          >
-            I believe that meaningful tech is created where creativity meets
-            community impact. My mission is to use technology not just to build
-            apps, but to uplift communities and inspire change. I’m working
-            toward becoming a well-rounded developer who creates impactful
-            solutions with purpose.
-          </motion.p>
-        </motion.div>
+            <div className="info-header">
+              <h3>Frontend Developer & UI/UX Designer</h3>
+              <p className="tagline">
+                Crafting beautiful, user-centered digital experiences
+              </p>
+            </div>
+
+            <div className={`about-text ${isExpanded ? 'expanded' : 'collapsed'}`}>
+              <p className="intro">
+                I'm a passionate <strong>Frontend Developer</strong> and <strong>UI/UX Designer</strong> currently 
+                enrolled in the <strong>ALX Software Engineering Program</strong>, where I'm building expertise 
+                in creating responsive, accessible, and visually compelling web applications.
+              </p>
+
+              <p className="para-1">
+                My focus is on translating design concepts into clean, efficient code using modern technologies 
+                like <strong>React, JavaScript, TypeScript, and Sass</strong>. I combine technical skills with 
+                design thinking to deliver intuitive user interfaces that prioritize both aesthetics and functionality.
+              </p>
+
+              <p className="para-2">
+                What sets me apart is my dual expertise in <strong>development and design</strong>. I work 
+                seamlessly with tools like <strong>Figma and InVision</strong> to prototype and refine user 
+                experiences before bringing them to life with code. This end-to-end approach ensures pixel-perfect 
+                implementations that match design intent.
+              </p>
+
+              {/* Content that shows on expand */}
+              <div className="expandable-content">
+                <p className="para-3">
+                  My journey into software engineering stems from a genuine curiosity about how technology 
+                  shapes user behavior and solves real-world problems. I thrive on transforming ideas from 
+                  wireframes to interactive prototypes to production-ready applications.
+                </p>
+
+                <p className="para-4">
+                  Beyond technical skills, my background in <strong>leadership and team collaboration</strong> has 
+                  equipped me with strong communication abilities and the capacity to work effectively in diverse, 
+                  cross-functional teams—essential skills for modern software development.
+                </p>
+
+                <p className="para-5">
+                  I believe the best digital products are built at the intersection of <strong>empathy, 
+                  creativity, and technical excellence</strong>. I'm committed to creating accessible, 
+                  user-focused solutions that not only meet business objectives but also enhance people's 
+                  daily lives.
+                </p>
+              </div>
+            </div>
+
+            {/* Read More Button - Only visible on mobile/tablet */}
+            <button 
+              className="read-more-btn" 
+              onClick={toggleExpand}
+              aria-expanded={isExpanded}
+              aria-label={isExpanded ? "Read less" : "Read more"}
+            >
+              {isExpanded ? (
+                <>
+                  Read Less <FaChevronUp />
+                </>
+              ) : (
+                <>
+                  Read More <FaChevronDown />
+                </>
+              )}
+            </button>
+
+            {/* Key Skills Highlight */}
+            <div className="skills-highlight">
+              <h4>Core Competencies</h4>
+              <div className="skills-tags">
+                <span className="skill-tag">React Development</span>
+                <span className="skill-tag">UI/UX Design</span>
+                <span className="skill-tag">Responsive Design</span>
+                <span className="skill-tag">JavaScript/TypeScript</span>
+                <span className="skill-tag">Figma Prototyping</span>
+                <span className="skill-tag">Accessibility (A11y)</span>
+              </div>
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );
