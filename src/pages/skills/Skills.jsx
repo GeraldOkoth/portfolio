@@ -8,18 +8,17 @@ import {
   FaBootstrap,
   FaGitAlt,
   FaGithub,
-  FaFigma,  
+  FaFigma,
   FaVideo,
 } from "react-icons/fa";
 import {
   SiTypescript,
   SiWordpress,
-  
   SiInvision,
   SiTailwindcss,
   SiCanva,
 } from "react-icons/si";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Skills = () => {
   const [activeTab, setActiveTab] = useState("Frontend");
@@ -28,26 +27,25 @@ const Skills = () => {
 
   const skillCategories = {
     Frontend: [
-      { name: "HTML5", icon: <FaHtml5 />, level: 100 },
-      { name: "CSS3", icon: <FaCss3Alt />, level: 90 },
-      { name: "Sass", icon: <FaSass />, level: 80 },
-      { name: "Bootstrap", icon: <FaBootstrap />, level: 75 },
-      { name: "JavaScript", icon: <FaJs />, level: 88 },
-      { name: "TypeScript", icon: <SiTypescript />, level: 75 },
-      { name: "React", icon: <FaReact />, level: 70 },
-      { name: "Tailwindcss", icon: <SiTailwindcss />, level: 90 },
+      { name: "HTML5", icon: <FaHtml5 />, level: 100, color: "#E34F26" },
+      { name: "CSS3", icon: <FaCss3Alt />, level: 90, color: "#1572B6" },
+      { name: "Sass", icon: <FaSass />, level: 80, color: "#CC6699" },
+      { name: "Bootstrap", icon: <FaBootstrap />, level: 75, color: "#7952B3" },
+      { name: "JavaScript", icon: <FaJs />, level: 88, color: "#F7DF1E" },
+      { name: "TypeScript", icon: <SiTypescript />, level: 75, color: "#3178C6" },
+      { name: "React", icon: <FaReact />, level: 70, color: "#61DAFB" },
+      { name: "Tailwind CSS", icon: <SiTailwindcss />, level: 90, color: "#06B6D4" },
     ],
     Design: [
-      { name: "Figma", icon: <FaFigma />, level: 85 },
-      { name: "InVision", icon: <SiInvision />, level: 70 },
-      { name: "WordPress", icon: <SiWordpress />, level: 75 },
-      { name: "Canva", icon: <SiCanva />, level: 95 },
+      { name: "Figma", icon: <FaFigma />, level: 85, color: "#F24E1E" },
+      { name: "InVision", icon: <SiInvision />, level: 70, color: "#FF3366" },
+      { name: "WordPress", icon: <SiWordpress />, level: 75, color: "#21759B" },
+      { name: "Canva", icon: <SiCanva />, level: 95, color: "#00C4CC" },
     ],
     Tools: [
-      { name: "Git", icon: <FaGitAlt />, level: 90 },
-      { name: "GitHub", icon: <FaGithub />, level: 90 },
-      { name: "DaVinci Resolve", icon: <FaVideo />, level: 65 },
-      //{ name: "Adobe Premiere", icon: <SiAdobepremierepro />, level: 70 },
+      { name: "Git", icon: <FaGitAlt />, level: 90, color: "#F05032" },
+      { name: "GitHub", icon: <FaGithub />, level: 90, color: "#181717" },
+      { name: "DaVinci Resolve", icon: <FaVideo />, level: 65, color: "#FF6B6B" },
     ],
   };
 
@@ -55,11 +53,11 @@ const Skills = () => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting && !animated) {
           setAnimated(true);
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.2 }
     );
 
     if (skillsRef.current) {
@@ -67,60 +65,146 @@ const Skills = () => {
     }
 
     return () => observer.disconnect();
-  }, []);
+  }, [animated]);
+
+  // Reset animation when tab changes
+  useEffect(() => {
+    setAnimated(false);
+    const timer = setTimeout(() => setAnimated(true), 100);
+    return () => clearTimeout(timer);
+  }, [activeTab]);
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 20, scale: 0.9 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut",
+      },
+    },
+  };
 
   return (
     <section id="skills" className="skills-section" ref={skillsRef}>
-      <motion.h2
-        initial={{ opacity: 0, y: -30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-      >
-        My Skills
-      </motion.h2>
+      <div className="skills-container-wrapper">
+        <motion.div
+          className="skills-header"
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <h2 className="skills-title">
+            My <span className="highlight">Skills</span>
+          </h2>
+          <p className="skills-subtitle">
+            Technologies and tools I use to bring ideas to life
+          </p>
+        </motion.div>
 
-      <motion.div
-        className="skills-tabs"
-        initial={{ opacity: 0, y: -30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        {Object.keys(skillCategories).map((category) => (
-          <button
-            key={category}
-            className={`tab-btn ${activeTab === category ? "active" : ""}`}
-            onClick={() => setActiveTab(category)}
+        <motion.div
+          className="skills-tabs"
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+        >
+          {Object.keys(skillCategories).map((category) => (
+            <button
+              key={category}
+              className={`tab-btn ${activeTab === category ? "active" : ""}`}
+              onClick={() => setActiveTab(category)}
+            >
+              <span className="tab-text">{category}</span>
+              <span className="tab-count">
+                {skillCategories[category].length}
+              </span>
+            </button>
+          ))}
+        </motion.div>
+
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeTab}
+            className="skills-grid"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
           >
-            {category}
-          </button>
-        ))}
-      </motion.div>
+            {skillCategories[activeTab].map((skill, index) => (
+              <motion.div
+                key={skill.name}
+                className="skill-card"
+                variants={cardVariants}
+              >
+                <div className="skill-card-inner">
+                  <div className="skill-header">
+                    <div
+                      className="skill-icon"
+                      style={{ color: skill.color }}
+                    >
+                      {skill.icon}
+                    </div>
+                    <div className="skill-level-badge">
+                      {animated ? `${skill.level}%` : "0%"}
+                    </div>
+                  </div>
 
-      <motion.div
-        className="skills-container"
-        initial={{ opacity: 0, y: -30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-      >
-        {skillCategories[activeTab].map((skill, index) => (
-          <div key={index} className="skill-card">
-            <div className="skill-icon">{skill.icon}</div>
-            <h4>{skill.name}</h4>
-            <div className="progress-bar">
-              <div
-                className="progress-fill"
-                style={{
-                  width: animated ? `${skill.level}%` : "0%",
-                  transition: `width 1.5s ease ${index * 0.1}s`,
-                }}
-              ></div>
-            </div>
-            <span className="skill-level">
-              {animated ? `${skill.level}%` : "0%"}
-            </span>
-          </div>
-        ))}
-      </motion.div>
+                  <h4 className="skill-name">{skill.name}</h4>
+
+                  <div className="progress-container">
+                    <div className="progress-bar">
+                      <motion.div
+                        className="progress-fill"
+                        initial={{ width: 0 }}
+                        animate={{
+                          width: animated ? `${skill.level}%` : 0,
+                        }}
+                        transition={{
+                          duration: 1.2,
+                          delay: index * 0.1,
+                          ease: "easeOut",
+                        }}
+                        style={{
+                          background: `linear-gradient(135deg, ${skill.color}dd, ${skill.color})`,
+                        }}
+                      >
+                        <div className="progress-glow"></div>
+                      </motion.div>
+                    </div>
+                  </div>
+
+                  <div className="skill-footer">
+                    <span className="proficiency-label">
+                      {skill.level >= 90
+                        ? "Expert"
+                        : skill.level >= 75
+                        ? "Advanced"
+                        : skill.level >= 60
+                        ? "Intermediate"
+                        : "Beginner"}
+                    </span>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </AnimatePresence>
+      </div>
     </section>
   );
 };
