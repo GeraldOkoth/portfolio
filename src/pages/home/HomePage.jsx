@@ -14,25 +14,65 @@ import {
 import TopNavigationBar from "../../components/header/TopNavigationBar";
 import ScrollProgress from "./ScrollProgress";
 
+// Move roles array outside component to avoid ESLint dependency warning
+const ROLES = [
+  "Frontend Developer",
+  "UI/UX Designer",
+  "React Specialist",
+  "Creative Problem Solver"
+];
+
+const SOCIAL_LINKS = [
+  { 
+    icon: <FaLinkedinIn />, 
+    name: "LinkedIn", 
+    url: "https://www.linkedin.com/in/geraldokoth/",
+    color: "#0077b5"
+  },
+  { 
+    icon: <FaGithub />, 
+    name: "GitHub", 
+    url: "https://github.com/GeraldOkoth",
+    color: "#333"
+  },
+  { 
+    icon: <FaTwitter />, 
+    name: "Twitter", 
+    url: "https://x.com/gerald_okothKE",
+    color: "#1da1f2"
+  },
+  { 
+    icon: <FaInstagram />, 
+    name: "Instagram", 
+    url: "https://www.instagram.com/okothgerald449",
+    color: "#E4405F"
+  },
+  { 
+    icon: <FaYoutube />, 
+    name: "YouTube", 
+    url: "https://www.youtube.com/@geraldokothKE",
+    color: "#ff0000"
+  },
+  { 
+    icon: <FaFacebookF />, 
+    name: "Facebook", 
+    url: "https://web.facebook.com/gerald.okoth.944/",
+    color: "#1877f2"
+  }
+];
+
 function HomePage() {
   const [isDownloading, setIsDownloading] = useState(false);
   const [currentRole, setCurrentRole] = useState(0);
 
-  const roles = [
-    "Frontend Developer",
-    "UI/UX Designer",
-    "Video Editor",
-    "Graphics Designer",
-  ];
-
-  // Typing animation effect
+  // Typing animation effect - now with no dependency warnings
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentRole((prev) => (prev + 1) % roles.length);
+      setCurrentRole((prev) => (prev + 1) % ROLES.length);
     }, 3000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, []); // Empty dependency array is now correct since ROLES is constant
 
   const handleDownload = async () => {
     setIsDownloading(true);
@@ -52,55 +92,10 @@ function HomePage() {
     window.open('/assets/gerald_okoth_resume.pdf', '_blank');
   };
 
-  const socialLinks = [
-    { 
-      icon: <FaLinkedinIn />, 
-      name: "LinkedIn", 
-      url: "https://www.linkedin.com/in/geraldokoth/",
-      color: "#0077b5"
-    },
-    { 
-      icon: <FaGithub />, 
-      name: "GitHub", 
-      url: "https://github.com/GeraldOkoth",
-      color: "#333"
-    },
-    { 
-      icon: <FaTwitter />, 
-      name: "Twitter", 
-      url: "https://x.com/gerald_okothKE",
-      color: "#1da1f2"
-    },
-    { 
-      icon: <FaInstagram />, 
-      name: "Instagram", 
-      url: "https://www.instagram.com/okothgerald449",
-      color: "#E4405F"
-    },
-    { 
-      icon: <FaYoutube />, 
-      name: "YouTube", 
-      url: "https://www.youtube.com/@geraldokothKE",
-      color: "#ff0000"
-    },
-    { 
-      icon: <FaFacebookF />, 
-      name: "Facebook", 
-      url: "https://web.facebook.com/gerald.okoth.944/",
-      color: "#1877f2"
-    }
-  ];
-
   const fadeInUp = {
     initial: { opacity: 0, y: 30 },
     animate: { opacity: 1, y: 0 },
     transition: { duration: 0.6 }
-  };
-
-  const fadeInLeft = {
-    initial: { opacity: 0, x: -50 },
-    animate: { opacity: 1, x: 0 },
-    transition: { duration: 0.7 }
   };
 
   const fadeInRight = {
@@ -144,7 +139,7 @@ function HomePage() {
               >
                 <span className="subtitle-text">I'm a </span>
                 <span className="animated-role" key={currentRole}>
-                  {roles[currentRole]}
+                  {ROLES[currentRole]}
                 </span>
               </motion.div>
 
@@ -245,7 +240,7 @@ function HomePage() {
               >
                 <p className="social-label">Connect with me</p>
                 <div className="social-icons">
-                  {socialLinks.map((social, index) => (
+                  {SOCIAL_LINKS.map((social, index) => (
                     <motion.a
                       key={social.name}
                       href={social.url}
