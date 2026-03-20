@@ -1,0 +1,191 @@
+// _theme.scss - Global theme styles
+// Import this in your main SCSS file
+
+// CSS Variables will be set by JavaScript, but here are the defaults
+:root {
+  --theme-primary: #ff7b00;
+  --theme-secondary: #ff9500;
+  --theme-background: #0a0520;
+  --theme-backgroundAlt: #1a0f3e;
+  --theme-backgroundCard: #0f0a2e;
+  --theme-text: #ffffff;
+  --theme-textMuted: rgba(255, 255, 255, 0.7);
+  --theme-border: rgba(255, 255, 255, 0.1);
+  --theme-success: #43e97b;
+}
+
+// Apply theme to entire website
+body {
+  background: var(--theme-background);
+  color: var(--theme-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+// Common elements that should respond to theme
+h1, h2, h3, h4, h5, h6 {
+  color: var(--theme-text);
+}
+
+p {
+  color: var(--theme-textMuted);
+}
+
+// Sections
+.home-page,
+.about-section,
+.skills-section,
+.project-section,
+.services-section,
+.contact {
+  background: linear-gradient(
+    135deg,
+    var(--theme-background) 0%,
+    var(--theme-backgroundAlt) 50%,
+    var(--theme-background) 100%
+  );
+  color: var(--theme-text);
+  transition: all 0.3s ease;
+}
+
+// Cards and containers
+.project-card,
+.skill-card,
+.service-card,
+.about-image-wrapper,
+.contact-form-section,
+.contact-info .info-card {
+  background: var(--theme-backgroundCard) !important;
+  border-color: var(--theme-border) !important;
+  transition: all 0.3s ease;
+}
+
+// Text colors
+.hero-description,
+.about-text p,
+.project-description,
+.contact-description {
+  color: var(--theme-textMuted) !important;
+}
+
+// Buttons and interactive elements
+.btn-primary,
+.submit-btn,
+.project-btn.demo {
+  background: linear-gradient(
+    135deg,
+    var(--theme-primary) 0%,
+    var(--theme-secondary) 100%
+  ) !important;
+}
+
+// Links and accents
+a,
+.nav-link.active,
+.highlight,
+.hero-title .highlight,
+.about-title .highlight,
+.skills-title .highlight,
+.contact-title .highlight {
+  color: var(--theme-primary) !important;
+}
+
+// Borders
+.info-card,
+.skill-card,
+.project-card {
+  &:hover {
+    border-color: var(--theme-primary) !important;
+  }
+}
+
+// Progress bars
+.progress-fill,
+.progress-ring-progress {
+  stroke: var(--theme-primary) !important;
+}
+
+// Badges and tags
+.hero-badge,
+.tech-badge,
+.skill-tag,
+.opp-tag {
+  border-color: var(--theme-border) !important;
+  
+  &:hover {
+    border-color: var(--theme-primary) !important;
+  }
+}
+
+// Icons
+.list-icon,
+.info-icon,
+.skill-icon {
+  color: var(--theme-primary) !important;
+}
+
+// Specific theme overrides
+[data-theme="light"] {
+  // Light theme specific adjustments
+  .home-page,
+  .about-section,
+  .skills-section,
+  .project-section,
+  .contact {
+    &::before,
+    &::after {
+      opacity: 0.3;
+    }
+  }
+
+  .navbar {
+    background: rgba(255, 255, 255, 0.9) !important;
+    border-bottom-color: rgba(10, 5, 32, 0.1) !important;
+
+    &.scrolled {
+      background: rgba(255, 255, 255, 0.95) !important;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .project-card,
+  .skill-card,
+  .info-card,
+  .contact-form-section {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
+  }
+
+  .hero-badge {
+    background: rgba(67, 233, 123, 0.2) !important;
+    color: #22c55e !important;
+  }
+}
+
+[data-theme="ocean"] {
+  // Ocean theme specific adjustments
+  .hero-badge {
+    background: rgba(16, 185, 129, 0.2) !important;
+    border-color: rgba(16, 185, 129, 0.3) !important;
+    color: #10b981 !important;
+  }
+
+  .tech-badge,
+  .skill-tag {
+    &:nth-child(even) {
+      background: rgba(0, 191, 255, 0.15) !important;
+      color: #00bfff !important;
+      border-color: rgba(0, 191, 255, 0.3) !important;
+    }
+  }
+}
+
+// Smooth transitions for theme changes
+* {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+
+// Exclude animations and transforms from theme transitions
+*:not(.animate-on-theme-change) {
+  transition-property: background-color, border-color, color, fill, stroke !important;
+}
