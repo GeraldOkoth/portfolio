@@ -1,44 +1,46 @@
 import React, { useState } from "react";
 import Slider from "react-slick";
 import { motion } from "framer-motion";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { FaChevronLeft, FaChevronRight, FaStar } from "react-icons/fa";
 import ProjectCard from "./ProjectCard";
 
 const allProjects = [
   {
     id: "p1",
     type: "frontend",
+    scale: "mini",
     title: "Portfolio Website",
     description:
       "A modern personal portfolio built with React and Sass. This portfolio showcases my frontend and ui/ux skills, projects and services.",
     technologies: ["React", "Sass", "Framer Motion", "JavaScript"],
-    image: "/images/portfolio.png", 
+    image: "/images/portfolio.png",
     features: [
       "Responsive design for all devices",
       "Smooth animations and transitions",
       "Project showcase with filtering",
-      "Contact form integration"
+      "Contact form integration",
     ],
     likes: 0,
     views: 0,
     createdAt: "2024-10-22T10:00:00Z",
-    updatedAt: "2026-03-20T12:12:00Z",
+    updatedAt: "2026-04-04T21:11:10Z",
     demo: "https://geraldokoth.vercel.app",
     github: "https://github.com/GeraldOkoth/portfolio",
   },
   {
     id: "p2",
     type: "frontend",
+    scale: "mini",
     title: "Weather Dashboard",
     description:
       "A weather dashboard application that displays current weather information and forecasts for various locations. Built with React, Tailwind CSS and integrated with a weather API.",
     technologies: ["React", "JavaScript", "REST API", "Tailwind CSS"],
-    image: "/images/weather-dashboard.png", 
+    image: "/images/weather-dashboard.png",
     features: [
       "Real-time weather data fetching",
       "Search functionality for different locations",
       "5-day weather forecast display",
-      "Responsive design with Tailwind CSS"
+      "Responsive design with Tailwind CSS",
     ],
     likes: 0,
     views: 0,
@@ -50,16 +52,17 @@ const allProjects = [
   {
     id: "p3",
     type: "frontend",
-  title: "HTML & CSS Landing Page",
+    scale: "mini",
+    title: "HTML & CSS Landing Page",
     description:
       "A responsive landing page built with HTML and CSS. This project demonstrates modern web design principles, including semantic HTML, CSS Grid and Flexbox layouts, and responsive design techniques.",
     technologies: ["HTML", "CSS", "Responsive Design"],
-    image: "/images/html-css-landing-page.png", 
+    image: "/images/html-css-landing-page.png",
     features: [
       "Semantic HTML structure",
       "Modern CSS techniques (Grid, Flexbox)",
       "Responsive design for mobile and desktop",
-      "Clean and minimalist design"
+      "Clean and minimalist design",
     ],
     likes: 0,
     views: 0,
@@ -71,16 +74,17 @@ const allProjects = [
   {
     id: "p4",
     type: "frontend",
+    scale: "mini",
     title: "Simple To Do List App",
     description:
       "A simple to-do list application that allows users to add, display, and remove tasks. This project focuses on utilizing advanced DOM manipulation techniques to interact dynamically with the webpage, persist data using localStorage, ensuring that tasks are saved even after the browser is closed.",
     technologies: ["JavaScript", "HTML", "CSS", "LocalStorage"],
-    image: "/images/simple-to-do.png", 
+    image: "/images/simple-to-do.png",
     features: [
       "Add, edit, and delete tasks",
       "Persistent storage using localStorage",
       "Filter tasks by status",
-      "Responsive design"
+      "Responsive design",
     ],
     likes: 0,
     views: 0,
@@ -92,6 +96,7 @@ const allProjects = [
   {
     id: "p5",
     type: "frontend",
+    scale: "mini",
     title: "Advanced To do List App",
     description:
       "Developed an interactive web application focused on dynamic content generation, data persistence, and JSON handling. The project highlights advanced DOM manipulation, browser storage (localStorage & sessionStorage), and efficient JSON data management.",
@@ -101,7 +106,7 @@ const allProjects = [
       "Dynamic content generation",
       "JSON data handling",
       "Browser storage implementation",
-      "Advanced DOM manipulation"
+      "Advanced DOM manipulation",
     ],
     likes: 0,
     views: 0,
@@ -114,16 +119,17 @@ const allProjects = [
   {
     id: "p6",
     type: "frontend",
+    scale: "mini",
     title: "GitHub User Profile Search",
     description:
       "A GitHub User Profile Search Application developed using React and Tailwindcss. This application enables users to search for GitHub profiles and view detailed information including repositories, followers, and activity.",
     technologies: ["React", "Tailwind CSS", "GitHub API", "REST API"],
-    image: "/images/github-user-search.png", 
+    image: "/images/github-user-search.png",
     features: [
       "Real-time GitHub profile search",
       "Repository listing and filtering",
       "User statistics display",
-      "Responsive design with Tailwind"
+      "Responsive design with Tailwind",
     ],
     likes: 0,
     views: 0,
@@ -136,6 +142,7 @@ const allProjects = [
   {
     id: "p7",
     type: "uiux",
+    scale: "mini",
     title: "Portfolio Website Replica UI Design",
     description:
       "This is a UI design for a portfolio website replica created using Figma to replicate a pixel perfect design. The design showcases a modern web layout user experience and visual appeal.",
@@ -145,7 +152,7 @@ const allProjects = [
       "Modern and clean interface",
       "Responsive layout design",
       "Interactive prototypes",
-      "User-centered design approach"
+      "User-centered design approach",
     ],
     likes: 0,
     views: 0,
@@ -156,6 +163,7 @@ const allProjects = [
   {
     id: "p8",
     type: "uiux",
+    scale: "mini",
     title: "ALX ehub Login Page Clone",
     description:
       "This is a UI figma file designed to replicate ALX ehub login page. The aim of building this project is to enhance my UI/UX design skills and to create a visually appealing and user-friendly login interface.",
@@ -165,7 +173,7 @@ const allProjects = [
       "Pixel-perfect design replication",
       "Interactive login flow",
       "Responsive design",
-      "Modern UI elements"
+      "Modern UI elements",
     ],
     likes: 0,
     views: 0,
@@ -176,6 +184,7 @@ const allProjects = [
   {
     id: "p9",
     type: "uiux",
+    scale: "mini",
     title: "Portfolio Website replica UI Design",
     description:
       "This is a UI design for a portfolio website replica created using Figma. The design showcases a modern and responsive layout, focusing on user experience and visual appeal.",
@@ -185,7 +194,7 @@ const allProjects = [
       "Modern and clean interface",
       "Responsive layout design",
       "Interactive prototypes",
-      "User-centered design approach"
+      "User-centered design approach",
     ],
     likes: 0,
     views: 0,
@@ -196,6 +205,7 @@ const allProjects = [
   {
     id: "p10",
     type: "uiux",
+    scale: "mini",
     title: "Weather Dashboard UI Design",
     description:
       "This is a UI design for a weather dashboard created using Figma. The design showcases a modern and responsive layout, focusing on user experience and visual appeal.",
@@ -205,7 +215,7 @@ const allProjects = [
       "Modern and clean interface",
       "Responsive layout design",
       "Interactive prototypes",
-      "User-centered design approach"
+      "User-centered design approach",
     ],
     likes: 0,
     views: 0,
@@ -216,6 +226,7 @@ const allProjects = [
   {
     id: "p11",
     type: "graphic",
+    scale: "mini",
     title: "Recollection Poster",
     description:
       "A visually striking poster design created using Canva. This project demonstrates effective use of typography, composition, and color harmony to create an engaging and memorable visual experience.",
@@ -225,7 +236,7 @@ const allProjects = [
       "Visually striking design",
       "Effective use of typography",
       "Balanced composition",
-      "Color harmony"
+      "Color harmony",
     ],
     likes: 0,
     views: 0,
@@ -236,6 +247,7 @@ const allProjects = [
   {
     id: "p12",
     type: "graphic",
+    scale: "mini",
     title: "Choir recruitment Poster",
     description:
       "A visually striking poster design created using Canva. This project demonstrates effective use of typography, composition, and color harmony to create an engaging and memorable visual experience.",
@@ -245,7 +257,7 @@ const allProjects = [
       "Visually striking design",
       "Effective use of typography",
       "Balanced composition",
-      "Color harmony"
+      "Color harmony",
     ],
     likes: 0,
     views: 0,
@@ -257,16 +269,25 @@ const allProjects = [
 
 const categoryTabs = ["frontend", "uiux", "graphic"];
 const sortTabs = ["latest", "oldest"];
+const scaleTabs = ["all", "major", "mini"];
 
 // Custom Arrow Components
 const NextArrow = ({ onClick }) => (
-  <button className="slick-arrow slick-next" onClick={onClick} aria-label="Next project">
+  <button
+    className="slick-arrow slick-next"
+    onClick={onClick}
+    aria-label="Next project"
+  >
     <FaChevronRight />
   </button>
 );
 
 const PrevArrow = ({ onClick }) => (
-  <button className="slick-arrow slick-prev" onClick={onClick} aria-label="Previous project">
+  <button
+    className="slick-arrow slick-prev"
+    onClick={onClick}
+    aria-label="Previous project"
+  >
     <FaChevronLeft />
   </button>
 );
@@ -274,12 +295,20 @@ const PrevArrow = ({ onClick }) => (
 function Projects() {
   const [activeCategory, setActiveCategory] = useState("frontend");
   const [sortType, setSortType] = useState("latest");
+  const [activeScale, setActiveScale] = useState("mini");
 
+  // Filter and sort
   const filtered = allProjects
-    .filter((p) => p.type === activeCategory)
+    .filter((p) => {
+      const matchesCategory = p.type === activeCategory;
+      const matchesScale = activeScale === "all" || p.scale === activeScale;
+      return matchesCategory && matchesScale;
+    })
     .sort((a, b) => {
-      if (sortType === "latest") return new Date(b.createdAt) - new Date(a.createdAt);
-      if (sortType === "oldest") return new Date(a.createdAt) - new Date(b.createdAt);
+      if (sortType === "latest")
+        return new Date(b.createdAt) - new Date(a.createdAt);
+      if (sortType === "oldest")
+        return new Date(a.createdAt) - new Date(b.createdAt);
       return 0;
     });
 
@@ -287,95 +316,158 @@ function Projects() {
     dots: true,
     infinite: filtered.length > 2,
     speed: 500,
-    slidesToShow: Math.min(4, filtered.length),
+    slidesToShow: Math.min(3, filtered.length),
     slidesToScroll: 1,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
     responsive: [
-      { 
-        breakpoint: 1120, 
-        settings: { 
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: Math.min(3, filtered.length),
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 900,
+        settings: {
           slidesToShow: Math.min(2, filtered.length),
           slidesToScroll: 1,
-        } 
+        },
       },
-      { 
-        breakpoint: 768, 
-        settings: { 
+      {
+        breakpoint: 600,
+        settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-        } 
-      }
+        },
+      },
     ],
   };
 
   return (
     <section className="project-section" id="projects">
-      <motion.h2
-        className="projects-title"
-        initial={{ opacity: 0, y: -30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-      >
-        Projects
-      </motion.h2>
-      <motion.h2
-        className="projects-sub-title"
-        initial={{ opacity: 0, y: -30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-      >
-        Mini Projects
-      </motion.h2>
+      <div className="projects-container">
+        <motion.div
+          className="projects-header"
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <h2 className="projects-title">
+            My <span className="highlight">Projects</span>
+          </h2>
+          <p className="projects-subtitle">
+            Explore my work across frontend development, UI/UX design, and
+            graphic design
+          </p>
+        </motion.div>
 
-      <motion.div
-        className="tabs"
-        initial={{ opacity: 0, y: -30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        <div className="category-tabs">
-          {categoryTabs.map((tab) => (
-            <button
-              key={tab}
-              className={tab === activeCategory ? "active" : ""}
-              onClick={() => setActiveCategory(tab)}
-            >
-              {tab.charAt(0).toUpperCase() + tab.slice(1)}
-            </button>
-          ))}
-        </div>
-        <div className="sort-tabs">
-          {sortTabs.map((sort) => (
-            <button
-              key={sort}
-              className={sort === sortType ? "active" : ""}
-              onClick={() => setSortType(sort)}
-            >
-              {sort.charAt(0).toUpperCase() + sort.slice(1)}
-            </button>
-          ))}
-        </div>
-      </motion.div>
-
-      <motion.div
-        className="carousel-wrapper"
-        initial={{ opacity: 0, y: -30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-      >
-        {filtered.length === 0 ? (
-          <div className="no-project-message">
-            <p>No project available in this category.</p>
+        <motion.div
+          className="projects-filters"
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+        >
+          <div className="filter-group scale-filter">
+            <h3 className="filter-label">Project Scale</h3>
+            <div className="filter-buttons">
+              {scaleTabs.map((scale) => (
+                <button
+                  key={scale}
+                  className={`filter-btn ${
+                    activeScale === scale ? "active" : ""
+                  }`}
+                  onClick={() => setActiveScale(scale)}
+                >
+                  {scale === "major" && <FaStar className="star-icon" />}
+                  {scale.charAt(0).toUpperCase() + scale.slice(1)}
+                </button>
+              ))}
+            </div>
           </div>
-        ) : (
-          <Slider {...sliderSettings}>
-            {filtered.map((project) => (
-              <ProjectCard key={project.id} project={project} />
-            ))}
-          </Slider>
-        )}
-      </motion.div>
+
+          <div className="filter-group category-filter">
+            <h3 className="filter-label">Category</h3>
+            <div className="filter-buttons">
+              {categoryTabs.map((tab) => (
+                <button
+                  key={tab}
+                  className={`filter-btn ${
+                    tab === activeCategory ? "active" : ""
+                  }`}
+                  onClick={() => setActiveCategory(tab)}
+                >
+                  {tab.charAt(0).toUpperCase() + tab.slice(1)}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div className="filter-group sort-filter">
+            <h3 className="filter-label">Sort By</h3>
+            <div className="filter-buttons">
+              {sortTabs.map((sort) => (
+                <button
+                  key={sort}
+                  className={`filter-btn ${
+                    sort === sortType ? "active" : ""
+                  }`}
+                  onClick={() => setSortType(sort)}
+                >
+                  {sort.charAt(0).toUpperCase() + sort.slice(1)}
+                </button>
+              ))}
+            </div>
+          </div>
+        </motion.div>
+
+        <motion.div
+          className="carousel-wrapper"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
+          {filtered.length === 0 ? (
+            <div className="no-project-message">
+              <div className="empty-state">
+                <FaStar className="empty-icon" />
+                <h3>No {activeScale} projects yet</h3>
+                <p>
+                  {activeScale === "major"
+                    ? "Major projects are coming soon! Check out my mini projects in the meantime."
+                    : "Projects in this category are coming soon."}
+                </p>
+                {activeScale === "major" && (
+                  <button
+                    className="view-mini-btn"
+                    onClick={() => setActiveScale("mini")}
+                  >
+                    View Mini Projects
+                  </button>
+                )}
+              </div>
+            </div>
+          ) : (
+            <>
+              <div className="project-count">
+                <span className="count-badge">
+                  {filtered.length}{" "}
+                  {filtered.length === 1 ? "Project" : "Projects"}
+                </span>
+              </div>
+              <Slider {...sliderSettings}>
+                {filtered.map((project) => (
+                  <ProjectCard key={project.id} project={project} />
+                ))}
+              </Slider>
+            </>
+          )}
+        </motion.div>
+      </div>
     </section>
   );
 }
