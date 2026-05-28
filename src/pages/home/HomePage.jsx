@@ -9,17 +9,21 @@ import {
   FaFacebookF,
   FaDownload,
   FaEye,
-  FaArrowRight
+  FaArrowRight,
+  FaPencilAlt,
+  FaLaptopCode,
+  FaReact
 } from "react-icons/fa";
 import TopNavigationBar from "../../components/header/TopNavigationBar";
 import ScrollProgress from "./ScrollProgress";
 
-// Move roles array outside component to avoid ESLint dependency warning
+// Roles array is moved outside component to avoid ESLint dependency warning
 const ROLES = [
   "Frontend Developer",
   "UI/UX Designer",
-  "React Specialist",
-  "Creative Problem Solver"
+  "Graphic Designer",
+  "Video Editor",
+  "Tech Enthusiast"
 ];
 
 const SOCIAL_LINKS = [
@@ -65,14 +69,14 @@ function HomePage() {
   const [isDownloading, setIsDownloading] = useState(false);
   const [currentRole, setCurrentRole] = useState(0);
 
-  // Typing animation effect - now with no dependency warnings
+  // Typing animation effect for roles
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentRole((prev) => (prev + 1) % ROLES.length);
     }, 3000);
 
     return () => clearInterval(interval);
-  }, []); // Empty dependency array is now correct since ROLES is constant
+  }, []); // Empty dependency since ROLES is constant
 
   const handleDownload = async () => {
     setIsDownloading(true);
@@ -124,6 +128,7 @@ function HomePage() {
                 Available for opportunities
               </motion.div>
 
+              {/* spread the fadeInUp object animation props */}
               <motion.h1
                 className="hero-title"
                 {...fadeInUp}
@@ -148,9 +153,9 @@ function HomePage() {
                 {...fadeInUp}
                 transition={{ delay: 0.6 }}
               >
-                Crafting beautiful, user-centered web applications with modern 
-                technologies. Currently advancing my skills at{" "}
-                <strong>ALX Software Engineering Program</strong>, transitioning 
+                Crafting stunning, user-centered web applications with modern 
+                technologies. I am currently advancing my skills set through{" "}
+                <strong>Self Learning</strong>, transitioning 
                 from frontend development and UI/UX design to full-stack engineering.
               </motion.p>
 
@@ -281,15 +286,15 @@ function HomePage() {
 
               {/* Floating Elements */}
               <div className="floating-element element-1">
-                <span className="element-icon">💻</span>
+                <span className="element-icon"><FaLaptopCode /></span>
                 <span className="element-text">Frontend Dev</span>
               </div>
               <div className="floating-element element-2">
-                <span className="element-icon">🎨</span>
+                <span className="element-icon"><FaPencilAlt /></span>
                 <span className="element-text">UI/UX Design</span>
               </div>
               <div className="floating-element element-3">
-                <span className="element-icon">⚛️</span>
+                <span className="element-icon"><FaReact /></span>
                 <span className="element-text">React</span>
               </div>
             </motion.div>
