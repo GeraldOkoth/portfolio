@@ -12,7 +12,8 @@
   // - starts with #0a0520 at 0% (top-left side),
   // - blends to #1a0f3e at 50% (middle),
   // - ends with #0d0b28 at 100% (bottom-right side).
-  background: linear-gradient(135deg, #0a0520 0%, #1a0f3e 50%, #0d0b28 100%);
+  background: linear-gradient(135deg, var(--theme-background) 0%,
+    var(--theme-backgroundAlt) 50%, #0d0b28 100%);
   position: relative;
   overflow: hidden;
 
@@ -94,7 +95,7 @@
       font-size: 4rem;
       font-weight: 900;
       font-family: "Inter", "Poppins", sans-serif;
-      color: #ffffff;
+      color: var(--theme-text);
       line-height: 1.2;
       margin-bottom: 1rem;
       letter-spacing: -2px;
@@ -691,268 +692,18 @@
   }
 }
 
+// Include mixins from responsive.scss for different breakpoints
 // Responsive - Tablet
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .home-page {
-    padding: 6rem 2.5rem 4rem;
-
-    .hero-grid {
-      grid-template-columns: 1fr;
-      gap: 3rem;
-      text-align: center;
-    }
-
-    .hero-content {
-      .hero-badge {
-        margin: 0 auto 1.5rem;
-      }
-
-      .hero-title {
-        font-size: 3.5rem;
-      }
-
-      .hero-subtitle {
-        font-size: 1.8rem;
-      }
-
-      .hero-description,
-      .value-proposition,
-      .opportunities-section {
-        max-width: 600px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .value-list li {
-        justify-content: center;
-      }
-
-      .opportunities-tags {
-        justify-content: center;
-      }
-
-      .hero-actions {
-        justify-content: center;
-      }
-
-      .social-links {
-        .social-icons {
-          justify-content: center;
-        }
-      }
-    }
-
-    .hero-image-wrapper {
-      order: -1;
-
-      .image-container {
-        max-width: 400px;
-      }
-
-      .floating-element {
-        display: none;
-      }
-    }
-
-    .scroll-progress-container {
-      bottom: 1.5rem;
-      right: 1.5rem;
-    }
-  }
+@media screen and (min-width: v.$tablet) and (max-width: v.$desktop) {
+  @include r.homePageTablet;
 }
 
 // Responsive - Mobile
-@media screen and (max-width: 767px) {
-  .home-page {
-    min-height: auto;
-    padding: 5rem 1.5rem 3rem;
-
-    &::before,
-    &::after {
-      opacity: 0.3;
-    }
-
-    .hero-grid {
-      grid-template-columns: 1fr;
-      gap: 2.5rem;
-    }
-
-    .hero-content {
-      text-align: center;
-
-      .hero-badge {
-        margin: 0 auto 1.2rem;
-        font-size: 0.8rem;
-        padding: 0.5rem 1rem;
-      }
-
-      .hero-title {
-        font-size: 2.5rem;
-        letter-spacing: -1px;
-        margin-bottom: 1rem;
-      }
-
-      .hero-subtitle {
-        font-size: 1.4rem;
-        min-height: 50px;
-      }
-
-      .hero-description {
-        font-size: 1rem;
-        margin-bottom: 1.5rem;
-      }
-
-      .value-proposition {
-        margin-bottom: 1.5rem;
-
-        h3 {
-          font-size: 1.2rem;
-        }
-
-        .value-list {
-          gap: 0.6rem;
-
-          li {
-            font-size: 0.95rem;
-          }
-        }
-      }
-
-      .opportunities-section {
-        margin-bottom: 2rem;
-
-        .opportunities-tags {
-          justify-content: center;
-          gap: 0.6rem;
-
-          .opp-tag {
-            font-size: 0.85rem;
-            padding: 0.45rem 1rem;
-          }
-        }
-      }
-
-      .hero-actions {
-        flex-direction: column;
-        gap: 0.8rem;
-        margin-bottom: 2rem;
-
-        .btn {
-          width: 100%;
-          justify-content: center;
-          padding: 0.9rem 1.5rem;
-        }
-
-        .resume-buttons {
-          width: 100%;
-          flex-direction: column;
-          gap: 0.8rem;
-
-          .btn {
-            width: 100%;
-          }
-        }
-      }
-
-      .social-links {
-        .social-icons {
-          justify-content: center;
-          gap: 0.8rem;
-
-          .social-icon {
-            width: 42px;
-            height: 42px;
-            font-size: 1.1rem;
-          }
-        }
-      }
-    }
-
-    .hero-image-wrapper {
-      order: -1;
-
-      .image-container {
-        max-width: 300px;
-
-        .image-border {
-          animation: none;
-        }
-      }
-
-      .floating-element {
-        display: none;
-      }
-    }
-
-    .scroll-indicator {
-      bottom: 1rem;
-      font-size: 0.8rem;
-    }
-
-    .scroll-progress-container {
-      bottom: 1rem;
-      right: 1rem;
-
-      .progress-ring {
-        width: 60px;
-        height: 60px;
-
-        svg {
-          width: 60px;
-          height: 60px;
-        }
-
-        .progress-text {
-          .progress-number {
-            font-size: 1rem;
-          }
-
-          .progress-percent {
-            font-size: 0.65rem;
-          }
-        }
-      }
-
-      .progress-tooltip {
-        display: none;
-      }
-    }
-  }
-}
-
-// Very Small Mobile, less than 480px
-@media screen and (max-width: 480px) {
-  .home-page {
-    padding: 4.5rem 1rem 2.5rem;
-
-    .hero-content {
-      .hero-title {
-        font-size: 2rem;
-      }
-
-      .hero-subtitle {
-        font-size: 1.2rem;
-      }
-
-      .hero-description {
-        font-size: 0.95rem;
-      }
-    }
-
-    .hero-image-wrapper {
-      .image-container {
-        max-width: 250px;
-      }
-    }
-  }
-}
-
-// Include existing responsive mixins
-@media screen and (max-width: v.$mobile) {
-  @include r.navbarPhone;
+@media screen and (max-width: v.$tablet) {
   @include r.homePagePhone;
 }
 
-@media screen and (min-width: v.$mobile) and (max-width: v.$tablet) {
-  @include r.homePageTablet;
+// Very Small Mobile, less than 480px
+@media screen and (max-width: v.$mobile) {
+  @include r.homePageSmallScreen;
 }

@@ -7,23 +7,47 @@ const THEMES = {
   dark: {
     name: "Dark",
     icon: <FaMoon />,
-    primary: "#ff7b00",
-    background: "#0a0520",
-    text: "#ffffff"
+    colors: {
+      primary: "#ff7b00",
+      secondary: "#ff9500",
+      background: "#0a0520",
+      backgroundAlt: "#1a0f3e",
+      backgroundCard: "#0f0a2e",
+      text: "#ffffff",
+      textMuted: "rgba(255, 255, 255, 0.7)",
+      border: "rgba(255, 255, 255, 0.1)",
+      success: "#43e97b"
+    }
   },
   light: {
     name: "Light",
     icon: <FaSun />,
-    primary: "#ff7b00",
-    background: "#ffffff",
-    text: "#0a0520"
+    colors: {
+      primary: "#ff7b00",
+      secondary: "#ff6b00",
+      background: "#ffffff",
+      backgroundAlt: "#f5f5f5",
+      backgroundCard: "#fafafa",
+      text: "#0a0520",
+      textMuted: "rgba(10, 5, 32, 0.7)",
+      border: "rgba(10, 5, 32, 0.1)",
+      success: "#22c55e"
+    }
   },
   ocean: {
     name: "Ocean",
     icon: <FaPalette />,
-    primary: "#00bfff",
-    background: "#0a1929",
-    text: "#ffffff"
+    colors: {
+      primary: "#00bfff",
+      secondary: "#1e90ff",
+      background: "#0a1929",
+      backgroundAlt: "#1a2332",
+      backgroundCard: "#0f1b2a",
+      text: "#ffffff",
+      textMuted: "rgba(255, 255, 255, 0.7)",
+      border: "rgba(255, 255, 255, 0.1)",
+      success: "#10b981"
+    }
   }
 };
 
@@ -53,29 +77,33 @@ export default function TopNavigationBar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Load saved theme
+  // Load saved theme on mount
   useEffect(() => {
     const savedTheme = localStorage.getItem("portfolio-theme") || "dark";
     setCurrentTheme(savedTheme);
     applyTheme(savedTheme);
   }, []);
 
-  const applyTheme = (theme) => {
+  const applyTheme = (themeName) => {
+    const theme = THEMES[themeName];
     const root = document.documentElement;
-    const themeConfig = THEMES[theme];
     
-    root.style.setProperty("--theme-primary", themeConfig.primary);
-    root.style.setProperty("--theme-background", themeConfig.background);
-    root.style.setProperty("--theme-text", themeConfig.text);
+    // Apply all theme colors as CSS variables
+    Object.entries(theme.colors).forEach(([key, value]) => {
+      root.style.setProperty(`--theme-${key}`, value);
+    });
     
-    // Add theme class to body
-    document.body.className = `theme-${theme}`;
+    // Add theme class to body for additional styling
+    document.body.className = `theme-${themeName}`;
+    
+    // Also set data attribute for easier CSS targeting
+    document.body.setAttribute('data-theme', themeName);
   };
 
-  const handleThemeChange = (theme) => {
-    setCurrentTheme(theme);
-    applyTheme(theme);
-    localStorage.setItem("portfolio-theme", theme);
+  const handleThemeChange = (themeName) => {
+    setCurrentTheme(themeName);
+    applyTheme(themeName);
+    localStorage.setItem("portfolio-theme", themeName);
     setShowThemeMenu(false);
   };
 

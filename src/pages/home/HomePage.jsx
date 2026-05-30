@@ -10,7 +10,7 @@ import {
   FaDownload,
   FaEye,
   FaArrowRight,
-  FaPencilAlt,
+  FaPalette,
   FaLaptopCode,
   FaReact
 } from "react-icons/fa";
@@ -290,7 +290,7 @@ function HomePage() {
                 <span className="element-text">Frontend Dev</span>
               </div>
               <div className="floating-element element-2">
-                <span className="element-icon"><FaPencilAlt /></span>
+                <span className="element-icon"><FaPalette /></span>
                 <span className="element-text">UI/UX Design</span>
               </div>
               <div className="floating-element element-3">
