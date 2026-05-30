@@ -1,7 +1,6 @@
 // _theme.scss - Global theme styles
-// Import this in your main SCSS file
 
-// CSS Variables will be set by JavaScript, but here are the defaults
+// defaults css variables
 :root {
   --theme-primary: #ff7b00;
   --theme-secondary: #ff9500;
@@ -17,8 +16,8 @@
 
 // Apply theme to entire website
 body {
-  background: var(--theme-background);
-  color: var(--theme-text);
+  background: var(--theme-background) !important;
+  color: var(--theme-text) !important;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
