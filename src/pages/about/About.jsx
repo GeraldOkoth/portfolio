@@ -96,9 +96,9 @@ const About = () => {
 
             <div className={`about-text ${isExpanded ? 'expanded' : 'collapsed'}`}>
               <p className="intro">
-                I'm a passionate <strong>Frontend Developer</strong> and <strong>UI/UX Designer</strong> currently 
-                enrolled in the <strong>ALX Software Engineering Program</strong>, where I'm building expertise 
-                in creating responsive, accessible, and visually compelling web applications.
+                I'm a passionate <strong>Frontend Developer</strong> and <strong>UI/UX Designer</strong>, a proud alumnus of 
+                <strong>{" "}ALX Software Engineering Program</strong>, where I built expertise 
+                in creating responsive, accessible, and visually compelling web applications. Currently advancing my skills and expertise in Frontend Development through self learning and hands-on projects, I am eager to contribute to innovative teams and create impactful digital products.
               </p>
 
               <p className="para-1">

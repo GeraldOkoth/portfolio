@@ -344,38 +344,211 @@
   }
 }
 
-// about section on phone
-@mixin aboutPhone() {
+// about section on small screen
+@mixin aboutSmallScreen() {
   .about-section {
-    padding: v.$sectionPaddingPhone;
+    padding: 3.5rem 1rem;
 
     .about-title {
-      font-size: 1.2rem;
-      font-weight: 600;
+      font-size: 2rem;
     }
 
-    .container {
-      flex-direction: column;
-      gap: 0;
+    .quick-stats {
+      grid-template-columns: 1fr;
 
-      .about-img img {
-        height: 200px;
-        object: {
-          fit: cover;
-          position: 100% 25%;
+      .stat-item {
+        .stat-number {
+          font-size: 1.8rem;
         }
       }
-      .about-info p {
-        line-height: 1.3rem;
+    }
+
+    .about-info {
+      .info-header h3 {
+        font-size: 1.4rem;
+      }
+
+      .about-text p {
+        font-size: 0.9rem;
+      }
+
+      .skills-highlight {
+        .skills-tags {
+          .skill-tag {
+            font-size: 0.8rem;
+            padding: 0.45rem 0.9rem;
+          }
+        }
       }
     }
   }
 }
 
+// about section on phone
+@mixin aboutPhone() {
+  .about-section {
+    padding: 4rem 1.5rem;
+
+    &::before,
+    &::after {
+      opacity: 0.3;
+    }
+
+    .about-title {
+      font-size: 2.2rem;
+      margin-bottom: 2.5rem;
+      letter-spacing: -1px;
+    }
+
+    .about-content {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+
+    .about-image-wrapper {
+      position: relative;
+      top: 0;
+    }
+
+    .image-container {
+      border-radius: 16px;
+
+      // Adjust mission overlay for mobile
+      .mission-overlay {
+        padding: 1.5rem;
+
+        .mission-content {
+          h3 {
+            font-size: 1.2rem;
+          }
+
+          p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+          }
+        }
+      }
+    }
+
+    .quick-stats {
+      margin-top: 1.5rem;
+      gap: 0.8rem;
+
+      .stat-item {
+        padding: 1rem;
+
+        .stat-number {
+          font-size: 1.6rem;
+        }
+
+        .stat-label {
+          font-size: 0.75rem;
+        }
+      }
+    }
+
+    .about-info {
+      .info-header {
+        margin-bottom: 1.5rem;
+
+        h3 {
+          font-size: 1.6rem;
+        }
+
+        .tagline {
+          font-size: 1rem;
+        }
+      }
+
+      .about-text {
+        p {
+          font-size: 0.95rem;
+          line-height: 1.8;
+          margin-bottom: 1.2rem;
+        }
+
+        .intro {
+          font-size: 1.05rem;
+        }
+      }
+
+      // Show read more button on mobile
+      .read-more-btn {
+        display: flex;
+      }
+
+      .skills-highlight {
+        padding: 1.5rem;
+        margin-top: 2rem;
+
+        h4 {
+          font-size: 1.2rem;
+          margin-bottom: 1rem;
+        }
+
+        .skills-tags {
+          gap: 0.6rem;
+
+          .skill-tag {
+            font-size: 0.85rem;
+            padding: 0.5rem 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+// about section on tablet
 @mixin aboutTablet() {
-  .about-info {
-    display: flex;
-    flex-direction: column;
+  .about-section {
+    padding: 5rem 3rem;
+
+    .about-title {
+      font-size: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .about-content {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .about-image-wrapper {
+      position: relative;
+      top: 0;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .about-info {
+      .info-header h3 {
+        font-size: 1.8rem;
+      }
+
+      .about-text p {
+        font-size: 1rem;
+      }
+
+      // Show read more button on tablet
+      .read-more-btn {
+        display: flex;
+      }
+
+      // Limit collapsed height on tablet
+      .about-text.collapsed {
+        max-height: none;
+
+        .expandable-content {
+          display: none;
+        }
+      }
+    }
+
+    .quick-stats {
+      max-width: 500px;
+      margin: 2rem auto 0;
+    }
   }
 }
 
