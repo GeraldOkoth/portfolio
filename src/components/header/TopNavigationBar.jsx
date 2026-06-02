@@ -25,15 +25,30 @@ const THEMES = {
     colors: {
       primary: "#ff7b00",
       secondary: "#ff6b00",
-      background: "#ffffff",
+      background: "#f8f9fa",
       backgroundAlt: "#f5f5f5",
       backgroundCard: "#fafafa",
-      text: "#0a0520",
+      text: "#1a1a1a",
       textMuted: "rgba(10, 5, 32, 0.7)",
       border: "rgba(10, 5, 32, 0.1)",
       success: "#22c55e"
     }
   },
+  sunset: {
+  name: "Sunset",
+  icon: <FaPalette />,
+  colors: {
+    primary: "#ff6b6b",
+    secondary: "#ee5a6f",
+    background: "#2d1b69",
+    backgroundAlt: "#3d2479",
+    backgroundCard: "#332066",
+    text: "#ffffff",
+    textMuted: "rgba(255, 255, 255, 0.7)",
+    border: "rgba(255, 255, 255, 0.1)",
+    success: "#51cf66"
+  }
+},
   ocean: {
     name: "Ocean",
     icon: <FaPalette />,

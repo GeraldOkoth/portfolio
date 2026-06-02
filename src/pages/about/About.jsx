@@ -161,6 +161,7 @@ const About = () => {
               <div className="skills-tags">
                 <span className="skill-tag">React Development</span>
                 <span className="skill-tag">UI/UX Design</span>
+                <span className="skill-tag">Graphic Design</span>
                 <span className="skill-tag">Responsive Design</span>
                 <span className="skill-tag">JavaScript/TypeScript</span>
                 <span className="skill-tag">Figma Prototyping</span>

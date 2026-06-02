@@ -1,9 +1,5 @@
 // variable declaration
-$primaryColor: #5555ff;
 $orange: #ff6b00;
-$white: #fff;
-$bodyTxtColor: var(--fav-color-text);
-$bodyBgColor: #071629;
 $fontStack: 'Poppins', sans-serif;
 $sectionPaddingDesktop: 3rem;
 $sectionPaddingTablet: 1rem 2.5rem;
@@ -16,7 +12,6 @@ $fontWeights: (
     "medium": 500,
     "bold": 800
 );
-$linearGradient: linear-gradient(#000000, rgba(0,0,0,.5));
 $mobile: 480px;
 $tablet: 768px;
 $desktop: 1024px;

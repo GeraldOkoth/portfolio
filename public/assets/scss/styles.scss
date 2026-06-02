@@ -1,17 +1,10 @@
 //Import/use partials
 //@use - alternative to @import and must be written before any other rules
 @use "./theme";
+@use "./resets";
 @use "sass:math"; //for "math" operations e.g "math.div(300px, 960px) * 100%;" converts 300px into percentage based on a total width of 960px.
 @use "./variables" as v; //to use variables from variables.scss, we need to add "as v" to create an alias for the file. Then we can access the variables using "v.variableName"
-@use "./variables";
-@use "./resets";
-@use "./buttons"; //for reusable snippets
-@use "./icons";
-@use "./sectionHeading";
 @use "./responsive";
-@use "./functions";
-@use "./display";
-@use "./keyframesAnime";
 @use "./home-page";
 // @use "./image-slideshow";
 // @use "./testimonials";

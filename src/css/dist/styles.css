@@ -45,11 +45,10 @@ p {
 .project-card,
 .skill-card,
 .service-card,
-.about-image-wrapper,
 .contact-form-section,
 .contact-info .info-card {
-  background: var(--theme-backgroundCard) !important;
-  border-color: var(--theme-border) !important;
+  background: var(--theme-backgroundCard);
+  border-color: var(--theme-border);
   transition: all 0.3s ease;
 }
 
@@ -57,7 +56,7 @@ p {
 .about-text p,
 .project-description,
 .contact-description {
-  color: var(--theme-textMuted) !important;
+  color: var(--theme-textMuted);
 }
 
 .btn-primary,
@@ -73,37 +72,37 @@ a,
 .about-title .highlight,
 .skills-title .highlight,
 .contact-title .highlight {
-  color: var(--theme-primary) !important;
+  color: var(--theme-primary);
 }
 
 .info-card:hover,
 .skill-card:hover,
 .project-card:hover {
-  border-color: var(--theme-primary) !important;
+  border-color: var(--theme-primary);
 }
 
 .progress-fill,
 .progress-ring-progress {
-  stroke: var(--theme-primary) !important;
+  stroke: var(--theme-primary);
 }
 
 .hero-badge,
 .tech-badge,
 .skill-tag,
 .opp-tag {
-  border-color: var(--theme-border) !important;
+  border-color: var(--theme-border);
 }
 .hero-badge:hover,
 .tech-badge:hover,
 .skill-tag:hover,
 .opp-tag:hover {
-  border-color: var(--theme-primary) !important;
+  border-color: var(--theme-primary);
 }
 
 .list-icon,
 .info-icon,
 .skill-icon {
-  color: var(--theme-primary) !important;
+  color: var(--theme-primary);
 }
 
 [data-theme=light] .home-page::before, [data-theme=light] .home-page::after,
@@ -118,34 +117,34 @@ a,
   opacity: 0.3;
 }
 [data-theme=light] .navbar {
-  background: rgba(255, 255, 255, 0.9) !important;
-  border-bottom-color: rgba(10, 5, 32, 0.1) !important;
+  background: rgba(255, 255, 255, 0.9);
+  border-bottom-color: rgba(10, 5, 32, 0.1);
 }
 [data-theme=light] .navbar.scrolled {
-  background: rgba(255, 255, 255, 0.95) !important;
+  background: rgba(255, 255, 255, 0.95);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 [data-theme=light] .project-card,
 [data-theme=light] .skill-card,
 [data-theme=light] .info-card,
 [data-theme=light] .contact-form-section {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 [data-theme=light] .hero-badge {
-  background: rgba(67, 233, 123, 0.2) !important;
-  color: #22c55e !important;
+  background: rgba(67, 233, 123, 0.2);
+  color: #22c55e;
 }
 
 [data-theme=ocean] .hero-badge {
-  background: rgba(16, 185, 129, 0.2) !important;
-  border-color: rgba(16, 185, 129, 0.3) !important;
-  color: #10b981 !important;
+  background: rgba(16, 185, 129, 0.2);
+  border-color: rgba(16, 185, 129, 0.3);
+  color: #10b981;
 }
 [data-theme=ocean] .tech-badge:nth-child(even),
 [data-theme=ocean] .skill-tag:nth-child(even) {
-  background: rgba(0, 191, 255, 0.15) !important;
-  color: #00bfff !important;
-  border-color: rgba(0, 191, 255, 0.3) !important;
+  background: rgba(0, 191, 255, 0.15);
+  color: #00bfff;
+  border-color: rgba(0, 191, 255, 0.3);
 }
 
 * {
@@ -155,7 +154,7 @@ a,
 }
 
 *:not(.animate-on-theme-change) {
-  transition-property: background-color, border-color, color, fill, stroke !important;
+  transition-property: background-color, border-color, color, fill, stroke;
 }
 
 * {
@@ -168,21 +167,9 @@ a,
   box-sizing: border-box;
 }
 
-:root {
-  --fav-color-text: hsl(215 20.2% 65.1%);
-  --fav-color-body: hsl(222.2 84% 4.9%);
-  font-size: 16px;
-}
-
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
-}
-
-body {
-  color: var(--fav-color-text);
-  background-color: #071629;
-  width: 100%;
 }
 
 /* mobile devices*/
@@ -242,7 +229,7 @@ body {
   justify-content: space-around;
   align-items: center;
   padding: 1rem 2.5rem;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 .navbar .nav-logo a {
   display: flex;
@@ -1380,7 +1367,7 @@ body {
 .about-section .image-container .mission-overlay .mission-content p {
   font-size: 1rem;
   line-height: 1.8;
-  color: var(--theme-text);
+  color: #fff;
   font-style: italic;
 }
 .about-section .image-container:hover .mission-overlay {
@@ -1406,7 +1393,7 @@ body {
   backdrop-filter: blur(10px);
 }
 .about-section .quick-stats .stat-item:hover {
-  background: rgba(255, 255, 255, 0.06);
+  background: var(--theme-backgroundCard);
   border-color: rgba(255, 123, 0, 0.3);
   transform: translateY(-5px);
   box-shadow: 0 10px 30px rgba(255, 123, 0, 0.15);
@@ -2074,10 +2061,6 @@ body {
 @media screen and (max-width: 480px) {
   .skills-section {
     padding: 1rem 1.25rem;
-  }
-  .skills-section h2 {
-    font-size: 1.4rem;
-    font-weight: bolder;
   }
   .skills-section .skills-tabs {
     align-items: center;
@@ -3798,14 +3781,12 @@ body {
   line-height: 1.7;
 }
 .contact .contact-form .submit-btn {
-  color: #071629;
   cursor: pointer;
   transition: all 0.3s ease;
   border-radius: 7px;
   padding: 0.5rem 1rem;
   border: none;
   font-weight: 600;
-  background-color: #5555ff;
   background: linear-gradient(135deg, #00bfff 0%, #1e90ff 100%);
   color: #ffffff;
   font-size: 1.1rem;
@@ -4005,7 +3986,6 @@ body {
 }
 footer {
   padding: 3rem;
-  background-color: #071629;
 }
 footer .footer-content {
   display: flex;
@@ -4014,7 +3994,6 @@ footer .footer-content {
 }
 footer .footer-content .social-media-icons a {
   margin-left: 10px;
-  color: #5555ff;
   font-size: 1.5em;
   text-decoration: none;
   transition: all 0.3s ease;

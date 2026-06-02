@@ -51,11 +51,10 @@ p {
 .project-card,
 .skill-card,
 .service-card,
-.about-image-wrapper,
 .contact-form-section,
 .contact-info .info-card {
-  background: var(--theme-backgroundCard) !important;
-  border-color: var(--theme-border) !important;
+  background: var(--theme-backgroundCard);
+  border-color: var(--theme-border);
   transition: all 0.3s ease;
 }
 
@@ -64,7 +63,7 @@ p {
 .about-text p,
 .project-description,
 .contact-description {
-  color: var(--theme-textMuted) !important;
+  color: var(--theme-textMuted);
 }
 
 // Buttons and interactive elements
@@ -86,7 +85,7 @@ a,
 .about-title .highlight,
 .skills-title .highlight,
 .contact-title .highlight {
-  color: var(--theme-primary) !important;
+  color: var(--theme-primary);
 }
 
 // Borders
@@ -94,14 +93,14 @@ a,
 .skill-card,
 .project-card {
   &:hover {
-    border-color: var(--theme-primary) !important;
+    border-color: var(--theme-primary);
   }
 }
 
 // Progress bars
 .progress-fill,
 .progress-ring-progress {
-  stroke: var(--theme-primary) !important;
+  stroke: var(--theme-primary);
 }
 
 // Badges and tags
@@ -109,10 +108,10 @@ a,
 .tech-badge,
 .skill-tag,
 .opp-tag {
-  border-color: var(--theme-border) !important;
+  border-color: var(--theme-border);
   
   &:hover {
-    border-color: var(--theme-primary) !important;
+    border-color: var(--theme-primary);
   }
 }
 
@@ -120,7 +119,7 @@ a,
 .list-icon,
 .info-icon,
 .skill-icon {
-  color: var(--theme-primary) !important;
+  color: var(--theme-primary);
 }
 
 // Specific theme overrides
@@ -138,11 +137,11 @@ a,
   }
 
   .navbar {
-    background: rgba(255, 255, 255, 0.9) !important;
-    border-bottom-color: rgba(10, 5, 32, 0.1) !important;
+    background: rgba(255, 255, 255, 0.9);
+    border-bottom-color: rgba(10, 5, 32, 0.1);
 
     &.scrolled {
-      background: rgba(255, 255, 255, 0.95) !important;
+      background: rgba(255, 255, 255, 0.95);
       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     }
   }
@@ -151,29 +150,29 @@ a,
   .skill-card,
   .info-card,
   .contact-form-section {
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   }
 
   .hero-badge {
-    background: rgba(67, 233, 123, 0.2) !important;
-    color: #22c55e !important;
+    background: rgba(67, 233, 123, 0.2);
+    color: #22c55e;
   }
 }
 
 [data-theme="ocean"] {
   // Ocean theme specific adjustments
   .hero-badge {
-    background: rgba(16, 185, 129, 0.2) !important;
-    border-color: rgba(16, 185, 129, 0.3) !important;
-    color: #10b981 !important;
+    background: rgba(16, 185, 129, 0.2);
+    border-color: rgba(16, 185, 129, 0.3);
+    color: #10b981;
   }
 
   .tech-badge,
   .skill-tag {
     &:nth-child(even) {
-      background: rgba(0, 191, 255, 0.15) !important;
-      color: #00bfff !important;
-      border-color: rgba(0, 191, 255, 0.3) !important;
+      background: rgba(0, 191, 255, 0.15);
+      color: #00bfff;
+      border-color: rgba(0, 191, 255, 0.3);
     }
   }
 }
@@ -187,5 +186,5 @@ a,
 
 // Exclude animations and transforms from theme transitions
 *:not(.animate-on-theme-change) {
-  transition-property: background-color, border-color, color, fill, stroke !important;
+  transition-property: background-color, border-color, color, fill, stroke;
 }

@@ -2,8 +2,6 @@
 
 // nabar on phone
 @use "./variables" as v;
-@use "./sectionHeading" as s;
-@use "./display" as d;
 
 @mixin navbarPhone() {
   .top-navigation-links {
@@ -556,9 +554,7 @@
   .skills-section {
     padding: v.$sectionPaddingPhone;
   
-    h2 {
-      @include s.sectionHeadingMobile;  
-    }
+   
     .skills-tabs {
       align-items: center;
     }
