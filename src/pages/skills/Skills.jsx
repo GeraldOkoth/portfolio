@@ -190,13 +190,7 @@ const Skills = () => {
 
                   <div className="skill-footer">
                     <span className="proficiency-label">
-                      {skill.level >= 90
-                        ? "Expert"
-                        : skill.level >= 75
-                        ? "Advanced"
-                        : skill.level >= 60
-                        ? "Intermediate"
-                        : "Beginner"}
+                      {skill.level >= 90 ? "Expert" : skill.level >= 75 ? "Advanced" : skill.level >= 60 ? "Intermediate" : "Beginner"}
                     </span>
                   </div>
                 </div>

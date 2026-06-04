@@ -3,84 +3,188 @@
 // nabar on phone
 @use "./variables" as v;
 
+// @mixin navbarPhone() {
+//   .top-navigation-links {
+//     .logo {
+//       z-index: -1;
+//       a {
+//         font-size: 1rem;
+//       }
+//     }
+//     .menu-links {
+//       display: none;
+
+//       &.show {
+//         display: block;
+//       }
+
+//       ul {
+//         width: 65%;
+//         background-color: #040233;
+//         height: 100vh;
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//         display: block;
+//         padding-top: 3.5rem;
+//         overflow-x: hidden;
+//         transition: all 1.5s ease;
+
+//         a {
+//           font-size: 1rem;
+//           color: v.$bodyTxtColor;
+//           display: block;
+//           padding-bottom: 1rem;
+//           transition: color 0.3s;
+
+//           &:hover {
+//             color: #818181;
+//           }
+//         }
+//       }
+//     }
+
+//     .hamburger-btn {
+//       cursor: pointer;
+//       padding: 0.5rem;
+//       border-radius: 5px;
+//       background-color: v.$orange;
+//       @include d.flexbox(absolute, center, space-around);
+//       right: 1rem;
+//       display: flex;
+//       flex-direction: column;
+//       width: 30px;
+//       height: 25px;
+//       transition: background-color 0.3s;
+
+//       &:hover {
+//         background-color: transparent;
+//         border: 1px solid v.$orange;
+//       }
+
+//       .bar {
+//         width: 100%;
+//         height: 2px;
+//         background-color: #e5e5e5;
+//         transition: transform 0.4s, opacity 0.4s;
+//       }
+
+//       &.change .bar1 {
+//         transform: translate(-3px, -1px) rotate(-45deg);
+//       }
+
+//       &.change .bar2 {
+//         opacity: 1;
+//         width: 15px;
+//         transform: translateX(2px);
+//       }
+
+//       &.change .bar3 {
+//         transform: translate(-3px, 1px) rotate(45deg);
+//       }
+//     }
+//   }
+// }
+
+// homepage on phone
 @mixin navbarPhone() {
-  .top-navigation-links {
-    .logo {
-      z-index: -1;
+  .navbar {
+    .navbar-container {
+      padding: 0.8rem 1rem;
+    }
+
+    .nav-logo {
       a {
+        img {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+
+    .nav-actions {
+      gap: 1rem;
+    }
+
+    .theme-toggle-wrapper {
+      .theme-toggle-btn {
+        width: 38px;
+        height: 38px;
         font-size: 1rem;
       }
     }
-    .menu-links {
-      display: none;
+
+    .nav-links {
+      width: 260px;
+      padding: 4.5rem 1.5rem 2rem;
+
+      li {
+        .nav-link {
+          padding: 0.9rem 1.2rem;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+// navbar on tablet
+@mixin navbarTablet() {
+  .navbar {
+    .navbar-container {
+      padding: 1rem 1.5rem;
+    }
+
+    .nav-toggle {
+      display: flex;
+    }
+
+    .nav-links {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 280px;
+      height: 100vh;
+      background: linear-gradient(135deg, #0a0520 0%, #1a0f3e 100%);
+      flex-direction: column;
+      padding: 5rem 2rem 2rem;
+      gap: 0;
+      transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: -10px 0 50px rgba(0, 0, 0, 0.5);
+      z-index: 999;
+      overflow-y: auto;
 
       &.show {
-        display: block;
+        right: 0;
       }
 
-      ul {
-        width: 65%;
-        background-color: #040233;
-        height: 100vh;
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: block;
-        padding-top: 3.5rem;
-        overflow-x: hidden;
-        transition: all 1.5s ease;
+      li {
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 
-        a {
-          font-size: 1rem;
-          color: v.$bodyTxtColor;
-          display: block;
-          padding-bottom: 1rem;
-          transition: color 0.3s;
+        .nav-link {
+          width: 100%;
+          padding: 1rem 1.5rem;
+          font-size: 1.05rem;
+          border-radius: 0;
 
-          &:hover {
-            color: #818181;
+          &::after {
+            display: none;
+          }
+
+          &.active {
+            background: rgba(255, 123, 0, 0.15);
+            border-left: 3px solid v.$orange;
           }
         }
       }
     }
 
-    .hamburger-btn {
-      cursor: pointer;
-      padding: 0.5rem;
-      border-radius: 5px;
-      background-color: v.$orange;
-      @include d.flexbox(absolute, center, space-around);
-      right: 1rem;
-      display: flex;
-      flex-direction: column;
-      width: 30px;
-      height: 25px;
-      transition: background-color 0.3s;
-
-      &:hover {
-        background-color: transparent;
-        border: 1px solid v.$orange;
-      }
-
-      .bar {
-        width: 100%;
-        height: 2px;
-        background-color: #e5e5e5;
-        transition: transform 0.4s, opacity 0.4s;
-      }
-
-      &.change .bar1 {
-        transform: translate(-3px, -1px) rotate(-45deg);
-      }
-
-      &.change .bar2 {
-        opacity: 1;
-        width: 15px;
-        transform: translateX(2px);
-      }
-
-      &.change .bar3 {
-        transform: translate(-3px, 1px) rotate(45deg);
+    .theme-toggle-wrapper {
+      .theme-menu {
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%);
       }
     }
   }
@@ -550,71 +654,165 @@
   }
 }
 
-@mixin skillsPhone() {
+// skills section on small screen
+@mixin skillsSmallScreen() {
   .skills-section {
-    padding: v.$sectionPaddingPhone;
-  
-   
+    padding: 3.5rem 1rem;
+
+    .skills-header {
+      .skills-title {
+        font-size: 2rem;
+      }
+
+      .skills-subtitle {
+        font-size: 0.9rem;
+      }
+    }
+
     .skills-tabs {
-      align-items: center;
+      .tab-btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+      }
     }
-    .tab-btn {
-      // width: 100%;
-      text-align: center;
-      padding: 0.3rem 1.3rem;
-    }
-    .skills-container {
-      gap: .5rem;
-    }
+
     .skill-card {
-      flex-basis: 46%;
+      .skill-card-inner {
+        padding: 1.5rem 1.2rem;
+      }
+
+      .skill-icon {
+        font-size: 2.5rem;
+      }
+
+      .skill-level-badge {
+        padding: 0.3rem 0.7rem;
+        font-size: 0.85rem;
+      }
+
+      .skill-name {
+        font-size: 1.15rem;
+      }
     }
   }
 }
-// @mixin slideShowPhone() {
-//   .gallery {
-//     padding: 1.3rem;
 
-//     .gallery-header {
-//       h3 {
-//         font-size: 1rem;
-//       }
-//     }
-//     #image-gal-hr {
-//       height: 0.3em;
-//     }
-//     .slideshow-container {
-//       .slide {
-//         img {
-//           height: 200px;
-//         }
-//         .number {
-//           padding: 4px 8px;
-//           font-size: 0.7rem;
-//         }
-//       }
-//       .prev,
-//       .next {
-//         // font-size: 2px;
-//         padding: 8px;
-//       }
+// skills section on phone
+@mixin skillsMobile() {
+  .skills-section {
+    padding: 4rem 1.5rem;
 
-//       .caption {
-//         font-size: 0.8em;
-//       }
-//       .dots {
-//         .dot {
-//           width: 10px;
-//           height: 10px;
-//           margin: 4px 1px;
-//         }
-//       }
-//     }
-//   }
-// }
+    &::before,
+    &::after {
+      opacity: 0.4;
+    }
 
-// @mixin slideShowTablet() {
-// }
+    .skills-header {
+      margin-bottom: 2.5rem;
+
+      .skills-title {
+        font-size: 2.2rem;
+        letter-spacing: -1px;
+      }
+
+      .skills-subtitle {
+        font-size: 0.95rem;
+        padding: 0 1rem;
+      }
+    }
+
+    .skills-tabs {
+      gap: 0.8rem;
+      margin-bottom: 2.5rem;
+
+      .tab-btn {
+        padding: 0.7rem 1.3rem;
+        font-size: 0.9rem;
+        gap: 0.5rem;
+
+        .tab-count {
+          padding: 0.15rem 0.5rem;
+          font-size: 0.8rem;
+          min-width: 22px;
+        }
+      }
+    }
+
+    .skills-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      padding: 0 0.5rem;
+    }
+
+    .skill-card {
+      &:hover {
+        transform: translateY(-5px);
+      }
+
+      .skill-card-inner {
+        padding: 1.8rem 1.5rem;
+      }
+
+      .skill-header {
+        margin-bottom: 1.2rem;
+      }
+
+      .skill-icon {
+        font-size: 3rem;
+      }
+
+      .skill-level-badge {
+        padding: 0.35rem 0.8rem;
+        font-size: 0.9rem;
+      }
+
+      .skill-name {
+        font-size: 1.25rem;
+        margin-bottom: 1.2rem;
+      }
+
+      .progress-bar {
+        height: 8px;
+      }
+
+      .progress-container {
+        margin-bottom: 1rem;
+      }
+
+      .proficiency-label {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
+
+// skills section on tablet
+@mixin skillsTablet() {
+  .skills-section {
+    .skills-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+// skills section on desktops
+@mixin skillsDesktop() {
+  .skills-section {
+    .skills-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+// skills section on large desktops
+@mixin skillsLargeDesktop() {
+  .skills-section {
+    .skills-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+
 @mixin projectPhone() {
   .project-section {
     padding: v.$sectionPaddingPhone;
