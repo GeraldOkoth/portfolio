@@ -1702,7 +1702,7 @@ html {
 }
 .skills-section {
   padding: 3rem;
-  background: linear-gradient(135deg, var(--theme-background) 0%, var(--theme-backgroundAlt) 25%, var(--theme-background) 100%);
+  background: linear-gradient(135deg, var(--theme-background) 0%, var(--theme-backgroundAlt) 50%, var(--theme-background) 100%);
   position: relative;
   overflow: hidden;
   box-shadow: inset 0 0 60px rgba(24, 15, 6, 0.2);
@@ -1714,7 +1714,7 @@ html {
   left: -40%;
   width: 700px;
   height: 700px;
-  background: radial-gradient(circle, rgba(24, 15, 6, 0.5) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(24, 15, 6, 0.5) 0%, transparent 25%);
   border-radius: 50%;
   pointer-events: none;
 }
@@ -1859,8 +1859,8 @@ html {
 }
 .skills-section .skill-card:hover {
   background: var(--theme-backgroundCard);
-  border-color: rgba(var(--theme-border), 0.3);
-  transform: translateY(-10px);
+  border-color: rgba(var(--theme-border), 0.01);
+  transform: translateY(-15px);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), 0 0 40px rgba(var(--theme-primary), 0.15);
 }
 .skills-section .skill-card:hover::before {
