@@ -6,17 +6,17 @@
   background: linear-gradient(135deg, var(--theme-background) 0%, var(--theme-backgroundAlt) 50%, var(--theme-background) 100%);
   position: relative;
   overflow: hidden;
-  box-shadow: inset 0 0 60px rgba(24, 15, 6, 0.2);
+  box-shadow: inset 10px 0 60px rgba(24, 15, 6, 0.2);
 
   // Decorative background elements
   &::before {
     content: "";
     position: absolute;
-    top: -25%;
+    top: -40%;
     left: -40%;
     width: 700px;
     height: 700px;
-    background: radial-gradient(circle, rgba(24, 15, 6, 0.5) 0%, transparent 25%);
+    background: radial-gradient(circle, rgba(24, 15, 6, 0.08) 0%, transparent 70%);
     border-radius: 50%;
     pointer-events: none;
   }
@@ -25,7 +25,7 @@
     content: "";
     position: absolute;
     bottom: -40%;
-    right: -15%;
+    right: -45%;
     width: 600px;
     height: 600px;
     background: radial-gradient(circle, rgba(99, 102, 241, 0.08) 0%, transparent 70%);

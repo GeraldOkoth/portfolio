@@ -5,23 +5,23 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: var(--theme-navbar) !important;
+  background: var(--theme-navbar);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--theme-border);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
   &.scrolled {
-    background: rgba(10, 5, 32, 0.95);
+    background: rgba(var(--theme-background), 0.95);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
-    border-bottom-color: rgba(255, 123, 0, 0.2);
+    border-bottom-color: rgba(var(--theme-primary), 0.2);
   }
 
   .navbar-container {
     max-width: 1400px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding: 1rem 2.5rem;
     gap: 1.5rem;
@@ -38,7 +38,7 @@
 
       img {
         border-radius: 50%;
-        border: 2px solid rgba(255, 123, 0, 0.3);
+        border: 2px solid rgba(var(--theme-border), 0.3);
         transition: all 0.3s ease;
       }
 
@@ -54,7 +54,6 @@
 
         @media screen and (max-width: 768px) {
           display: none;  // Hidden on mobile by default
-
         }
       }
 
@@ -62,8 +61,8 @@
         transform: scale(1.05);
 
         img {
-          border-color: var(--theme-primary);
-          box-shadow: 0 0 20px rgba(255, 123, 0, 0.4);
+          border-color: var(--theme-border);
+          box-shadow: 0 0 20px rgba(var(--theme-primary), 0.4);
         }
       }
     }
@@ -74,8 +73,6 @@
     display: flex;
     list-style: none;
     gap: 0.6rem;
-    margin: 0;
-    padding: 0;
 
     li {
       position: relative;
@@ -83,8 +80,7 @@
       .nav-link {
         display: block;
         padding: 0.7rem 1.2rem;
-        text-decoration: none;
-        color: var(--theme-textMuted);
+        color: var(--theme-text);
         font-size: 0.95rem;
         font-weight: 600;
         font-family: 'Inter', 'Poppins', 'Segoe UI', sans-serif;
@@ -110,7 +106,7 @@
 
         &:hover {
           color: var(--theme-text);
-          background: rgba(255, 255, 255, 0.05);
+          background: rgba(var(--theme-background), 0.05);
 
           &::after {
             width: 70%;
