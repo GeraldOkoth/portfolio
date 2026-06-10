@@ -23,7 +23,7 @@ const allProjects = [
     likes: 0,
     views: 0,
     createdAt: "2024-10-22T10:00:00Z",
-    updatedAt: "2026-05-30T21:15:10Z",
+    updatedAt: "2026-06-10T21:15:10Z",
     demo: "https://geraldokoth.vercel.app",
     github: "https://github.com/GeraldOkoth/portfolio",
   },
@@ -295,7 +295,7 @@ const PrevArrow = ({ onClick }) => (
 function Projects() {
   const [activeCategory, setActiveCategory] = useState("frontend");
   const [sortType, setSortType] = useState("latest");
-  const [activeScale, setActiveScale] = useState("mini");
+  const [activeScale, setActiveScale] = useState("all");
 
   // Filter and sort
   const filtered = allProjects
@@ -324,7 +324,7 @@ function Projects() {
       {
         breakpoint: 1200,
         settings: {
-          slidesToShow: Math.min(3, filtered.length),
+          slidesToShow: Math.min(2, filtered.length),
           slidesToScroll: 1,
         },
       },
@@ -435,10 +435,10 @@ function Projects() {
             <div className="no-project-message">
               <div className="empty-state">
                 <FaStar className="empty-icon" />
-                <h3>No {activeScale} projects yet</h3>
+                <h3>Available upon request</h3>
                 <p>
                   {activeScale === "major"
-                    ? "Major projects are coming soon! Check out my mini projects in the meantime."
+                    ? "Projects in this category are private and availabele upon request. Check out my mini projects in the meantime."
                     : "Projects in this category are coming soon."}
                 </p>
                 {activeScale === "major" && (

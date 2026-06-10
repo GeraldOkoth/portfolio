@@ -191,7 +191,7 @@
 }
 
 // homepage on small screen
-@mixin homePageSmallScreen () {
+@mixin homePageSmallScreen() {
   .home-page {
     padding: 4.5rem 1rem 2.5rem;
 
@@ -813,37 +813,293 @@
   }
 }
 
-@mixin projectPhone() {
+// projects section on small mobile
+@mixin projectSmallMobile() {
   .project-section {
-    padding: v.$sectionPaddingPhone;
+    padding: 3.5rem 1rem;
 
-    .projects-title {
-      @include s.sectionHeadingMobile;
-    }
-    .tabs {
-      align-items: center;
-      button {
-        margin: 0.3rem;
-        padding: 0.3rem 1.3rem;
-        font-size: 0.9rem;
+    .projects-header {
+      .projects-title {
+        font-size: 2rem;
+      }
+
+      .projects-subtitle {
+        font-size: 0.95rem;
       }
     }
+
+    .projects-filters {
+      padding: 1.2rem 0.8rem;
+
+      .filter-group {
+        .filter-btn {
+          padding: 0.5rem 1rem;
+          font-size: 0.8rem;
+        }
+      }
+    }
+
     .project-card {
+      .project-thumbnail {
+        height: 180px;
+      }
+
+      .project-content {
+        padding: 1rem;
+      }
+
+      .project-title {
+        font-size: 1.15rem;
+      }
+    }
+
+    .no-project-message {
+      .empty-state {
+        padding: 1.5rem 1rem;
+
+        .empty-icon {
+          font-size: 2.5rem;
+        }
+
+        h3 {
+          font-size: 1.3rem;
+        }
+
+        p {
+          font-size: 0.95rem;
+        }
+      }
+    }
+  }
+}
+
+// projects section on phone
+@mixin projectPhone() {
+  .project-section {
+    padding: 4rem 1.5rem;
+
+    &::before,
+    &::after {
+      opacity: 0.3;
+    }
+
+    .projects-header {
+      margin-bottom: 2.5rem;
+
+      .projects-title {
+        font-size: 2.5rem;
+        letter-spacing: -1px;
+      }
+
+      .projects-subtitle {
+        font-size: 1rem;
+        padding: 0 0.5rem;
+      }
+    }
+
+    .projects-filters {
+      flex-direction: column;
+      gap: 1.5rem;
+      padding: 1.5rem 1rem;
+      margin-bottom: 2.5rem;
+
+      .filter-group {
+        width: 100%;
+
+        .filter-label {
+          font-size: 0.85rem;
+        }
+
+        .filter-buttons {
+          width: 100%;
+          gap: 0.6rem;
+        }
+
+        .filter-btn {
+          padding: 0.6rem 1.2rem;
+          font-size: 0.85rem;
+          flex: 1;
+          min-width: 0;
+          justify-content: center;
+        }
+      }
+    }
+
+    .project-count {
+      margin-bottom: 1.5rem;
+
+      .count-badge {
+        font-size: 0.9rem;
+        padding: 0.5rem 1.2rem;
+      }
+    }
+
+    .carousel-wrapper {
+      padding: 1rem 0 2.5rem;
+
+      .slick-arrow {
+        width: 40px;
+        height: 40px;
+
+        &.slick-prev {
+          left: -10px;
+        }
+
+        &.slick-next {
+          right: -10px;
+        }
+
+        svg {
+          font-size: 1rem;
+        }
+      }
+
+      .slick-dots {
+        bottom: -1.5rem;
+      }
+    }
+
+    .no-project-message {
+      padding: 3rem 1rem;
+
+      .empty-state {
+        padding: 2rem 1.5rem;
+
+        .empty-icon {
+          font-size: 3rem;
+        }
+
+        h3 {
+          font-size: 1.5rem;
+        }
+
+        p {
+          font-size: 1rem;
+        }
+
+        .view-mini-btn {
+          padding: 0.8rem 1.8rem;
+          font-size: 0.95rem;
+        }
+      }
+    }
+
+    .project-card {
+      .project-thumbnail {
+        height: 200px;
+      }
+
+      .project-content {
+        padding: 1.2rem;
+      }
+
+      .project-title {
+        font-size: 1.25rem;
+      }
+
+      .project-description {
+        font-size: 0.9rem;
+      }
+
+      .project-tech {
+        .tech-badge {
+          font-size: 0.75rem;
+          padding: 0.35rem 0.75rem;
+        }
+      }
+
+      .project-dates {
+        .dates-info {
+          flex-direction: column;
+          gap: 0.5rem;
+        }
+      }
+
+      .project-links {
+        flex-direction: column;
+
+        .project-btn {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .modal-overlay {
+    padding: 1rem;
+  }
+
+  .modal-content {
+    max-height: 85vh;
+  }
+
+  .modal-header {
+    height: 200px;
+  }
+
+  .modal-body {
+    padding: 1.5rem;
+
+    .modal-title {
+      font-size: 1.5rem;
+    }
+
+    .modal-dates {
       flex-direction: column;
       gap: 1rem;
     }
-    .meta span {
-      .project-card {
+
+    .modal-actions {
+      flex-direction: column;
+
+      .modal-btn {
         width: 100%;
-        padding: 1rem;
-        margin: 0 auto;
-        border-radius: 0.5rem;
-  
-        p {
-          font-size: 0.8em;
+      }
+    }
+  }
+}
+
+// projects section on tablet
+@mixin projectTablet() {
+  .project-section {
+    padding: 5rem 2.5rem;
+
+    .projects-header {
+      margin-bottom: 3rem;
+
+      .projects-title {
+        font-size: 3rem;
+      }
+
+      .projects-subtitle {
+        font-size: 1.05rem;
+      }
+    }
+
+    .projects-filters {
+      flex-direction: column;
+      gap: 1.5rem;
+      padding: 1.5rem;
+
+      .filter-group {
+        width: 100%;
+
+        .filter-buttons {
+          width: 100%;
         }
       }
-      font-size: 0.8rem;
+    }
+
+    .carousel-wrapper {
+      .slick-arrow {
+        &.slick-prev {
+          left: -15px;
+        }
+
+        &.slick-next {
+          right: -15px;
+        }
+      }
     }
   }
 }
@@ -865,7 +1121,7 @@
     }
   }
   .services-cta .service-description-item h3 {
-    font-size: .2rem;
+    font-size: 0.2rem;
   }
 }
 
@@ -885,7 +1141,6 @@
 
 // services section on Tablet
 @mixin servicesTablet() {
-  
 }
 
 // @mixin testimonialPhone() {
@@ -942,9 +1197,9 @@
       font-size: 0.9rem;
     }
   }
-   .twitter-tweet a {
+  .twitter-tweet a {
     font-size: 0.8rem;
-   }
+  }
 }
 
 // contact section on mobile phone

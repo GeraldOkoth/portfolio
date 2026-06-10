@@ -3,7 +3,7 @@
 
 .project-section {
   padding: v.$sectionPaddingDesktop;
-  background: linear-gradient(135deg, #040031 0%, #0a0652 50%, #040031 100%);
+  background: linear-gradient(135deg, var(--theme-background) 0%, var(--theme-backgroundAlt) 50%, var(--theme-background) 100%);
   position: relative;
   overflow: hidden;
 
@@ -48,22 +48,22 @@
       font-size: 3.5rem;
       font-weight: 900;
       font-family: 'Inter', 'Poppins', 'Montserrat', sans-serif;
-      color: #ffffff;
+      color: var(--theme-color);
       margin-bottom: 1rem;
       letter-spacing: -1.5px;
       line-height: 1.2;
 
       .highlight {
-        background: linear-gradient(135deg, v.$orange 0%, #ff9500 100%);
+        background: linear-gradient(135deg, var(--theme-primary) 0%, var(--theme-secondary) 100%);
+        background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        background-clip: text;
       }
     }
 
     .projects-subtitle {
       font-size: 1.15rem;
-      color: rgba(255, 255, 255, 0.7);
+      color: rgba(var(--theme-color), 0.7);
       max-width: 700px;
       margin: 0 auto;
       line-height: 1.6;
@@ -79,10 +79,11 @@
     flex-wrap: wrap;
     justify-content: center;
     padding: 2rem;
-    background: rgba(255, 255, 255, 0.03);
+    background: var(--theme-backgroundAlt);
     border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid var(--theme-border);
     backdrop-filter: blur(10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 
     .filter-group {
       display: flex;
@@ -93,7 +94,7 @@
       .filter-label {
         font-size: 0.9rem;
         font-weight: 600;
-        color: rgba(255, 255, 255, 0.6);
+        color: rgba(var(--theme-color), 0.6);
         text-transform: uppercase;
         letter-spacing: 1px;
         margin: 0;
@@ -111,9 +112,9 @@
         font-size: 0.95rem;
         font-weight: 600;
         border-radius: 25px;
-        border: 2px solid rgba(255, 255, 255, 0.15);
-        background: rgba(255, 255, 255, 0.05);
-        color: rgba(255, 255, 255, 0.8);
+        border: 1.5px solid var(--theme-border);
+        background: var(--theme-background);
+        color: var(--theme-color);
         cursor: pointer;
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         display: flex;
@@ -127,17 +128,15 @@
         }
 
         &:hover {
-          background: rgba(255, 255, 255, 0.1);
-          border-color: rgba(255, 255, 255, 0.3);
+          background: rgba(var(--theme-background), 0.1);
           transform: translateY(-2px);
         }
 
-        &.active {
-          background: linear-gradient(135deg, v.$orange 0%, #ff6b00 100%);
-          border-color: v.$orange;
-          color: #ffffff;
+        &.active, &:not(.active):hover {
+          background: linear-gradient(135deg, var(--theme-primary) 0%, var(--theme-secondary) 100%);
+          color: var(--theme-color);
           transform: translateY(-2px);
-          box-shadow: 0 6px 20px rgba(255, 123, 0, 0.4);
+          box-shadow: 0 2px 6px var(--theme-primary);
         }
       }
     }
@@ -150,13 +149,13 @@
 
     .count-badge {
       display: inline-block;
-      background: rgba(255, 123, 0, 0.15);
-      color: v.$orange;
+      background: var(--theme-backgroundAlt);
+      color: rgba(var(--theme-color), 0.6);
       padding: 0.6rem 1.5rem;
       border-radius: 30px;
       font-size: 0.95rem;
       font-weight: 600;
-      border: 1px solid rgba(255, 123, 0, 0.3);
+      border: 1px solid var(--theme-primary);
     }
   }
 
@@ -166,7 +165,7 @@
     padding: 1rem 0 3rem;
 
     .slick-list {
-      padding: 2rem 0 !important;
+      padding: 2rem 0;
       margin: 0 -1rem;
     }
 
@@ -180,9 +179,9 @@
       width: 50px;
       height: 50px;
       border-radius: 50%;
-      background: rgba(255, 255, 255, 0.1);
+      background: var(--theme-backgroundAlt);
       backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      border: 1px solid var(--theme-border);
       display: flex !important;
       align-items: center;
       justify-content: center;
@@ -196,12 +195,12 @@
 
       svg {
         font-size: 1.2rem;
-        color: #fff;
+        color: var(--theme-text);
       }
 
       &:hover {
-        background: v.$orange;
-        border-color: v.$orange;
+        background: var(--theme-primary);
+        border-color: var(--theme-primary);
         transform: scale(1.1);
         box-shadow: 0 4px 15px rgba(255, 123, 0, 0.4);
       }
@@ -219,8 +218,8 @@
         cursor: not-allowed;
 
         &:hover {
-          background: rgba(255, 255, 255, 0.1);
-          border-color: rgba(255, 255, 255, 0.2);
+          background: var(--theme-background);
+          border-color: var(--theme-border);
           transform: scale(1);
         }
       }
@@ -236,7 +235,7 @@
         button {
           &::before {
             font-size: 10px;
-            color: rgba(255, 255, 255, 0.3);
+            color: var(--theme-text);
             opacity: 1;
             transition: all 0.3s ease;
           }
@@ -245,7 +244,7 @@
         &.slick-active {
           button {
             &::before {
-              color: v.$orange;
+              color: var(--theme-primary);
               font-size: 12px;
               opacity: 1;
             }
@@ -254,7 +253,7 @@
 
         &:hover {
           button::before {
-            color: v.$orange;
+            color: var(--theme-primary);
             opacity: 0.7;
           }
         }
@@ -271,33 +270,33 @@
       max-width: 500px;
       margin: 0 auto;
       padding: 3rem 2rem;
-      background: rgba(255, 255, 255, 0.03);
+      background: var(--theme-backgroundAlt);
       border-radius: 20px;
-      border: 2px dashed rgba(255, 255, 255, 0.15);
+      border: 2px dashed var(--theme-border);
 
       .empty-icon {
         font-size: 4rem;
-        color: rgba(255, 123, 0, 0.4);
+        color: rgba(var(--theme-primary), 0.4);
         margin-bottom: 1.5rem;
       }
 
       h3 {
         font-size: 1.8rem;
         font-weight: 700;
-        color: #ffffff;
+        color: var(--theme-text);
         margin-bottom: 1rem;
       }
 
       p {
         font-size: 1.1rem;
-        color: rgba(255, 255, 255, 0.6);
+        color: var(--theme-text);
         line-height: 1.7;
         margin-bottom: 2rem;
       }
 
       .view-mini-btn {
-        background: linear-gradient(135deg, v.$orange 0%, #ff6b00 100%);
-        color: #ffffff;
+        background: linear-gradient(135deg, var(--theme-primary) 0%, var(--theme-secondary) 100%);
+        color: var(--theme-text);
         padding: 0.9rem 2rem;
         border-radius: 30px;
         border: none;
@@ -317,8 +316,8 @@
 
   // Project Card Styling
   .project-card {
-    background: rgba(15, 10, 46, 0.8);
-    border: 2px solid rgba(255, 255, 255, 0.1);
+    background: var(--theme-backgroundAlt);
+    border: 2px solid var(--theme-border);
     border-radius: 1.5rem;
     overflow: hidden;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -329,9 +328,9 @@
 
     &:hover {
       transform: translateY(-8px);
-      border-image: linear-gradient(135deg, #9333ea, v.$orange) 1;
-      box-shadow: 0 20px 40px rgba(147, 51, 234, 0.2),
-        0 0 60px rgba(255, 123, 0, 0.15);
+      border: 2px solid #9333ea;
+        box-shadow: 0 20px 40px rgba(147, 51, 234, 0.2),
+          0 0 60px rgba(var(--theme-primary), 0.15);
     }
 
     .project-thumbnail {
@@ -385,13 +384,13 @@
       font-size: 1.4rem;
       font-weight: 700;
       margin-bottom: 0.8rem;
-      color: #fff;
+      color: var(--theme-text);
       line-height: 1.3;
     }
 
     .project-description {
       font-size: 0.95rem;
-      color: rgba(255, 255, 255, 0.7);
+      color: rgba(var(--theme-text), 0.7);
       line-height: 1.6;
       margin-bottom: 1.2rem;
       display: flex;
@@ -401,7 +400,7 @@
       .view-more-arrow {
         background: none;
         border: none;
-        color: v.$orange;
+        color: var(--theme-primary);
         cursor: pointer;
         padding: 0.4rem;
         border-radius: 50%;
@@ -417,7 +416,7 @@
         }
 
         &:hover {
-          background: rgba(255, 123, 0, 0.1);
+          background: var(--theme-background);
           transform: translateX(3px);
 
           svg {
@@ -477,7 +476,7 @@
     .project-dates {
       margin-top: auto;
       padding-top: 1rem;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      border-top: 1px solid var(--theme-border);
 
       .dates-info {
         display: flex;
@@ -487,11 +486,11 @@
 
         p {
           font-size: 0.85rem;
-          color: rgba(255, 255, 255, 0.5);
+          color: rgba(var(--theme-text), 0.5);
           margin: 0;
 
           strong {
-            color: rgba(255, 255, 255, 0.7);
+            color: rgba(var(--theme-text), 0.7);
             font-weight: 600;
           }
         }
@@ -499,8 +498,8 @@
 
       .toggle-date-btn {
         background: transparent;
-        color: v.$orange;
-        border: 1px solid rgba(255, 123, 0, 0.3);
+        color: var(--theme-primary);
+        border: 1px solid var(--theme-primary);
         border-radius: 6px;
         font-size: 0.8rem;
         padding: 0.4rem 0.9rem;
@@ -509,8 +508,8 @@
         font-weight: 500;
 
         &:hover {
-          background: rgba(255, 123, 0, 0.1);
-          border-color: v.$orange;
+          background: rgba(var(--theme-primary), 0.1);
+          border-color: var(--theme-primary);
           transform: translateY(-1px);
         }
       }
@@ -530,29 +529,29 @@
         text-align: center;
         font-weight: 600;
         transition: all 0.3s ease;
-        color: white;
+        color: var(--theme-text);
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 0.5rem;
 
         &.demo {
-          background: linear-gradient(135deg, v.$orange 0%, #ff6b00 100%);
-          box-shadow: 0 4px 15px rgba(255, 123, 0, 0.3);
+          background: linear-gradient(135deg, var(--theme-primary) 0%, var(--theme-secondary) 100%);
+          box-shadow: 0 4px 15px rgba(var(--theme-primary), 0.3);
 
           &:hover {
             transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(255, 123, 0, 0.4);
+            box-shadow: 0 6px 20px rgba(var(--theme-primary), 0.4);
           }
         }
 
         &.github {
-          background: rgba(255, 255, 255, 0.05);
-          border: 1px solid rgba(255, 255, 255, 0.2);
+          background: var(--theme-background);
+          border: 1px solid var(--theme-border);
 
           &:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: rgba(255, 255, 255, 0.3);
+            background: var(--theme-backgroundAlt);
+            border-color: var(--theme-border);
             transform: translateY(-3px);
           }
         }
@@ -568,7 +567,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(var(--theme-backgroundAlt), 0.85);
   backdrop-filter: blur(10px);
   display: flex;
   align-items: center;
@@ -580,7 +579,7 @@
 
 .modal-content {
   background: #0f0a2e;
-  border: 2px solid rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(var(--theme-border), 0.1);
   border-radius: 1.5rem;
   max-width: 900px;
   width: 100%;
@@ -594,16 +593,16 @@
   }
 
   &::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(var(--theme-background), 0.05);
     border-radius: 10px;
   }
 
   &::-webkit-scrollbar-thumb {
-    background: rgba(255, 123, 0, 0.5);
+    background: rgba(var(--theme-primary), 0.5);
     border-radius: 10px;
 
     &:hover {
-      background: rgba(255, 123, 0, 0.7);
+      background: rgba(var(--theme-primary), 0.7);
     }
   }
 }
@@ -612,9 +611,9 @@
   position: absolute;
   top: 1.5rem;
   right: 1.5rem;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: #fff;
+  background: rgba(var(--theme-background), 0.1);
+  border: 1px solid rgba(var(--theme-danger), 0.2);
+  color: var(--theme-text);
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -627,8 +626,8 @@
   font-size: 1.2rem;
 
   &:hover {
-    background: rgba(255, 0, 0, 0.2);
-    border-color: rgba(255, 0, 0, 0.5);
+    background: rgba(var(--theme-danger), 0.2);
+    border-color: rgba(var(--theme-danger), 0.5);
     transform: rotate(90deg);
   }
 }
@@ -653,7 +652,7 @@
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
-    color: #fff;
+    color: var(--theme-text);
   }
 
   .modal-tech {
@@ -825,292 +824,16 @@
 }
 
 // Responsive Design - Tablet (768px - 1023px)
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .project-section {
-    padding: 5rem 2.5rem;
-
-    .projects-header {
-      margin-bottom: 3rem;
-
-      .projects-title {
-        font-size: 3rem;
-      }
-
-      .projects-subtitle {
-        font-size: 1.05rem;
-      }
-    }
-
-    .projects-filters {
-      flex-direction: column;
-      gap: 1.5rem;
-      padding: 1.5rem;
-
-      .filter-group {
-        width: 100%;
-
-        .filter-buttons {
-          width: 100%;
-        }
-      }
-    }
-
-    .carousel-wrapper {
-      .slick-arrow {
-        &.slick-prev {
-          left: -15px;
-        }
-
-        &.slick-next {
-          right: -15px;
-        }
-      }
-    }
-  }
+@media screen and (min-width: v.$mobile) and (max-width: v.$desktop) {
+  @include r.projectTablet();
 }
 
 // Responsive Design - Mobile (<768px)
-@media screen and (max-width: 767px) {
-  .project-section {
-    padding: 4rem 1.5rem;
-
-    &::before,
-    &::after {
-      opacity: 0.3;
-    }
-
-    .projects-header {
-      margin-bottom: 2.5rem;
-
-      .projects-title {
-        font-size: 2.5rem;
-        letter-spacing: -1px;
-      }
-
-      .projects-subtitle {
-        font-size: 1rem;
-        padding: 0 0.5rem;
-      }
-    }
-
-    .projects-filters {
-      flex-direction: column;
-      gap: 1.5rem;
-      padding: 1.5rem 1rem;
-      margin-bottom: 2.5rem;
-
-      .filter-group {
-        width: 100%;
-
-        .filter-label {
-          font-size: 0.85rem;
-        }
-
-        .filter-buttons {
-          width: 100%;
-          gap: 0.6rem;
-        }
-
-        .filter-btn {
-          padding: 0.6rem 1.2rem;
-          font-size: 0.85rem;
-          flex: 1;
-          min-width: 0;
-          justify-content: center;
-        }
-      }
-    }
-
-    .project-count {
-      margin-bottom: 1.5rem;
-
-      .count-badge {
-        font-size: 0.9rem;
-        padding: 0.5rem 1.2rem;
-      }
-    }
-
-    .carousel-wrapper {
-      padding: 1rem 0 2.5rem;
-
-      .slick-arrow {
-        width: 40px;
-        height: 40px;
-
-        &.slick-prev {
-          left: -10px;
-        }
-
-        &.slick-next {
-          right: -10px;
-        }
-
-        svg {
-          font-size: 1rem;
-        }
-      }
-
-      .slick-dots {
-        bottom: -1.5rem;
-      }
-    }
-
-    .no-project-message {
-      padding: 3rem 1rem;
-
-      .empty-state {
-        padding: 2rem 1.5rem;
-
-        .empty-icon {
-          font-size: 3rem;
-        }
-
-        h3 {
-          font-size: 1.5rem;
-        }
-
-        p {
-          font-size: 1rem;
-        }
-
-        .view-mini-btn {
-          padding: 0.8rem 1.8rem;
-          font-size: 0.95rem;
-        }
-      }
-    }
-
-    .project-card {
-      .project-thumbnail {
-        height: 200px;
-      }
-
-      .project-content {
-        padding: 1.2rem;
-      }
-
-      .project-title {
-        font-size: 1.25rem;
-      }
-
-      .project-description {
-        font-size: 0.9rem;
-      }
-
-      .project-tech {
-        .tech-badge {
-          font-size: 0.75rem;
-          padding: 0.35rem 0.75rem;
-        }
-      }
-
-      .project-dates {
-        .dates-info {
-          flex-direction: column;
-          gap: 0.5rem;
-        }
-      }
-
-      .project-links {
-        flex-direction: column;
-
-        .project-btn {
-          width: 100%;
-        }
-      }
-    }
-  }
-
-  .modal-overlay {
-    padding: 1rem;
-  }
-
-  .modal-content {
-    max-height: 85vh;
-  }
-
-  .modal-header {
-    height: 200px;
-  }
-
-  .modal-body {
-    padding: 1.5rem;
-
-    .modal-title {
-      font-size: 1.5rem;
-    }
-
-    .modal-dates {
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    .modal-actions {
-      flex-direction: column;
-
-      .modal-btn {
-        width: 100%;
-      }
-    }
-  }
+@media screen and (max-width: v.$mobile) {
+  @include r.projectPhone();
 }
 
 // Very Small Mobile (<480px)
 @media screen and (max-width: 479px) {
-  .project-section {
-    padding: 3.5rem 1rem;
-
-    .projects-header {
-      .projects-title {
-        font-size: 2rem;
-      }
-
-      .projects-subtitle {
-        font-size: 0.95rem;
-      }
-    }
-
-    .projects-filters {
-      padding: 1.2rem 0.8rem;
-
-      .filter-group {
-        .filter-btn {
-          padding: 0.5rem 1rem;
-          font-size: 0.8rem;
-        }
-      }
-    }
-
-    .project-card {
-      .project-thumbnail {
-        height: 180px;
-      }
-
-      .project-content {
-        padding: 1rem;
-      }
-
-      .project-title {
-        font-size: 1.15rem;
-      }
-    }
-
-    .no-project-message {
-      .empty-state {
-        padding: 1.5rem 1rem;
-
-        .empty-icon {
-          font-size: 2.5rem;
-        }
-
-        h3 {
-          font-size: 1.3rem;
-        }
-
-        p {
-          font-size: 0.95rem;
-        }
-      }
-    }
-  }
-} 
+  @include r.projectSmallMobile();
+}

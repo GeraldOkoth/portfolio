@@ -44,7 +44,7 @@ const Skills = () => {
     ],
     Tools: [
       { name: "Git", icon: <FaGitAlt />, level: 90, color: "#F05032" },
-      { name: "GitHub", icon: <FaGithub />, level: 90, color: "#181717" },
+      { name: "GitHub", icon: <FaGithub />, level: 90, color: "#000000" },
       { name: "DaVinci Resolve", icon: <FaVideo />, level: 65, color: "#FF6B6B" },
     ],
   };
