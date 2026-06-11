@@ -316,27 +316,27 @@ function Projects() {
     dots: true,
     infinite: filtered.length > 2,
     speed: 500,
-    slidesToShow: Math.min(3, filtered.length),
+    slidesToShow: Math.min(4, filtered.length),
     slidesToScroll: 1,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
     responsive: [
       {
-        breakpoint: 1200,
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: Math.min(3, filtered.length),
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 768,
         settings: {
           slidesToShow: Math.min(2, filtered.length),
           slidesToScroll: 1,
         },
       },
       {
-        breakpoint: 900,
-        settings: {
-          slidesToShow: Math.min(2, filtered.length),
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 600,
+        breakpoint: 480,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
