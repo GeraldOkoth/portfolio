@@ -173,40 +173,6 @@ html {
 }
 
 /* mobile devices*/
-@media screen and (max-width: 480px) {
-  .services .services-container .services-header h2 {
-    font-size: 1.2rem;
-  }
-  .services-cta,
-  .my-services {
-    flex-direction: column;
-    align-items: center;
-  }
-  .services-cta .service-description-item,
-  .services-cta .image,
-  .my-services .service-description-item,
-  .my-services .image {
-    flex-basis: 100%;
-    margin-bottom: 1rem;
-  }
-  .services-cta .service-description-item h3 {
-    font-size: 0.2rem;
-  }
-}
-@media screen and (min-width: 480px) and (max-width: 768px) {
-  .services-cta,
-  .my-services {
-    flex-direction: column;
-    align-items: center;
-  }
-  .services-cta .service-description-item,
-  .services-cta .image,
-  .my-services .service-description-item,
-  .my-services .image {
-    flex-basis: 100%;
-    margin-bottom: 1rem;
-  }
-}
 .navbar {
   position: sticky;
   top: 0;
@@ -842,7 +808,7 @@ html {
   height: 108%;
   border-radius: 50%;
   background: linear-gradient(135deg, rgba(255, 123, 0, 0.18), rgba(99, 102, 241, 0.18));
-  border: 1px solid rgba(255, 255, 255, 0.35);
+  border: 1px solid var(--theme-border);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
@@ -862,7 +828,7 @@ html {
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
 }
 .home-page .hero-image-wrapper .image-container .hero-image:hover {
-  transform: scale(1.15);
+  transform: scale(1.1);
 }
 .home-page .hero-image-wrapper .image-container .image-glow {
   position: absolute;
@@ -2963,9 +2929,10 @@ html {
 }
 .services-section {
   padding: 3rem;
-  background: linear-gradient(135deg, #040031 0%, #0a0652 50%, #040031 100%);
+  background: linear-gradient(135deg, var(--theme-background) 0%, var(--theme-backgroundAlt) 50%, var(--theme-background) 100%);
   position: relative;
   overflow: hidden;
+  box-shadow: inset 3px 0 25px rgba(24, 15, 6, 0.2);
 }
 .services-section::before {
   content: "";
@@ -3003,20 +2970,20 @@ html {
   font-size: 3.5rem;
   font-weight: 900;
   font-family: "Inter", "Poppins", "Montserrat", sans-serif;
-  color: #ffffff;
+  color: var(--theme-text);
   margin-bottom: 1rem;
   letter-spacing: -1.5px;
   line-height: 1.2;
 }
 .services-section .services-header .services-title .highlight {
-  background: linear-gradient(135deg, #ff6b00 0%, #ff9500 100%);
+  background: linear-gradient(135deg, var(--theme-primary) 0%, var(--theme-secondary) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 .services-section .services-header .services-subtitle {
   font-size: 1.15rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--theme-textAlt);
   max-width: 600px;
   margin: 0 auto;
   line-height: 1.6;
@@ -3029,29 +2996,29 @@ html {
   margin-bottom: 5rem;
 }
 .services-section .services-features .service-feature {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--theme-background);
+  border: 1px solid var(--theme-border);
   border-radius: 20px;
   padding: 2.5rem 2rem;
   text-align: center;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   backdrop-filter: blur(10px);
+  box-shadow: 2px 10px 30px rgba(0, 0, 0, 0.3);
 }
 .services-section .services-features .service-feature:hover {
-  background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(255, 123, 0, 0.3);
+  border-color: var(--theme-border);
   transform: translateY(-10px);
-  box-shadow: 0 20px 60px rgba(255, 123, 0, 0.15);
+  box-shadow: 0 2.5px 10px var(--theme-primary);
 }
 .services-section .services-features .service-feature:hover .feature-icon-wrapper {
   transform: scale(1.1);
-  background: linear-gradient(135deg, rgba(255, 123, 0, 0.2), rgba(99, 102, 241, 0.2));
+  background: linear-gradient(135deg, rgba(255, 123, 0, 0.1490196078), rgba(99, 102, 241, 0.1490196078));
 }
 .services-section .services-features .service-feature .feature-icon-wrapper {
   width: 80px;
   height: 80px;
   margin: 0 auto 1.5rem;
-  background: linear-gradient(135deg, rgba(255, 123, 0, 0.15), rgba(99, 102, 241, 0.15));
+  background: linear-gradient(135deg, rgba(255, 123, 0, 0.1490196078), rgba(99, 102, 241, 0.1490196078));
   border-radius: 20px;
   display: flex;
   align-items: center;
@@ -3060,20 +3027,20 @@ html {
 }
 .services-section .services-features .service-feature .feature-icon-wrapper .feature-icon {
   font-size: 2.5rem;
-  color: #ff6b00;
+  color: var(--theme-primary);
   transition: all 0.3s ease;
 }
 .services-section .services-features .service-feature .feature-title {
   font-size: 1.4rem;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--theme-text);
   margin-bottom: 1rem;
   letter-spacing: -0.3px;
 }
 .services-section .services-features .service-feature .feature-description {
   font-size: 1rem;
   line-height: 1.7;
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--theme-textMuted);
 }
 .services-section .services-grid {
   display: grid;
@@ -3087,14 +3054,14 @@ html {
   overflow: hidden;
   cursor: pointer;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  background: rgba(15, 10, 46, 0.6);
-  border: 2px solid rgba(255, 255, 255, 0.1);
+  background: var(--theme-backgroundAlt);
+  border: 2px solid var(--theme-border);
   backdrop-filter: blur(10px);
 }
 .services-section .service-card:hover {
   transform: translateY(-8px);
-  border-color: rgba(255, 123, 0, 0.4);
-  box-shadow: 0 20px 60px rgba(255, 123, 0, 0.2);
+  border-color: var(--theme-border);
+  box-shadow: 0 10px 30px rgba(255, 123, 0, 0.2);
 }
 .services-section .service-card.active .service-overlay {
   opacity: 1;
@@ -3112,7 +3079,7 @@ html {
 .services-section .service-card .service-image-wrapper {
   position: relative;
   width: 100%;
-  padding-top: 75%;
+  padding-top: 100%;
   overflow: hidden;
   background: linear-gradient(135deg, #1a1040 0%, #0f0a2e 100%);
 }
@@ -3132,7 +3099,7 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(10, 6, 82, 0.97) 0%, rgba(26, 15, 62, 0.95) 100%);
+  background: linear-gradient(135deg, var(--theme-background) 0%, var(--theme-backgroundAlt) 100%);
   opacity: 0;
   visibility: hidden;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -3148,37 +3115,37 @@ html {
 }
 .services-section .service-card .service-image-wrapper .service-overlay .overlay-content .service-icon-large {
   font-size: 3rem;
-  color: #ff6b00;
-  margin-bottom: 1rem;
+  color: var(--theme-primary);
+  margin-bottom: 0.8rem;
   animation: iconFloat 3s ease-in-out infinite;
 }
 .services-section .service-card .service-image-wrapper .service-overlay .overlay-content .overlay-title {
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   font-weight: 700;
-  color: #ffffff;
-  margin-bottom: 0.8rem;
+  color: var(--theme-text);
+  margin-bottom: 0.6rem;
   letter-spacing: -0.5px;
 }
 .services-section .service-card .service-image-wrapper .service-overlay .overlay-content .title-underline {
   width: 60px;
   height: 3px;
-  background: linear-gradient(90deg, #ff6b00, #ff9500);
-  margin: 0 auto 1.5rem;
+  background: linear-gradient(90deg, var(--theme-primary), var(--theme-secondary));
+  margin: 0 auto 1.3rem;
   border-radius: 2px;
 }
 .services-section .service-card .service-image-wrapper .service-overlay .overlay-content .overlay-description {
   font-size: 1rem;
   line-height: 1.7;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--theme-textMuted);
   margin-bottom: 1.5rem;
 }
 .services-section .service-card .service-image-wrapper .service-overlay .overlay-content .learn-more-btn {
-  background: linear-gradient(135deg, #ff6b00 0%, #ff6b00 100%);
-  color: #ffffff;
+  background: linear-gradient(135deg, var(--theme-primary) 0%, var(--theme-secondary) 100%);
+  color: var(--theme-text);
   border: none;
-  padding: 0.9rem 2rem;
+  padding: 0.8rem 1.8rem;
   border-radius: 50px;
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 600;
   cursor: pointer;
   display: inline-flex;
@@ -3189,7 +3156,7 @@ html {
 }
 .services-section .service-card .service-image-wrapper .service-overlay .overlay-content .learn-more-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 30px rgba(255, 123, 0, 0.4);
+  box-shadow: 0 4px 150px rgba(255, 123, 0, 0.4);
 }
 .services-section .service-card .service-image-wrapper .service-overlay .overlay-content .learn-more-btn:hover svg {
   transform: translateX(3px);
@@ -3212,18 +3179,19 @@ html {
   display: flex;
   align-items: center;
   gap: 1rem;
-  background: rgba(15, 10, 46, 0.8);
+  background: var(--theme-backgroundAlt);
   backdrop-filter: blur(10px);
+  border-top: 1px solid var(--theme-border);
 }
 .services-section .service-card .service-card-footer .service-icon-small {
   font-size: 1.8rem;
-  color: #ff6b00;
+  color: var(--theme-primary);
   flex-shrink: 0;
 }
 .services-section .service-card .service-card-footer .service-title {
   font-size: 1.3rem;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--theme-text);
   flex: 1;
   text-align: left;
   margin: 0;
@@ -3232,9 +3200,9 @@ html {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: rgba(255, 123, 0, 0.15);
-  border: 2px solid rgba(255, 123, 0, 0.3);
-  color: #ff6b00;
+  background: rgba(var(--theme-background), 0.15);
+  border: 2px solid var(--theme-primary);
+  color: var(--theme-primary);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3243,8 +3211,8 @@ html {
   flex-shrink: 0;
 }
 .services-section .service-card .service-card-footer .toggle-btn:hover {
-  background: rgba(255, 123, 0, 0.25);
-  border-color: #ff6b00;
+  background: rgba(var(--theme-primary), 0.25);
+  border-color: var(--theme-primary);
   transform: scale(1.1);
 }
 .services-section .service-card .service-card-footer .toggle-btn .arrow-icon {
@@ -3256,7 +3224,7 @@ html {
 }
 .services-section .mobile-hint {
   text-align: center;
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--theme-textMuted);
   font-size: 0.95rem;
   margin-top: 2rem;
   display: none;
@@ -3285,7 +3253,7 @@ html {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   .services-section {
     padding: 5rem 2.5rem;
   }
@@ -3343,17 +3311,17 @@ html {
     font-size: 2.5rem;
   }
   .services-section .service-card .service-image-wrapper .service-overlay .overlay-content .overlay-title {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
   .services-section .service-card .service-image-wrapper .service-overlay .overlay-content .overlay-description {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
   }
   .services-section .service-card .service-image-wrapper .service-overlay .overlay-content .learn-more-btn {
     padding: 0.8rem 1.8rem;
-    font-size: 0.95rem;
+    font-size: 0.85rem;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .services-section {
     padding: 4rem 1.5rem;
   }

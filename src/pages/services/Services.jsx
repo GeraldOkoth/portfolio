@@ -59,7 +59,7 @@ const ServiceItem = ({ image, alt, title, description, icon, index }) => {
   );
 };
 
-// ServiceFeature Component (formerly ServiceDescription)
+// ServiceFeature Component for highlighting key service benefits
 const ServiceFeature = ({ icon, title, description, index }) => {
   return (
     <motion.div
@@ -95,9 +95,9 @@ const Services = () => {
     },
     {
       icon: <FaCalendarCheck />,
-      title: "Easy Booking",
+      title: "Timely Delivery",
       description:
-        "Schedule consultations and book services seamlessly at your convenience.",
+        "Reliable delivery of projects on schedule, ensuring deadlines are met without compromising quality.",
     },
   ];
 
