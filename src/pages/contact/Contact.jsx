@@ -251,6 +251,7 @@ function Contact() {
                 )}
               </button>
 
+              {/* If `feedback` has a value, show an animated message with that text. */}
               {feedback && (
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}

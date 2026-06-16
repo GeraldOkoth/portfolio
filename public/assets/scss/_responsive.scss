@@ -1347,6 +1347,140 @@
   }
 }
 
+// contact section on mobile phone
+@mixin contactPhone() {
+  .contact {
+    padding: 4rem 1.5rem;
+
+    &::before,
+    &::after {
+      opacity: 0.3;
+    }
+
+    .contact-header {
+      margin-bottom: 2.5rem;
+
+      .contact-title {
+        font-size: 2.5rem;
+        letter-spacing: -1px;
+      }
+
+      .contact-description {
+        font-size: 1rem;
+        padding: 0 0.5rem;
+      }
+    }
+
+    .contact-content {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+
+    .contact-info {
+      .info-card {
+        padding: 1.5rem;
+        gap: 1.2rem;
+
+        &:hover {
+          transform: translateX(5px);
+        }
+
+        .info-icon {
+          width: 48px;
+          height: 48px;
+          min-width: 48px;
+          font-size: 1.3rem;
+        }
+
+        .info-content {
+          h4 {
+            font-size: 0.8rem;
+          }
+
+          p,
+          .info-link {
+            font-size: 1rem;
+          }
+
+          .extra-link {
+            font-size: 0.9rem;
+            padding: 0.45rem 0.9rem;
+          }
+        }
+      }
+
+      .map-wrapper {
+        &:hover {
+          transform: translateY(-3px);
+        }
+      }
+    }
+
+    .contact-form-section {
+      padding: 2rem 1.5rem;
+    }
+
+    .contact-form {
+      gap: 1.5rem;
+
+      .form-row {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .form-group {
+        input,
+        textarea {
+          padding: 1rem 1.2rem;
+          font-size: 0.95rem;
+        }
+
+        textarea {
+          min-height: 140px;
+        }
+      }
+
+      .submit-btn {
+        width: 100%;
+        padding: 1.1rem 2rem;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+// contact section on tablet
+@mixin contactTablet() {
+  .contact {
+    padding: 5rem 3rem;
+
+    .contact-content {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .contact-header {
+      margin-bottom: 3rem;
+
+      .contact-title {
+        font-size: 3.5rem;
+      }
+    }
+  }
+}
+
+// Footer section on phone
+@mixin footerPhone() {
+  footer {
+    padding: v.$sectionPaddingPhone;
+
+    .footer-content {
+      text-align: center;
+      flex-direction: column;
+      margin: 1rem auto;
+    }
+  }
+}
 // tweet section on phone
 @mixin tweetPhone() {
   .tweets {
@@ -1373,60 +1507,7 @@
   }
 }
 
-// contact section on mobile phone
-@mixin contactPhone() {
-  .contact {
-    padding: v.$sectionPaddingPhone;
 
-    .contact-header {
-      margin-bottom: 1rem;
-
-      h2 {
-        font-size: 1.2rem;
-        font-weight: 600;
-      }
-
-      p {
-        line-height: 1.3rem;
-      }
-    }
-    .contact-section {
-      flex-direction: column;
-
-      .contact-address {
-        line-height: 2rem;
-
-        iframe {
-          margin: 1rem 0;
-          height: 200px;
-        }
-      }
-
-      .contact-form {
-        button[type="submit"] {
-          width: 100%;
-        }
-        textarea {
-          margin-top: 1rem;
-          height: 150px;
-        }
-      }
-    }
-  }
-}
-
-// Footer section on phone
-@mixin footerPhone() {
-  footer {
-    padding: v.$sectionPaddingPhone;
-
-    .footer-content {
-      text-align: center;
-      flex-direction: column;
-      margin: 1rem auto;
-    }
-  }
-}
 
 // @mixin navbarPhone() {
 //   .top-navigation-links {
