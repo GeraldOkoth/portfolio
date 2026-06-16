@@ -183,9 +183,9 @@
 
       &:hover {
         background: var(--theme-backgroundCard);
-        border-color: rgba(255, 123, 0, 0.3);
+        border-color: rgba(var(--theme-border), 0.3);
         transform: translateY(-5px);
-        box-shadow: 0 10px 30px rgba(255, 123, 0, 0.15);
+        box-shadow: 0 5px 15px rgba(var(--theme-primary), 0.15);
       }
 
       .stat-number {

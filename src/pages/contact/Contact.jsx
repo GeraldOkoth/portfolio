@@ -26,12 +26,33 @@ function Contact() {
     }));
   };
 
+  
+  const FORMSPREE_ENDPOINT = "https://formspree.io/f/xrevdrkp";
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
+    setFeedback("");
+
+    try {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          _replyto: formData.email
+        })
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to send message");
+      }
+
       setFeedback("Thank you! Your message has been sent successfully.");
       setFormData({
         name: "",
@@ -39,11 +60,13 @@ function Contact() {
         subject: "",
         message: ""
       });
+    } catch (error) {
+      setFeedback("Oops, there was a problem sending your message. Please try again.");
+      console.error(error);
+    } finally {
       setIsSubmitting(false);
-      
-      // Clear feedback after 5 seconds
       setTimeout(() => setFeedback(""), 5000);
-    }, 1500);
+    }
   };
 
   const contactInfo = [

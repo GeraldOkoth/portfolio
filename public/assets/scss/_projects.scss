@@ -27,7 +27,7 @@
     left: -10%;
     width: 600px;
     height: 600px;
-    background: radial-gradient(circle, rgba(255, 123, 0, 0.08) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(255, 123, 0, 0.04) 0%, transparent 70%);
     border-radius: 50%;
     pointer-events: none;
   }
@@ -136,7 +136,6 @@
           background: linear-gradient(135deg, var(--theme-primary) 0%, var(--theme-secondary) 100%);
           color: var(--theme-color);
           transform: translateY(-2px);
-          box-shadow: 0 2px 6px var(--theme-primary);
         }
       }
     }

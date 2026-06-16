@@ -23,7 +23,7 @@
     height: 600px;
     background: radial-gradient(
       circle,
-      rgba(255, 123, 0, 0.08) 0%,
+      rgba(255, 123, 0, 0.04) 0%,
       transparent 70%
     );
     border-radius: 50%;
@@ -109,7 +109,6 @@
       &:hover {
         border-color: var(--theme-border);
         transform: translateY(-10px);
-        box-shadow: 0 2.5px 10px var(--theme-primary);
 
         .feature-icon-wrapper {
           transform: scale(1.1);
@@ -175,7 +174,6 @@
     &:hover {
       transform: translateY(-8px);
       border-color: var(--theme-border);
-      box-shadow: 0 10px 30px rgba(255, 123, 0, 0.2);
     }
 
     &.active {

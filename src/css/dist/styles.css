@@ -269,7 +269,6 @@ html {
 }
 .navbar .nav-links li .nav-link:hover {
   color: var(--theme-text);
-  background: var(--theme-background);
 }
 .navbar .nav-links li .nav-link:hover::after {
   width: 70%;
@@ -308,10 +307,10 @@ html {
   backdrop-filter: blur(10px);
 }
 .navbar .theme-toggle-wrapper .theme-toggle-btn:hover {
-  background: rgba(var(--theme-background), 0.15);
+  background: rgba(var(--theme-primary), 0.5);
   border-color: var(--theme-border);
   transform: scale(1.1);
-  box-shadow: 0 5px 20px rgba(255, 123, 0, 0.3);
+  box-shadow: 0 4px 15px rgba(var(--theme-primary), 0.3);
 }
 .navbar .theme-toggle-wrapper .theme-menu {
   position: absolute;
@@ -329,9 +328,10 @@ html {
   width: 100%;
   display: flex;
   align-items: center;
-  gap: 0.8rem;
+  gap: 1.8rem;
+  margin: 0.3rem 0;
   padding: 0.8rem 1rem;
-  background: transparent;
+  background: var(--theme-backgroundAlt);
   border: none;
   border-radius: 8px;
   color: rgba(var(--theme-text), 0.8);
@@ -356,11 +356,11 @@ html {
   font-size: 1.1rem;
 }
 .navbar .theme-toggle-wrapper .theme-menu .theme-option:hover {
-  background: var(--theme-text);
+  background: rgba(var(--theme-primary), 0.1);
   color: var(--theme-background);
 }
 .navbar .theme-toggle-wrapper .theme-menu .theme-option.active {
-  background: var(--theme-text);
+  background: var(--theme-navbar);
   color: var(--theme-primary);
 }
 .navbar .nav-toggle {
@@ -1384,9 +1384,9 @@ html {
 }
 .about-section .quick-stats .stat-item:hover {
   background: var(--theme-backgroundCard);
-  border-color: rgba(255, 123, 0, 0.3);
+  border-color: rgba(var(--theme-border), 0.3);
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(255, 123, 0, 0.15);
+  box-shadow: 0 5px 15px rgba(var(--theme-primary), 0.15);
 }
 .about-section .quick-stats .stat-item .stat-number {
   display: block;
@@ -1767,7 +1767,7 @@ html {
   border-color: rgba(var(--theme-border), 0.4);
   color: var(--theme-primary);
   transform: translateY(-3px);
-  box-shadow: 0 5px 20px rgba(255, 123, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(var(--theme-primary), 0.2);
 }
 .skills-section .tab-btn:hover:not(.active)::before {
   left: 100%;
@@ -1777,7 +1777,7 @@ html {
   border-color: transparent;
   color: var(--theme-text);
   transform: translateY(-3px);
-  box-shadow: 0 8px 30px rgba(255, 123, 0, 0.4);
+  box-shadow: 0 5px 10px rgba(var(--theme-primary), 0.6);
 }
 .skills-section .tab-btn.active .tab-count {
   background: var(--theme-background);
@@ -2044,7 +2044,7 @@ html {
   left: -10%;
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, rgba(255, 123, 0, 0.08) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(255, 123, 0, 0.04) 0%, transparent 70%);
   border-radius: 50%;
   pointer-events: none;
 }
@@ -2141,7 +2141,6 @@ html {
   background: linear-gradient(135deg, var(--theme-primary) 0%, var(--theme-secondary) 100%);
   color: var(--theme-color);
   transform: translateY(-2px);
-  box-shadow: 0 2px 6px var(--theme-primary);
 }
 .project-section .project-count {
   text-align: center;
@@ -2941,7 +2940,7 @@ html {
   right: -15%;
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, rgba(255, 123, 0, 0.08) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(255, 123, 0, 0.04) 0%, transparent 70%);
   border-radius: 50%;
   pointer-events: none;
 }
@@ -3008,7 +3007,6 @@ html {
 .services-section .services-features .service-feature:hover {
   border-color: var(--theme-border);
   transform: translateY(-10px);
-  box-shadow: 0 2.5px 10px var(--theme-primary);
 }
 .services-section .services-features .service-feature:hover .feature-icon-wrapper {
   transform: scale(1.1);
@@ -3061,7 +3059,6 @@ html {
 .services-section .service-card:hover {
   transform: translateY(-8px);
   border-color: var(--theme-border);
-  box-shadow: 0 10px 30px rgba(255, 123, 0, 0.2);
 }
 .services-section .service-card.active .service-overlay {
   opacity: 1;
@@ -3770,14 +3767,14 @@ html {
 .contact .contact-form .submit-btn:active:not(:disabled) {
   transform: translateY(-2px);
 }
-.contact .contact-form .submit-btn:disabled {
-  opacity: 0.7;
-  cursor: not-allowed;
-}
-.contact .contact-form .submit-btn .send-icon {
+.contact .contact-form .submit-btn:active:not(:disabled) .send-icon {
   font-size: 1.1rem;
   transition: transform 0.3s ease;
   animation: fly 0.6s ease-in-out;
+}
+.contact .contact-form .submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
 }
 .contact .contact-form .submit-btn .spinner {
   width: 20px;
