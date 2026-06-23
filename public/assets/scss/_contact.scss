@@ -96,7 +96,7 @@
     }
 
     .info-card {
-      background: var(--theme-backgroundCard);
+      // background: var(--theme-backgroundCard);
       border: 1px solid var(--theme-border);
       border-radius: 16px;
       padding: 2rem;
@@ -220,7 +220,7 @@
 
   // Contact Form Section
   .contact-form-section {
-    background: rgba(var(--theme-background), 0.04);
+    background: var(--theme-backgroundAlt);
     border: 1px solid rgba(var(--theme-backgroundCard), 0.08);
     border-radius: 20px;
     padding: 2rem;

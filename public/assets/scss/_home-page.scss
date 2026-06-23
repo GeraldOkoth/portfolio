@@ -8,12 +8,12 @@
   align-items: center;
   justify-content: center;
   padding: v.$sectionPaddingDesktop;
-  // Background gradient: a diagonal (135deg) transition between three colors.
-  // - starts with #0a0520 at 0% (top-left side),
-  // - blends to #1a0f3e at 50% (middle),
-  // - ends with #0d0b28 at 100% (bottom-right side).
-  background: linear-gradient(135deg, var(--theme-background) 0%,
-    var(--theme-backgroundAlt) 50%, var(--theme-background) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--theme-background) 0%,
+    var(--theme-backgroundAlt) 50%,
+    var(--theme-background) 100%
+  );
   position: relative;
   overflow: hidden;
   box-shadow: inset 10px 0 60px rgba(24, 15, 6, 0.2);
@@ -62,7 +62,7 @@
 
   .hero-grid {
     display: grid;
-    grid-template-columns: 1.2fr 1fr; //The first column is 1.2 times the width of the second column, takes a little more space.
+    grid-template-columns: 1.2fr 1fr;
     gap: 4rem;
     align-items: center;
   }
@@ -95,14 +95,18 @@
     .hero-title {
       font-size: 4rem;
       font-weight: 900;
-      font-family: "Inter", "Poppins", sans-serif;
       color: var(--theme-text);
       line-height: 1.2;
       margin-bottom: 1rem;
       letter-spacing: -2px;
+      font-family: Inter, Poppins, sans-serif;
 
       .highlight {
-        background: linear-gradient(135deg, v.$orange 0%, #ff9500 100%);
+        background: linear-gradient(
+          135deg,
+          var(--theme-primary) 0%,
+          var(--theme-secondary) 100%
+        );
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -264,13 +268,15 @@
       }
 
       .btn-primary {
-        background: linear-gradient(135deg, var(--theme-primary) 0%, var(--theme-secondary) 100%);
+        background: linear-gradient(
+          135deg,
+          var(--theme-primary) 0%,
+          var(--theme-secondary) 100%
+        );
         color: var(--theme-text);
-        box-shadow: 0 6px 12px rgba(255, 123, 0, 0.35);
 
         &:hover {
           transform: translateY(-3px);
-          box-shadow: 0 8px 16px rgba(255, 123, 0, 0.45);
         }
       }
 
@@ -286,7 +292,7 @@
 
         &:hover {
           background: rgba(var(--theme-background), 0.1);
-          border-color: rgba(var(--theme-border), 0.3);
+          border-color: rgba(var(--theme-border), 0.5);
           transform: translateY(-3px);
         }
       }
@@ -361,6 +367,7 @@
           }
 
           &:hover {
+            color: #fff;
             background: var(--social-color);
             border-color: var(--social-color);
             transform: translateY(-5px);
@@ -382,8 +389,10 @@
 
     .image-container {
       position: relative;
+      overflow: hidden;
       width: 100%;
       max-width: 500px;
+      border-radius: 50%;
       margin: 0 auto;
 
       .image-backdrop {
@@ -409,6 +418,7 @@
         width: 108%;
         height: 108%;
         border-radius: 50%;
+        // overflow: hidden;
         background: linear-gradient(
           135deg,
           rgba(255, 123, 0, 0.18),
@@ -603,7 +613,7 @@
     pointer-events: none;
     transition: all 0.3s ease;
     opacity: 0;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);  
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
   }
 
   &:hover .progress-tooltip {

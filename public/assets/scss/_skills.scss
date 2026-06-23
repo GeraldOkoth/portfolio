@@ -183,7 +183,7 @@
 
     &:hover {
       background: var(--theme-backgroundCard);
-      border-color: rgba(var(--theme-border), 0.01);
+      border: 1px solid var(--theme-primary);
       transform: translateY(-15px);
       box-shadow: 
         0 20px 60px rgba(0, 0, 0, 0.4),

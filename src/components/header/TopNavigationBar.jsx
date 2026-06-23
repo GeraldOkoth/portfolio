@@ -10,8 +10,8 @@ const THEMES = {
     colors: {
       primary: "#ff7b00",
       secondary: "#ff9500",
-      background: "#0a0520",
-      backgroundAlt: "#1a0f3e",
+      background: "#000000",
+      backgroundAlt: "#0a0618",
       backgroundCard: "#0f0a2e",
       text: "#ffffff",
       textMuted: "rgba(255, 255, 255, 0.7)",
@@ -34,21 +34,21 @@ const THEMES = {
       success: "#22c55e"
     }
   },
-  sunset: {
-  name: "Sunset",
-  icon: <FaPalette />,
-  colors: {
-    primary: "#ff6b6b",
-    secondary: "#ee5a6f",
-    background: "#2d1b69",
-    backgroundAlt: "#3d2479",
-    backgroundCard: "#332066",
-    text: "#ffffff",
-    textMuted: "rgba(255, 255, 255, 0.7)",
-    border: "rgba(255, 255, 255, 0.1)",
-    success: "#51cf66"
-  }
-},
+  // sunset: {
+  //   name: "Sunset",
+  //   icon: <FaPalette />,
+  //   colors: {
+  //     primary: "#ff6b6b",
+  //     secondary: "#ee5a6f",
+  //     background: "#2d1b69",
+  //     backgroundAlt: "#3d2479",
+  //     backgroundCard: "#332066",
+  //     text: "#ffffff",
+  //     textMuted: "rgba(255, 255, 255, 0.7)",
+  //     border: "rgba(255, 255, 255, 0.1)",
+  //     success: "#51cf66"
+  //   }
+  // },
   ocean: {
     name: "Ocean",
     icon: <FaPalette />,

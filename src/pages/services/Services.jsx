@@ -39,9 +39,9 @@ const ServiceItem = ({ image, alt, title, description, icon, index }) => {
               <h3 className="overlay-title">{title}</h3>
               <div className="title-underline"></div>
               <p className="overlay-description">{description}</p>
-              <button className="learn-more-btn">
+              {/* <button className="learn-more-btn">
                 Learn More <FaArrowRight />
-              </button>
+              </button> */}
             </div>
           </div>
         </div>

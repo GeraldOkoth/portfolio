@@ -277,11 +277,9 @@
       justify-content: center;
       gap: 0.5rem;
       transition: all 0.3s ease;
-      box-shadow: 0 5px 20px rgba(255, 123, 0, 0.3);
 
       &:hover {
         transform: translateY(-3px);
-        box-shadow: 0 8px 30px rgba(255, 123, 0, 0.4);
       }
 
       &:active {
