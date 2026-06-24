@@ -1,31 +1,40 @@
 // Footer section
 @use "./variables" as v;
 @use "./responsive" as r;
-footer {
+// @use "./display" as d;
+
+.footer {
   padding: v.$sectionPaddingDesktop;
+  background: linear-gradient(
+    135deg,
+    var(--theme-background) 0%,
+    var(--theme-backgroundAlt) 100%
+  );
+  position: relative;
+  overflow: hidden;
 
   .footer-content {
-    // @include flexbox();
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
     font-size: 0.8em;
+  }
 
-    .social-media-icons a {
-      // @include icons($primaryColor);
-      margin-left: 10px;
-      font-size: 1.5em;
-      text-decoration: none;
-      transition: all 0.3s ease;
+  .copyright {
+    font-weight: bolder;
+  }
 
-      &:hover {
-        color: v.$orange;
-        transform: translateY(-3px);
-      }
-    }
+  hr {
+    width: 100%;
+    border: 1.5px solid rgb(125, 125, 125);
+  }
+
+  .social-media-icons {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.5em;
   }
 }
-
-@media screen and (max-width: v.$mobile) {
-  @include r.footerPhone;
-}
-

@@ -715,7 +715,7 @@
           content: "→";
           position: absolute;
           left: 0;
-          color: v.$orange;
+          color: var(--theme-primary);
           font-weight: bold;
         }
       }
@@ -768,7 +768,7 @@
       gap: 0.6rem;
 
       &.demo {
-        background: linear-gradient(135deg, v.$orange 0%, #ff6b00 100%);
+        background: linear-gradient(135deg, var(--theme-primary) 0%, var(--theme-secondary) 100%);
         box-shadow: 0 4px 15px rgba(255, 123, 0, 0.3);
 
         &:hover {

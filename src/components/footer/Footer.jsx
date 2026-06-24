@@ -3,69 +3,67 @@ import { easeInOut, motion } from "framer-motion";
 
 
 function Footer() {
+
+  const socialMediaLinks = [
+    {
+      href: "https://www.linkedin.com/in/geraldokoth/",
+      iconClass: "fa-brands fa-linkedin",
+      label: "LinkedIn"
+    },
+    {
+      href: "https://github.com/GeraldOkoth",
+      iconClass: "fa-brands fa-github",
+      label: "GitHub"
+    },
+    {
+      href: "https://www.youtube.com/@geraldokothKE",
+      iconClass: "fa-brands fa-youtube",
+      label: "YouTube"
+    },
+    {
+      href: "https://x.com/gerald_okothKE",
+      iconClass: "fa-brands fa-twitter",
+      label: "Twitter"
+    },
+    {
+      href: "https://www.instagram.com/okothgerald449",
+      iconClass: "fa-brands fa-instagram",
+      label: "Instagram"
+    },
+    {
+      href: "https://www.facebook.com/gerald.okoth.944/",
+      iconClass: "fa-brands fa-facebook",
+      label: "Facebook"
+    }
+  ]
+
   return (
-    <>
-      <footer>
-        <section className="footer">
-          <hr />
-          <motion.div
-            initial={{ opacity: 0, y: -30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ transitionTimingFunction: easeInOut, delay: .4 }}
-            className="footer-content"
-          >
-            <p>
-              &copy; {new Date().getFullYear()}, All rights reserved. Powered by
-              TechiesKE.
-            </p>
-            <div className="social-media-icons">
+    <section className="footer">
+        <hr />
+        <motion.div
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ transitionTimingFunction: easeInOut, delay: .4 }}
+          className="footer-content"
+        >
+          <p className="copyright">
+            &copy; {new Date().getFullYear()}, TechiesKE. All rights reserved.
+          </p>
+          <div className="social-media-icons">
+            {socialMediaLinks.map((link, index) => (
               <a
-                href="https://www.linkedin.com/in/geraldokoth/"
+                key={index}
+                href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
+                title={link.label}
               >
-                <i className="fa-brands fa-linkedin"></i>
+                <i className={link.iconClass}></i>
               </a>
-              <a
-                href="https://github.com/GeraldOkoth"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="fa-brands fa-github"></i>
-              </a>
-              <a
-                href="https://www.youtube.com/@geraldokothKE"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="fa-brands fa-youtube"></i>
-              </a>
-              <a
-                href="https://x.com/gerald_okothKE"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="fa-brands fa-twitter"></i>
-              </a>
-              <a
-                href="https://www.instagram.com/okothgerald449"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="fa-brands fa-instagram"></i>
-              </a>
-              <a
-                href="https://www.facebook.com/gerald.okoth.944/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="fa-brands fa-facebook"></i>
-              </a>
-            </div>
-          </motion.div>
-        </section>
-      </footer>
-    </>
+            ))}
+          </div>
+        </motion.div>
+    </section>
   );
 }
 

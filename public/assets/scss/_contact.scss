@@ -4,7 +4,12 @@
 
 // Contact Section
 .contact {
-  background: linear-gradient(135deg, var(--theme-background) 0%, var(--theme-backgroundAlt) 50%, var(--theme-background) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--theme-background) 0%,
+    var(--theme-backgroundAlt) 50%,
+    var(--theme-background) 100%
+  );
   padding: v.$sectionPaddingDesktop;
   position: relative;
   overflow: hidden;
@@ -18,7 +23,11 @@
     right: -15%;
     width: 500px;
     height: 500px;
-    background: radial-gradient(circle, rgba(0, 191, 255, 0.08) 0%, transparent 70%);
+    background: radial-gradient(
+      circle,
+      rgba(0, 191, 255, 0.08) 0%,
+      transparent 70%
+    );
     border-radius: 50%;
     pointer-events: none;
   }
@@ -30,7 +39,11 @@
     left: -10%;
     width: 600px;
     height: 600px;
-    background: radial-gradient(circle, rgba(147, 51, 234, 0.06) 0%, transparent 70%);
+    background: radial-gradient(
+      circle,
+      rgba(147, 51, 234, 0.06) 0%,
+      transparent 70%
+    );
     border-radius: 50%;
     pointer-events: none;
   }
@@ -50,7 +63,13 @@
     .contact-title {
       font-size: 4rem;
       font-weight: 900;
-      font-family: 'Inter', 'Poppins', 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-family:
+        "Inter",
+        "Poppins",
+        "Montserrat",
+        -apple-system,
+        BlinkMacSystemFont,
+        sans-serif;
       color: var(--theme-text);
       margin-bottom: 1.5rem;
       letter-spacing: -1.5px;
@@ -58,7 +77,11 @@
       text-transform: capitalize;
 
       .highlight {
-        background: linear-gradient(135deg, var(--theme-primary) 0%, var(--theme-secondary) 100%);
+        background: linear-gradient(
+          135deg,
+          var(--theme-primary) 0%,
+          var(--theme-secondary) 100%
+        );
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -118,7 +141,11 @@
         width: 55px;
         height: 55px;
         min-width: 55px;
-        background: linear-gradient(135deg, var(--theme-background), var(--theme-backgroundAlt));
+        background: linear-gradient(
+          135deg,
+          var(--theme-background),
+          var(--theme-backgroundAlt)
+        );
         border-radius: 14px;
         display: flex;
         align-items: center;
@@ -131,7 +158,11 @@
 
       &:hover .info-icon {
         transform: scale(1.15) rotate(-5deg);
-        background: linear-gradient(135deg, rgba(var(--theme-background), 0.5), rgba(var(--theme-backgroundAlt), 0.5));
+        background: linear-gradient(
+          135deg,
+          rgba(var(--theme-background), 0.5),
+          rgba(var(--theme-backgroundAlt), 0.5)
+        );
         box-shadow: 0 2.5px 10px rgba(var(--theme-primary), 0.5);
       }
 
@@ -270,7 +301,7 @@
         &:focus {
           background: rgba(var(--theme-text), 0.08);
           border-color: rgba(var(--theme-primary), 0.6);
-          box-shadow: 
+          box-shadow:
             0 0 0 4px rgba(var(--theme-primary), 0.1),
             0 5px 25px rgba(var(--theme-primary), 0.15);
           transform: translateY(-2px);
@@ -291,7 +322,11 @@
 
     .submit-btn {
       // @include b.button();
-      background: linear-gradient(135deg, var(--theme-primary) 0%, var(--theme-secondary) 100%);
+      background: linear-gradient(
+        135deg,
+        var(--theme-primary) 0%,
+        var(--theme-secondary) 100%
+      );
       color: var(--theme-text);
       font-size: 1.1rem;
       font-weight: 700;
@@ -317,14 +352,23 @@
         left: -100%;
         width: 100%;
         height: 100%;
-        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.25),
+          transparent
+        );
         transition: left 0.6s ease;
       }
 
       &:hover:not(:disabled) {
         transform: translateY(-4px);
         box-shadow: 0 12px 40px rgba(var(--theme-primary), 0.45);
-        background: linear-gradient(135deg, var(--theme-background) 0%, var(--theme-backgroundAlt) 100%);
+        background: linear-gradient(
+          135deg,
+          var(--theme-background) 0%,
+          var(--theme-backgroundAlt) 100%
+        );
 
         &::before {
           left: 100%;
@@ -337,7 +381,7 @@
 
       &:active:not(:disabled) {
         transform: translateY(-2px);
-        
+
         .send-icon {
           font-size: 1.1rem;
           transition: transform 0.3s ease;
@@ -349,7 +393,6 @@
         opacity: 0.7;
         cursor: not-allowed;
       }
-
 
       .spinner {
         width: 20px;
