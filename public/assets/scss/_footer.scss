@@ -38,3 +38,8 @@
     font-size: 1.5em;
   }
 }
+
+// Responsive Design - Mobile (768px and below)
+@media screen and (max-width: v.$mobile) {
+  @include r.footerPhone();
+}

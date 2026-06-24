@@ -21,9 +21,9 @@
     max-width: 1400px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    padding: .2rem 2.5rem;
+    padding: 0.2rem 2.5rem;
     gap: 1.5rem;
   }
 
@@ -45,16 +45,19 @@
       .logo-text {
         font-size: 1.3rem;
         font-weight: 700;
-        font-family: 'Inter', 'Poppins', sans-serif;
-        background: linear-gradient(135deg, var(--theme-text) 0%, var(--theme-primary) 100%);
+        font-family: "Inter", "Poppins", sans-serif;
+        background: linear-gradient(
+          135deg,
+          var(--theme-text) 0%,
+          var(--theme-primary) 100%
+        );
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
         letter-spacing: -0.5px;
 
         @media screen and (max-width: 768px) {
-          display: none;  // Hidden on mobile by default
-
+          display: none; // Hidden on mobile by default
         }
       }
 
@@ -63,7 +66,6 @@
 
         img {
           border-color: var(--theme-primary);
-          box-shadow: 0 0 20px rgba(255, 123, 0, 0.4);
         }
       }
     }
@@ -87,7 +89,7 @@
         color: var(--theme-primary);
         font-size: 0.95rem;
         font-weight: 600;
-        font-family: 'Inter', 'Poppins', 'Segoe UI', sans-serif;
+        font-family: "Inter", "Poppins", "Segoe UI", sans-serif;
         letter-spacing: 0.3px;
         border-radius: 8px;
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -103,7 +105,11 @@
           transform: translateX(-50%);
           width: 0;
           height: 2px;
-          background: linear-gradient(90deg, var(--theme-primary), var(--theme-secondary));
+          background: linear-gradient(
+            90deg,
+            var(--theme-primary),
+            var(--theme-secondary)
+          );
           border-radius: 2px;
           transition: width 0.3s ease;
         }
@@ -169,7 +175,7 @@
       position: absolute;
       top: calc(100% + 1rem);
       right: 0;
-      background: var(--theme-background);
+      background: var(--theme-themeMenu);
       backdrop-filter: blur(20px);
       border: 1px solid rgba(var(--theme-border), 0.1);
       border-radius: 12px;
@@ -212,7 +218,7 @@
         }
 
         &:hover {
-          background: rgba(var(--theme-primary), 0.1);
+          background: var(--theme-navbar);
           color: var(--theme-background);
         }
 
@@ -255,10 +261,10 @@
         transform: rotate(-45deg) translate(8px, -4px);
         background: var(--theme-primary);
       }
-    }
 
-    &:hover .bar {
-      background: var(--theme-primary);
+      &:hover .bar {
+        background: var(--theme-primary);
+      }
     }
   }
 

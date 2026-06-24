@@ -197,7 +197,7 @@ html {
   max-width: 1400px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   padding: 0.2rem 2.5rem;
   gap: 1.5rem;
@@ -234,7 +234,6 @@ html {
 }
 .navbar .nav-logo a:hover img {
   border-color: var(--theme-primary);
-  box-shadow: 0 0 20px rgba(255, 123, 0, 0.4);
 }
 .navbar .nav-links {
   display: flex;
@@ -321,7 +320,7 @@ html {
   position: absolute;
   top: calc(100% + 1rem);
   right: 0;
-  background: var(--theme-background);
+  background: var(--theme-themeMenu);
   backdrop-filter: blur(20px);
   border: 1px solid rgba(var(--theme-border), 0.1);
   border-radius: 12px;
@@ -361,7 +360,7 @@ html {
   font-size: 1.1rem;
 }
 .navbar .theme-toggle-wrapper .theme-menu .theme-option:hover {
-  background: rgba(var(--theme-primary), 0.1);
+  background: var(--theme-navbar);
   color: var(--theme-background);
 }
 .navbar .theme-toggle-wrapper .theme-menu .theme-option.active {
@@ -394,7 +393,7 @@ html {
   transform: rotate(-45deg) translate(8px, -4px);
   background: var(--theme-primary);
 }
-.navbar .nav-toggle:hover .bar {
+.navbar .nav-toggle.open:hover .bar {
   background: var(--theme-primary);
 }
 .navbar .mobile-menu-overlay {
@@ -421,7 +420,7 @@ html {
     right: -100%;
     width: 280px;
     height: 100vh;
-    background: linear-gradient(135deg, #0a0520 0%, #1a0f3e 100%);
+    background: var(--theme-background);
     flex-direction: column;
     padding: 5rem 2rem 2rem;
     gap: 0;
@@ -435,7 +434,7 @@ html {
   }
   .navbar .nav-links li {
     width: 100%;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(var(--theme-primary), 0.5);
   }
   .navbar .nav-links li .nav-link {
     width: 100%;
@@ -447,8 +446,11 @@ html {
     display: none;
   }
   .navbar .nav-links li .nav-link.active {
-    background: rgba(255, 123, 0, 0.15);
+    background: rgba(var(--theme-primary), 0.2);
     border-left: 3px solid var(--theme-primary);
+  }
+  .navbar .nav-links li .nav-link:hover {
+    color: var(--theme-themeNavLinks);
   }
   .navbar .theme-toggle-wrapper .theme-menu {
     right: auto;
@@ -475,10 +477,14 @@ html {
   .navbar .nav-links {
     width: 260px;
     padding: 4.5rem 1.5rem 2rem;
+    background: var(--theme-background);
   }
   .navbar .nav-links li .nav-link {
     padding: 0.9rem 1.2rem;
     font-size: 1rem;
+  }
+  .navbar .nav-links li .nav-link:hover {
+    color: var(--theme-themeNavLinks);
   }
 }
 .home-page {
@@ -2274,11 +2280,9 @@ html {
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 6px 20px rgba(255, 123, 0, 0.3);
 }
 .project-section .no-project-message .empty-state .view-mini-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 30px rgba(255, 123, 0, 0.4);
 }
 .project-section .project-card {
   background: var(--theme-backgroundAlt);
@@ -3928,4 +3932,14 @@ html {
   display: flex;
   gap: 1rem;
   font-size: 1.5em;
+}
+
+@media screen and (max-width: 480px) {
+  .footer {
+    padding: 1rem 1.25rem;
+  }
+  .footer .footer-content {
+    text-align: center;
+    flex-direction: column;
+  }
 }

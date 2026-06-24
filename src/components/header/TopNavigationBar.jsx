@@ -16,7 +16,9 @@ const THEMES = {
       text: "#ffffff",
       textMuted: "rgba(255, 255, 255, 0.7)",
       border: "rgba(255, 255, 255, 0.1)",
-      success: "#43e97b"
+      success: "#43e97b",
+      themeMenu: "#fff",
+      themeNavLinks: "#fff"
     }
   },
   light: {
@@ -31,24 +33,11 @@ const THEMES = {
       text: "#1a1a1a",
       textMuted: "rgba(10, 5, 32, 0.7)",
       border: "rgba(10, 5, 32, 0.1)",
-      success: "#22c55e"
+      success: "#22c55e",
+      themeMenu: "#353535",
+      themeNavLinks: "#000  "
     }
   },
-  // sunset: {
-  //   name: "Sunset",
-  //   icon: <FaPalette />,
-  //   colors: {
-  //     primary: "#ff6b6b",
-  //     secondary: "#ee5a6f",
-  //     background: "#2d1b69",
-  //     backgroundAlt: "#3d2479",
-  //     backgroundCard: "#332066",
-  //     text: "#ffffff",
-  //     textMuted: "rgba(255, 255, 255, 0.7)",
-  //     border: "rgba(255, 255, 255, 0.1)",
-  //     success: "#51cf66"
-  //   }
-  // },
   ocean: {
     name: "Ocean",
     icon: <FaPalette />,
@@ -61,7 +50,9 @@ const THEMES = {
       text: "#ffffff",
       textMuted: "rgba(255, 255, 255, 0.7)",
       border: "rgba(255, 255, 255, 0.1)",
-      success: "#10b981"
+      success: "#10b981",
+      themeMenu: "rgb(10, 5, 32)",
+      themeNavLinks: "#fff"
     }
   }
 };

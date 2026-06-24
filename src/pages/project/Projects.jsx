@@ -23,7 +23,7 @@ const allProjects = [
     likes: 0,
     views: 0,
     createdAt: "2024-10-22T10:00:00Z",
-    updatedAt: "2026-06-13T21:15:10Z",
+    updatedAt: "2026-06-24T21:15:10Z",
     demo: "https://geraldokoth.vercel.app",
     github: "https://github.com/GeraldOkoth/portfolio",
   },
@@ -438,7 +438,7 @@ function Projects() {
                 <h3>Available upon request</h3>
                 <p>
                   {activeScale === "major"
-                    ? "Projects in this category are private and availabele upon request. Check out my mini projects in the meantime."
+                    ? "Projects in this category are private and available upon request. Check out my mini projects in the meantime."
                     : "Projects in this category are coming soon."}
                 </p>
                 {activeScale === "major" && (
