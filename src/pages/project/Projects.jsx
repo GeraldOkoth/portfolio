@@ -23,7 +23,7 @@ const allProjects = [
     likes: 0,
     views: 0,
     createdAt: "2024-10-22T10:00:00Z",
-    updatedAt: "2026-06-24T21:15:10Z",
+    updatedAt: "2026-06-29T21:15:10Z",
     demo: "https://geraldokoth.vercel.app",
     github: "https://github.com/GeraldOkoth/portfolio",
   },
