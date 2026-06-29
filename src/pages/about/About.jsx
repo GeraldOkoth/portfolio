@@ -56,10 +56,11 @@ const About = () => {
                 <div className="mission-content">
                   <h3>Mission Statement</h3>
                   <p>
-                    To be a person of integrity, championing a just society that 
+                    {/* To be a person of integrity, championing a just society that 
                     recognizes, upholds, and protects human rights and freedoms, 
                     while inspiring others through my strengths and talent to 
-                    achieve a better quality of life.
+                    achieve a better quality of life. */}
+                    To build meaningful digital solutions with code, creativity, and a deep sense of purpose. I believe in learning with humility, growing through service, and creating with vision.
                   </p>
                 </div>
               </div>
