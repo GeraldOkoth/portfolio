@@ -52,7 +52,7 @@ const ServiceItem = ({ image, alt, title, description, icon, index }) => {
           <h3 className="service-title">{title}</h3>
           <button className="toggle-btn" aria-label={`View ${title} details`}>
             <FaArrowRight className={`arrow-icon ${isActive ? 'rotated' : ''}`} />
-  </button>
+          </button>
         </div>
       </div>
     </motion.div>
@@ -60,7 +60,7 @@ const ServiceItem = ({ image, alt, title, description, icon, index }) => {
 };
 
 // ServiceFeature Component for highlighting key service benefits
-const ServiceFeature = ({ icon, title, description, index }) => {
+const ServiceFeature = ({ icon, image, alt, title, description, index }) => {
   return (
     <motion.div
       className="service-feature"
@@ -68,12 +68,19 @@ const ServiceFeature = ({ icon, title, description, index }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.15 }}
-    >
-      <div className="feature-icon-wrapper">
-        <div className="feature-icon">{icon}</div>
+      >
+      <img
+          src={image}
+          alt={alt}
+          className="service-image"
+      />
+      <div className="service-feature-card">
+        <div className="feature-icon-wrapper">
+          <div className="feature-icon">{icon}</div>
+        </div>
+        <h3 className="feature-title">{title}</h3>
+        <p className="feature-description">{description}</p>
       </div>
-      <h3 className="feature-title">{title}</h3>
-      <p className="feature-description">{description}</p>
     </motion.div>
   );
 };
@@ -82,18 +89,24 @@ const ServiceFeature = ({ icon, title, description, index }) => {
 const Services = () => {
   const serviceFeatures = [
     {
+      image: "/images/affordable-pricing.png",
+      alt: "affordable pricing",
       icon: <FaDollarSign />,
       title: "Affordable Pricing",
       description:
         "High-quality services at competitive rates, ensuring the best value for your investment.",
     },
     {
+      image: "/images/guarateed-quality.png",
+      alt: "guarateed-quality",
       icon: <FaStar />,
       title: "Quality Guaranteed",
       description:
         "Delivering excellence in every project with attention to detail and client satisfaction.",
     },
     {
+      image: "/images/timely-delivery.png",
+      alt: "timely-delivery",
       icon: <FaCalendarCheck />,
       title: "Timely Delivery",
       description:

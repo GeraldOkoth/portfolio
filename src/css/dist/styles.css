@@ -793,38 +793,15 @@ html {
   position: relative;
   overflow: hidden;
   width: 100%;
+  height: 100%;
   border-radius: 50%;
-}
-.home-page .hero-image-wrapper .image-container .image-backdrop {
-  position: absolute;
-  top: -15%;
-  left: -15%;
-  width: 130%;
-  height: 130%;
-  background: linear-gradient(135deg, rgba(255, 123, 0, 0.1), rgba(99, 102, 241, 0.1));
-  border-radius: 50%;
-  filter: blur(70px);
-  z-index: 0;
-}
-.home-page .hero-image-wrapper .image-container .image-border {
-  position: absolute;
-  top: -4%;
-  left: -4%;
-  width: 108%;
-  height: 108%;
-  border-radius: 50%;
-  overflow: hidden;
-  background: linear-gradient(135deg, rgba(255, 123, 0, 0.18), rgba(99, 102, 241, 0.18));
-  border: 1px solid var(--theme-border);
-  backdrop-filter: blur(1px);
-  -webkit-backdrop-filter: blur(1px);
-  padding: 2px;
-  z-index: 1;
+  max-width: 500px;
+  margin: 0 auto;
 }
 .home-page .hero-image-wrapper .image-container .hero-image {
   position: relative;
   width: 100%;
-  height: auto;
+  height: 100%;
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -2995,53 +2972,75 @@ html {
   gap: 2rem;
   margin-bottom: 5rem;
 }
-.services-section .services-features .service-feature {
-  background: rgba(255, 255, 255, 0.2);
+.services-section .service-feature {
+  position: relative;
+  border-radius: 20px;
+}
+.services-section .service-feature .service-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  bottom: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: inherit;
+}
+.services-section .service-feature .service-feature-card {
+  background: rgba(255, 255, 255, 0.05);
   border: 1px solid var(--theme-border);
   border-radius: 20px;
   padding: 2.5rem 2rem;
   text-align: center;
   position: relative;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  height: 100%;
 }
-.services-section .services-features .service-feature:hover {
-  border-color: var(--theme-border);
-  transform: translateY(-10px);
-}
-.services-section .services-features .service-feature:hover .feature-icon-wrapper {
-  transform: scale(1.1);
-  background: linear-gradient 135deg, rgba(255, 123, 0, 0.1490196078), rgba(99, 102, 241, 0.1490196078);
-}
-.services-section .services-features .service-feature .feature-icon-wrapper {
+.services-section .service-feature .service-feature-card .feature-icon-wrapper {
   width: 80px;
   height: 80px;
   margin: 0 auto 1.5rem;
-  border-radius: 20px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.4s ease;
-  background: linear-gradient(135deg, var(--theme-backgroundAlt), rgba(99, 102, 241, 0.1254901961));
+  background-color: rgba(255, 255, 255, 0.5);
 }
-.services-section .services-features .service-feature .feature-icon-wrapper .feature-icon {
+.services-section .service-feature .service-feature-card .feature-icon-wrapper .feature-icon {
   font-size: 2.5rem;
   color: var(--theme-primary);
   transition: all 0.3s ease;
+  text-align: center;
 }
-.services-section .services-features .service-feature .feature-title {
+.services-section .service-feature .service-feature-card .feature-title {
   font-size: 1.4rem;
-  font-weight: 700;
-  color: var(--theme-text);
+  font-weight: 900;
+  color: #000;
   margin-bottom: 1rem;
   letter-spacing: -0.3px;
 }
-.services-section .services-features .service-feature .feature-description {
+.services-section .service-feature .service-feature-card .feature-description {
   font-size: 1rem;
   line-height: 1.7;
-  color: var(--theme-textMuted);
+  color: #000;
+  font-weight: 700;
+  padding: 0.6rem 0.5rem;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.services-section .service-feature:hover {
+  border-color: var(--theme-border);
+  transform: translateY(-10px);
+}
+.services-section .service-feature:hover .feature-icon-wrapper {
+  transform: scale(1.1);
+  background: linear-gradient 135deg, rgba(255, 123, 0, 0.1490196078), rgba(99, 102, 241, 0.1490196078);
 }
 .services-section .services-grid {
   display: grid;

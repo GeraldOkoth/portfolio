@@ -30,7 +30,7 @@ const THEMES = {
       background: "#f8f9fa",
       backgroundAlt: "#f5f5f5",
       backgroundCard: "#fafafa",
-      text: "#1a1a1a",
+      text: "#000",
       textMuted: "rgba(10, 5, 32, 0.7)",
       border: "rgba(10, 5, 32, 0.1)",
       success: "#22c55e",

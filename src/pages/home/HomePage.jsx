@@ -274,14 +274,14 @@ function HomePage() {
               transition={{ delay: 0.5 }}
             >
               <div className="image-container">
-                <div className="image-backdrop"></div>
-                <div className="image-border"></div>
+                {/* <div className="image-backdrop"></div> */}
+                {/* <div className="image-border"></div> */}
                 <img
                   src="/images/profile.JPG"
                   alt="Gerald Okoth - Frontend Developer & UI/UX Designer"
                   className="hero-image"
                 />
-                <div className="image-glow"></div>
+                {/* <div className="image-glow"></div> */}
               </div>
 
               {/* Floating Elements */}
