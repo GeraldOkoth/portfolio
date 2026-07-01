@@ -100,54 +100,61 @@
   .service-feature {
     position: relative;
     border-radius: 20px;
+    background: rgba(0, 0, 0, 0.2);
+    width: 100%;  
+    height: 100%;
+    margin: 0 auto;
 
-    .service-image {
+    .service-feature-image {
       position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0%;
-      bottom: 0;
+      width: inherit;
+      height: inherit;
       object-fit: cover;
       object-position: center;
       border-radius: inherit;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      margin: 0 auto;
     }
 
     .service-feature-card {
-      background: rgba(255, 255, 255, 0.05);
+      background: rgba(0, 0, 0, 0.3);
       border: 1px solid var(--theme-border);
-      border-radius: 20px;
+      border-radius: inherit;
       padding: 2.5rem 2rem;
       text-align: center;
       position: relative;
       transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      backdrop-filter: blur(3px);
-      -webkit-backdrop-filter: blur(3px);
-      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(1px);
+      -webkit-backdrop-filter: blur(1px);
       height: 100%;
+      width: 100%;
 
       .feature-icon-wrapper {
-        width: 80px;
-        height: 80px;
+        width: 60px;
+        height: 60px;
         margin: 0 auto 1.5rem;
         border-radius: 10px;
         display: flex;
         align-items: center;
         justify-content: center;
         transition: all 0.4s ease;
-        background-color: rgba(255, 255, 255, 0.5);
+        background-color: rgba(255, 255, 255, 0.2);
 
         .feature-icon {
-          font-size: 2.5rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 2.3rem;
           color: var(--theme-primary);
           transition: all 0.3s ease;
-          text-align: center;
+          align-items: center;
         }
       }
 
       .feature-title {
         font-size: 1.4rem;
         font-weight: 900;
-        color: #000;
+        color: #fff;
         margin-bottom: 1rem;
         letter-spacing: -0.3px;
       }
@@ -155,11 +162,12 @@
       .feature-description {
         font-size: 1rem;
         line-height: 1.7;
-        color: #000;
-        font-weight: 700;
+        color: #fff;
         padding: 0.6rem 0.5rem;
         border-radius: 8px;
-        background-color: rgba(255, 255, 255, 0.5);
+        background-color: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       }
     }
 

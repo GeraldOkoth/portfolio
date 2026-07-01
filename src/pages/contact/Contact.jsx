@@ -84,7 +84,7 @@ function Contact() {
       extraLinks: [
         {
           text: "WhatsApp Me",
-          url: "https://wa.me/+254778852760",
+          url: "https://wa.me/+254778852760?text=Hello%20Gerald,%20I%20would%20like%20to%20",
           icon: <FaWhatsapp />
         }
       ]

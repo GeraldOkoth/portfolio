@@ -69,11 +69,11 @@ const ServiceFeature = ({ icon, image, alt, title, description, index }) => {
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.15 }}
       >
-      <img
+      {/* <img
           src={image}
           alt={alt}
-          className="service-image"
-      />
+          className="service-feature-image"
+      /> */}
       <div className="service-feature-card">
         <div className="feature-icon-wrapper">
           <div className="feature-icon">{icon}</div>
