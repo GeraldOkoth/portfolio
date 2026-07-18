@@ -1,7 +1,6 @@
-import React, { useState } from "react";
-import Slider from "react-slick";
-import { motion } from "framer-motion";
-import { FaChevronLeft, FaChevronRight, FaStar } from "react-icons/fa";
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { FaStar, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import ProjectCard from "./ProjectCard";
 
 const allProjects = [
@@ -11,7 +10,7 @@ const allProjects = [
     scale: "mini",
     title: "Portfolio Website",
     description:
-      "A modern personal portfolio built with React and Sass. This portfolio showcases my frontend and ui/ux skills, projects and services.",
+      "A modern personal portfolio built with React and Sass showcasing frontend and UI/UX skills, projects and services.",
     technologies: ["React", "Sass", "Framer Motion", "JavaScript"],
     image: "/images/portfolio.png",
     features: [
@@ -20,10 +19,11 @@ const allProjects = [
       "Project showcase with filtering",
       "Contact form integration",
     ],
-    likes: 0,
-    views: 0,
+    reasonForBuilding: "To showcase my frontend development and UI/UX design skills with a modern, interactive portfolio that stands out to potential employers.",
+    challengesFaced: "Creating responsive layouts, implementing smooth animations, integrating theme toggle system, optimizing performance for mobile devices.",
+    problemSolves: "Provides a centralized platform for potential clients and employers to view my projects, skills, and services in an engaging and professional manner.",
     createdAt: "2024-10-22T10:00:00Z",
-    updatedAt: "2026-06-29T21:15:10Z",
+    updatedAt: "2026-03-20T21:12:00Z",
     demo: "https://geraldokoth.vercel.app",
     github: "https://github.com/GeraldOkoth/portfolio",
   },
@@ -33,7 +33,7 @@ const allProjects = [
     scale: "mini",
     title: "Weather Dashboard",
     description:
-      "A weather dashboard application that displays current weather information and forecasts for various locations. Built with React, Tailwind CSS and integrated with a weather API.",
+      "A weather dashboard application displaying current weather information and forecasts for various locations using REST API.",
     technologies: ["React", "JavaScript", "REST API", "Tailwind CSS"],
     image: "/images/weather-dashboard.png",
     features: [
@@ -42,8 +42,9 @@ const allProjects = [
       "5-day weather forecast display",
       "Responsive design with Tailwind CSS",
     ],
-    likes: 0,
-    views: 0,
+    reasonForBuilding: "To practice API integration, state management, and create a useful tool for users to check weather information across different locations.",
+    challengesFaced: "Handling API rate limits, parsing complex JSON responses, implementing search debouncing, handling location-based data efficiently.",
+    problemSolves: "Allows users to quickly check current weather conditions and forecasts for any location with a clean, intuitive interface.",
     createdAt: "2025-06-22T10:00:00Z",
     updatedAt: "2026-02-13T15:30:00Z",
     github: "https://github.com/GeraldOkoth/weather-dashboard",
@@ -55,7 +56,7 @@ const allProjects = [
     scale: "mini",
     title: "HTML & CSS Landing Page",
     description:
-      "A responsive landing page built with HTML and CSS. This project demonstrates modern web design principles, including semantic HTML, CSS Grid and Flexbox layouts, and responsive design techniques.",
+      "A responsive landing page demonstrating modern web design principles with semantic HTML, CSS Grid, and Flexbox.",
     technologies: ["HTML", "CSS", "Responsive Design"],
     image: "/images/html-css-landing-page.png",
     features: [
@@ -64,8 +65,9 @@ const allProjects = [
       "Responsive design for mobile and desktop",
       "Clean and minimalist design",
     ],
-    likes: 0,
-    views: 0,
+    reasonForBuilding: "To master fundamental HTML and CSS skills while creating a beautiful, responsive landing page without JavaScript.",
+    challengesFaced: "Creating flexible layouts without frameworks, ensuring cross-browser compatibility, optimizing for various screen sizes without media queries complexity.",
+    problemSolves: "Demonstrates solid foundation in semantic HTML and CSS, proving ability to create responsive designs from scratch.",
     createdAt: "2025-06-22T10:00:00Z",
     updatedAt: "2026-02-13T15:30:00Z",
     github: "https://github.com/GeraldOkoth/alx_html_css",
@@ -77,7 +79,7 @@ const allProjects = [
     scale: "mini",
     title: "Simple To Do List App",
     description:
-      "A simple to-do list application that allows users to add, display, and remove tasks. This project focuses on utilizing advanced DOM manipulation techniques to interact dynamically with the webpage, persist data using localStorage, ensuring that tasks are saved even after the browser is closed.",
+      "A to-do list application with advanced DOM manipulation, localStorage persistence, and dynamic task management.",
     technologies: ["JavaScript", "HTML", "CSS", "LocalStorage"],
     image: "/images/simple-to-do.png",
     features: [
@@ -86,8 +88,9 @@ const allProjects = [
       "Filter tasks by status",
       "Responsive design",
     ],
-    likes: 0,
-    views: 0,
+    reasonForBuilding: "To practice DOM manipulation and localStorage API while creating a practical productivity tool.",
+    challengesFaced: "Managing state without frameworks, handling localStorage limitations, creating efficient DOM updates, ensuring data persistence.",
+    problemSolves: "Provides users with a lightweight, persistent task management application that works without internet connection.",
     createdAt: "2025-06-22T10:00:00Z",
     updatedAt: "2025-06-26T15:30:00Z",
     github: "https://github.com/GeraldOkoth/dynamic-to-do-list-js",
@@ -99,7 +102,7 @@ const allProjects = [
     scale: "mini",
     title: "Advanced To do List App",
     description:
-      "Developed an interactive web application focused on dynamic content generation, data persistence, and JSON handling. The project highlights advanced DOM manipulation, browser storage (localStorage & sessionStorage), and efficient JSON data management.",
+      "An interactive web application focusing on dynamic content generation, data persistence, and JSON handling.",
     technologies: ["JavaScript", "JSON", "SessionStorage", "DOM API"],
     image: "/images/advanced-to-do.png",
     features: [
@@ -108,8 +111,9 @@ const allProjects = [
       "Browser storage implementation",
       "Advanced DOM manipulation",
     ],
-    likes: 0,
-    views: 0,
+    reasonForBuilding: "To advance JavaScript skills with JSON data handling, session management, and complex DOM operations.",
+    challengesFaced: "Parsing and stringifying JSON, managing multiple storage types, handling large data sets efficiently, debugging complex interactions.",
+    problemSolves: "Demonstrates advanced JavaScript capabilities and provides a feature-rich task management application with multiple storage options.",
     createdAt: "2025-07-21T11:20:00Z",
     updatedAt: "2025-07-21T11:20:00Z",
     github:
@@ -122,7 +126,7 @@ const allProjects = [
     scale: "mini",
     title: "GitHub User Profile Search",
     description:
-      "A GitHub User Profile Search Application developed using React and Tailwindcss. This application enables users to search for GitHub profiles and view detailed information including repositories, followers, and activity.",
+      "A GitHub User Profile Search Application using React and Tailwindcss for viewing detailed user information and repositories.",
     technologies: ["React", "Tailwind CSS", "GitHub API", "REST API"],
     image: "/images/github-user-search.png",
     features: [
@@ -131,8 +135,9 @@ const allProjects = [
       "User statistics display",
       "Responsive design with Tailwind",
     ],
-    likes: 0,
-    views: 0,
+    reasonForBuilding: "To practice API integration with React, implement search functionality, and create a tool for exploring GitHub profiles.",
+    challengesFaced: "GitHub API rate limiting, handling real-time search, managing async operations, displaying large data sets efficiently.",
+    problemSolves: "Enables developers to quickly search and view GitHub user profiles and repositories without leaving your app.",
     createdAt: "2025-08-20T10:08:21Z",
     updatedAt: "2025-08-22T15:02:37Z",
     demo: "https://github-userprofile-search.vercel.app/",
@@ -145,7 +150,7 @@ const allProjects = [
     scale: "mini",
     title: "Portfolio Website Replica UI Design",
     description:
-      "This is a UI design for a portfolio website replica created using Figma to replicate a pixel perfect design. The design showcases a modern web layout user experience and visual appeal.",
+      "A UI design for a portfolio website replica created in Figma, showcasing modern web layout and user experience.",
     technologies: ["Figma", "UI Design", "UX Design", "Prototyping"],
     image: "/images/popular-tutorials.png",
     features: [
@@ -154,8 +159,9 @@ const allProjects = [
       "Interactive prototypes",
       "User-centered design approach",
     ],
-    likes: 0,
-    views: 0,
+    reasonForBuilding: "To practice UI/UX design principles and create a pixel-perfect portfolio design in Figma.",
+    challengesFaced: "Maintaining design consistency, creating responsive layouts in Figma, user testing and feedback implementation.",
+    problemSolves: "Provides a reference design for building modern portfolio websites with excellent UX.",
     createdAt: "2025-06-15T10:00:00Z",
     updatedAt: "2025-06-15T10:00:00Z",
     demo: "https://www.figma.com/proto/yfdgqxEwlKfLn0VniPR1Bw/Homepage--Copy-?node-id=3558-0&p=f&t=qxPSwRJODEMjHunt-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1",
@@ -166,7 +172,7 @@ const allProjects = [
     scale: "mini",
     title: "ALX ehub Login Page Clone",
     description:
-      "This is a UI figma file designed to replicate ALX ehub login page. The aim of building this project is to enhance my UI/UX design skills and to create a visually appealing and user-friendly login interface.",
+      "A UI Figma design replicating ALX ehub login page with focus on visual appeal and user-friendly interface.",
     technologies: ["Figma", "UI Design", "Prototyping"],
     image: "/images/alx-ehub-login.png",
     features: [
@@ -175,8 +181,9 @@ const allProjects = [
       "Responsive design",
       "Modern UI elements",
     ],
-    likes: 0,
-    views: 0,
+    reasonForBuilding: "To enhance UI/UX design skills through design replication and prototype creation.",
+    challengesFaced: "Matching exact pixel measurements, creating interactive prototypes, implementing form validation visuals.",
+    problemSolves: "Demonstrates UI design proficiency and provides a reference for modern login page design.",
     createdAt: "2025-06-15T10:00:00Z",
     updatedAt: "2025-06-15T10:00:00Z",
     demo: "https://www.figma.com/proto/42jg1O8qpxNUVZ5DqrCJfo/alx_ehub_login_prototype?node-id=2-2&p=f&t=CVYcshduHnTXPh24-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1",
@@ -187,7 +194,7 @@ const allProjects = [
     scale: "mini",
     title: "Portfolio Website replica UI Design",
     description:
-      "This is a UI design for a portfolio website replica created using Figma. The design showcases a modern and responsive layout, focusing on user experience and visual appeal.",
+      "A modern and responsive portfolio website UI design created in Figma with focus on user experience.",
     technologies: ["Figma", "UI Design", "UX Design", "Prototyping"],
     image: "/images/alx-ui-ux-design.png",
     features: [
@@ -196,8 +203,9 @@ const allProjects = [
       "Interactive prototypes",
       "User-centered design approach",
     ],
-    likes: 0,
-    views: 0,
+    reasonForBuilding: "To showcase ability to design complete website layouts with responsive design principles.",
+    challengesFaced: "Creating flexible component systems, ensuring design scalability, implementing interactive prototypes.",
+    problemSolves: "Provides comprehensive design system and reference for building responsive portfolio websites.",
     createdAt: "2025-06-15T10:00:00Z",
     updatedAt: "2026-02-13T10:00:00Z",
     demo: "https://www.figma.com/proto/9XnDkxThivZIAQu7ODeNLu/headphones--Copy-?node-id=0-2&p=f&t=joEfmfZWZj1SVAYl-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1",
@@ -208,7 +216,7 @@ const allProjects = [
     scale: "mini",
     title: "Weather Dashboard UI Design",
     description:
-      "This is a UI design for a weather dashboard created using Figma. The design showcases a modern and responsive layout, focusing on user experience and visual appeal.",
+      "A modern and responsive weather dashboard UI design created in Figma with focus on data visualization.",
     technologies: ["Figma", "UI Design", "UX Design", "Prototyping"],
     image: "/images/weather-dashboard.png",
     features: [
@@ -217,8 +225,9 @@ const allProjects = [
       "Interactive prototypes",
       "User-centered design approach",
     ],
-    likes: 0,
-    views: 0,
+    reasonForBuilding: "To practice designing data-heavy interfaces with good information hierarchy.",
+    challengesFaced: "Organizing complex information, making data readable, creating responsive data visualizations.",
+    problemSolves: "Demonstrates ability to design interfaces for complex data presentation.",
     createdAt: "2025-06-15T10:00:00Z",
     updatedAt: "2025-09-15T10:00:00Z",
     demo: "https://www.figma.com/design/9oydJHmDDljDJ6yKl7MxnZ/Untitled?node-id=0-1&t=VeOt0lvOxIxB5FZk-1",
@@ -229,8 +238,8 @@ const allProjects = [
     scale: "mini",
     title: "Recollection Poster",
     description:
-      "A visually striking poster design created using Canva. This project demonstrates effective use of typography, composition, and color harmony to create an engaging and memorable visual experience.",
-    technologies: ["canva", "Graphic Design", "Poster Design"],
+      "A visually striking poster design created using Canva demonstrating effective use of typography and composition.",
+    technologies: ["Canva", "Graphic Design", "Poster Design"],
     image: "/images/recollection.png",
     features: [
       "Visually striking design",
@@ -238,8 +247,9 @@ const allProjects = [
       "Balanced composition",
       "Color harmony",
     ],
-    likes: 0,
-    views: 0,
+    reasonForBuilding: "To practice graphic design fundamentals and create engaging visual content.",
+    challengesFaced: "Balancing visual hierarchy, choosing complementary colors, creating readable typography.",
+    problemSolves: "Demonstrates graphic design skills and provides template for creating engaging posters.",
     createdAt: "2025-06-15T10:00:00Z",
     updatedAt: "2025-11-15T10:00:00Z",
     demo: "https://www.canva.com/design/DAG6eMuCDEI/-5_Vd8ehf61k12ITgU1cBg/view?utm_content=DAG6eMuCDEI&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h981fd4f8fa",
@@ -250,8 +260,8 @@ const allProjects = [
     scale: "mini",
     title: "Choir recruitment Poster",
     description:
-      "A visually striking poster design created using Canva. This project demonstrates effective use of typography, composition, and color harmony to create an engaging and memorable visual experience.",
-    technologies: ["canva", "Graphic Design", "Poster Design"],
+      "A visually striking poster design created using Canva for choir recruitment with focus on visual appeal.",
+    technologies: ["Canva", "Graphic Design", "Poster Design"],
     image: "/images/choir-recruitment.png",
     features: [
       "Visually striking design",
@@ -259,8 +269,9 @@ const allProjects = [
       "Balanced composition",
       "Color harmony",
     ],
-    likes: 0,
-    views: 0,
+    reasonForBuilding: "To create effective promotional material for a community event.",
+    challengesFaced: "Making text readable on complex backgrounds, creating emotional appeal, balancing imagery and text.",
+    problemSolves: "Provides effective promotional material for event recruitment.",
     createdAt: "2025-06-15T10:00:00Z",
     updatedAt: "2025-09-15T10:00:00Z",
     demo: "https://www.canva.com/design/DAGwZr5TnIg/F0UI1vZPUXykGkVczuyzeQ/view?utm_content=DAGwZr5TnIg&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h68ea20605a",
@@ -271,31 +282,30 @@ const categoryTabs = ["frontend", "uiux", "graphic"];
 const sortTabs = ["latest", "oldest"];
 const scaleTabs = ["all", "major", "mini"];
 
-// Custom Arrow Components
-const NextArrow = ({ onClick }) => (
-  <button
-    className="slick-arrow slick-next"
-    onClick={onClick}
-    aria-label="Next project"
-  >
-    <FaChevronRight />
-  </button>
-);
-
-const PrevArrow = ({ onClick }) => (
-  <button
-    className="slick-arrow slick-prev"
-    onClick={onClick}
-    aria-label="Previous project"
-  >
-    <FaChevronLeft />
-  </button>
-);
-
 function Projects() {
   const [activeCategory, setActiveCategory] = useState("frontend");
   const [sortType, setSortType] = useState("latest");
-  const [activeScale, setActiveScale] = useState("all");
+  const [activeScale, setActiveScale] = useState("mini");
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [gridSize, setGridSize] = useState({ cols: 3, rows: 3 });
+
+  // Set grid size based on screen width
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) {
+        setGridSize({ cols: 3, rows: 3 });
+      } else if (window.innerWidth >= 768) {
+        setGridSize({ cols: 2, rows: 2 });
+      } else {
+        setGridSize({ cols: 1, rows: 1 });
+      }
+      setCurrentSlide(0); // Reset to first slide on resize
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   // Filter and sort
   const filtered = allProjects
@@ -312,42 +322,32 @@ function Projects() {
       return 0;
     });
 
-  const sliderSettings = {
-    dots: true,
-    infinite: filtered.length > 2,
-    speed: 500,
-    slidesToShow: Math.min(4, filtered.length),
-    slidesToScroll: 1,
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: Math.min(3, filtered.length),
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: Math.min(2, filtered.length),
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
+  const projectsPerSlide = gridSize.cols * gridSize.rows;
+  const totalSlides = Math.ceil(filtered.length / projectsPerSlide);
+  const startIndex = currentSlide * projectsPerSlide;
+  const endIndex = startIndex + projectsPerSlide;
+  const currentProjects = filtered.slice(startIndex, endIndex);
+
+  const handleNextSlide = () => {
+    if (currentSlide < totalSlides - 1) {
+      setCurrentSlide(currentSlide + 1);
+    }
+  };
+
+  const handlePrevSlide = () => {
+    if (currentSlide > 0) {
+      setCurrentSlide(currentSlide - 1);
+    }
+  };
+
+  const goToSlide = (slideIndex) => {
+    setCurrentSlide(slideIndex);
   };
 
   return (
     <section className="project-section" id="projects">
       <div className="projects-container">
+        {/* Header */}
         <motion.div
           className="projects-header"
           initial={{ opacity: 0, y: -30 }}
@@ -359,11 +359,11 @@ function Projects() {
             My <span className="highlight">Projects</span>
           </h2>
           <p className="projects-subtitle">
-            Explore my work across frontend development, UI/UX design, and
-            graphic design
+            Explore my work across frontend development, UI/UX design, and graphic design
           </p>
         </motion.div>
 
+        {/* Filters */}
         <motion.div
           className="projects-filters"
           initial={{ opacity: 0, y: -20 }}
@@ -380,7 +380,10 @@ function Projects() {
                   className={`filter-btn ${
                     activeScale === scale ? "active" : ""
                   }`}
-                  onClick={() => setActiveScale(scale)}
+                  onClick={() => {
+                    setActiveScale(scale);
+                    setCurrentSlide(0);
+                  }}
                 >
                   {scale === "major" && <FaStar className="star-icon" />}
                   {scale.charAt(0).toUpperCase() + scale.slice(1)}
@@ -398,7 +401,10 @@ function Projects() {
                   className={`filter-btn ${
                     tab === activeCategory ? "active" : ""
                   }`}
-                  onClick={() => setActiveCategory(tab)}
+                  onClick={() => {
+                    setActiveCategory(tab);
+                    setCurrentSlide(0);
+                  }}
                 >
                   {tab.charAt(0).toUpperCase() + tab.slice(1)}
                 </button>
@@ -415,7 +421,10 @@ function Projects() {
                   className={`filter-btn ${
                     sort === sortType ? "active" : ""
                   }`}
-                  onClick={() => setSortType(sort)}
+                  onClick={() => {
+                    setSortType(sort);
+                    setCurrentSlide(0);
+                  }}
                 >
                   {sort.charAt(0).toUpperCase() + sort.slice(1)}
                 </button>
@@ -424,8 +433,9 @@ function Projects() {
           </div>
         </motion.div>
 
+        {/* Projects Grid */}
         <motion.div
-          className="carousel-wrapper"
+          className="projects-grid-wrapper"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -435,10 +445,10 @@ function Projects() {
             <div className="no-project-message">
               <div className="empty-state">
                 <FaStar className="empty-icon" />
-                <h3>Available upon request</h3>
+                <h3>No {activeScale} projects yet</h3>
                 <p>
                   {activeScale === "major"
-                    ? "Projects in this category are private and available upon request. Check out my mini projects in the meantime."
+                    ? "Major projects are coming soon! Check out my mini projects in the meantime."
                     : "Projects in this category are coming soon."}
                 </p>
                 {activeScale === "major" && (
@@ -455,15 +465,75 @@ function Projects() {
             <>
               <div className="project-count">
                 <span className="count-badge">
-                  {filtered.length}{" "}
-                  {filtered.length === 1 ? "Project" : "Projects"}
+                  {filtered.length} {filtered.length === 1 ? "Project" : "Projects"}
                 </span>
               </div>
-              <Slider {...sliderSettings}>
-                {filtered.map((project) => (
-                  <ProjectCard key={project.id} project={project} />
-                ))}
-              </Slider>
+
+              {/* Grid Container */}
+              <div className="projects-grid-container">
+                <AnimatePresence mode="fade">
+                  <motion.div
+                    key={currentSlide}
+                    className="projects-grid"
+                    style={{
+                      gridTemplateColumns: `repeat(${gridSize.cols}, 1fr)`,
+                      gridTemplateRows: `repeat(${gridSize.rows}, 1fr)`,
+                    }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.4 }}
+                  >
+                    {currentProjects.map((project, index) => (
+                      <ProjectCard
+                        key={project.id}
+                        project={project}
+                        index={index}
+                      />
+                    ))}
+                  </motion.div>
+                </AnimatePresence>
+              </div>
+
+              {/* Pagination Controls */}
+              {totalSlides > 1 && (
+                <div className="pagination-controls">
+                  <button
+                    className="pagination-btn prev-btn"
+                    onClick={handlePrevSlide}
+                    disabled={currentSlide === 0}
+                    aria-label="Previous slide"
+                  >
+                    <FaChevronLeft />
+                  </button>
+
+                  <div className="pagination-dots">
+                    {Array.from({ length: totalSlides }).map((_, idx) => (
+                      <button
+                        key={idx}
+                        className={`dot ${currentSlide === idx ? "active" : ""}`}
+                        onClick={() => goToSlide(idx)}
+                        aria-label={`Go to slide ${idx + 1}`}
+                        aria-current={currentSlide === idx ? "page" : undefined}
+                      />
+                    ))}
+                  </div>
+
+                  <button
+                    className="pagination-btn next-btn"
+                    onClick={handleNextSlide}
+                    disabled={currentSlide === totalSlides - 1}
+                    aria-label="Next slide"
+                  >
+                    <FaChevronRight />
+                  </button>
+                </div>
+              )}
+
+              {/* Slide Indicator */}
+              <p className="slide-indicator">
+                Slide {currentSlide + 1} of {totalSlides}
+              </p>
             </>
           )}
         </motion.div>

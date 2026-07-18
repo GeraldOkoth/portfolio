@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
-import { FaTimes, FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { FaTimes, FaGithub, FaExternalLinkAlt, FaCalendarAlt, FaCode, FaLightbulb, FaExclamationTriangle } from "react-icons/fa";
+import { timeAgo } from "./timeAgo";
+
 
 const ProjectModal = ({ project, onClose, formatDate }) => {
   useEffect(() => {
-    // Prevent body scroll when modal is open
     document.body.style.overflow = "hidden";
     return () => {
       document.body.style.overflow = "unset";
@@ -13,80 +14,139 @@ const ProjectModal = ({ project, onClose, formatDate }) => {
   const createdAt = new Date(project.createdAt || new Date());
   const updatedAt = new Date(project.updatedAt || new Date());
 
+  const getRelativeTime = (date) => timeAgo(date);
+
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+        {/* Close Button */}
         <button className="modal-close" onClick={onClose} aria-label="Close modal">
           <FaTimes />
         </button>
 
-        <div className="modal-header">
-          <img 
-            src={project.image || "https://via.placeholder.com/800x400"} 
-            alt={project.title}
-            className="modal-image"
-          />
-        </div>
+        {/* Modal Body - Side by Side Layout */}
+        <div className="modal-body-wrapper">
+          {/* Left Side - Image */}
+          <div className="modal-left">
+            <div className="modal-image-container">
+              <img 
+                src={project.image || "https://via.placeholder.com/500x400"} 
+                alt={project.title}
+                className="modal-image"
+              />
+            </div>
 
-        <div className="modal-body">
-          <h2 className="modal-title">{project.title}</h2>
-
-          <div className="modal-tech">
-            {project.technologies && project.technologies.map((tech, index) => (
-              <span key={index} className="tech-badge">
-                {tech}
-              </span>
-            ))}
+            {/* Action Buttons */}
+            <div className="modal-actions">
+              {project.demo && (
+                <a
+                  href={project.demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="action-btn demo-btn"
+                >
+                  <FaExternalLinkAlt /> Live Demo
+                </a>
+              )}
+              {project.github && (
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="action-btn github-btn"
+                >
+                  <FaGithub /> View Code
+                </a>
+              )}
+            </div>
           </div>
 
-          <div className="modal-description">
-            <h3>About This Project</h3>
-            <p>{project.description}</p>
-          </div>
+          {/* Right Side - Content */}
+          <div className="modal-right">
+            {/* Title */}
+            <h2 className="modal-title">{project.title}</h2>
 
-          {project.features && (
-            <div className="modal-features">
-              <h3>Key Features</h3>
-              <ul>
-                {project.features.map((feature, index) => (
-                  <li key={index}>{feature}</li>
+            {/* Technologies */}
+            <div className="modal-section">
+              <h4 className="section-title">Technologies</h4>
+              <div className="tech-badges">
+                {project.technologies && project.technologies.map((tech, index) => (
+                  <span key={index} className="tech-badge">
+                    {tech}
+                  </span>
                 ))}
-              </ul>
+              </div>
             </div>
-          )}
 
-          <div className="modal-dates">
-            <div className="date-item">
-              <strong>Created:</strong>
-              <span>{formatDate(createdAt)}</span>
+            {/* Description */}
+            <div className="modal-section">
+              <h4 className="section-title">
+                <FaCode className="section-icon" /> About
+              </h4>
+              <p className="section-text">{project.description}</p>
             </div>
-            <div className="date-item">
-              <strong>Last Updated:</strong>
-              <span>{formatDate(updatedAt)}</span>
-            </div>
-          </div>
 
-          <div className="modal-actions">
-            {project.demo && (
-              <a
-                href={project.demo}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="modal-btn demo"
-              >
-                <FaExternalLinkAlt /> Live Demo
-              </a>
+            {/* Reason for Building */}
+            {project.reasonForBuilding && (
+              <div className="modal-section">
+                <h4 className="section-title">
+                  <FaLightbulb className="section-icon" /> Why I Built This
+                </h4>
+                <p className="section-text">{project.reasonForBuilding}</p>
+              </div>
             )}
-            {project.github && (
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="modal-btn github"
-              >
-                <FaGithub /> View Code
-              </a>
+
+            {/* Challenges */}
+            {project.challengesFaced && (
+              <div className="modal-section">
+                <h4 className="section-title">
+                  <FaExclamationTriangle className="section-icon" /> Challenges
+                </h4>
+                <p className="section-text">{project.challengesFaced}</p>
+              </div>
             )}
+
+            {/* Problem Solved */}
+            {project.problemSolves && (
+              <div className="modal-section">
+                <h4 className="section-title">
+                  <FaLightbulb className="section-icon" /> Problem Solved
+                </h4>
+                <p className="section-text">{project.problemSolves}</p>
+              </div>
+            )}
+
+            {/* Key Features */}
+            {project.features && (
+              <div className="modal-section">
+                <h4 className="section-title">Key Features</h4>
+                <ul className="features-list">
+                  {project.features.map((feature, index) => (
+                    <li key={index}>{feature}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {/* Dates */}
+            <div className="modal-section dates-section">
+              <div className="date-item">
+                <FaCalendarAlt className="date-icon" />
+                <div>
+                  <p className="date-label">Created</p>
+                  <p className="date-value">{getRelativeTime(createdAt)}</p>
+                  <p className="date-full">{formatDate(createdAt)}</p>
+                </div>
+              </div>
+              <div className="date-item">
+                <FaCalendarAlt className="date-icon" />
+                <div>
+                  <p className="date-label">Last Updated</p>
+                  <p className="date-value">{getRelativeTime(updatedAt)}</p>
+                  <p className="date-full">{formatDate(updatedAt)}</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
