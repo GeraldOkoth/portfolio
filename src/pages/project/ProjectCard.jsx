@@ -6,7 +6,7 @@ import ProjectModal from "./ProjectModal";
 const ProjectCard = ({ project, index }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const createdAt = new Date(project.createdAt || new Date());
+  // const createdAt = new Date(project.createdAt || new Date());
   const updatedAt = new Date(project.updatedAt || new Date());
 
   const formatDate = (date) =>
