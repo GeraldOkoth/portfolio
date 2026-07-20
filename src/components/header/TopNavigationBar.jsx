@@ -10,8 +10,8 @@ const THEMES = {
     colors: {
       primary: "#ff7b00",
       secondary: "#ff9500",
-      background: "#000000",
-      backgroundAlt: "#0a0618",
+      background: "#0a0520",
+      backgroundAlt: "#1a0f3e",
       backgroundCard: "#0f0a2e",
       text: "#ffffff",
       textMuted: "rgba(255, 255, 255, 0.7)",
@@ -27,15 +27,15 @@ const THEMES = {
     colors: {
       primary: "#ff7b00",
       secondary: "#ff6b00",
-      background: "#f8f9fa",
+      background: "#ffffff",
       backgroundAlt: "#f5f5f5",
       backgroundCard: "#fafafa",
-      text: "#000",
+      text: "#0a0520",
       textMuted: "rgba(10, 5, 32, 0.7)",
       border: "rgba(10, 5, 32, 0.1)",
       success: "#22c55e",
       themeMenu: "#353535",
-      themeNavLinks: "#000  "
+      themeNavLinks: "#000"
     }
   },
   ocean: {
@@ -90,19 +90,45 @@ export default function TopNavigationBar() {
     applyTheme(savedTheme);
   }, []);
 
+  // Handle body blur when menu opens/closes
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add("menu-open-blur");
+      document.body.style.overflow = "hidden"; // Prevent scrolling when menu open
+    } else {
+      document.body.classList.remove("menu-open-blur");
+      document.body.style.overflow = "unset";
+    }
+
+    return () => {
+      document.body.classList.remove("menu-open-blur");
+      document.body.style.overflow = "unset";
+    };
+  }, [isOpen]);
+
+  // Handle ESC key to close menu
+  useEffect(() => {
+    const handleEscKey = (e) => {
+      if (e.key === "Escape" && isOpen) {
+        setIsOpen(false);
+      }
+    };
+
+    if (isOpen) {
+      window.addEventListener("keydown", handleEscKey);
+      return () => window.removeEventListener("keydown", handleEscKey);
+    }
+  }, [isOpen]);
+
   const applyTheme = (themeName) => {
     const theme = THEMES[themeName];
     const root = document.documentElement;
     
-    // Apply all theme colors as CSS variables
     Object.entries(theme.colors).forEach(([key, value]) => {
       root.style.setProperty(`--theme-${key}`, value);
     });
     
-    // Add theme class to body for additional styling
     document.body.className = `theme-${themeName}`;
-    
-    // Also set data attribute for easier CSS targeting
     document.body.setAttribute('data-theme', themeName);
   };
 
@@ -117,16 +143,23 @@ export default function TopNavigationBar() {
     setActive(section);
   };
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
   const closeMenu = () => {
     setIsOpen(false);
   };
 
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   const toggleThemeMenu = () => {
     setShowThemeMenu(!showThemeMenu);
+  };
+
+  // Handle overlay click to close menu
+  const handleOverlayClick = (e) => {
+    if (e.target === e.currentTarget) {
+      closeMenu();
+    }
   };
 
   return (
@@ -251,7 +284,8 @@ export default function TopNavigationBar() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            onClick={closeMenu}
+            transition={{ duration: 0.4 }}
+            onClick={handleOverlayClick}
           />
         )}
       </AnimatePresence>
