@@ -23,7 +23,7 @@ const allProjects = [
     challengesFaced: "Creating responsive layouts, implementing smooth animations, integrating theme toggle system, optimizing performance for mobile devices.",
     problemSolves: "Provides a centralized platform for potential clients and employers to view my projects, skills, and services in an engaging and professional manner.",
     createdAt: "2024-10-22T10:00:00Z",
-    updatedAt: "2026-03-20T21:12:00Z",
+    updatedAt: "2026-07-21T21:12:00Z",
     demo: "https://geraldokoth.vercel.app",
     github: "https://github.com/GeraldOkoth/portfolio",
   },
