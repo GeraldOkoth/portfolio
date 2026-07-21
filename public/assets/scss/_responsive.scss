@@ -5,7 +5,7 @@
 // navbar on small screens
 @mixin navbarSmallScreen() {
   .navbar {
-    padding: 0.8rem 1rem;
+    padding: 0.5rem 1rem;
 
     .navbar-container {
       gap: 0.8rem;
@@ -64,10 +64,10 @@
 // navbar on phone
 @mixin navbarPhone() {
   .navbar {
-    padding: 1rem 1.5rem;
+    padding: 0.7rem 1.5rem;
 
     &.scrolled {
-      padding: 0.8rem 1.5rem;
+      padding: 0.4rem 1.5rem;
     }
 
     .navbar-container {
@@ -103,12 +103,12 @@
       gap: 0.5rem;
       padding: 2rem 1.5rem;
       margin: 0;
-      transform: translateX(100%);
+      // transform: translateX(0);
       transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
       z-index: 1000;
       overflow-y: auto;
       justify-content: flex-start;
-      visibility: hidden;
+      display: none;
 
       &::-webkit-scrollbar {
         width: 6px;
@@ -128,14 +128,14 @@
       }
 
       &.show {
-        transform: translateX(0);
+        display: block;
+        // transform: translateX(100%);
       }
 
       li {
         margin: 0.5rem 0;
 
         .nav-link {
-          display: block;
           padding: 1rem 1.2rem;
           border-radius: 10px;
           transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);

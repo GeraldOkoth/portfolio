@@ -302,7 +302,7 @@ function HomePage() {
         </div>
 
         {/* Scroll Indicator */}
-        <motion.div
+        {/* <motion.div
           className="scroll-indicator"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -312,7 +312,7 @@ function HomePage() {
             <div className="scroll-wheel"></div>
           </div>
           <p>Scroll to explore</p>
-        </motion.div>
+        </motion.div> */}
       </section>
     </>
   );

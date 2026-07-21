@@ -7,13 +7,13 @@
 //   transition: filter 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 // }
 
-.navbar {
+.navbar { 
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   width: 100%;
-  padding: 1.2rem 2rem;
+  padding: 0.6rem 2rem;
   background: var(--theme-navbar);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -22,7 +22,7 @@
   border-bottom: 1px solid var(--theme-border);
 
   &.scrolled {
-    padding: 0.8rem 2rem;
+    padding: 0.4rem 2rem;
     background: rgba(10, 5, 32, 0.95);
     border-bottom: 1px solid rgba(255, 123, 0, 0.2);}
 
@@ -32,7 +32,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 1.5rem;
+    gap: 3rem;
   }
 
   .nav-logo {
@@ -126,11 +126,6 @@
       }
     }
 
-  }
-  
-  .show {
-    visibility: visible;
-    display:block;
   }
   
   .nav-actions {
@@ -232,7 +227,7 @@
 
     // Mobile Menu Toggle
     .nav-toggle {
-      display: none;
+      display: flex;
       flex-direction: column;
       cursor: pointer;
       gap: 6px;
@@ -275,20 +270,20 @@
   }
 }
 
-// .mobile-menu-overlay {
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   right: 0;
-//   bottom: 0;
-//   width: 100vw;
-//   height: 100vh;
-//   inset: 0;
-//   background: rgba(0, 0, 0, 0.4);
-//   backdrop-filter: blur(2px);
-//   z-index: 19;
-//   cursor: pointer;
-// }
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(2px);
+  z-index: 19;
+  cursor: pointer;
+}
 
 // Responsive Design - Mobile (< 768px)
 @media screen and (max-width: v.$mobile) {
