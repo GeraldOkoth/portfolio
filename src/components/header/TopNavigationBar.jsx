@@ -91,20 +91,20 @@ export default function TopNavigationBar() {
   }, []);
 
   // Handle body blur when menu opens/closes
-  useEffect(() => {
-    if (isOpen) {
-      document.body.classList.add("menu-open-blur");
-      document.body.style.overflow = "hidden"; // Prevent scrolling when menu open
-    } else {
-      document.body.classList.remove("menu-open-blur");
-      document.body.style.overflow = "unset";
-    }
+  // useEffect(() => {
+  //   if (isOpen) {
+  //     document.body.classList.add("menu-open-blur");
+  //     document.body.style.overflow = "hidden"; // Prevent scrolling when menu open
+  //   } else {
+  //     document.body.classList.remove("menu-open-blur");
+  //     document.body.style.overflow = "unset";
+  //   }
 
-    return () => {
-      document.body.classList.remove("menu-open-blur");
-      document.body.style.overflow = "unset";
-    };
-  }, []);
+  //   return () => {
+  //     document.body.classList.remove("menu-open-blur");
+  //     document.body.style.overflow = "unset";
+  //   };
+  // }, []);
 
   // Handle ESC key to close menu
   useEffect(() => {
