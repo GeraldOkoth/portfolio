@@ -445,11 +445,11 @@ function Projects() {
             <div className="no-project-message">
               <div className="empty-state">
                 <FaStar className="empty-icon" />
-                <h3>No {activeScale} projects yet</h3>
+                {/* <h3>No {activeScale} projects yet</h3> */}
                 <p>
                   {activeScale === "major"
-                    ? "Major projects are coming soon! Check out my mini projects in the meantime."
-                    : "Projects in this category are coming soon."}
+                    ? "Projects in this category are available upon request. Please contact me for more information."
+                    : "Major projects are coming soon! Check out my mini projects in the meantime."}
                 </p>
                 {activeScale === "major" && (
                   <button

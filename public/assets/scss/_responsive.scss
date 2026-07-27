@@ -98,7 +98,6 @@
       max-width: 350px;
       background: linear-gradient(135deg, var(--theme-background) 0%, var(--theme-backgroundAlt) 100%);
       backdrop-filter: blur(15px);
-      border-left: 2px solid var(--theme-border);
       flex-direction: column;
       gap: 0.5rem;
       padding: 2rem 1.5rem;
@@ -134,6 +133,8 @@
 
       li {
         margin: 0.5rem 0;
+        border-bottom: 1px solid var(--theme-border);
+
 
         .nav-link {
           padding: 1rem 1.2rem;
@@ -152,9 +153,11 @@
           &.active {
             background: var(--theme-secondary);
             color: var(--theme-background);
-            border-left: 3px solid var(--theme-primary);
             padding-left: calc(1.2rem - 3px);
           }
+        }
+        &:hover {
+            border-bottom: none;  
         }
       }
     }
@@ -197,10 +200,13 @@
 // navbar on tablet
 @mixin navbarTablet() {
   .navbar {
+    .navbar-container {
+      gap: 3rem;
+    }
     .nav-links {
       gap: 1.8rem;
-      justify-content: flex-start;
-      margin-left: 2rem;
+      justify-content: center;
+
 
       li .nav-link {
         font-size: 0.9rem;

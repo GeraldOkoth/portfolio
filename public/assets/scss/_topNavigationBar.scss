@@ -1,11 +1,20 @@
 @use "./variables" as v;
 @use "./responsive" as r;
 
-// body.menu-open-blur {
-//   filter: blur(6px);
-//   z-index: 1;
-//   transition: filter 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-// }
+body.menu-open-blur {
+  z-index: 1;
+  transition: filter 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body.menu-open-blur :not(.navbar):not(.navbar *):not(.mobile-menu-overlay):not(.mobile-menu-overlay *) {
+  filter: blur(6px);
+  transition: filter 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body.menu-open-blur .navbar,
+body.menu-open-blur .navbar * {
+  filter: none;
+}
 
 .navbar { 
   position: fixed;
@@ -297,7 +306,7 @@
 
 // Tablet (768px - 1023px) 
 @media screen and (min-width: v.$tablet) and (max-width: v.$desktop) {
-  @include r.navbarTablet();
+  @include r.navbarPhone();
 }
 
 html {
