@@ -863,42 +863,60 @@
     .projects-filters {
       padding: 1.2rem 0.8rem;
 
-      .filter-group {
-        .filter-btn {
-          padding: 0.5rem 1rem;
-          font-size: 0.8rem;
-        }
+      .filter-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
       }
+    }
+
+    .projects-grid-container {
+      min-height: 350px;
     }
 
     .project-card {
-      .project-thumbnail {
-        height: 180px;
+      .project-thumbnail-wrapper {
+        padding-top: 60%;
       }
 
-      .project-content {
+      .project-card-content {
         padding: 1rem;
-      }
 
-      .project-title {
-        font-size: 1.15rem;
+        .project-title {
+          font-size: 1rem;
+        }
+
+        .project-description {
+          font-size: 0.85rem;
+        }
       }
     }
 
-    .no-project-message {
-      .empty-state {
-        padding: 1.5rem 1rem;
+    .pagination-controls {
+      gap: 1rem;
 
-        .empty-icon {
-          font-size: 2.5rem;
+      .pagination-btn {
+        width: 36px;
+        height: 36px;
+      }
+    }
+
+    .modal-close {
+      width: 32px;
+      height: 32px;
+    }
+
+    .modal-body-wrapper {
+      padding: 1rem;
+
+      .modal-left {
+        .modal-image-container {
+          padding-top: 70%;
         }
+      }
 
-        h3 {
+      .modal-right {
+        .modal-title {
           font-size: 1.3rem;
-        }
-
-        p {
-          font-size: 0.95rem;
         }
       }
     }
@@ -919,13 +937,12 @@
       margin-bottom: 2.5rem;
 
       .projects-title {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
         letter-spacing: -1px;
       }
 
       .projects-subtitle {
         font-size: 1rem;
-        padding: 0 0.5rem;
       }
     }
 
@@ -938,154 +955,135 @@
       .filter-group {
         width: 100%;
 
-        .filter-label {
-          font-size: 0.85rem;
-        }
-
         .filter-buttons {
           width: 100%;
-          gap: 0.6rem;
-        }
 
-        .filter-btn {
-          padding: 0.6rem 1.2rem;
-          font-size: 0.85rem;
-          flex: 1;
-          min-width: 0;
-          justify-content: center;
+          .filter-btn {
+            flex: 1;
+            font-size: 0.85rem;
+            padding: 0.6rem 1rem;
+          }
         }
       }
     }
 
-    .project-count {
-      margin-bottom: 1.5rem;
-
-      .count-badge {
-        font-size: 0.9rem;
-        padding: 0.5rem 1.2rem;
-      }
+    .projects-grid-container {
+      min-height: 25rem;
     }
 
-    .carousel-wrapper {
-      padding: 1rem 0 2.5rem;
-
-      .slick-arrow {
-        width: 40px;
-        height: 40px;
-
-        &.slick-prev {
-          left: -10px;
-        }
-
-        &.slick-next {
-          right: -10px;
-        }
-
-        svg {
-          font-size: 1rem;
-        }
-      }
-
-      .slick-dots {
-        bottom: -1.5rem;
-      }
-    }
-
-    .no-project-message {
-      padding: 3rem 1rem;
-
-      .empty-state {
-        padding: 2rem 1.5rem;
-
-        .empty-icon {
-          font-size: 3rem;
-        }
-
-        h3 {
-          font-size: 1.5rem;
-        }
-
-        p {
-          font-size: 1rem;
-        }
-
-        .view-mini-btn {
-          padding: 0.8rem 1.8rem;
-          font-size: 0.95rem;
-        }
-      }
+    .projects-grid {
+      gap: 1.5rem;
     }
 
     .project-card {
-      .project-thumbnail {
-        height: 200px;
-      }
-
-      .project-content {
+      .project-card-content {
         padding: 1.2rem;
-      }
 
-      .project-title {
-        font-size: 1.25rem;
-      }
-
-      .project-description {
-        font-size: 0.9rem;
-      }
-
-      .project-tech {
-        .tech-badge {
-          font-size: 0.75rem;
-          padding: 0.35rem 0.75rem;
+        .project-title {
+          font-size: 1.1rem;
         }
-      }
 
-      .project-dates {
-        .dates-info {
-          flex-direction: column;
-          gap: 0.5rem;
+        .project-description {
+          font-size: 0.9rem;
         }
-      }
 
-      .project-links {
-        flex-direction: column;
-
-        .project-btn {
-          width: 100%;
+        .view-details-btn {
+          padding: 0.7rem 1.2rem;
+          font-size: 0.9rem;
         }
       }
     }
-  }
 
-  .modal-overlay {
-    padding: 1rem;
-  }
+    .pagination-controls {
+      gap: 1.5rem;
 
-  .modal-content {
-    max-height: 85vh;
-  }
+      .pagination-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+      }
 
-  .modal-header {
-    height: 200px;
-  }
+      .pagination-dots {
+        gap: 0.6rem;
 
-  .modal-body {
-    padding: 1.5rem;
+        .dot {
+          width: 10px;
+          height: 10px;
 
-    .modal-title {
-      font-size: 1.5rem;
+          &.active {
+            width: 12px;
+            height: 12px;
+          }
+        }
+      }
     }
 
-    .modal-dates {
-      flex-direction: column;
-      gap: 1rem;
+    .modal-content {
+      max-width: 95vw;
+      max-height: 95vh;
     }
 
-    .modal-actions {
-      flex-direction: column;
+    .modal-close {
+      width: 36px;
+      height: 36px;
+      font-size: 1rem;
+    }
 
-      .modal-btn {
-        width: 100%;
+    .modal-body-wrapper {
+      grid-template-columns: 1fr;
+      gap: 1.2rem;
+      padding: 1.5rem 1rem;
+
+      .modal-left {
+        margin: 0;
+        // .modal-image-container {
+        //   padding-top: 75%;
+        // }
+
+        .modal-actions {
+          flex-direction: row;
+          margin: 0;
+
+          .action-btn {
+            flex: 1;
+            padding: 0.8rem 0.6rem;
+            font-size: 0.7rem;
+          }
+        }
+      }
+
+      .modal-right {
+        max-height: 25rem;
+        padding-right: 0;
+
+        .modal-title {
+          font-size: 1.3rem;
+        }
+
+        .modal-section {
+          .section-title {
+            font-size: 0.9rem;
+            margin: 0;
+          }
+
+          .tech-badges .tech-badge {
+            padding: 0.4rem 0.5rem;
+          }
+
+          .section-title, .date-label {
+            font-size: 0.8rem;
+          }
+
+          .section-text {
+            font-size: 0.7rem;
+          }
+
+          .features-list li, .date-value, .date-full {
+            font-size: 0.7rem;
+            line-height: -1rem;
+            padding-bottom: 0;
+          }
+        }
       }
     }
   }
@@ -1093,7 +1091,7 @@
 
 // projects section on tablet
 @mixin projectTablet() {
-  .project-section {
+   .project-section {
     padding: 5rem 2.5rem;
 
     .projects-header {
@@ -1122,15 +1120,16 @@
       }
     }
 
-    .carousel-wrapper {
-      .slick-arrow {
-        &.slick-prev {
-          left: -15px;
-        }
+    .projects-grid-container {
+      min-height: 450px;
+    }
 
-        &.slick-next {
-          right: -15px;
-        }
+    .modal-body-wrapper {
+      grid-template-columns: 1fr;
+      padding: 1.5rem;
+
+      .modal-right {
+        max-height: 500px;
       }
     }
   }

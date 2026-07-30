@@ -3,7 +3,7 @@ export function timeAgo(date) {
   const past = new Date(date);
   
   // Calculate time difference in milliseconds
-  const diffMs = now - past;
+  const diffMs = past - now;
   const diffHours = Math.floor(diffMs / (1000 * 60 * 60));
   const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
 

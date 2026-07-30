@@ -429,7 +429,7 @@ body.menu-open-blur .navbar * {
   cursor: pointer;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .navbar {
     padding: 0.7rem 1.5rem;
   }
@@ -535,7 +535,7 @@ body.menu-open-blur .navbar * {
     height: 2.5px;
   }
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 480px) {
   .navbar {
     padding: 0.5rem 1rem;
   }
@@ -575,112 +575,6 @@ body.menu-open-blur .navbar * {
   .navbar .nav-actions .nav-toggle .bar {
     width: 20px;
     height: 2px;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  .navbar {
-    padding: 0.7rem 1.5rem;
-  }
-  .navbar.scrolled {
-    padding: 0.4rem 1.5rem;
-  }
-  .navbar .navbar-container {
-    gap: 1rem;
-  }
-  .navbar .nav-logo a {
-    gap: 0.6rem;
-  }
-  .navbar .nav-logo a img {
-    width: 45px;
-    height: 45px;
-  }
-  .navbar .nav-logo a .logo-text {
-    font-size: 1.1rem;
-  }
-  .navbar .nav-links {
-    position: fixed;
-    width: 85vw;
-    height: 100vh;
-    top: calc(100% + 0.01rem);
-    right: 0;
-    max-width: 350px;
-    background: linear-gradient(135deg, var(--theme-background) 0%, var(--theme-backgroundAlt) 100%);
-    backdrop-filter: blur(15px);
-    flex-direction: column;
-    gap: 0.5rem;
-    padding: 2rem 1.5rem;
-    margin: 0;
-    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    z-index: 1000;
-    overflow-y: auto;
-    justify-content: flex-start;
-    display: none;
-  }
-  .navbar .nav-links::-webkit-scrollbar {
-    width: 6px;
-  }
-  .navbar .nav-links::-webkit-scrollbar-track {
-    background: transparent;
-  }
-  .navbar .nav-links::-webkit-scrollbar-thumb {
-    background: rgba(255, 123, 0, 0.5);
-    border-radius: 3px;
-  }
-  .navbar .nav-links::-webkit-scrollbar-thumb:hover {
-    background: rgba(255, 123, 0, 0.7);
-  }
-  .navbar .nav-links.show {
-    display: block;
-  }
-  .navbar .nav-links li {
-    margin: 0.5rem 0;
-    border-bottom: 1px solid var(--theme-border);
-  }
-  .navbar .nav-links li .nav-link {
-    padding: 1rem 1.2rem;
-    border-radius: 10px;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .navbar .nav-links li .nav-link::after {
-    display: none;
-  }
-  .navbar .nav-links li .nav-link:hover {
-    background: var(--theme-backgroundAlt);
-    color: var(--theme-primary);
-  }
-  .navbar .nav-links li .nav-link.active {
-    background: var(--theme-secondary);
-    color: var(--theme-background);
-    padding-left: calc(1.2rem - 3px);
-  }
-  .navbar .nav-links li:hover {
-    border-bottom: none;
-  }
-  .navbar .nav-actions {
-    gap: 1rem;
-  }
-  .navbar .nav-actions .theme-toggle-btn {
-    width: 40px;
-    height: 40px;
-    font-size: 1.1rem;
-  }
-  .navbar .nav-actions .theme-menu {
-    right: -0.5rem;
-    min-width: 160px;
-  }
-  .navbar .nav-actions .theme-menu .theme-option {
-    padding: 0.8rem 1rem;
-    font-size: 0.9rem;
-  }
-  .navbar .nav-actions .theme-menu .theme-option .theme-icon {
-    font-size: 1rem;
-  }
-  .navbar .nav-actions .nav-toggle {
-    display: flex;
-  }
-  .navbar .nav-actions .nav-toggle .bar {
-    width: 22px;
-    height: 2.5px;
   }
 }
 html {
@@ -2823,7 +2717,7 @@ html {
     transform: translateY(0);
   }
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 768px) {
   .project-section {
     padding: 5rem 2.5rem;
   }
@@ -2858,7 +2752,7 @@ html {
     max-height: 500px;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 480px) {
   .project-section {
     padding: 4rem 1.5rem;
   }
@@ -2893,7 +2787,7 @@ html {
     padding: 0.6rem 1rem;
   }
   .project-section .projects-grid-container {
-    min-height: 400px;
+    min-height: 25rem;
   }
   .project-section .projects-grid {
     gap: 1.5rem;
@@ -2941,35 +2835,48 @@ html {
   }
   .project-section .modal-body-wrapper {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 1.2rem;
     padding: 1.5rem 1rem;
   }
-  .project-section .modal-body-wrapper .modal-left .modal-image-container {
-    padding-top: 75%;
+  .project-section .modal-body-wrapper .modal-left {
+    margin: 0;
   }
   .project-section .modal-body-wrapper .modal-left .modal-actions {
     flex-direction: row;
+    margin: 0;
   }
   .project-section .modal-body-wrapper .modal-left .modal-actions .action-btn {
     flex: 1;
-    padding: 0.8rem 1rem;
-    font-size: 0.9rem;
+    padding: 0.8rem 0.6rem;
+    font-size: 0.7rem;
   }
   .project-section .modal-body-wrapper .modal-right {
-    max-height: 400px;
+    max-height: 25rem;
     padding-right: 0;
   }
   .project-section .modal-body-wrapper .modal-right .modal-title {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
   .project-section .modal-body-wrapper .modal-right .modal-section .section-title {
-    font-size: 1rem;
+    font-size: 0.9rem;
+    margin: 0;
+  }
+  .project-section .modal-body-wrapper .modal-right .modal-section .tech-badges .tech-badge {
+    padding: 0.4rem 0.5rem;
+  }
+  .project-section .modal-body-wrapper .modal-right .modal-section .section-title, .project-section .modal-body-wrapper .modal-right .modal-section .date-label {
+    font-size: 0.8rem;
   }
   .project-section .modal-body-wrapper .modal-right .modal-section .section-text {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
+  }
+  .project-section .modal-body-wrapper .modal-right .modal-section .features-list li, .project-section .modal-body-wrapper .modal-right .modal-section .date-value, .project-section .modal-body-wrapper .modal-right .modal-section .date-full {
+    font-size: 0.7rem;
+    line-height: -1rem;
+    padding-bottom: 0;
   }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 320px) {
   .project-section {
     padding: 3.5rem 1rem;
   }

@@ -295,18 +295,13 @@ body.menu-open-blur .navbar * {
 }
 
 // Responsive Design - Mobile (< 768px)
-@media screen and (max-width: v.$mobile) {
+@media screen and (max-width: v.$tablet) {
   @include r.navbarPhone();
 }
 
 // Very Small Mobile (< 480px)
-@media screen and (max-width: v.$smallMobile) {
+@media screen and (max-width: v.$mobile) {
   @include r.navbarSmallScreen();
-}
-
-// Tablet (768px - 1023px) 
-@media screen and (min-width: v.$tablet) and (max-width: v.$desktop) {
-  @include r.navbarPhone();
 }
 
 html {
