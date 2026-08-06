@@ -294,7 +294,7 @@ const allProjects = [
     problemSolves: "Provides effective promotional material for presidential aspirant.",
     createdAt: "2025-11-15T10:00:00Z",
     updatedAt: "2026-08-06T10:00:00Z",
-    demo: "public/images/juma-keith.jpg",
+    demo: "/images/juma-keith.jpg",
   },
   {
     id: "p14",
@@ -314,7 +314,7 @@ const allProjects = [
     problemSolves: "Provides effective promotional material for a university christian union event.",
     createdAt: "2025-02-04T10:00:00Z",
     updatedAt: "2026-08-06T10:00:00Z",
-    demo: "public/images/mksu-cu.jpg",
+    demo: "/images/mksu-cu.jpg",
   },
   {
     id: "p15",
@@ -334,7 +334,7 @@ const allProjects = [
     problemSolves: "Provides effective promotional material for pactum-novum coalitions ambition for student governing council leadership.",
     createdAt: "2025-02-01T10:00:00Z",
     updatedAt: "2026-08-06T10:00:00Z",
-    demo: "public/images/pactum-novum.jpg",
+    demo: "/images/pactum-novum.jpg",
   },
   {
     id: "p16",
@@ -354,7 +354,7 @@ const allProjects = [
     problemSolves: "Provides effective promotional material for Papa Smith's presidential campaign.",
     createdAt: "2025-01-29T10:00:00Z",
     updatedAt: "2026-08-06T10:00:00Z",
-    demo: "public/images/papasmith.jpg",
+    demo: "/images/papasmith.jpg",
   },
   {
     id: "p17",
@@ -374,7 +374,7 @@ const allProjects = [
     problemSolves: "Provides effective promotional material for Sara Mapi's TVET representative campaign.",
     createdAt: "2025-01-26T10:00:00Z",
     updatedAt: "2026-08-06T10:00:00Z",
-    demo: "public/images/sara-mapi.jpg",
+    demo: "/images/sara-mapi.jpg",
   },
   {
     id: "p18",
@@ -394,7 +394,7 @@ const allProjects = [
     problemSolves: "Provides effective promotional material for Sharon Muthoni's School of Pure and Applied Sciences representative campaign.",
     createdAt: "2025-02-15T10:00:00Z",
     updatedAt: "2026-08-06T10:00:00Z",
-    demo: "public/images/sharon-muthoni.jpg",
+    demo: "/images/sharon-muthoni.jpg",
   },
   {
     id: "p19",
@@ -414,7 +414,7 @@ const allProjects = [
     problemSolves: "Provides effective promotional material for Vincent Onyango's School of Pure and Applied Sciences representative campaign.",
     createdAt: "2025-02-17T10:00:00Z",
     updatedAt: "2026-08-06T10:00:00Z",
-    demo: "public/images/vincent-onyango.jpg",
+    demo: "/images/vincent-onyango.jpg",
   },
 ];
 
