@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { 
@@ -94,13 +95,13 @@ const Services = () => {
       icon: <FaDollarSign />,
       title: "Affordable Pricing",
       description:
-        "High-quality services at competitive rates, ensuring the best value for your investment.",
+        "premium-quality services at competitive rates, ensuring the best value for your investment.",
     },
     {
       image: "/images/guarateed-quality.png",
-      alt: "guarateed-quality",
+      alt: "premium-quality",
       icon: <FaStar />,
-      title: "Quality Guaranteed",
+      title: "Premium Quality",
       description:
         "Delivering excellence in every project with attention to detail and client satisfaction.",
     },
