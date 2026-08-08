@@ -1,4 +1,6 @@
 import { useState, useEffect, useRef } from "react";
+// import CanvaLogo from "../../assets/icons/canva.svg";
+// import InvisionLogo from "../../assets/icons/invision.svg";
 import {
   FaReact,
   FaJs,
@@ -14,9 +16,7 @@ import {
 import {
   SiTypescript,
   SiWordpress,
-  SiInvision,
   SiTailwindcss,
-  SiCanva,
 } from "react-icons/si";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -37,11 +37,11 @@ const Skills = () => {
       { name: "Tailwind CSS", icon: <SiTailwindcss />, level: 90, color: "#06B6D4" },
     ],
     Design: [
-      { name: "Figma", icon: <FaFigma />, level: 85, color: "#F24E1E" },
-      { name: "InVision", icon: <SiInvision />, level: 70, color: "#FF3366" },
-      { name: "WordPress", icon: <SiWordpress />, level: 75, color: "#21759B" },
-      { name: "Canva", icon: <SiCanva />, level: 95, color: "#00C4CC" },
-    ],
+  { name: "Figma", icon: <FaFigma />, level: 85, color: "#F24E1E" },
+  { name: "InVision", icon: <FaFigma />, level: 70, color: "#FF3366" },
+  { name: "WordPress", icon: <SiWordpress />, level: 75, color: "#21759B" },
+  { name: "Canva", icon: <FaFigma />, level: 95, color: "#00C4CC" },
+],
     Tools: [
       { name: "Git", icon: <FaGitAlt />, level: 90, color: "#F05032" },
       { name: "GitHub", icon: <FaGithub />, level: 90, color: "#000000" },
