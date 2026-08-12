@@ -434,8 +434,8 @@ const allProjects = [
     reasonForBuilding: "To create effective promotional material for a community event.",
     challengesFaced: "Making text readable on complex backgrounds, creating emotional appeal, balancing imagery and text.",
     problemSolves: "Provides effective promotional material for event recruitment.",
-    createdAt: "2025-06-15T10:00:00Z",
-    updatedAt: "2025-09-15T10:00:00Z",
+    createdAt: "2025-08-12T10:00:00Z",
+    updatedAt: "2025-08-12T10:00:00Z",
     demo: "/images/choir-recruitment-poster.png",
   },
 ];
