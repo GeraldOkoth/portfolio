@@ -1,37 +1,29 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { Analytics } from "@vercel/analytics/react";
 import './css/dist/styles.css';
-import HomePage from './pages/home/HomePage';
-import About from './pages/about/About';
-import Services from './pages/services/Services';
-// import EducationEd from './pages/education/EducationEd';
-// import Education from './pages/education/Education';
-// import SkillsEd from './pages/skills/SkillsEd';
-import Skills from './pages/skills/Skills';
-import Projects from './pages/project/Projects';
-import Contact from './pages/contact/Contact';
-import Footer from './components/footer/Footer';
-// import Slideshow from './Slideshow';
-// import Testimonials from './pages/testimonials/Testimonials';
-// import Faq from './pages/faq/Faq';
+
+const HomePage = lazy(() => import('./pages/home/HomePage'));
+const About = lazy(() => import('./pages/about/About'));
+const Skills = lazy(() => import('./pages/skills/Skills'));
+const Projects = lazy(() => import('./pages/project/Projects'));
+const Services = lazy(() => import('./pages/services/Services'));
+const Contact = lazy(() => import('./pages/contact/Contact'));
+const Footer = lazy(() => import('./components/footer/Footer'));
 
 function App() {
   return (
     <div className="App">
-      <HomePage />
-      <About />
-      {/* <EducationEd/> */}
-      {/* <Education />  */}
-      {/* <SkillsEd /> */}
-      <Skills />
-      <Projects />
-      <Services />
-      <Contact />
-      <Footer />
+      <Suspense fallback={null}>
+        <HomePage />
+        <About />
+        <Skills />
+        <Projects />
+        <Services />
+        <Contact />
+        <Footer />
+      </Suspense>
+
       <Analytics />
-      {/* <Slideshow /> */}
-      {/* <Testimonials /> */}
-      {/* <Faq /> */}
     </div>
   );
 }
