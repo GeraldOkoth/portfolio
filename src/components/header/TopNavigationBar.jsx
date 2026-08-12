@@ -1,4 +1,3 @@
-import { Link } from "react-scroll";
 import { useState, useEffect } from "react";
 import { FaSun, FaMoon, FaPalette } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
@@ -18,8 +17,8 @@ const THEMES = {
       border: "rgba(255, 255, 255, 0.1)",
       success: "#43e97b",
       themeMenu: "#fff",
-      themeNavLinks: "#fff"
-    }
+      themeNavLinks: "#fff",
+    },
   },
   light: {
     name: "Light",
@@ -35,8 +34,8 @@ const THEMES = {
       border: "rgba(10, 5, 32, 0.1)",
       success: "#22c55e",
       themeMenu: "#353535",
-      themeNavLinks: "#000"
-    }
+      themeNavLinks: "#000",
+    },
   },
   ocean: {
     name: "Ocean",
@@ -52,9 +51,9 @@ const THEMES = {
       border: "rgba(255, 255, 255, 0.1)",
       success: "#10b981",
       themeMenu: "rgb(10, 5, 32)",
-      themeNavLinks: "#fff"
-    }
-  }
+      themeNavLinks: "#fff",
+    },
+  },
 };
 
 export default function TopNavigationBar() {
@@ -70,7 +69,7 @@ export default function TopNavigationBar() {
     { id: "skills", label: "Skills" },
     { id: "projects", label: "Projects" },
     { id: "services", label: "Services" },
-    { id: "contact", label: "Contact" }
+    { id: "contact", label: "Contact" },
   ];
 
   // Handle scroll effect
@@ -81,6 +80,32 @@ export default function TopNavigationBar() {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const sections = navItems
+      .map((item) => document.getElementById(item.id))
+      .filter(Boolean);
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visibleSections = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+
+        if (visibleSections.length > 0) {
+          setActive(visibleSections[0].target.id);
+        }
+      },
+      {
+        rootMargin: "-80px 0px -50% 0px",
+        threshold: [0.1, 0.25, 0.5, 0.75],
+      },
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => observer.disconnect();
   }, []);
 
   // Load saved theme on mount
@@ -123,13 +148,13 @@ export default function TopNavigationBar() {
   const applyTheme = (themeName) => {
     const theme = THEMES[themeName];
     const root = document.documentElement;
-    
+
     Object.entries(theme.colors).forEach(([key, value]) => {
       root.style.setProperty(`--theme-${key}`, value);
     });
-    
+
     document.body.className = `theme-${themeName}`;
-    document.body.setAttribute('data-theme', themeName);
+    document.body.setAttribute("data-theme", themeName);
   };
 
   const handleThemeChange = (themeName) => {
@@ -137,10 +162,6 @@ export default function TopNavigationBar() {
     applyTheme(themeName);
     localStorage.setItem("portfolio-theme", themeName);
     setShowThemeMenu(false);
-  };
-
-  const handleSetActive = (section) => {
-    setActive(section);
   };
 
   const closeMenu = () => {
@@ -166,49 +187,44 @@ export default function TopNavigationBar() {
     <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
       <div className="navbar-container">
         {/* Logo */}
-        <motion.div 
+        <motion.div
           className="nav-logo"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
         >
           <a href="#home">
-            <img 
-              src="/images/logo.png" 
-              alt="Gerald Okoth Logo" 
-              width={50} 
-              height={50} 
+            <img
+              src="/images/logo.png"
+              alt="Gerald Okoth Logo"
+              width={50}
+              height={50}
             />
             <span className="logo-text">Gerald Okoth</span>
           </a>
         </motion.div>
 
         {/* Desktop Navigation Links */}
-        <motion.ul 
+        <motion.ul
           className={`nav-links ${isOpen ? "show" : ""}`}
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           {navItems.map((item, index) => (
-            <motion.li 
+            <motion.li
               key={item.id}
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
             >
-              <Link
-                to={item.id}
-                spy={true}
-                smooth={true}
-                duration={500}
-                offset={-70}
-                onSetActive={handleSetActive}
+              <a
+                href={`#${item.id}`}
                 onClick={closeMenu}
                 className={`nav-link ${active === item.id ? "active" : ""}`}
               >
                 {item.label}
-              </Link>
+              </a>
             </motion.li>
           ))}
         </motion.ul>
@@ -216,13 +232,13 @@ export default function TopNavigationBar() {
         {/* Theme Toggle & Mobile Menu */}
         <div className="nav-actions">
           {/* Theme Toggle Button */}
-          <motion.div 
+          <motion.div
             className="theme-toggle-wrapper"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            <button 
+            <button
               className="theme-toggle-btn"
               onClick={toggleThemeMenu}
               aria-label="Toggle theme"
@@ -249,7 +265,7 @@ export default function TopNavigationBar() {
                       <span className="theme-icon">{theme.icon}</span>
                       <span className="theme-name">{theme.name}</span>
                       {currentTheme === key && (
-                        <motion.span 
+                        <motion.span
                           className="theme-check"
                           layoutId="activeTheme"
                         >

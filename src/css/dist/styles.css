@@ -24,6 +24,16 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+section[id] {
+  scroll-margin-top: 20px;
+}
+
 h1, h2, h3, h4, h5, h6 {
   color: var(--theme-text);
 }
@@ -166,11 +176,6 @@ a,
   outline: none;
   text-decoration: none;
   box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 /* mobile devices*/
@@ -576,9 +581,6 @@ body.menu-open-blur .navbar * {
     width: 20px;
     height: 2px;
   }
-}
-html {
-  overflow-y: scroll;
 }
 
 .home-page {
