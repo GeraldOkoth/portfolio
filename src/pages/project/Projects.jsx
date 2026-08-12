@@ -416,6 +416,28 @@ const allProjects = [
     updatedAt: "2026-08-06T10:00:00Z",
     demo: "/images/vincent-onyango.jpg",
   },
+  {
+    id: "p20",
+    type: "graphic",
+    scale: "mini",
+    title: "Choir recruitment Poster",
+    description:
+      "A visually striking poster design created using Canva for choir recruitment with focus on visual appeal.",
+    technologies: ["OpenAI", "Graphic Design", "Poster Design"],
+    image: "/images/choir-recruitment-poster.png",
+    features: [
+      "Visually striking design",
+      "Effective use of typography",
+      "Balanced composition",
+      "Color harmony",
+    ],
+    reasonForBuilding: "To create effective promotional material for a community event.",
+    challengesFaced: "Making text readable on complex backgrounds, creating emotional appeal, balancing imagery and text.",
+    problemSolves: "Provides effective promotional material for event recruitment.",
+    createdAt: "2025-06-15T10:00:00Z",
+    updatedAt: "2025-09-15T10:00:00Z",
+    demo: "/images/choir-recruitment-poster.png",
+  },
 ];
 
 const categoryTabs = ["frontend", "uiux", "graphic"];

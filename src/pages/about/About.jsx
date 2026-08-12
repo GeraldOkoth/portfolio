@@ -48,7 +48,7 @@ const About = () => {
           >
             <div className="image-container">
               <img
-                src="/images/about.jpg"
+                src="/images/optimized/about.webp"
                 alt="Gerald Okoth - Frontend Developer"
                 className="about-image"
               />
