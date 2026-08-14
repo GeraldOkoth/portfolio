@@ -1,81 +1,224 @@
-# Gerald Okoth - Developer Portfolio
+# Gerald Okoth — Developer Portfolio
 
-Welcome to my personal developer portfolio! This React-based web application showcases my skills, projects, and journey as a Front-End Developer. Built with a focus on clean design, accessibility, and responsiveness.
+A personal developer portfolio showcasing my projects, technical skills, services, experience, and journey as a Front-End Developer, UI/UX designer and Graphic designer.
+
+The portfolio is built with React and Vite, with an emphasis on responsive design, accessibility, performance, maintainability, and a clean user experience.
+
+## Live Portfolio
+
+🌐 **Portfolio:** https://geraldokoth.vercel.app/
+
+## About the Project
+
+This portfolio serves as a central place to present my work and demonstrate my growth as a Front-End Developer.
+
+It includes:
+
+- A personal introduction and professional profile
+- Technical skills and technologies
+- Featured projects and project details
+- Services I offer
+- Contact information
+- Social media and professional links
+- Responsive layouts for different screen sizes
+- Interactive UI elements and animations
+
+The project has also undergone a number of technical improvements, including migration from Create React App to Vite, dependency cleanup, code splitting, lazy loading, and image optimization.
+
+---
+
+## Tech Stack
+
+### Frontend
+
+- React
+- JavaScript (ES6+)
+- HTML5
+- CSS3
+- React Router
+- React Icons
+
+### UI & Animation
+
+- Framer Motion
+- Responsive CSS
+- CSS Flexbox
+- CSS Grid
+
+### Build & Development
+
+- Vite
+- npm
+- ESLint
+- Git
+- GitHub
+
+### Deployment & Analytics
+
+- Vercel
+- Vercel Analytics
+
+---
+
+## Key Features
+
+### Responsive Design
+
+The portfolio is designed to provide a consistent experience across:
+
+- Mobile devices
+- Tablets
+- Laptops
+- Desktop screens
+
+### Component-Based Architecture
+
+The application is organized into reusable React components and page-level sections to improve maintainability and scalability.
+
+### Interactive UI
+
+Interactive elements include:
+
+- Navigation controls
+- Project cards
+- Project modals
+- Theme controls
+- Animated UI elements
+- Interactive buttons and links
+
+### Project Showcase
+
+Projects are presented with:
+
+- Project descriptions
+- Technologies used
+- Screenshots
+- Links to live demonstrations where available
+- Links to source code where available
+
+### Performance Optimization
+
+The portfolio has undergone several performance-focused improvements, including:
+
+- Migration from Create React App to Vite
+- Removal of unnecessary dependencies
+- Route/component lazy loading
+- Code splitting
+- Image optimization
+- Production build optimization
+- Analysis of JavaScript bundle sizes
+- Lighthouse performance auditing
+- Google PageSpeed Insights auditing
+
+Further performance improvements and optimization work are planned as part of the project's ongoing development.
+
+---
+
+## Project Structure
+
+A simplified view of the project structure:
+
+```text
+portfolio/
+├── public/
+│   └── images/
+│
+├── src/
+│   ├── components/
+│   │   ├── footer/
+│   │   └── header/
+│   │
+│   ├── pages/
+│   │   ├── about/
+│   │   ├── contact/
+│   │   ├── home/
+│   │   ├── project/
+│   │   ├── services/
+│   │   ├── skills/
+│   │   
+│   ├── App.jsx
+│   └── main.jsx
+│
+├── index.html
+├── package.json
+├── package-lock.json
+├── vite.config.js
+└── README.md
+```
 
 ## Getting Started
 
-###  Prerequisites
+### Prerequisites
 
-Before you begin, make sure you have the following installed:
+Before running the project locally, make sure you have:
 
-[Node.js](https://nodejs.org) (v14 or later recommended): Download Node.js
++ [Node.js](https://nodejs.org) installed
++ npm (included with Node.js)
++ A code editor such as [Visual Studio Code](https://code.visualstudio.com)
++ Git
 
-npm (comes with Node.js) or yarn
+This project uses Vite 8, which requires Node.js 20.19+ or 22.12+.<br />
+You can check your installed versions with:
 
-A code editor like [Visual Studio Code](https://code.visualstudio.com)
+```
+node --version
+npm --version
+```
 
-###  Installation Steps
+## Installation
 
-Clone the repository
+1. Clone the repository<br />
+git clone https://github.com/GeraldOkoth/portfolio.git
 
-**git clone [https://github.com/GeraldOkoth/portfolio.git](https://github.com/GeraldOkoth/portfolio.git)**
-
+2. Navigate into the project directory<br />
 `cd portfolio`
 
-Install dependencies
-
-Using npm:
+3. Install dependencies<br />
 `npm install`
-Or using yarn:
-`yarn`
 
-___
+__Running the Development Server__
 
-###  Start the development server
+Start the Vite development server with:<br />
+`npm run dev`
 
-Using npm:
-`npm start`
+Vite will provide a local development URL, normally:<br />
+`http://localhost:5173/`
 
-Or using yarn:
-`yarn start`
+**Create a production build**
 
-The app will open automatically at http://localhost:3000 in your default browser.
+`npm run build`
 
-### Project Structure
+**Creates an optimized production build in the `dist/` directory.**<br />
+Preview the production build<br />
+`npm run preview`
 
-![Project Structure Image](public/images/Screenshot%202025-05-24%20205251.png)
+## Deployment
 
-####  Available Scripts
+The portfolio is deployed using Vercel.
 
-In the project directory, you can run:
+The production build uses Vite's `dist/` output directory.
 
-`npm start` - To run the app in development mode.
+For a Vite deployment, the relevant configuration is:
 
-`npm run build` - To create an optimized build for deployment:
+```
+Framework Preset: Vite
+Build Command: npm run build
+Output Directory: dist
+```
 
-`npm test` - To launch the test runner.
-
-___
-
-### Troubleshooting
-
+## Troubleshooting
 If you encounter issues:
 
 Make sure your Node.js version is compatible
 
-Delete node_modules and reinstall:
-`rm -rf node_modules && npm install`
+Delete `node_modules` and reinstall: `rm -rf node_modules && npm install`
 
-Clear the cache:
-`npm cache clean --force`
-___
+Clear the cache: `npm cache clean --force`
 
-###  Contact
+## Contact
 
-If you’d like to connect or collaborate:
+I am open to opportunities, collaboration, mentorship, feedback, and conversations around Front-End Development, UI/UX and Software Engineering.
 
- [Email](okothgerald449@gmail.com)
-
- [Twitter](https://x.com/gerald_okothKE)
-
- [LinkedIn](https://linkedin.com/in/geraldokoth)
+* Email: okothgerald449@gmail.com
+* LinkedIn: https://linkedin.com/in/geraldokoth
+* X / Twitter: https://x.com/gerald_okothKE
