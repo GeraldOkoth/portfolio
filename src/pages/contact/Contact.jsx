@@ -216,6 +216,7 @@ function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     placeholder="Your Name"
+                    autoComplete="on"
                     required
                   />
                 </div>
@@ -227,6 +228,7 @@ function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="Your Email"
+                    autoComplete="on"
                     required
                   />
                 </div>
