@@ -29,19 +29,18 @@ const ProjectCard = ({ project, index }) => {
 
   return (
     <>
-      <div 
-        className="project-card"
-        onClick={handleCardClick}
-      >
+      <div className="project-card" onClick={handleCardClick}>
         {/* Thumbnail Container */}
         <div className="project-thumbnail-wrapper">
-          <img 
-            src={project.image || "https://via.placeholder.com/400x300"} 
+          <img
+            src={project.image || "https://via.placeholder.com/400x300"}
             alt={project.title}
+            loading="lazy"
+            decoding="async"
             className="project-thumbnail-image"
             onClick={handleImageClick}
           />
-          
+
           {/* Hover Overlay */}
           <div className="thumbnail-hover-overlay">
             <div className="overlay-content">
@@ -54,7 +53,7 @@ const ProjectCard = ({ project, index }) => {
         {/* Card Content */}
         <div className="project-card-content">
           <h3 className="project-title">{project.title}</h3>
-          
+
           <p className="project-description">
             {project.description.length > 80
               ? `${project.description.slice(0, 80)}...`
@@ -62,9 +61,7 @@ const ProjectCard = ({ project, index }) => {
           </p>
 
           <div className="project-meta">
-            <p className="project-date">
-              Updated: {timeAgo(updatedAt)}
-            </p>
+            <p className="project-date">Updated: {timeAgo(updatedAt)}</p>
           </div>
 
           <button className="view-details-btn">
@@ -75,8 +72,8 @@ const ProjectCard = ({ project, index }) => {
 
       {/* Modal */}
       {isModalOpen && (
-        <ProjectModal 
-          project={project} 
+        <ProjectModal
+          project={project}
           onClose={() => setIsModalOpen(false)}
           formatDate={formatDate}
         />

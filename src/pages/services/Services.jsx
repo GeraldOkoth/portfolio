@@ -1,16 +1,15 @@
-
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { 
-  FaDollarSign, 
-  FaStar, 
-  FaCalendarCheck, 
+import {
+  FaDollarSign,
+  FaStar,
+  FaCalendarCheck,
   FaArrowRight,
   FaCode,
   FaPaintBrush,
   FaPalette,
   FaVideo,
-  FaMusic
+  FaMusic,
 } from "react-icons/fa";
 
 // ServiceItem Component with enhanced interactions
@@ -22,8 +21,8 @@ const ServiceItem = ({ image, alt, title, description, icon, index }) => {
   };
 
   return (
-    <motion.div 
-      className={`service-card ${isActive ? 'active' : ''}`}
+    <motion.div
+      className={`service-card ${isActive ? "active" : ""}`}
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -33,8 +32,14 @@ const ServiceItem = ({ image, alt, title, description, icon, index }) => {
       <div className="service-card-inner">
         {/* Image Container */}
         <div className="service-image-wrapper">
-          <img src={image} alt={alt} className="service-image" />
-          <div className={`service-overlay ${isActive ? 'show' : ''}`}>
+          <img
+            src={image}
+            alt={alt}
+            className="service-image"
+            loading="lazy"
+            decoding="async"
+          />
+          <div className={`service-overlay ${isActive ? "show" : ""}`}>
             <div className="overlay-content">
               <div className="service-icon-large">{icon}</div>
               <h3 className="overlay-title">{title}</h3>
@@ -52,7 +57,9 @@ const ServiceItem = ({ image, alt, title, description, icon, index }) => {
           <div className="service-icon-small">{icon}</div>
           <h3 className="service-title">{title}</h3>
           <button className="toggle-btn" aria-label={`View ${title} details`}>
-            <FaArrowRight className={`arrow-icon ${isActive ? 'rotated' : ''}`} />
+            <FaArrowRight
+              className={`arrow-icon ${isActive ? "rotated" : ""}`}
+            />
           </button>
         </div>
       </div>
@@ -69,11 +76,13 @@ const ServiceFeature = ({ icon, image, alt, title, description, index }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.15 }}
-      >
+    >
       <img
-          src={image}
-          alt={alt}
-          className="service-feature-image"
+        src={image}
+        alt={alt}
+        className="service-feature-image"
+        loading="lazy"
+        decoding="async"
       />
       <div className="service-feature-card">
         <div className="feature-icon-wrapper">
@@ -90,7 +99,7 @@ const ServiceFeature = ({ icon, image, alt, title, description, index }) => {
 const Services = () => {
   const serviceFeatures = [
     {
-      image: "/images/affordable-pricing.png",
+      image: "/images/affordable-pricing.webp",
       alt: "affordable pricing",
       icon: <FaDollarSign />,
       title: "Affordable Pricing",
@@ -98,7 +107,7 @@ const Services = () => {
         "premium-quality services at competitive rates, ensuring the best value for your investment.",
     },
     {
-      image: "/images/guarateed-quality.png",
+      image: "/images/guarateed-quality.webp",
       alt: "premium-quality",
       icon: <FaStar />,
       title: "Premium Quality",
@@ -106,7 +115,7 @@ const Services = () => {
         "Delivering excellence in every project with attention to detail and client satisfaction.",
     },
     {
-      image: "/images/timely-delivery.png",
+      image: "/images/timely-delivery.webp",
       alt: "timely-delivery",
       icon: <FaCalendarCheck />,
       title: "Timely Delivery",
@@ -117,7 +126,7 @@ const Services = () => {
 
   const services = [
     {
-      image: "/images/Screenshot 2024-05-03 121917.png",
+      image: "/images/website-design.webp",
       alt: "Web Development Services",
       title: "Web Development",
       description:
@@ -125,7 +134,7 @@ const Services = () => {
       icon: <FaCode />,
     },
     {
-      image: "/images/ui-ux-design.png",
+      image: "/images/ui-ux-design.webp",
       alt: "UI/UX Design Services",
       title: "UI/UX Design",
       description:
@@ -133,7 +142,7 @@ const Services = () => {
       icon: <FaPaintBrush />,
     },
     {
-      image: "/images/Screenshot 2023-11-23 222732.png",
+      image: "/images/graphic-design.png",
       alt: "Graphic Design Services",
       title: "Graphic Design",
       description:
@@ -141,7 +150,7 @@ const Services = () => {
       icon: <FaPalette />,
     },
     {
-      image: "/images/video_editting.png",
+      image: "/images/video_editting.webp",
       alt: "Video Editing Services",
       title: "Video Editing",
       description:
@@ -149,7 +158,7 @@ const Services = () => {
       icon: <FaVideo />,
     },
     {
-      image: "/images/istockphoto-182428014-1024x1024.jpg",
+      image: "/images/music-sheet.webp",
       alt: "Music Lessons",
       title: "Music Lessons",
       description:

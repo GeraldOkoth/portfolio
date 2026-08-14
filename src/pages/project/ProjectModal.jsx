@@ -32,6 +32,8 @@ const ProjectModal = ({ project, onClose, formatDate }) => {
               <img 
                 src={project.image || "https://via.placeholder.com/500x400"} 
                 alt={project.title}
+                loading="lazy"
+                decoding="async"
                 className="modal-image"
               />
             </div>

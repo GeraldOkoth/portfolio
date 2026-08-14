@@ -48,9 +48,11 @@ const About = () => {
           >
             <div className="image-container">
               <img
-                src="/images/optimized/about.webp"
+                src="/images/about.webp"
                 alt="Gerald Okoth - Frontend Developer"
                 className="about-image"
+                loading="lazy"
+                decoding="async"
               />
               <div className="mission-overlay">
                 <div className="mission-content">

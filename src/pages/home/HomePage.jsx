@@ -277,7 +277,7 @@ function HomePage() {
                 {/* <div className="image-backdrop"></div> */}
                 {/* <div className="image-border"></div> */}
                 <img
-                  src="/images/optimized/profile.webp"
+                  src="/images/profile.webp"
                   alt="Gerald Okoth - Frontend Developer & UI/UX Designer"
                   className="hero-image"
                 />

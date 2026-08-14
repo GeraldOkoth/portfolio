@@ -196,6 +196,7 @@ function Contact() {
                 height="300"
                 allowFullScreen=""
                 loading="lazy"
+                decoding="async"
                 referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
             </motion.div>
