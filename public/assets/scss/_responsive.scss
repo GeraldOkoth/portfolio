@@ -96,12 +96,14 @@
       top: calc(100% + 0.01rem);
       right: 0;
       max-width: 350px;
-      background: linear-gradient(135deg, var(--theme-background) 0%, var(--theme-backgroundAlt) 100%);
+      background: linear-gradient(
+        135deg,
+        var(--theme-background) 0%,
+        var(--theme-backgroundAlt) 100%
+      );
       backdrop-filter: blur(15px);
       flex-direction: column;
       gap: 0.5rem;
-      padding: 2rem 1.5rem;
-      margin: 0;
       // transform: translateX(0);
       transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
       z-index: 1000;
@@ -132,12 +134,9 @@
       }
 
       li {
-        margin: 0.5rem 0;
         border-bottom: 1px solid var(--theme-border);
 
-
         .nav-link {
-          padding: 1rem 1.2rem;
           border-radius: 10px;
           transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -157,7 +156,7 @@
           }
         }
         &:hover {
-            border-bottom: none;  
+          border-bottom: none;
         }
       }
     }
@@ -206,7 +205,6 @@
     .nav-links {
       gap: 1.8rem;
       justify-content: center;
-
 
       li .nav-link {
         font-size: 0.9rem;
@@ -1070,7 +1068,8 @@
             padding: 0.4rem 0.5rem;
           }
 
-          .section-title, .date-label {
+          .section-title,
+          .date-label {
             font-size: 0.8rem;
           }
 
@@ -1078,7 +1077,9 @@
             font-size: 0.7rem;
           }
 
-          .features-list li, .date-value, .date-full {
+          .features-list li,
+          .date-value,
+          .date-full {
             font-size: 0.7rem;
             line-height: -1rem;
             padding-bottom: 0;
@@ -1091,7 +1092,7 @@
 
 // projects section on tablet
 @mixin projectTablet() {
-   .project-section {
+  .project-section {
     padding: 5rem 2.5rem;
 
     .projects-header {

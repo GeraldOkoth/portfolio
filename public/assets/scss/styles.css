@@ -458,8 +458,6 @@ body.menu-open-blur .navbar * {
     backdrop-filter: blur(15px);
     flex-direction: column;
     gap: 0.5rem;
-    padding: 2rem 1.5rem;
-    margin: 0;
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 1000;
     overflow-y: auto;
@@ -483,11 +481,9 @@ body.menu-open-blur .navbar * {
     display: block;
   }
   .navbar .nav-links li {
-    margin: 0.5rem 0;
     border-bottom: 1px solid var(--theme-border);
   }
   .navbar .nav-links li .nav-link {
-    padding: 1rem 1.2rem;
     border-radius: 10px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
@@ -2858,13 +2854,16 @@ body.menu-open-blur .navbar * {
   .project-section .modal-body-wrapper .modal-right .modal-section .tech-badges .tech-badge {
     padding: 0.4rem 0.5rem;
   }
-  .project-section .modal-body-wrapper .modal-right .modal-section .section-title, .project-section .modal-body-wrapper .modal-right .modal-section .date-label {
+  .project-section .modal-body-wrapper .modal-right .modal-section .section-title,
+  .project-section .modal-body-wrapper .modal-right .modal-section .date-label {
     font-size: 0.8rem;
   }
   .project-section .modal-body-wrapper .modal-right .modal-section .section-text {
     font-size: 0.7rem;
   }
-  .project-section .modal-body-wrapper .modal-right .modal-section .features-list li, .project-section .modal-body-wrapper .modal-right .modal-section .date-value, .project-section .modal-body-wrapper .modal-right .modal-section .date-full {
+  .project-section .modal-body-wrapper .modal-right .modal-section .features-list li,
+  .project-section .modal-body-wrapper .modal-right .modal-section .date-value,
+  .project-section .modal-body-wrapper .modal-right .modal-section .date-full {
     font-size: 0.7rem;
     line-height: -1rem;
     padding-bottom: 0;
