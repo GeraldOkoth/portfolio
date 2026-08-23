@@ -482,6 +482,8 @@ body.menu-open-blur .navbar * {
   }
   .navbar .nav-links li {
     border-bottom: 1px solid var(--theme-border);
+    padding: 1rem 0;
+    margin: 2rem 0;
   }
   .navbar .nav-links li .nav-link {
     border-radius: 10px;
@@ -551,10 +553,12 @@ body.menu-open-blur .navbar * {
   }
   .navbar .nav-links li {
     margin: 0.3rem 0;
+    padding: 1rem 0;
   }
   .navbar .nav-links li .nav-link {
     padding: 0.8rem 1rem;
     font-size: 0.9rem;
+    margin: 5rem 0;
   }
   .navbar .nav-actions .theme-toggle-btn {
     width: 36px;

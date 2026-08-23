@@ -32,10 +32,12 @@
 
       li {
         margin: 0.3rem 0;
+        padding: 1rem 0;
 
         .nav-link {
           padding: 0.8rem 1rem;
           font-size: 0.9rem;
+          margin: 5rem 0;
         }
       }
     }
@@ -135,6 +137,8 @@
 
       li {
         border-bottom: 1px solid var(--theme-border);
+        padding: 1rem 0;
+        margin: 2rem 0;
 
         .nav-link {
           border-radius: 10px;
@@ -205,9 +209,13 @@
     .nav-links {
       gap: 1.8rem;
       justify-content: center;
+      padding: 1rem 0;
+        margin: 2rem 0;
 
       li .nav-link {
         font-size: 0.9rem;
+        padding: 1rem 0;
+        margin: 2rem 0;
       }
     }
 
