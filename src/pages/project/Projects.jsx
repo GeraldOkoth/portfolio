@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaStar, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import ProjectCard from "./ProjectCard";
@@ -19,11 +19,14 @@ const allProjects = [
       "Project showcase with filtering",
       "Contact form integration",
     ],
-    reasonForBuilding: "To showcase my frontend development and UI/UX design skills with a modern, interactive portfolio that stands out to potential employers.",
-    challengesFaced: "Creating responsive layouts, implementing smooth animations, integrating theme toggle system, optimizing performance for mobile devices.",
-    problemSolves: "Provides a centralized platform for potential clients and employers to view my projects, skills, and services in an engaging and professional manner.",
+    reasonForBuilding:
+      "To showcase my frontend development and UI/UX design skills with a modern, interactive portfolio that stands out to potential employers.",
+    challengesFaced:
+      "Creating responsive layouts, implementing smooth animations, integrating theme toggle system, optimizing performance for mobile devices.",
+    problemSolves:
+      "Provides a centralized platform for potential clients and employers to view my projects, skills, and services in an engaging and professional manner.",
     createdAt: "2024-10-22T10:00:00Z",
-    updatedAt: "2026-08-5T21:12:00Z",
+    updatedAt: "2026-08-28T21:12:00Z",
     demo: "https://geraldokoth.vercel.app",
     github: "https://github.com/GeraldOkoth/portfolio",
   },
@@ -42,9 +45,12 @@ const allProjects = [
       "5-day weather forecast display",
       "Responsive design with Tailwind CSS",
     ],
-    reasonForBuilding: "To practice API integration, state management, and create a useful tool for users to check weather information across different locations.",
-    challengesFaced: "Handling API rate limits, parsing complex JSON responses, implementing search debouncing, handling location-based data efficiently.",
-    problemSolves: "Allows users to quickly check current weather conditions and forecasts for any location with a clean, intuitive interface.",
+    reasonForBuilding:
+      "To practice API integration, state management, and create a useful tool for users to check weather information across different locations.",
+    challengesFaced:
+      "Handling API rate limits, parsing complex JSON responses, implementing search debouncing, handling location-based data efficiently.",
+    problemSolves:
+      "Allows users to quickly check current weather conditions and forecasts for any location with a clean, intuitive interface.",
     createdAt: "2025-06-22T10:00:00Z",
     updatedAt: "2026-02-13T15:30:00Z",
     github: "https://github.com/GeraldOkoth/weather-dashboard",
@@ -65,9 +71,12 @@ const allProjects = [
       "Responsive design for mobile and desktop",
       "Clean and minimalist design",
     ],
-    reasonForBuilding: "To master fundamental HTML and CSS skills while creating a beautiful, responsive landing page without JavaScript.",
-    challengesFaced: "Creating flexible layouts without frameworks, ensuring cross-browser compatibility, optimizing for various screen sizes without media queries complexity.",
-    problemSolves: "Demonstrates solid foundation in semantic HTML and CSS, proving ability to create responsive designs from scratch.",
+    reasonForBuilding:
+      "To master fundamental HTML and CSS skills while creating a beautiful, responsive landing page without JavaScript.",
+    challengesFaced:
+      "Creating flexible layouts without frameworks, ensuring cross-browser compatibility, optimizing for various screen sizes without media queries complexity.",
+    problemSolves:
+      "Demonstrates solid foundation in semantic HTML and CSS, proving ability to create responsive designs from scratch.",
     createdAt: "2025-06-22T10:00:00Z",
     updatedAt: "2026-02-13T15:30:00Z",
     github: "https://github.com/GeraldOkoth/alx_html_css",
@@ -88,9 +97,12 @@ const allProjects = [
       "Filter tasks by status",
       "Responsive design",
     ],
-    reasonForBuilding: "To practice DOM manipulation and localStorage API while creating a practical productivity tool.",
-    challengesFaced: "Managing state without frameworks, handling localStorage limitations, creating efficient DOM updates, ensuring data persistence.",
-    problemSolves: "Provides users with a lightweight, persistent task management application that works without internet connection.",
+    reasonForBuilding:
+      "To practice DOM manipulation and localStorage API while creating a practical productivity tool.",
+    challengesFaced:
+      "Managing state without frameworks, handling localStorage limitations, creating efficient DOM updates, ensuring data persistence.",
+    problemSolves:
+      "Provides users with a lightweight, persistent task management application that works without internet connection.",
     createdAt: "2025-06-22T10:00:00Z",
     updatedAt: "2025-06-26T15:30:00Z",
     github: "https://github.com/GeraldOkoth/dynamic-to-do-list-js",
@@ -111,9 +123,12 @@ const allProjects = [
       "Browser storage implementation",
       "Advanced DOM manipulation",
     ],
-    reasonForBuilding: "To advance JavaScript skills with JSON data handling, session management, and complex DOM operations.",
-    challengesFaced: "Parsing and stringifying JSON, managing multiple storage types, handling large data sets efficiently, debugging complex interactions.",
-    problemSolves: "Demonstrates advanced JavaScript capabilities and provides a feature-rich task management application with multiple storage options.",
+    reasonForBuilding:
+      "To advance JavaScript skills with JSON data handling, session management, and complex DOM operations.",
+    challengesFaced:
+      "Parsing and stringifying JSON, managing multiple storage types, handling large data sets efficiently, debugging complex interactions.",
+    problemSolves:
+      "Demonstrates advanced JavaScript capabilities and provides a feature-rich task management application with multiple storage options.",
     createdAt: "2025-07-21T11:20:00Z",
     updatedAt: "2025-07-21T11:20:00Z",
     github:
@@ -135,9 +150,12 @@ const allProjects = [
       "User statistics display",
       "Responsive design with Tailwind",
     ],
-    reasonForBuilding: "To practice API integration with React, implement search functionality, and create a tool for exploring GitHub profiles.",
-    challengesFaced: "GitHub API rate limiting, handling real-time search, managing async operations, displaying large data sets efficiently.",
-    problemSolves: "Enables developers to quickly search and view GitHub user profiles and repositories without leaving your app.",
+    reasonForBuilding:
+      "To practice API integration with React, implement search functionality, and create a tool for exploring GitHub profiles.",
+    challengesFaced:
+      "GitHub API rate limiting, handling real-time search, managing async operations, displaying large data sets efficiently.",
+    problemSolves:
+      "Enables developers to quickly search and view GitHub user profiles and repositories without leaving your app.",
     createdAt: "2025-08-20T10:08:21Z",
     updatedAt: "2025-08-22T15:02:37Z",
     demo: "https://github-userprofile-search.vercel.app/",
@@ -159,9 +177,12 @@ const allProjects = [
       "Interactive prototypes",
       "User-centered design approach",
     ],
-    reasonForBuilding: "To practice UI/UX design principles and create a pixel-perfect portfolio design in Figma.",
-    challengesFaced: "Maintaining design consistency, creating responsive layouts in Figma, user testing and feedback implementation.",
-    problemSolves: "Provides a reference design for building modern portfolio websites with excellent UX.",
+    reasonForBuilding:
+      "To practice UI/UX design principles and create a pixel-perfect portfolio design in Figma.",
+    challengesFaced:
+      "Maintaining design consistency, creating responsive layouts in Figma, user testing and feedback implementation.",
+    problemSolves:
+      "Provides a reference design for building modern portfolio websites with excellent UX.",
     createdAt: "2025-06-15T10:00:00Z",
     updatedAt: "2025-06-15T10:00:00Z",
     demo: "https://www.figma.com/proto/yfdgqxEwlKfLn0VniPR1Bw/Homepage--Copy-?node-id=3558-0&p=f&t=qxPSwRJODEMjHunt-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1",
@@ -181,9 +202,12 @@ const allProjects = [
       "Responsive design",
       "Modern UI elements",
     ],
-    reasonForBuilding: "To enhance UI/UX design skills through design replication and prototype creation.",
-    challengesFaced: "Matching exact pixel measurements, creating interactive prototypes, implementing form validation visuals.",
-    problemSolves: "Demonstrates UI design proficiency and provides a reference for modern login page design.",
+    reasonForBuilding:
+      "To enhance UI/UX design skills through design replication and prototype creation.",
+    challengesFaced:
+      "Matching exact pixel measurements, creating interactive prototypes, implementing form validation visuals.",
+    problemSolves:
+      "Demonstrates UI design proficiency and provides a reference for modern login page design.",
     createdAt: "2025-06-15T10:00:00Z",
     updatedAt: "2025-06-15T10:00:00Z",
     demo: "https://www.figma.com/proto/42jg1O8qpxNUVZ5DqrCJfo/alx_ehub_login_prototype?node-id=2-2&p=f&t=CVYcshduHnTXPh24-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1",
@@ -203,9 +227,12 @@ const allProjects = [
       "Interactive prototypes",
       "User-centered design approach",
     ],
-    reasonForBuilding: "To showcase ability to design complete website layouts with responsive design principles.",
-    challengesFaced: "Creating flexible component systems, ensuring design scalability, implementing interactive prototypes.",
-    problemSolves: "Provides comprehensive design system and reference for building responsive portfolio websites.",
+    reasonForBuilding:
+      "To showcase ability to design complete website layouts with responsive design principles.",
+    challengesFaced:
+      "Creating flexible component systems, ensuring design scalability, implementing interactive prototypes.",
+    problemSolves:
+      "Provides comprehensive design system and reference for building responsive portfolio websites.",
     createdAt: "2025-06-15T10:00:00Z",
     updatedAt: "2026-02-13T10:00:00Z",
     demo: "https://www.figma.com/proto/9XnDkxThivZIAQu7ODeNLu/headphones--Copy-?node-id=0-2&p=f&t=joEfmfZWZj1SVAYl-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1",
@@ -225,9 +252,12 @@ const allProjects = [
       "Interactive prototypes",
       "User-centered design approach",
     ],
-    reasonForBuilding: "To practice designing data-heavy interfaces with good information hierarchy.",
-    challengesFaced: "Organizing complex information, making data readable, creating responsive data visualizations.",
-    problemSolves: "Demonstrates ability to design interfaces for complex data presentation.",
+    reasonForBuilding:
+      "To practice designing data-heavy interfaces with good information hierarchy.",
+    challengesFaced:
+      "Organizing complex information, making data readable, creating responsive data visualizations.",
+    problemSolves:
+      "Demonstrates ability to design interfaces for complex data presentation.",
     createdAt: "2025-06-15T10:00:00Z",
     updatedAt: "2025-09-15T10:00:00Z",
     demo: "https://www.figma.com/design/9oydJHmDDljDJ6yKl7MxnZ/Untitled?node-id=0-1&t=VeOt0lvOxIxB5FZk-1",
@@ -247,9 +277,12 @@ const allProjects = [
       "Balanced composition",
       "Color harmony",
     ],
-    reasonForBuilding: "To practice graphic design fundamentals and create engaging visual content.",
-    challengesFaced: "Balancing visual hierarchy, choosing complementary colors, creating readable typography.",
-    problemSolves: "Demonstrates graphic design skills and provides template for creating engaging posters.",
+    reasonForBuilding:
+      "To practice graphic design fundamentals and create engaging visual content.",
+    challengesFaced:
+      "Balancing visual hierarchy, choosing complementary colors, creating readable typography.",
+    problemSolves:
+      "Demonstrates graphic design skills and provides template for creating engaging posters.",
     createdAt: "2025-06-15T10:00:00Z",
     updatedAt: "2025-11-15T10:00:00Z",
     demo: "https://www.canva.com/design/DAG6eMuCDEI/-5_Vd8ehf61k12ITgU1cBg/view?utm_content=DAG6eMuCDEI&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h981fd4f8fa",
@@ -269,9 +302,12 @@ const allProjects = [
       "Balanced composition",
       "Color harmony",
     ],
-    reasonForBuilding: "To create effective promotional material for a community event.",
-    challengesFaced: "Making text readable on complex backgrounds, creating emotional appeal, balancing imagery and text.",
-    problemSolves: "Provides effective promotional material for event recruitment.",
+    reasonForBuilding:
+      "To create effective promotional material for a community event.",
+    challengesFaced:
+      "Making text readable on complex backgrounds, creating emotional appeal, balancing imagery and text.",
+    problemSolves:
+      "Provides effective promotional material for event recruitment.",
     createdAt: "2025-06-15T10:00:00Z",
     updatedAt: "2025-09-15T10:00:00Z",
     demo: "https://www.canva.com/design/DAGwZr5TnIg/F0UI1vZPUXykGkVczuyzeQ/view?utm_content=DAGwZr5TnIg&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h68ea20605a",
@@ -285,13 +321,13 @@ const allProjects = [
       "A campaign poster designed for Machakos University presidential aspirant in his quest for University presidency.",
     technologies: ["Canva", "Graphic Design", "Poster Design"],
     image: "/images/juma-keith.jpg",
-    features: [
-      "Visually striking design",
-      "Balanced composition",
-    ],
-    reasonForBuilding: "To create effective promotional material for a a presidential aspirant event.",
-    challengesFaced: "Making text readable on complex backgrounds, creating emotional appeal, balancing imagery and text.",
-    problemSolves: "Provides effective promotional material for presidential aspirant.",
+    features: ["Visually striking design", "Balanced composition"],
+    reasonForBuilding:
+      "To create effective promotional material for a a presidential aspirant event.",
+    challengesFaced:
+      "Making text readable on complex backgrounds, creating emotional appeal, balancing imagery and text.",
+    problemSolves:
+      "Provides effective promotional material for presidential aspirant.",
     createdAt: "2025-11-15T10:00:00Z",
     updatedAt: "2026-08-06T10:00:00Z",
     demo: "/images/juma-keith.webp",
@@ -301,17 +337,15 @@ const allProjects = [
     type: "graphic",
     scale: "mini",
     title: "Machakos University Christian Union Event Poster",
-    description:
-      "Machakos University christian Union event poster",
+    description: "Machakos University christian Union event poster",
     technologies: ["Canva", "Graphic Design", "Poster Design"],
     image: "/images/mksu-cu.webp",
-    features: [
-      "Visually striking design",
-      "Balanced composition",
-      ],
-    reasonForBuilding: "To create awareness material for a university christian union event.",
+    features: ["Visually striking design", "Balanced composition"],
+    reasonForBuilding:
+      "To create awareness material for a university christian union event.",
     challengesFaced: "",
-    problemSolves: "Provides effective promotional material for a university christian union event.",
+    problemSolves:
+      "Provides effective promotional material for a university christian union event.",
     createdAt: "2025-02-04T10:00:00Z",
     updatedAt: "2026-08-06T10:00:00Z",
     demo: "/images/mksu-cu.webp",
@@ -325,13 +359,13 @@ const allProjects = [
       "A campaign poster designed for Machakos University pactum-novum coalition in their quest for University Student goververning council",
     technologies: ["Canva", "Graphic Design", "Poster Design"],
     image: "/images/pactum-novum.webp",
-    features: [
-      "Visually striking design",
-      "Balanced composition",
-      ],
-    reasonForBuilding: "To create promotional material for pactum-novum coalitions ambition for student governing council leadership",
-    challengesFaced: "Making text readable on complex backgrounds, creating emotional appeal, balancing imagery and text.",
-    problemSolves: "Provides effective promotional material for pactum-novum coalitions ambition for student governing council leadership.",
+    features: ["Visually striking design", "Balanced composition"],
+    reasonForBuilding:
+      "To create promotional material for pactum-novum coalitions ambition for student governing council leadership",
+    challengesFaced:
+      "Making text readable on complex backgrounds, creating emotional appeal, balancing imagery and text.",
+    problemSolves:
+      "Provides effective promotional material for pactum-novum coalitions ambition for student governing council leadership.",
     createdAt: "2025-02-01T10:00:00Z",
     updatedAt: "2026-08-06T10:00:00Z",
     demo: "/images/pactum-novum.webp",
@@ -345,13 +379,13 @@ const allProjects = [
       "A campaign poster designed for Machakos University presidential aspirant in his quest for University presidency.",
     technologies: ["Canva", "Graphic Design", "Poster Design"],
     image: "/images/papasmith.webp",
-    features: [
-      "Visually striking design",
-      "Balanced composition",
-      ],
-    reasonForBuilding: "To create promotional material for Papa Smith's presidential campaign.",
-    challengesFaced: "Making text readable on complex backgrounds, creating emotional appeal, balancing imagery and text.",
-    problemSolves: "Provides effective promotional material for Papa Smith's presidential campaign.",
+    features: ["Visually striking design", "Balanced composition"],
+    reasonForBuilding:
+      "To create promotional material for Papa Smith's presidential campaign.",
+    challengesFaced:
+      "Making text readable on complex backgrounds, creating emotional appeal, balancing imagery and text.",
+    problemSolves:
+      "Provides effective promotional material for Papa Smith's presidential campaign.",
     createdAt: "2025-01-29T10:00:00Z",
     updatedAt: "2026-08-06T10:00:00Z",
     demo: "/images/papasmith.webp",
@@ -365,13 +399,13 @@ const allProjects = [
       "A campaign poster designed for Machakos University TVET representative aspirant.",
     technologies: ["Canva", "Graphic Design", "Poster Design"],
     image: "/images/sara-mapi.webp",
-    features: [
-      "Visually striking design",
-      "Balanced composition",
-      ],
-    reasonForBuilding: "To create promotional material for Sara Mapi's TVET representative campaign.",
-    challengesFaced: "Making text readable on complex backgrounds, creating emotional appeal, balancing imagery and text.",
-    problemSolves: "Provides effective promotional material for Sara Mapi's TVET representative campaign.",
+    features: ["Visually striking design", "Balanced composition"],
+    reasonForBuilding:
+      "To create promotional material for Sara Mapi's TVET representative campaign.",
+    challengesFaced:
+      "Making text readable on complex backgrounds, creating emotional appeal, balancing imagery and text.",
+    problemSolves:
+      "Provides effective promotional material for Sara Mapi's TVET representative campaign.",
     createdAt: "2025-01-26T10:00:00Z",
     updatedAt: "2026-08-06T10:00:00Z",
     demo: "/images/sara-mapi.webp",
@@ -385,13 +419,13 @@ const allProjects = [
       "A campaign poster designed for Machakos University School of Pure and Applied Sciences representative aspirant.",
     technologies: ["Canva", "Graphic Design", "Poster Design"],
     image: "/images/sharon-muthoni.webp",
-    features: [
-      "Visually striking design",
-      "Balanced composition",
-      ],
-    reasonForBuilding: "To create promotional material for Sharon Muthoni's School of Pure and Applied Sciences representative campaign.",
-    challengesFaced: "Making text readable on complex backgrounds, creating emotional appeal, balancing imagery and text.",
-    problemSolves: "Provides effective promotional material for Sharon Muthoni's School of Pure and Applied Sciences representative campaign.",
+    features: ["Visually striking design", "Balanced composition"],
+    reasonForBuilding:
+      "To create promotional material for Sharon Muthoni's School of Pure and Applied Sciences representative campaign.",
+    challengesFaced:
+      "Making text readable on complex backgrounds, creating emotional appeal, balancing imagery and text.",
+    problemSolves:
+      "Provides effective promotional material for Sharon Muthoni's School of Pure and Applied Sciences representative campaign.",
     createdAt: "2025-02-15T10:00:00Z",
     updatedAt: "2026-08-06T10:00:00Z",
     demo: "/images/sharon-muthoni.webp",
@@ -405,13 +439,13 @@ const allProjects = [
       "A campaign poster designed for Machakos University School of Pure and Applied Sciences representative aspirant.",
     technologies: ["Canva", "Graphic Design", "Poster Design"],
     image: "/images/vincent-onyango.jpg",
-    features: [
-      "Visually striking design",
-      "Balanced composition",
-      ],
-    reasonForBuilding: "To create promotional material for Vincent Onyango's School of Pure and Applied Sciences representative campaign.",
-    challengesFaced: "Making text readable on complex backgrounds, creating emotional appeal, balancing imagery and text.",
-    problemSolves: "Provides effective promotional material for Vincent Onyango's School of Pure and Applied Sciences representative campaign.",
+    features: ["Visually striking design", "Balanced composition"],
+    reasonForBuilding:
+      "To create promotional material for Vincent Onyango's School of Pure and Applied Sciences representative campaign.",
+    challengesFaced:
+      "Making text readable on complex backgrounds, creating emotional appeal, balancing imagery and text.",
+    problemSolves:
+      "Provides effective promotional material for Vincent Onyango's School of Pure and Applied Sciences representative campaign.",
     createdAt: "2025-02-17T10:00:00Z",
     updatedAt: "2026-08-06T10:00:00Z",
     demo: "/images/vincent-onyango.webp",
@@ -431,9 +465,12 @@ const allProjects = [
       "Balanced composition",
       "Color harmony",
     ],
-    reasonForBuilding: "To create effective promotional material for a community event.",
-    challengesFaced: "Making text readable on complex backgrounds, creating emotional appeal, balancing imagery and text.",
-    problemSolves: "Provides effective promotional material for event recruitment.",
+    reasonForBuilding:
+      "To create effective promotional material for a community event.",
+    challengesFaced:
+      "Making text readable on complex backgrounds, creating emotional appeal, balancing imagery and text.",
+    problemSolves:
+      "Provides effective promotional material for event recruitment.",
     createdAt: "2025-08-12T10:00:00Z",
     updatedAt: "2025-08-12T10:00:00Z",
     demo: "/images/choir-recruitment-poster.webp",
@@ -521,7 +558,8 @@ function Projects() {
             My <span className="highlight">Projects</span>
           </h2>
           <p className="projects-subtitle">
-            Explore my work across frontend development, UI/UX design, and graphic design
+            Explore my work across frontend development, UI/UX design, and
+            graphic design
           </p>
         </motion.div>
 
@@ -580,9 +618,7 @@ function Projects() {
               {sortTabs.map((sort) => (
                 <button
                   key={sort}
-                  className={`filter-btn ${
-                    sort === sortType ? "active" : ""
-                  }`}
+                  className={`filter-btn ${sort === sortType ? "active" : ""}`}
                   onClick={() => {
                     setSortType(sort);
                     setCurrentSlide(0);
@@ -627,13 +663,14 @@ function Projects() {
             <>
               <div className="project-count">
                 <span className="count-badge">
-                  {filtered.length} {filtered.length === 1 ? "Project" : "Projects"}
+                  {filtered.length}{" "}
+                  {filtered.length === 1 ? "Project" : "Projects"}
                 </span>
               </div>
 
               {/* Grid Container */}
               <div className="projects-grid-container">
-                <AnimatePresence mode="fade">
+                <AnimatePresence mode="wait">
                   <motion.div
                     key={currentSlide}
                     className="projects-grid"

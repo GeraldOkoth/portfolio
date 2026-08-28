@@ -16,7 +16,7 @@ const ProjectCard = ({ project, index }) => {
       day: "numeric",
     });
 
-  const handleImageClick = (e) => {
+  const handleDemoClick = (e) => {
     e.stopPropagation();
     if (project.demo) {
       window.open(project.demo, "_blank", "noopener,noreferrer");
@@ -38,11 +38,21 @@ const ProjectCard = ({ project, index }) => {
             loading="lazy"
             decoding="async"
             className="project-thumbnail-image"
-            onClick={handleImageClick}
+            onClick={handleDemoClick}
           />
 
           {/* Hover Overlay */}
-          <div className="thumbnail-hover-overlay">
+          <div
+            className="thumbnail-hover-overlay"
+            onClick={handleDemoClick}
+            role={project.demo ? "button" : undefined}
+            tabIndex={project.demo ? 0 : undefined}
+            onKeyDown={(e) => {
+              if (project.demo && (e.key === "Enter" || e.key === " ")) {
+                handleDemoClick(e);
+              }
+            }}
+          >
             <div className="overlay-content">
               <FaExternalLinkAlt className="overlay-icon" />
               <p className="overlay-text">Click to view live demo</p>
@@ -55,16 +65,16 @@ const ProjectCard = ({ project, index }) => {
           <h3 className="project-title">{project.title}</h3>
 
           <p className="project-description">
-            {project.description.length > 80
-              ? `${project.description.slice(0, 80)}...`
-              : project.description}
+            {(project.description || "").length > 80
+              ? `${(project.description || "").slice(0, 80)}...`
+              : project.description || "No description available."}
           </p>
 
           <div className="project-meta">
             <p className="project-date">Updated: {timeAgo(updatedAt)}</p>
           </div>
 
-          <button className="view-details-btn">
+          <button type="button" className="view-details-btn">
             View Details <FaArrowRight />
           </button>
         </div>

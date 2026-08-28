@@ -1,26 +1,47 @@
 import React, { useEffect } from "react";
-import { FaTimes, FaGithub, FaExternalLinkAlt, FaCalendarAlt, FaCode, FaLightbulb, FaExclamationTriangle } from "react-icons/fa";
+import {
+  FaTimes,
+  FaGithub,
+  FaExternalLinkAlt,
+  FaCalendarAlt,
+  FaCode,
+  FaLightbulb,
+  FaExclamationTriangle,
+} from "react-icons/fa";
 import { timeAgo } from "./timeAgo";
-
 
 const ProjectModal = ({ project, onClose, formatDate }) => {
   useEffect(() => {
+    const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     return () => {
-      document.body.style.overflow = "unset";
+      document.body.style.overflow = previousOverflow;
     };
   }, []);
 
-  const createdAt = new Date(project.createdAt || new Date());
-  const updatedAt = new Date(project.updatedAt || new Date());
+  if (!project) return null;
 
-  const getRelativeTime = (date) => timeAgo(date);
+  const createdAt = new Date(project.createdAt || Date.now());
+  const updatedAt = new Date(project.updatedAt || Date.now());
+
+  const getRelativeTime = (date) =>
+    Number.isNaN(date.getTime()) ? "Unknown" : timeAgo(date);
+  const getFullDate = (date) =>
+    Number.isNaN(date.getTime())
+      ? "Unknown"
+      : typeof formatDate === "function"
+        ? formatDate(date)
+        : date.toLocaleDateString();
 
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
         {/* Close Button */}
-        <button className="modal-close" onClick={onClose} aria-label="Close modal">
+        <button
+          className="modal-close"
+          onClick={onClose}
+          aria-label="Close modal"
+        >
           <FaTimes />
         </button>
 
@@ -29,8 +50,8 @@ const ProjectModal = ({ project, onClose, formatDate }) => {
           {/* Left Side - Image */}
           <div className="modal-left">
             <div className="modal-image-container">
-              <img 
-                src={project.image || "https://via.placeholder.com/500x400"} 
+              <img
+                src={project.image || "https://via.placeholder.com/500x400"}
                 alt={project.title}
                 loading="lazy"
                 decoding="async"
@@ -72,11 +93,12 @@ const ProjectModal = ({ project, onClose, formatDate }) => {
             <div className="modal-section">
               <h4 className="section-title">Technologies</h4>
               <div className="tech-badges">
-                {project.technologies && project.technologies.map((tech, index) => (
-                  <span key={index} className="tech-badge">
-                    {tech}
-                  </span>
-                ))}
+                {Array.isArray(project.technologies) &&
+                  project.technologies.map((tech, index) => (
+                    <span key={index} className="tech-badge">
+                      {tech}
+                    </span>
+                  ))}
               </div>
             </div>
 
@@ -123,9 +145,10 @@ const ProjectModal = ({ project, onClose, formatDate }) => {
               <div className="modal-section">
                 <h4 className="section-title">Key Features</h4>
                 <ul className="features-list">
-                  {project.features.map((feature, index) => (
-                    <li key={index}>{feature}</li>
-                  ))}
+                  {Array.isArray(project.features) &&
+                    project.features.map((feature, index) => (
+                      <li key={index}>{feature}</li>
+                    ))}
                 </ul>
               </div>
             )}
@@ -137,7 +160,7 @@ const ProjectModal = ({ project, onClose, formatDate }) => {
                 <div>
                   <p className="date-label">Created</p>
                   <p className="date-value">{getRelativeTime(createdAt)}</p>
-                  <p className="date-full">{formatDate(createdAt)}</p>
+                  <p className="date-full">{getFullDate(createdAt)}</p>
                 </div>
               </div>
               <div className="date-item">
@@ -145,7 +168,7 @@ const ProjectModal = ({ project, onClose, formatDate }) => {
                 <div>
                   <p className="date-label">Last Updated</p>
                   <p className="date-value">{getRelativeTime(updatedAt)}</p>
-                  <p className="date-full">{formatDate(updatedAt)}</p>
+                  <p className="date-full">{getFullDate(updatedAt)}</p>
                 </div>
               </div>
             </div>
