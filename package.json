@@ -13,7 +13,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "watch:sass": "sass --watch public/assets/scss/styles.scss:src/css/dist/styles.css"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^6.0.5",

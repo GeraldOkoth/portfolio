@@ -2,67 +2,6 @@
 // nabar on phone
 @use "./variables" as v;
 
-// navbar on small screens
-@mixin navbarSmallScreen() {
-  .navbar {
-    padding: 0.5rem 1rem;
-
-    .navbar-container {
-      gap: 0.8rem;
-    }
-
-    .nav-logo {
-      a {
-        img {
-          width: 40px;
-          height: 40px;
-        }
-
-        .logo-text {
-          font-size: 1rem;
-        }
-      }
-    }
-
-    .nav-links {
-      top: 60px;
-      width: 90vw;
-      max-width: 300px;
-      padding: 1.5rem 1.2rem;
-
-      li {
-        margin: 0.3rem 0;
-        padding: 1rem 0;
-
-        .nav-link {
-          padding: 0.8rem 1rem;
-          font-size: 0.9rem;
-          margin: 5rem 0;
-        }
-      }
-    }
-
-    .nav-actions {
-      .theme-toggle-btn {
-        width: 36px;
-        height: 36px;
-        font-size: 1rem;
-      }
-
-      .nav-toggle {
-        width: 40px;
-        height: 40px;
-        gap: 5px;
-
-        .bar {
-          width: 20px;
-          height: 2px;
-        }
-      }
-    }
-  }
-}
-
 // navbar on phone
 @mixin navbarPhone() {
   .navbar {
@@ -81,8 +20,8 @@
         gap: 0.6rem;
 
         img {
-          width: 45px;
-          height: 45px;
+          width: 35px;
+          height: 35px;
         }
 
         .logo-text {
@@ -93,25 +32,18 @@
 
     .nav-links {
       position: fixed;
-      width: 85vw;
+      // width: 75vw;
       height: 100vh;
       top: calc(100% + 0.01rem);
-      right: 0;
-      max-width: 350px;
+      right: -10%;
       background: linear-gradient(
         135deg,
         var(--theme-background) 0%,
         var(--theme-backgroundAlt) 100%
       );
-      backdrop-filter: blur(15px);
       flex-direction: column;
-      gap: 0.5rem;
-      // transform: translateX(0);
-      transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      z-index: 1000;
-      overflow-y: auto;
-      justify-content: flex-start;
       display: none;
+      transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 
       &::-webkit-scrollbar {
         width: 6px;
@@ -132,17 +64,21 @@
 
       &.show {
         display: block;
-        // transform: translateX(100%);
       }
 
       li {
         border-bottom: 1px solid var(--theme-border);
-        padding: 1rem 0;
-        margin: 2rem 0;
+        padding: 0.6rem 0;
+
+        &:last-child {
+          border-bottom: none;
+        }
 
         .nav-link {
+          display: block;
           border-radius: 10px;
           transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+          padding: 0.8rem 1rem;
 
           &::after {
             display: none;
@@ -207,15 +143,45 @@
       gap: 3rem;
     }
     .nav-links {
-      gap: 1.8rem;
-      justify-content: center;
-      padding: 1rem 0;
-        margin: 2rem 0;
+      position: fixed;
+      width: 100vw;
+      height: auto;
+      top: calc(100% + 0.01rem);
+      left: 0;
+      right: 0;
+      border-radius: 0 0 10px 10px;
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.1);
+      background: linear-gradient(
+        135deg,
+        var(--theme-background) 0%,
+        var(--theme-backgroundAlt) 100%
+      );
+      padding: 1rem;
+      display: none;
 
-      li .nav-link {
-        font-size: 0.9rem;
-        padding: 1rem 0;
-        margin: 2rem 0;
+      li {
+        border-bottom: 1px solid var(--theme-border);
+        padding: .8rem 0;
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+        .nav-link {
+          font-size: 0.9rem;
+          padding: 0.8rem 1rem;
+          display: block;
+
+          &::after {
+            display: none;
+          }
+        }
+      }
+
+      &.show {
+        display: block;
       }
     }
 
@@ -223,6 +189,10 @@
       .theme-toggle-btn {
         width: 42px;
         height: 42px;
+      }
+
+      .nav-toggle {
+        display: flex;
       }
     }
   }

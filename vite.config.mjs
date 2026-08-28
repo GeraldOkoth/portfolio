@@ -16,4 +16,16 @@ export default defineConfig({
         ]
       : []),
   ],
+  server: {
+    watch: {
+      usePolling: true, // Forces Vite to check files periodically for changes
+    },
+  },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        api: 'modern-compiler', // Uses the latest Sass API for reliable HMR
+      },
+    },
+  },
 });
