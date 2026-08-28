@@ -182,7 +182,7 @@ html {
   width: 100%;
   padding: 0.6rem 2rem;
   background: var(--theme-navbar);
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(30px);
   -webkit-backdrop-filter: blur(20px);
   z-index: 999;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -395,21 +395,6 @@ html {
 }
 .navbar .nav-actions .nav-toggle.open .bar:nth-child(3) {
   transform: rotate(-45deg) translate(6px, -6px);
-}
-
-.mobile-menu-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100vw;
-  height: 100vh;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(8px);
-  z-index: -19;
-  cursor: pointer;
 }
 
 @media screen and (max-width: 768px) {
