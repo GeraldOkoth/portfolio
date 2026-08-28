@@ -293,7 +293,7 @@ export default function TopNavigationBar() {
       </div>
 
       {/* Mobile Menu Overlay */}
-      <AnimatePresence>
+      {/* <AnimatePresence>
         {isOpen && (
           <motion.div
             className="mobile-menu-overlay"
@@ -304,7 +304,7 @@ export default function TopNavigationBar() {
             onClick={handleOverlayClick}
           />
         )}
-      </AnimatePresence>
+      </AnimatePresence> */}
     </nav>
   );
 }
