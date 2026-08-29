@@ -12,17 +12,7 @@
   --theme-success: #43e97b;
   --theme-navbar: rgba(10, 5, 32, 0.7);
 }
-
-font-family {
-  --font-family-sans: "Inter", "Poppins", sans-serif;
-  --font-family-serif: "Merriweather", "Georgia", serif;
-}
-
-body {
-  background: var(--theme-background);
-  color: var(--theme-text);
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
+cle
 
 h1, h2, h3, h4, h5, h6 {
   color: var(--theme-text);
