@@ -197,8 +197,6 @@ export default function TopNavigationBar() {
             <img
               src="/images/logo.png"
               alt="Gerald Okoth Logo"
-              width={50}
-              height={50}
             />
             <span className="logo-text">Gerald Okoth</span>
           </a>
@@ -293,7 +291,7 @@ export default function TopNavigationBar() {
       </div>
 
       {/* Mobile Menu Overlay */}
-      {/* <AnimatePresence>
+      <AnimatePresence>
         {isOpen && (
           <motion.div
             className="mobile-menu-overlay"
@@ -304,7 +302,7 @@ export default function TopNavigationBar() {
             onClick={handleOverlayClick}
           />
         )}
-      </AnimatePresence> */}
+      </AnimatePresence>
     </nav>
   );
 }

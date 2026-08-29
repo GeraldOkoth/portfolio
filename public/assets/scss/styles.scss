@@ -1,7 +1,8 @@
 //Import/use partials
 //@use - alternative to @import and must be written before any other rules
-@use "./theme";
 @use "./resets";
+@use "./theme";
+@use "sass:map"; //for "map" operations e.g "map.get($fontWeights, "bold")" gets the value of the key "bold" from the map variable $fontWeights
 @use "sass:math"; //for "math" operations e.g "math.div(300px, 960px) * 100%;" converts 300px into percentage based on a total width of 960px.
 @use "./variables" as v; //to use variables from variables.scss, we need to add "as v" to create an alias for the file. Then we can access the variables using "v.variableName"
 @use "./responsive";
@@ -12,10 +13,3 @@
 @use "./services";
 @use "./contact";
 @use "./footer";
-
-// @import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Merriweather&family=Poppins:wght@100;200;300;400&family=Roboto:wght@300&display=swap');
-// @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
-// @import url(https://fonts.googleapis.com/css?family=Yeseva+One);
-// @import url(https://fonts.googleapis.com/css?family=Josefin+Sans:400,700,700italic,400italic);
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap');
-

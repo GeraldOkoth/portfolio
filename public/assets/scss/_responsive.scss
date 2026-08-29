@@ -5,10 +5,10 @@
 // navbar on phone
 @mixin navbarPhone() {
   .navbar {
-    padding: 0.7rem 1.5rem;
+    padding: 0.4rem 1.6rem;
 
     &.scrolled {
-      padding: 0.4rem 1.5rem;
+      padding: 0.2rem 1.6rem;
     }
 
     .navbar-container {
@@ -20,12 +20,8 @@
         gap: 0.6rem;
 
         img {
-          width: 35px;
-          height: 35px;
-        }
-
-        .logo-text {
-          font-size: 1.1rem;
+          width: 2.2rem;
+          height: 2.2rem;
         }
       }
     }
@@ -34,37 +30,31 @@
       position: fixed;
       width: 75vw;
       height: 100vh;
-      top: calc(100% + 0.01rem);
-      right: 0;
-      background: linear-gradient(
-        135deg,
-        var(--theme-background) 0%,
-        var(--theme-backgroundAlt) 100%
-      );
+      top: calc(100% + 0.001rem);
+      right: -75vw;
+      left: auto;
       flex-direction: column;
-      transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-      display: none;
-      
+      justify-content: flex-start;
+      transform: translateX(100%);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      gap: unset;
+      padding: 1.8rem;
 
-      &::-webkit-scrollbar {
-        width: 6px;
-      }
-
-      &::-webkit-scrollbar-track {
-        background: transparent;
-      }
-
-      &::-webkit-scrollbar-thumb {
-        background: rgba(255, 123, 0, 0.5);
-        border-radius: 3px;
-
-        &:hover {
-          background: rgba(255, 123, 0, 0.7);
-        }
-      }
+      transition:
+        right 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+        transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 0.3s ease,
+        visibility 0.3s ease;
 
       &.show {
-        display: block;
+        right: 0;
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        min-height: 100vh;
       }
 
       li {
@@ -80,6 +70,7 @@
           border-radius: 10px;
           transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
           padding: 0.8rem 1rem;
+          font-size: 0.8rem;
 
           &::after {
             display: none;
@@ -106,9 +97,8 @@
       gap: 1rem;
 
       .theme-toggle-btn {
-        width: 40px;
-        height: 40px;
-        font-size: 1.1rem;
+        width: 2.2rem !important;
+        height: 2.2rem !important;
       }
 
       .theme-menu {
@@ -127,7 +117,9 @@
 
       .nav-toggle {
         display: flex;
-
+        width: 2.2rem;
+        height: 2.2rem;
+        
         .bar {
           width: 22px;
           height: 2.5px;
@@ -140,25 +132,51 @@
 // navbar on tablet
 @mixin navbarTablet() {
   .navbar {
-    .navbar-container {
-      gap: 3rem;
+    padding: 0.6rem 1.8rem;
+
+    &.scrolled {
+      padding: 0.3rem 1.8rem;
     }
+
+    .navbar-container {
+      gap: 2rem;
+    }
+
+    .nav-logo {
+      a {
+        gap: 0.8rem;
+
+        img {
+          width: 2.6rem;
+          height: 2.6rem;
+        }
+      }
+    }
+
     .nav-links {
       position: fixed;
       width: 100vw;
-      height: auto;
-      top: calc(100% + 0.01rem);
+      top: calc(100% + 0.001rem);
       left: 0;
       right: 0;
       border-radius: 0 0 10px 10px;
       box-shadow: 10px -1px 12px rgba(0, 0, 0, 0.3);
-      background: linear-gradient(
-        135deg,
-        var(--theme-background) 0%,
-        var(--theme-backgroundAlt) 100%
-      );
-      padding: 1rem;
-      display: none;
+      display: flex;
+      flex-direction: column;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transform: translateY(-12px);
+      background: linear-gradient(135deg, var(--theme-background) 0%, var(--theme-backgroundAlt) 100%);
+      max-height: 0;
+      overflow: hidden;
+      gap: unset;
+      padding: 0.9rem;
+      transition:
+        transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 0.3s ease,
+        visibility 0.3s ease,
+        max-height 0.35s ease;
 
       li {
         border-bottom: 1px solid var(--theme-border);
@@ -180,18 +198,24 @@
       }
 
       &.show {
-        display: block;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateY(0);
+        max-height: 600px;
       }
     }
 
     .nav-actions {
       .theme-toggle-btn {
-        width: 42px;
-        height: 42px;
+        width: 2.6rem;
+        height: 2.6rem;
       }
 
       .nav-toggle {
         display: flex;
+        width: 2.6rem;
+        height: 2.6rem;
       }
     }
   }

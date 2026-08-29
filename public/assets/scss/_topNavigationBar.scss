@@ -1,24 +1,26 @@
 @use "./variables" as v;
 @use "./responsive" as r;
+@use "sass:map"; //for "map" operations e.g "map.get($fontWeights, "bold")" gets the value of the key "bold" from the map variable $fontWeights
 
-// body.menu-open-blur {
-//   z-index: 1;
-//   transition: filter 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-// }
+body.menu-open-blur {
+  z-index: 1;
+  transition: filter 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-// body.menu-open-blur
-//   :not(.navbar):not(.navbar *):not(.mobile-menu-overlay):not(
-//     .mobile-menu-overlay *
-//   ) {
-//   filter: blur(6px);
-//   transition: filter 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-// }
+body.menu-open-blur
+  :not(.navbar):not(.navbar *):not(.mobile-menu-overlay):not(
+    .mobile-menu-overlay *
+  ) {
+  filter: blur(61px);
+  transition: filter 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-// body.menu-open-blur .navbar,
-// body.menu-open-blur .navbar * {
-//   filter: none;
-// }
+body.menu-open-blur .navbar,
+body.menu-open-blur .navbar * {
+  filter: none;
+}
 
+// Navbar desktop
 .navbar {
   position: fixed;
   top: 0;
@@ -34,8 +36,8 @@
 
   &.scrolled {
     padding: 0.4rem 2rem;
-    background: rgba(10, 5, 32, 0.95);
   }
+
   .navbar-container {
     max-width: 1400px;
     margin: 0 auto;
@@ -52,8 +54,7 @@
       display: flex;
       align-items: center;
       gap: 1rem;
-      text-decoration: none;
-      font-weight: 700;
+      font-weight: 800;
       font-size: 1.3rem;
       transition: opacity 0.3s ease;
 
@@ -62,13 +63,13 @@
       }
 
       img {
-        width: 50px;
-        height: 50px;
+        width: 3rem;
+        height: 3rem;
         border-radius: 10px;
       }
 
       .logo-text {
-        font-weight: 700px;
+        font-weight: 800;
         font-size: 1.3rem;
         background: linear-gradient(
           135deg,
@@ -80,7 +81,7 @@
         background-clip: text;
         letter-spacing: -0.5px;
 
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: v.$tablet) {
           display: none;
         }
       }
@@ -89,7 +90,6 @@
 
   .nav-links {
     display: flex;
-    list-style: none;
     gap: 2.5rem;
     flex: 1;
     justify-content: center;
@@ -98,10 +98,9 @@
       position: relative;
 
       .nav-link {
-        color: var(--theme-textMuted);
-        text-decoration: none;
+        color: var(--theme-text);
         font-weight: 600;
-        font-size: 0.95rem;
+        font-size: 1rem;
         letter-spacing: 0.3px;
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         cursor: pointer;
@@ -153,8 +152,8 @@
       position: relative;
 
       .theme-toggle-btn {
-        width: 45px;
-        height: 45px;
+        width: 3rem;
+        height: 3rem;
         border-radius: 50%;
         background: var(--theme-backgroundCard);
         border: 2px solid var(--theme-border);
@@ -183,13 +182,13 @@
         top: calc(100% + 1rem);
         right: 0;
         margin-top: 0.8rem;
-        background: rgba(10, 5, 32, 0.95);
-        border: 1px solid rgba(255, 255, 255, 0.15);
+        background: var(--theme-backgroundAlt);
+        border: 1px solid var(--theme-border);
         border-radius: 15px;
         overflow: hidden;
-        backdrop-filter: blur(10px);
+        backdrop-filter: blur(12px);
         box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-        z-index: 1000;
+        z-index: 998;
         min-width: 180px;
 
         .theme-option {
@@ -197,7 +196,7 @@
           padding: 0.9rem 1.2rem;
           border: none;
           background: transparent;
-          color: rgba(255, 255, 255, 0.7);
+          color: var(--theme-text);
           cursor: pointer;
           font-size: 0.95rem;
           font-weight: 600;
@@ -246,8 +245,8 @@
       flex-direction: column;
       cursor: pointer;
       gap: 6px;
-      width: 45px;
-      height: 45px;
+      width: 3rem;
+      height: 3rem;
       justify-content: center;
       align-items: center;
       border: 2px solid transparent;
@@ -287,20 +286,20 @@
   }
 }
 
-// .mobile-menu-overlay {
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   right: 0;
-//   bottom: 0;
-//   width: 100vw;
-//   height: 100vh;
-//   inset: 0;
-//   background: rgba(0, 0, 0, 0.4);
-//   backdrop-filter: blur(8px);
-//   z-index: -19;
-//   cursor: pointer;
-// }
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  z-index: -19;
+  cursor: pointer;
+}
 
 // Responsive Design - Tablet (< 768px)
 @media screen and (max-width: v.$tablet) {

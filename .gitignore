@@ -25,6 +25,3 @@ yarn-error.log*
 
 # source maps
 styles.css.map
-
-# local / temporary files
-test.html

@@ -9,7 +9,7 @@
   --theme-backgroundCard: #0f0a2e;
   --theme-text: #ffffff;
   --theme-textMuted: rgba(255, 255, 255, 0.7);
-  --theme-border: rgba(255, 255, 255, 0.1);
+  --theme-border: rgba(255, 255, 255, 0.2);
   --theme-success: #43e97b;
   --theme-navbar: rgba(10, 5, 32, 0.7);
 }
@@ -23,11 +23,24 @@ font-family {
 body {
   background: var(--theme-background);
   color: var(--theme-text);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif,
+    "Montserrat", "Josefin Sans", "Yeseva Ones";
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 // Common elements that should respond to theme
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: var(--theme-text);
 }
 
@@ -63,14 +76,6 @@ p {
   transition: all 0.3s ease;
 }
 
-// Text colors
-.hero-description,
-.about-text p,
-.project-description,
-.contact-description {
-  color: var(--theme-textMuted);
-}
-
 // Buttons and interactive elements
 .btn-primary,
 .submit-btn,
@@ -79,7 +84,7 @@ p {
     135deg,
     var(--theme-primary) 0%,
     var(--theme-secondary) 100%
-  ) !important;
+  );
 }
 
 // Links and accents
@@ -114,7 +119,7 @@ a,
 .skill-tag,
 .opp-tag {
   border-color: var(--theme-border);
-  
+
   &:hover {
     border-color: var(--theme-primary);
   }
@@ -142,20 +147,8 @@ a,
   }
 
   .navbar {
-    background: rgba(255, 255, 255, 0.9) !important;
-    border-bottom-color: rgba(10, 5, 32, 0.1);
-
-    &.scrolled {
-      background: rgba(255, 255, 255, 0.95);
-      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    }
-  }
-
-  .project-card,
-  .skill-card,
-  .info-card,
-  .contact-form-section {
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background: var(--theme-navbar);
+    border-bottom-color: var(--theme-border);
   }
 
   .hero-badge {
