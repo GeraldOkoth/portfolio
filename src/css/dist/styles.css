@@ -168,11 +168,6 @@ a,
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-  overflow-x: hidden;
-}
-
 /* mobile devices*/
 .navbar {
   position: fixed;
@@ -3930,5 +3925,3 @@ html {
     flex-direction: column;
   }
 }
-
-/*# sourceMappingURL=styles.css.map */

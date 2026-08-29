@@ -1,5 +1,4 @@
 // Reusable snippet for buttons
-@use "./variables" as v; //to use variables from variables.scss, we need to add "as v" to create an alias for the file. Then we can access the variables using "v.variableName"
 @mixin button() {
     cursor: pointer;
     transition: all .3s ease;

@@ -1,14 +1,14 @@
-import React, { lazy, Suspense } from 'react';
+import { lazy, Suspense } from "react";
 import { Analytics } from "@vercel/analytics/react";
-import './css/dist/styles.css';
+import "./css/dist/styles.css";
 
-const HomePage = lazy(() => import('./pages/home/HomePage'));
-const About = lazy(() => import('./pages/about/About'));
-const Skills = lazy(() => import('./pages/skills/Skills'));
-const Projects = lazy(() => import('./pages/project/Projects'));
-const Services = lazy(() => import('./pages/services/Services'));
-const Contact = lazy(() => import('./pages/contact/Contact'));
-const Footer = lazy(() => import('./components/footer/Footer'));
+const HomePage = lazy(() => import("./pages/home/HomePage"));
+const About = lazy(() => import("./pages/about/About"));
+const Skills = lazy(() => import("./pages/skills/Skills"));
+const Projects = lazy(() => import("./pages/project/Projects"));
+const Services = lazy(() => import("./pages/services/Services"));
+const Contact = lazy(() => import("./pages/contact/Contact"));
+const Footer = lazy(() => import("./components/footer/Footer"));
 
 function App() {
   return (
