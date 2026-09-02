@@ -22,8 +22,8 @@ function App() {
         <Contact />
         <Footer />
       </Suspense>
-
-      <Analytics />
+      {/* Only render Analytics if we are not on localhost */}
+      {process.env.NODE_ENV === "production" && <Analytics />}
     </div>
   );
 }

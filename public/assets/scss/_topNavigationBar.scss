@@ -2,23 +2,23 @@
 @use "./responsive" as r;
 @use "sass:map"; //for "map" operations e.g "map.get($fontWeights, "bold")" gets the value of the key "bold" from the map variable $fontWeights
 
-body.menu-open-blur {
-  z-index: 1;
-  transition: filter 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
+// body.menu-open-blur {
+//   z-index: 1;
+//   transition: filter 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+// }
 
-body.menu-open-blur
-  :not(.navbar):not(.navbar *):not(.mobile-menu-overlay):not(
-    .mobile-menu-overlay *
-  ) {
-  filter: blur(61px);
-  transition: filter 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
+// body.menu-open-blur
+//   :not(.navbar):not(.navbar *):not(.mobile-menu-overlay):not(
+//     .mobile-menu-overlay *
+//   ) {
+//   filter: blur(61px);
+//   transition: filter 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+// }
 
-body.menu-open-blur .navbar,
-body.menu-open-blur .navbar * {
-  filter: none;
-}
+// body.menu-open-blur .navbar,
+// body.menu-open-blur .navbar * {
+//   filter: none;
+// }
 
 // Navbar desktop
 .navbar {
@@ -254,6 +254,7 @@ body.menu-open-blur .navbar * {
       transition: all 0.3s ease;
       align-items: center;
       justify-content: center;
+      z-index: 1001;
 
       .bar {
         width: 25px;
@@ -286,20 +287,21 @@ body.menu-open-blur .navbar * {
   }
 }
 
-.mobile-menu-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100vw;
-  height: 100vh;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(8px);
-  z-index: -19;
-  cursor: pointer;
-}
+// .mobile-menu-overlay {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   width: 100vw;
+//   height: 100vh;
+//   inset: 0;
+//   background: rgba(0, 0, 0, 0.4);
+//   backdrop-filter: blur(8px);
+//   z-index: 998;
+//   cursor: pointer;
+//   pointer-events: none; 
+// }
 
 // Responsive Design - Tablet (< 768px)
 @media screen and (max-width: v.$tablet) {

@@ -51,8 +51,11 @@ const About = () => {
                 src="/images/about.webp"
                 alt="Gerald Okoth - Frontend Developer"
                 className="about-image"
-                loading="lazy"
+                fetchpriority="high"
                 decoding="async"
+                width="1422"
+                height="2526"
+                style={{ width: '100%', height: 'auto' }}
               />
               <div className="mission-overlay">
                 <div className="mission-content">

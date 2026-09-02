@@ -48,15 +48,6 @@
         opacity 0.3s ease,
         visibility 0.3s ease;
 
-      &.show {
-        right: 0;
-        transform: translateX(0);
-        opacity: 1;
-        visibility: visible;
-        pointer-events: auto;
-        min-height: 100vh;
-      }
-
       li {
         border-bottom: 1px solid var(--theme-border);
         padding: 0.6rem 0;
@@ -90,6 +81,14 @@
         &:hover {
           border-bottom: none;
         }
+      }
+      &.show {
+        right: 0;
+        transform: translateX(0);
+        opacity: 1 !important;
+        visibility: visible;
+        pointer-events: auto;
+        min-height: 100vh;
       }
     }
 

@@ -15,7 +15,7 @@
   --theme-background: #0a0520;
   --theme-backgroundAlt: #1a0f3e;
   --theme-backgroundCard: #0f0a2e;
-  --theme-text: #ffffff;
+  --theme-text: #94a3b8;
   --theme-textMuted: rgba(255, 255, 255, 0.7);
   --theme-border: rgba(255, 255, 255, 0.2);
   --theme-success: #43e97b;
@@ -159,21 +159,6 @@ a,
 }
 
 /* mobile devices*/
-body.menu-open-blur {
-  z-index: 1;
-  transition: filter 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-body.menu-open-blur :not(.navbar):not(.navbar *):not(.mobile-menu-overlay):not(.mobile-menu-overlay *) {
-  filter: blur(61px);
-  transition: filter 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-body.menu-open-blur .navbar,
-body.menu-open-blur .navbar * {
-  filter: none;
-}
-
 .navbar {
   position: fixed;
   top: 0;
@@ -372,6 +357,7 @@ body.menu-open-blur .navbar * {
   transition: all 0.3s ease;
   align-items: center;
   justify-content: center;
+  z-index: 1001;
 }
 .navbar .nav-actions .nav-toggle .bar {
   width: 25px;
@@ -391,21 +377,6 @@ body.menu-open-blur .navbar * {
 }
 .navbar .nav-actions .nav-toggle.open .bar:nth-child(3) {
   transform: rotate(-45deg) translate(6px, -6px);
-}
-
-.mobile-menu-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100vw;
-  height: 100vh;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(8px);
-  z-index: -19;
-  cursor: pointer;
 }
 
 @media screen and (max-width: 768px) {
@@ -512,14 +483,6 @@ body.menu-open-blur .navbar * {
     padding: 1.8rem;
     transition: right 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease, visibility 0.3s ease;
   }
-  .navbar .nav-links.show {
-    right: 0;
-    transform: translateX(0);
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-    min-height: 100vh;
-  }
   .navbar .nav-links li {
     border-bottom: 1px solid var(--theme-border);
     padding: 0.6rem 0;
@@ -548,6 +511,14 @@ body.menu-open-blur .navbar * {
   }
   .navbar .nav-links li:hover {
     border-bottom: none;
+  }
+  .navbar .nav-links.show {
+    right: 0;
+    transform: translateX(0);
+    opacity: 1 !important;
+    visibility: visible;
+    pointer-events: auto;
+    min-height: 100vh;
   }
   .navbar .nav-actions {
     gap: 1rem;
@@ -3965,3 +3936,5 @@ body.menu-open-blur .navbar * {
     flex-direction: column;
   }
 }
+
+/*# sourceMappingURL=styles.css.map */

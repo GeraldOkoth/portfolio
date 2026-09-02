@@ -168,7 +168,9 @@ export default function TopNavigationBar() {
     setIsOpen(false);
   };
 
-  const toggleMenu = () => {
+  const toggleMenu = (e) => {
+    e.stopPropagation();
+  // setIsOpen((prev) => !prev);
     setIsOpen(!isOpen);
   };
 
@@ -177,11 +179,11 @@ export default function TopNavigationBar() {
   };
 
   // Handle overlay click to close menu
-  const handleOverlayClick = (e) => {
-    if (e.target === e.currentTarget) {
-      closeMenu();
-    }
-  };
+  // const handleOverlayClick = (e) => {
+  //   if (e.target === e.currentTarget) {
+  //     closeMenu();
+  //   }
+  // };
 
   return (
     <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
@@ -291,7 +293,7 @@ export default function TopNavigationBar() {
       </div>
 
       {/* Mobile Menu Overlay */}
-      <AnimatePresence>
+      {/* <AnimatePresence>
         {isOpen && (
           <motion.div
             className="mobile-menu-overlay"
@@ -302,7 +304,7 @@ export default function TopNavigationBar() {
             onClick={handleOverlayClick}
           />
         )}
-      </AnimatePresence>
+      </AnimatePresence> */}
     </nav>
   );
 }
