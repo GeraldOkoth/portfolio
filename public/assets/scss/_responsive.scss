@@ -5,7 +5,8 @@
 // navbar on phone
 @mixin navbarPhone() {
   .navbar {
-    padding: 0.4rem 1.6rem;
+    padding: 0.8rem 1.6rem;
+    z-index: 999;
 
     &.scrolled {
       padding: 0.2rem 1.6rem;
@@ -27,26 +28,27 @@
     }
 
     .nav-links {
-      position: fixed;
-      width: 75vw;
-      height: 100vh;
-      top: calc(100% + 0.001rem);
-      right: -75vw;
+      position: absolute;
+      top: 100%;
+      right: 0;
       left: auto;
+      width: 0;
+      min-height: 100vh;
       flex-direction: column;
       justify-content: flex-start;
       transform: translateX(100%);
       opacity: 0;
       visibility: hidden;
       pointer-events: none;
-      gap: unset;
+      gap: 0;
       padding: 1.8rem;
-
       transition:
-        right 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+        width 0.5s cubic-bezier(0.4, 0, 0.2, 1),
         transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
         opacity 0.3s ease,
         visibility 0.3s ease;
+      z-index: 100;
+      background: var(--theme-backgroundCard) !important;
 
       li {
         border-bottom: 1px solid var(--theme-border);
@@ -61,7 +63,7 @@
           border-radius: 10px;
           transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
           padding: 0.8rem 1rem;
-          font-size: 0.8rem;
+          font-size: 0.95rem;
 
           &::after {
             display: none;
@@ -83,12 +85,12 @@
         }
       }
       &.show {
-        right: 0;
+        width: 75vw;
         transform: translateX(0);
-        opacity: 1 !important;
+        opacity: 1;
+        z-index: 100;
         visibility: visible;
         pointer-events: auto;
-        min-height: 100vh;
       }
     }
 
@@ -118,7 +120,7 @@
         display: flex;
         width: 2.2rem;
         height: 2.2rem;
-        
+
         .bar {
           width: 22px;
           height: 2.5px;
@@ -153,29 +155,33 @@
     }
 
     .nav-links {
-      position: fixed;
-      width: 100vw;
-      top: calc(100% + 0.001rem);
-      left: 0;
+      position: absolute;
+      top: 100%;
       right: 0;
-      border-radius: 0 0 10px 10px;
-      box-shadow: 10px -1px 12px rgba(0, 0, 0, 0.3);
+      left: 0;
+      width: 100vw;
       display: flex;
       flex-direction: column;
+      justify-content: flex-start;
+      transform: translateX(100%);
       opacity: 0;
+      border-bottom: 1px solid var(--theme-border);
+      border-radius: 0 0 10px 10px;
       visibility: hidden;
       pointer-events: none;
-      transform: translateY(-12px);
-      background: linear-gradient(135deg, var(--theme-background) 0%, var(--theme-backgroundAlt) 100%);
-      max-height: 0;
-      overflow: hidden;
-      gap: unset;
-      padding: 0.9rem;
+      gap: 0;
+      background: var(--theme-backgroundCard) !important;
+      padding: 1.8rem;
       transition:
-        transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+        max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+        transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
         opacity 0.3s ease,
-        visibility 0.3s ease,
-        max-height 0.35s ease;
+        visibility 0.3s ease;
+      z-index: 100;
+      box-shadow: 10px -1px 12px rgba(0, 0, 0, 0.3);
+      transform: translateY(-12px);
+      max-height: 0;
+      padding: 0.9rem;
 
       li {
         border-bottom: 1px solid var(--theme-border);
@@ -199,6 +205,7 @@
       &.show {
         opacity: 1;
         visibility: visible;
+        z-index: 100;
         pointer-events: auto;
         transform: translateY(0);
         max-height: 600px;

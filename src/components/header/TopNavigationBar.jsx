@@ -116,20 +116,20 @@ export default function TopNavigationBar() {
   }, []);
 
   // Handle body blur when menu opens/closes
-  // useEffect(() => {
-  //   if (isOpen) {
-  //     document.body.classList.add("menu-open-blur");
-  //     document.body.style.overflow = "hidden"; // Prevent scrolling when menu open
-  //   } else {
-  //     document.body.classList.remove("menu-open-blur");
-  //     document.body.style.overflow = "unset";
-  //   }
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add("menu-open-blur");
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.classList.remove("menu-open-blur");
+      document.body.style.overflow = "unset";
+    }
 
-  //   return () => {
-  //     document.body.classList.remove("menu-open-blur");
-  //     document.body.style.overflow = "unset";
-  //   };
-  // }, []);
+    return () => {
+      document.body.classList.remove("menu-open-blur");
+      document.body.style.overflow = "unset";
+    };
+  }, [isOpen]);
 
   // Handle ESC key to close menu
   useEffect(() => {
@@ -168,10 +168,8 @@ export default function TopNavigationBar() {
     setIsOpen(false);
   };
 
-  const toggleMenu = (e) => {
-    e.stopPropagation();
-  // setIsOpen((prev) => !prev);
-    setIsOpen(!isOpen);
+  const toggleMenu = () => {
+    setIsOpen((prev) => !prev);
   };
 
   const toggleThemeMenu = () => {
@@ -179,11 +177,11 @@ export default function TopNavigationBar() {
   };
 
   // Handle overlay click to close menu
-  // const handleOverlayClick = (e) => {
-  //   if (e.target === e.currentTarget) {
-  //     closeMenu();
-  //   }
-  // };
+  const handleOverlayClick = (e) => {
+    if (e.target === e.currentTarget) {
+      closeMenu();
+    }
+  };
 
   return (
     <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
@@ -196,10 +194,7 @@ export default function TopNavigationBar() {
           transition={{ duration: 0.5 }}
         >
           <a href="#home">
-            <img
-              src="/images/logo.png"
-              alt="Gerald Okoth Logo"
-            />
+            <img src="/images/logo.png" alt="Gerald Okoth Logo" />
             <span className="logo-text">Gerald Okoth</span>
           </a>
         </motion.div>
@@ -293,7 +288,7 @@ export default function TopNavigationBar() {
       </div>
 
       {/* Mobile Menu Overlay */}
-      {/* <AnimatePresence>
+      <AnimatePresence>
         {isOpen && (
           <motion.div
             className="mobile-menu-overlay"
@@ -304,7 +299,7 @@ export default function TopNavigationBar() {
             onClick={handleOverlayClick}
           />
         )}
-      </AnimatePresence> */}
+      </AnimatePresence>
     </nav>
   );
 }

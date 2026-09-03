@@ -34,6 +34,7 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  z-index: 0;
 }
 
 h1,
@@ -166,11 +167,13 @@ a,
   right: 0;
   width: 100%;
   padding: 0.6rem 2rem;
-  background: var(--theme-navbar);
+  background: var(--theme-backgroundCard) !important;
   backdrop-filter: blur(30px);
   -webkit-backdrop-filter: blur(20px);
-  z-index: 999;
+  z-index: 999 !important;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  height: auto;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
 }
 .navbar.scrolled {
   padding: 0.4rem 2rem;
@@ -233,6 +236,7 @@ a,
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
   position: relative;
+  display: inline-block;
 }
 .navbar .nav-links li .nav-link::after {
   content: "";
@@ -268,6 +272,7 @@ a,
   position: relative;
 }
 .navbar .nav-actions .theme-toggle-wrapper .theme-toggle-btn {
+  z-index: 1000;
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
@@ -301,7 +306,7 @@ a,
   overflow: hidden;
   backdrop-filter: blur(12px);
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-  z-index: 998;
+  z-index: 1001;
   min-width: 180px;
 }
 .navbar .nav-actions .theme-toggle-wrapper .theme-menu .theme-option {
@@ -379,6 +384,20 @@ a,
   transform: rotate(-45deg) translate(6px, -6px);
 }
 
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 98;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 768px) {
   .navbar {
     padding: 0.6rem 1.8rem;
@@ -397,25 +416,29 @@ a,
     height: 2.6rem;
   }
   .navbar .nav-links {
-    position: fixed;
-    width: 100vw;
-    top: calc(100% + 0.001rem);
-    left: 0;
+    position: absolute;
+    top: 100%;
     right: 0;
-    border-radius: 0 0 10px 10px;
-    box-shadow: 10px -1px 12px rgba(0, 0, 0, 0.3);
+    left: 0;
+    width: 100vw;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+    transform: translateX(100%);
     opacity: 0;
+    border-bottom: 1px solid var(--theme-border);
+    border-radius: 0 0 10px 10px;
     visibility: hidden;
     pointer-events: none;
+    gap: 0;
+    background: var(--theme-backgroundCard) !important;
+    padding: 1.8rem;
+    transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 100;
+    box-shadow: 10px -1px 12px rgba(0, 0, 0, 0.3);
     transform: translateY(-12px);
-    background: linear-gradient(135deg, var(--theme-background) 0%, var(--theme-backgroundAlt) 100%);
     max-height: 0;
-    overflow: hidden;
-    gap: unset;
     padding: 0.9rem;
-    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease, visibility 0.3s ease, max-height 0.35s ease;
   }
   .navbar .nav-links li {
     border-bottom: 1px solid var(--theme-border);
@@ -435,6 +458,7 @@ a,
   .navbar .nav-links.show {
     opacity: 1;
     visibility: visible;
+    z-index: 100;
     pointer-events: auto;
     transform: translateY(0);
     max-height: 600px;
@@ -451,7 +475,8 @@ a,
 }
 @media screen and (max-width: 480px) {
   .navbar {
-    padding: 0.4rem 1.6rem;
+    padding: 0.8rem 1.6rem;
+    z-index: 999;
   }
   .navbar.scrolled {
     padding: 0.2rem 1.6rem;
@@ -467,21 +492,23 @@ a,
     height: 2.2rem;
   }
   .navbar .nav-links {
-    position: fixed;
-    width: 75vw;
-    height: 100vh;
-    top: calc(100% + 0.001rem);
-    right: -75vw;
+    position: absolute;
+    top: 100%;
+    right: 0;
     left: auto;
+    width: 0;
+    min-height: 100vh;
     flex-direction: column;
     justify-content: flex-start;
     transform: translateX(100%);
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    gap: unset;
+    gap: 0;
     padding: 1.8rem;
-    transition: right 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease, visibility 0.3s ease;
+    transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 100;
+    background: var(--theme-backgroundCard) !important;
   }
   .navbar .nav-links li {
     border-bottom: 1px solid var(--theme-border);
@@ -495,7 +522,7 @@ a,
     border-radius: 10px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     padding: 0.8rem 1rem;
-    font-size: 0.8rem;
+    font-size: 0.95rem;
   }
   .navbar .nav-links li .nav-link::after {
     display: none;
@@ -513,12 +540,12 @@ a,
     border-bottom: none;
   }
   .navbar .nav-links.show {
-    right: 0;
+    width: 75vw;
     transform: translateX(0);
-    opacity: 1 !important;
+    opacity: 1;
+    z-index: 100;
     visibility: visible;
     pointer-events: auto;
-    min-height: 100vh;
   }
   .navbar .nav-actions {
     gap: 1rem;
@@ -1257,23 +1284,6 @@ a,
   }
   .home-page .scroll-progress-container .progress-tooltip {
     display: none;
-  }
-}
-@media screen and (max-width: 480px) {
-  .home-page {
-    padding: 4.5rem 1rem 2.5rem;
-  }
-  .home-page .hero-content .hero-title {
-    font-size: 2rem;
-  }
-  .home-page .hero-content .hero-subtitle {
-    font-size: 1.2rem;
-  }
-  .home-page .hero-content .hero-description {
-    font-size: 0.95rem;
-  }
-  .home-page .hero-image-wrapper .image-container {
-    max-width: 250px;
   }
 }
 .about-section {
@@ -3936,5 +3946,3 @@ a,
     flex-direction: column;
   }
 }
-
-/*# sourceMappingURL=styles.css.map */

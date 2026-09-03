@@ -711,8 +711,3 @@
 @media screen and (max-width: v.$tablet) {
   @include r.homePagePhone;
 }
-
-// Very Small Mobile, less than 480px
-@media screen and (max-width: v.$mobile) {
-  @include r.homePageSmallScreen;
-}

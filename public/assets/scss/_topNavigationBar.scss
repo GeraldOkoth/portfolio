@@ -2,17 +2,13 @@
 @use "./responsive" as r;
 @use "sass:map"; //for "map" operations e.g "map.get($fontWeights, "bold")" gets the value of the key "bold" from the map variable $fontWeights
 
-// body.menu-open-blur {
-//   z-index: 1;
-//   transition: filter 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-// }
-
-// body.menu-open-blur
-//   :not(.navbar):not(.navbar *):not(.mobile-menu-overlay):not(
+// Body blur effect when menu opens
+// body.menu-open-blur:not(.navbar):not(.navbar *):not(.mobile-menu-overlay):not(
 //     .mobile-menu-overlay *
 //   ) {
 //   filter: blur(61px);
 //   transition: filter 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+//   overflow: hidden;
 // }
 
 // body.menu-open-blur .navbar,
@@ -28,11 +24,13 @@
   right: 0;
   width: 100%;
   padding: 0.6rem 2rem;
-  background: var(--theme-navbar);
+  background: var(--theme-backgroundCard) !important;
   backdrop-filter: blur(30px);
   -webkit-backdrop-filter: blur(20px);
-  z-index: 999;
+  z-index: 999 !important;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  height: auto;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
 
   &.scrolled {
     padding: 0.4rem 2rem;
@@ -105,6 +103,7 @@
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         cursor: pointer;
         position: relative;
+        display: inline-block;
 
         &::after {
           content: "";
@@ -152,6 +151,7 @@
       position: relative;
 
       .theme-toggle-btn {
+        z-index: 1000;
         width: 3rem;
         height: 3rem;
         border-radius: 50%;
@@ -188,7 +188,7 @@
         overflow: hidden;
         backdrop-filter: blur(12px);
         box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-        z-index: 998;
+        z-index: 1001;
         min-width: 180px;
 
         .theme-option {
@@ -287,21 +287,20 @@
   }
 }
 
-// .mobile-menu-overlay {
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   right: 0;
-//   bottom: 0;
-//   width: 100vw;
-//   height: 100vh;
-//   inset: 0;
-//   background: rgba(0, 0, 0, 0.4);
-//   backdrop-filter: blur(8px);
-//   z-index: 998;
-//   cursor: pointer;
-//   pointer-events: none; 
-// }
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  // backdrop-filter: blur(2px);
+  z-index: 98;
+  cursor: pointer;
+}
 
 // Responsive Design - Tablet (< 768px)
 @media screen and (max-width: v.$tablet) {
