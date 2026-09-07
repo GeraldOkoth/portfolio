@@ -295,24 +295,11 @@ function HomePage() {
               </div>
               <div className="floating-element element-3">
                 <span className="element-icon"><FaReact /></span>
-                <span className="element-text">React</span>
+                <span className="element-text">Graphic Design</span>
               </div>
             </motion.div>
           </div>
         </div>
-
-        {/* Scroll Indicator */}
-        {/* <motion.div
-          className="scroll-indicator"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 2 }}
-        >
-          <div className="scroll-mouse">
-            <div className="scroll-wheel"></div>
-          </div>
-          <p>Scroll to explore</p>
-        </motion.div> */}
       </section>
     </>
   );

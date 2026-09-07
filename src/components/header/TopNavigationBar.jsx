@@ -9,15 +9,16 @@ const THEMES = {
     colors: {
       primary: "#ff7b00",
       secondary: "#ff9500",
-      background: "#0a0520",
-      backgroundAlt: "#1a0f3e",
-      backgroundCard: "#0f0a2e",
+      background: "#0F0F0F",
+      backgroundAlt: "#212121",
+      backgroundCard: "#0F0F0F",
       text: "#ffffff",
       textMuted: "rgba(255, 255, 255, 0.7)",
       border: "rgba(255, 255, 255, 0.1)",
       success: "#43e97b",
       themeMenu: "#fff",
       themeNavLinks: "#fff",
+      themeNavbar: "rgba(24, 24, 26, 0.7)",
     },
   },
   light: {
@@ -35,6 +36,7 @@ const THEMES = {
       success: "#22c55e",
       themeMenu: "#353535",
       themeNavLinks: "#000",
+      themeNavbar: "rgba(255, 255, 255, 0.7)",
     },
   },
   ocean: {
@@ -52,6 +54,7 @@ const THEMES = {
       success: "#10b981",
       themeMenu: "rgb(10, 5, 32)",
       themeNavLinks: "#fff",
+      themeNavbar: "rgba(10, 5, 32, 0.7)",
     },
   },
 };

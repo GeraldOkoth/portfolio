@@ -24,7 +24,7 @@
   right: 0;
   width: 100%;
   padding: 0.6rem 2rem;
-  background: var(--theme-backgroundCard) !important;
+  background: var(--theme-themeNavbar) !important;
   backdrop-filter: blur(30px);
   -webkit-backdrop-filter: blur(20px);
   z-index: 999 !important;
@@ -296,7 +296,7 @@
   width: 100vw;
   height: 100vh;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.3);
   // backdrop-filter: blur(2px);
   z-index: 98;
   cursor: pointer;

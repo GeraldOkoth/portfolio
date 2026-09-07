@@ -19,7 +19,6 @@
   --theme-textMuted: rgba(255, 255, 255, 0.7);
   --theme-border: rgba(255, 255, 255, 0.2);
   --theme-success: #43e97b;
-  --theme-navbar: rgba(10, 5, 32, 0.7);
 }
 
 font-family {
@@ -167,7 +166,7 @@ a,
   right: 0;
   width: 100%;
   padding: 0.6rem 2rem;
-  background: var(--theme-backgroundCard) !important;
+  background: var(--theme-themeNavbar) !important;
   backdrop-filter: blur(30px);
   -webkit-backdrop-filter: blur(20px);
   z-index: 999 !important;
@@ -393,7 +392,7 @@ a,
   width: 100vw;
   height: 100vh;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.3);
   z-index: 98;
   cursor: pointer;
 }
@@ -585,30 +584,6 @@ a,
   position: relative;
   overflow: hidden;
   box-shadow: inset 10px 0 60px rgba(24, 15, 6, 0.2);
-}
-.home-page::before {
-  content: "";
-  position: absolute;
-  top: -40%;
-  left: -30%;
-  width: 800px;
-  height: 800px;
-  background: radial-gradient(circle, rgba(var(--theme-text), 0.8) 0%, transparent 70%);
-  border-radius: 50%;
-  animation: float 20s ease-in-out infinite;
-  pointer-events: none;
-}
-.home-page::after {
-  content: "";
-  position: absolute;
-  bottom: -40%;
-  right: -15%;
-  width: 700px;
-  height: 700px;
-  background: radial-gradient(circle, rgba(99, 102, 241, 0.08) 0%, transparent 70%);
-  border-radius: 50%;
-  animation: float 25s ease-in-out infinite reverse;
-  pointer-events: none;
 }
 .home-page .hero-container {
   max-width: 1400px;
@@ -953,7 +928,7 @@ a,
 }
 .home-page .hero-image-wrapper .floating-element.element-3 {
   bottom: 10%;
-  right: 5%;
+  right: -12%;
   animation: float 8s ease-in-out infinite;
 }
 .home-page .scroll-indicator {
