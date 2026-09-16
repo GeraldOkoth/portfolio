@@ -69,11 +69,7 @@
       .logo-text {
         font-weight: 800;
         font-size: 1.3rem;
-        background: linear-gradient(
-          135deg,
-          var(--theme-primary),
-          var(--theme-secondary)
-        );
+        background: var(--theme-secondary);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -113,11 +109,7 @@
           width: 0;
           height: 2px;
           border-radius: 2px;
-          background: linear-gradient(
-            90deg,
-            var(--theme-primary),
-            var(--theme-secondary)
-          );
+          background: var(--theme-secondary);
           transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
@@ -131,7 +123,7 @@
         }
 
         &.active {
-          color: var(--theme-primary);
+          color: var(--theme-secondary);
 
           &::after {
             width: 100%;
@@ -157,7 +149,7 @@
         border-radius: 50%;
         background: var(--theme-backgroundCard);
         border: 2px solid var(--theme-border);
-        color: var(--theme-primary);
+        color: var(--theme-secondary);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -259,7 +251,7 @@
       .bar {
         width: 25px;
         height: 3px;
-        background: var(--theme-primary);
+        background: var(--theme-secondary);
         border-radius: 2px;
         transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
       }

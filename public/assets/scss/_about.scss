@@ -3,34 +3,9 @@
 
 .about-section {
   padding: v.$sectionPaddingDesktop;
-  background: linear-gradient(135deg, var(--theme-background) 0%, var(--theme-backgroundAlt) 50%, var(--theme-background) 100%);
+  background: var(--theme-backgroundCard);
   position: relative;
   overflow: hidden;
-
-  // Decorative background elements
-  &::before {
-    content: "";
-    position: absolute;
-    top: -20%;
-    left: -15%;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(99, 102, 241, 0.08) 0%, transparent 70%);
-    border-radius: 50%;
-    pointer-events: none;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: -40%;
-    right: -30%;
-    width: 700px;
-    height: 700px;
-    background: radial-gradient(circle, rgba(255, 123, 0, 0.06) 0%, transparent 70%);
-    border-radius: 50%;
-    pointer-events: none;
-  }
 
   .about-container {
     max-width: 1400px;
@@ -43,7 +18,7 @@
   .about-title {
     font-size: 3.5rem;
     font-weight: 900;
-    font-family: 'Inter', 'Poppins', 'Montserrat', sans-serif;
+    font-family: "Inter", "Poppins", "Montserrat", sans-serif;
     color: var(--theme-text);
     text-align: center;
     margin-bottom: 4rem;
@@ -51,7 +26,11 @@
     line-height: 1.2;
 
     .highlight {
-      background: linear-gradient(135deg, var(--theme-primary) 0%, var(--theme-secondary) 100%);
+      background: linear-gradient(
+        135deg,
+        var(--theme-secondary) 0%,
+        var(--theme-primary) 100%
+      );
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -79,23 +58,6 @@
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
     border: 1px solid var(--theme-border);
     background: var(--theme-backgroundCard);
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: linear-gradient(135deg, rgba(255, 123, 0, 0.1), rgba(99, 102, 241, 0.1));
-      opacity: 0;
-      transition: opacity 0.5s ease;
-      z-index: 1;
-    }
-
-    &:hover::before {
-      opacity: 1;
-    }
 
     .about-image {
       width: 100%;
@@ -192,7 +154,7 @@
         display: block;
         font-size: 2rem;
         font-weight: 800;
-        background: linear-gradient(135deg, var(--theme-primary), var(--theme-secondary));
+        background: var(--theme-primary);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -263,7 +225,7 @@
     // Read More Button (hidden on desktop)
     .read-more-btn {
       display: block;
-      background: linear-gradient(135deg, var(--theme-primary) 0%, var(--theme-secondary) 100%);
+      background: var(--theme-secondary);
       color: var(--theme-text);
       border: none;
       padding: 0.9rem 2rem;
@@ -305,7 +267,18 @@
         font-size: 1.3rem;
         font-weight: 700;
         color: var(--theme-text);
-        margin-bottom: 1.2rem;
+        margin-bottom: 1.4rem;
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          width: 4rem;
+          height: 0.3rem;
+          background-color: var(--theme-secondary);
+          left: 0;
+          bottom: -13px;
+        }
       }
 
       .skills-tags {
@@ -324,20 +297,19 @@
           transition: all 0.3s ease;
 
           &:hover {
-            background: var(--theme-primary);
-            border-color: var(--theme-primary);
+            background: var(--theme-secondary);
+            border-color: var(--theme-secondary);
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(255, 123, 0, 0.2);
           }
 
           &:nth-child(even) {
             background: var(--theme-backgroundCard);
-            color: #818cf8;
+            color: var(--theme-secondary);
             border-color: var(--theme-border);
 
             &:hover {
               background: rgba(var(--theme-border), 0.25);
-              border-color: rgba(var(--theme-primary), 0.5);
+              border-color: rgba(var(--theme-secondary), 0.5);
               box-shadow: 0 5px 15px rgba(var(--theme-primary), 0.2);
             }
           }

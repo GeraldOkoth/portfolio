@@ -9,7 +9,7 @@ const THEMES = {
     colors: {
       primary: "#ff7b00",
       secondary: "#ff9500",
-      background: "#0F0F0F",
+      background: "#000",
       backgroundAlt: "#212121",
       backgroundCard: "#0F0F0F",
       text: "#ffffff",

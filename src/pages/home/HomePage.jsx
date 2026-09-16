@@ -274,19 +274,16 @@ function HomePage() {
               transition={{ delay: 0.5 }}
             >
               <div className="image-container">
-                {/* <div className="image-backdrop"></div> */}
-                {/* <div className="image-border"></div> */}
                 <img
                   src="/images/profile.webp"
                   alt="Gerald Okoth - Frontend Developer & UI/UX Designer"
                   className="hero-image"
                 />
-                {/* <div className="image-glow"></div> */}
               </div>
 
               {/* Floating Elements */}
               <div className="floating-element element-1">
-                <span className="element-icon"><FaLaptopCode /></span>
+                <span className="element-icon"><FaReact /></span>
                 <span className="element-text">Frontend Dev</span>
               </div>
               <div className="floating-element element-2">
@@ -294,7 +291,7 @@ function HomePage() {
                 <span className="element-text">UI/UX Design</span>
               </div>
               <div className="floating-element element-3">
-                <span className="element-icon"><FaReact /></span>
+                <span className="element-icon"><FaLaptopCode /></span>
                 <span className="element-text">Graphic Design</span>
               </div>
             </motion.div>
