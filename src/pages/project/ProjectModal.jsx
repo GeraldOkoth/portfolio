@@ -8,6 +8,7 @@ import {
   FaLightbulb,
   FaExclamationTriangle,
 } from "react-icons/fa";
+import { GiCheckMark } from "react-icons/gi"; 
 import { timeAgo } from "./timeAgo";
 
 const ProjectModal = ({ project, onClose, formatDate }) => {

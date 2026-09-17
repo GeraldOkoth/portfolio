@@ -906,8 +906,8 @@
     }
 
     .modal-close {
-      width: 32px;
-      height: 32px;
+      width: 26px;
+      height: 26px;
     }
 
     .modal-body-wrapper {
@@ -1040,10 +1040,9 @@
       padding: 1.5rem 1rem;
 
       .modal-left {
-        margin: 0;
-        // .modal-image-container {
-        //   padding-top: 75%;
-        // }
+        .modal-image-container {
+          padding-top: 75%;
+        }
 
         .modal-actions {
           flex-direction: row;
@@ -1077,19 +1076,23 @@
 
           .section-title,
           .date-label {
-            font-size: 0.8rem;
+            font-size: 0.7rem;
           }
 
           .section-text {
             font-size: 0.7rem;
           }
-
-          .features-list li,
-          .date-value,
-          .date-full {
-            font-size: 0.7rem;
+          .date-item .date-value,
+          .date-full,
+          .date-label {
+            font-size: 0.7rem !important;
             line-height: -1rem;
             padding-bottom: 0;
+          }
+          .features-list li {
+            gap: unset;
+            font-size: .7rem;
+            line-height: unset;
           }
         }
       }

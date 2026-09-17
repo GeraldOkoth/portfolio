@@ -3,35 +3,10 @@
 
 .skills-section {
   padding: v.$sectionPaddingDesktop;
-  background: linear-gradient(135deg, var(--theme-background) 0%, var(--theme-backgroundAlt) 50%, var(--theme-background) 100%);
+  background: var(--theme-background);
   position: relative;
   overflow: hidden;
-  box-shadow: inset 10px 0 60px rgba(24, 15, 6, 0.2);
-
-  // Decorative background elements
-  &::before {
-    content: "";
-    position: absolute;
-    top: -40%;
-    left: -40%;
-    width: 700px;
-    height: 700px;
-    background: radial-gradient(circle, rgba(24, 15, 6, 0.08) 0%, transparent 70%);
-    border-radius: 50%;
-    pointer-events: none;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: -40%;
-    right: -45%;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(99, 102, 241, 0.08) 0%, transparent 70%);
-    border-radius: 50%;
-    pointer-events: none;
-  }
+  box-shadow: inset 2px 0 10px rgba(24, 15, 6, 0.2);
 
   .skills-container-wrapper {
     max-width: 1400px;
@@ -55,7 +30,7 @@
       line-height: 1.2;
 
       .highlight {
-        background: linear-gradient(135deg, var(--theme-primary) 0%, var(--theme-secondary) 100%);
+        background: linear-gradient(135deg, var(--theme-secondary) 0%, var(--theme-primary) 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -83,7 +58,7 @@
 
   .tab-btn {
     background: var(--theme-background);
-    border: 1px solid var(--theme-border);
+    border: 2px solid var(--theme-border);
     padding: 0.9rem 2rem;
     font-size: 1.05rem;
     font-weight: 700;
@@ -122,7 +97,7 @@
     }
 
     &.active {
-      background: linear-gradient(135deg, var(--theme-primary) 0%, var(--theme-secondary) 100%);
+      background: var(--theme-secondary);
       border-color: transparent;
       color: var(--theme-text);
       transform: translateY(-3px);
@@ -176,7 +151,7 @@
       left: 0;
       right: 0;
       height: 4px;
-      background: linear-gradient(90deg, var(--theme-primary), #6366f1, #8b5cf6);
+      background: linear-gradient(90deg, var(--theme-secondary), var(--theme-primary));
       opacity: 0;
       transition: opacity 0.4s ease;
     }
@@ -249,6 +224,7 @@
       background: rgba(var(--theme-background), 0.08);
       border-radius: 50px;
       height: 10px;
+      border: 1px solid var(--theme-backgroundAlt);
       overflow: hidden;
       position: relative;
       box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);

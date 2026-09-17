@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { FaSun, FaMoon, FaPalette } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
+import { GiCheckMark } from "react-icons/gi";
 
 const THEMES = {
   dark: {
@@ -267,7 +268,7 @@ export default function TopNavigationBar() {
                           className="theme-check"
                           layoutId="activeTheme"
                         >
-                          ✓
+                          <GiCheckMark />
                         </motion.span>
                       )}
                     </button>
