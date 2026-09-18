@@ -19,7 +19,7 @@ const THEMES = {
       success: "#43e97b",
       themeMenu: "#fff",
       themeNavLinks: "#fff",
-      themeNavbar: "rgba(24, 24, 26, 0.7)",
+      themeNavbar: "rgba(3, 3, 3, 0.7)",
     },
   },
   light: {

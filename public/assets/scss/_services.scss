@@ -3,54 +3,15 @@
 
 .services-section {
   padding: v.$sectionPaddingDesktop;
-  background: linear-gradient(
-    135deg,
-    var(--theme-background) 0%,
-    var(--theme-backgroundAlt) 50%,
-    var(--theme-background) 100%
-  );
+  background: var(--theme-background);
   position: relative;
   overflow: hidden;
-  box-shadow: inset 3px 0 25px rgba(24, 15, 6, 0.2);
-
-  // Decorative background elements
-  &::before {
-    content: "";
-    position: absolute;
-    top: -20%;
-    right: -15%;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(
-      circle,
-      rgba(255, 123, 0, 0.04) 0%,
-      transparent 70%
-    );
-    border-radius: 50%;
-    pointer-events: none;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: -25%;
-    left: -10%;
-    width: 700px;
-    height: 700px;
-    background: radial-gradient(
-      circle,
-      rgba(99, 102, 241, 0.06) 0%,
-      transparent 70%
-    );
-    border-radius: 50%;
-    pointer-events: none;
-  }
+  box-shadow: inset 2px 0 6px rgba(24, 15, 6, 0.2);
 
   .services-container {
     max-width: 1400px;
     margin: 0 auto;
     position: relative;
-    z-index: 1;
   }
 
   // Header Section
@@ -70,8 +31,8 @@
       .highlight {
         background: linear-gradient(
           135deg,
-          var(--theme-primary) 0%,
-          var(--theme-secondary) 100%
+          var(--theme-secondary) 0%,
+          var(--theme-primary) 100%
         );
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -180,7 +141,6 @@
 
       .feature-icon-wrapper {
         transform: rotate(12deg) scale(1.1);
-        background: linear-gradient (135deg, #ff7b0026, #6366f126);
       }
 
       & .service-feature-image {
@@ -296,11 +256,7 @@
           .title-underline {
             width: 60px;
             height: 3px;
-            background: linear-gradient(
-              90deg,
-              var(--theme-primary),
-              var(--theme-secondary)
-            );
+            background: var(--theme-secondary);
             margin: 0 auto 1.3rem;
             border-radius: 2px;
           }
@@ -313,11 +269,7 @@
           }
 
           .learn-more-btn {
-            background: linear-gradient(
-              135deg,
-              var(--theme-primary) 0%,
-              var(--theme-secondary) 100%
-            );
+            background: var(--theme-secondary);
             color: var(--theme-text);
             border: none;
             padding: 0.8rem 1.8rem;

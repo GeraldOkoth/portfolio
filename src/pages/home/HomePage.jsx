@@ -278,6 +278,8 @@ function HomePage() {
                   src="/images/profile.webp"
                   alt="Gerald Okoth - Frontend Developer & UI/UX Designer"
                   className="hero-image"
+                  width={1600}
+                  height={1064}
                 />
               </div>
 

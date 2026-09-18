@@ -82,6 +82,8 @@ const ServiceFeature = ({ icon, image, alt, title, description, index }) => {
         alt={alt}
         className="service-feature-image"
         loading="lazy"
+        width={827}
+        height={827}
         decoding="async"
       />
       <div className="service-feature-card">

@@ -5,11 +5,7 @@
 
 .footer {
   padding: v.$sectionPaddingDesktop;
-  background: linear-gradient(
-    135deg,
-    var(--theme-background) 0%,
-    var(--theme-backgroundAlt) 100%
-  );
+  background: var(--theme-backgroundAlt);
   position: relative;
   overflow: hidden;
 
@@ -30,6 +26,7 @@
   hr {
     width: 100%;
     border: 1.5px solid rgb(125, 125, 125);
+    margin-bottom: 2rem;
   }
 
   .social-media-icons {
