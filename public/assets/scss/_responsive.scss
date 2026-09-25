@@ -928,6 +928,7 @@
       }
 
       .selected-category-badge {
+        display: block;
         margin: 1rem auto;
         background: var(--theme-backgroundCard);
         border: 1.5px solid var(--theme-primary);
@@ -1006,6 +1007,23 @@
 // skills section on tablet
 @mixin skillsTablet() {
   .skills-section {
+    .skills-tabs {
+        gap: 0.4rem;
+        margin-bottom: 2.5rem;
+        flex-wrap: nowrap;
+
+        .tab-btn {
+          padding: 0.7rem 1.3rem;
+          font-size: 0.9rem;
+          gap: 0.4rem;
+
+          .tab-count {
+            padding: 0.15rem 0.5rem;
+            font-size: 0.8rem;
+            min-width: 22px;
+          }
+        }
+      }
     .skills-grid {
       grid-template-columns: repeat(2, 1fr);
     }
