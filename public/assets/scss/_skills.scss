@@ -127,6 +127,10 @@
     }
   }
 
+  .skills-filter-container, .selected-category-badge {
+    display: none;
+  }
+
   // Skills Grid
   .skills-grid {
     display: grid;

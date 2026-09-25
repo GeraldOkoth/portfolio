@@ -104,7 +104,7 @@ const allProjects = [
     problemSolves:
       "Provides users with a lightweight, persistent task management application that works without internet connection.",
     createdAt: "2025-06-22T10:00:00Z",
-    updatedAt: "2025-06-26T15:30:00Z",
+    updatedAt: "2026-09-24T15:30:00Z",
     github: "https://github.com/GeraldOkoth/dynamic-to-do-list-js",
     demo: "https://dynamic-to-do-list-js-peach.vercel.app/",
   },
