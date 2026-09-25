@@ -55,7 +55,7 @@ const THEMES = {
       success: "#10b981",
       themeMenu: "rgb(10, 5, 32)",
       themeNavLinks: "#fff",
-      themeNavbar: "rgba(10, 5, 32, 0.7)",
+      themeNavbar: "rgba(3, 0, 17, 0.7)",
     },
   },
 };
