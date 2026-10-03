@@ -1,7 +1,7 @@
 import { lazy, Suspense } from "react";
 import { Analytics } from "@vercel/analytics/react";
 import "./css/dist/styles.css";
-// import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const HomePage = lazy(() => import("./pages/home/HomePage"));
 const About = lazy(() => import("./pages/about/About"));
@@ -14,8 +14,8 @@ const Footer = lazy(() => import("./components/footer/Footer"));
 function App() {
   return (
     <div className="App">
-      {/* <BrowserRouter>
-        <div>
+      <BrowserRouter>
+        <Suspense fallback={<div>Loading...</div>}>
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<About />} />
@@ -24,18 +24,10 @@ function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/footer" element={<Footer />} />
+            <Route path="*" element={<HomePage />} />
           </Routes>
-        </div>
-      </BrowserRouter> */}
-      <Suspense fallback={null}>
-        <HomePage />
-        <About />
-        <Skills />
-        <Projects />
-        <Services />
-        <Contact />
-        <Footer />
-      </Suspense>
+        </Suspense>
+      </BrowserRouter>
       {/* Only render Analytics if we are not on localhost */}
       {process.env.NODE_ENV === "production" && <Analytics />}
     </div>
