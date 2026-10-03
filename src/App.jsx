@@ -1,6 +1,7 @@
 import { lazy, Suspense } from "react";
 import { Analytics } from "@vercel/analytics/react";
 import "./css/dist/styles.css";
+// import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const HomePage = lazy(() => import("./pages/home/HomePage"));
 const About = lazy(() => import("./pages/about/About"));
@@ -13,6 +14,19 @@ const Footer = lazy(() => import("./components/footer/Footer"));
 function App() {
   return (
     <div className="App">
+      {/* <BrowserRouter>
+        <div>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/skills" element={<Skills />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/footer" element={<Footer />} />
+          </Routes>
+        </div>
+      </BrowserRouter> */}
       <Suspense fallback={null}>
         <HomePage />
         <About />
