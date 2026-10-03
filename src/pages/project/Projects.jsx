@@ -26,7 +26,7 @@ const allProjects = [
     problemSolves:
       "Provides a centralized platform for potential clients and employers to view my projects, skills, and services in an engaging and professional manner.",
     createdAt: "2024-10-22T10:00:00Z",
-    updatedAt: "2026-09-25T21:12:00Z",
+    updatedAt: "2026-10-04T12:41:00Z",
     demo: "https://geraldokoth.vercel.app",
     github: "https://github.com/GeraldOkoth/portfolio",
   },
@@ -104,7 +104,7 @@ const allProjects = [
     problemSolves:
       "Provides users with a lightweight, persistent task management application that works without internet connection.",
     createdAt: "2025-06-22T10:00:00Z",
-    updatedAt: "2026-09-24T15:30:00Z",
+    updatedAt: "2026-09-29T15:30:00Z",
     github: "https://github.com/GeraldOkoth/dynamic-to-do-list-js",
     demo: "https://dynamic-to-do-list-js-peach.vercel.app/",
   },
@@ -157,7 +157,7 @@ const allProjects = [
     problemSolves:
       "Enables developers to quickly search and view GitHub user profiles and repositories without leaving your app.",
     createdAt: "2025-08-20T10:08:21Z",
-    updatedAt: "2025-08-22T15:02:37Z",
+    updatedAt: "2026-09-30T15:02:37Z",
     demo: "https://github-userprofile-search.vercel.app/",
     github:
       "https://github.com/GeraldOkoth/alx-fe-reactjs/tree/main/github-user-search",
