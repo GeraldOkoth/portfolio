@@ -2985,31 +2985,24 @@ a,
 .services-section .service-feature {
   position: relative;
   border-radius: 20px;
-  background: rgba(0, 0, 0, 0.2);
   width: 100%;
   height: 100%;
   overflow: hidden;
 }
 .services-section .service-feature .service-feature-image {
   position: absolute;
-  width: inherit;
-  height: inherit;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   object-position: center;
   border-radius: inherit;
-  top: 0;
-  left: 0;
-  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .services-section .service-feature .service-feature-card {
-  border: 1px solid var(--theme-border);
-  background: rgba(0, 0, 0, 0.4);
   border-radius: inherit;
   padding: 2.5rem 2rem;
   position: relative;
-  transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
-  height: 100%;
-  width: 100%;
+  transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .services-section .service-feature .service-feature-card .feature-title {
   font-size: 1.4rem;
@@ -3023,7 +3016,7 @@ a,
   font-size: 1rem;
   line-height: 1.7;
   color: #fff;
-  padding: 1rem 1.5rem;
+  padding: 1.5rem;
   border-radius: inherit;
   background-color: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(12px);
@@ -3256,16 +3249,6 @@ a,
     gap: 1.5rem;
     margin-bottom: 4rem;
   }
-  .services-section .services-features .service-feature {
-    padding: 2rem 1.5rem;
-  }
-  .services-section .services-features .service-feature .feature-icon-wrapper {
-    width: 70px;
-    height: 70px;
-  }
-  .services-section .services-features .service-feature .feature-icon-wrapper .feature-icon {
-    font-size: 2.2rem;
-  }
   .services-section .services-features .service-feature .feature-title {
     font-size: 1.3rem;
   }
@@ -3329,19 +3312,8 @@ a,
     gap: 1.2rem;
     margin-bottom: 3rem;
   }
-  .services-section .services-features .service-feature {
-    padding: 2rem 1.5rem;
-  }
   .services-section .services-features .service-feature:hover {
     transform: translateY(-5px);
-  }
-  .services-section .services-features .service-feature .feature-icon-wrapper {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 1.2rem;
-  }
-  .services-section .services-features .service-feature .feature-icon-wrapper .feature-icon {
-    font-size: 2rem;
   }
   .services-section .services-features .service-feature .feature-title {
     font-size: 1.25rem;
@@ -3410,16 +3382,6 @@ a,
   .services-section .services-header .services-subtitle {
     font-size: 0.95rem;
   }
-  .services-section .services-features .service-feature {
-    padding: 1.8rem 1.2rem;
-  }
-  .services-section .services-features .service-feature .feature-icon-wrapper {
-    width: 60px;
-    height: 60px;
-  }
-  .services-section .services-features .service-feature .feature-icon-wrapper .feature-icon {
-    font-size: 1.8rem;
-  }
   .services-section .services-features .service-feature .feature-title {
     font-size: 1.15rem;
   }
@@ -3429,9 +3391,6 @@ a,
   .services-section .service-card .service-card-footer {
     padding: 1rem;
     gap: 0.8rem;
-  }
-  .services-section .service-card .service-card-footer .service-icon-small {
-    font-size: 1.3rem;
   }
   .services-section .service-card .service-card-footer .service-title {
     font-size: 1rem;

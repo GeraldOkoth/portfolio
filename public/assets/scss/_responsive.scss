@@ -1008,22 +1008,22 @@
 @mixin skillsTablet() {
   .skills-section {
     .skills-tabs {
+      gap: 0.4rem;
+      margin-bottom: 2.5rem;
+      flex-wrap: nowrap;
+
+      .tab-btn {
+        padding: 0.7rem 1.3rem;
+        font-size: 0.9rem;
         gap: 0.4rem;
-        margin-bottom: 2.5rem;
-        flex-wrap: nowrap;
 
-        .tab-btn {
-          padding: 0.7rem 1.3rem;
-          font-size: 0.9rem;
-          gap: 0.4rem;
-
-          .tab-count {
-            padding: 0.15rem 0.5rem;
-            font-size: 0.8rem;
-            min-width: 22px;
-          }
+        .tab-count {
+          padding: 0.15rem 0.5rem;
+          font-size: 0.8rem;
+          min-width: 22px;
         }
       }
+    }
     .skills-grid {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -1361,17 +1361,6 @@
 
     .services-features {
       .service-feature {
-        padding: 1.8rem 1.2rem;
-
-        .feature-icon-wrapper {
-          width: 60px;
-          height: 60px;
-
-          .feature-icon {
-            font-size: 1.8rem;
-          }
-        }
-
         .feature-title {
           font-size: 1.15rem;
         }
@@ -1386,10 +1375,6 @@
       .service-card-footer {
         padding: 1rem;
         gap: 0.8rem;
-
-        .service-icon-small {
-          font-size: 1.3rem;
-        }
 
         .service-title {
           font-size: 1rem;
@@ -1463,20 +1448,8 @@
       margin-bottom: 3rem;
 
       .service-feature {
-        padding: 2rem 1.5rem;
-
         &:hover {
           transform: translateY(-5px);
-        }
-
-        .feature-icon-wrapper {
-          width: 50px;
-          height: 50px;
-          margin-bottom: 1.2rem;
-
-          .feature-icon {
-            font-size: 2rem;
-          }
         }
 
         .feature-title {
@@ -1580,17 +1553,6 @@
       margin-bottom: 4rem;
 
       .service-feature {
-        padding: 2rem 1.5rem;
-
-        .feature-icon-wrapper {
-          width: 70px;
-          height: 70px;
-
-          .feature-icon {
-            font-size: 2.2rem;
-          }
-        }
-
         .feature-title {
           font-size: 1.3rem;
         }
