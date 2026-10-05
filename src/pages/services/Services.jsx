@@ -76,14 +76,16 @@ const ServiceFeature = ({image, alt, title, description, index }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.15 }}
+      width={420}
+      height={420}
     >
       <img
         src={image}
         alt={alt}
         className="service-feature-image"
         loading="lazy"
-        width={827}
-        height={827}
+        width={420}
+        height={420}
         decoding="async"
       />
       <div className="service-feature-card">
