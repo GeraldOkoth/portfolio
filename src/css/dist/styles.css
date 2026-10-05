@@ -3002,44 +3002,20 @@ a,
   transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .services-section .service-feature .service-feature-card {
-  background: rgba(0, 0, 0, 0.2);
   border: 1px solid var(--theme-border);
+  background: rgba(0, 0, 0, 0.4);
   border-radius: inherit;
   padding: 2.5rem 2rem;
-  text-align: center;
   position: relative;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  backdrop-filter: blur(1px);
-  -webkit-backdrop-filter: blur(1px);
+  transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
   height: 100%;
   width: 100%;
 }
-.services-section .service-feature .service-feature-card .feature-icon-wrapper {
-  width: 60px;
-  height: 60px;
-  margin: 0 auto 1.5rem;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.4s ease;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  background-color: rgba(255, 255, 255, 0.2);
-}
-.services-section .service-feature .service-feature-card .feature-icon-wrapper .feature-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2.3rem;
-  color: var(--theme-primary);
-  transition: all 0.3s ease;
-  align-items: center;
-}
 .services-section .service-feature .service-feature-card .feature-title {
   font-size: 1.4rem;
-  font-weight: 900;
+  font-weight: 600;
   color: #fff;
+  text-align: center;
   margin-bottom: 1rem;
   letter-spacing: -0.3px;
 }
@@ -3047,18 +3023,15 @@ a,
   font-size: 1rem;
   line-height: 1.7;
   color: #fff;
-  padding: 2rem 1.5rem;
+  padding: 1rem 1.5rem;
   border-radius: inherit;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
 .services-section .service-feature:hover {
   border-color: var(--theme-border);
   transform: translateY(-10px);
-}
-.services-section .service-feature:hover .feature-icon-wrapper {
-  transform: rotate(12deg) scale(1.1);
 }
 .services-section .service-feature:hover .service-feature-image {
   transform: scale(1.1);
@@ -3140,7 +3113,6 @@ a,
   font-size: 3rem;
   color: var(--theme-primary);
   margin-bottom: 0.8rem;
-  animation: iconFloat 3s ease-in-out infinite;
 }
 .services-section .service-card .service-image-wrapper .service-overlay .overlay-content .overlay-title {
   font-size: 1.2rem;
@@ -3175,11 +3147,9 @@ a,
   align-items: center;
   gap: 0.7rem;
   transition: all 0.3s ease;
-  box-shadow: 0 6px 20px rgba(255, 123, 0, 0.3);
 }
 .services-section .service-card .service-image-wrapper .service-overlay .overlay-content .learn-more-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 4px 150px rgba(255, 123, 0, 0.4);
 }
 .services-section .service-card .service-image-wrapper .service-overlay .overlay-content .learn-more-btn:hover svg {
   transform: translateX(3px);
@@ -3258,14 +3228,6 @@ a,
   }
 }
 
-@keyframes iconFloat {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
 @media screen and (min-width: 1400px) {
   .services-section .services-grid {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

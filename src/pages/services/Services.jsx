@@ -68,7 +68,7 @@ const ServiceItem = ({ image, alt, title, description, icon, index }) => {
 };
 
 // ServiceFeature Component for highlighting key service benefits
-const ServiceFeature = ({ icon, image, alt, title, description, index }) => {
+const ServiceFeature = ({image, alt, title, description, index }) => {
   return (
     <motion.div
       className="service-feature"
@@ -87,9 +87,6 @@ const ServiceFeature = ({ icon, image, alt, title, description, index }) => {
         decoding="async"
       />
       <div className="service-feature-card">
-        <div className="feature-icon-wrapper">
-          <div className="feature-icon">{icon}</div>
-        </div>
         <h3 className="feature-title">{title}</h3>
         <p className="feature-description">{description}</p>
       </div>
