@@ -3022,8 +3022,8 @@ a,
   padding: 1.5rem;
   border-radius: inherit;
   background-color: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
 }
 .services-section .service-feature:hover {
   border-color: var(--theme-border);
