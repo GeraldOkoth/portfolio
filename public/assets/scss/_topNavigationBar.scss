@@ -25,11 +25,11 @@
   width: 100%;
   padding: 0.6rem 2rem;
   backdrop-filter: blur(50px);
-  -webkit-backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(50px);
   z-index: 999 !important;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   height: auto;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 
   &.scrolled {
     background-color: transparent;

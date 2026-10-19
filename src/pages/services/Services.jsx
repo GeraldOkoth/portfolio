@@ -84,8 +84,6 @@ const ServiceFeature = ({image, alt, title, description, index }) => {
         alt={alt}
         className="service-feature-image"
         loading="lazy"
-        width={420}
-        height={420}
         decoding="async"
       />
       <div className="service-feature-card">
@@ -102,7 +100,6 @@ const Services = () => {
     {
       image: "/images/affordable-pricing.webp",
       alt: "affordable pricing",
-      icon: <FaDollarSign />,
       title: "Affordable Pricing",
       description:
         "premium-quality services at competitive rates, ensuring the best value for your investment.",
@@ -110,7 +107,6 @@ const Services = () => {
     {
       image: "/images/guarateed-quality.webp",
       alt: "premium-quality",
-      icon: <FaStar />,
       title: "Premium Quality",
       description:
         "Delivering excellence in every project with attention to detail and client satisfaction.",
@@ -118,7 +114,6 @@ const Services = () => {
     {
       image: "/images/timely-delivery.webp",
       alt: "timely-delivery",
-      icon: <FaCalendarCheck />,
       title: "Timely Delivery",
       description:
         "Reliable delivery of projects on schedule, ensuring deadlines are met without compromising quality.",
