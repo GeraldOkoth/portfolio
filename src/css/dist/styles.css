@@ -3324,6 +3324,13 @@ a,
     gap: 1.2rem;
     margin-bottom: 3rem;
   }
+  .services-section .services-features .service-feature-card {
+    top: 0.5rem;
+    margin: 0.8rem;
+  }
+  .services-section .services-features .service-feature-card .feature-title {
+    margin-top: 0.8rem;
+  }
   .services-section .services-features .service-feature:hover {
     transform: translateY(-5px);
   }

@@ -1447,6 +1447,15 @@
       gap: 1.2rem;
       margin-bottom: 3rem;
 
+      .service-feature-card {
+        top: .5rem;
+        margin: .8rem;
+      }
+
+      .service-feature-card .feature-title {
+        margin-top: .8rem;
+      }
+
       .service-feature {
         &:hover {
           transform: translateY(-5px);
