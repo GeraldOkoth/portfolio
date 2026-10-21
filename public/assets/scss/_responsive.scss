@@ -1448,27 +1448,31 @@
       margin-bottom: 3rem;
 
       .service-feature-card {
-        top: .5rem;
-        margin: .8rem;
+        top: 0.5rem;
+        margin: 0.8rem;
       }
 
       .service-feature-card .feature-title {
-        margin-top: .8rem;
+        margin-top: 0.8rem;
+      }
+
+      .service-feature-card .feature-description {
+        padding: 0.2rem 1.5rem 1rem;
       }
 
       .service-feature {
         &:hover {
           transform: translateY(-5px);
-        }
 
-        .feature-title {
-          font-size: 1.25rem;
-          margin-bottom: 0.8rem;
-        }
+          .feature-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.8rem;
+          }
 
-        .feature-description {
-          font-size: 0.95rem;
-          line-height: 1.6;
+          .feature-description {
+            font-size: 0.95rem;
+            line-height: 1.6;
+          }
         }
       }
     }
@@ -1565,6 +1569,19 @@
         .feature-title {
           font-size: 1.3rem;
         }
+
+        .service-feature-card {
+        top: 7rem;
+        margin: 1rem;
+      }
+
+      .service-feature-card .feature-title {
+        margin-top: 1rem;
+      }
+
+      .service-feature-card .feature-description {
+        padding: 1.5rem 1.5rem 1rem;
+      }
 
         .feature-description {
           font-size: 0.95rem;

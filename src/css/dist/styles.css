@@ -3264,6 +3264,16 @@ a,
   .services-section .services-features .service-feature .feature-title {
     font-size: 1.3rem;
   }
+  .services-section .services-features .service-feature .service-feature-card {
+    top: 7rem;
+    margin: 1rem;
+  }
+  .services-section .services-features .service-feature .service-feature-card .feature-title {
+    margin-top: 1rem;
+  }
+  .services-section .services-features .service-feature .service-feature-card .feature-description {
+    padding: 1.5rem 1.5rem 1rem;
+  }
   .services-section .services-features .service-feature .feature-description {
     font-size: 0.95rem;
   }
@@ -3331,14 +3341,17 @@ a,
   .services-section .services-features .service-feature-card .feature-title {
     margin-top: 0.8rem;
   }
+  .services-section .services-features .service-feature-card .feature-description {
+    padding: 0.2rem 1.5rem 1rem;
+  }
   .services-section .services-features .service-feature:hover {
     transform: translateY(-5px);
   }
-  .services-section .services-features .service-feature .feature-title {
+  .services-section .services-features .service-feature:hover .feature-title {
     font-size: 1.25rem;
     margin-bottom: 0.8rem;
   }
-  .services-section .services-features .service-feature .feature-description {
+  .services-section .services-features .service-feature:hover .feature-description {
     font-size: 0.95rem;
     line-height: 1.6;
   }
