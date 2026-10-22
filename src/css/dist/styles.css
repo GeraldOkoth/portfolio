@@ -161,15 +161,15 @@ a,
   right: 0;
   width: 100%;
   padding: 0.6rem 2rem;
-  backdrop-filter: blur(50px);
-  -webkit-backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(22px);
   z-index: 999 !important;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: var(--theme-navbar, rgba(31, 29, 29, 0.7));
   height: auto;
 }
 .navbar.scrolled {
-  background-color: transparent;
+  background-color: var(--theme-navbar, rgba(31, 29, 29, 0.7));
   padding: 0.4rem 2rem;
 }
 .navbar .navbar-container {
@@ -378,6 +378,11 @@ a,
   transform: rotate(-45deg) translate(6px, -6px);
 }
 
+@supports (backdrop-filter: blur(1px)) {
+  .navbar {
+    backdrop-filter: blur(22px);
+  }
+}
 .mobile-menu-overlay {
   position: fixed;
   top: 0;

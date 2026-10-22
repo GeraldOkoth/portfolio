@@ -19,7 +19,7 @@ const THEMES = {
       success: "#43e97b",
       themeMenu: "#fff",
       themeNavLinks: "#fff",
-      themeNavbar: "rgba(31, 29, 29, 0.7)",
+      navbar: "rgba(31, 29, 29, 0.7)",
     },
   },
   light: {
@@ -37,7 +37,7 @@ const THEMES = {
       success: "#22c55e",
       themeMenu: "#353535",
       themeNavLinks: "#000",
-      themeNavbar: "rgba(255, 255, 255, 0.7)",
+      navbar: "rgba(255, 255, 255, 0.7)",
     },
   },
   ocean: {
@@ -55,7 +55,7 @@ const THEMES = {
       success: "#10b981",
       themeMenu: "rgb(10, 5, 32)",
       themeNavLinks: "#fff",
-      themeNavbar: "rgba(3, 0, 17, 0.7)",
+      navbar: "rgba(3, 0, 17, 0.7)",
     },
   },
 };
