@@ -164,7 +164,7 @@ const Services = () => {
   ];
 
   return (
-    <section className="services-section" id="services">
+    <section className="services-section" id="services" style={{ paddingTop: "clamp(5rem, 10vh, 6rem)" }}>
       <div className="services-container">
         {/* Header */}
         <motion.div

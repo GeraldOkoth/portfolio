@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { 
   FaLinkedinIn, 
   FaGithub, 
@@ -14,7 +15,6 @@ import {
   FaLaptopCode,
   FaReact
 } from "react-icons/fa";
-import TopNavigationBar from "../../components/header/TopNavigationBar";
 import ScrollProgress from "./ScrollProgress";
 
 // Roles array is moved outside component to avoid ESLint dependency warning
@@ -110,7 +110,6 @@ function HomePage() {
 
   return (
     <>
-      <TopNavigationBar />
       <ScrollProgress />
       
       <section className="home-page" id="home">
@@ -204,10 +203,10 @@ function HomePage() {
                 {...fadeInUp}
                 transition={{ delay: 1.2 }}
               >
-                <a href="#projects" className="btn btn-primary">
+                <Link to="/projects" className="btn btn-primary">
                   View Projects
                   <FaArrowRight className="btn-icon" />
-                </a>
+                </Link>
                 
                 <div className="resume-buttons">
                   <button 

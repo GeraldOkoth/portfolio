@@ -31,7 +31,7 @@ const About = () => {
   };
 
   return (
-    <section className="about-section" id="about">
+    <section className="about-section" id="about" style={{ paddingTop: "clamp(5rem, 10vh, 6rem)" }}>
       <div className="about-container">
         <motion.h2
           className="about-title"

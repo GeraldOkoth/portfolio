@@ -544,7 +544,7 @@ function Projects() {
   };
 
   return (
-    <section className="project-section" id="projects">
+    <section className="project-section" id="projects" style={{ paddingTop: "clamp(5rem, 10vh, 6rem)" }}>
       <div className="projects-container">
         {/* Header */}
         <motion.div

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { FaSun, FaMoon, FaPalette } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import { GiCheckMark } from "react-icons/gi";
+import { NavLink, Link } from "react-router-dom";
 
 const THEMES = {
   dark: {
@@ -61,19 +62,18 @@ const THEMES = {
 };
 
 export default function TopNavigationBar() {
-  const [active, setActive] = useState("home");
   const [isOpen, setIsOpen] = useState(false);
   const [currentTheme, setCurrentTheme] = useState("dark");
   const [showThemeMenu, setShowThemeMenu] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   const navItems = [
-    { id: "home", label: "Home" },
-    { id: "about", label: "About" },
-    { id: "skills", label: "Skills" },
-    { id: "projects", label: "Projects" },
-    { id: "services", label: "Services" },
-    { id: "contact", label: "Contact" },
+    { id: "home", label: "Home", path: "/" },
+    { id: "about", label: "About", path: "/about" },
+    { id: "skills", label: "Skills", path: "/skills" },
+    { id: "projects", label: "Projects", path: "/projects" },
+    { id: "services", label: "Services", path: "/services" },
+    { id: "contact", label: "Contact", path: "/contact" },
   ];
 
   // Handle scroll effect
@@ -84,32 +84,6 @@ export default function TopNavigationBar() {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  useEffect(() => {
-    const sections = navItems
-      .map((item) => document.getElementById(item.id))
-      .filter(Boolean);
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visibleSections = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
-
-        if (visibleSections.length > 0) {
-          setActive(visibleSections[0].target.id);
-        }
-      },
-      {
-        rootMargin: "-80px 0px -50% 0px",
-        threshold: [0.1, 0.25, 0.5, 0.75],
-      },
-    );
-
-    sections.forEach((section) => observer.observe(section));
-
-    return () => observer.disconnect();
   }, []);
 
   // Load saved theme on mount
@@ -197,10 +171,10 @@ export default function TopNavigationBar() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <a href="#home">
+          <Link to="/" onClick={closeMenu}>
             <img src="/images/logo.png" alt="Gerald Okoth Logo" />
             <span className="logo-text">Gerald Okoth</span>
-          </a>
+          </Link>
         </motion.div>
 
         {/* Desktop Navigation Links */}
@@ -217,13 +191,14 @@ export default function TopNavigationBar() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
             >
-              <a
-                href={`#${item.id}`}
+              <NavLink
+                to={item.path}
+                end={item.path === "/"}
                 onClick={closeMenu}
-                className={`nav-link ${active === item.id ? "active" : ""}`}
+                className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}
               >
                 {item.label}
-              </a>
+              </NavLink>
             </motion.li>
           ))}
         </motion.ul>

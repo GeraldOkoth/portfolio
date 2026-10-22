@@ -260,7 +260,7 @@ const Skills = () => {
   };
 
   return (
-    <section className="skills-section" id="skills" ref={skillsRef}>
+    <section className="skills-section" id="skills" ref={skillsRef} style={{ paddingTop: "clamp(5rem, 10vh, 6rem)" }}>
       <div className="skills-container-wrapper">
         {/* Header */}
         <motion.div

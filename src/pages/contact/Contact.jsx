@@ -119,7 +119,7 @@ function Contact() {
   };
 
   return (
-    <section className="contact" id="contact">
+    <section className="contact" id="contact" style={{ paddingTop: "clamp(5rem, 10vh, 6rem)" }}>
       <div className="contact-container">
         <motion.div 
           {...fadeInUp}
