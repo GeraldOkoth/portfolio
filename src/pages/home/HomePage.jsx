@@ -15,7 +15,7 @@ import {
   FaLaptopCode,
   FaReact
 } from "react-icons/fa";
-import ScrollProgress from "./ScrollProgress";
+// import ScrollProgress from "./ScrollProgress";
 
 // Roles array is moved outside component to avoid ESLint dependency warning
 const ROLES = [
@@ -110,7 +110,7 @@ function HomePage() {
 
   return (
     <>
-      <ScrollProgress />
+      {/* <ScrollProgress /> */}
       
       <section className="home-page" id="home">
         <div className="hero-container">
