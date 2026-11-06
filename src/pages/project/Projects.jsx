@@ -26,7 +26,7 @@ const allProjects = [
     problemSolves:
       "Provides a centralized platform for potential clients and employers to view my projects, skills, and services in an engaging and professional manner.",
     createdAt: "2024-10-22T10:00:00Z",
-    updatedAt: "2026-10-04T12:41:00Z",
+    updatedAt: "2026-11-06T12:41:00Z",
     demo: "https://geraldokoth.vercel.app",
     github: "https://github.com/GeraldOkoth/portfolio",
   },
@@ -164,6 +164,32 @@ const allProjects = [
   },
   {
     id: "p7",
+    type: "frontend",
+    scale: "mini",
+    title: "JavaScript Calculator",
+    description:
+      "A simple yet functional JavaScript calculator with a clean UI and smooth user experience.",
+    technologies: ["JavaScript", "HTML", "CSS"],
+    image: "/images/javascript-calculator.png",
+    features: [
+      "Basic arithmetic operations",
+      "Responsive design for mobile and desktop",
+      "Keyboard input support(beta)",
+      "Clear and reset functionality",
+    ],
+    reasonForBuilding:
+      "To practice JavaScript event handling, DOM manipulation, and create a functional calculator application.",
+    challengesFaced:
+      "Implementing accurate calculations, managing operator precedence, handling edge cases, and ensuring a smooth user experience.",
+    problemSolves:
+      "Provides users with a simple tool for performing basic calculations directly in the browser without needing external software.",
+    createdAt: "2026-11-04T10:08:21Z",
+    updatedAt: "2026-11-05T15:02:37Z",
+    demo: "https://jscalculator-beta.vercel.app/",
+    github: "https://github.com/GeraldOkoth/JS_calculator",
+  },
+  {
+    id: "p8",
     type: "uiux",
     scale: "mini",
     title: "Portfolio Website Replica UI Design",
@@ -188,7 +214,7 @@ const allProjects = [
     demo: "https://www.figma.com/proto/yfdgqxEwlKfLn0VniPR1Bw/Homepage--Copy-?node-id=3558-0&p=f&t=qxPSwRJODEMjHunt-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1",
   },
   {
-    id: "p8",
+    id: "p9",
     type: "uiux",
     scale: "mini",
     title: "ALX ehub Login Page Clone",
@@ -213,7 +239,7 @@ const allProjects = [
     demo: "https://www.figma.com/proto/42jg1O8qpxNUVZ5DqrCJfo/alx_ehub_login_prototype?node-id=2-2&p=f&t=CVYcshduHnTXPh24-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1",
   },
   {
-    id: "p9",
+    id: "p10",
     type: "uiux",
     scale: "mini",
     title: "Portfolio Website replica UI Design",
@@ -238,7 +264,7 @@ const allProjects = [
     demo: "https://www.figma.com/proto/9XnDkxThivZIAQu7ODeNLu/headphones--Copy-?node-id=0-2&p=f&t=joEfmfZWZj1SVAYl-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1",
   },
   {
-    id: "p10",
+    id: "p11",
     type: "uiux",
     scale: "mini",
     title: "Weather Dashboard UI Design",
@@ -263,7 +289,7 @@ const allProjects = [
     demo: "https://www.figma.com/design/9oydJHmDDljDJ6yKl7MxnZ/Untitled?node-id=0-1&t=VeOt0lvOxIxB5FZk-1",
   },
   {
-    id: "p11",
+    id: "p12",
     type: "graphic",
     scale: "mini",
     title: "Recollection Poster",
@@ -288,7 +314,7 @@ const allProjects = [
     demo: "https://www.canva.com/design/DAG6eMuCDEI/-5_Vd8ehf61k12ITgU1cBg/view?utm_content=DAG6eMuCDEI&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h981fd4f8fa",
   },
   {
-    id: "p12",
+    id: "p13",
     type: "graphic",
     scale: "mini",
     title: "Choir recruitment Poster",
@@ -313,7 +339,7 @@ const allProjects = [
     demo: "https://www.canva.com/design/DAGwZr5TnIg/F0UI1vZPUXykGkVczuyzeQ/view?utm_content=DAGwZr5TnIg&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h68ea20605a",
   },
   {
-    id: "p13",
+    id: "p14",
     type: "graphic",
     scale: "mini",
     title: "Juma Keith Campaign Poster",
@@ -333,7 +359,7 @@ const allProjects = [
     demo: "/images/juma-keith.webp",
   },
   {
-    id: "p14",
+    id: "p15",
     type: "graphic",
     scale: "mini",
     title: "Machakos University Christian Union Event Poster",
@@ -351,7 +377,7 @@ const allProjects = [
     demo: "/images/mksu-cu.webp",
   },
   {
-    id: "p15",
+    id: "p16",
     type: "graphic",
     scale: "mini",
     title: "Pactum Novum Coalition Campaign Poster",
@@ -371,7 +397,7 @@ const allProjects = [
     demo: "/images/pactum-novum.webp",
   },
   {
-    id: "p16",
+    id: "p17",
     type: "graphic",
     scale: "mini",
     title: "Papa Smith Campaign Poster",
@@ -391,7 +417,7 @@ const allProjects = [
     demo: "/images/papasmith.webp",
   },
   {
-    id: "p17",
+    id: "p18",
     type: "graphic",
     scale: "mini",
     title: "Sara Mapi Campaign Poster",
@@ -411,7 +437,7 @@ const allProjects = [
     demo: "/images/sara-mapi.webp",
   },
   {
-    id: "p18",
+    id: "p19",
     type: "graphic",
     scale: "mini",
     title: "Sharon Muthoni Campaign Poster",
@@ -431,7 +457,7 @@ const allProjects = [
     demo: "/images/sharon-muthoni.webp",
   },
   {
-    id: "p19",
+    id: "p20",
     type: "graphic",
     scale: "mini",
     title: "Vincent Onyango Campaign Poster",
@@ -451,7 +477,7 @@ const allProjects = [
     demo: "/images/vincent-onyango.webp",
   },
   {
-    id: "p20",
+    id: "p21",
     type: "graphic",
     scale: "mini",
     title: "Choir recruitment Poster",
@@ -544,7 +570,11 @@ function Projects() {
   };
 
   return (
-    <section className="project-section" id="projects" style={{ paddingTop: "clamp(5rem, 10vh, 6rem)" }}>
+    <section
+      className="project-section"
+      id="projects"
+      style={{ paddingTop: "clamp(5rem, 10vh, 6rem)" }}
+    >
       <div className="projects-container">
         {/* Header */}
         <motion.div
