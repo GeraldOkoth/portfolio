@@ -10,7 +10,6 @@ import {
   FaGithub,
   FaFigma,
   FaVideo,
-  FaInvision,
   FaChevronDown,
   FaFilter,
 } from "react-icons/fa";
@@ -98,13 +97,6 @@ const Skills = () => {
         icon: <FaFigma />,
         level: 85,
         color: "#F24E1E",
-      },
-      {
-        id: "invision",
-        name: "InVision",
-        icon: <FaInvision />,
-        level: 70,
-        color: "#FF3366",
       },
       {
         id: "wordpress",

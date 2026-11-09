@@ -288,8 +288,33 @@ const allProjects = [
     updatedAt: "2025-09-15T10:00:00Z",
     demo: "https://www.figma.com/design/9oydJHmDDljDJ6yKl7MxnZ/Untitled?node-id=0-1&t=VeOt0lvOxIxB5FZk-1",
   },
-  {
+   {
     id: "p12",
+    type: "uiux",
+    scale: "mini",
+    title: "ConnectPlus",
+    description:
+      "A user-centered messaging and calling platform UI concept that combines traditional phone numbers and VoIP for secure messaging, voice calls, and HD video calls.",
+    technologies: ["Figma", "UI Design", "UX Design", "Prototyping"],
+    image: "/images/connectplus.png",
+    features: [
+      "Seamless switching between phone number and VoIP communication",
+      "Messaging, voice calls, and HD video calls",
+      "Intuitive customization options",
+      "Security-focused interface for protecting user data",
+    ],
+    reasonForBuilding:
+      "To explore how a simple, cost-effective communication experience can bring messaging, voice, and video together while making security and user control central to the design.",
+    challengesFaced:
+      "Designing a clear interface for multiple communication modes, making VoIP and phone-number switching feel seamless, and presenting customization and security options without adding complexity.",
+    problemSolves:
+      "Addresses confusing communication interfaces and concerns about data security with a unified, easy-to-use design for reliable global messaging and calls.",
+    createdAt: "2024-07-12T10:10:38Z",
+    updatedAt: "2026-11-09T10:05:30Z",
+    demo: "https://www.figma.com/proto/ZfoMWET5Osj89j07tdWlE5/ConnectPlus--Mobile?node-id=44-59&p=f&t=mALSQW46yqAFUYbj-1&scaling=scale-down&content-scaling=fixed&page-id=22%3A15&starting-point-node-id=188%3A336",
+  },
+  {
+    id: "p13",
     type: "graphic",
     scale: "mini",
     title: "Recollection Poster",
@@ -314,7 +339,7 @@ const allProjects = [
     demo: "https://www.canva.com/design/DAG6eMuCDEI/-5_Vd8ehf61k12ITgU1cBg/view?utm_content=DAG6eMuCDEI&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h981fd4f8fa",
   },
   {
-    id: "p13",
+    id: "p14",
     type: "graphic",
     scale: "mini",
     title: "Choir recruitment Poster",
@@ -339,7 +364,7 @@ const allProjects = [
     demo: "https://www.canva.com/design/DAGwZr5TnIg/F0UI1vZPUXykGkVczuyzeQ/view?utm_content=DAGwZr5TnIg&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h68ea20605a",
   },
   {
-    id: "p14",
+    id: "p15",
     type: "graphic",
     scale: "mini",
     title: "Juma Keith Campaign Poster",
@@ -359,7 +384,7 @@ const allProjects = [
     demo: "/images/juma-keith.webp",
   },
   {
-    id: "p15",
+    id: "p16",
     type: "graphic",
     scale: "mini",
     title: "Machakos University Christian Union Event Poster",
@@ -377,7 +402,7 @@ const allProjects = [
     demo: "/images/mksu-cu.webp",
   },
   {
-    id: "p16",
+    id: "p17",
     type: "graphic",
     scale: "mini",
     title: "Pactum Novum Coalition Campaign Poster",
@@ -397,7 +422,7 @@ const allProjects = [
     demo: "/images/pactum-novum.webp",
   },
   {
-    id: "p17",
+    id: "p18",
     type: "graphic",
     scale: "mini",
     title: "Papa Smith Campaign Poster",
@@ -417,7 +442,7 @@ const allProjects = [
     demo: "/images/papasmith.webp",
   },
   {
-    id: "p18",
+    id: "p19",
     type: "graphic",
     scale: "mini",
     title: "Sara Mapi Campaign Poster",
@@ -437,7 +462,7 @@ const allProjects = [
     demo: "/images/sara-mapi.webp",
   },
   {
-    id: "p19",
+    id: "p20",
     type: "graphic",
     scale: "mini",
     title: "Sharon Muthoni Campaign Poster",
@@ -457,7 +482,7 @@ const allProjects = [
     demo: "/images/sharon-muthoni.webp",
   },
   {
-    id: "p20",
+    id: "p21",
     type: "graphic",
     scale: "mini",
     title: "Vincent Onyango Campaign Poster",
@@ -477,7 +502,7 @@ const allProjects = [
     demo: "/images/vincent-onyango.webp",
   },
   {
-    id: "p21",
+    id: "p22",
     type: "graphic",
     scale: "mini",
     title: "Choir recruitment Poster",
