@@ -203,21 +203,8 @@ function HomePage() {
                 {...fadeInUp}
                 transition={{ delay: 1.2 }}
               >
-                <Link to="/projects" className="btn btn-primary">
-                  View Projects
-                  <FaArrowRight className="btn-icon" />
-                </Link>
-                
                 <div className="resume-buttons">
-                  <button 
-                    className="btn btn-secondary"
-                    onClick={handleViewResume}
-                  >
-                    <FaEye className="btn-icon" />
-                    View Resume
-                  </button>
-                  
-                  <button 
+                  <button
                     className="btn btn-download"
                     onClick={handleDownload}
                     disabled={isDownloading}
@@ -230,11 +217,18 @@ function HomePage() {
                     ) : (
                       <>
                         <FaDownload className="btn-icon" />
-                        Download
+                        Download Resume
                       </>
                     )}
                   </button>
                 </div>
+                <a href="#projects" className="btn btn-primary">
+                  View Projects
+                </a>
+                <button className="btn btn-secondary" disabled="true">
+                  Get Started
+                  <FaArrowRight className="btn-icon" />
+                </button>
               </motion.div>
 
               <motion.div
