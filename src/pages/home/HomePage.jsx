@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { 
-  FaLinkedinIn, 
-  FaGithub, 
-  FaTwitter, 
+import {
+  FaLinkedinIn,
+  FaGithub,
+  FaTwitter,
   FaInstagram,
   FaYoutube,
   FaFacebookF,
@@ -13,7 +13,7 @@ import {
   FaArrowRight,
   FaPalette,
   FaLaptopCode,
-  FaReact
+  FaReact,
 } from "react-icons/fa";
 // import ScrollProgress from "./ScrollProgress";
 
@@ -23,46 +23,46 @@ const ROLES = [
   "UI/UX Designer",
   "Graphic Designer",
   "Video Editor",
-  "Tech Enthusiast"
+  "Tech Enthusiast",
 ];
 
 const SOCIAL_LINKS = [
-  { 
-    icon: <FaLinkedinIn />, 
-    name: "LinkedIn", 
+  {
+    icon: <FaLinkedinIn />,
+    name: "LinkedIn",
     url: "https://www.linkedin.com/in/geraldokoth/",
-    color: "#0077b5"
+    color: "#0077b5",
   },
-  { 
-    icon: <FaGithub />, 
-    name: "GitHub", 
+  {
+    icon: <FaGithub />,
+    name: "GitHub",
     url: "https://github.com/GeraldOkoth",
-    color: "#333"
+    color: "#333",
   },
-  { 
-    icon: <FaTwitter />, 
-    name: "Twitter", 
+  {
+    icon: <FaTwitter />,
+    name: "Twitter",
     url: "https://x.com/gerald_okothKE",
-    color: "#1da1f2"
+    color: "#1da1f2",
   },
-  { 
-    icon: <FaInstagram />, 
-    name: "Instagram", 
+  {
+    icon: <FaInstagram />,
+    name: "Instagram",
     url: "https://www.instagram.com/okothgerald449",
-    color: "#E4405F"
+    color: "#E4405F",
   },
-  { 
-    icon: <FaYoutube />, 
-    name: "YouTube", 
+  {
+    icon: <FaYoutube />,
+    name: "YouTube",
     url: "https://www.youtube.com/@geraldokothKE",
-    color: "#ff0000"
+    color: "#ff0000",
   },
-  { 
-    icon: <FaFacebookF />, 
-    name: "Facebook", 
+  {
+    icon: <FaFacebookF />,
+    name: "Facebook",
     url: "https://web.facebook.com/gerald.okoth.944/",
-    color: "#1877f2"
-  }
+    color: "#1877f2",
+  },
 ];
 
 function HomePage() {
@@ -80,38 +80,38 @@ function HomePage() {
 
   const handleDownload = async () => {
     setIsDownloading(true);
-    
+
     // Simulate download
     setTimeout(() => {
-      const link = document.createElement('a');
-      link.href = '/assets/gerald_okoth_resume.pdf';
-      link.download = 'Gerald_Okoth_Resume.pdf';
+      const link = document.createElement("a");
+      link.href = "/assets/gerald_okoth_resume.pdf";
+      link.download = "Gerald_Okoth_Resume.pdf";
       link.click();
-      
+
       setIsDownloading(false);
     }, 1000);
   };
 
   const handleViewResume = () => {
-    window.open('/assets/gerald_okoth_resume.pdf', '_blank');
+    window.open("/assets/gerald_okoth_resume.pdf", "_blank");
   };
 
   const fadeInUp = {
     initial: { opacity: 0, y: 30 },
     animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.6 }
+    transition: { duration: 0.6 },
   };
 
   const fadeInRight = {
     initial: { opacity: 0, x: 50 },
     animate: { opacity: 1, x: 0 },
-    transition: { duration: 0.7 }
+    transition: { duration: 0.7 },
   };
 
   return (
     <>
       {/* <ScrollProgress /> */}
-      
+
       <section className="home-page" id="home">
         <div className="hero-container">
           <div className="hero-grid">
@@ -152,10 +152,10 @@ function HomePage() {
                 {...fadeInUp}
                 transition={{ delay: 0.6 }}
               >
-                Crafting stunning, user-centered web applications with modern 
+                Crafting stunning, user-centered web applications with modern
                 technologies. I am currently advancing my skills set through{" "}
-                <strong>Self Learning</strong>, transitioning 
-                from frontend development and UI/UX design to full-stack engineering.
+                <strong>Self Learning</strong>, transitioning from frontend
+                development and UI/UX design to full-stack engineering.
               </motion.p>
 
               <motion.div
@@ -167,19 +167,28 @@ function HomePage() {
                 <ul className="value-list">
                   <li>
                     <FaArrowRight className="list-icon" />
-                    <span>Pixel-perfect UI implementations from Figma to code</span>
+                    <span>
+                      Pixel-perfect UI implementations from Figma to code
+                    </span>
                   </li>
                   <li>
                     <FaArrowRight className="list-icon" />
-                    <span>Responsive, accessible web applications (React, TypeScript)</span>
+                    <span>
+                      Responsive, accessible web applications (React,
+                      TypeScript)
+                    </span>
                   </li>
                   <li>
                     <FaArrowRight className="list-icon" />
-                    <span>User-focused design thinking and problem-solving</span>
+                    <span>
+                      User-focused design thinking and problem-solving
+                    </span>
                   </li>
                   <li>
                     <FaArrowRight className="list-icon" />
-                    <span>Collaborative teamwork and clean, maintainable code</span>
+                    <span>
+                      Collaborative teamwork and clean, maintainable code
+                    </span>
                   </li>
                 </ul>
               </motion.div>
@@ -217,18 +226,18 @@ function HomePage() {
                     ) : (
                       <>
                         <FaDownload className="btn-icon" />
-                        Download Resume
+                        Download CV
                       </>
                     )}
                   </button>
                 </div>
-                <a href="#projects" className="btn btn-primary">
+                <a href="/projects" className="btn btn-primary">
                   View Projects
                 </a>
-                <button className="btn btn-secondary" disabled="true">
+                <a href="/contact" className="btn btn-secondary">
                   Get Started
                   <FaArrowRight className="btn-icon" />
-                </button>
+                </a>
               </motion.div>
 
               <motion.div
@@ -245,7 +254,7 @@ function HomePage() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="social-icon"
-                      style={{ '--social-color': social.color }}
+                      style={{ "--social-color": social.color }}
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 1.4 + index * 0.1 }}
@@ -278,15 +287,21 @@ function HomePage() {
 
               {/* Floating Elements */}
               <div className="floating-element element-1">
-                <span className="element-icon"><FaReact /></span>
+                <span className="element-icon">
+                  <FaReact />
+                </span>
                 <span className="element-text">Frontend Dev</span>
               </div>
               <div className="floating-element element-2">
-                <span className="element-icon"><FaPalette /></span>
+                <span className="element-icon">
+                  <FaPalette />
+                </span>
                 <span className="element-text">UI/UX Design</span>
               </div>
               <div className="floating-element element-3">
-                <span className="element-icon"><FaLaptopCode /></span>
+                <span className="element-icon">
+                  <FaLaptopCode />
+                </span>
                 <span className="element-text">Graphic Design</span>
               </div>
             </motion.div>
