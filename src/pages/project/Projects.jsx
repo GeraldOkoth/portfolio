@@ -9,6 +9,7 @@ const allProjects = [
     type: "frontend",
     scale: "mini",
     title: "Portfolio Website",
+    status: 'completed',
     description:
       "A modern personal portfolio built with React and Sass showcasing frontend and UI/UX skills, projects and services.",
     technologies: ["React", "Sass", "Framer Motion", "JavaScript"],
@@ -26,7 +27,7 @@ const allProjects = [
     problemSolves:
       "Provides a centralized platform for potential clients and employers to view my projects, skills, and services in an engaging and professional manner.",
     createdAt: "2024-10-22T10:00:00Z",
-    updatedAt: "2026-11-06T12:41:00Z",
+    updatedAt: "2026-11-22T01:41:00Z",
     demo: "https://geraldokoth.vercel.app",
     github: "https://github.com/GeraldOkoth/portfolio",
   },
@@ -35,6 +36,8 @@ const allProjects = [
     type: "frontend",
     scale: "mini",
     title: "Weather Dashboard",
+    status: 'in progress',
+
     description:
       "A weather dashboard application displaying current weather information and forecasts for various locations using REST API.",
     technologies: ["React", "JavaScript", "REST API", "Tailwind CSS"],
@@ -61,6 +64,7 @@ const allProjects = [
     type: "frontend",
     scale: "mini",
     title: "HTML & CSS Landing Page",
+    status: 'completed',
     description:
       "A responsive landing page demonstrating modern web design principles with semantic HTML, CSS Grid, and Flexbox.",
     technologies: ["HTML", "CSS", "Responsive Design"],
@@ -87,6 +91,7 @@ const allProjects = [
     type: "frontend",
     scale: "mini",
     title: "Simple To Do List App",
+    status: 'in progress',
     description:
       "A to-do list application with advanced DOM manipulation, localStorage persistence, and dynamic task management.",
     technologies: ["JavaScript", "HTML", "CSS", "LocalStorage"],
@@ -113,6 +118,7 @@ const allProjects = [
     type: "frontend",
     scale: "mini",
     title: "Advanced To do List App",
+    status: 'in progress',
     description:
       "An interactive web application focusing on dynamic content generation, data persistence, and JSON handling.",
     technologies: ["JavaScript", "JSON", "SessionStorage", "DOM API"],
@@ -140,6 +146,7 @@ const allProjects = [
     type: "frontend",
     scale: "mini",
     title: "GitHub User Profile Search",
+    status: 'in progress',
     description:
       "A GitHub User Profile Search Application using React and Tailwindcss for viewing detailed user information and repositories.",
     technologies: ["React", "Tailwind CSS", "GitHub API", "REST API"],
@@ -167,6 +174,7 @@ const allProjects = [
     type: "frontend",
     scale: "mini",
     title: "JavaScript Calculator",
+    status: 'in progress',
     description:
       "A simple yet functional JavaScript calculator with a clean UI and smooth user experience.",
     technologies: ["JavaScript", "HTML", "CSS"],
@@ -184,7 +192,7 @@ const allProjects = [
     problemSolves:
       "Provides users with a simple tool for performing basic calculations directly in the browser without needing external software.",
     createdAt: "2026-11-04T10:08:21Z",
-    updatedAt: "2026-11-05T15:02:37Z",
+    updatedAt: "2026-11-22T01:41:37Z",
     demo: "https://jscalculator-beta.vercel.app/",
     github: "https://github.com/GeraldOkoth/JS_calculator",
   },
@@ -193,6 +201,7 @@ const allProjects = [
     type: "uiux",
     scale: "mini",
     title: "Portfolio Website Replica UI Design",
+    status: 'completed',
     description:
       "A UI design for a portfolio website replica created in Figma, showcasing modern web layout and user experience.",
     technologies: ["Figma", "UI Design", "UX Design", "Prototyping"],
@@ -218,6 +227,7 @@ const allProjects = [
     type: "uiux",
     scale: "mini",
     title: "ALX ehub Login Page Clone",
+    status: 'completed',
     description:
       "A UI Figma design replicating ALX ehub login page with focus on visual appeal and user-friendly interface.",
     technologies: ["Figma", "UI Design", "Prototyping"],
@@ -243,6 +253,7 @@ const allProjects = [
     type: "uiux",
     scale: "mini",
     title: "Portfolio Website replica UI Design",
+    status: 'completed',
     description:
       "A modern and responsive portfolio website UI design created in Figma with focus on user experience.",
     technologies: ["Figma", "UI Design", "UX Design", "Prototyping"],
@@ -268,6 +279,7 @@ const allProjects = [
     type: "uiux",
     scale: "mini",
     title: "Weather Dashboard UI Design",
+    status: 'in progress',
     description:
       "A modern and responsive weather dashboard UI design created in Figma with focus on data visualization.",
     technologies: ["Figma", "UI Design", "UX Design", "Prototyping"],
@@ -293,6 +305,7 @@ const allProjects = [
     type: "uiux",
     scale: "mini",
     title: "ConnectPlus",
+    status: 'completed',
     description:
       "A user-centered messaging and calling platform UI concept that combines traditional phone numbers and VoIP for secure messaging, voice calls, and HD video calls.",
     technologies: ["Figma", "UI Design", "UX Design", "Prototyping"],

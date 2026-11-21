@@ -31,6 +31,7 @@ const ProjectCard = ({ project, index }) => {
     <>
       <div className="project-card" onClick={handleCardClick}>
         {/* Thumbnail Container */}
+        <span className="progress-status">{project.status}</span>
         <div className="project-thumbnail-wrapper">
           <img
             src={project.image || "https://via.placeholder.com/400x300"}
