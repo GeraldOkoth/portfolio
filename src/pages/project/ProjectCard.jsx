@@ -27,11 +27,24 @@ const ProjectCard = ({ project, index }) => {
     setIsModalOpen(true);
   };
 
+  const normalizedStatus = (project.status || "")
+    .trim()
+    .toLowerCase()
+    .replace(/[\s-]+/g, "-");
+  const statusStyle =
+    normalizedStatus === "completed"
+      ? { backgroundColor: "#16a34a", color: "#fff" }
+      : normalizedStatus === "in progress"
+        ? { backgroundColor: "#facc15", color: "#1f2937" }
+        : undefined;
+
   return (
     <>
       <div className="project-card" onClick={handleCardClick}>
         {/* Thumbnail Container */}
-        <span className="progress-status">{project.status}</span>
+        <span className="progress-status" style={statusStyle}>
+          {project.status}
+        </span>
         <div className="project-thumbnail-wrapper">
           <img
             src={project.image || "https://via.placeholder.com/400x300"}

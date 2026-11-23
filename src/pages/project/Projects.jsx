@@ -9,7 +9,7 @@ const allProjects = [
     type: "frontend",
     scale: "mini",
     title: "Portfolio Website",
-    status: 'completed',
+    status: "completed",
     description:
       "A modern personal portfolio built with React and Sass showcasing frontend and UI/UX skills, projects and services.",
     technologies: ["React", "Sass", "Framer Motion", "JavaScript"],
@@ -36,7 +36,7 @@ const allProjects = [
     type: "frontend",
     scale: "mini",
     title: "Weather Dashboard",
-    status: 'in progress',
+    status: "in progress",
 
     description:
       "A weather dashboard application displaying current weather information and forecasts for various locations using REST API.",
@@ -64,7 +64,7 @@ const allProjects = [
     type: "frontend",
     scale: "mini",
     title: "HTML & CSS Landing Page",
-    status: 'completed',
+    status: "completed",
     description:
       "A responsive landing page demonstrating modern web design principles with semantic HTML, CSS Grid, and Flexbox.",
     technologies: ["HTML", "CSS", "Responsive Design"],
@@ -91,7 +91,7 @@ const allProjects = [
     type: "frontend",
     scale: "mini",
     title: "Simple To Do List App",
-    status: 'in progress',
+    status: "in progress",
     description:
       "A to-do list application with advanced DOM manipulation, localStorage persistence, and dynamic task management.",
     technologies: ["JavaScript", "HTML", "CSS", "LocalStorage"],
@@ -118,7 +118,7 @@ const allProjects = [
     type: "frontend",
     scale: "mini",
     title: "Advanced To do List App",
-    status: 'in progress',
+    status: "in progress",
     description:
       "An interactive web application focusing on dynamic content generation, data persistence, and JSON handling.",
     technologies: ["JavaScript", "JSON", "SessionStorage", "DOM API"],
@@ -146,7 +146,7 @@ const allProjects = [
     type: "frontend",
     scale: "mini",
     title: "GitHub User Profile Search",
-    status: 'in progress',
+    status: "in progress",
     description:
       "A GitHub User Profile Search Application using React and Tailwindcss for viewing detailed user information and repositories.",
     technologies: ["React", "Tailwind CSS", "GitHub API", "REST API"],
@@ -174,7 +174,7 @@ const allProjects = [
     type: "frontend",
     scale: "mini",
     title: "JavaScript Calculator",
-    status: 'in progress',
+    status: "in progress",
     description:
       "A simple yet functional JavaScript calculator with a clean UI and smooth user experience.",
     technologies: ["JavaScript", "HTML", "CSS"],
@@ -201,7 +201,7 @@ const allProjects = [
     type: "uiux",
     scale: "mini",
     title: "Portfolio Website Replica UI Design",
-    status: 'completed',
+    status: "completed",
     description:
       "A UI design for a portfolio website replica created in Figma, showcasing modern web layout and user experience.",
     technologies: ["Figma", "UI Design", "UX Design", "Prototyping"],
@@ -227,7 +227,7 @@ const allProjects = [
     type: "uiux",
     scale: "mini",
     title: "ALX ehub Login Page Clone",
-    status: 'completed',
+    status: "completed",
     description:
       "A UI Figma design replicating ALX ehub login page with focus on visual appeal and user-friendly interface.",
     technologies: ["Figma", "UI Design", "Prototyping"],
@@ -253,7 +253,7 @@ const allProjects = [
     type: "uiux",
     scale: "mini",
     title: "Portfolio Website replica UI Design",
-    status: 'completed',
+    status: "completed",
     description:
       "A modern and responsive portfolio website UI design created in Figma with focus on user experience.",
     technologies: ["Figma", "UI Design", "UX Design", "Prototyping"],
@@ -279,7 +279,7 @@ const allProjects = [
     type: "uiux",
     scale: "mini",
     title: "Weather Dashboard UI Design",
-    status: 'in progress',
+    status: "in progress",
     description:
       "A modern and responsive weather dashboard UI design created in Figma with focus on data visualization.",
     technologies: ["Figma", "UI Design", "UX Design", "Prototyping"],
@@ -300,12 +300,12 @@ const allProjects = [
     updatedAt: "2025-09-15T10:00:00Z",
     demo: "https://www.figma.com/design/9oydJHmDDljDJ6yKl7MxnZ/Untitled?node-id=0-1&t=VeOt0lvOxIxB5FZk-1",
   },
-   {
+  {
     id: "p12",
     type: "uiux",
     scale: "mini",
     title: "ConnectPlus",
-    status: 'completed',
+    status: "completed",
     description:
       "A user-centered messaging and calling platform UI concept that combines traditional phone numbers and VoIP for secure messaging, voice calls, and HD video calls.",
     technologies: ["Figma", "UI Design", "UX Design", "Prototyping"],
@@ -328,6 +328,32 @@ const allProjects = [
   },
   {
     id: "p13",
+    type: "uiux",
+    scale: "mini",
+    title: "Portfolio Website",
+    status: "completed",
+    description:
+      "A modern, responsive portfolio website UI/UX prototype designed to present projects, skills, services, and professional experience with a polished, user-centered experience.",
+    technologies: ["Figma", "UI Design", "UX Design", "Prototyping"],
+    image: "/images/portfolio.png",
+    features: [
+      "Modern and visually consistent interface",
+      "Responsive layouts for desktop and mobile devices",
+      "Clear project and service showcases",
+      "Interactive prototype navigation",
+    ],
+    reasonForBuilding:
+      "To create a professional portfolio that clearly communicates my skills, experience, and selected work to potential employers and clients.",
+    challengesFaced:
+      "Creating a clear information hierarchy, maintaining visual consistency across pages, designing responsive layouts, and presenting projects without overwhelming visitors.",
+    problemSolves:
+      "Provides a centralized, polished, and easy-to-navigate platform for exploring my background, capabilities, projects, and ways to get in touch.",
+    createdAt: "2026-11-23T19:54:00Z",
+    updatedAt: "2026-11-23T20:10:00Z",
+    demo: "https://www.figma.com/proto/j36FAsrcM8BeRoVD1cH4dt/portfolio-website?node-id=42-946&t=gexT1CLxsCFiCUYu-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=42%3A446&show-proto-sidebar=1",
+  },
+  {
+    id: "p14",
     type: "graphic",
     scale: "mini",
     title: "Recollection Poster",
@@ -352,7 +378,7 @@ const allProjects = [
     demo: "https://www.canva.com/design/DAG6eMuCDEI/-5_Vd8ehf61k12ITgU1cBg/view?utm_content=DAG6eMuCDEI&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h981fd4f8fa",
   },
   {
-    id: "p14",
+    id: "p15",
     type: "graphic",
     scale: "mini",
     title: "Choir recruitment Poster",
@@ -377,7 +403,7 @@ const allProjects = [
     demo: "https://www.canva.com/design/DAGwZr5TnIg/F0UI1vZPUXykGkVczuyzeQ/view?utm_content=DAGwZr5TnIg&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h68ea20605a",
   },
   {
-    id: "p15",
+    id: "p16",
     type: "graphic",
     scale: "mini",
     title: "Juma Keith Campaign Poster",
@@ -397,7 +423,7 @@ const allProjects = [
     demo: "/images/juma-keith.webp",
   },
   {
-    id: "p16",
+    id: "p17",
     type: "graphic",
     scale: "mini",
     title: "Machakos University Christian Union Event Poster",
@@ -415,7 +441,7 @@ const allProjects = [
     demo: "/images/mksu-cu.webp",
   },
   {
-    id: "p17",
+    id: "p18",
     type: "graphic",
     scale: "mini",
     title: "Pactum Novum Coalition Campaign Poster",
@@ -435,7 +461,7 @@ const allProjects = [
     demo: "/images/pactum-novum.webp",
   },
   {
-    id: "p18",
+    id: "p19",
     type: "graphic",
     scale: "mini",
     title: "Papa Smith Campaign Poster",
@@ -455,7 +481,7 @@ const allProjects = [
     demo: "/images/papasmith.webp",
   },
   {
-    id: "p19",
+    id: "p20",
     type: "graphic",
     scale: "mini",
     title: "Sara Mapi Campaign Poster",
@@ -475,7 +501,7 @@ const allProjects = [
     demo: "/images/sara-mapi.webp",
   },
   {
-    id: "p20",
+    id: "p21",
     type: "graphic",
     scale: "mini",
     title: "Sharon Muthoni Campaign Poster",
@@ -495,7 +521,7 @@ const allProjects = [
     demo: "/images/sharon-muthoni.webp",
   },
   {
-    id: "p21",
+    id: "p22",
     type: "graphic",
     scale: "mini",
     title: "Vincent Onyango Campaign Poster",
@@ -515,7 +541,7 @@ const allProjects = [
     demo: "/images/vincent-onyango.webp",
   },
   {
-    id: "p22",
+    id: "p23",
     type: "graphic",
     scale: "mini",
     title: "Choir recruitment Poster",
